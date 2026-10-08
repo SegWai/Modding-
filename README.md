@@ -15,12 +15,15 @@ source, import metadata, checks, and asset notices.
   existing walking animation.
 - The user opened the original arm-lift Blender file in Blender 4.3.2 and
   confirmed that its animation plays.
+- The user reports that Workbench produced `MovementLab_ArmLift_Test.anm`
+  after reimporting the TXA. Playing this compiled clip in Animation Editor is
+  the next check.
 - Blender 4.3.2 here authors and exports an original four-second arm-lift test
   as TXA. Checks cover frame ranges, bone names against the authoring rig,
   finite transforms, normalized rotations, stationary feet, and matching loop
   endpoints. Rendered start and middle poses were inspected.
 
-Workbench compilation and in-game playback of the original clip are pending.
+Animation Editor playback and in-game playback of the original clip are pending.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
@@ -47,6 +50,20 @@ After import, check for a nonempty `MovementLab_ArmLift_Test.anm` next to the
 source. If no ANM is produced, capture the **main Workbench console** and the
 resource's context menu. Metadata alone can make the browser list an ANM that
 does not yet exist on disk.
+
+## Preview the compiled clip
+
+[Download the separate editor preview workspace](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Editor_Preview.zip).
+Copy its two files into the existing `TestAnimations` folder. In Animation
+Editor use **Workspace → Open** and select `MovementLab_ArmLift_Preview.aw`.
+Its compatibility still needs testing in the user's editor.
+
+Select the **MovementLab_ArmLift_Preview** instance. Pick an assigned walking
+cell in **Anim Sets**, then select the compiled test ANM in the editor's **File
+Browser** and click **Set Anim**. Press Play to test the clip. The new instance
+inherits the vanilla assignments, so edits belong to the separate preview ASI.
+The template and graph stay references to the existing extracted resources.
+See the preview ZIP's README for the complete steps and expected result.
 
 Do not assign this clip to the existing player workspace yet. That workspace
 still references extracted vanilla animation instances and templates. A separate
