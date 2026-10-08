@@ -13,6 +13,8 @@ source, import metadata, checks, and asset notices.
 
 - The user's DayZ 1.29 Animation Editor loads the player model and plays an
   existing walking animation.
+- The user opened the original arm-lift Blender file in Blender 4.3.2 and
+  confirmed that its animation plays.
 - Blender 4.3.2 here authors and exports an original four-second arm-lift test
   as TXA. Checks cover frame ranges, bone names against the authoring rig,
   finite transforms, normalized rotations, stationary feet, and matching loop
@@ -30,11 +32,21 @@ folder into `D:\DayZProjects\MovementLabWorkbench`.
 Open the included `.blend` in Blender 4.3.2 and press Space to play the arm-lift
 loop. This step needs no addon installation.
 
-Then restart DayZ Workbench through the configured shortcut. In its resource
-browser, expand **Game Root → MovementLabWorkbench → TestAnimations**. The TXA
-and its ANM import metadata are supplied. Select the test resource and report
-whether Workbench imports it or displays an error. Its exact import action is
-still to be verified on the user's installed Workbench.
+Then restart DayZ Workbench through the configured shortcut. In the **main
+Workbench window**, expand **Game Root → MovementLabWorkbench → TestAnimations**.
+The bundle contains TXA source and ANM import metadata, but no compiled ANM.
+Opening the ANM entry in Animation Editor does not perform the import.
+
+Right-click the `.txa` source and choose **Register resource and import** if
+that action is offered. For an already registered resource, use **Reimport
+Resource**. If the browser shows only the virtual `.anm` entry, use its
+**Reimport Resource** action. The exact menu wording and a successful compile
+still need verification on the user's installed Workbench.
+
+After import, check for a nonempty `MovementLab_ArmLift_Test.anm` next to the
+source. If no ANM is produced, capture the **main Workbench console** and the
+resource's context menu. Metadata alone can make the browser list an ANM that
+does not yet exist on disk.
 
 Do not assign this clip to the existing player workspace yet. That workspace
 still references extracted vanilla animation instances and templates. A separate
