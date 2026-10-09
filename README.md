@@ -34,24 +34,25 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
-## Walking reference revision v06
+## Walking reference revision v07
 
-[Download walking revision v06](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v06.zip).
-Open `TestAnimations/MovementLab_Unarmed_Walk_v06.blend` in Blender 4.3.2 and
+[Download walking revision v07](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v07.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v07.blend` in Blender 4.3.2 and
 press Space. The default view is from the front, matching the new reference.
 Rear, side and front GIF previews are also included.
 
-This revision uses the supplied three-second front-view John Marston video
-alongside the earlier rear-view reference. It prioritizes support-side body
-weight transfer, restrained chest rotation, dynamic shoulder elevation,
-closer arms and softer elbow overlap. It retains the reduced body dip.
-The 34-frame cycle at 30 fps is an image-based timing estimate, not recovered
-skeletal motion. The front video is only 240 x 512 pixels, clothing obscures
-joints, and the two clips are not synchronized views of the same movement.
-`walk-test-v06/reference_notes.json` records observations and authoring choices.
-Nominal 0.90 m/s remains an authoring reference. No source video or frames are
-bundled. Appearance requires user review; technical checks do not establish
-that the motion looks natural or matches the reference.
+This revision follows the user's annotated feedback on v06. It raises the
+toes before landing (22 degrees), keeps the knee nearly straight (3 degrees)
+through final reach and initial support, and delays supporting-knee flex
+until the opposite foot starts leaving the ground. The ankle track narrows
+from 25 to 20 cm. Arms sit farther out, with 10.3–14.7 cm lateral clearance
+between the hand/finger mesh and the hip band across half-frame samples.
+That clearance is measured on the unclothed reference body; clothing needs
+separate native checks. Pelvis height follows supporting-leg extension,
+with less than 2 cm vertical travel and no bone stretching. The 34-frame
+cycle, torso timing and nominal 0.90 m/s authoring speed are retained.
+`walk-test-v07/reference_notes.json` records source limitations and choices.
+Appearance still requires user review. No source video or frames are bundled.
 
 Cloud checks cover matching endpoint poses, stationary root, reachable leg
 targets, unchanged bone scales, the baked action against authored poses,
@@ -69,18 +70,18 @@ To reproduce after the existing cloud setup:
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/build_walk_clip_v06.py -- \
+  --python tools/build_walk_clip_v07.py -- \
   --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
   --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
-  --output /tmp/movementlab-walk-v06
+  --output /tmp/movementlab-walk-v07
 for movementlab_view in front rear side; do
   BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
   BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
   blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v06 \
-    --name MovementLab_Unarmed_Walk_v06 --view "$movementlab_view" --save-view front --straight-front
+    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v07 \
+    --name MovementLab_Unarmed_Walk_v07 --view "$movementlab_view" --save-view front --straight-front
 done
-python tools/package_walk_test.py --generated /tmp/movementlab-walk-v06 --revision v06
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v07 --revision v07
 ```
 
 ## First Windows test
