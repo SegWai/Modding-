@@ -3,6 +3,19 @@
 DayZ remains the base game. The goal is original player animations and movement
 inspired by the weight and pacing of Red Dead Redemption 2.
 
+## Native movement logic experiment
+
+[Download the standalone movement test](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test.zip).
+Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
+DayZ closed. No animation import or PBO build is required. **F7** switches
+between heavier and vanilla filters in the same offline session.
+
+This uses vanilla animations and native sprint-transition, direction and body
+heading filters. Compare W/Shift, turns and releasing W. Ordinary acceleration
+and braking remain unproven; this does not add custom stopping clips or forced
+coasting. Native compilation and the first local gameplay test are pending.
+Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
+
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)
 
 If GitHub shows the ZIP's file page, use **Download raw file** (the download
