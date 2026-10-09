@@ -7,7 +7,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "movement-logic-test" / "MovementLabMovementLogicTest"
-OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test.zip"
+OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v2.zip"
 
 
 def main():
@@ -19,7 +19,10 @@ def main():
     for setter in setters:
         assert setter in mission
     assert "KC_F7" in mission and "OnMissionFinish" in mission
-    assert "OverrideMovementSpeed" not in mission
+    assert "HumanInputControllerOverrideType.ONE_FRAME" in mission
+    assert "HumanInputControllerOverrideType.DISABLED" in mission
+    assert "MovementLabCancelBrake();" in mission
+    assert "SetPosition(" not in mission and "SetVelocity(" not in mission
     assert "-mod=" not in launcher
     assert "MovementLabMovementLogic.ChernarusPlus" in launcher
     validation = {
@@ -27,7 +30,9 @@ def main():
         "native_compile_and_playtest": "pending user local DayZ 1.29 test",
         "official_script_revision": "86974a0f5bd16b1ee3e334ad828133c93dca80a1",
         "native_setters": setters,
-        "ordinary_acceleration_and_braking": "not established by this experiment",
+        "prior_v1_runtime": "user confirmed heavier movement, unchanged animations and near-instant sprint release stopping",
+        "braking_v2": "0.85-second sprint-to-idle movement-input ramp; engine motion and animation pending",
+        "ordinary_acceleration": "unchanged",
     }
     OUTPUT.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(OUTPUT, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
@@ -37,7 +42,7 @@ def main():
         for name, data in sorted(entries.items()):
             if name.endswith((".cmd", ".txt")):
                 data = data.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
-            info = zipfile.ZipInfo("MovementLabMovementLogicTest/" + name, (2026, 10, 9, 0, 0, 0))
+            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v2/" + name, (2026, 10, 9, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data, compresslevel=9)

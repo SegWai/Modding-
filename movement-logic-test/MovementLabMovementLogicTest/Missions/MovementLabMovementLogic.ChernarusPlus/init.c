@@ -5,6 +5,103 @@ class MovementLabMovementLogicMission extends MissionGameplay
     protected bool m_MovementLabOwnsFilters;
     protected bool m_MovementLabOriginalStaminaInertia;
     protected bool m_MovementLabAnnounce = true;
+    protected bool m_MovementLabWasForward;
+    protected float m_MovementLabLastSpeed;
+    protected bool m_MovementLabBraking;
+    protected float m_MovementLabBrakeTime;
+    protected float m_MovementLabBrakeStart;
+    protected PlayerBase m_MovementLabBrakePlayer;
+
+    protected void MovementLabCancelBrake()
+    {
+        // Clear only an override this mission actually started.
+        if (m_MovementLabBraking && m_MovementLabBrakePlayer)
+        {
+            HumanInputController input = m_MovementLabBrakePlayer.GetInputController();
+            if (input)
+            {
+                input.OverrideMovementSpeed(HumanInputControllerOverrideType.DISABLED, 0);
+                input.OverrideMovementAngle(HumanInputControllerOverrideType.DISABLED, 0);
+            }
+        }
+        m_MovementLabBraking = false;
+        m_MovementLabBrakePlayer = null;
+        m_MovementLabBrakeTime = 0;
+        m_MovementLabWasForward = false;
+        m_MovementLabLastSpeed = 0;
+    }
+
+    protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
+    {
+        if (!m_MovementLabHeavy || !player || !player.IsAlive() || !player.GetCommand_Move() || player.IsUnconscious() || player.IsRaised() || player.IsEmotePlaying() || GetUIManager().GetMenu() || IsPaused() || timeslice > 0.25)
+        {
+            MovementLabCancelBrake();
+            return;
+        }
+        HumanMovementState state = new HumanMovementState();
+        player.GetMovementState(state);
+        if (state.m_iStanceIdx != DayZPlayerConstants.STANCEIDX_ERECT)
+        {
+            MovementLabCancelBrake();
+            return;
+        }
+
+        // Read physical movement actions, not GetMovement during the override:
+        // otherwise the generated coast could feed back and keep itself alive.
+        float forward = GetUApi().GetInputByID(UAMoveForward).LocalValue();
+        bool otherDirection = GetUApi().GetInputByID(UAMoveBack).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveLeft).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveRight).LocalValue() > 0.05;
+        if (otherDirection)
+        {
+            MovementLabCancelBrake();
+            return;
+        }
+        HumanInputController input = player.GetInputController();
+        if (!input)
+        {
+            MovementLabCancelBrake();
+            return;
+        }
+        if (forward > 0.05)
+        {
+            // A fresh movement input immediately takes control back.
+            if (m_MovementLabBraking)
+                MovementLabCancelBrake();
+            m_MovementLabWasForward = true;
+            m_MovementLabLastSpeed = 0;
+            if (state.m_iMovement == DayZPlayerConstants.MOVEMENTIDX_SPRINT)
+                m_MovementLabLastSpeed = 3.0;
+            return;
+        }
+        if (m_MovementLabWasForward && m_MovementLabLastSpeed > 2.5)
+        {
+            m_MovementLabBraking = true;
+            m_MovementLabBrakePlayer = player;
+            m_MovementLabBrakeStart = m_MovementLabLastSpeed;
+            m_MovementLabBrakeTime = 0;
+            Print("[MovementLab v2] Sprint release: starting 0.85-second braking input ramp.");
+        }
+        m_MovementLabWasForward = false;
+        m_MovementLabLastSpeed = 0;
+        if (!m_MovementLabBraking)
+            return;
+        if (m_MovementLabBrakePlayer != player)
+        {
+            MovementLabCancelBrake();
+            return;
+        }
+        m_MovementLabBrakeTime = m_MovementLabBrakeTime + Math.Max(timeslice, 0);
+        float fraction = Math.Clamp(m_MovementLabBrakeTime / 0.85, 0, 1);
+        if (fraction >= 1)
+        {
+            MovementLabCancelBrake();
+            return;
+        }
+        // 3 = sprint, 2 = jog, 1 = walk, 0 = idle (not metres/second).
+        // Let the native controller animate/collide; never move the entity directly.
+        float speed = m_MovementLabBrakeStart * (1.0 - fraction);
+        input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, speed);
+        input.OverrideMovementAngle(HumanInputControllerOverrideType.ONE_FRAME, 0);
+    }
 
     override void OnInit()
     {
@@ -71,6 +168,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         if (GetGame().IsMultiplayer())
             return;
         PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
+        MovementLabUpdateBrake(player, timeslice);
         if (!player || !player.IsAlive() || !player.GetCommand_Move())
             return;
         if (!m_MovementLabOwnsFilters)
@@ -84,8 +182,8 @@ class MovementLabMovementLogicMission extends MissionGameplay
         {
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
-                mode = "HEAVIER FILTERS";
-            string message = "[MovementLab] " + mode + " - F7 switches mode. Test W, Shift, turns, then release W.";
+                mode = "HEAVIER + SPRINT BRAKING";
+            string message = "[MovementLab v2] " + mode + " - F7 switches mode. Sprint straight, then release W and Shift.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;
@@ -98,12 +196,14 @@ class MovementLabMovementLogicMission extends MissionGameplay
         if (key == KeyCode.KC_F7 && !GetGame().IsMultiplayer())
         {
             m_MovementLabHeavy = !m_MovementLabHeavy;
+            MovementLabCancelBrake();
             m_MovementLabAnnounce = true;
         }
     }
 
     override void OnMissionFinish()
     {
+        MovementLabCancelBrake();
         if (m_MovementLabOwnsFilters)
         {
             PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
