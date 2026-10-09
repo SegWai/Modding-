@@ -34,22 +34,29 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
-## First original walking study
+## Walking visual revision v02
 
-[Download the walking study](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v01.zip).
-Open `TestAnimations/MovementLab_Unarmed_Walk_v01.blend` in Blender 4.3.2 and
-press Space. This original in-place loop has alternating foot contacts, a
-small hip weight shift, and opposing arm swing. The bundle includes a GIF,
+The user confirmed v01 plays in Blender but found it stiff and unnatural,
+with weak arm swing. v02 addresses that feedback; its visual quality remains
+subject to review. The original v01 ZIP is retained for comparison.
+
+[Download walking revision v02](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v02.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v02.blend` in Blender 4.3.2 and
+press Space. This in-place revision corrects the same-side arm/leg phase from v01,
+widens the arm swing, adds heel strike and toe push-off, and raises the body
+through the supporting leg. It is an iteration toward the intended motion
+quality. The bundle includes front and side GIFs,
 TXA source, import metadata, and a separate Workbench preview workspace.
 Its README gives the import and **Set Anim** steps already used for the arm lift.
 
-The study uses a 1.2-second cycle and a nominal 0.80 m/s authoring reference.
+The study uses a 1.2-second cycle and a nominal 0.90 m/s authoring reference.
 Cloud checks verify matching endpoint poses, stationary root, reachable leg
 targets, unchanged bone scales, the baked action against authored poses, and
 contact drift compensated for that nominal travel. The TXA was parsed back
 and checked for finite transforms, normalized rotations, and all 152 nodes.
-Rendered contact and swing poses were inspected. This does not establish foot
-contact at DayZ's actual speed: walking Workbench import, native timing,
+Deformed-mesh ground clearance is checked at integer and half frames.
+Rendered contact and swing poses were inspected from the front and side.
+This does not establish foot contact at DayZ's actual speed: walking Workbench import, native timing,
 footstep events, and gameplay blending remain pending. Keep the working
 arm-lift runtime test as-is until the new clip's preview and pace are checked.
 
@@ -59,15 +66,21 @@ To reproduce it after the existing cloud setup:
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/build_walk_clip.py -- \
+  --python tools/build_walk_clip_v02.py -- \
   --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
   --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
-  --output /tmp/movementlab-walk-v01
+  --output /tmp/movementlab-walk-v02
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v01
-python tools/package_walk_test.py --generated /tmp/movementlab-walk-v01
+  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v02 \
+  --name MovementLab_Unarmed_Walk_v02
+BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
+BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
+blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
+  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v02 \
+  --name MovementLab_Unarmed_Walk_v02 --view side
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v02 --revision v02
 ```
 
 ## First Windows test
