@@ -109,18 +109,24 @@ The baseline loads no animation mod.
 After the baseline works, **Prepare-Animation.cmd** copies the already compiled
 arm-lift ANM into the new source folder, preserving a different existing file.
 Pack `MovementLabOfflineTest\MovementLabRuntimeTest` with Addon Builder to
-`MovementLabOfflineTest\@MovementLabRuntimeTest\Addons\MovementLabRuntimeTest.pbo`
+the destination **directory** `MovementLabOfflineTest\@MovementLabRuntimeTest\Addons`,
 with prefix `MovementLabRuntimeTest`, including `.c`, `.asi`, and `.anm` files.
-The ZIP's README gives the paths and packing details; the installed tool's exact
-packing controls remain to be checked. Use **Launch-With-Mod.cmd** and F6 to
+The resulting file should be `Addons\MovementLabRuntimeTest.pbo`. The installed
+Addon Builder treated a destination ending in `.pbo` as an extra directory;
+use the folder only. The user's actual extraction root is
+`D:\DayZProjects\MovementLab_Offline_Test\MovementLabOfflineTest`, so all packing
+paths must be based on that root. The launchers already resolve their own folder.
+The ZIP's README gives the packing details. Use **Launch-With-Mod.cmd** and F6 to
 test the arm-lift greeting. The runtime ASI overrides only
 `Gesture.SaluteErc.Loop`, retaining the vanilla greeting's entry/exit phases.
 
 The practice mission creates one character without an economy or character
 persistence. Separate baseline and mod profile folders retain logs for
 diagnosis. The baseline's native launch and mission compilation are confirmed
-by the user's test. PBO packing and custom runtime animation binding remain
-pending. Rebuild the ZIP with `python tools/package_runtime_test.py`.
+by the user's test. Addon Builder reported a successful build, but its output
+was in the earlier folder and nested inside a directory named `.pbo`. Correct
+output placement and custom runtime animation binding remain pending. Rebuild
+the ZIP with `python tools/package_runtime_test.py`.
 
 The version-matched official script snapshot exposes
 `ModItemRegisterCallbacks.RegisterEmptyHanded` in `dayzplayercfgbase.c`, called

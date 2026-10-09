@@ -25,12 +25,18 @@ folder. No conversion is needed. A different existing destination is preserved.
 The source/launch paths match the installation reported in this conversation.
 
 3. PACK WITH DAYZ TOOLS / ADDON BUILDER
+Use the folder containing Launch-Baseline.cmd as the test root. Windows Extract
+All can add an outer folder named MovementLab_Offline_Test; include that folder
+in both paths if present. For the installation in this conversation:
 Source:
-  D:\DayZProjects\MovementLabOfflineTest\MovementLabRuntimeTest
-Destination:
-  D:\DayZProjects\MovementLabOfflineTest\@MovementLabRuntimeTest\Addons
-Pack as MovementLabRuntimeTest.pbo. Use prefix MovementLabRuntimeTest (the source
-includes a $PBOPREFIX$ file). For this diagnostic use packing without binarizing:
+  D:\DayZProjects\MovementLab_Offline_Test\MovementLabOfflineTest\MovementLabRuntimeTest
+Destination DIRECTORY (folder only):
+  D:\DayZProjects\MovementLab_Offline_Test\MovementLabOfflineTest\@MovementLabRuntimeTest\Addons
+Do not append a .pbo filename to the destination field: the installed builder
+created an extra folder with that name. It should produce the file
+MovementLabRuntimeTest.pbo directly inside Addons.
+Use prefix MovementLabRuntimeTest (the source includes a $PBOPREFIX$ file).
+For this diagnostic use packing without binarizing:
 the animation is already compiled, and the config/scripts/ASI are text.
 Ensure .anm, .asi, and .c files are included. If your Addon Builder uses a
 "List of files to copy directly", include *.anm;*.asi;*.c;*.cpp in that list.
