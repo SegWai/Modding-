@@ -34,27 +34,24 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
-## Walking reference revision v05
+## Walking reference revision v06
 
-[Download walking revision v05](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v05.zip).
-Open `TestAnimations/MovementLab_Unarmed_Walk_v05.blend` in Blender 4.3.2 and
-press Space. The default view is from behind, matching the supplied walking
-reference. Rear, side and front GIF previews are also included.
+[Download walking revision v06](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v06.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v06.blend` in Blender 4.3.2 and
+press Space. The default view is from the front, matching the new reference.
+Rear, side and front GIF previews are also included.
 
-The user requested the top character's walk in
-[this video](https://www.youtube.com/shorts/FJnBXvfNc_E) and supplied a readable
-five-second rear-view crop. Lower-body appearance repeats at about 1.17 seconds;
-v05 uses a 35-frame cycle at 30 fps. Original authored key-pose curves give the
-hips, shoulders, elbows and wrists separate timing, with relaxed fingers and
-articulation through all four spine joints and a gently following head.
-This revision responds to feedback that v04 held the torso too rigidly.
-The smaller body dip and straighter supporting knee are retained from v03, following feedback about excessive crouching in v02.
-
-This is a visual interpretation, not reconstructed 3D motion. The rear view,
-tracking camera and partly cropped feet limit the depth and speed estimates.
-`walk-test-v05/reference_notes.json` distinguishes observations from authored
-choices. The nominal 0.90 m/s is an authoring reference, not measured video
-speed. The supplied video and its frames are not included in the bundle.
+This revision uses the supplied three-second front-view John Marston video
+alongside the earlier rear-view reference. It prioritizes support-side body
+weight transfer, restrained chest rotation, dynamic shoulder elevation,
+closer arms and softer elbow overlap. It retains the reduced body dip.
+The 34-frame cycle at 30 fps is an image-based timing estimate, not recovered
+skeletal motion. The front video is only 240 x 512 pixels, clothing obscures
+joints, and the two clips are not synchronized views of the same movement.
+`walk-test-v06/reference_notes.json` records observations and authoring choices.
+Nominal 0.90 m/s remains an authoring reference. No source video or frames are
+bundled. Appearance requires user review; technical checks do not establish
+that the motion looks natural or matches the reference.
 
 Cloud checks cover matching endpoint poses, stationary root, reachable leg
 targets, unchanged bone scales, the baked action against authored poses,
@@ -72,18 +69,18 @@ To reproduce after the existing cloud setup:
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/build_walk_clip_v05.py -- \
+  --python tools/build_walk_clip_v06.py -- \
   --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
   --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
-  --output /tmp/movementlab-walk-v05
-for movementlab_view in rear front side; do
+  --output /tmp/movementlab-walk-v06
+for movementlab_view in front rear side; do
   BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
   BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
   blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v05 \
-    --name MovementLab_Unarmed_Walk_v05 --view "$movementlab_view" --save-view rear
+    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v06 \
+    --name MovementLab_Unarmed_Walk_v06 --view "$movementlab_view" --save-view front --straight-front
 done
-python tools/package_walk_test.py --generated /tmp/movementlab-walk-v05 --revision v05
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v06 --revision v06
 ```
 
 ## First Windows test

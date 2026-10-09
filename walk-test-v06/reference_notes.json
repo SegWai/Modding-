@@ -1,0 +1,57 @@
+{
+  "reference_url": "https://www.youtube.com/shorts/FJnBXvfNc_E",
+  "requested_subject": "top character's walking animation",
+  "supplied_clip": {
+    "duration_seconds": 5.016667,
+    "fps": 60,
+    "resolution": [
+      1080,
+      886
+    ],
+    "view": "rear tracking camera; supplied crop contains the top character only"
+  },
+  "timing_aid": {
+    "method": "temporal correlation of lower-body grayscale appearance at 30 fps",
+    "strongest_repeat_lag_frames": 35,
+    "approximate_repeat_seconds": 1.166667,
+    "correlation": 0.4128,
+    "nearby_candidates_seconds": [
+      1.133333,
+      1.2
+    ],
+    "qualification": "Appearance-based timing estimate affected by camera and scenery; not recovered skeleton motion."
+  },
+  "visual_observations": [
+    "The head and upper body remain relatively steady.",
+    "Weight transfers laterally through the hips while the shoulders counter-rotate.",
+    "Arms and elbows overlap the torso motion rather than moving as one rigid unit.",
+    "Wrist distance from the hip varies through the swing; hands look relaxed."
+  ],
+  "authored_choices": {
+    "cycle_frames_at_30fps": 34,
+    "nominal_speed_m_s": 0.9,
+    "method": "Original cyclic key-pose curves for hips, torso, arms and wrists, plus constrained foot trajectories and a relaxed hand pose.",
+    "depth_and_angles": "Artist estimates adapted to the DayZ rig, not measured 3D joint coordinates."
+  },
+  "limits": [
+    "Rear view obscures forward/back limb depth.",
+    "Feet are partly cropped during some contacts.",
+    "The tracking camera prevents absolute speed or body dip measurement without calibration."
+  ],
+  "revision_feedback": "v05 was visually rejected. v06 prioritizes support-side weight transfer and restrained torso rotation, closer arms, dynamic shoulder elevation and elbow overlap. Front and rear clips are not synchronized views of the same motion.",
+  "front_reference": {
+    "duration_seconds": 3,
+    "fps": 30,
+    "resolution": [
+      240,
+      512
+    ],
+    "subject": "John Marston; front tracking view",
+    "timing_estimate": {
+      "lag_frames": 34,
+      "repeat_seconds": 1.1333333333333333,
+      "appearance_correlation": 0.1933,
+      "qualification": "Weak image-based timing aid, affected by background/camera; not measured joint motion."
+    }
+  }
+}

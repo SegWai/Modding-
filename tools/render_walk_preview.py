@@ -10,6 +10,7 @@ parser.add_argument('--output', required=True, type=Path)
 parser.add_argument('--name', default='MovementLab_Unarmed_Walk_v01')
 parser.add_argument('--view', choices=('front', 'side', 'rear'), default='front')
 parser.add_argument('--save-view', choices=('front', 'side', 'rear'), default='front')
+parser.add_argument('--straight-front', action='store_true', help='Use a centered front camera for reference comparison')
 args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:])
 p = args.output
 bpy.ops.wm.open_mainfile(filepath=str(p/(args.name+'.blend')), use_scripts=False)
@@ -41,6 +42,8 @@ m.use_nodes=True
 m.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(.18,.20,.22,1)
 m.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=.9
 positions={'front': (3,-4,2.1), 'side': (4,0,1.3), 'rear': (-.7,4,2.1)}
+if args.straight_front:
+ positions['front']=(0,-4,1.25)
 bpy.ops.object.camera_add(location=positions[args.view])
 c=bpy.context.object
 c.rotation_euler=(Vector((0,0,.85))-c.location).to_track_quat('-Z','Y').to_euler()
