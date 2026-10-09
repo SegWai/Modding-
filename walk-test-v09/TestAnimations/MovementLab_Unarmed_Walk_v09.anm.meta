@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{C92A17EF584640D3}MovementLabWorkbench/TestAnimations/MovementLab_Unarmed_Walk_v09.txa"
+ Author "MovementLab"
+ Configurations {
+  TXAResourceClass PC {
+   SourceFile "MovementLab_Unarmed_Walk_v09.txa"
+  }
+  TXAResourceClass XBOX_ONE : PC {
+  }
+  TXAResourceClass PS4 : PC {
+  }
+  TXAResourceClass LINUX : PC {
+  }
+ }
+}

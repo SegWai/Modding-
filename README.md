@@ -34,24 +34,28 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
-## Walking reference revision v08
+## Walking reference revision v09
 
-[Download walking revision v08](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v08.zip).
-Open `TestAnimations/MovementLab_Unarmed_Walk_v08.blend` in Blender 4.3.2 and
+[Download walking revision v09](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v09.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v09.blend` in Blender 4.3.2 and
 press Space. The default view is from the front, matching the new reference.
 Rear, side and front GIF previews are also included.
 
-This revision follows the user's shoulder, hip and head feedback on v07.
-The hips turn with the legs, while the chest and shoulders turn with the
-opposing arms. Individual shoulders follow their corresponding arm swing.
-The head gains a small cyclic nod and side tilt, each under one degree.
-The 34-frame cadence remains regular; no finger/hand micro animation is
-added. Existing wrist curves and the static relaxed finger pose are retained.
-The raised toes, nearly straight landing knees, delayed support flex and
-20 cm ankle track are retained. Arm spacing compensates for shoulder turning,
-with roughly 10–16 cm lateral hand-to-hip clearance on the reference body.
-Pelvis vertical travel stays under 2 cm. Native clothing clearance is pending.
-`walk-test-v08/reference_notes.json` records the revision's choices and limits.
+This revision follows the user's inward-forearm and heavy-weight-transfer
+feedback on v08. The elbow-down segment sweeps inward on the forward swing
+(up to 20 degrees), with a small forearm pronation (up to 2.5 degrees).
+Hip and shoulder/chest turns are about 40 percent stronger. Lateral pelvis
+travel increases from about 5.6 to 9 cm, with a stronger support-side torso
+lean. Vertical pelvis travel stays under 2 cm; the foot path, raised toes,
+near-straight landing knees, delayed support flex, 20 cm ankle track, cadence
+and small head tilt are retained. Wrist curves and static fingers are retained.
+
+The latest request brings forward hands near the outer hip line, replacing
+the previous constant lateral gap. Front-view projection can overlap while
+the hand remains in front of the hip. Closest hand/finger vertices to the
+evaluated hip-band polygon surface stay at least 8.7 cm away in half-frame
+samples on the unclothed reference mesh. Native clothing checks are pending.
+`walk-test-v09/reference_notes.json` records revision choices and limits.
 Appearance still requires user review. No source video or frames are bundled.
 
 Cloud checks cover matching endpoint poses, stationary root, reachable leg
@@ -70,18 +74,18 @@ To reproduce after the existing cloud setup:
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/build_walk_clip_v08.py -- \
+  --python tools/build_walk_clip_v09.py -- \
   --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
   --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
-  --output /tmp/movementlab-walk-v08
+  --output /tmp/movementlab-walk-v09
 for movementlab_view in front rear side; do
   BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
   BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
   blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v08 \
-    --name MovementLab_Unarmed_Walk_v08 --view "$movementlab_view" --save-view front --straight-front
+    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v09 \
+    --name MovementLab_Unarmed_Walk_v09 --view "$movementlab_view" --save-view front --straight-front
 done
-python tools/package_walk_test.py --generated /tmp/movementlab-walk-v08 --revision v08
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v09 --revision v09
 ```
 
 ## First Windows test

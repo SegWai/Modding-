@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--generated', required=True, type=Path)
-    parser.add_argument('--revision', choices=('v01', 'v02', 'v03', 'v04', 'v05', 'v06', 'v07', 'v08'), default='v01')
+    parser.add_argument('--revision', choices=('v01', 'v02', 'v03', 'v04', 'v05', 'v06', 'v07', 'v08', 'v09'), default='v01')
     args = parser.parse_args()
     clip_name = 'MovementLab_Unarmed_Walk_' + args.revision
     report = json.loads((args.generated / 'validation.json').read_text())
@@ -54,7 +54,7 @@ def main():
         side[0].save(args.generated / 'preview_walk_side.gif', save_all=True,
                      append_images=side[1:], duration=delays, loop=0)
         files['preview_walk_side.gif'] = (args.generated / 'preview_walk_side.gif').read_bytes()
-    if args.revision in ('v04', 'v05', 'v06', 'v07', 'v08'):
+    if args.revision in ('v04', 'v05', 'v06', 'v07', 'v08', 'v09'):
         rear = [Image.open(args.generated / 'frames_rear' / f'walk_{n:03d}.png').convert('RGB')
                 for n in sampled]
         rear[0].save(args.generated / 'preview_walk_rear.gif', save_all=True,
