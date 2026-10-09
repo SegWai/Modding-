@@ -15,15 +15,15 @@ source, import metadata, checks, and asset notices.
   existing walking animation.
 - The user opened the original arm-lift Blender file in Blender 4.3.2 and
   confirmed that its animation plays.
-- The user reports that Workbench produced `MovementLab_ArmLift_Test.anm`
-  after reimporting the TXA. Playing this compiled clip in Animation Editor is
-  the next check.
+- Workbench produced `MovementLab_ArmLift_Test.anm` after reimporting the TXA.
+  The user assigned it to a separate preview instance and confirmed that the
+  arm lifts in DayZ 1.29 Animation Editor.
 - Blender 4.3.2 here authors and exports an original four-second arm-lift test
   as TXA. Checks cover frame ranges, bone names against the authoring rig,
   finite transforms, normalized rotations, stationary feet, and matching loop
   endpoints. Rendered start and middle poses were inspected.
 
-Animation Editor playback and in-game playback of the original clip are pending.
+In-game playback of the original clip is pending.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
@@ -44,7 +44,7 @@ Right-click the `.txa` source and choose **Register resource and import** if
 that action is offered. For an already registered resource, use **Reimport
 Resource**. If the browser shows only the virtual `.anm` entry, use its
 **Reimport Resource** action. The user confirmed that reimporting created the
-ANM file; its contents and native playback still need verification.
+ANM file, and subsequent assignment confirmed Animation Editor playback.
 
 After import, check for a nonempty `MovementLab_ArmLift_Test.anm` next to the
 source. If no ANM is produced, capture the **main Workbench console** and the
@@ -56,8 +56,8 @@ does not yet exist on disk.
 [Download the separate editor preview workspace](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Editor_Preview.zip).
 Copy its two files into the existing `TestAnimations` folder. In Animation
 Editor use **Workspace → Open** and select `MovementLab_ArmLift_Preview.aw`.
-The user reports selecting this preview instance, but the original clip has
-not yet been confirmed playing in it.
+The user confirmed that this preview instance plays the original arm-lift clip
+after selecting a walking cell and using **Set Anim**.
 
 Select the **MovementLab_ArmLift_Preview** instance. Pick an assigned walking
 cell in **Anim Sets**, then select the compiled test ANM in the editor's **File
@@ -87,6 +87,28 @@ The existing `player_main_preview.aw` omits the unavailable event table only
 for editor preview. It is not a gameplay-ready replacement workspace. The
 earlier `MeshParam` messages remain unresolved, although existing clip playback
 works.
+
+## Next: an offline in-game diagnostic
+
+Save the separate preview workspace before closing Animation Editor. We need
+the installed gesture slot names and the diagnostic executable location before
+preparing the runtime mod. [Collect the local setup information](https://github.com/SegWai/Modding-/blob/main/tools/inspect-runtime-test.ps1)
+by copying the helper into Windows PowerShell; it reads files and prints a
+short report without changing the installation.
+
+The version-matched official script snapshot exposes
+`ModItemRegisterCallbacks.RegisterEmptyHanded` in `dayzplayercfgbase.c`, called
+after the default profile is set, and
+`DayZPlayerType.SetDefaultItemInHandsProfile` in `dayzplayer.c`. These support
+an experiment with a child ASI for the empty-handed player. They do not prove
+that the engine will accept every override or that a gesture will play with
+the exported clip's transforms and events. A temporary gesture test is the
+next proposed check; use the actual installed mappings rather than inventing
+slot names or replacing the entire player graph.
+
+Reference: [official DayZ 1.29 scripts](https://github.com/BohemiaInteractive/DayZ-Script-Diff/tree/86974a0f5bd16b1ee3e334ad828133c93dca80a1),
+build 1.29.163709, scripts revision 125372. Windows execution,
+mod packing, and offline playback are still pending.
 
 ## Reproduce the cloud export
 
