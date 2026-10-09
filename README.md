@@ -18,6 +18,9 @@ source, import metadata, checks, and asset notices.
 - Workbench produced `MovementLab_ArmLift_Test.anm` after reimporting the TXA.
   The user assigned it to a separate preview instance and confirmed that the
   arm lifts in DayZ 1.29 Animation Editor.
+- The offline baseline mission launches on the user's PC, the character can
+  move, and F6 plays the original greeting. The custom greeting profile remains
+  to be packed and tested.
 - Blender 4.3.2 here authors and exports an original four-second arm-lift test
   as TXA. Checks cover frame ranges, bone names against the authoring rig,
   finite transforms, normalized rotations, stationary feet, and matching loop
@@ -93,14 +96,15 @@ works.
 The local setup report confirms standing greeting slots
 `Gesture.SaluteErc.In`, `.Loop`, and `.Out`, and the diagnostic executable at
 `D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe`.
-The user has DayZ and DayZ Tools installed, with no existing offline mission.
+The user has DayZ and DayZ Tools installed. The supplied baseline mission now
+works on their PC; no additional offline-mode installation was needed.
 
 [Download the offline test sources and launchers](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Offline_Test.zip).
 Extract into `D:\DayZProjects`, producing `MovementLabOfflineTest`. With Steam
 running and DayZ closed, open **Launch-Baseline.cmd**. Check that a character
 loads and can move, then stand upright with empty hands and press **F6** for
-the original greeting. The baseline loads no animation mod. Its launch and
-script compilation are pending Windows verification.
+the original greeting. The user confirmed all of these baseline checks passed.
+The baseline loads no animation mod.
 
 After the baseline works, **Prepare-Animation.cmd** copies the already compiled
 arm-lift ANM into the new source folder, preserving a different existing file.
@@ -114,8 +118,9 @@ test the arm-lift greeting. The runtime ASI overrides only
 
 The practice mission creates one character without an economy or character
 persistence. Separate baseline and mod profile folders retain logs for
-diagnosis. Native launch, PBO packing, and runtime animation binding have not
-been performed here. Rebuild the ZIP with `python tools/package_runtime_test.py`.
+diagnosis. The baseline's native launch and mission compilation are confirmed
+by the user's test. PBO packing and custom runtime animation binding remain
+pending. Rebuild the ZIP with `python tools/package_runtime_test.py`.
 
 The version-matched official script snapshot exposes
 `ModItemRegisterCallbacks.RegisterEmptyHanded` in `dayzplayercfgbase.c`, called
@@ -128,8 +133,8 @@ next check. The supplied child ASI uses the installed mapping and replaces no
 player graph file.
 
 Reference: [official DayZ 1.29 scripts](https://github.com/BohemiaInteractive/DayZ-Script-Diff/tree/86974a0f5bd16b1ee3e334ad828133c93dca80a1),
-build 1.29.163709, scripts revision 125372. Windows execution,
-mod packing, and offline playback are still pending.
+build 1.29.163709, scripts revision 125372. Custom mod packing and its animation
+playback are still pending.
 
 ## Reproduce the cloud export
 

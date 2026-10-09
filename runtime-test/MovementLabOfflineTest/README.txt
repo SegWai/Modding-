@@ -2,8 +2,9 @@ MovementLab offline arm-lift diagnostic — DayZ 1.29
 
 STATUS
 The original animation has been confirmed in Blender and DayZ Animation Editor.
-This new mission and runtime profile have not been run in DayZ yet. Launch the
-baseline first so mission problems can be separated from animation binding.
+The user confirmed that this offline baseline launches, the character moves,
+and F6 plays the original greeting. Packing and the custom runtime profile test
+remain pending. New installations should still check the baseline first.
 This is a small practice mission, not a complete offline DayZ survival mode.
 
 1. EXTRACT AND CHECK THE BASELINE
@@ -33,7 +34,8 @@ includes a $PBOPREFIX$ file). For this diagnostic use packing without binarizing
 the animation is already compiled, and the config/scripts/ASI are text.
 Ensure .anm, .asi, and .c files are included. If your Addon Builder uses a
 "List of files to copy directly", include *.anm;*.asi;*.c;*.cpp in that list.
-The exact packing controls still need checking in the installed Addon Builder.
+Keep the prefix exactly MovementLabRuntimeTest. If the installed packing
+controls differ, capture the Addon Builder window before changing other options.
 No signing or Workshop publishing is needed for this local diagnostic launch.
 
 4. LAUNCH WITH THE MOD
