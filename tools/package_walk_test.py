@@ -1,0 +1,73 @@
+"""Package the generated walk study with its separate editor preview."""
+
+import argparse
+from pathlib import Path
+import zipfile
+
+from PIL import Image, ImageDraw
+
+ROOT = Path(__file__).resolve().parents[1]
+NAME = 'MovementLab_Unarmed_Walk_v01'
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--generated', required=True, type=Path)
+    args = parser.parse_args()
+    # The renderer samples every second frame at 30 fps. GIF timing uses
+    # centiseconds, so alternate delays to retain the 1.2-second loop.
+    frames = [Image.open(args.generated / 'frames' / f'walk_{n:03d}.png').convert('RGB')
+              for n in range(0, 36, 2)]
+    frames[0].save(args.generated / 'preview_walk.gif', save_all=True,
+                   append_images=frames[1:], duration=[70, 60, 70]*6, loop=0)
+    sheet = Image.new('RGB', (384*4, 408), '#20242a')
+    draw = ImageDraw.Draw(sheet)
+    for column, frame in enumerate((0, 8, 18, 26)):
+        sheet.paste(frames[frame//2], (column*384, 24))
+        draw.text((column*384+12, 6), f'Frame {frame}', fill='white')
+    sheet.save(args.generated / 'preview_contact_sheet.png')
+    with Image.open(args.generated / 'preview_walk.gif') as preview:
+        assert preview.n_frames == 18
+        duration = 0
+        for frame in range(preview.n_frames):
+            preview.seek(frame)
+            duration += preview.info['duration']
+        assert duration == 1200
+    files = {}
+    source = ROOT / 'walk-test'
+    for path in sorted(source.rglob('*')):
+        if path.is_file():
+            files[path.relative_to(source).as_posix()] = path.read_bytes()
+    for extension in ('.blend', '.txa'):
+        files['TestAnimations/' + NAME + extension] = (args.generated / (NAME+extension)).read_bytes()
+    for name in ('validation.json', 'preview_walk.gif', 'preview_contact_sheet.png'):
+        files[name] = (args.generated / name).read_bytes()
+    for name in ('build_walk_clip.py', 'build_diagnostic_clip.py', 'render_walk_preview.py', 'package_walk_test.py'):
+        files['Source/' + name] = (ROOT / 'tools' / name).read_bytes()
+    with zipfile.ZipFile(ROOT / 'artifacts/MovementLab_ArmLift_Test.zip') as original:
+        for name in ('ASSET_NOTICES.txt', 'EXPORTER_LICENSE.txt'):
+            files[name] = original.read(name)
+    files['ASSET_NOTICES.txt'] = files['ASSET_NOTICES.txt'].replace(
+        b'Original diagnostic arm-lift keyframes and authoring script:',
+        b'Original walking-study keyframes and authoring script:').replace(
+        b'adding new procedural arm-lift keyframes',
+        b'adding new procedural walking keyframes and preview lighting')
+    destination = ROOT / 'artifacts' / (NAME + '.zip')
+    with zipfile.ZipFile(destination, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
+        for name, data in sorted(files.items()):
+            if name.endswith('.txt'):
+                data = data.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
+            entry = zipfile.ZipInfo(name, date_time=(2026, 10, 9, 0, 0, 0))
+            entry.compress_type = zipfile.ZIP_DEFLATED
+            entry.external_attr = 0o100644 << 16
+            bundle.writestr(entry, data, compresslevel=9)
+    with zipfile.ZipFile(destination) as bundle:
+        assert bundle.testzip() is None
+        assert len(bundle.namelist()) == len(set(bundle.namelist()))
+        assert not any(Path(name).is_absolute() or '..' in Path(name).parts for name in bundle.namelist())
+    print(f'Packaged {len(files)} files: {destination.name} ({destination.stat().st_size} bytes)')
+    print('Walking ANM compilation and native pace matching remain Windows checks.')
+
+
+if __name__ == '__main__':
+    main()

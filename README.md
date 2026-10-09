@@ -22,6 +22,8 @@ source, import metadata, checks, and asset notices.
   move, and F6 plays the original greeting.
 - The user packed the custom profile and confirmed that **F1** plays our
   original arm-lift animation inside DayZ.
+- The user confirmed normal movement returns after the gesture ends, with
+  no body distortion observed during playback.
 - Blender 4.3.2 here authors and exports an original four-second arm-lift test
   as TXA. Checks cover frame ranges, bone names against the authoring rig,
   finite transforms, normalized rotations, stationary feet, and matching loop
@@ -31,6 +33,42 @@ The Blender → TXA → Workbench ANM → PBO → in-game playback pipeline is c
 by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
+
+## First original walking study
+
+[Download the walking study](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v01.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v01.blend` in Blender 4.3.2 and
+press Space. This original in-place loop has alternating foot contacts, a
+small hip weight shift, and opposing arm swing. The bundle includes a GIF,
+TXA source, import metadata, and a separate Workbench preview workspace.
+Its README gives the import and **Set Anim** steps already used for the arm lift.
+
+The study uses a 1.2-second cycle and a nominal 0.80 m/s authoring reference.
+Cloud checks verify matching endpoint poses, stationary root, reachable leg
+targets, unchanged bone scales, the baked action against authored poses, and
+contact drift compensated for that nominal travel. The TXA was parsed back
+and checked for finite transforms, normalized rotations, and all 152 nodes.
+Rendered contact and swing poses were inspected. This does not establish foot
+contact at DayZ's actual speed: walking Workbench import, native timing,
+footstep events, and gameplay blending remain pending. Keep the working
+arm-lift runtime test as-is until the new clip's preview and pace are checked.
+
+To reproduce it after the existing cloud setup:
+
+```sh
+BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
+BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
+blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
+  --python tools/build_walk_clip.py -- \
+  --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
+  --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
+  --output /tmp/movementlab-walk-v01
+BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
+BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
+blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
+  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v01
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v01
+```
 
 ## First Windows test
 
@@ -138,8 +176,8 @@ The child ASI uses `ModItemRegisterCallbacks.RegisterEmptyHanded` and
 `DayZPlayerType.SetDefaultItemInHandsProfile` without replacing the player graph.
 This test confirms the original clip can play through that profile. It does not
 establish compatibility with other mods or multiplayer, or replacement of the
-locomotion controller. Next, check walking, running, and crouching after the
-gesture for stuck poses or distortion before authoring an unarmed walking loop.
+locomotion controller. The user confirmed movement resumes after the gesture
+and observed no distortion. The walking study above is the next separate test.
 
 Reference: [official DayZ 1.29 scripts](https://github.com/BohemiaInteractive/DayZ-Script-Diff/tree/86974a0f5bd16b1ee3e334ad828133c93dca80a1),
 build 1.29.163709, scripts revision 125372.
