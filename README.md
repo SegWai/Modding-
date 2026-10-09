@@ -34,24 +34,24 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
-## Walking reference revision v07
+## Walking reference revision v08
 
-[Download walking revision v07](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v07.zip).
-Open `TestAnimations/MovementLab_Unarmed_Walk_v07.blend` in Blender 4.3.2 and
+[Download walking revision v08](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v08.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v08.blend` in Blender 4.3.2 and
 press Space. The default view is from the front, matching the new reference.
 Rear, side and front GIF previews are also included.
 
-This revision follows the user's annotated feedback on v06. It raises the
-toes before landing (22 degrees), keeps the knee nearly straight (3 degrees)
-through final reach and initial support, and delays supporting-knee flex
-until the opposite foot starts leaving the ground. The ankle track narrows
-from 25 to 20 cm. Arms sit farther out, with 10.3–14.7 cm lateral clearance
-between the hand/finger mesh and the hip band across half-frame samples.
-That clearance is measured on the unclothed reference body; clothing needs
-separate native checks. Pelvis height follows supporting-leg extension,
-with less than 2 cm vertical travel and no bone stretching. The 34-frame
-cycle, torso timing and nominal 0.90 m/s authoring speed are retained.
-`walk-test-v07/reference_notes.json` records source limitations and choices.
+This revision follows the user's shoulder, hip and head feedback on v07.
+The hips turn with the legs, while the chest and shoulders turn with the
+opposing arms. Individual shoulders follow their corresponding arm swing.
+The head gains a small cyclic nod and side tilt, each under one degree.
+The 34-frame cadence remains regular; no finger/hand micro animation is
+added. Existing wrist curves and the static relaxed finger pose are retained.
+The raised toes, nearly straight landing knees, delayed support flex and
+20 cm ankle track are retained. Arm spacing compensates for shoulder turning,
+with roughly 10–16 cm lateral hand-to-hip clearance on the reference body.
+Pelvis vertical travel stays under 2 cm. Native clothing clearance is pending.
+`walk-test-v08/reference_notes.json` records the revision's choices and limits.
 Appearance still requires user review. No source video or frames are bundled.
 
 Cloud checks cover matching endpoint poses, stationary root, reachable leg
@@ -70,18 +70,18 @@ To reproduce after the existing cloud setup:
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/build_walk_clip_v07.py -- \
+  --python tools/build_walk_clip_v08.py -- \
   --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
   --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
-  --output /tmp/movementlab-walk-v07
+  --output /tmp/movementlab-walk-v08
 for movementlab_view in front rear side; do
   BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
   BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
   blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v07 \
-    --name MovementLab_Unarmed_Walk_v07 --view "$movementlab_view" --save-view front --straight-front
+    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v08 \
+    --name MovementLab_Unarmed_Walk_v08 --view "$movementlab_view" --save-view front --straight-front
 done
-python tools/package_walk_test.py --generated /tmp/movementlab-walk-v07 --revision v07
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v08 --revision v08
 ```
 
 ## First Windows test
