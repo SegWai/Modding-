@@ -28,7 +28,7 @@ class MovementLabOfflineMission extends MissionGameplay
         player.GetStatWater().Set(player.GetStatWater().GetMax());
         player.GetStatEnergy().Set(player.GetStatEnergy().GetMax());
         GetGame().SelectPlayer(null, player);
-        Print("[MovementLab] Offline character selected. Stand with empty hands and press F6 for the greeting test.");
+        Print("[MovementLab] Offline character selected. Stand with empty hands. Use F1 for the custom greeting test; F6 is the mission diagnostic trigger.");
     }
 
     override void OnKeyPress(int key)

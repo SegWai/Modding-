@@ -19,14 +19,16 @@ source, import metadata, checks, and asset notices.
   The user assigned it to a separate preview instance and confirmed that the
   arm lifts in DayZ 1.29 Animation Editor.
 - The offline baseline mission launches on the user's PC, the character can
-  move, and F6 plays the original greeting. The custom greeting profile remains
-  to be packed and tested.
+  move, and F6 plays the original greeting.
+- The user packed the custom profile and confirmed that **F1** plays our
+  original arm-lift animation inside DayZ.
 - Blender 4.3.2 here authors and exports an original four-second arm-lift test
   as TXA. Checks cover frame ranges, bone names against the authoring rig,
   finite transforms, normalized rotations, stationary feet, and matching loop
   endpoints. Rendered start and middle poses were inspected.
 
-In-game playback of the original clip is pending.
+The Blender → TXA → Workbench ANM → PBO → in-game playback pipeline is confirmed
+by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
@@ -91,7 +93,7 @@ for editor preview. It is not a gameplay-ready replacement workspace. The
 earlier `MeshParam` messages remain unresolved, although existing clip playback
 works.
 
-## Next: an offline in-game diagnostic
+## Offline in-game diagnostic
 
 The local setup report confirms standing greeting slots
 `Gesture.SaluteErc.In`, `.Loop`, and `.Out`, and the diagnostic executable at
@@ -116,46 +118,31 @@ Addon Builder treated a destination ending in `.pbo` as an extra directory;
 use the folder only. The user's actual extraction root is
 `D:\DayZProjects\MovementLab_Offline_Test\MovementLabOfflineTest`, so all packing
 paths must be based on that root. The launchers already resolve their own folder.
-The ZIP's README gives the packing details. Use **Launch-With-Mod.cmd** and F6 to
+The ZIP's README gives the packing details. Use **Launch-With-Mod.cmd** and **F1** to
 test the arm-lift greeting. The runtime ASI overrides only
 `Gesture.SaluteErc.Loop`, retaining the vanilla greeting's entry/exit phases.
 
 The practice mission creates one character without an economy or character
 persistence. Separate baseline and mod profile folders retain logs for
-diagnosis. The baseline's native launch and mission compilation are confirmed
-by the user's test. Addon Builder reported a successful build, but its output
-was in the earlier folder and nested inside a directory named `.pbo`. Correct
-output placement and custom runtime animation binding remain pending. Rebuild
-the ZIP with `python tools/package_runtime_test.py`.
+diagnosis. The user confirmed native mission compilation, packing, and custom
+animation playback on F1. F6 remains a separate mission diagnostic trigger;
+the reason for the observed difference between the keys has not been established.
+Rebuild the ZIP with `python tools/package_runtime_test.py`.
 
-The user's attempted copy then found another directory occupying the expected
-PBO filename at the actual extraction root. A plain `Test-Path` returned true
-for that directory despite the failed copy. File-presence checks must use
-`-PathType Leaf`; the updated launcher explicitly rejects a directory at its
+File-presence checks must use `Test-Path -PathType Leaf`; a plain `Test-Path`
+also accepts folders. The launcher explicitly rejects a directory at its
 expected PBO path. Preserve mistaken build-output directories outside the mod
 before copying the actual file into place.
 
-After the placement repair, the user launched the test and reported that F6
-still shows the vanilla greeting. The custom animation has not yet been
-confirmed in-game. Next checks are the runtime registration marker in the
-latest WithMod script log, packed resource contents/prefix, and the greeting's
-actual source selection. The official EmoteGreeting class uses a modifier
-command for upright/crouched poses and a full-body command for prone; an exact
-standing source row alone does not establish which route is executing.
-
-The version-matched official script snapshot exposes
-`ModItemRegisterCallbacks.RegisterEmptyHanded` in `dayzplayercfgbase.c`, called
-after the default profile is set, and
-`DayZPlayerType.SetDefaultItemInHandsProfile` in `dayzplayer.c`. These support
-an experiment with a child ASI for the empty-handed player. They do not prove
-that the engine will accept every override or that a gesture will play with
-the exported clip's transforms and events. A temporary gesture test is the
-next check. The supplied child ASI uses the installed mapping and replaces no
-player graph file.
+The child ASI uses `ModItemRegisterCallbacks.RegisterEmptyHanded` and
+`DayZPlayerType.SetDefaultItemInHandsProfile` without replacing the player graph.
+This test confirms the original clip can play through that profile. It does not
+establish compatibility with other mods or multiplayer, or replacement of the
+locomotion controller. Next, check walking, running, and crouching after the
+gesture for stuck poses or distortion before authoring an unarmed walking loop.
 
 Reference: [official DayZ 1.29 scripts](https://github.com/BohemiaInteractive/DayZ-Script-Diff/tree/86974a0f5bd16b1ee3e334ad828133c93dca80a1),
-build 1.29.163709, scripts revision 125372. Custom mod packing and its animation
-playback are still pending.
+build 1.29.163709, scripts revision 125372.
 
 ## Reproduce the cloud export
 

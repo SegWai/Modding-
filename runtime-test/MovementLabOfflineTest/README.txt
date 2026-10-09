@@ -3,8 +3,9 @@ MovementLab offline arm-lift diagnostic — DayZ 1.29
 STATUS
 The original animation has been confirmed in Blender and DayZ Animation Editor.
 The user confirmed that this offline baseline launches, the character moves,
-and F6 plays the original greeting. Packing and the custom runtime profile test
-remain pending. New installations should still check the baseline first.
+and F6 plays the original greeting. The user also packed the custom profile and
+confirmed our arm-lift animation plays inside DayZ on F1. New installations
+should still check the baseline first.
 This is a small practice mission, not a complete offline DayZ survival mode.
 
 1. EXTRACT AND CHECK THE BASELINE
@@ -49,7 +50,7 @@ No signing or Workshop publishing is needed for this local diagnostic launch.
 
 4. LAUNCH WITH THE MOD
 Double-click Launch-With-Mod.cmd. It requires the packed PBO in the folder above.
-Stand still, upright, with empty hands. Use Change perspective, then press F6.
+Stand still, upright, with empty hands. Use Change perspective, then press F1 (the standard greeting key on this setup).
 Expected: the greeting's standing loop uses our four-second right arm lift.
 The greeting's original entry/exit phases remain, so a brief vanilla movement
 can appear before/after the test loop. Walking/running slots are inherited.
@@ -61,6 +62,7 @@ Baseline: MovementLabOfflineTest\Profiles\Baseline
 With mod: MovementLabOfflineTest\Profiles\WithMod
 Expected script markers:
   [MovementLab] Offline character selected...
+The mission's separate F6 diagnostic trigger also prints:
   [MovementLab] Greeting requested...
 With mod, also:
   [MovementLab] Registered the arm-lift greeting profile for empty hands.
