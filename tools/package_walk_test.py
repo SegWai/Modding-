@@ -1,6 +1,7 @@
 """Package the generated walk study with its separate editor preview."""
 
 import argparse
+import json
 from pathlib import Path
 import zipfile
 
@@ -12,15 +13,19 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--generated', required=True, type=Path)
-    parser.add_argument('--revision', choices=('v01', 'v02', 'v03'), default='v01')
+    parser.add_argument('--revision', choices=('v01', 'v02', 'v03', 'v04'), default='v01')
     args = parser.parse_args()
     clip_name = 'MovementLab_Unarmed_Walk_' + args.revision
-    # The renderer samples every second frame at 30 fps. GIF timing uses
-    # centiseconds, so alternate delays to retain the 1.2-second loop.
+    report = json.loads((args.generated / 'validation.json').read_text())
+    cycle, fps = report['cycle_frames'], report['fps']
+    sampled = list(range(0, cycle, 2))
+    boundaries = [round(frame/fps*100)*10 for frame in sampled + [cycle]]
+    delays = [b-a for a, b in zip(boundaries, boundaries[1:])]
+    # GIF timing uses centiseconds; distribute rounding over the whole loop.
     frames = [Image.open(args.generated / 'frames' / f'walk_{n:03d}.png').convert('RGB')
-              for n in range(0, 36, 2)]
+              for n in sampled]
     frames[0].save(args.generated / 'preview_walk.gif', save_all=True,
-                   append_images=frames[1:], duration=[70, 60, 70]*6, loop=0)
+                   append_images=frames[1:], duration=delays, loop=0)
     sheet = Image.new('RGB', (384*4, 408), '#20242a')
     draw = ImageDraw.Draw(sheet)
     for column, frame in enumerate((0, 8, 18, 26)):
@@ -28,12 +33,12 @@ def main():
         draw.text((column*384+12, 6), f'Frame {frame}', fill='white')
     sheet.save(args.generated / 'preview_contact_sheet.png')
     with Image.open(args.generated / 'preview_walk.gif') as preview:
-        assert preview.n_frames == 18
+        assert preview.n_frames == len(sampled)
         duration = 0
         for frame in range(preview.n_frames):
             preview.seek(frame)
             duration += preview.info['duration']
-        assert duration == 1200
+        assert duration == boundaries[-1]
     files = {}
     source = ROOT / ('walk-test' if args.revision == 'v01' else 'walk-test-' + args.revision)
     for path in sorted(source.rglob('*')):
@@ -45,10 +50,16 @@ def main():
         files[name] = (args.generated / name).read_bytes()
     if args.revision != 'v01':
         side = [Image.open(args.generated / 'frames_side' / f'walk_{n:03d}.png').convert('RGB')
-                for n in range(0, 36, 2)]
+                for n in sampled]
         side[0].save(args.generated / 'preview_walk_side.gif', save_all=True,
-                     append_images=side[1:], duration=[70, 60, 70]*6, loop=0)
+                     append_images=side[1:], duration=delays, loop=0)
         files['preview_walk_side.gif'] = (args.generated / 'preview_walk_side.gif').read_bytes()
+    if args.revision == 'v04':
+        rear = [Image.open(args.generated / 'frames_rear' / f'walk_{n:03d}.png').convert('RGB')
+                for n in sampled]
+        rear[0].save(args.generated / 'preview_walk_rear.gif', save_all=True,
+                     append_images=rear[1:], duration=delays, loop=0)
+        files['preview_walk_rear.gif'] = (args.generated / 'preview_walk_rear.gif').read_bytes()
     for name in ('build_walk_clip.py', 'build_diagnostic_clip.py', 'render_walk_preview.py', 'package_walk_test.py'):
         files['Source/' + name] = (ROOT / 'tools' / name).read_bytes()
     if args.revision != 'v01':

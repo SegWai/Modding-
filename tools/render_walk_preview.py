@@ -8,7 +8,8 @@ from pathlib import Path
 parser = argparse.ArgumentParser()
 parser.add_argument('--output', required=True, type=Path)
 parser.add_argument('--name', default='MovementLab_Unarmed_Walk_v01')
-parser.add_argument('--view', choices=('front', 'side'), default='front')
+parser.add_argument('--view', choices=('front', 'side', 'rear'), default='front')
+parser.add_argument('--save-view', choices=('front', 'side', 'rear'), default='front')
 args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:])
 p = args.output
 bpy.ops.wm.open_mainfile(filepath=str(p/(args.name+'.blend')), use_scripts=False)
@@ -39,7 +40,8 @@ m=bpy.data.materials.new('Preview ground'); m.diffuse_color=(.23,.25,.27,1); bpy
 m.use_nodes=True
 m.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(.18,.20,.22,1)
 m.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=.9
-bpy.ops.object.camera_add(location=(3,-4,2.1) if args.view=='front' else (4,0,1.3))
+positions={'front': (3,-4,2.1), 'side': (4,0,1.3), 'rear': (-.7,4,2.1)}
+bpy.ops.object.camera_add(location=positions[args.view])
 c=bpy.context.object
 c.rotation_euler=(Vector((0,0,.85))-c.location).to_track_quat('-Z','Y').to_euler()
 c.data.type='ORTHO'; c.data.ortho_scale=2.1; s.camera=c
@@ -59,9 +61,9 @@ for screen in bpy.data.screens:
    area.spaces.active.shading.type='SOLID'
    area.spaces.active.overlay.show_overlays=False
 s.frame_set(0)
-if args.view=='front':
+if args.view==args.save_view:
  bpy.ops.wm.save_as_mainfile(filepath=str(p/(args.name+'.blend')))
-frames=p/('frames' if args.view=='front' else 'frames_side')
+frames=p/('frames' if args.view=='front' else 'frames_'+args.view)
 frames.mkdir(exist_ok=True)
-for frame in range(0,36,2):
+for frame in range(0,s.frame_end+1,2):
  s.frame_set(frame);s.render.filepath=str(frames/f'walk_{frame:03d}.png');bpy.ops.render.render(write_still=True)

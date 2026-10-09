@@ -34,54 +34,55 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
-## Walking visual revision v03
+## Walking reference revision v04
 
-The user confirmed v01 plays in Blender but found it stiff and unnatural.
-v02 improved arm swing and foot roll, but the user found the knee bend and
-body dip excessive. v03 aligns the steps beneath the body, reduces vertical
-pelvis travel from 4.9 cm to 1.8 cm, and keeps the supporting knee straighter.
-The previous ZIPs remain available for comparison. Visual review is still ongoing.
+[Download walking revision v04](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v04.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v04.blend` in Blender 4.3.2 and
+press Space. The default view is from behind, matching the supplied walking
+reference. Rear, side and front GIF previews are also included.
 
-[Download walking revision v03](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v03.zip).
-Open `TestAnimations/MovementLab_Unarmed_Walk_v03.blend` in Blender 4.3.2 and
-press Space. Arm swing and upper-body counter-rotation are retained. Earlier
-heel lift and foot pickup help the rear leg recover without locking, while the
-body height stays steadier. The bundle includes front and side GIFs, TXA source,
-import metadata, and a separate Workbench preview workspace.
-Its README gives the import and **Set Anim** steps already used for the arm lift.
+The user requested the top character's walk in
+[this video](https://www.youtube.com/shorts/FJnBXvfNc_E) and supplied a readable
+five-second rear-view crop. Lower-body appearance repeats at about 1.17 seconds;
+v04 uses a 35-frame cycle at 30 fps. Original authored key-pose curves give the
+hips, shoulders, elbows and wrists separate timing, with relaxed fingers and
+a steadier head. The smaller body dip and straighter supporting knee are
+retained from v03, following feedback about excessive crouching in v02.
 
-The study uses a 1.2-second cycle and a nominal 0.90 m/s authoring reference.
-Cloud checks verify matching endpoint poses, stationary root, reachable leg
-targets, unchanged bone scales, the baked action against authored poses, and
-contact drift compensated for that nominal travel. The TXA was parsed back
-and checked for finite transforms, normalized rotations, and all 152 nodes.
-Deformed-mesh ground clearance is checked at integer and half frames.
-Rendered contact and swing poses were inspected from the front and side.
-This does not establish foot contact at DayZ's actual speed: walking Workbench import, native timing,
-footstep events, and gameplay blending remain pending. Keep the working
-arm-lift runtime test as-is until the new clip's preview and pace are checked.
+This is a visual interpretation, not reconstructed 3D motion. The rear view,
+tracking camera and partly cropped feet limit the depth and speed estimates.
+`walk-test-v04/reference_notes.json` distinguishes observations from authored
+choices. The nominal 0.90 m/s is an authoring reference, not measured video
+speed. The supplied video and its frames are not included in the bundle.
 
-To reproduce it after the existing cloud setup:
+Cloud checks cover matching endpoint poses, stationary root, reachable leg
+targets, unchanged bone scales, the baked action against authored poses,
+contact drift compensated for nominal travel, and deformed-mesh ground
+clearance at integer and half frames. The TXA is parsed back and checked for
+finite transforms, normalized rotations and all 152 nodes. Rendered poses
+are inspected from behind, the front and side. Native Workbench compilation,
+pace, footstep events and gameplay blends remain pending for this revision.
+The working arm-lift runtime test is retained; judge the walk's appearance
+before doing more game setup. Older walking ZIPs remain for comparison.
+
+To reproduce after the existing cloud setup:
 
 ```sh
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/build_walk_clip_v03.py -- \
+  --python tools/build_walk_clip_v04.py -- \
   --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
   --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
-  --output /tmp/movementlab-walk-v03
-BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
-BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
-blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v03 \
-  --name MovementLab_Unarmed_Walk_v03
-BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
-BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
-blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v03 \
-  --name MovementLab_Unarmed_Walk_v03 --view side
-python tools/package_walk_test.py --generated /tmp/movementlab-walk-v03 --revision v03
+  --output /tmp/movementlab-walk-v04
+for movementlab_view in rear front side; do
+  BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
+  BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
+  blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
+    --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v04 \
+    --name MovementLab_Unarmed_Walk_v04 --view "$movementlab_view" --save-view rear
+done
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v04 --revision v04
 ```
 
 ## First Windows test
