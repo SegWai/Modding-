@@ -34,19 +34,20 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
-## Walking visual revision v02
+## Walking visual revision v03
 
-The user confirmed v01 plays in Blender but found it stiff and unnatural,
-with weak arm swing. v02 addresses that feedback; its visual quality remains
-subject to review. The original v01 ZIP is retained for comparison.
+The user confirmed v01 plays in Blender but found it stiff and unnatural.
+v02 improved arm swing and foot roll, but the user found the knee bend and
+body dip excessive. v03 aligns the steps beneath the body, reduces vertical
+pelvis travel from 4.9 cm to 1.8 cm, and keeps the supporting knee straighter.
+The previous ZIPs remain available for comparison. Visual review is still ongoing.
 
-[Download walking revision v02](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v02.zip).
-Open `TestAnimations/MovementLab_Unarmed_Walk_v02.blend` in Blender 4.3.2 and
-press Space. This in-place revision corrects the same-side arm/leg phase from v01,
-widens the arm swing, adds heel strike and toe push-off, and raises the body
-through the supporting leg. It is an iteration toward the intended motion
-quality. The bundle includes front and side GIFs,
-TXA source, import metadata, and a separate Workbench preview workspace.
+[Download walking revision v03](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v03.zip).
+Open `TestAnimations/MovementLab_Unarmed_Walk_v03.blend` in Blender 4.3.2 and
+press Space. Arm swing and upper-body counter-rotation are retained. Earlier
+heel lift and foot pickup help the rear leg recover without locking, while the
+body height stays steadier. The bundle includes front and side GIFs, TXA source,
+import metadata, and a separate Workbench preview workspace.
 Its README gives the import and **Set Anim** steps already used for the arm lift.
 
 The study uses a 1.2-second cycle and a nominal 0.90 m/s authoring reference.
@@ -66,21 +67,21 @@ To reproduce it after the existing cloud setup:
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/build_walk_clip_v02.py -- \
+  --python tools/build_walk_clip_v03.py -- \
   --rig /tmp/dayz-local-workbench/dayz_reference_rig.blend \
   --addon-root /tmp/dayz-animation-plugin/BlenderPlugin \
-  --output /tmp/movementlab-walk-v02
+  --output /tmp/movementlab-walk-v03
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v02 \
-  --name MovementLab_Unarmed_Walk_v02
+  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v03 \
+  --name MovementLab_Unarmed_Walk_v03
 BLENDER_USER_CONFIG=/tmp/dayz-local-workbench/blender-config \
 BLENDER_USER_EXTENSIONS=/tmp/dayz-local-workbench/blender-extensions \
 blender --background --factory-startup --disable-autoexec --python-exit-code 1 \
-  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v02 \
-  --name MovementLab_Unarmed_Walk_v02 --view side
-python tools/package_walk_test.py --generated /tmp/movementlab-walk-v02 --revision v02
+  --python tools/render_walk_preview.py -- --output /tmp/movementlab-walk-v03 \
+  --name MovementLab_Unarmed_Walk_v03 --view side
+python tools/package_walk_test.py --generated /tmp/movementlab-walk-v03 --revision v03
 ```
 
 ## First Windows test

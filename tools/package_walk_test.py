@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--generated', required=True, type=Path)
-    parser.add_argument('--revision', choices=('v01', 'v02'), default='v01')
+    parser.add_argument('--revision', choices=('v01', 'v02', 'v03'), default='v01')
     args = parser.parse_args()
     clip_name = 'MovementLab_Unarmed_Walk_' + args.revision
     # The renderer samples every second frame at 30 fps. GIF timing uses
@@ -35,7 +35,7 @@ def main():
             duration += preview.info['duration']
         assert duration == 1200
     files = {}
-    source = ROOT / ('walk-test' if args.revision == 'v01' else 'walk-test-v02')
+    source = ROOT / ('walk-test' if args.revision == 'v01' else 'walk-test-' + args.revision)
     for path in sorted(source.rglob('*')):
         if path.is_file():
             files[path.relative_to(source).as_posix()] = path.read_bytes()
@@ -43,7 +43,7 @@ def main():
         files['TestAnimations/' + clip_name + extension] = (args.generated / (clip_name+extension)).read_bytes()
     for name in ('validation.json', 'preview_walk.gif', 'preview_contact_sheet.png'):
         files[name] = (args.generated / name).read_bytes()
-    if args.revision == 'v02':
+    if args.revision != 'v01':
         side = [Image.open(args.generated / 'frames_side' / f'walk_{n:03d}.png').convert('RGB')
                 for n in range(0, 36, 2)]
         side[0].save(args.generated / 'preview_walk_side.gif', save_all=True,
@@ -51,8 +51,9 @@ def main():
         files['preview_walk_side.gif'] = (args.generated / 'preview_walk_side.gif').read_bytes()
     for name in ('build_walk_clip.py', 'build_diagnostic_clip.py', 'render_walk_preview.py', 'package_walk_test.py'):
         files['Source/' + name] = (ROOT / 'tools' / name).read_bytes()
-    if args.revision == 'v02':
-        files['Source/build_walk_clip_v02.py'] = (ROOT / 'tools/build_walk_clip_v02.py').read_bytes()
+    if args.revision != 'v01':
+        builder = 'build_walk_clip_' + args.revision + '.py'
+        files['Source/' + builder] = (ROOT / 'tools' / builder).read_bytes()
     with zipfile.ZipFile(ROOT / 'artifacts/MovementLab_ArmLift_Test.zip') as original:
         for name in ('ASSET_NOTICES.txt', 'EXPORTER_LICENSE.txt'):
             files[name] = original.read(name)
