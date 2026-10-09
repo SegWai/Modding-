@@ -135,6 +135,14 @@ for that directory despite the failed copy. File-presence checks must use
 expected PBO path. Preserve mistaken build-output directories outside the mod
 before copying the actual file into place.
 
+After the placement repair, the user launched the test and reported that F6
+still shows the vanilla greeting. The custom animation has not yet been
+confirmed in-game. Next checks are the runtime registration marker in the
+latest WithMod script log, packed resource contents/prefix, and the greeting's
+actual source selection. The official EmoteGreeting class uses a modifier
+command for upright/crouched poses and a full-body command for prone; an exact
+standing source row alone does not establish which route is executing.
+
 The version-matched official script snapshot exposes
 `ModItemRegisterCallbacks.RegisterEmptyHanded` in `dayzplayercfgbase.c`, called
 after the default profile is set, and
