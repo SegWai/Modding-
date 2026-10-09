@@ -43,8 +43,8 @@ Opening the ANM entry in Animation Editor does not perform the import.
 Right-click the `.txa` source and choose **Register resource and import** if
 that action is offered. For an already registered resource, use **Reimport
 Resource**. If the browser shows only the virtual `.anm` entry, use its
-**Reimport Resource** action. The exact menu wording and a successful compile
-still need verification on the user's installed Workbench.
+**Reimport Resource** action. The user confirmed that reimporting created the
+ANM file; its contents and native playback still need verification.
 
 After import, check for a nonempty `MovementLab_ArmLift_Test.anm` next to the
 source. If no ANM is produced, capture the **main Workbench console** and the
@@ -56,7 +56,8 @@ does not yet exist on disk.
 [Download the separate editor preview workspace](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Editor_Preview.zip).
 Copy its two files into the existing `TestAnimations` folder. In Animation
 Editor use **Workspace → Open** and select `MovementLab_ArmLift_Preview.aw`.
-Its compatibility still needs testing in the user's editor.
+The user reports selecting this preview instance, but the original clip has
+not yet been confirmed playing in it.
 
 Select the **MovementLab_ArmLift_Preview** instance. Pick an assigned walking
 cell in **Anim Sets**, then select the compiled test ANM in the editor's **File
@@ -64,6 +65,19 @@ Browser** and click **Set Anim**. Press Play to test the clip. The new instance
 inherits the vanilla assignments, so edits belong to the separate preview ASI.
 The template and graph stay references to the existing extracted resources.
 See the preview ZIP's README for the complete steps and expected result.
+Filtering `walk` alone shows inherited DayZ slots; it does not assign the
+arm-lift test. This test keeps the feet still and lifts the right arm over a
+four-second loop.
+
+If manual assignment is difficult, [download the local preview helper](https://github.com/SegWai/Modding-/raw/refs/heads/main/tools/create_bound_preview.ps1).
+Open it in Notepad, inspect it, and copy its contents into Windows PowerShell.
+It reads walking assignments from the installed `player_main.asi` and creates
+`MovementLab_ArmLift_Bound.asi` and `.aw` beside the compiled animation, with
+the test already assigned. Open that new workspace, select its instance, and
+use the exact filter printed by the helper to select an animation cell and
+press Play. The helper preserves existing files and stops without writing if
+it cannot find walking assignments. It has not been executed in Windows or
+validated in DayZ Tools here.
 
 Do not assign this clip to the existing player workspace yet. That workspace
 still references extracted vanilla animation instances and templates. A separate
