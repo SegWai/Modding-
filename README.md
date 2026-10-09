@@ -90,11 +90,32 @@ works.
 
 ## Next: an offline in-game diagnostic
 
-Save the separate preview workspace before closing Animation Editor. We need
-the installed gesture slot names and the diagnostic executable location before
-preparing the runtime mod. [Collect the local setup information](https://github.com/SegWai/Modding-/blob/main/tools/inspect-runtime-test.ps1)
-by copying the helper into Windows PowerShell; it reads files and prints a
-short report without changing the installation.
+The local setup report confirms standing greeting slots
+`Gesture.SaluteErc.In`, `.Loop`, and `.Out`, and the diagnostic executable at
+`D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe`.
+The user has DayZ and DayZ Tools installed, with no existing offline mission.
+
+[Download the offline test sources and launchers](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Offline_Test.zip).
+Extract into `D:\DayZProjects`, producing `MovementLabOfflineTest`. With Steam
+running and DayZ closed, open **Launch-Baseline.cmd**. Check that a character
+loads and can move, then stand upright with empty hands and press **F6** for
+the original greeting. The baseline loads no animation mod. Its launch and
+script compilation are pending Windows verification.
+
+After the baseline works, **Prepare-Animation.cmd** copies the already compiled
+arm-lift ANM into the new source folder, preserving a different existing file.
+Pack `MovementLabOfflineTest\MovementLabRuntimeTest` with Addon Builder to
+`MovementLabOfflineTest\@MovementLabRuntimeTest\Addons\MovementLabRuntimeTest.pbo`
+with prefix `MovementLabRuntimeTest`, including `.c`, `.asi`, and `.anm` files.
+The ZIP's README gives the paths and packing details; the installed tool's exact
+packing controls remain to be checked. Use **Launch-With-Mod.cmd** and F6 to
+test the arm-lift greeting. The runtime ASI overrides only
+`Gesture.SaluteErc.Loop`, retaining the vanilla greeting's entry/exit phases.
+
+The practice mission creates one character without an economy or character
+persistence. Separate baseline and mod profile folders retain logs for
+diagnosis. Native launch, PBO packing, and runtime animation binding have not
+been performed here. Rebuild the ZIP with `python tools/package_runtime_test.py`.
 
 The version-matched official script snapshot exposes
 `ModItemRegisterCallbacks.RegisterEmptyHanded` in `dayzplayercfgbase.c`, called
@@ -103,8 +124,8 @@ after the default profile is set, and
 an experiment with a child ASI for the empty-handed player. They do not prove
 that the engine will accept every override or that a gesture will play with
 the exported clip's transforms and events. A temporary gesture test is the
-next proposed check; use the actual installed mappings rather than inventing
-slot names or replacing the entire player graph.
+next check. The supplied child ASI uses the installed mapping and replaces no
+player graph file.
 
 Reference: [official DayZ 1.29 scripts](https://github.com/BohemiaInteractive/DayZ-Script-Diff/tree/86974a0f5bd16b1ee3e334ad828133c93dca80a1),
 build 1.29.163709, scripts revision 125372. Windows execution,
