@@ -35,6 +35,9 @@ Destination DIRECTORY (folder only):
 Do not append a .pbo filename to the destination field: the installed builder
 created an extra folder with that name. It should produce the file
 MovementLabRuntimeTest.pbo directly inside Addons.
+If a directory with that filename already exists, preserve it outside Addons
+before putting the actual PBO file in its place. In PowerShell, confirm the
+result with Test-Path -PathType Leaf; an ordinary Test-Path also accepts folders.
 Use prefix MovementLabRuntimeTest (the source includes a $PBOPREFIX$ file).
 For this diagnostic use packing without binarizing:
 the animation is already compiled, and the config/scripts/ASI are text.

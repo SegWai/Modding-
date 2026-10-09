@@ -128,6 +128,13 @@ was in the earlier folder and nested inside a directory named `.pbo`. Correct
 output placement and custom runtime animation binding remain pending. Rebuild
 the ZIP with `python tools/package_runtime_test.py`.
 
+The user's attempted copy then found another directory occupying the expected
+PBO filename at the actual extraction root. A plain `Test-Path` returned true
+for that directory despite the failed copy. File-presence checks must use
+`-PathType Leaf`; the updated launcher explicitly rejects a directory at its
+expected PBO path. Preserve mistaken build-output directories outside the mod
+before copying the actual file into place.
+
 The version-matched official script snapshot exposes
 `ModItemRegisterCallbacks.RegisterEmptyHanded` in `dayzplayercfgbase.c`, called
 after the default profile is set, and

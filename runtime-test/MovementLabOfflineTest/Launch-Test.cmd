@@ -36,6 +36,10 @@ start "" /D "%movementlabGameDir%" "%movementlabGameDir%\DayZDiag_x64.exe" "-mis
 exit /b 0
 
 :launch_mod
+if exist "%movementlabTestDir%@MovementLabRuntimeTest\Addons\MovementLabRuntimeTest.pbo\" (
+    echo The expected PBO path is a directory, not a file. Use the Addons directory as the builder destination.
+    exit /b 1
+)
 if not exist "%movementlabTestDir%@MovementLabRuntimeTest\Addons\MovementLabRuntimeTest.pbo" (
     echo The test PBO is missing. Prepare the animation and pack the source with Addon Builder first.
     exit /b 1
