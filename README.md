@@ -62,6 +62,19 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
+## Walk/jog turning comparison on Ctrl Modes v2
+
+[Download Ctrl Modes v3 turning A/B](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v3_Turning_AB.zip).
+
+Starts with the original v2 turning. Press F8 to switch to more responsive
+walk/jog turning (native direction/heading delay multipliers 1.6 instead of
+2.5), then press again to restore v2. F7 retains the separate vanilla comparison.
+Extract fresh and run `Launch-Movement-Test.cmd`; Ctrl/Shift controls and all
+startup/stopping curves are retained. Sprint filters are unchanged. Actual
+translated filter/toggle checks and movement regression checks passed; native
+turn arcs and animation behavior need the in-game comparison. Stable v2 stays
+available above. The isolated walk-blend experiment is not included.
+
 ## Isolated jog-to-walk blend experiment
 
 [Download the standalone jog-to-walk blend test v1](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Jog_Walk_Blend_Test_v1.zip).
