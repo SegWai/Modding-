@@ -14,6 +14,8 @@ class MovementLabMovementLogicMission extends MissionGameplay
     protected float m_MovementLabBrakeDuration;
     protected float m_MovementLabBrakeSpeed;
     protected bool m_MovementLabWasTurbo;
+    protected float m_MovementLabSprintExposure;
+    protected float m_MovementLabBrakeStopDuration;
     protected PlayerBase m_MovementLabBrakePlayer;
 
     protected void MovementLabCancelBrake()
@@ -34,6 +36,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabWasForward = false;
         m_MovementLabLastSpeed = 0;
         m_MovementLabWasTurbo = false;
+        m_MovementLabSprintExposure = 0;
     }
 
     protected void MovementLabBeginBrake(PlayerBase player, float start, float target, float duration)
@@ -45,7 +48,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTarget = target;
         m_MovementLabBrakeDuration = duration;
         m_MovementLabBrakeTime = 0;
-        Print("[MovementLab v3] Braking input target=" + target + ", duration=" + duration);
+        Print("[MovementLab v4] Braking input start=" + start + ", target=" + target + ", duration=" + duration);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -89,28 +92,37 @@ class MovementLabMovementLogicMission extends MissionGameplay
         {
             // Releasing W during the Shift ramp continues from the current
             // request, avoiding a jump back up to full sprint.
-            float duration = Math.Max(1.0, 2.2 * m_MovementLabBrakeSpeed / 3.0);
+            float duration = Math.Max(0.18, m_MovementLabBrakeStopDuration * m_MovementLabBrakeSpeed / m_MovementLabBrakeStart);
             MovementLabBeginBrake(player, m_MovementLabBrakeSpeed, 0, duration);
         }
-        if (!m_MovementLabBraking && m_MovementLabWasForward && m_MovementLabLastSpeed > 2.5)
+        if (!m_MovementLabBraking && m_MovementLabWasForward && m_MovementLabLastSpeed > 2.05 && m_MovementLabSprintExposure > 0)
         {
+            // Use the achieved gait, not the sprint command/state or a fixed 3.
+            // A brief Shift tap must not get a full-sprint braking tail.
+            float sprintAmount = Math.Clamp(m_MovementLabLastSpeed - 2.0, 0, 1);
+            float sustained = Math.Clamp(m_MovementLabSprintExposure / 0.45, 0, 1);
+            float weight = sprintAmount * sustained;
+            m_MovementLabBrakeStopDuration = 0.18 + 0.97 * weight;
             if (forward <= 0.05)
-                MovementLabBeginBrake(player, 3.0, 0, 2.2);
+                MovementLabBeginBrake(player, m_MovementLabLastSpeed, 0, m_MovementLabBrakeStopDuration);
             else if (m_MovementLabWasTurbo && !turbo)
-                MovementLabBeginBrake(player, 3.0, 2.0, 1.6);
+                MovementLabBeginBrake(player, m_MovementLabLastSpeed, 2.0, 0.12 + 0.33 * weight);
         }
         if (!m_MovementLabBraking && forward > 0.05)
         {
             m_MovementLabWasForward = true;
             m_MovementLabWasTurbo = turbo;
-            m_MovementLabLastSpeed = 0;
-            if (state.m_iMovement == DayZPlayerConstants.MOVEMENTIDX_SPRINT)
-                m_MovementLabLastSpeed = 3.0;
+            m_MovementLabLastSpeed = Math.Clamp(player.GetCommand_Move().GetCurrentMovementSpeed(), 0, 3);
+            if (turbo && m_MovementLabLastSpeed > 2.05)
+                m_MovementLabSprintExposure = Math.Min(0.45, m_MovementLabSprintExposure + Math.Max(timeslice, 0));
+            else
+                m_MovementLabSprintExposure = 0;
             return;
         }
         m_MovementLabWasForward = false;
         m_MovementLabWasTurbo = false;
         m_MovementLabLastSpeed = 0;
+        m_MovementLabSprintExposure = 0;
         if (!m_MovementLabBraking)
             return;
         if (m_MovementLabBrakePlayer != player)
@@ -127,11 +139,9 @@ class MovementLabMovementLogicMission extends MissionGameplay
         }
         // 3 = sprint, 2 = jog, 1 = walk, 0 = idle (not metres/second).
         // Let the native controller animate/collide; never move the entity directly.
-        // Full-stop ramp stays faster for longer than v2's linear curve.
-        // Shift-only ramp eases at both ends into continued jogging.
-        float blend = fraction * fraction;
-        if (m_MovementLabBrakeTarget > 0)
-            blend = fraction * fraction * (3.0 - 2.0 * fraction);
+        // Slow down immediately: do not linger at sprint at the start.
+        // Ease toward the final gait as the remaining input approaches zero.
+        float blend = 2.0 * fraction - fraction * fraction;
         m_MovementLabBrakeSpeed = m_MovementLabBrakeStart + (m_MovementLabBrakeTarget - m_MovementLabBrakeStart) * blend;
         input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeSpeed);
         input.OverrideMovementAngle(HumanInputControllerOverrideType.ONE_FRAME, 0);
@@ -189,6 +199,10 @@ class MovementLabMovementLogicMission extends MissionGameplay
             turn = 2.5;
             sprintTurn = sprintTurn * 2.5;
         }
+        // Preserve startup filters, but do not let their long sprint span
+        // fight the braking request after the user has released Shift/W.
+        if (m_MovementLabBraking)
+            runSprint = 0.35;
         move.SetRunSprintFilterModifier(runSprint);
         move.SetDirectionFilterModifier(direction);
         move.SetDirectionSprintFilterModifier(sprintDirection);
@@ -217,7 +231,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
                 mode = "HEAVIER + SPRINT BRAKING";
-            string message = "[MovementLab v3] " + mode + " - F7 switches mode. Test Shift release, then W + Shift release.";
+            string message = "[MovementLab v4] " + mode + " - F7 switches mode. Compare a full sprint stop with a brief Shift tap.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;

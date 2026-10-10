@@ -2,8 +2,8 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. V3 retains those filters and lengthens the input-based braking
-experiment. V3 has not been compiled or played in a DayZ engine here.
+almost instantly. V4 retains those filters and fixes the delayed, fixed-speed braking
+experiment. V4 has not been compiled or played in a DayZ engine here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -33,22 +33,37 @@ sprint turn/direction multipliers are 2-S and the run/sprint multiplier is
 The original flag and vanilla modifiers are restored on mission finish.
 Modifiers are reapplied to the current movement command every update.
 
-## V3 sprint braking
+## V4 sprint braking
 
-The user confirmed v2's startup looked good, but the full-sprint stop remained
-too fast. V3 retains the startup and turning settings; only braking changes.
+V3 stayed near full sprint too long, and even a short Shift tap could trigger
+full-sprint braking. Its trigger used a sprint state and hard-coded start 3;
+its t^2 blend also had zero initial deceleration. V4 corrects both.
 
-A standing forward sprint release requests a bounded 2.2-second input ramp
-from 3 (sprint) to 0 (idle). Its quadratic blend keeps the requested gait above
-2 for approximately 1.27 seconds, versus 0.28 seconds in v2's 0.85-second linear
-ramp. These gait values are not metres/second, and engine filters can change
-the actual movement timing.
+HumanCommandMove.GetCurrentMovementSpeed is documented as the current
+0/1/2..3 idle/walk/run/sprint gait value, and official sprint-attack code
+requires it >2.99 for achieved full sprint. It is not physical metres/second.
+V4 samples this value only while raw forward input is held, with no active
+braking override. It never substitutes 3 for a partial sprint.
 
-Releasing UATurbo (Shift) while retaining UAMoveForward (W) now starts a separate
-1.6-second smoothstep ramp from 3 to 2 (jog). It continues moving because W is
-still held. Releasing W during that ramp retargets to idle continuously from
-the last requested gait, over max(1, 2.2 * currentGait / 3) seconds. It never
-jumps back to sprint when retargeting.
+Sprint exposure accumulates only while UATurbo is held and sampled gait >2.05,
+capped at 0.45 seconds. Below that threshold, ordinary jogging is left alone.
+On release, strength = clamp(gait-2,0,1) * clamp(exposure/0.45,0,1).
+Full-stop input-ramp duration = 0.18 + 0.97*strength seconds (max 1.15).
+Shift-only sprint-to-jog duration = 0.12 + 0.33*strength (max 0.45).
+Both use blend = 2*t-t^2, so speed falls immediately then eases into the target.
+Full sprint's requested gait crosses 2 after about 0.21s, versus 1.27s in v3;
+these figures describe the requested envelope, not actual engine timing.
+
+The run/sprint filter multiplier becomes 0.35 only while a braking ramp is
+active, allowing the slowdown request to take effect promptly. Normal startup
+and turning multipliers are retained and restored after cancellation/completion.
+The native 0.45s base sprint filter would have a nominal 0.1575s span during
+braking; engine behavior still needs gameplay validation.
+
+Releasing W during the Shift ramp retargets continuously from the previous
+requested gait, with duration max(0.18, originalStopDuration*current/start).
+It does not reset to full sprint. The original stop budget reflects partial
+sprint exposure rather than assigning every tap the same long tail.
 
 Both ramps use OverrideMovementSpeed and OverrideMovementAngle with
 HumanInputControllerOverrideType.ONE_FRAME. Explicit DISABLED calls also
@@ -56,11 +71,9 @@ clear owned overrides on cancellation. Angle 0 requests forward relative to
 the current heading, not retained world-space momentum. Native animation
 blending and collision remain in control; no SetPosition or SetVelocity is used.
 
-Raw UA movement inputs and UATurbo are read separately from overridden movement.
-The native sprint state is sampled only while raw forward input is held and
-no brake is active. Active ramps do not re-arm themselves from generated gait.
-New direction input, resumed forward input after a full-stop release, resumed
-sprint during the Shift ramp, non-standing stance, raised hands, emotes,
-non-movement commands, menus, pause, death, a frame over 0.25 seconds, F7 and
-mission exit cancel braking. Normal startup and ordinary jog-release remain
-unchanged. V3's actual stopping timing and appearance need a local engine test.
+Raw movement actions and UATurbo are read separately from overridden movement.
+Active ramps do not re-arm themselves from generated gait. New direction
+input, resumed forward input after full-stop release, resumed sprint during
+Shift braking, non-standing stance, raised hands, emotes, non-movement
+commands, menus, pause, death, a frame over 0.25s, F7 and mission exit cancel
+braking. Physical stopping duration and native v4 compilation need a local test.
