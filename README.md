@@ -18,6 +18,17 @@ walking finish. The tested startup PBO remains included. This is the original
 v11 package, without the later reversal additions.
 Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
 
+## Ctrl walking/jogging toggle test
+
+[Download Ctrl Modes v1](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v1.zip).
+
+Built directly from v11: tap Ctrl to toggle walking/jogging, hold Shift to
+sprint, release Shift to return to the pre-sprint mode. Releasing all movement
+retains v11's sprint/jog/walk stop phases and direction. Original v11 remains
+unchanged. Extract fresh and run `Launch-Movement-Test.cmd`; F7 compares
+against vanilla. Mocked checks include tick-for-tick v11 sprint/jog stop
+comparisons. Native compilation and animation blending need local testing.
+
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)
 
 If GitHub shows the ZIP's file page, use **Download raw file** (the download
