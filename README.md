@@ -3,19 +3,19 @@
 DayZ remains the base game. The goal is original player animations and movement
 inspired by the weight and pacing of Red Dead Redemption 2.
 
-## Native movement logic experiment
+## Stable movement test: v11
 
 [Download stable movement test v11](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v11.zip).
 Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
 DayZ closed. No animation import or PBO build is required. **F7** switches
 between heavier movement with sprint braking and vanilla filters in the same
-offline session. Extract v11 separately to retain the previous test.
+offline session. V11 is the current baseline; the later reversal experiments
+have been removed. Extract this ZIP into a fresh folder and use its launcher.
 
-The user approved v10 walking starts and the stopping deadline. V11 keeps the
-same near/full-sprint stop budget but requests a longer jogging phase and a
-shorter walking finish. The tested startup PBO remains included. Lower-gait
-stops and directional finishes retain their settings. Native v11 phase
-appearance and physical stopping need the local test.
+The user approved v11 walking starts and directional stopping behavior.
+V11 retains the agreed stopping time with a longer jogging phase and a shorter
+walking finish. The tested startup PBO remains included. This is the original
+v11 package, without the later reversal additions.
 Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
 
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)
@@ -23,47 +23,6 @@ Implementation and evidence are in [the API notes](movement-logic-test/MovementL
 If GitHub shows the ZIP's file page, use **Download raw file** (the download
 arrow) to save it. The bundle includes the editable Blender file, DayZ animation
 source, import metadata, checks, and asset notices.
-
-## Optional v12 experiment
-
-[V12 experimental download](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v12.zip).
-V11 remains the main stable version. Extract v12 into a separate folder and
-use its own launcher. It tests a shorter continuous sprint slowdown and
-A/D reversal braking: stop in the old direction, pause briefly at idle,
-then use the walking startup toward the currently held direction. Native
-compilation and these new behaviors need local testing. The experiment source
-is isolated under `movement-logic-experiments/MovementLabMovementLogicTest_v12`.
-
-## Native bracing test v13
-
-[Download v13 native bracing experiment](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v13.zip).
-This separate v11-based build requests the existing directional sliding/bracing
-pose for 0.32 seconds during opposite jogging inputs and suppresses horizontal
-animation translation using a temporary script command. It resumes native
-movement without v12's walking restart. **F8** enables/disables only this
-experiment; **F7** retains the original heavier/vanilla switch. Extract into a
-separate folder and launch its included CMD; no asset import or packing needed.
-Pose retention and native compilation need local testing. V11 remains stable.
-
-## Moving reversal test v14
-
-[Download v14 moving reversal experiment](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v14.zip).
-V14 replaces v13's stationary hold with a single native bracing request,
-progressing directional pose samples, and a moving reversal that recovers speed
-over about 0.50 seconds. It retains v11's other movement settings. **F8** toggles
-the reversal experiment; launch from its own extracted folder. Native clip
-playback clocks are unchanged: visible blending and movement weight need a
-local test. V11 remains the stable download.
-
-## Clean v11 base with moving reversals: v15
-
-[Download v15](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v15.zip).
-Built directly from v11, preserving its ordinary startup/braking methods and
-adding v14's heavy moving reversal. To address reported animation jumps, it
-avoids sweeping across directional brace poses and briefly seeds the native
-movement direction/gait after the scripted reversal. **F8** toggles only the
-addition. Extract separately and launch the included CMD. Local testing must
-confirm visual stability; v11 remains the unchanged stable download.
 
 ## Confirmed so far
 
@@ -279,40 +238,3 @@ The official character-rig reference is
 [BohemiaInteractive/DayZ-Misc](https://github.com/BohemiaInteractive/DayZ-Misc).
 See the asset notices inside the test bundle before redistributing its rig or
 mesh. No Rockstar animation assets are included.
-
-## Heavier reversals with rapid-input protection: v16
-
-[Download v16](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v16.zip).
-
-V16 extends v15 with a slightly heavier 0.62-second recovery and a committed
-0.14-second native handoff. Rapid opposite presses cannot retarget or restart
-an in-progress reversal. Current input selects the next reversal after it
-completes; short key gaps under 0.10 seconds are tolerated. Ordinary v11
-startup/braking methods remain unchanged. Close DayZ, extract into a fresh
-folder and run `Launch-Movement-Test.cmd`; F8 toggles this addition only.
-Mocked checks cover alternating/overlapping keys at 30/60/144 FPS. Native
-animation stability and compilation still need local DayZ testing.
-
-## Native movement continuity test: v17
-
-[Download v17](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v17.zip).
-
-V16 still showed pose jumps in the supplied recording. V17 keeps the native
-movement command throughout, replacing scripted command/brace/handoff logic
-with a committed native gait/direction input envelope. Rapid taps cannot
-retarget recovery; current input selects the next reversal. Native DayZ owns
-animation choice and blending, so brace shape and perceived weight can differ.
-V11 ordinary startup/braking formulas are retained, with a guard against
-competing brake overrides during a reversal. Extract fresh and run
-`Launch-Movement-Test.cmd`; F8 compares against ordinary v11 behavior.
-Controller tests pass with a mock SDK; native animation stability is pending
-local testing. Previous builds remain available.
-
-## V17 compile correction: v17a
-
-[Download v17a](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v17a.zip).
-
-Fixes the reported Enforce `Formula too complex` error by splitting native
-reversal eligibility into short early returns. Movement timings and reversal
-behavior are unchanged. Extract fresh and run `Launch-Movement-Test.cmd`.
-Mocked controller checks pass; native compilation still needs the local test.
