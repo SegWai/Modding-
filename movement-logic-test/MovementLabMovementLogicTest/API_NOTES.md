@@ -2,9 +2,9 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. The user approved v6 jogging braking but observed a forward walking finish
-on pure lateral stops. V7 targets that direction/gait selection. Native v7
-compilation and playback have not been performed here.
+almost instantly. The user approved v7 sideways walking finishes. V8 adds a much shorter
+backward walking finish for S-only jogging stops. Native v8 compilation
+and playback have not been performed here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -149,3 +149,22 @@ usage, not a guarantee that the native player will choose the desired clip.
 All other approved durations, exposure formulas, startup and turning filters
 are retained. The discrete walk-to-idle finish and left/right animation choice
 must be assessed in the user's first native v7 test.
+
+## V8 quick backward settling step
+
+Only a captured S-only key mask (2) gets a new direction override of 180 degrees.
+For achieved jogging release in that direction, duration is
+0.18*min(sampledGait/2,1), or 0.1575-0.18 seconds in the existing eligible band.
+This is less than half the A/D jogging tail's 0.3675-0.42 seconds.
+
+During that pure backward full-stop tail, the request is immediately
+min(1, startGait): the vanilla walk gait, without boosting the start speed.
+At the existing deadline, normal cancellation releases the overrides to idle.
+This intentionally requests jog-back -> brief walk-back -> idle, rather than
+using the forward sub-walk easing or the longer lateral walk finish.
+It does not simulate Ctrl, import a new clip or schedule individual footfalls.
+Actual native animation blending and final step length need the user's test.
+
+Forward, diagonal and sideways timing, sprint exposure logic, input cancellation,
+startup and turning filters are retained. Backward walking below the achieved
+jogging band has no new release behavior. No multiplayer support is added.

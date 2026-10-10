@@ -5,17 +5,17 @@ inspired by the weight and pacing of Red Dead Redemption 2.
 
 ## Native movement logic experiment
 
-[Download movement test v7](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v7.zip).
+[Download movement test v8](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v8.zip).
 Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
 DayZ closed. No animation import or PBO build is required. **F7** switches
 between heavier movement with sprint braking and vanilla filters in the same
-offline session. Extract v7 separately to retain the previous test.
+offline session. Extract v8 separately to retain the previous test.
 
-The user approved v6 jogging stops, but pure A/D stopping ended with a forward
-walk. V7 explicitly requests left/right direction and the vanilla walking gait
-for that settling phase, aiming to match Ctrl+A/Ctrl+D before returning to idle.
-Approved jog/sprint durations, startup and turning are retained. Native v7
-compilation and the sideways animation choice need a local test.
+The user approved v7 sideways finishes. V8 adds an S-only backward jogging
+stop: immediately request a short backward walk, aiming to match Ctrl+S,
+then idle after at most 0.18 seconds of input. Other approved stops, startup
+and turning are retained. Native v8 compilation and the backward final step
+need a local test.
 Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
 
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)

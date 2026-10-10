@@ -20,7 +20,7 @@ if not exist "%movementlabTestDir%Profiles\MovementLogic" (
     echo Could not create the test profile folder.
     goto failed
 )
-echo Starting movement test v7. Steam must be running. F7 switches heavier with braking and vanilla.
+echo Starting movement test v8. Steam must be running. F7 switches heavier with braking and vanilla.
 start "" /D "%movementlabGameDir%" "%movementlabGameDir%\DayZDiag_x64.exe" "-mission=%movementlabTestDir%Missions\MovementLabMovementLogic.ChernarusPlus" "-profiles=%movementlabTestDir%Profiles\MovementLogic" -nosplash -noPause -filePatching -doLogs -scriptDebug=true
 exit /b 0
 :failed

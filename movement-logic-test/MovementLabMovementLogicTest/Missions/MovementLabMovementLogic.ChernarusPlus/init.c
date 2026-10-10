@@ -55,6 +55,8 @@ class MovementLabMovementLogicMission extends MissionGameplay
                 m_MovementLabBrakeAngle = -90.0;
             else if (m_MovementLabBrakeKeys == 8)
                 m_MovementLabBrakeAngle = 90.0;
+            else if (m_MovementLabBrakeKeys == 2)
+                m_MovementLabBrakeAngle = 180.0;
         }
         m_MovementLabBraking = true;
         m_MovementLabBrakePlayer = player;
@@ -63,7 +65,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTarget = target;
         m_MovementLabBrakeDuration = duration;
         m_MovementLabBrakeTime = 0;
-        Print("[MovementLab v7] Braking input start=" + start + ", target=" + target + ", duration=" + duration + ", angle=" + m_MovementLabBrakeAngle);
+        Print("[MovementLab v8] Braking input start=" + start + ", target=" + target + ", duration=" + duration + ", angle=" + m_MovementLabBrakeAngle);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -133,6 +135,10 @@ class MovementLabMovementLogicMission extends MissionGameplay
             // A small settling tail for achieved jogging, in any direction.
             // Do not require Shift, promote walking, or reuse sprint exposure.
             m_MovementLabBrakeStopDuration = 0.42 * Math.Min(m_MovementLabLastSpeed / 2.0, 1.0);
+            // Backward jogging settles almost immediately: a brief walk back
+            // before idle, shorter than the lateral walking tail.
+            if (m_MovementLabLastKeys == 2)
+                m_MovementLabBrakeStopDuration = 0.18 * Math.Min(m_MovementLabLastSpeed / 2.0, 1.0);
             MovementLabBeginBrake(player, m_MovementLabLastSpeed, 0, m_MovementLabBrakeStopDuration);
         }
         if (!m_MovementLabBraking && movingInput)
@@ -177,6 +183,10 @@ class MovementLabMovementLogicMission extends MissionGameplay
         // At the existing deadline, releasing the override allows full idle.
         if (m_MovementLabBrakeTarget == 0 && (m_MovementLabBrakeKeys == 4 || m_MovementLabBrakeKeys == 8))
             m_MovementLabBrakeSpeed = Math.Max(1.0, m_MovementLabBrakeSpeed);
+        // S-only: request the vanilla backward walk immediately for the very
+        // short tail, then release to idle. Never boost a slower starting gait.
+        if (m_MovementLabBrakeTarget == 0 && m_MovementLabBrakeKeys == 2)
+            m_MovementLabBrakeSpeed = Math.Min(1.0, m_MovementLabBrakeStart);
         input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeSpeed);
         input.OverrideMovementAngle(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeAngle);
     }
@@ -265,7 +275,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
                 mode = "HEAVIER + BRAKING";
-            string message = "[MovementLab v7] " + mode + " - F7 switches mode. Test A-only and D-only jogging stops.";
+            string message = "[MovementLab v8] " + mode + " - F7 switches mode. Test a quick S-only jogging stop.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;
