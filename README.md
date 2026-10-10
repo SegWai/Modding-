@@ -18,6 +18,18 @@ walking finish. The tested startup PBO remains included. This is the original
 v11 package, without the later reversal additions.
 Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
 
+## Walking-first controls test
+
+[Download walking-first controls v1](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Walk_Controls_v1.zip).
+
+A separate v11-based test: WASD walks, holding Shift jogs, and double-tapping
+Shift within 0.30 seconds latches sprint until movement is released. Stops
+step down through the slower gaits in the original direction. V11 sprint/jog
+stop budgets are retained, with a short walking stop added. Extract fresh and
+run `Launch-Movement-Test.cmd`; F7 compares against vanilla controls. Native
+animation limits apply. Mocked controller checks pass; local DayZ compilation
+and animation testing remain pending. The original v11 remains unchanged.
+
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)
 
 If GitHub shows the ZIP's file page, use **Download raw file** (the download
