@@ -2,8 +2,9 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. The user approved v5 forward and diagonal sprint braking. V6 adds a short
-jogging stop. V6 has not been compiled or played in a DayZ engine here.
+almost instantly. The user approved v6 jogging braking but observed a forward walking finish
+on pure lateral stops. V7 targets that direction/gait selection. Native v7
+compilation and playback have not been performed here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -123,3 +124,28 @@ implemented: the intended small settling step must be assessed in-game.
 V5's sprint duration/exposure formula, diagonal direction capture, startup,
 turning and braking-only filter are retained. Jogging and diagonal jog stops
 still need the user's native compilation/playback check.
+
+## V7 pure lateral walking finish
+
+For a captured raw movement-key mask of only A (4) or only D (8), the braking
+angle is explicitly -90 or +90 degrees. Other directions retain v6 capture
+behavior. This avoids relying on a current animation/movement angle that may
+face forward as the character changes gait after lateral input release.
+
+During a pure lateral full-stop tail, requested gait is max(1, easedGait).
+It therefore eases from achieved jogging down to the vanilla walk gait (1),
+then retains that sideways walk until the existing deadline. At the deadline
+the normal cancellation releases both input overrides and the engine selects
+idle. The 0.3675-0.42s jogging duration is unchanged. No foot phase scheduler,
+Ctrl key simulation, binding change, or imported animation is used.
+
+The public float angle override lacks a unit comment in human.c; a second
+implementation reference uses degree angles (including -180..180) with this
+same ONE_FRAME call:
+[Expansion eAICommandMove, revision 503a861](https://github.com/salutesh/DayZ-Expansion-Scripts/blob/503a8611146343b10f342695c4a9bc06aa0ea863/DayZExpansion/AI/Scripts/4_World/DayZExpansion_AI/Classes/Commands/eAICommandMove.c).
+No Expansion code or dependency is bundled. This is corroboration of API
+usage, not a guarantee that the native player will choose the desired clip.
+
+All other approved durations, exposure formulas, startup and turning filters
+are retained. The discrete walk-to-idle finish and left/right animation choice
+must be assessed in the user's first native v7 test.

@@ -49,6 +49,12 @@ class MovementLabMovementLogicMission extends MissionGameplay
         {
             m_MovementLabBrakeAngle = m_MovementLabLastAngle;
             m_MovementLabBrakeKeys = m_MovementLabLastKeys;
+            // A/D-only stopping must retain the input's sideways direction,
+            // rather than a possibly forward-facing current animation angle.
+            if (m_MovementLabBrakeKeys == 4)
+                m_MovementLabBrakeAngle = -90.0;
+            else if (m_MovementLabBrakeKeys == 8)
+                m_MovementLabBrakeAngle = 90.0;
         }
         m_MovementLabBraking = true;
         m_MovementLabBrakePlayer = player;
@@ -57,7 +63,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTarget = target;
         m_MovementLabBrakeDuration = duration;
         m_MovementLabBrakeTime = 0;
-        Print("[MovementLab v6] Braking input start=" + start + ", target=" + target + ", duration=" + duration);
+        Print("[MovementLab v7] Braking input start=" + start + ", target=" + target + ", duration=" + duration + ", angle=" + m_MovementLabBrakeAngle);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -166,6 +172,11 @@ class MovementLabMovementLogicMission extends MissionGameplay
         // Ease toward the final gait as the remaining input approaches zero.
         float blend = 2.0 * fraction - fraction * fraction;
         m_MovementLabBrakeSpeed = m_MovementLabBrakeStart + (m_MovementLabBrakeTarget - m_MovementLabBrakeStart) * blend;
+        // During the settling portion of a pure lateral stop, request the
+        // actual walk gait (1) instead of a fractional sub-walk/idle blend.
+        // At the existing deadline, releasing the override allows full idle.
+        if (m_MovementLabBrakeTarget == 0 && (m_MovementLabBrakeKeys == 4 || m_MovementLabBrakeKeys == 8))
+            m_MovementLabBrakeSpeed = Math.Max(1.0, m_MovementLabBrakeSpeed);
         input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeSpeed);
         input.OverrideMovementAngle(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeAngle);
     }
@@ -254,7 +265,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
                 mode = "HEAVIER + BRAKING";
-            string message = "[MovementLab v6] " + mode + " - F7 switches mode. Test jogging stops forward and diagonally.";
+            string message = "[MovementLab v7] " + mode + " - F7 switches mode. Test A-only and D-only jogging stops.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;
