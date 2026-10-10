@@ -75,6 +75,19 @@ translated filter/toggle checks and movement regression checks passed; native
 turn arcs and animation behavior need the in-game comparison. Stable v2 stays
 available above. The isolated walk-blend experiment is not included.
 
+## Rear-diagonal direction fix with body-only turning comparison
+
+[Download Ctrl Modes v4 direction fix](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v4_Direction_Fix.zip).
+
+Fixes startup re-entry during continuous turn/backward gait dips, repeated
+mode-return braking and stale angle ownership while steering. F8 now changes
+only body heading delay; movement-direction filtering stays identical between
+A/B modes. Existing Ctrl/Shift controls and v11 timing budgets are retained.
+Extract fresh and run `Launch-Movement-Test.cmd`. Test slow camera/directional
+turns into S+A and S+D in walking and jogging. Previous v3 fails the added
+sustained-input regression; v4 passes. Mocked movement/filter checks passed;
+actual paths and animation stability require the local DayZ test.
+
 ## Isolated jog-to-walk blend experiment
 
 [Download the standalone jog-to-walk blend test v1](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Jog_Walk_Blend_Test_v1.zip).
