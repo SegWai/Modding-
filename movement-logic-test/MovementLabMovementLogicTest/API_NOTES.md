@@ -2,8 +2,8 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. V4 retains those filters and fixes the delayed, fixed-speed braking
-experiment. V4 has not been compiled or played in a DayZ engine here.
+almost instantly. The user approved v4 forward braking. V5 extends it to diagonals.
+V5 has not been compiled or played in a DayZ engine here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -67,8 +67,8 @@ sprint exposure rather than assigning every tap the same long tail.
 
 Both ramps use OverrideMovementSpeed and OverrideMovementAngle with
 HumanInputControllerOverrideType.ONE_FRAME. Explicit DISABLED calls also
-clear owned overrides on cancellation. Angle 0 requests forward relative to
-the current heading, not retained world-space momentum. Native animation
+clear owned overrides on cancellation. V5 replaces the forward-only angle 0
+with the captured current movement angle relative to the current heading. Native animation
 blending and collision remain in control; no SetPosition or SetVelocity is used.
 
 Raw movement actions and UATurbo are read separately from overridden movement.
@@ -77,3 +77,30 @@ input, resumed forward input after full-stop release, resumed sprint during
 Shift braking, non-standing stance, raised hands, emotes, non-movement
 commands, menus, pause, death, a frame over 0.25s, F7 and mission exit cancel
 braking. Physical stopping duration and native v4 compilation need a local test.
+
+## V5 diagonal input and direction
+
+V4 unconditionally canceled on UAMoveLeft/Right and only remembered forward
+input. V5 remembers a raw four-action key mask instead. Diagonal input is
+eligible for exactly the same actual-gait/exposure braking formula. Only a
+sampled gait above 2.05 arms braking; no lateral sprint speeds are invented.
+
+HumanCommandMove.GetCurrentMovementAngle returns the native current local
+movement angle (documented -180..180 degrees). It is sampled only with raw
+movement input and no active override, alongside the current movement speed.
+Starting a brake captures this angle and applies it through the existing
+OverrideMovementAngle API. Retargeting Shift braking to a full stop preserves
+that captured angle; it does not default to 0 or snap straight forward.
+Angles remain relative to the current heading, not fixed world momentum.
+Native angle-override behavior needs the user's first v5 gameplay check.
+
+For Shift-only braking, retaining the original movement keys (including A/D)
+does not cancel. A changed movement-key mask or resumed Shift gives control
+back immediately. Releasing all movement keys retargets to a full stop.
+During full-stop braking, any new movement input cancels. Sequential releases
+that leave another movement key held continue to honor that input, rather
+than forcing a stop while the player is still steering.
+
+The v4 easing curve, duration/exposure constants, startup and turning filters,
+and cancellation safeguards are retained. Source/package checks can confirm
+this scope but cannot prove native compilation or diagonal playback.

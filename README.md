@@ -5,18 +5,17 @@ inspired by the weight and pacing of Red Dead Redemption 2.
 
 ## Native movement logic experiment
 
-[Download movement test v4](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v4.zip).
+[Download movement test v5](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v5.zip).
 Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
 DayZ closed. No animation import or PBO build is required. **F7** switches
 between heavier movement with sprint braking and vanilla filters in the same
-offline session. Extract v4 separately to retain the previous test.
+offline session. Extract v5 separately to retain the previous test.
 
-The user confirmed heavier turning and good startup. V3 held near sprint too
-long and could give brief Shift taps a full-sprint stop. V4 starts slowing
-immediately from the sampled current gait. Duration scales with sprint amount
-and exposure: up to 1.15s for full stop and 0.45s for Shift-only sprint-to-jog.
-Startup and turning settings are retained; the sprint filter is shortened only
-during braking. Native v4 compilation and actual stopping need a local test.
+The user approved v4's forward stopping. V5 extends that braking to diagonal
+sprints: W+A or W+D no longer disables it, and the slowdown uses the captured
+movement angle. Timing still scales with achieved gait and sprint exposure.
+Startup, heavier turning and v4's braking curve are retained. Native v5
+compilation and diagonal playback need a local test.
 Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
 
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)

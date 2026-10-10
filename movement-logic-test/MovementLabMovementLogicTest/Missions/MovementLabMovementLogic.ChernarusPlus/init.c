@@ -5,7 +5,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
     protected bool m_MovementLabOwnsFilters;
     protected bool m_MovementLabOriginalStaminaInertia;
     protected bool m_MovementLabAnnounce = true;
-    protected bool m_MovementLabWasForward;
+    protected bool m_MovementLabWasMoving;
     protected float m_MovementLabLastSpeed;
     protected bool m_MovementLabBraking;
     protected float m_MovementLabBrakeTime;
@@ -16,6 +16,10 @@ class MovementLabMovementLogicMission extends MissionGameplay
     protected bool m_MovementLabWasTurbo;
     protected float m_MovementLabSprintExposure;
     protected float m_MovementLabBrakeStopDuration;
+    protected float m_MovementLabLastAngle;
+    protected float m_MovementLabBrakeAngle;
+    protected int m_MovementLabLastKeys;
+    protected int m_MovementLabBrakeKeys;
     protected PlayerBase m_MovementLabBrakePlayer;
 
     protected void MovementLabCancelBrake()
@@ -33,7 +37,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBraking = false;
         m_MovementLabBrakePlayer = null;
         m_MovementLabBrakeTime = 0;
-        m_MovementLabWasForward = false;
+        m_MovementLabWasMoving = false;
         m_MovementLabLastSpeed = 0;
         m_MovementLabWasTurbo = false;
         m_MovementLabSprintExposure = 0;
@@ -41,6 +45,11 @@ class MovementLabMovementLogicMission extends MissionGameplay
 
     protected void MovementLabBeginBrake(PlayerBase player, float start, float target, float duration)
     {
+        if (!m_MovementLabBraking)
+        {
+            m_MovementLabBrakeAngle = m_MovementLabLastAngle;
+            m_MovementLabBrakeKeys = m_MovementLabLastKeys;
+        }
         m_MovementLabBraking = true;
         m_MovementLabBrakePlayer = player;
         m_MovementLabBrakeStart = start;
@@ -48,7 +57,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTarget = target;
         m_MovementLabBrakeDuration = duration;
         m_MovementLabBrakeTime = 0;
-        Print("[MovementLab v4] Braking input start=" + start + ", target=" + target + ", duration=" + duration);
+        Print("[MovementLab v5] Braking input start=" + start + ", target=" + target + ", duration=" + duration);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -68,34 +77,39 @@ class MovementLabMovementLogicMission extends MissionGameplay
 
         // Read physical movement actions, not GetMovement during the override:
         // otherwise the generated coast could feed back and keep itself alive.
-        float forward = GetUApi().GetInputByID(UAMoveForward).LocalValue();
+        // Direction keys are sampled independently from the generated coast.
+        // Keep diagonals eligible; v4 wrongly canceled on every A/D press.
+        int movementKeys = 0;
+        if (GetUApi().GetInputByID(UAMoveForward).LocalValue() > 0.05)
+            movementKeys = movementKeys + 1;
+        if (GetUApi().GetInputByID(UAMoveBack).LocalValue() > 0.05)
+            movementKeys = movementKeys + 2;
+        if (GetUApi().GetInputByID(UAMoveLeft).LocalValue() > 0.05)
+            movementKeys = movementKeys + 4;
+        if (GetUApi().GetInputByID(UAMoveRight).LocalValue() > 0.05)
+            movementKeys = movementKeys + 8;
+        bool movingInput = movementKeys != 0;
         bool turbo = GetUApi().GetInputByID(UATurbo).LocalValue() > 0.05;
-        bool otherDirection = GetUApi().GetInputByID(UAMoveBack).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveLeft).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveRight).LocalValue() > 0.05;
-        if (otherDirection)
-        {
-            MovementLabCancelBrake();
-            return;
-        }
         HumanInputController input = player.GetInputController();
         if (!input)
         {
             MovementLabCancelBrake();
             return;
         }
-        if (m_MovementLabBraking && forward > 0.05 && (m_MovementLabBrakeTarget == 0 || turbo))
+        if (m_MovementLabBraking && movingInput && (m_MovementLabBrakeTarget == 0 || turbo || movementKeys != m_MovementLabBrakeKeys))
         {
-            // Resume movement immediately; keeping W down during Shift braking
-            // does not cancel the sprint-to-jog transition.
+            // New input takes control back. The original held diagonal keys
+            // do not cancel a Shift-only sprint-to-jog transition.
             MovementLabCancelBrake();
         }
-        if (m_MovementLabBraking && m_MovementLabBrakeTarget > 0 && forward <= 0.05)
+        if (m_MovementLabBraking && m_MovementLabBrakeTarget > 0 && !movingInput)
         {
-            // Releasing W during the Shift ramp continues from the current
+            // Releasing all movement keys during the Shift ramp continues from the current
             // request, avoiding a jump back up to full sprint.
             float duration = Math.Max(0.18, m_MovementLabBrakeStopDuration * m_MovementLabBrakeSpeed / m_MovementLabBrakeStart);
             MovementLabBeginBrake(player, m_MovementLabBrakeSpeed, 0, duration);
         }
-        if (!m_MovementLabBraking && m_MovementLabWasForward && m_MovementLabLastSpeed > 2.05 && m_MovementLabSprintExposure > 0)
+        if (!m_MovementLabBraking && m_MovementLabWasMoving && m_MovementLabLastSpeed > 2.05 && m_MovementLabSprintExposure > 0)
         {
             // Use the achieved gait, not the sprint command/state or a fixed 3.
             // A brief Shift tap must not get a full-sprint braking tail.
@@ -103,14 +117,16 @@ class MovementLabMovementLogicMission extends MissionGameplay
             float sustained = Math.Clamp(m_MovementLabSprintExposure / 0.45, 0, 1);
             float weight = sprintAmount * sustained;
             m_MovementLabBrakeStopDuration = 0.18 + 0.97 * weight;
-            if (forward <= 0.05)
+            if (!movingInput)
                 MovementLabBeginBrake(player, m_MovementLabLastSpeed, 0, m_MovementLabBrakeStopDuration);
-            else if (m_MovementLabWasTurbo && !turbo)
+            else if (m_MovementLabWasTurbo && !turbo && movementKeys == m_MovementLabLastKeys)
                 MovementLabBeginBrake(player, m_MovementLabLastSpeed, 2.0, 0.12 + 0.33 * weight);
         }
-        if (!m_MovementLabBraking && forward > 0.05)
+        if (!m_MovementLabBraking && movingInput)
         {
-            m_MovementLabWasForward = true;
+            m_MovementLabWasMoving = true;
+            m_MovementLabLastKeys = movementKeys;
+            m_MovementLabLastAngle = player.GetCommand_Move().GetCurrentMovementAngle();
             m_MovementLabWasTurbo = turbo;
             m_MovementLabLastSpeed = Math.Clamp(player.GetCommand_Move().GetCurrentMovementSpeed(), 0, 3);
             if (turbo && m_MovementLabLastSpeed > 2.05)
@@ -119,7 +135,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
                 m_MovementLabSprintExposure = 0;
             return;
         }
-        m_MovementLabWasForward = false;
+        m_MovementLabWasMoving = false;
         m_MovementLabWasTurbo = false;
         m_MovementLabLastSpeed = 0;
         m_MovementLabSprintExposure = 0;
@@ -144,7 +160,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         float blend = 2.0 * fraction - fraction * fraction;
         m_MovementLabBrakeSpeed = m_MovementLabBrakeStart + (m_MovementLabBrakeTarget - m_MovementLabBrakeStart) * blend;
         input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeSpeed);
-        input.OverrideMovementAngle(HumanInputControllerOverrideType.ONE_FRAME, 0);
+        input.OverrideMovementAngle(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeAngle);
     }
 
     override void OnInit()
@@ -231,7 +247,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
                 mode = "HEAVIER + SPRINT BRAKING";
-            string message = "[MovementLab v4] " + mode + " - F7 switches mode. Compare a full sprint stop with a brief Shift tap.";
+            string message = "[MovementLab v5] " + mode + " - F7 switches mode. Compare forward and diagonal sprint stops.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;

@@ -1,37 +1,39 @@
-MovementLab v4: immediate, speed-dependent sprint braking
+MovementLab v5: diagonal sprint braking
 
 1. Close DayZ and leave Steam running.
-2. Extract the entire v4 ZIP into a separate folder.
+2. Extract the entire v5 ZIP into a separate folder.
 3. Open Launch-Movement-Test.cmd.
 
 No Blender, Workbench or Addon Builder steps are needed.
 The launcher uses D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe.
 
 Starts in HEAVIER + SPRINT BRAKING mode. F7 switches to vanilla and back.
-Startup and heavier turning retain their previous settings.
+Forward startup, turning and the braking curve approved in v4 are retained.
 
-With empty hands, standing and looking straight ahead:
-- Fully sprint with W + Shift, then release both. Braking starts immediately
-  instead of holding near full sprint. Maximum requested stop ramp: 1.15s.
-- Fully sprint, then release Shift while keeping W held. Sprint-to-jog
-  slowdown begins immediately; maximum requested ramp: 0.45s.
-- Jog, tap Shift briefly, then release W + Shift. A partial/brief sprint
-  gets a much shorter stop, using its sampled gait instead of forcing sprint.
-- Releasing W during Shift-only slowdown continues from the current request.
-- Press F7 to compare with vanilla in the same session.
+Compare these with empty hands, standing and looking ahead:
+- Sprint with W + Shift, then release all movement keys and Shift.
+- Sprint with W + A + Shift, then release all movement keys and Shift.
+- Repeat with W + D + Shift.
+- Also release only Shift while retaining W + A or W + D: it should ease
+  down to jogging in the direction you were moving.
 
-Braking duration scales with achieved gait and time spent sprinting.
-The 0.18-1.15s stop and 0.12-0.45s Shift ranges are input-ramp durations,
-not guaranteed physical stopping times. The sprint filter is shortened only
-while braking to avoid resisting the immediate slowdown.
-No animation clips or maximum speed changes are included.
-Jog-release braking outside an active/achieved sprint is unchanged.
-The engine controls gait blending and collision; movement follows your
-current heading rather than retained world-space momentum.
-New direction input, resumed movement/sprint, crouching, raised hands, menus,
-death, leaving movement mode, F7 and mission exit cancel the override.
+V4 discarded braking while A or D was held. V5 includes diagonal input and
+captures the current movement angle so a diagonal stop stays diagonal.
+The same speed/exposure formula applies in every direction. If native DayZ
+limits a direction to jogging, the mod does not force sprint speed into it.
+A genuinely slower gait can still have a shorter stop than achieved sprint.
 
-Tell me whether the full-sprint stop is now smoother without that long sprint
-hold, and whether a brief Shift tap stops promptly without speeding you up.
-Native compilation and playback of v4 still need your PC test.
+Changing movement keys or resuming sprint during Shift-only braking returns
+control immediately. During a full-stop coast, any new movement input returns
+control. Crouching, raised hands, menus, death, leaving movement mode, F7 and
+mission exit also cancel braking.
+
+The 0.18-1.15s stop and 0.12-0.45s Shift-only ranges are input-ramp durations,
+not guaranteed physical stopping times. Direction remains relative to current
+heading, not a world-space momentum simulation. No new animation clips or
+maximum speed changes are included.
+
+Tell me whether diagonal stops now match forward stops at a similar speed,
+and whether he stays on the correct diagonal rather than veering straight.
+Native compilation and gameplay of v5 still need your PC test.
 Logs are stored in Profiles\MovementLogic inside this extracted folder.
