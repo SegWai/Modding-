@@ -279,3 +279,16 @@ The official character-rig reference is
 [BohemiaInteractive/DayZ-Misc](https://github.com/BohemiaInteractive/DayZ-Misc).
 See the asset notices inside the test bundle before redistributing its rig or
 mesh. No Rockstar animation assets are included.
+
+## Heavier reversals with rapid-input protection: v16
+
+[Download v16](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v16.zip).
+
+V16 extends v15 with a slightly heavier 0.62-second recovery and a committed
+0.14-second native handoff. Rapid opposite presses cannot retarget or restart
+an in-progress reversal. Current input selects the next reversal after it
+completes; short key gaps under 0.10 seconds are tolerated. Ordinary v11
+startup/braking methods remain unchanged. Close DayZ, extract into a fresh
+folder and run `Launch-Movement-Test.cmd`; F8 toggles this addition only.
+Mocked checks cover alternating/overlapping keys at 30/60/144 FPS. Native
+animation stability and compilation still need local DayZ testing.
