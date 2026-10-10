@@ -1,32 +1,36 @@
-MovementLab v8: quick backward walking finish for S-only jog stops
+MovementLab v9: brief walking start in every direction
 
 1. Close DayZ and leave Steam running.
-2. Extract the entire v8 ZIP into a separate folder.
+2. Extract the entire v9 ZIP into a separate folder.
 3. Open Launch-Movement-Test.cmd.
 
 No Blender, Workbench or Addon Builder steps are needed.
 The launcher uses D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe.
 
-Starts in HEAVIER + BRAKING mode. F7 switches to vanilla and back.
-The approved forward, diagonal and sideways stops are retained.
+Starts in HEAVIER + STARTS + BRAKING mode. F7 switches to vanilla and back.
+The stopping settings you approved in v8 are retained.
 
-With empty hands, standing and looking ahead:
-- Jog backward using only S, then release S.
-- The brief settling tail now immediately requests a backward walking gait,
-  aiming to match Ctrl+S, then returns to idle.
-- This tail lasts at most 0.18 seconds of requested input, versus up to 0.42
-  seconds for A/D-only jogging stops. It aims for a quick half-step back.
-- Compare visually with Ctrl+S and with the longer A/D jogging stops.
+From a full stop, with empty hands and standing:
+- Press W, A, D or S without Shift. Each should briefly walk in that direction,
+  then ease into jogging.
+- Try W+A, W+D and backward diagonals too.
+- Hold W+Shift from idle. It should walk, ease into jogging, then let the
+  existing native sprint transition accelerate into full sprint.
+- Ctrl walking remains walking. Pure A/D/S is not forced into full sprint.
+- Releasing keys early cancels the startup; there is no automatic continued
+  acceleration after you let go.
 
-S-only achieved jogging gets the new short tail. Ordinary walking is unchanged.
-The backward direction is explicitly 180 degrees and the settling gait is 1
-(walk). No Ctrl key simulation, binding changes or imported clips are used.
-A specific footfall count or frame-exact transition cannot be guaranteed:
-native animation timing still needs this local v8 test.
+Requested startup: 0.10s walking, 0.18s smooth walk-to-jog, 0.07s jogging,
+then return control to the native input. Direction remains live from your keys.
+The startup does not replay merely because you turn while already moving.
+It arms again after reaching idle, rather than restarting during braking.
+These durations describe input requests, not guaranteed animation timing.
 
-New movement input returns control immediately. Crouching, raised hands,
-menus, death, leaving movement mode, F7 and mission exit also cancel braking.
+New direction input, mode changes and the existing cancellation guards retain
+control. Crouching, raised hands, menus, death, leaving movement mode, F7 and
+mission exit also cancel overrides. No new animation clips are imported.
 Logs are stored in Profiles\MovementLogic inside this extracted folder.
 
-Tell me whether he finishes with a tiny backward walk rather than forward,
-and whether the backward stop is quick enough compared with A/D.
+Tell me whether the brief walk is visible and feels natural in all directions,
+and whether holding Shift gives a smooth walk -> jog -> sprint progression.
+Native v9 compilation and playback still need your PC test.

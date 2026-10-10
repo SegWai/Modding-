@@ -2,8 +2,8 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. The user approved v7 sideways walking finishes. V8 adds a much shorter
-backward walking finish for S-only jogging stops. Native v8 compilation
+almost instantly. The user approved v8 stopping in every tested direction. V9 adds an idle
+walking lead-in before jogging and native sprint handoff. Native v9 compilation
 and playback have not been performed here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
@@ -168,3 +168,33 @@ Actual native animation blending and final step length need the user's test.
 Forward, diagonal and sideways timing, sprint exposure logic, input cancellation,
 startup and turning filters are retained. Backward walking below the achieved
 jogging band has no new release behavior. No multiplayer support is added.
+
+## V9 brief walking startup
+
+A separate bounded speed override handles starts from idle. Readiness is
+armed with no direction input and native current gait <=0.1. On a new requested
+gait above 1.05, it requests 1 for 0.10s, then a smoothstep from 1 to 2 over
+0.18s, then 2 for 0.07s. At 0.35s it releases the override. Shift remains a
+raw native input: the existing sprint transition takes over if requested and
+allowed. No sprint speed 3 is forced into side/back movement.
+
+Startup overrides only speed, leaving direction live in native input for W,
+A/D, S and diagonals. Ctrl/UAWalkRunTemp, native IsWalkToggled and forced walk
+cancel/bypass startup rather than promoting an intended walk into jogging.
+A fully idle readiness gate prevents replaying the walk on turns or during
+braking. GetMovement is read only before acquiring startup ownership; while
+active, the ramp never feeds its own requested gait back as raw intent.
+
+On release, startup is canceled before the existing braking logic runs.
+During startup, the sampled achieved gait for braking is capped at the current
+startup request, so a pre-override sprint state cannot generate a phantom
+full-sprint stop after a brief tap. Existing jog/sprint stop trigger bands,
+duration/exposure formulas, walk finishes and captured directions are retained.
+Startup and braking do not own overrides simultaneously.
+
+Existing standing/alive/move-command/menu/pause/hitch guards cancel both
+systems. F7 and mission finish explicitly release startup overrides too.
+This implementation uses the existing ONE_FRAME and DISABLED speed APIs,
+plus documented GetMovement and IsWalkToggled from official human.c.
+The first animation frame, visible walk duration and native sprint handoff
+must be checked locally; source-level checks cannot prove those engine details.
