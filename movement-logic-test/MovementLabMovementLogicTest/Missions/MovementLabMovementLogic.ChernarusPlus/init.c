@@ -57,7 +57,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTarget = target;
         m_MovementLabBrakeDuration = duration;
         m_MovementLabBrakeTime = 0;
-        Print("[MovementLab v5] Braking input start=" + start + ", target=" + target + ", duration=" + duration);
+        Print("[MovementLab v6] Braking input start=" + start + ", target=" + target + ", duration=" + duration);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -121,6 +121,13 @@ class MovementLabMovementLogicMission extends MissionGameplay
                 MovementLabBeginBrake(player, m_MovementLabLastSpeed, 0, m_MovementLabBrakeStopDuration);
             else if (m_MovementLabWasTurbo && !turbo && movementKeys == m_MovementLabLastKeys)
                 MovementLabBeginBrake(player, m_MovementLabLastSpeed, 2.0, 0.12 + 0.33 * weight);
+        }
+        if (!m_MovementLabBraking && m_MovementLabWasMoving && !movingInput && m_MovementLabLastSpeed >= 1.75 && m_MovementLabLastSpeed <= 2.05)
+        {
+            // A small settling tail for achieved jogging, in any direction.
+            // Do not require Shift, promote walking, or reuse sprint exposure.
+            m_MovementLabBrakeStopDuration = 0.42 * Math.Min(m_MovementLabLastSpeed / 2.0, 1.0);
+            MovementLabBeginBrake(player, m_MovementLabLastSpeed, 0, m_MovementLabBrakeStopDuration);
         }
         if (!m_MovementLabBraking && movingInput)
         {
@@ -246,8 +253,8 @@ class MovementLabMovementLogicMission extends MissionGameplay
         {
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
-                mode = "HEAVIER + SPRINT BRAKING";
-            string message = "[MovementLab v5] " + mode + " - F7 switches mode. Compare forward and diagonal sprint stops.";
+                mode = "HEAVIER + BRAKING";
+            string message = "[MovementLab v6] " + mode + " - F7 switches mode. Test jogging stops forward and diagonally.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;

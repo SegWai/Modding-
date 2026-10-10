@@ -1,39 +1,33 @@
-MovementLab v5: diagonal sprint braking
+MovementLab v6: short jogging stop
 
 1. Close DayZ and leave Steam running.
-2. Extract the entire v5 ZIP into a separate folder.
+2. Extract the entire v6 ZIP into a separate folder.
 3. Open Launch-Movement-Test.cmd.
 
 No Blender, Workbench or Addon Builder steps are needed.
 The launcher uses D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe.
 
-Starts in HEAVIER + SPRINT BRAKING mode. F7 switches to vanilla and back.
-Forward startup, turning and the braking curve approved in v4 are retained.
+Starts in HEAVIER + BRAKING mode. F7 switches to vanilla and back.
+The sprint slowdown you approved in v5 is retained, including diagonals.
 
-Compare these with empty hands, standing and looking ahead:
-- Sprint with W + Shift, then release all movement keys and Shift.
-- Sprint with W + A + Shift, then release all movement keys and Shift.
-- Repeat with W + D + Shift.
-- Also release only Shift while retaining W + A or W + D: it should ease
-  down to jogging in the direction you were moving.
+Jog without Shift, then release all movement keys:
+- Try W, then W+A and W+D.
+- Jogging now gets a short easing tail (at most 0.42 seconds of input ramp),
+  aimed at roughly one small settling step rather than an instant stop.
+- Compare with a full-sprint stop: jogging should settle sooner.
+- F7 compares with vanilla in the same session.
 
-V4 discarded braking while A or D was held. V5 includes diagonal input and
-captures the current movement angle so a diagonal stop stays diagonal.
-The same speed/exposure formula applies in every direction. If native DayZ
-limits a direction to jogging, the mod does not force sprint speed into it.
-A genuinely slower gait can still have a shorter stop than achieved sprint.
+Only achieved jogging gait (1.75 to 2.05) gets this new short tail. Ordinary
+walking remains unaffected. Jogging release does not require Shift or sprint
+exposure. The start speed and movement angle come from the native command;
+no sprint speed is forced into a jogging stop.
+The 0.42 seconds is an input duration, not a guaranteed physical stopping
+time or fixed number of steps. Native animation phase determines footfalls.
+No new animation clips, peak speeds, turning or startup settings are added.
 
-Changing movement keys or resuming sprint during Shift-only braking returns
-control immediately. During a full-stop coast, any new movement input returns
-control. Crouching, raised hands, menus, death, leaving movement mode, F7 and
-mission exit also cancel braking.
-
-The 0.18-1.15s stop and 0.12-0.45s Shift-only ranges are input-ramp durations,
-not guaranteed physical stopping times. Direction remains relative to current
-heading, not a world-space momentum simulation. No new animation clips or
-maximum speed changes are included.
-
-Tell me whether diagonal stops now match forward stops at a similar speed,
-and whether he stays on the correct diagonal rather than veering straight.
-Native compilation and gameplay of v5 still need your PC test.
+New movement input immediately returns control. Crouching, raised hands,
+menus, death, leaving movement mode, F7 and mission exit also cancel braking.
 Logs are stored in Profiles\MovementLogic inside this extracted folder.
+
+Tell me whether the jog stop feels like one small settling step and still
+finishes faster than full sprint. Native v6 compilation/playback need your PC.

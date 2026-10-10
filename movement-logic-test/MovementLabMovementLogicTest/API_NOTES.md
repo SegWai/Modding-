@@ -2,8 +2,8 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. The user approved v4 forward braking. V5 extends it to diagonals.
-V5 has not been compiled or played in a DayZ engine here.
+almost instantly. The user approved v5 forward and diagonal sprint braking. V6 adds a short
+jogging stop. V6 has not been compiled or played in a DayZ engine here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -104,3 +104,22 @@ than forcing a stop while the player is still steering.
 The v4 easing curve, duration/exposure constants, startup and turning filters,
 and cancellation safeguards are retained. Source/package checks can confirm
 this scope but cannot prove native compilation or diagonal playback.
+
+## V6 jogging release
+
+An additional branch, after the existing sprint branch, starts a short full
+stop when raw movement input is released and the previously sampled achieved
+gait is between 1.75 and 2.05 inclusive. It requires no UATurbo/Shift or sprint
+exposure. Values below this band (ordinary walking) receive no new override.
+The bands are disjoint: sprint requires >2.05, so a jogging branch cannot
+replace or retrigger an active sprint ramp.
+
+Jog duration = 0.42*min(sampledGait/2,1), or 0.3675-0.42 seconds within the
+eligible band. This is shorter than a sustained full/near-full sprint tail.
+The same immediate ease-out and captured-angle handling are reused, without
+boosting the requested start gait. No step-count or foot-phase scheduling is
+implemented: the intended small settling step must be assessed in-game.
+
+V5's sprint duration/exposure formula, diagonal direction capture, startup,
+turning and braking-only filter are retained. Jogging and diagonal jog stops
+still need the user's native compilation/playback check.
