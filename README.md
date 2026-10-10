@@ -12,6 +12,17 @@ current default/best baseline. Ctrl toggles walking/jogging, held Shift sprints,
 and F8 compares body-turn response. Stable v4 remains unchanged while testing
 new crouch behavior below. V11 is retained as the historical original baseline.
 
+## Later walk entry with stronger jog-to-walk momentum
+
+[Download Ctrl Modes v10 later walk blend](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v10_Later_Walk_Blend.zip).
+
+After Ctrl from achieved full jogging, keep moving jogging for about 0.12s,
+then blend toward walking over 0.30s. The total remains 0.42s. Native animation
+continues playing; no frame freeze or extra walking tail. Other movement,
+permanent responsive turning and crouch rules remain from v9. Extract fresh
+and run the launcher. Actual translated checks match v9's completion deadline
+and pass standing/crouch regressions. Visual blending requires the game test.
+
 ## Jog-to-walk momentum without extending the transition
 
 [Download Ctrl Modes v9 jog-to-walk momentum](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v9_Jog_Walk_Momentum.zip).
