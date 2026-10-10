@@ -292,3 +292,18 @@ startup/braking methods remain unchanged. Close DayZ, extract into a fresh
 folder and run `Launch-Movement-Test.cmd`; F8 toggles this addition only.
 Mocked checks cover alternating/overlapping keys at 30/60/144 FPS. Native
 animation stability and compilation still need local DayZ testing.
+
+## Native movement continuity test: v17
+
+[Download v17](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v17.zip).
+
+V16 still showed pose jumps in the supplied recording. V17 keeps the native
+movement command throughout, replacing scripted command/brace/handoff logic
+with a committed native gait/direction input envelope. Rapid taps cannot
+retarget recovery; current input selects the next reversal. Native DayZ owns
+animation choice and blending, so brace shape and perceived weight can differ.
+V11 ordinary startup/braking formulas are retained, with a guard against
+competing brake overrides during a reversal. Extract fresh and run
+`Launch-Movement-Test.cmd`; F8 compares against ordinary v11 behavior.
+Controller tests pass with a mock SDK; native animation stability is pending
+local testing. Previous builds remain available.
