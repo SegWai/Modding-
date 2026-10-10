@@ -10,6 +10,21 @@ import subprocess
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
+world_root = ROOT / 'movement-logic-experiments/MovementLabMovementLogicTest_v13/StartGateSource/Scripts/4_World'
+# Enforce requires matching parameter names as well as types on overrides.
+# These names come from human.c and DayZPlayerImplement in the official SDK.
+expected_names = {
+    'CommandHandler': ('pDt', 'pCurrentCommandID', 'pCurrentCommandFinished'),
+    'ModCommandHandlerInside': ('pDt', 'pCurrentCommandID', 'pCurrentCommandFinished'),
+    'PreAnimUpdate': ('pDt',),
+    'PrePhysUpdate': ('pDt',),
+    'PostPhysUpdate': ('pDt',),
+}
+for file in world_root.glob('*.c'):
+    for name, args in re.findall(r'override\s+\w+\s+(\w+)\s*\(([^)]*)\)', file.read_text()):
+        if name in expected_names:
+            actual = tuple(arg.strip().split()[-1] for arg in args.split(',') if arg.strip())
+            assert actual == expected_names[name], (file.name, name, actual)
 source = (ROOT / "movement-logic-experiments/MovementLabMovementLogicTest_v13/StartGateSource/Scripts/4_World/MovementLabPoseHold.c").read_text()
 source = re.sub(r'^\s*Print\([^\n]*\);', '', source, flags=re.M)
 source = source.replace('protected ', '').replace('override ', '')

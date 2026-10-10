@@ -152,11 +152,11 @@ modded class PlayerBase
 
     // The normal base lifecycle still processes death, falling and finished
     // commands. It must not replace our active script command with native move.
-    override bool ModCommandHandlerInside(float dt, int command, bool finished)
+    override bool ModCommandHandlerInside(float pDt, int pCurrentCommandID, bool pCurrentCommandFinished)
     {
-        if (super.ModCommandHandlerInside(dt, command, finished))
+        if (super.ModCommandHandlerInside(pDt, pCurrentCommandID, pCurrentCommandFinished))
             return true;
-        return command == DayZPlayerConstants.COMMANDID_SCRIPT && MovementLabPoseCommand.Cast(GetCommand_Script()) != null;
+        return pCurrentCommandID == DayZPlayerConstants.COMMANDID_SCRIPT && MovementLabPoseCommand.Cast(GetCommand_Script()) != null;
     }
 
     bool MovementLabTryPoseHold(float dt, int command, bool finished)

@@ -51,9 +51,9 @@ class MovementLabPoseCommand : HumanCommandScript
         Print("[MovementLab v13] Native pose hold START angle=" + m_Angle + ", duration=" + m_Duration);
     }
 
-    override void PreAnimUpdate(float dt)
+    override void PreAnimUpdate(float pDt)
     {
-        if (!MovementLabStartGate.Enabled || !MovementLabPoseSettings.Enabled || !m_Player.IsAlive() || m_Player.IsUnconscious() || m_Player.IsRaised() || m_Player.IsEmotePlaying() || m_Player.GetEntityInHands() || GetGame().GetUIManager().GetMenu() || (GetGame().GetMission() && GetGame().GetMission().IsPaused()) || dt > 0.25 || m_Player.PhysicsIsFalling(true))
+        if (!MovementLabStartGate.Enabled || !MovementLabPoseSettings.Enabled || !m_Player.IsAlive() || m_Player.IsUnconscious() || m_Player.IsRaised() || m_Player.IsEmotePlaying() || m_Player.GetEntityInHands() || GetGame().GetUIManager().GetMenu() || (GetGame().GetMission() && GetGame().GetMission().IsPaused()) || pDt > 0.25 || m_Player.PhysicsIsFalling(true))
         {
             m_Abort = true;
             SetFlagFinished(true);
@@ -65,10 +65,10 @@ class MovementLabPoseCommand : HumanCommandScript
         PreAnim_SetFloat(m_Table.Direction, m_Angle);
         PreAnim_CallCommand(m_Table.Slide, 0, 0);
         m_Requests = m_Requests + 1;
-        m_Time = m_Time + Math.Max(dt, 0);
+        m_Time = m_Time + Math.Max(pDt, 0);
     }
 
-    override void PrePhysUpdate(float dt)
+    override void PrePhysUpdate(float pDt)
     {
         if (m_Abort)
             return;
@@ -80,7 +80,7 @@ class MovementLabPoseCommand : HumanCommandScript
         PrePhys_SetTranslation(translation);
     }
 
-    override bool PostPhysUpdate(float dt)
+    override bool PostPhysUpdate(float pDt)
     {
         PostPhys_LockRotation();
         return !m_Abort && m_Time < m_Duration;
