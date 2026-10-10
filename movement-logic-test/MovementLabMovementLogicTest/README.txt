@@ -1,36 +1,33 @@
-MovementLab v9: brief walking start in every direction
+MovementLab v10: command-level walking start (fixes v9 jog flash)
 
 1. Close DayZ and leave Steam running.
-2. Extract the entire v9 ZIP into a separate folder.
+2. Extract the entire v10 ZIP into a separate folder.
 3. Open Launch-Movement-Test.cmd.
 
-No Blender, Workbench or Addon Builder steps are needed.
-The launcher uses D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe.
+A small script-only PBO is already included. No Addon Builder, Blender or
+Workbench step is required. Keep the @MovementLabStartGate folder with the
+launcher and mission; the launcher loads it automatically.
+The game path remains D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe.
 
-Starts in HEAVIER + STARTS + BRAKING mode. F7 switches to vanilla and back.
-The stopping settings you approved in v8 are retained.
+Starts in HEAVIER + STARTS + BRAKING mode. F7 compares with vanilla.
 
-From a full stop, with empty hands and standing:
-- Press W, A, D or S without Shift. Each should briefly walk in that direction,
-  then ease into jogging.
-- Try W+A, W+D and backward diagonals too.
-- Hold W+Shift from idle. It should walk, ease into jogging, then let the
-  existing native sprint transition accelerate into full sprint.
-- Ctrl walking remains walking. Pure A/D/S is not forced into full sprint.
-- Releasing keys early cancels the startup; there is no automatic continued
-  acceleration after you let go.
+From a complete stop, with empty hands and standing:
+- Press W without Shift. The first visible moving gait should be walking,
+  then jogging. Check that v9's jog -> walk -> jog flash is gone.
+- Try W+Shift: walking -> jogging -> native sprint.
+- Try A, D, S and diagonals from idle.
+- Ctrl walking stays native walking.
+- Release keys during the walking lead-in: acceleration must cancel promptly.
+- Check the approved directional stopping still feels right.
 
-Requested startup: 0.10s walking, 0.18s smooth walk-to-jog, 0.07s jogging,
-then return control to the native input. Direction remains live from your keys.
-The startup does not replay merely because you turn while already moving.
-It arms again after reaching idle, rather than restarting during braking.
-These durations describe input requests, not guaranteed animation timing.
+V9 applied walking in a late mission-frame update. V10 applies startup before
+the base PlayerBase.CommandHandler and primes persistent speed 0 while idle.
+Idle gating does not move the character; it prevents unfiltered jogging from
+getting through before the first walking request. Native keys choose direction.
+Requested startup timing remains 0.10s walk, 0.18s walk-to-jog and 0.07s jog,
+then handoff to native sprint where allowed. Other stopping formulas retain
+their approved settings and explicitly own braking overrides separately.
 
-New direction input, mode changes and the existing cancellation guards retain
-control. Crouching, raised hands, menus, death, leaving movement mode, F7 and
-mission exit also cancel overrides. No new animation clips are imported.
+Native loading/compilation of the new PBO and the first visible gait need your
+local v10 test. If DayZ reports a script/config error, send its exact text.
 Logs are stored in Profiles\MovementLogic inside this extracted folder.
-
-Tell me whether the brief walk is visible and feels natural in all directions,
-and whether holding Shift gives a smooth walk -> jog -> sprint progression.
-Native v9 compilation and playback still need your PC test.

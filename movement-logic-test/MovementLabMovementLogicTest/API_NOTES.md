@@ -2,9 +2,10 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. The user approved v8 stopping in every tested direction. V9 adds an idle
-walking lead-in before jogging and native sprint handoff. Native v9 compilation
-and playback have not been performed here.
+almost instantly. V9's mission-frame startup allowed a visible jog frame before walking. V10
+moves startup into a script-only PlayerBase command hook with persistent idle
+and startup speed ownership. Native PBO loading, compilation and first-frame
+animation behavior remain untested here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -198,3 +199,38 @@ This implementation uses the existing ONE_FRAME and DISABLED speed APIs,
 plus documented GetMovement and IsWalkToggled from official human.c.
 The first animation frame, visible walk duration and native sprint handoff
 must be checked locally; source-level checks cannot prove those engine details.
+
+## V10 command-level start gate
+
+The new World script mod overrides PlayerBase.CommandHandler with the official
+(float pDt, int pCurrentCommandID, bool pCurrentCommandFinished) signature.
+Its startup helper runs BEFORE super.CommandHandler. The late mission-frame
+startup writer and its GetMovement readiness check are removed.
+
+While standing, alive, locally controlled and idle with no raw movement keys,
+the helper primes a persistent ENABLED speed override of 0. This cannot cause
+idle creeping. A new movement input switches that owned request to walking 1
+before the base command handler runs, rather than letting native jog input
+pass through while waiting for the mission frame to observe it.
+
+The 0.10s walk / 0.18s smooth ramp / 0.07s jog timing is retained. Startup uses
+ENABLED, not ONE_FRAME, so it does not leave a default-gait gap between command
+ticks. It releases ownership at completion, early input release, deliberate
+walking, guarded command/stance/UI/death conditions, F7 and mission finish.
+Native input continues to choose direction, and native sprint is handed back
+only after the walk/jog stage.
+
+The loose mission enables this hook only for this offline test. Its braking
+start/end explicitly informs the player hook about override ownership, so an
+idle gate cannot overwrite the approved stopping coast. Stopping trigger
+bands, durations, easing, pure lateral/backward gait finishes and movement
+filter settings are retained. First-frame gait and any timing effect from
+native command ordering still require local gameplay verification.
+
+The shipped uncompressed script-only PBO includes config.cpp and the World
+script. Its prefix is MovementLabStartGate; CfgMods registers that prefix's
+Scripts/4_World directory. The reproducible Python packager writes standard
+uncompressed PBO headers, prefix metadata and SHA1 footer, then parses them
+back and compares each file to source. No engine compiler is available here,
+so these checks do not prove native loading or Enforce compilation. Source
+files are included under StartGateSource for review/repacking if needed.

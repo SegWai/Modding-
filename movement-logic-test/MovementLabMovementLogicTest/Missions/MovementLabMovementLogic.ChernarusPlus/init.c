@@ -21,83 +21,11 @@ class MovementLabMovementLogicMission extends MissionGameplay
     protected int m_MovementLabLastKeys;
     protected int m_MovementLabBrakeKeys;
     protected PlayerBase m_MovementLabBrakePlayer;
-    protected bool m_MovementLabStartReady = true;
-    protected bool m_MovementLabStarting;
-    protected float m_MovementLabStartTime;
-    protected float m_MovementLabStartSpeed;
-    protected PlayerBase m_MovementLabStartPlayer;
-
     protected void MovementLabCancelStart()
     {
-        if (m_MovementLabStarting && m_MovementLabStartPlayer)
-        {
-            HumanInputController input = m_MovementLabStartPlayer.GetInputController();
-            if (input)
-                input.OverrideMovementSpeed(HumanInputControllerOverrideType.DISABLED, 0);
-        }
-        m_MovementLabStarting = false;
-        m_MovementLabStartPlayer = null;
-        m_MovementLabStartTime = 0;
-    }
-
-    protected void MovementLabUpdateStart(PlayerBase player, HumanInputController input, int movementKeys, float timeslice)
-    {
-        if (m_MovementLabBraking)
-        {
-            MovementLabCancelStart();
-            m_MovementLabStartReady = false;
-            return;
-        }
-        if (movementKeys == 0)
-        {
-            MovementLabCancelStart();
-            m_MovementLabStartReady = player.GetCommand_Move().GetCurrentMovementSpeed() <= 0.1;
-            return;
-        }
-        // Respect deliberate Ctrl walking, walk toggle, and forced walk.
-        if (input.IsWalkToggled() || GetUApi().GetInputByID(UAWalkRunTemp).LocalValue() > 0.05 || GetUApi().GetInputByID(UAWalkRunForced).LocalValue() > 0.05)
-        {
-            MovementLabCancelStart();
-            m_MovementLabStartReady = false;
-            return;
-        }
-        if (!m_MovementLabStarting && m_MovementLabStartReady)
-        {
-            // Read requested gait only before owning an override. During the
-            // ramp GetMovement can reflect our request and is not raw intent.
-            float requested;
-            vector direction;
-            input.GetMovement(requested, direction);
-            if (requested <= 0.05)
-                return;
-            m_MovementLabStartReady = false;
-            if (requested <= 1.05)
-                return;
-            m_MovementLabStarting = true;
-            m_MovementLabStartPlayer = player;
-            m_MovementLabStartTime = 0;
-            Print("[MovementLab v9] Starting: brief walk, ease into jog, then native sprint if requested.");
-        }
-        if (!m_MovementLabStarting)
-            return;
-        if (m_MovementLabStartPlayer != player)
-        {
-            MovementLabCancelStart();
-            return;
-        }
-        // 0.10s walk, 0.18s smooth walk-to-jog, 0.07s jogging lead-in.
-        // After 0.35s release to native input; never force sprint into A/D/S.
-        if (m_MovementLabStartTime >= 0.35)
-        {
-            MovementLabCancelStart();
-            return;
-        }
-        float blend = Math.Clamp((m_MovementLabStartTime - 0.10) / 0.18, 0, 1);
-        blend = blend * blend * (3.0 - 2.0 * blend);
-        m_MovementLabStartSpeed = 1.0 + blend;
-        input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabStartSpeed);
-        // Native input continues to choose direction while keys are held.
-        m_MovementLabStartTime = m_MovementLabStartTime + Math.Max(timeslice, 0);
+        PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
+        if (player)
+            player.MovementLabCancelStart();
     }
 
     protected void MovementLabCancelBrake()
@@ -112,6 +40,8 @@ class MovementLabMovementLogicMission extends MissionGameplay
                 input.OverrideMovementAngle(HumanInputControllerOverrideType.DISABLED, 0);
             }
         }
+        if (m_MovementLabBrakePlayer)
+            m_MovementLabBrakePlayer.MovementLabSetBrakingActive(false);
         m_MovementLabBraking = false;
         m_MovementLabBrakePlayer = null;
         m_MovementLabBrakeTime = 0;
@@ -136,6 +66,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             else if (m_MovementLabBrakeKeys == 2)
                 m_MovementLabBrakeAngle = 180.0;
         }
+        player.MovementLabSetBrakingActive(true);
         m_MovementLabBraking = true;
         m_MovementLabBrakePlayer = player;
         m_MovementLabBrakeStart = start;
@@ -143,7 +74,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTarget = target;
         m_MovementLabBrakeDuration = duration;
         m_MovementLabBrakeTime = 0;
-        Print("[MovementLab v9] Braking input start=" + start + ", target=" + target + ", duration=" + duration + ", angle=" + m_MovementLabBrakeAngle);
+        Print("[MovementLab v10] Braking input start=" + start + ", target=" + target + ", duration=" + duration + ", angle=" + m_MovementLabBrakeAngle);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -151,7 +82,6 @@ class MovementLabMovementLogicMission extends MissionGameplay
         if (!m_MovementLabHeavy || !player || !player.IsAlive() || !player.GetCommand_Move() || player.IsUnconscious() || player.IsRaised() || player.IsEmotePlaying() || GetUIManager().GetMenu() || IsPaused() || timeslice > 0.25)
         {
             MovementLabCancelStart();
-            m_MovementLabStartReady = false;
             MovementLabCancelBrake();
             return;
         }
@@ -160,7 +90,6 @@ class MovementLabMovementLogicMission extends MissionGameplay
         if (state.m_iStanceIdx != DayZPlayerConstants.STANCEIDX_ERECT)
         {
             MovementLabCancelStart();
-            m_MovementLabStartReady = false;
             MovementLabCancelBrake();
             return;
         }
@@ -187,7 +116,6 @@ class MovementLabMovementLogicMission extends MissionGameplay
             MovementLabCancelBrake();
             return;
         }
-        MovementLabUpdateStart(player, input, movementKeys, timeslice);
         if (m_MovementLabBraking && movingInput && (m_MovementLabBrakeTarget == 0 || turbo || movementKeys != m_MovementLabBrakeKeys))
         {
             // New input takes control back. The original held diagonal keys
@@ -234,8 +162,8 @@ class MovementLabMovementLogicMission extends MissionGameplay
             m_MovementLabLastSpeed = Math.Clamp(player.GetCommand_Move().GetCurrentMovementSpeed(), 0, 3);
             // A starting walk/jog request cannot count as achieved sprint just
             // because native state briefly precedes the first override frame.
-            if (m_MovementLabStarting)
-                m_MovementLabLastSpeed = Math.Min(m_MovementLabLastSpeed, m_MovementLabStartSpeed);
+            if (player.MovementLabIsStarting())
+                m_MovementLabLastSpeed = Math.Min(m_MovementLabLastSpeed, player.MovementLabGetStartSpeed());
             if (turbo && m_MovementLabLastSpeed > 2.05)
                 m_MovementLabSprintExposure = Math.Min(0.45, m_MovementLabSprintExposure + Math.Max(timeslice, 0));
             else
@@ -285,6 +213,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         if (GetGame().IsMultiplayer())
             return;
 
+        MovementLabStartGate.Enabled = true;
         GetGame().GetWorld().SetDate(2026, 6, 15, 12, 0);
         vector spawn = "14017.8 0 2959.1";
         spawn[1] = GetGame().SurfaceY(spawn[0], spawn[2]) + 0.2;
@@ -363,7 +292,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
                 mode = "HEAVIER + STARTS + BRAKING";
-            string message = "[MovementLab v9] " + mode + " - F7 switches mode. Test walk-to-jog starts in every direction.";
+            string message = "[MovementLab v10] " + mode + " - F7 switches mode. Test the first movement frame from idle.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;
@@ -376,8 +305,8 @@ class MovementLabMovementLogicMission extends MissionGameplay
         if (key == KeyCode.KC_F7 && !GetGame().IsMultiplayer())
         {
             m_MovementLabHeavy = !m_MovementLabHeavy;
+            MovementLabStartGate.Enabled = m_MovementLabHeavy;
             MovementLabCancelStart();
-            m_MovementLabStartReady = false;
             MovementLabCancelBrake();
             m_MovementLabAnnounce = true;
         }
@@ -385,6 +314,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
 
     override void OnMissionFinish()
     {
+        MovementLabStartGate.Enabled = false;
         MovementLabCancelStart();
         MovementLabCancelBrake();
         if (m_MovementLabOwnsFilters)

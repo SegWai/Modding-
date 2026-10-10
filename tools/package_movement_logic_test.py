@@ -3,11 +3,58 @@
 from pathlib import Path
 import hashlib
 import json
+import struct
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "movement-logic-test" / "MovementLabMovementLogicTest"
-OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v9.zip"
+OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v10.zip"
+
+
+def build_start_gate_pbo():
+    """Store uncompressed config/scripts in a standard PBO with prefix and SHA1."""
+    source = SOURCE / "StartGateSource"
+    files = {p.relative_to(source).as_posix().replace("/", "\\"): p.read_bytes()
+             for p in source.rglob("*") if p.is_file()}
+    header = b"\0" + struct.pack("<5I", 0x56657273, 0, 0, 0, 0)
+    header += b"prefix\0MovementLabStartGate\0\0"
+    payload = b""
+    for name, data in sorted(files.items()):
+        header += name.encode("ascii") + b"\0" + struct.pack("<5I", 0, 0, 0, 0, len(data))
+        payload += data
+    body = header + b"\0" + struct.pack("<5I", 0, 0, 0, 0, 0) + payload
+    result = body + b"\0" + hashlib.sha1(body).digest()
+    # Independently parse headers, metadata and offsets and compare every file.
+    offset = 0
+    def string():
+        nonlocal offset
+        end = result.index(b"\0", offset)
+        value = result[offset:end].decode("ascii")
+        offset = end + 1
+        return value
+    assert string() == ""
+    assert struct.unpack_from("<5I", result, offset)[0] == 0x56657273
+    offset += 20
+    assert string() == "prefix" and string() == "MovementLabStartGate" and string() == ""
+    records = []
+    while True:
+        name = string()
+        method, original, reserved, stamp, size = struct.unpack_from("<5I", result, offset)
+        offset += 20
+        assert (method, original, reserved, stamp) == (0, 0, 0, 0)
+        if not name:
+            assert size == 0
+            break
+        records.append((name, size))
+    assert len(records) == len(files)
+    for name, size in records:
+        assert result[offset:offset+size] == files[name]
+        offset += size
+    assert result[offset] == 0 and result[offset+1:] == hashlib.sha1(result[:offset]).digest()
+    target = SOURCE / "@MovementLabStartGate/Addons/MovementLabStartGate.pbo"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(result)
+    return target
 
 
 def main():
@@ -23,7 +70,7 @@ def main():
     assert "HumanInputControllerOverrideType.DISABLED" in mission
     assert "MovementLabCancelBrake();" in mission
     assert "SetPosition(" not in mission and "SetVelocity(" not in mission
-    assert "-mod=" not in launcher
+    assert "-mod=%movementlabTestDir%@MovementLabStartGate" in launcher
     assert "MovementLabMovementLogic.ChernarusPlus" in launcher
     validation = {
         "checks": "Package structure and static API/source inspection only",
@@ -38,10 +85,13 @@ def main():
         "prior_v6_runtime": "user approved jogging stop; pure A/D stop finished with forward walking animation",
         "prior_v7_runtime": "user approved sideways walking finish; requested a shorter backward walk finish",
         "prior_v8_runtime": "user approved quick backward walking finish",
-        "starting_v9": "from idle: 0.10s walk, 0.18s smooth walk-to-jog, 0.07s jog lead-in; handoff to native sprint if held/allowed; native playback pending",
-        "braking_v9": "v8 stopping formulas/directions retained; actual startup speed caps release sampling",
+        "prior_v9_runtime": "user observed one jog frame before walking: mission OnUpdate applied too late",
+        "starting_v10": "pre-base PlayerBase command hook; persistent idle speed 0 gate and walk-to-jog startup override; native first-frame test pending",
+        "braking_v10": "approved stopping formulas/directions retained; explicit startup/braking ownership bridge",
+        "pbo_validation": "uncompressed headers/prefix/file offsets/source bytes and SHA1 footer verified; native loading/compilation pending",
         "ordinary_acceleration": "new short idle walk-to-jog lead-in; native sprint handoff",
     }
+    build_start_gate_pbo()
     OUTPUT.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(OUTPUT, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         entries = {p.relative_to(SOURCE).as_posix(): p.read_bytes()
@@ -50,7 +100,7 @@ def main():
         for name, data in sorted(entries.items()):
             if name.endswith((".cmd", ".txt")):
                 data = data.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
-            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v9/" + name, (2026, 10, 10, 0, 0, 0))
+            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v10/" + name, (2026, 10, 10, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data, compresslevel=9)
@@ -59,7 +109,7 @@ def main():
         names = archive.namelist()
         assert len(names) == len(set(names))
         assert all(".." not in Path(name).parts for name in names)
-        assert len(names) == 5
+        assert len(names) == 8
     print(f"{OUTPUT.name}: {OUTPUT.stat().st_size} bytes")
     print("SHA256 " + hashlib.sha256(OUTPUT.read_bytes()).hexdigest())
 

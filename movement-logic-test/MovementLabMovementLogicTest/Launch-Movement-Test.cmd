@@ -10,6 +10,10 @@ if not exist "%movementlabTestDir%Missions\MovementLabMovementLogic.ChernarusPlu
     echo Extract the entire ZIP together before launching.
     goto failed
 )
+if not exist "%movementlabTestDir%@MovementLabStartGate\Addons\MovementLabStartGate.pbo" (
+    echo The included walking-start script PBO is missing. Extract the entire ZIP together.
+    goto failed
+)
 powershell.exe -NoProfile -NonInteractive -Command "if (Get-Process -Name DayZ_x64,DayZDiag_x64 -ErrorAction SilentlyContinue) { exit 1 }"
 if errorlevel 1 (
     echo Close the running DayZ game first.
@@ -20,8 +24,8 @@ if not exist "%movementlabTestDir%Profiles\MovementLogic" (
     echo Could not create the test profile folder.
     goto failed
 )
-echo Starting movement test v9. Steam must be running. F7 switches heavier starts and braking versus vanilla.
-start "" /D "%movementlabGameDir%" "%movementlabGameDir%\DayZDiag_x64.exe" "-mission=%movementlabTestDir%Missions\MovementLabMovementLogic.ChernarusPlus" "-profiles=%movementlabTestDir%Profiles\MovementLogic" -nosplash -noPause -filePatching -doLogs -scriptDebug=true
+echo Starting movement test v10. Steam must be running. The walking-start script mod is included.
+start "" /D "%movementlabGameDir%" "%movementlabGameDir%\DayZDiag_x64.exe" "-mission=%movementlabTestDir%Missions\MovementLabMovementLogic.ChernarusPlus" "-mod=%movementlabTestDir%@MovementLabStartGate" "-profiles=%movementlabTestDir%Profiles\MovementLogic" -nosplash -noPause -filePatching -doLogs -scriptDebug=true
 exit /b 0
 :failed
 pause
