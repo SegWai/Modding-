@@ -23,6 +23,19 @@ v8. Extract fresh and run the launcher. Actual translated checks pass at
 30/60/144 FPS, including differential duration/completion comparisons to v8.
 Native visual blending still requires the game test.
 
+## Blender controller timing illustration: v8 versus v9
+
+[Watch/download the before-and-after MP4](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Jog_Walk_Before_After_Illustration.mp4).
+[Editable Blender 4.3.2 scene](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Jog_Walk_Controller_Comparison.blend).
+
+This illustrates the actual requested-gait curves at 4x slower playback. It
+is **not DayZ character animation footage or a physical velocity simulation**.
+Both transitions are 0.42 seconds for achieved forward gait 2. At halfway,
+v8 requests 1.25 and v9 requests 1.50 (gait units). Native in-game blending
+can make the difference subtle; Blender cannot reproduce the DayZ controller.
+The script `tools/render_jog_walk_curve_comparison.py` renders the illustration.
+No mod behavior is changed by these video/scene artifacts.
+
 ## Permanent preferred body rotation with v7 crouch rules
 
 [Download Ctrl Modes v8 fixed turning](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v8_Fixed_Turning.zip).

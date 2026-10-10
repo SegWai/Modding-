@@ -1,0 +1,10 @@
+{
+  "kind": "controller curve illustration, not native DayZ animation footage",
+  "source": "v8 Ctrl jog-to-walk ease-out vs v9 smoothstep",
+  "actual_duration_seconds": 0.42,
+  "playback_slowdown": 4,
+  "before": "2-(2*t-t*t)",
+  "after": "2-t*t*(3-2*t)",
+  "unchanged": "endpoints/deadline, clips, crouch rules, fixed turning",
+  "limits": "Requested gait units, no native clip blend or physical velocity reconstruction"
+}
