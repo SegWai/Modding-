@@ -45,6 +45,16 @@ experiment; **F7** retains the original heavier/vanilla switch. Extract into a
 separate folder and launch its included CMD; no asset import or packing needed.
 Pose retention and native compilation need local testing. V11 remains stable.
 
+## Moving reversal test v14
+
+[Download v14 moving reversal experiment](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v14.zip).
+V14 replaces v13's stationary hold with a single native bracing request,
+progressing directional pose samples, and a moving reversal that recovers speed
+over about 0.50 seconds. It retains v11's other movement settings. **F8** toggles
+the reversal experiment; launch from its own extracted folder. Native clip
+playback clocks are unchanged: visible blending and movement weight need a
+local test. V11 remains the stable download.
+
 ## Confirmed so far
 
 - The user's DayZ 1.29 Animation Editor loads the player model and plays an
