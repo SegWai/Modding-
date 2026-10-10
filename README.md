@@ -55,6 +55,16 @@ the reversal experiment; launch from its own extracted folder. Native clip
 playback clocks are unchanged: visible blending and movement weight need a
 local test. V11 remains the stable download.
 
+## Clean v11 base with moving reversals: v15
+
+[Download v15](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v15.zip).
+Built directly from v11, preserving its ordinary startup/braking methods and
+adding v14's heavy moving reversal. To address reported animation jumps, it
+avoids sweeping across directional brace poses and briefly seeds the native
+movement direction/gait after the scripted reversal. **F8** toggles only the
+addition. Extract separately and launch the included CMD. Local testing must
+confirm visual stability; v11 remains the unchanged stable download.
+
 ## Confirmed so far
 
 - The user's DayZ 1.29 Animation Editor loads the player model and plays an
