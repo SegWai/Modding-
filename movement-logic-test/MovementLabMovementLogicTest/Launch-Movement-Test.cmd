@@ -24,7 +24,7 @@ if not exist "%movementlabTestDir%Profiles\MovementLogic" (
     echo Could not create the test profile folder.
     goto failed
 )
-echo Starting movement test v10. Steam must be running. The walking-start script mod is included.
+echo Starting movement test v11. Steam must be running. The walking-start script mod is included.
 start "" /D "%movementlabGameDir%" "%movementlabGameDir%\DayZDiag_x64.exe" "-mission=%movementlabTestDir%Missions\MovementLabMovementLogic.ChernarusPlus" "-mod=%movementlabTestDir%@MovementLabStartGate" "-profiles=%movementlabTestDir%Profiles\MovementLogic" -nosplash -noPause -filePatching -doLogs -scriptDebug=true
 exit /b 0
 :failed

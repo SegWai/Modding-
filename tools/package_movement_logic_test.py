@@ -8,7 +8,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "movement-logic-test" / "MovementLabMovementLogicTest"
-OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v10.zip"
+OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v11.zip"
 
 
 def build_start_gate_pbo():
@@ -86,8 +86,9 @@ def main():
         "prior_v7_runtime": "user approved sideways walking finish; requested a shorter backward walk finish",
         "prior_v8_runtime": "user approved quick backward walking finish",
         "prior_v9_runtime": "user observed one jog frame before walking: mission OnUpdate applied too late",
-        "starting_v10": "pre-base PlayerBase command hook; persistent idle speed 0 gate and walk-to-jog startup override; native first-frame test pending",
-        "braking_v10": "approved stopping formulas/directions retained; explicit startup/braking ownership bridge",
+        "prior_v10_runtime": "user confirmed command-level walking start works; stop deadline approved",
+        "starting_v11": "approved v10 command hook/PBO retained",
+        "braking_v11": "near/full sprint full-stop envelope redistributed to longer jogging and shorter walk; duration/deadline formulas unchanged; native playback pending",
         "pbo_validation": "uncompressed headers/prefix/file offsets/source bytes and SHA1 footer verified; native loading/compilation pending",
         "ordinary_acceleration": "new short idle walk-to-jog lead-in; native sprint handoff",
     }
@@ -100,7 +101,7 @@ def main():
         for name, data in sorted(entries.items()):
             if name.endswith((".cmd", ".txt")):
                 data = data.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
-            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v10/" + name, (2026, 10, 10, 0, 0, 0))
+            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v11/" + name, (2026, 10, 10, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data, compresslevel=9)

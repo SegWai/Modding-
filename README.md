@@ -5,18 +5,17 @@ inspired by the weight and pacing of Red Dead Redemption 2.
 
 ## Native movement logic experiment
 
-[Download movement test v10](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v10.zip).
+[Download movement test v11](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v11.zip).
 Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
 DayZ closed. No animation import or PBO build is required. **F7** switches
 between heavier movement with sprint braking and vanilla filters in the same
-offline session. Extract v10 separately to retain the previous test.
+offline session. Extract v11 separately to retain the previous test.
 
-V9 let a jog frame through before walking. V10 moves the walking start into
-a PlayerBase command hook and primes an idle speed gate, aiming to make walking
-the first visible gait. The script-only PBO is included and loaded by the
-launcher: no Addon Builder step is required. Approved stopping formulas are
-retained. Native PBO loading, compilation and the first-frame gait need the
-local v10 test.
+The user approved v10 walking starts and the stopping deadline. V11 keeps the
+same near/full-sprint stop budget but requests a longer jogging phase and a
+shorter walking finish. The tested startup PBO remains included. Lower-gait
+stops and directional finishes retain their settings. Native v11 phase
+appearance and physical stopping need the local test.
 Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
 
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)

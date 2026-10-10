@@ -74,7 +74,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTarget = target;
         m_MovementLabBrakeDuration = duration;
         m_MovementLabBrakeTime = 0;
-        Print("[MovementLab v10] Braking input start=" + start + ", target=" + target + ", duration=" + duration + ", angle=" + m_MovementLabBrakeAngle);
+        Print("[MovementLab v11] Braking input start=" + start + ", target=" + target + ", duration=" + duration + ", angle=" + m_MovementLabBrakeAngle);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -194,6 +194,34 @@ class MovementLabMovementLogicMission extends MissionGameplay
         // Ease toward the final gait as the remaining input approaches zero.
         float blend = 2.0 * fraction - fraction * fraction;
         m_MovementLabBrakeSpeed = m_MovementLabBrakeStart + (m_MovementLabBrakeTarget - m_MovementLabBrakeStart) * blend;
+        // Redistribute an achieved near/full-sprint stop's existing time:
+        // prompt sprint-to-jog, longer jog, then a short walking finish.
+        // The duration/deadline and all lower-gait stops stay unchanged.
+        if (m_MovementLabBrakeTarget == 0 && m_MovementLabBrakeStart >= 2.5)
+        {
+            if (fraction < 0.18)
+            {
+                float sprintBlend = fraction / 0.18;
+                sprintBlend = 2.0 * sprintBlend - sprintBlend * sprintBlend;
+                m_MovementLabBrakeSpeed = m_MovementLabBrakeStart + (2.0 - m_MovementLabBrakeStart) * sprintBlend;
+            }
+            else if (fraction < 0.62)
+                m_MovementLabBrakeSpeed = 2.0;
+            else if (fraction < 0.82)
+            {
+                float jogBlend = (fraction - 0.62) / 0.20;
+                jogBlend = jogBlend * jogBlend * (3.0 - 2.0 * jogBlend);
+                m_MovementLabBrakeSpeed = 2.0 - jogBlend;
+            }
+            else if (fraction < 0.92)
+                m_MovementLabBrakeSpeed = 1.0;
+            else
+            {
+                float walkBlend = (fraction - 0.92) / 0.08;
+                walkBlend = 2.0 * walkBlend - walkBlend * walkBlend;
+                m_MovementLabBrakeSpeed = 1.0 - walkBlend;
+            }
+        }
         // During the settling portion of a pure lateral stop, request the
         // actual walk gait (1) instead of a fractional sub-walk/idle blend.
         // At the existing deadline, releasing the override allows full idle.
@@ -292,7 +320,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
                 mode = "HEAVIER + STARTS + BRAKING";
-            string message = "[MovementLab v10] " + mode + " - F7 switches mode. Test the first movement frame from idle.";
+            string message = "[MovementLab v11] " + mode + " - F7 switches mode. Test longer jogging within the same sprint-stop time.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;

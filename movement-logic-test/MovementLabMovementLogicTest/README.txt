@@ -1,33 +1,34 @@
-MovementLab v10: command-level walking start (fixes v9 jog flash)
+MovementLab v11: more jogging, shorter walk in full-sprint stops
 
 1. Close DayZ and leave Steam running.
-2. Extract the entire v10 ZIP into a separate folder.
+2. Extract the entire v11 ZIP into a separate folder.
 3. Open Launch-Movement-Test.cmd.
 
-A small script-only PBO is already included. No Addon Builder, Blender or
-Workbench step is required. Keep the @MovementLabStartGate folder with the
-launcher and mission; the launcher loads it automatically.
+The tested walking-start PBO remains included. No packing/import is needed.
 The game path remains D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe.
 
 Starts in HEAVIER + STARTS + BRAKING mode. F7 compares with vanilla.
 
-From a complete stop, with empty hands and standing:
-- Press W without Shift. The first visible moving gait should be walking,
-  then jogging. Check that v9's jog -> walk -> jog flash is gone.
-- Try W+Shift: walking -> jogging -> native sprint.
-- Try A, D, S and diagonals from idle.
-- Ctrl walking stays native walking.
-- Release keys during the walking lead-in: acceleration must cancel promptly.
-- Check the approved directional stopping still feels right.
+From near/full sprint, release movement keys and Shift:
+- The slowdown now requests more jogging before a shorter walking finish.
+- The total requested stopping duration and deadline are unchanged.
+- Try forward and diagonal sprint stops.
+- Approved walking starts, jogging-only stops and sideways/backward finishes
+  retain their settings. Shift-only sprint-to-jog easing is also retained.
 
-V9 applied walking in a late mission-frame update. V10 applies startup before
-the base PlayerBase.CommandHandler and primes persistent speed 0 while idle.
-Idle gating does not move the character; it prevents unfiltered jogging from
-getting through before the first walking request. Native keys choose direction.
-Requested startup timing remains 0.10s walk, 0.18s walk-to-jog and 0.07s jog,
-then handoff to native sprint where allowed. Other stopping formulas retain
-their approved settings and explicitly own braking overrides separately.
+Within the same near/full-sprint full-stop budget:
+- First 18 percent: slow from current sprint gait to jogging.
+- Next 44 percent: request jogging.
+- Next 20 percent: ease from jog to walk.
+- Next 10 percent: brief walking finish.
+- Final 8 percent: ease to idle, releasing at the existing deadline.
 
-Native loading/compilation of the new PBO and the first visible gait need your
-local v10 test. If DayZ reports a script/config error, send its exact text.
+This applies only to full-stop ramps starting at achieved gait 2.5 or higher.
+Slower/partial stops keep the approved curve. The controller still handles
+native blending and collisions; gait requests do not guarantee exact visible
+clip lengths or physical stop time. The scheduling deadline is unchanged.
+
+Tell me whether you see enough jogging followed by a short walking finish,
+and whether the overall stopping time still feels right. V11 needs your
+local mission compilation/playback test; the startup PBO is unchanged.
 Logs are stored in Profiles\MovementLogic inside this extracted folder.

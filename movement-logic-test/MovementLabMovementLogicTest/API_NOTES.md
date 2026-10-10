@@ -2,10 +2,10 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. V9's mission-frame startup allowed a visible jog frame before walking. V10
-moves startup into a script-only PlayerBase command hook with persistent idle
-and startup speed ownership. Native PBO loading, compilation and first-frame
-animation behavior remain untested here.
+almost instantly. The user confirmed v10's command-level walking start is correct and the
+stopping duration is right. V11 retains that startup PBO and redistributes
+the gait phases inside near/full-sprint full-stop ramps. Native playback of
+the new phase envelope remains pending.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -234,3 +234,23 @@ uncompressed PBO headers, prefix metadata and SHA1 footer, then parses them
 back and compares each file to source. No engine compiler is available here,
 so these checks do not prove native loading or Enforce compilation. Source
 files are included under StartGateSource for review/repacking if needed.
+
+## V11 phase redistribution at the same stopping deadline
+
+Only full-stop ramps (target 0) starting at achieved gait >=2.5 receive a new
+speed envelope. Fraction remains elapsed/originalDuration. The same deadline
+check and cancel path run before the envelope, and no duration formula changes.
+
+The first 18% eases start gait down to 2 (jog); 18-62% requests 2; 62-82%
+smoothsteps from 2 to 1; 82-92% requests 1 (walk); 92-100% eases 1 down to 0.
+The stages are continuous, bounded and nonincreasing. Sprint speed still falls
+immediately, rather than retaining v3's long near-sprint plateau. At a full
+1.15-second stop, the jogging hold is 0.506s and the walk hold is 0.115s;
+blends add native transitions around those requested gait holds.
+
+Lower achieved gait, Shift-only target-2 ramps, jog-only/backward/lateral stop
+settings, direction capture, startup PBO, ownership and native filters are
+retained. Native blending can affect visible phase lengths and actual physical
+stopping, so the user's local test must confirm the new feel despite the
+unchanged requested stop budget. More jogging can also cover more distance
+within that same budget; no physical speed or distance guarantee is made.
