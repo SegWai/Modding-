@@ -9,6 +9,8 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "movement-logic-test" / "MovementLabMovementLogicTest"
 OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v11.zip"
+ARCHIVE_ROOT = "MovementLabMovementLogicTest_v11"
+VALIDATION_EXTRA = {}
 
 
 def build_start_gate_pbo():
@@ -92,6 +94,7 @@ def main():
         "pbo_validation": "uncompressed headers/prefix/file offsets/source bytes and SHA1 footer verified; native loading/compilation pending",
         "ordinary_acceleration": "new short idle walk-to-jog lead-in; native sprint handoff",
     }
+    validation.update(VALIDATION_EXTRA)
     build_start_gate_pbo()
     OUTPUT.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(OUTPUT, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
@@ -101,7 +104,7 @@ def main():
         for name, data in sorted(entries.items()):
             if name.endswith((".cmd", ".txt")):
                 data = data.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
-            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v11/" + name, (2026, 10, 10, 0, 0, 0))
+            info = zipfile.ZipInfo(ARCHIVE_ROOT + "/" + name, (2026, 10, 10, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data, compresslevel=9)
@@ -110,7 +113,7 @@ def main():
         names = archive.namelist()
         assert len(names) == len(set(names))
         assert all(".." not in Path(name).parts for name in names)
-        assert len(names) == 8
+        assert len(names) == len(entries)
     print(f"{OUTPUT.name}: {OUTPUT.stat().st_size} bytes")
     print("SHA256 " + hashlib.sha256(OUTPUT.read_bytes()).hexdigest())
 

@@ -5,7 +5,7 @@ inspired by the weight and pacing of Red Dead Redemption 2.
 
 ## Native movement logic experiment
 
-[Download movement test v11](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v11.zip).
+[Download stable movement test v11](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v11.zip).
 Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
 DayZ closed. No animation import or PBO build is required. **F7** switches
 between heavier movement with sprint braking and vanilla filters in the same
@@ -23,6 +23,16 @@ Implementation and evidence are in [the API notes](movement-logic-test/MovementL
 If GitHub shows the ZIP's file page, use **Download raw file** (the download
 arrow) to save it. The bundle includes the editable Blender file, DayZ animation
 source, import metadata, checks, and asset notices.
+
+## Optional v12 experiment
+
+[V12 experimental download](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v12.zip).
+V11 remains the main stable version. Extract v12 into a separate folder and
+use its own launcher. It tests a shorter continuous sprint slowdown and
+A/D reversal braking: stop in the old direction, pause briefly at idle,
+then use the walking startup toward the currently held direction. Native
+compilation and these new behaviors need local testing. The experiment source
+is isolated under `movement-logic-experiments/MovementLabMovementLogicTest_v12`.
 
 ## Confirmed so far
 
