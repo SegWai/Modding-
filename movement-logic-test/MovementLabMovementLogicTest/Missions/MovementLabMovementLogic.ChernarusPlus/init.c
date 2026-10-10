@@ -10,6 +10,10 @@ class MovementLabMovementLogicMission extends MissionGameplay
     protected bool m_MovementLabBraking;
     protected float m_MovementLabBrakeTime;
     protected float m_MovementLabBrakeStart;
+    protected float m_MovementLabBrakeTarget;
+    protected float m_MovementLabBrakeDuration;
+    protected float m_MovementLabBrakeSpeed;
+    protected bool m_MovementLabWasTurbo;
     protected PlayerBase m_MovementLabBrakePlayer;
 
     protected void MovementLabCancelBrake()
@@ -29,6 +33,19 @@ class MovementLabMovementLogicMission extends MissionGameplay
         m_MovementLabBrakeTime = 0;
         m_MovementLabWasForward = false;
         m_MovementLabLastSpeed = 0;
+        m_MovementLabWasTurbo = false;
+    }
+
+    protected void MovementLabBeginBrake(PlayerBase player, float start, float target, float duration)
+    {
+        m_MovementLabBraking = true;
+        m_MovementLabBrakePlayer = player;
+        m_MovementLabBrakeStart = start;
+        m_MovementLabBrakeSpeed = start;
+        m_MovementLabBrakeTarget = target;
+        m_MovementLabBrakeDuration = duration;
+        m_MovementLabBrakeTime = 0;
+        Print("[MovementLab v3] Braking input target=" + target + ", duration=" + duration);
     }
 
     protected void MovementLabUpdateBrake(PlayerBase player, float timeslice)
@@ -49,6 +66,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         // Read physical movement actions, not GetMovement during the override:
         // otherwise the generated coast could feed back and keep itself alive.
         float forward = GetUApi().GetInputByID(UAMoveForward).LocalValue();
+        bool turbo = GetUApi().GetInputByID(UATurbo).LocalValue() > 0.05;
         bool otherDirection = GetUApi().GetInputByID(UAMoveBack).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveLeft).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveRight).LocalValue() > 0.05;
         if (otherDirection)
         {
@@ -61,26 +79,37 @@ class MovementLabMovementLogicMission extends MissionGameplay
             MovementLabCancelBrake();
             return;
         }
-        if (forward > 0.05)
+        if (m_MovementLabBraking && forward > 0.05 && (m_MovementLabBrakeTarget == 0 || turbo))
         {
-            // A fresh movement input immediately takes control back.
-            if (m_MovementLabBraking)
-                MovementLabCancelBrake();
+            // Resume movement immediately; keeping W down during Shift braking
+            // does not cancel the sprint-to-jog transition.
+            MovementLabCancelBrake();
+        }
+        if (m_MovementLabBraking && m_MovementLabBrakeTarget > 0 && forward <= 0.05)
+        {
+            // Releasing W during the Shift ramp continues from the current
+            // request, avoiding a jump back up to full sprint.
+            float duration = Math.Max(1.0, 2.2 * m_MovementLabBrakeSpeed / 3.0);
+            MovementLabBeginBrake(player, m_MovementLabBrakeSpeed, 0, duration);
+        }
+        if (!m_MovementLabBraking && m_MovementLabWasForward && m_MovementLabLastSpeed > 2.5)
+        {
+            if (forward <= 0.05)
+                MovementLabBeginBrake(player, 3.0, 0, 2.2);
+            else if (m_MovementLabWasTurbo && !turbo)
+                MovementLabBeginBrake(player, 3.0, 2.0, 1.6);
+        }
+        if (!m_MovementLabBraking && forward > 0.05)
+        {
             m_MovementLabWasForward = true;
+            m_MovementLabWasTurbo = turbo;
             m_MovementLabLastSpeed = 0;
             if (state.m_iMovement == DayZPlayerConstants.MOVEMENTIDX_SPRINT)
                 m_MovementLabLastSpeed = 3.0;
             return;
         }
-        if (m_MovementLabWasForward && m_MovementLabLastSpeed > 2.5)
-        {
-            m_MovementLabBraking = true;
-            m_MovementLabBrakePlayer = player;
-            m_MovementLabBrakeStart = m_MovementLabLastSpeed;
-            m_MovementLabBrakeTime = 0;
-            Print("[MovementLab v2] Sprint release: starting 0.85-second braking input ramp.");
-        }
         m_MovementLabWasForward = false;
+        m_MovementLabWasTurbo = false;
         m_MovementLabLastSpeed = 0;
         if (!m_MovementLabBraking)
             return;
@@ -90,7 +119,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             return;
         }
         m_MovementLabBrakeTime = m_MovementLabBrakeTime + Math.Max(timeslice, 0);
-        float fraction = Math.Clamp(m_MovementLabBrakeTime / 0.85, 0, 1);
+        float fraction = Math.Clamp(m_MovementLabBrakeTime / m_MovementLabBrakeDuration, 0, 1);
         if (fraction >= 1)
         {
             MovementLabCancelBrake();
@@ -98,8 +127,13 @@ class MovementLabMovementLogicMission extends MissionGameplay
         }
         // 3 = sprint, 2 = jog, 1 = walk, 0 = idle (not metres/second).
         // Let the native controller animate/collide; never move the entity directly.
-        float speed = m_MovementLabBrakeStart * (1.0 - fraction);
-        input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, speed);
+        // Full-stop ramp stays faster for longer than v2's linear curve.
+        // Shift-only ramp eases at both ends into continued jogging.
+        float blend = fraction * fraction;
+        if (m_MovementLabBrakeTarget > 0)
+            blend = fraction * fraction * (3.0 - 2.0 * fraction);
+        m_MovementLabBrakeSpeed = m_MovementLabBrakeStart + (m_MovementLabBrakeTarget - m_MovementLabBrakeStart) * blend;
+        input.OverrideMovementSpeed(HumanInputControllerOverrideType.ONE_FRAME, m_MovementLabBrakeSpeed);
         input.OverrideMovementAngle(HumanInputControllerOverrideType.ONE_FRAME, 0);
     }
 
@@ -183,7 +217,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             string mode = "VANILLA FILTERS";
             if (m_MovementLabHeavy)
                 mode = "HEAVIER + SPRINT BRAKING";
-            string message = "[MovementLab v2] " + mode + " - F7 switches mode. Sprint straight, then release W and Shift.";
+            string message = "[MovementLab v3] " + mode + " - F7 switches mode. Test Shift release, then W + Shift release.";
             player.MessageStatus(message);
             Print(message);
             m_MovementLabAnnounce = false;

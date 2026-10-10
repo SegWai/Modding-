@@ -7,7 +7,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "movement-logic-test" / "MovementLabMovementLogicTest"
-OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v2.zip"
+OUTPUT = ROOT / "artifacts" / "MovementLab_Movement_Logic_Test_v3.zip"
 
 
 def main():
@@ -31,7 +31,8 @@ def main():
         "official_script_revision": "86974a0f5bd16b1ee3e334ad828133c93dca80a1",
         "native_setters": setters,
         "prior_v1_runtime": "user confirmed heavier movement, unchanged animations and near-instant sprint release stopping",
-        "braking_v2": "0.85-second sprint-to-idle movement-input ramp; engine motion and animation pending",
+        "prior_v2_runtime": "user liked startup but full sprint stop was still too fast",
+        "braking_v3": "2.2-second sprint-to-idle quadratic ramp; 1.6-second Shift-only sprint-to-jog eased ramp; engine test pending",
         "ordinary_acceleration": "unchanged",
     }
     OUTPUT.parent.mkdir(exist_ok=True)
@@ -42,7 +43,7 @@ def main():
         for name, data in sorted(entries.items()):
             if name.endswith((".cmd", ".txt")):
                 data = data.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
-            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v2/" + name, (2026, 10, 9, 0, 0, 0))
+            info = zipfile.ZipInfo("MovementLabMovementLogicTest_v3/" + name, (2026, 10, 9, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data, compresslevel=9)

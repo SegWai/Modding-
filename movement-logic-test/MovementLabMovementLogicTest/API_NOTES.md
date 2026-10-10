@@ -2,8 +2,8 @@
 
 This is a standalone single-player mission, with no packaged mod dependency.
 The user confirmed v1 runs and feels heavier, but sprint release still stops
-almost instantly. V2 retains those filters and adds an input-based braking
-experiment. V2 has not been compiled or played in a DayZ engine here.
+almost instantly. V3 retains those filters and lengthens the input-based braking
+experiment. V3 has not been compiled or played in a DayZ engine here.
 
 Source evidence: Bohemia's DayZ 1.29 script revision
 `86974a0f5bd16b1ee3e334ad828133c93dca80a1`.
@@ -33,28 +33,34 @@ sprint turn/direction multipliers are 2-S and the run/sprint multiplier is
 The original flag and vanilla modifiers are restored on mission finish.
 Modifiers are reapplied to the current movement command every update.
 
-## V2 sprint braking
+## V3 sprint braking
 
-On a straight forward sprint release, a bounded 0.85-second linear ramp
-requests movement input from 3 (sprint) through 2 (jog), 1 (walk), to 0 (idle).
-These are input gait values, not physical velocity. Native movement blending
-and collision remain in control. The ramp uses `OverrideMovementSpeed` and
-`OverrideMovementAngle` with `HumanInputControllerOverrideType.ONE_FRAME`,
-documented in human.c as clearing on the subsequent CommandHandler call.
-Explicit DISABLED calls also release this mission's override on cancellation.
-Input angle 0 requests forward relative to the current heading, not retained
-world-space momentum. This first test should be performed looking ahead.
+The user confirmed v2's startup looked good, but the full-sprint stop remained
+too fast. V3 retains the startup and turning settings; only braking changes.
 
-The release trigger reads UAMoveForward/Back/Left/Right directly from UAInput
-LocalValue, separately from overridden movement. Sprint state is sampled
-only while actual forward input is held. This prevents a self-sustaining
-input-feedback loop. Non-forward input, new forward input, a non-standing
-stance, raised hands, emotes, non-movement commands, menus, pause, death,
-a frame over 0.25 seconds, mode switching and mission exit cancel braking.
-Jogging release is unchanged. No idle-to-jog acceleration ramp is added.
+A standing forward sprint release requests a bounded 2.2-second input ramp
+from 3 (sprint) to 0 (idle). Its quadratic blend keeps the requested gait above
+2 for approximately 1.27 seconds, versus 0.28 seconds in v2's 0.85-second linear
+ramp. These gait values are not metres/second, and engine filters can change
+the actual movement timing.
 
-No forced translation or initialization-only movement settings writes are
-used. No asset import, animation replacement, or multiplayer support is
-included. Fractional gait requests are accepted by the float API; their
-visual blend, actual slowing and update ordering still require the user's
-local DayZ test. This is not a custom stopping animation or a physics model.
+Releasing UATurbo (Shift) while retaining UAMoveForward (W) now starts a separate
+1.6-second smoothstep ramp from 3 to 2 (jog). It continues moving because W is
+still held. Releasing W during that ramp retargets to idle continuously from
+the last requested gait, over max(1, 2.2 * currentGait / 3) seconds. It never
+jumps back to sprint when retargeting.
+
+Both ramps use OverrideMovementSpeed and OverrideMovementAngle with
+HumanInputControllerOverrideType.ONE_FRAME. Explicit DISABLED calls also
+clear owned overrides on cancellation. Angle 0 requests forward relative to
+the current heading, not retained world-space momentum. Native animation
+blending and collision remain in control; no SetPosition or SetVelocity is used.
+
+Raw UA movement inputs and UATurbo are read separately from overridden movement.
+The native sprint state is sampled only while raw forward input is held and
+no brake is active. Active ramps do not re-arm themselves from generated gait.
+New direction input, resumed forward input after a full-stop release, resumed
+sprint during the Shift ramp, non-standing stance, raised hands, emotes,
+non-movement commands, menus, pause, death, a frame over 0.25 seconds, F7 and
+mission exit cancel braking. Normal startup and ordinary jog-release remain
+unchanged. V3's actual stopping timing and appearance need a local engine test.

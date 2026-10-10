@@ -5,18 +5,17 @@ inspired by the weight and pacing of Red Dead Redemption 2.
 
 ## Native movement logic experiment
 
-[Download movement test v2](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v2.zip).
+[Download movement test v3](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v3.zip).
 Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
 DayZ closed. No animation import or PBO build is required. **F7** switches
 between heavier movement with sprint braking and vanilla filters in the same
-offline session. Extract v2 separately to retain the previous test.
+offline session. Extract v3 separately to retain the previous test.
 
-The user confirmed v1 feels heavier, but sprint release still stopped almost
-instantly. V2 adds a 0.85-second sprint-release input ramp using vanilla gait
-blends. Sprint straight, then release W and Shift together; compare with F7.
-Turning filters are retained. No new animation clips or ordinary acceleration
-changes are added. V2 native compilation, actual stopping duration and visual
-quality need the first local gameplay test.
+The user confirmed heavier turning and good startup, but wanted a longer
+sprint stop. V3 requests a 2.2-second full-stop ramp, with a longer fast phase,
+and a 1.6-second sprint-to-jog ramp when only Shift is released while W is held.
+Turning and startup are retained. No new animation clips are added. V3 native
+compilation, physical stopping duration and visual quality need a local test.
 Implementation and evidence are in [the API notes](movement-logic-test/MovementLabMovementLogicTest/API_NOTES.md).
 
 [Download the animation test bundle (ZIP, 1.4 MB)](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_ArmLift_Test.zip)

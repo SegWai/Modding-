@@ -1,37 +1,33 @@
-MovementLab v2: slower sprint stopping with vanilla animations
+MovementLab v3: longer sprint braking with vanilla animations
 
 1. Close DayZ and leave Steam running.
-2. Extract this entire ZIP somewhere on your PC.
-3. Open Launch-Movement-Test.cmd inside MovementLabMovementLogicTest.
+2. Extract the entire v3 ZIP into a separate folder.
+3. Open Launch-Movement-Test.cmd.
 
-No Blender, Workbench import or Addon Builder step is needed.
+No Blender, Workbench or Addon Builder steps are needed.
 The launcher uses D:\SteamLibrary\steamapps\common\DayZ\DayZDiag_x64.exe.
-It loads a separate offline mission with an invulnerable test character.
 
-Starts in HEAVIER + SPRINT BRAKING mode. F7 switches to VANILLA FILTERS and back.
-The mode appears in the chat/status area and script log.
-Compare these in one session, with empty hands:
-- Hold W, then hold/release Shift while keeping W held.
-- Turn the camera while moving; try A and D direction changes.
-- Sprint straight forward for several seconds, then release W and Shift together.
-- In heavier mode, a 0.85-second input ramp requests sprint -> jog -> walk -> idle.
-- Repeat in vanilla mode to compare stopping.
+Starts in HEAVIER + SPRINT BRAKING mode. F7 switches to vanilla and back.
+The heavier turning and normal startup from the previous test are retained.
 
-Heavier turning from v1 is retained. Sprint braking is new and needs your
-first in-game test. This ramp controls movement input, not physical velocity;
-0.85 seconds is the requested ramp duration, not a guaranteed stopping time.
-There are no new animation clips or maximum speed changes.
-It targets straight forward, standing sprint release only. Jogging release,
-sideways movement and idle-to-jog acceleration are unchanged.
-The coast requests forward movement relative to your heading: keep looking
-ahead for this initial test. It is not a world-space momentum simulation.
-New W/A/S/D input, crouching, raised hands, leaving movement mode, menus,
-death, F7 or mission exit cancel the ramp. No entity teleporting is used.
+With empty hands, standing and looking straight ahead:
+- Hold W + Shift until fully sprinting.
+- Release Shift while keeping W held: requests a gradual 1.6-second slowdown
+  into jogging. Holding W means you continue moving, rather than stop.
+- Sprint again, then release both W and Shift: requests a 2.2-second full-stop
+  ramp. It holds a faster pace longer before easing down through slower gaits.
+- You can also release W during the Shift-only slowdown; braking continues
+  from its current request rather than snapping back to sprint.
+- F7 lets you compare with vanilla in the same session.
 
-Tell me whether it takes extra steps to stop and whether those steps look
-natural or slide. If a script error appears,
-send the error text. Native compilation/playback still needs this PC test.
+The durations describe input ramps, not guaranteed physical stopping times.
+No animation clips, top speeds, or normal acceleration settings are changed.
+Jog-release braking is unchanged outside an active sprint slowdown.
+The native engine still controls gait blending and collision. This is not a
+physics momentum simulation; stopping follows your current heading.
+New direction input, resuming sprint, crouching, raised hands, menus, death,
+leaving the move command, F7 and mission exit cancel the override.
 
-Logs and settings go into Profiles\MovementLogic within this extracted folder.
-The previous arm-lift mod is not loaded by this launcher.
-Extract v2 into its own folder so your working v1 test remains available.
+Tell me whether the full-sprint stop is now long enough and whether Shift-only
+release feels smooth. Native compilation and playback of v3 need your PC test.
+Logs are stored in Profiles\MovementLogic in this extracted folder.
