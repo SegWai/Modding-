@@ -12,17 +12,19 @@ current default/best baseline. Ctrl toggles walking/jogging, held Shift sprints,
 and F8 compares body-turn response. Stable v4 remains unchanged while testing
 new crouch behavior below. V11 is retained as the historical original baseline.
 
-## Native fast crouch correction on approved v4
+## Four crouch rules rebuilt directly from v4
 
-[Download Ctrl Modes v6 fast crouch fix](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v6_Fast_Crouch_Fix.zip).
+[Download Ctrl Modes v7 crouch rules](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v7_Crouch_Rules.zip).
 
-V5 capped crouched movement at gait 2 and the user reported loss of fast crouch.
-V6 removes that cap and leaves crouch Shift speed/direction to native DayZ,
-matching the previously working behavior. Standing up still selects persistent
-jogging until Ctrl selects walk, regardless of Shift release order. Standing
-v4 filters and timers are retained. Extract fresh and run the included launcher.
-The new ownership regression fails on v5 and passes on v6; standing mocked
-checks also pass. Native fast crouch animation still requires the game test.
+This update starts from the approved v4 source, excluding the rejected v5/v6
+crouch experiments. Crouch without Shift is slow; Shift+direction uses native
+DayZ fast crouch. Standing from active fast crouch selects persistent jogging,
+consuming that existing Shift hold so it does not immediately sprint. Release
+and press Shift again for normal standing sprint. Standing from slow crouch
+preserves the previous standing walk/jog mode. Ctrl still toggles while standing.
+Standing v4 timings, body-turn comparison and direction fixes are retained.
+Extract fresh and run the included launcher. Mocked tests cover the four rules
+and standing regressions; native compilation/visual validation requires DayZ.
 
 ## Stable movement test: v11
 
