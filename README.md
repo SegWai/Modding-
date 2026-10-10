@@ -34,6 +34,17 @@ then use the walking startup toward the currently held direction. Native
 compilation and these new behaviors need local testing. The experiment source
 is isolated under `movement-logic-experiments/MovementLabMovementLogicTest_v12`.
 
+## Native bracing test v13
+
+[Download v13 native bracing experiment](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v13.zip).
+This separate v11-based build requests the existing directional sliding/bracing
+pose for 0.32 seconds during opposite jogging inputs and suppresses horizontal
+animation translation using a temporary script command. It resumes native
+movement without v12's walking restart. **F8** enables/disables only this
+experiment; **F7** retains the original heavier/vanilla switch. Extract into a
+separate folder and launch its included CMD; no asset import or packing needed.
+Pose retention and native compilation need local testing. V11 remains stable.
+
 ## Confirmed so far
 
 - The user's DayZ 1.29 Animation Editor loads the player model and plays an
