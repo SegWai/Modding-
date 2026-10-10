@@ -12,6 +12,16 @@ current default/best baseline. Ctrl toggles walking/jogging, held Shift sprints,
 and F8 compares body-turn response. Stable v4 remains unchanged while testing
 new crouch behavior below. V11 is retained as the historical original baseline.
 
+## Permanent preferred body rotation with v7 crouch rules
+
+[Download Ctrl Modes v8 fixed turning](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v8_Fixed_Turning.zip).
+
+The preferred responsive body rotation (former F8-on setting) is permanently
+selected. The F8 toggle is removed. Direction response, sprint settings and
+all v7 standing/crouch logic are retained. Extract fresh and run the launcher.
+Actual translated filter outputs match v7 responsive mode; movement source
+matches tested v7. Native validation requires the in-game test.
+
 ## Four crouch rules rebuilt directly from v4
 
 [Download Ctrl Modes v7 crouch rules](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v7_Crouch_Rules.zip).
