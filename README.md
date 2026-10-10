@@ -307,3 +307,12 @@ competing brake overrides during a reversal. Extract fresh and run
 `Launch-Movement-Test.cmd`; F8 compares against ordinary v11 behavior.
 Controller tests pass with a mock SDK; native animation stability is pending
 local testing. Previous builds remain available.
+
+## V17 compile correction: v17a
+
+[Download v17a](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Experiment_v17a.zip).
+
+Fixes the reported Enforce `Formula too complex` error by splitting native
+reversal eligibility into short early returns. Movement timings and reversal
+behavior are unchanged. Extract fresh and run `Launch-Movement-Test.cmd`.
+Mocked controller checks pass; native compilation still needs the local test.
