@@ -62,6 +62,18 @@ by the user’s local tests.
 Replacing the locomotion controller, aiming, combat, and multiplayer behavior
 remain unproven. This test is an import diagnostic, not the intended final gait.
 
+## Isolated jog-to-walk blend experiment
+
+[Download the standalone jog-to-walk blend test v1](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Jog_Walk_Blend_Test_v1.zip).
+
+Extract fresh and run `Launch-Movement-Test.cmd`. Use ordinary DayZ controls:
+hold W to jog, then hold Ctrl while keeping W pressed to walk. This single
+experiment eases the gait-speed request into walking over 0.45 seconds;
+F7 compares vanilla. It includes none of the v11 startup, braking, heavy
+filters or persistent Ctrl modes. It does not independently set physical
+velocity or clip playback rate. Mocked command-hook checks passed; native
+compilation, visual blending and physics need the local game test.
+
 ## Walking reference revision v10
 
 [Download walking revision v10](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Unarmed_Walk_v10.zip).
