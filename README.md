@@ -20,12 +20,15 @@ Implementation and evidence are in [the API notes](movement-logic-test/MovementL
 
 ## Walking-first controls test
 
-[Download walking-first controls v1](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Walk_Controls_v1.zip).
+[Download walking-first controls v2](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Walk_Controls_v2.zip).
 
 A separate v11-based test: WASD walks, holding Shift jogs, and double-tapping
 Shift within 0.30 seconds latches sprint until movement is released. Stops
-step down through the slower gaits in the original direction. V11 sprint/jog
-stop budgets are retained, with a short walking stop added. Extract fresh and
+step down through the slower gaits in the original direction. V2 restores
+the clear v11 walk/jog startup before sprint, smooths interrupted stops, and
+retains full-sprint forward/diagonal timing and directional walk finishes.
+Brief near-jog sprint stops have a jogging-size minimum; walking stops remain
+short. Extract fresh and
 run `Launch-Movement-Test.cmd`; F7 compares against vanilla controls. Native
 animation limits apply. Mocked controller checks pass; local DayZ compilation
 and animation testing remain pending. The original v11 remains unchanged.
