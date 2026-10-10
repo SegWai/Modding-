@@ -1,0 +1,245 @@
+// Loaded before the loose mission. Only its offline mission enables the gate.
+class MovementLabStartGate
+{
+    static bool Enabled;
+}
+
+modded class PlayerBase
+{
+    protected bool m_MovementLabStartOwnsSpeed;
+    protected bool m_MovementLabIdleArmed;
+    protected bool m_MovementLabStarting;
+    protected bool m_MovementLabWasInput;
+    protected bool m_MovementLabBrakeActive;
+    protected float m_MovementLabStartTime;
+    protected float m_MovementLabStartSpeed;
+    protected bool m_MovementLabWalkMode;
+    protected bool m_MovementLabCtrlDown;
+    protected float m_MovementLabLastWantedGait = 2.0;
+    protected bool m_MovementLabModeDecreasePending;
+    protected bool m_MovementLabWasCrouching;
+
+    void MovementLabCancelStart()
+    {
+        if (m_MovementLabStartOwnsSpeed && GetInputController())
+            GetInputController().OverrideMovementSpeed(HumanInputControllerOverrideType.DISABLED, 0);
+        m_MovementLabStartOwnsSpeed = false;
+        m_MovementLabIdleArmed = false;
+        m_MovementLabStarting = false;
+        m_MovementLabStartTime = 0;
+    }
+
+    void MovementLabSetBrakingActive(bool active)
+    {
+        if (active)
+        {
+            MovementLabCancelStart();
+            m_MovementLabModeDecreasePending = false;
+        }
+        m_MovementLabBrakeActive = active;
+    }
+
+    void MovementLabRefreshCrouchJog()
+    {
+        MovementLabCancelStart();
+        if (!MovementLabStartGate.Enabled)
+            return;
+        if (GetUApi().GetInputByID(UATurbo).LocalValue() <= 0.05)
+            return;
+        bool moving = GetUApi().GetInputByID(UAMoveForward).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveBack).LocalValue() > 0.05;
+        if (GetUApi().GetInputByID(UAMoveLeft).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveRight).LocalValue() > 0.05)
+            moving = true;
+        if (moving && GetInputController())
+        {
+            m_MovementLabStartOwnsSpeed = true;
+            GetInputController().OverrideMovementSpeed(HumanInputControllerOverrideType.ENABLED, 2.0);
+        }
+    }
+
+    bool MovementLabIsStarting()
+    {
+        return m_MovementLabStarting;
+    }
+
+    float MovementLabGetStartSpeed()
+    {
+        return m_MovementLabStartSpeed;
+    }
+
+    float MovementLabBaseGait()
+    {
+        if (m_MovementLabWalkMode)
+            return 1.0;
+        return 2.0;
+    }
+
+    float MovementLabWantedGait()
+    {
+        if (GetUApi().GetInputByID(UATurbo).LocalValue() > 0.05)
+        {
+            HumanMovementState state = new HumanMovementState();
+            GetMovementState(state);
+            if (state.m_iStanceIdx == DayZPlayerConstants.STANCEIDX_CROUCH)
+                return 2.0;
+            return 3.0;
+        }
+        return MovementLabBaseGait();
+    }
+
+    protected bool MovementLabCanUseModes(float dt, int command)
+    {
+        if (!MovementLabStartGate.Enabled || GetGame().IsMultiplayer())
+            return false;
+        if (GetGame().GetPlayer() != this || !IsAlive() || IsUnconscious())
+            return false;
+        if (IsRaised() || IsEmotePlaying())
+            return false;
+        if (command != DayZPlayerConstants.COMMANDID_MOVE || !GetCommand_Move())
+            return false;
+        if (!GetInputController() || dt > 0.25)
+            return false;
+        if (GetGame().GetUIManager().GetMenu())
+            return false;
+        if (GetGame().GetMission())
+        {
+            if (GetGame().GetMission().IsPaused())
+                return false;
+        }
+        HumanMovementState state = new HumanMovementState();
+        GetMovementState(state);
+        if (state.m_iStanceIdx == DayZPlayerConstants.STANCEIDX_CROUCH)
+            return true;
+        return state.m_iStanceIdx == DayZPlayerConstants.STANCEIDX_ERECT;
+    }
+
+    protected void MovementLabCommandStart(float dt, int command)
+    {
+        bool ctrl = GetUApi().GetInputByID(UAWalkRunTemp).LocalValue() > 0.05;
+        bool press = ctrl && !m_MovementLabCtrlDown;
+        m_MovementLabCtrlDown = ctrl;
+        if (!MovementLabCanUseModes(dt, command))
+        {
+            MovementLabCancelStart();
+            m_MovementLabWasInput = false;
+            m_MovementLabWasCrouching = false;
+            m_MovementLabModeDecreasePending = false;
+            m_MovementLabLastWantedGait = MovementLabWantedGait();
+            return;
+        }
+        HumanMovementState stance = new HumanMovementState();
+        GetMovementState(stance);
+        if (stance.m_iStanceIdx == DayZPlayerConstants.STANCEIDX_CROUCH)
+        {
+            // Crouch owns no standing startup/brake override. Shift means
+            // native crouched jog (2), never upright sprint (3).
+            MovementLabCancelStart();
+            m_MovementLabModeDecreasePending = false;
+            m_MovementLabWasCrouching = true;
+            bool crouchMoving = GetUApi().GetInputByID(UAMoveForward).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveBack).LocalValue() > 0.05;
+            if (GetUApi().GetInputByID(UAMoveLeft).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveRight).LocalValue() > 0.05)
+                crouchMoving = true;
+            m_MovementLabWasInput = crouchMoving;
+            m_MovementLabLastWantedGait = MovementLabWantedGait();
+            MovementLabRefreshCrouchJog();
+            return;
+        }
+        if (m_MovementLabWasCrouching)
+        {
+            // Every valid crouch -> standing exit selects persistent jog,
+            // whether Shift is still held or was already released.
+            m_MovementLabWalkMode = false;
+            m_MovementLabWasCrouching = false;
+        }
+        // Preserve the pre-sprint mode: Ctrl during held Shift is ignored.
+        if (press && GetUApi().GetInputByID(UATurbo).LocalValue() <= 0.05)
+        {
+            m_MovementLabWalkMode = !m_MovementLabWalkMode;
+            Print("[MovementLab Ctrl Modes v5] Base gait=" + MovementLabBaseGait());
+        }
+        float wanted = MovementLabWantedGait();
+        float previousWanted = m_MovementLabLastWantedGait;
+        m_MovementLabLastWantedGait = wanted;
+        if (wanted < previousWanted)
+            m_MovementLabModeDecreasePending = true;
+        bool movingInput = GetUApi().GetInputByID(UAMoveForward).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveBack).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveLeft).LocalValue() > 0.05 || GetUApi().GetInputByID(UAMoveRight).LocalValue() > 0.05;
+        HumanInputController input = GetInputController();
+        // Retain v11's single braking owner in the mission.
+        if (m_MovementLabBrakeActive)
+        {
+            MovementLabCancelStart();
+            m_MovementLabWasInput = movingInput;
+            return;
+        }
+        float achieved = GetCommand_Move().GetCurrentMovementSpeed();
+        if (!movingInput)
+        {
+            MovementLabCancelStart();
+            m_MovementLabWasInput = false;
+            m_MovementLabModeDecreasePending = false;
+            if (achieved <= 0.1)
+            {
+                m_MovementLabIdleArmed = true;
+                m_MovementLabStartOwnsSpeed = true;
+                input.OverrideMovementSpeed(HumanInputControllerOverrideType.ENABLED, 0);
+            }
+            return;
+        }
+        if (m_MovementLabModeDecreasePending && wanted < achieved - 0.05)
+        {
+            // Hold current gait until the mission starts its timed slowdown.
+            // Never emit one walking frame ahead of the brake controller.
+            MovementLabCancelStart();
+            m_MovementLabWasInput = true;
+            m_MovementLabStartOwnsSpeed = true;
+            input.OverrideMovementSpeed(HumanInputControllerOverrideType.ENABLED, achieved);
+            return;
+        }
+        m_MovementLabModeDecreasePending = false;
+        if (wanted == 1.0)
+        {
+            MovementLabCancelStart();
+            m_MovementLabWasInput = true;
+            m_MovementLabStartOwnsSpeed = true;
+            input.OverrideMovementSpeed(HumanInputControllerOverrideType.ENABLED, 1.0);
+            return;
+        }
+        if (!m_MovementLabStarting)
+        {
+            if (m_MovementLabIdleArmed || (!m_MovementLabWasInput && achieved <= 0.1))
+            {
+                m_MovementLabStarting = true;
+                m_MovementLabIdleArmed = false;
+                m_MovementLabStartTime = 0;
+            }
+            else if (previousWanted == 1.0 && wanted > 1.0 && achieved < 1.75)
+            {
+                // Only a real walk-to-jog/sprint MODE change starts this blend.
+                // Native turn/backward gait dips must not restart it each cycle.
+                m_MovementLabStarting = true;
+                m_MovementLabStartTime = 0.10;
+            }
+        }
+        m_MovementLabWasInput = true;
+        if (m_MovementLabStarting && m_MovementLabStartTime < 0.35)
+        {
+            float blend = Math.Clamp((m_MovementLabStartTime - 0.10) / 0.18, 0, 1);
+            blend = blend * blend * (3.0 - 2.0 * blend);
+            m_MovementLabStartSpeed = 1.0 + blend;
+            m_MovementLabStartOwnsSpeed = true;
+            input.OverrideMovementSpeed(HumanInputControllerOverrideType.ENABLED, m_MovementLabStartSpeed);
+            m_MovementLabStartTime = m_MovementLabStartTime + Math.Max(dt, 0);
+            return;
+        }
+        if (m_MovementLabStarting)
+            MovementLabCancelStart();
+        // Persistent mode ownership replaces Ctrl-hold with Ctrl-toggle.
+        m_MovementLabStartOwnsSpeed = true;
+        input.OverrideMovementSpeed(HumanInputControllerOverrideType.ENABLED, wanted);
+    }
+
+    override void CommandHandler(float pDt, int pCurrentCommandID, bool pCurrentCommandFinished)
+    {
+        MovementLabCommandStart(pDt, pCurrentCommandID);
+        super.CommandHandler(pDt, pCurrentCommandID, pCurrentCommandFinished);
+    }
+}

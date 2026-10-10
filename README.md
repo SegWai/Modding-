@@ -3,13 +3,34 @@
 DayZ remains the base game. The goal is original player animations and movement
 inspired by the weight and pacing of Red Dead Redemption 2.
 
+## Current approved stable version: Ctrl Modes v4
+
+[Download approved stable v4](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v4_Direction_Fix.zip).
+
+The user approved the rear-diagonal direction fix and selected this as the
+current default/best baseline. Ctrl toggles walking/jogging, held Shift sprints,
+and F8 compares body-turn response. Stable v4 remains unchanged while testing
+new crouch behavior below. V11 is retained as the historical original baseline.
+
+## Crouch jogging update on approved v4
+
+[Download Ctrl Modes v5 crouch jog](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v5_Crouch_Jog.zip).
+
+Extract fresh and run `Launch-Movement-Test.cmd`. While crouched, hold movement
+and Shift to jog. Standing up from crouch selects persistent standing jogging,
+even if Shift was released first; a subsequent standing Ctrl tap selects walk.
+Shift held across standing requests normal standing sprint, then returns to jog
+on release. V4 turn/filter settings and standing timing budgets are retained.
+Mocked crouch and standing regressions passed at 30/60/144 FPS in both callback
+orders. Native Enforce/animation/physics testing remains local.
+
 ## Stable movement test: v11
 
 [Download stable movement test v11](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Movement_Logic_Test_v11.zip).
 Extract the ZIP and open `Launch-Movement-Test.cmd`. Steam must be running and
 DayZ closed. No animation import or PBO build is required. **F7** switches
 between heavier movement with sprint braking and vanilla filters in the same
-offline session. V11 is the current baseline; the later reversal and walking-first controls
+offline session. V11 is the historical baseline; the later reversal and walking-first controls
 tests have been removed. Extract this ZIP into a fresh folder and use its launcher.
 
 The user approved v11 walking starts and directional stopping behavior.
