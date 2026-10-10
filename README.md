@@ -20,11 +20,13 @@ Implementation and evidence are in [the API notes](movement-logic-test/MovementL
 
 ## Ctrl walking/jogging toggle test
 
-[Download Ctrl Modes v1](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v1.zip).
+[Download Ctrl Modes v2](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v2.zip).
 
 Built directly from v11: tap Ctrl to toggle walking/jogging, hold Shift to
 sprint, release Shift to return to the pre-sprint mode. Releasing all movement
-retains v11's sprint/jog/walk stop phases and direction. Original v11 remains
+retains v11's sprint/jog/walk stop phases and direction. Sprint-to-walk follows
+the same stopping curve down to walking, then keeps walking (including
+partial sprint). Original v11 remains
 unchanged. Extract fresh and run `Launch-Movement-Test.cmd`; F7 compares
 against vanilla. Mocked checks include tick-for-tick v11 sprint/jog stop
 comparisons. Native compilation and animation blending need local testing.
