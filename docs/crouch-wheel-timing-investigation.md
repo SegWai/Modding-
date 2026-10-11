@@ -625,3 +625,26 @@ Earlier packages and approved Six Levels v4 remain preserved.
 
 Artifact: artifacts/MovementLab_Scroll_Jog_Sprint_v2.zip.
 SHA256:3aead464c12aad6e5b3df29c980a5795ff822a4bd3b307cd4fcc18eb9309d87e.
+
+## Seven crouch levels v1
+
+Separate test from current jog/sprint v2. Added slow-crouch level6 target95% using
+29FPS (96.67% nominal pace); nativefast endpoint renumbered7. Default3 remains60.
+Crouch wheel clamp/max7, Shift graph selection7, savednative7 gait3, sprint-entry7,
+existing messages updated /7. New L6 group duplicates28 L5 native/custom mappings,
+six walk paths point to L6 retimed29FPS variants. Other rows unchanged. CroMoveLowG
+levels6/7 share new CroWheel95G, selecting L6 over existing cloned crouch branch,
+avoiding branch switch at native transition. Native sprint/run rows preserved.
+Standing scroll/walk/jog/sprint rules unchanged.
+
+Tests: actual translated controller seven-tier clamps/defaults/Shift/sprint-entry/
+release/ownership and all inherited standing/strafe/jog-sprint regressions pass
+30/60/144FPS both callback orders. Table count/sorted group IDs/mapping scopes,
+L6 row equality apart from walk path, graph endpoint selectors and script native7
+requests validated. PBO and ZIP checks pass. Native DayZ compiler, Windows clip
+preparation, animation pace and physical speed pending local confirmation.
+95% nominal rounds to96.67%; native fast level7 is a separate gait, not100% slow
+walking pace. Original approved v4 and all earlier packages preserved.
+
+Artifact: artifacts/MovementLab_Crouch_Seven_Levels_v1.zip.
+SHA256:694050d1d43d3100370e05760cd67340bb391e5bf4caba37fe64633024e7c53d.

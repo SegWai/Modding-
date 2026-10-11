@@ -7,6 +7,16 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate test: seven crouch levels
+
+[Download seven-level crouch test](artifacts/MovementLab_Crouch_Seven_Levels_v1.zip).
+Crouch levels30/~47/60 default/~73/~87/~95/nativefast. New level6 uses29FPS,
+96.67% of native slow walking (nearest integer to95%). Native fast crouch is now
+level7. Shift and achieved-sprint entry select7. Otherwise entry remains60%.
+Levels6/7 share highest custom branch for native gait handoff. Latest standing
+walk/jog/sprint scroll rules preserved. Local controller/schema checks passed;
+native confirmation pending. Extract separately and launch. Earlier versions preserved.
+
 ## Jog/sprint scroll v2: corrected default mode boundaries
 
 [Download scroll test v2](artifacts/MovementLab_Scroll_Jog_Sprint_v2.zip).
