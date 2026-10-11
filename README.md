@@ -7,6 +7,20 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate test: standing walking at half pace
+
+[Download F8 walking comparison](artifacts/MovementLab_Standing_Walk_Half_Speed_Test_v1.zip).
+Approved Six Levels v4 remains the baseline. Extract the entire test separately,
+run `Launch-Movement-Test.cmd`, and use Ctrl to select walking. F8 OFF (default)
+uses native walking; F8 ON selects six separate 15 FPS standing walk variants
+instead of original 30 FPS clips. Root-motion displacement per frame is retained,
+targeting half pace and travel speed together. Jog/sprint and crouch assets and
+all existing movement methods are preserved. Walking portions of start/stop
+blends also use the selected pace. Toggle at rest for clean comparisons; switching
+clips mid-step can cause a one-time phase change. Native compilation and actual
+travel speed require the user's DayZ test. Local translated controller and
+schema/package checks pass. This test does not yet add standing scroll levels.
+
 ## Six-level v4: consistent Shift fast crouch
 
 [Download six-level v4](artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).

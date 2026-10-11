@@ -371,3 +371,32 @@ source, artifact, and this investigation history; make future tests separately.
 The preserved package is pinned to commit `1eb9e67`, with the SHA256 above.
 This records user approval; cloud validation remains the local checks described
 above, rather than a native runtime test performed in this environment.
+
+## Standing walking half-pace F8 experiment
+
+Separate from preserved best Six Levels v4. Six healthy standing Walk source
+nodes now select between original source and a custom-column GroupSelect wrapper.
+The wrapper uses `ZZMovementLabStandingWalk.Half` with six direction slots and
+separate 15 FPS clips prepared from original 30 FPS standing walk files. Native
+mapping rows and every pre-existing table column remain unchanged; the new
+column is appended in sorted order. Selection is masked to erect stance in the
+graph, so shared native crouch sources retain their original pace. Script binds
+an independent float and F8 toggles a static test flag, OFF by default. F7 vanilla
+comparison disables the flag's graph effect. Movement gait requests remain
+unchanged: root-motion displacement per frame is preserved, while playback
+frequency is halved, targeting matched animation and travel speed. Existing
+walk portions during acceleration/braking also use half pace. Jog/sprint clips
+and crouch variants are unchanged. Raised/injured alternatives are outside the
+healthy standing walk comparison; mid-step toggling may reset phase once.
+
+Validation: every baseline movement method except the added graph binding in
+CommandHandler is byte-preserved, as are mission methods except OnKeyPress.
+Actual variant controller translated to C++ passed baseline regressions plus
+separate-binding/F8 selection checks at30/60/144FPS, both callback orders. New
+column counts/order, six mapping scopes, six selectors, baseline node preservation
+and FPS-only byte mutation on an actual supplied ANM pass. Windows preparation,
+native DayZ compilation, actual root-motion speed and foot contact are pending.
+The approved v4 ZIP checksum remains unchanged.
+
+Artifact: `artifacts/MovementLab_Standing_Walk_Half_Speed_Test_v1.zip`.
+SHA256: `5923d1ba5fc750cbc83df733d5ce04348451fe7132ea06de20f0681aa09ae5d3`.
