@@ -1,3 +1,12 @@
+## Six selectable crouch speeds: new test
+
+[Download six-level test](artifacts/MovementLab_Crouch_Wheel_Six_Levels.zip).
+Levels:30%,approximately47%,60%,approximately73%,approximately87%,native fast
+crouch. Extract fresh, close DayZ, keep Steam running and run
+`Launch-Movement-Test.cmd`. Uses v1 controller rules without momentum/hidden/F8
+experiments, plus the separate-column animation schema repair. Local checks
+pass; native test pending. Original user-confirmed v1 remains unchanged.
+
 ## Crouch wheel v8: repair confirmed animation-table errors
 
 [Download v8](artifacts/MovementLab_Crouch_Wheel_Test_v8.zip). Uploaded v7 RPT

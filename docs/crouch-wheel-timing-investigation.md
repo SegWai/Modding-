@@ -246,3 +246,30 @@ user playtest. This is a log-driven repair test, not a confirmed runtime fix.
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v8.zip`.
 SHA256: `58c59ee63bcbd356c7cbef6f5021a197a54a3e1699a2dfb3bfd5974d069755f6`.
 Uploaded logs remain outside the Git repository; earlier working archives unchanged.
+
+
+## User-requested six-level speed revision
+
+Separate `MovementLabCrouchWheel_SixLevels` test changes selectable levels to
+30%,46.67%,60%,73.33%,86.67% of normal slow crouch, followed by original native
+fast crouch as level6.9/14/18/22/26FPS timing realizes the first five values.
+Level2 remains the previous rounded47%;22 and26FPS approximate requested73/87.
+The native fast gait is a separate gait, not100% of normal slow crouch.
+
+Controller/mission derive directly from v1: clamp maximum6, status /6, Shift
+requests6, selected6 owns native fast gait and fast-crouch exit logic. No momentum,
+hidden-stage or F8 code is included. Existing standing/strafe behavior retained.
+Asset routing uses the v8 separate-column repair: original native Locomotion
+unchanged; new four groups L2..L5 and matching cloned sources; level1 and level6
+use native Cro sources (walk retimed9FPS, native fast clips unchanged). This
+includes unconfirmed native asset-repair behavior and is explicitly a test,
+not a newly approved stable version. Original v1 package/source untouched.
+
+Translated actual six-level selection/clamps/Shift/persistence and stable
+controller regressions passed30/60/144FPS both orders. Structural schema checks
+verify112 extra mappings inside animations, four declared extra groups, original
+native mappings retained and33 cloned source nodes. Package checks pass; native
+Enforce/DayZ/Windows preparation remain user-side verification.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels.zip`.
+SHA256: `ec112e729f5b3b604a297f0f6736fc4ab087c4c45834b8fa2a3d5e745487a027`.
