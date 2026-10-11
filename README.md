@@ -7,6 +7,18 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Walking test v3: full upright branch selection
+
+[Download walking test v3](artifacts/MovementLab_Standing_Walk_Three_Levels_v3.zip).
+User v2 logs show correct package/graph loading and repeated walking wheel level
+changes, despite no perceived speed change. V3 replaces six per-source selectors
+with whole healthy upright movement selection, matching crouch's branch arrangement.
+Levels remain~85% default/reset,100%,120%; no F8. Walking level messages removed;
+graph binding and selection diagnostics go to logs. Extract separately and launch.
+If unchanged, close DayZ and run `Collect-Logs.cmd`, then attach its generated ZIP.
+Local controller/schema/package checks pass; native speed effect remains pending.
+Approved v4 and all earlier tests are preserved.
+
 ## Separate walking test v2: ~85%,100%,120%
 
 [Download standing walk levels v2](artifacts/MovementLab_Standing_Walk_Three_Levels_v2.zip).

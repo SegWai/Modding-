@@ -455,3 +455,41 @@ native speed cap at120%, remain user-side test requirements.
 
 Artifact: `artifacts/MovementLab_Standing_Walk_Three_Levels_v2.zip`.
 SHA256: `291f352a19bbbceda4cd397dc23bb224a73502ddf28e5d6ebd80bf474652bb9a`.
+
+## User v2 logs and standing branch experiment v3
+
+Uploaded script_2026-10-11_19-55-58.log and DayZDiag_x64_2026-10-11_19-55-56.RPT
+show v2's correct launcher/mod paths, generated clip/workspace PBOs added, script
+module loaded and graph load Success. Script logs contain repeated Walk Wheel
+Level1/2/3 changes and Ctrl Base gait1/2. Earlier inference that missing on-screen
+messages meant the standing wheel handler did not run was incorrect. Inputs
+and saved walking level updates worked. RPT contains no standing custom column,
+source-ID or selector error. Mod-relative skeleton XML probes fail before native
+load as in earlier tests; they do not establish the walking failure. Standing
+variable binding was not logged in v2, so these logs do not prove its success or
+which FPS resource actually played. Actual unchanged speed is the user's report.
+Uploaded personal-path logs remain attachments, not committed.
+
+V3 is an experiment, not a confirmed cause/fix. Returns native Walk source nodes
+to their original form; ErcMoveLowG now selects native original group or custom
+L1/L2 groups over a fully cloned ErcMoveLowInjG dependency branch. Correct quoted
+string tokenization includes empty and multiline strings:59 dependency nodes
+cloned. Two-component Locomotion.slot IDs change to custom standing column;
+explicit Locomotion.Cro.MoveLookHead and injured column stay original. Custom
+column copies the full native58-slot schema; all39 Erc mappings copied for each
+of2groups,78 rows. Only six Walk direction rows use26/36FPS variants; all other
+idle/look/jog/sprint/etc mappings are identical native rows. Whole branch group
+selection parallels the working crouch approach instead of per-leaf wrappers.
+Walking UI messages removed; first graph binding and changed selection logged.
+Clip preparer prints generated FPS per standing variant. Collect-Logs tools added.
+
+Tests validate every original graph node unchanged except ErcMoveLowG, all59 clone
+references and custom slots resolve, full schema counts/order/scoped mapping,
+non-walk custom rows identical native Erc rows, controller default/reset/clamps,
+separate crouch wheel and all inherited movement regressions. Translated controller
+passes30/60/144FPS both callback orders. Native compile/playback/velocity and
+Windows preparer unexecuted here; package header/source/footer and ZIP verified.
+All earlier packages and approved Six Levels v4 remain unchanged.
+
+Artifact: `artifacts/MovementLab_Standing_Walk_Three_Levels_v3.zip`.
+SHA256: `5708c33fef03dd6c62968b6a199a266a5cd2805d7fa4fab7c16e2a0a32bac394`.
