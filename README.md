@@ -7,6 +7,16 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Six-level crouch restored: fast crouch90% test
+
+[Download fast crouch90 test](artifacts/MovementLab_Crouch_Fast90_v1.zip).
+Restores the six-level setup before the slow95 experiment. Level6 fast crouch
+targets90% of native fast pace, using separate27FPS clips instead30FPS. Animation
+and root-motion pace matched. Shift and full-sprint crouch entry use samelevel6.
+Lower crouch tiers/default60 and latest standing scroll rules retained. Native
+files untouched. Local checks passed; actual travel speed pending in-game test.
+Earlier experiments and approved v4 remain preserved.
+
 ## Separate test: seven crouch levels
 
 [Download seven-level crouch test](artifacts/MovementLab_Crouch_Seven_Levels_v1.zip).

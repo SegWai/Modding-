@@ -648,3 +648,24 @@ walking pace. Original approved v4 and all earlier packages preserved.
 
 Artifact: artifacts/MovementLab_Crouch_Seven_Levels_v1.zip.
 SHA256:694050d1d43d3100370e05760cd67340bb391e5bf4caba37fe64633024e7c53d.
+
+## Six-level restore, fast crouch90% v1
+
+User reverted the seven-tier slow95 experiment and requested fast crouch velocity
+10% below native. Separate test starts from jog/sprint v2 six-tier crouch baseline,
+level6 nativefast request. Three custom L5 SprintF/FL/FR mappings now use separate
+p_cro_runF/FL/FR variants at27FPS instead original30. Native rows/resources remain
+unchanged, as do World controller, mission, root/template/locomotion graph bytes.
+Level6/heldShift/full-sprint entry retains gait3, custom clip playback/root-motion
+targets90% fast-crouch velocity and animation cadence together. Level1..5 and60%
+entry default preserved. This90% refers to nativefast, not native slow-crouch.
+Seven-level experiment preserved separately.
+
+Translated standing/crouch/strafe/jog-sprint regressions pass30/60/144FPS both
+callback orders. Schema/mapping scope and original native row preservation checked,
+only three custom fast slots differ;27/30=.9 FPS-only byte mutation verified.
+PBO/ZIP checks pass. Native compilation/actual velocity/playback and Windows
+preparation require local confirmation. All earlier packages remain preserved.
+
+Artifact: artifacts/MovementLab_Crouch_Fast90_v1.zip.
+SHA256:2ba814042d70b91a3d895ca65772c3d0b788e78f4c98c54d57221078ede9ae4b.
