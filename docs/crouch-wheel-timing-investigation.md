@@ -557,3 +557,25 @@ confirmation. No new screen messages; diagnostics recorded in logs only.
 
 Artifact: `artifacts/MovementLab_Standing_Scroll_Mode_Links_v1.zip`.
 SHA256: `8d3dd6fbc554c51828db3f92112aea2569253dd2ba0ec0f4f25d2b445013cb77`.
+
+## Top jogging110/130 F8 comparison v1
+
+Separate version from linked wheel v1. F8 OFF default uses33FPS jogging (110%).
+F8 ON uses previous39FPS (130%). Native jogging level2 stays100%, boundaries
+walking121->nativejog and jog99->walking120 unchanged. Three new custom groups
+combine each existing walking pace with jogging110; all non-Run rows copied
+unchanged from respective130 groups. Eight custom groups/312 rows, graph inputs
+7/8/9 for110 versus4/5/6 for130. Float maximum expanded9. F8 toggles static
+comparison flag in offline mission, logged only. Existing saved jogging top
+level3 now selects110 unless flagON. No additional movement gait/time changes.
+
+Actual translated controller tests pass30/60/144FPS both callback orders for all
+walking-profile comparisons, native jogging independence, inherited mode boundary/
+rapid-scroll/crouch/standing regressions. Schema and non-jog mapping preservation,
+33/30=1.1 FPS-only mutation, PBO and ZIP verified. Native compilation/Windows
+preparation/physical speed and animation continuity pending local confirmation.
+Mid-step clip switch may reset phase once. Earlier packages and approved v4
+preserved.
+
+Artifact: artifacts/MovementLab_Jog_110_130_F8_Test_v1.zip.
+SHA256:29cd7cb7087094f2d421b7b737678c6ccaf2b9743c48bc5ce1ebe49da17f3237.

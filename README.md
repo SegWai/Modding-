@@ -7,6 +7,16 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Jogging comparison: F8 110% /130%
+
+[Download jogging F8 test](artifacts/MovementLab_Jog_110_130_F8_Test_v1.zip).
+Top jogging level3 defaults110% (33FPS), F8 OFF. Press F8 for130% (39FPS), ON.
+Native jogging100% level2 and linked walk/jog boundaries remain unchanged.
+Walking/crouch profiles and existing timers retained. No new screen messages;
+comparison state is logged. Extract separately, launch and scroll to top jogging
+level to compare. A mid-step switch may reset clip phase once. Local checks pass;
+native speed/animation require local confirmation. Earlier versions preserved.
+
 ## Separate test: linked walking/jogging wheel boundaries
 
 [Download linked standing wheel v1](artifacts/MovementLab_Standing_Scroll_Mode_Links_v1.zip).
