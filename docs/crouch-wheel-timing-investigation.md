@@ -799,3 +799,29 @@ Desired behavior: forward-progressing foot cycle with reverse blend weights and
 deceleration, not reversed clip playback. Useful next native diagnostic would
 compare achievedgait3..2 descent duration vs ascent and check active foot phase/
 walk-source activation at the handoff before editing a separate test.
+
+## Crouch descent v1 timing experiment
+
+User authorized a separate test after the graph investigation. Source based on
+corrected scroll v2, unchanged default baseline. Controller targets only fast
+(savedlevel6 or heldShift) ->savedlevel5 ~87 while moving, with actual achieved
+gait>2.05. Request starts from achieved gait clamped2.05..3, smoothstep fades to2
+over.28s, then linear2->1 over.10s. Graph blend weight thus has an explicit
+descending target trajectory rather than direct request1. No hold/freeze/clip
+rewind. Downward controller advanced only from CommandHandler after wheel input,
+while mission rule callbacks read the same request without incrementing time.
+Fast return, no input, lower wheel tier, invalid eligibility or stance exit cancel.
+Original fast request3/ascent behavior retained. All graph/preparer/mission bytes
+unchanged; no claimed phase-preserving native source synchronization fix.
+
+Actual translated controller tests pass30/60/144FPS both callback orders: smooth
+nonincreasing requests bounded>=1, completed duration, repeated mission reads do
+not change timer, Shift reverse/new descent, lower-tier cancellation, input stop,
+stance exit and full inherited standing/crouch/strafe/jog-sprint regressions.
+An inherited immediate saved87 Shift-release expectation updated for deliberate
+new descent behavior. Package PBO/ZIP and byte-preservation checks passed.
+Native compiler, achieved native gait trajectory, actual foot-phase/visual
+continuity require local test. Corrected v2 default/source/artifact unchanged.
+
+Artifact: artifacts/MovementLab_Crouch_Descent_Test_v1.zip.
+SHA256:f02fd604a6f7df70ddc303af39a91588fd32ccff777618ec43f567385524c166.

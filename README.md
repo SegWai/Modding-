@@ -15,6 +15,16 @@ is now the working default listed above.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate test: smooth fast-crouch descent to87%
+
+[Download crouch descent test](artifacts/MovementLab_Crouch_Descent_Test_v1.zip).
+Starts from corrected scroll v2, which remains the default. Only fast crouch->87%
+changes: achieved fast gait request fades through3..2 over.28s, then2..1 over.10s.
+No frozen pose. Ascent, animation graphs/clips and standing rules retained.
+Test continuous crouch movement at87->fast->87. This isolates downward blend timing;
+native foot-phase preservation remains unconfirmed. Local checks pass, native test
+pending. Extract separately and launch. Earlier packages and baseline preserved.
+
 ## Sprint travel90/110 comparison test
 
 [Download sprint90/110 test](artifacts/MovementLab_Sprint_Travel90_110_Test_v1.zip).
