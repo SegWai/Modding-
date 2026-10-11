@@ -669,3 +669,25 @@ preparation require local confirmation. All earlier packages remain preserved.
 
 Artifact: artifacts/MovementLab_Crouch_Fast90_v1.zip.
 SHA256:2ba814042d70b91a3d895ca65772c3d0b788e78f4c98c54d57221078ede9ae4b.
+
+## Sprint120 v1 from explicitly requested corrected scroll v2
+
+Separate source from MovementLabScroll_JogSprint_v2, excluding later crouch tests.
+Sprint clamp expands1..3; entering from jog101 still selectsnativelevel2. Up selects
+level3 120%, down first selectsnativelevel2 then99 trigger returnsnativejog100level3.
+Three sprint variants F/FL/FR retime original30FPS to36FPS; native originals kept.
+Three full upright custom groups combine each walking profile with120 sprint;
+all non-Sprint rows retain respective base profiles. Custom standing groups8/
+rows312 and graph inputs7/8/9. Root float max9. 120% profile selected only while
+scroll-sprint mode and sprintlevel3. NativeShift/manualmode and crouch handling
+retained. Mission bytes, timer formulas and original six-level crouch preserved.
+
+Actual translated controller and mission tests pass30/60/144FPS both callback
+orders, nativeentry/highestlimit/downwardsequence,all3 walking profile selections,
+100 repeated sprint crossings, exposure/stop handling and inherited regressions.
+Mapping preservation/36FPS mutation/schema/PBO/ZIP checked. Native compiler,
+Windows preparer, animation continuity and physical120% velocity remain local
+test requirements. Approved v4 and earlier packages preserved.
+
+Artifact: artifacts/MovementLab_Sprint120_Test_v1.zip.
+SHA256:af465ae04d9e0cc55efdad60cdc04692734b0236c45142d7b9c29152764c8c11.

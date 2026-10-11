@@ -7,6 +7,16 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Sprint120 test from corrected scroll v2
+
+[Download sprint120 test](artifacts/MovementLab_Sprint120_Test_v1.zip).
+Adds sprintlevel3 120% (36FPS variants). Sprintlevel2 remains native100%; down
+to99% trigger returns native jogging100% level3. Enter sprint as before through
+jog101 boundary, then scroll up for120. All corrected scroll v2 walking/jog/crouch
+rules and timer formulas retained. This uses original six-tier nativefast crouch,
+not later crouch experiments. Extract separately and launch. Local checks pass;
+native confirmation pending. Previous packages preserved.
+
 ## Six-level crouch restored: fast crouch90% test
 
 [Download fast crouch90 test](artifacts/MovementLab_Crouch_Fast90_v1.zip).
