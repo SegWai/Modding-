@@ -524,3 +524,36 @@ remain unchanged.
 
 Artifact: `artifacts/MovementLab_Standing_Jog_Two_Levels_v1.zip`.
 SHA256: `817d231f3aa0d214ac9a9a72c5b80dd696abdfb2672a47d2c0a0947a792212cd`.
+
+## Linked standing wheel boundaries v1
+
+User requested walking level4 at121% to toggle jogging; jogging level1 at99% to
+return to highest actual walking level120%, with native jogging100 atlevel2.
+Existing130% jogging retained aslevel3 (user said add levels, not remove130).
+Separate source/package from Jogging Two Levels v1. Actual animation/profile/
+preparer/mission bytes unchanged;121/99 are transient mode triggers.
+
+Single standing wheel reader replaces separate walk/jog readers. It increments
+walking1..4 or jogging1..3 based on the mode at the start of processing. Walking4
+normalizes to savedwalking3, savedjogging2, walkMode=false. Jogging1 normalizes to
+savedjogging2, savedwalking3, walkMode=true. Normalization called every eligible
+standing frame (including without scroll), so trigger levels never persist.
+No second wheel reader runs in the destination mode. Native mode transition
+WantedGait/command startup and mission braking paths handle1->2 and2->1; timer
+constants unchanged. Savedjog default2 selects original100%;130% graph selection
+now requires savedjog3. Walking selection, crouch defaults/reset and Ctrl/Shift
+rules unchanged. Existing input eligibility/menu/prone/crouch/Shift exclusions
+preserved; boundary rules active during standing walk/jog including at rest.
+
+Validation: actual translated controller passed30/60/144FPS both callback orders,
+full ascending/descending sequence, limits, native/jog130 preservation,100 rapid
+boundary alternations with no double-notch destination processing, parked boundary
+normalization without new input, idle switches, stable post-switch state, retained
+timed deceleration, crouch wheel/reset and Shift/menu/vanilla exclusions. Existing
+standing/crouch/strafe regressions and combined-profile schema tests pass. Animation,
+preparer and mission byte preservation checked. PBO/source/footer/ZIP verified.
+Native DayZ compilation, animation continuity and velocity still require local
+confirmation. No new screen messages; diagnostics recorded in logs only.
+
+Artifact: `artifacts/MovementLab_Standing_Scroll_Mode_Links_v1.zip`.
+SHA256: `8d3dd6fbc554c51828db3f92112aea2569253dd2ba0ec0f4f25d2b445013cb77`.

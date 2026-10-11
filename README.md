@@ -7,6 +7,21 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate test: linked walking/jogging wheel boundaries
+
+[Download linked standing wheel v1](artifacts/MovementLab_Standing_Scroll_Mode_Links_v1.zip).
+Walking fourth notch (121% boundary) switches from walking120 to native jogging100.
+Jogging lowest notch (99% boundary) switches from native jogging100 to walking120.
+Jogging100 is level2; existing jogging130 is retained as level3. Trigger positions
+121/99 immediately change mode rather than playing separate clips. A single
+standing wheel reader prevents processing one crossing notch twice. Boundary
+normalization runs on each eligible standing frame, not only wheel events.
+Existing Ctrl, Shift sprint, crouch wheel and mode transition/timer logic retained.
+Default walking selection remains~85% and crouch-exit walking reset unchanged.
+Extract separately and run `Launch-Movement-Test.cmd`. Local translated controller,
+rapid-notch/default/reset/schema/package checks pass; native testing pending.
+All earlier packages and approved Six Levels v4 are preserved.
+
 ## Separate jogging wheel test:100%,130%
 
 [Download jogging two-level test v1](artifacts/MovementLab_Standing_Jog_Two_Levels_v1.zip).
