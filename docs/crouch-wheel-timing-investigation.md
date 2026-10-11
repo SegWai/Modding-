@@ -307,3 +307,30 @@ and measured travel remain user playtest pending. Previous packages unchanged.
 
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels_v2.zip`.
 SHA256: `ce0f372dbe365ca41d075003fd577c12a069f8250a0b14b308dc32f5cf28f4ef`.
+
+
+## Six-level v3: reset entry to60%, except standing full sprint
+
+User requests every new crouch session default60%, independent of prior crouch
+speed; walking/jogging/idle entry all select3. Full standing sprint entry selects
+native6 (chosen from user's90% or100% option). A separate stance edge records
+last upright native gait>=2.90 on COMMANDID_MOVE. It preserves evidence through
+upright transition commands and avoids counting the first upright sample after
+fast crouch as a standing sprint. Initial saved level and graph default are3.
+On first crouch frame saved choice resets3/6, then wheel inputs apply normally.
+Holding Shift still temporarily overrides to native under existing crouch rules;
+a Shift tap before achieved standing sprint does not change saved entry default.
+
+Changes confined to wheel-entry tracking/default, entry status message and root
+variable initial default. All other original world methods are verified identical
+to six-level v2, mission/preparer identical, locomotion handoff unchanged. Crouch
+exit behavior (fast exits jog, slow preserves standing mode) remains unchanged.
+
+Translated actual controller tests at30/60/144FPS both orders exercise all prior
+wheel choices1..6 against upright gait0/1/2/2.5/2.89/3, session persistence, repeated
+entries, first-upright fast-crouch contamination and short Shift taps. Stable
+standing/strafe and wheel/schema/package checks pass. Native compile/visual tests
+remain user-side confirmation; no new stable approval claimed.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels_v3.zip`.
+SHA256: `21038e24fba7c0fe03bb591a57c4bcb3890a9f6ccbd378dae079bf5ac4b0ae09`.

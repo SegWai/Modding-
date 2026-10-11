@@ -1,3 +1,12 @@
+## Six-level v3: crouch entry defaults
+
+[Download six-level v3](artifacts/MovementLab_Crouch_Wheel_Six_Levels_v3.zip).
+Every new crouch entry defaults to60% from walking/jogging/idle, regardless of
+previous wheel choice. Entry after achieved full standing sprint selects native
+fast crouch. Existing Shift override, standing/crouch-exit rules and87%-native
+handoff retained. Extract fresh and launch. Local checks pass; native confirmation
+pending. Earlier packages remain unchanged.
+
 ## Six-level v2: 87% to native source handoff test
 
 [Download six-level v2](artifacts/MovementLab_Crouch_Wheel_Six_Levels_v2.zip).

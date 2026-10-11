@@ -1,0 +1,1 @@
+Crouch entry resets3/60%; previous achieved upright sprint gait>=2.90 selects6/native. Initial upright sample after crouch skipped to prevent inherited fast-crouch gait from counting as standing sprint. Existing handoff correction and standing controller unchanged. Native test pending.
