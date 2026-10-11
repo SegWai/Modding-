@@ -1,3 +1,13 @@
+## Crouch wheel v8: repair confirmed animation-table errors
+
+[Download v8](artifacts/MovementLab_Crouch_Wheel_Test_v8.zip). Uploaded v7 RPT
+contains missing animation-source IDs and an invalid native Locomotion column.
+V8 restores that original column, moves extra speeds into a separate column,
+corrects hidden mapping block placement and routes level5 through the native
+Cro subtree directly. Extract fresh and run `Launch-Movement-Test.cmd`;
+check level5 with F8 OFF first, then the hidden transition with F8 ON.
+Native runtime outcome pending; local schema/controller checks pass.
+
 ## Crouch wheel v7: freeze isolation with exact v1 control
 
 [Download v7](artifacts/MovementLab_Crouch_Wheel_Test_v7.zip). V6 was also reported

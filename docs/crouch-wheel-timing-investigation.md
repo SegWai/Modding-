@@ -203,3 +203,46 @@ Collect-Logs.cmd/ps1 packages this test folder's RPT/log files for next diagnosi
 
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v7.zip`.
 SHA256: `1042c4724648bc18be131248b61bd5ca2190c5b23985d1cb0f262b2f698df674`.
+
+
+## V8: first current runtime evidence and schema repair
+
+Uploaded `DayZDiag_x64_2026-10-11_11-52-48.RPT` is explicitly a v7 launch, not
+KnownWorkingV1. It contains1206 missing-source-ID messages (323unique IDs),
+including native CroRas/Erc/Pne/Water groups and added CroWheel2..5 mappings.
+Graph initialization reports `CroWheel5G:Invalid columnLocomotion` and invalid
+Locomotion columns for numerous original graph nodes. The wheel variable binds
+and script log reaches levels2,3,4,5. These logs establish invalid runtime
+animation-table resolution; they do not show a measured clip-time discontinuity
+or identify a single verified native parser rule causing all failures.
+
+The v5-v7 hidden ASI rows are outside `$animations`, before the outer instance
+closing brace. This was our concrete generation error, missed by brace balance
+and raw string-presence checks. V8 adds structural block-scope validation.
+
+V8 restores the native Locomotion template to exactly its original ten group
+names and58slots. A sorted, separately appended column
+`ZZMovementLabCrouchSpeeds` defines H90/L2/L3/L4/L5 groups with those58slots.
+28 native Cro assignments are duplicated into each group (140 mappings), all
+inside the ASI `$animations` block. The root ASI and AGR use an explicit patched
+template path. No native source-ID assignments are removed or redirected.
+
+33 crouch dependency nodes are cloned; their healthy Locomotion source IDs use
+the new column, while native injury column references remain intact. Levels2..4
+and the hidden stage select this subtree with their new column groups. Level5
+now selects original `CroMoveLowInjG`, native Locomotion/Cro directly; its native
+run playback does not depend on added column resolution. The added L5 mapping
+is currently unused. Existing native graph nodes remain intact. Standing and
+wheel controller methods are unchanged from v7; F8 behavior remains.
+
+Validation now parses group/slot counts, sorted group names, every ASI source-ID
+against declared table schema, every custom mapping's block placement, cloned
+node uniqueness/references and custom-source slot coverage. Native original
+mappings remain present. Actual translated OFF/ON controllers and regressions
+pass30/60/144FPS both orders. PBO/footer/ZIP checks pass. No DayZ engine or native
+Enforce compiler is available here; engine acceptance and visual repair need
+user playtest. This is a log-driven repair test, not a confirmed runtime fix.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v8.zip`.
+SHA256: `58c59ee63bcbd356c7cbef6f5021a197a54a3e1699a2dfb3bfd5974d069755f6`.
+Uploaded logs remain outside the Git repository; earlier working archives unchanged.
