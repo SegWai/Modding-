@@ -7,6 +7,19 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate test: scroll jogging80/100 into native sprint
+
+[Download jogging/sprint scroll test](artifacts/MovementLab_Scroll_Jog_Sprint_v1.zip).
+Jogging level1 now80% (24FPS), level2 native100%, level3 101% trigger -> native
+sprint100%. Sprint level2 stays native100%; scrolling down to99% trigger returns
+to jogging level2 100%. Selected sprint needs no held Shift. Existing Shift sprint
+remains available. Walking profiles and walking121->jog100 boundary retained;
+old jogging99->walking trigger replaced by actual80% jogging. Ctrl selects walk.
+No F8 comparison or new UI messages. Full-stop sprint exposure now recognises
+scroll sprint, using existing brake timers. Crouch/Ctrl clear selected sprint.
+Extract separately and launch. Local checks pass; native confirmation pending.
+All previous versions and approved v4 are preserved.
+
 ## Jogging comparison: F8 110% /130%
 
 [Download jogging F8 test](artifacts/MovementLab_Jog_110_130_F8_Test_v1.zip).

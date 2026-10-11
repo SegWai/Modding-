@@ -579,3 +579,32 @@ preserved.
 
 Artifact: artifacts/MovementLab_Jog_110_130_F8_Test_v1.zip.
 SHA256:29cd7cb7087094f2d421b7b737678c6ccaf2b9743c48bc5ce1ebe49da17f3237.
+
+## Jog80/native100 to scroll-selected sprint v1
+
+Separate test from linked wheel v1; previous F8 comparison preserved unchanged.
+User replaces jogging levels with80/100/101 boundary and sprint99/100. Jogging80
+is a real24FPS pace, replacing the prior99->walking boundary; walking121 still
+enters nativejog100. Jog101 normalizes savedjog2 and enables scroll sprint with
+savedsprint2. Sprint99 normalizes sprint2 and disables scroll sprint, selecting
+nativejog2. No retimed101/99 clips needed; existing native sprint clips retained.
+Single standing wheel reader prevents double-processing destination mode. Scroll
+sprint requests gait3 without Shift; selected mode persists when movement keys
+are released. Ctrl or crouch clears scroll sprint. Shift native sprint retained.
+Standing actual jog resources change39FPS/J2 variants to24FPS/J80; native jogging
+unchanged. Custom group layout reused, now selects80 when savedjog1.
+
+Mission turbo classification includes player scroll sprint status, preserving
+achieved-sprint exposure and release-to-stop envelope when no Shift is held.
+Existing mode acceleration, timed brake formulas, directions, crouch defaults
+and walking resets retained. Tests with actual translated controller/mission pass
+30/60/144FPS both callback orders: jog80/native100 limits, native sprint without
+Shift, capped sprint wheel, returntojog100,100 reversal cycles, achieved sprint
+exposure/full-stop, parked sprint mode, crouch ownership and Ctrl clearing.
+Inherited regressions, mapping/schema/FPS-only24/30=.8 and package checks pass.
+A post-harness assertion first referred to an overwritten Python loop variable;
+corrected to reread the actual mission file, rerun passed. Native compiler,
+Windows preparer, animation playback/physical velocity remain local requirements.
+
+Artifact: artifacts/MovementLab_Scroll_Jog_Sprint_v1.zip.
+SHA256:12073dc4c1c8beccaa29c30f56ad4ac0737c826105d468a5fab39f5c9790773e.
