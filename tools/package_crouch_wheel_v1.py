@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import sys
+sys.dont_write_bytecode=True
+import package_movement_logic_test as packer
+packer.SOURCE=packer.ROOT/'ctrl-mode-test/MovementLabCrouchWheel_v1'
+packer.OUTPUT=packer.ROOT/'artifacts/MovementLab_Crouch_Wheel_Test_v1.zip'
+packer.ARCHIVE_ROOT=packer.SOURCE.name
+packer.VALIDATION_EXTRA={'variant':'five-level wheel graph groups and local complete unarmed/workspace repacks','evidence':'v3 RPT original unarmed clips missing under shared-prefix package','limitations':'Windows PowerShell preparer and DayZ native playtest unexecuted here; original source assets required locally'}
+if __name__=='__main__':packer.main()
