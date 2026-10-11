@@ -3,27 +3,19 @@
 DayZ remains the base game. The goal is original player animations and movement
 inspired by the weight and pacing of Red Dead Redemption 2.
 
-## Current approved stable version: Ctrl Modes v4
+## Current approved baseline: Ctrl Modes v10
 
-[Download approved stable v4](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v4_Direction_Fix.zip).
+[Download baseline v10](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v10_Later_Walk_Blend.zip).
 
-The user approved the rear-diagonal direction fix and selected this as the
-current default/best baseline. Ctrl toggles walking/jogging, held Shift sprints,
-and F8 compares body-turn response. Stable v4 remains unchanged while testing
-new crouch behavior below. V11 is retained as the historical original baseline.
+The user selected v10, with stronger momentum before walking, as the baseline
+for all further movement changes. Use `ctrl-mode-test/MovementLabCtrlModeTest_v10/`
+and its existing test ZIP unchanged. Ctrl toggles walking/jogging, held Shift
+sprints, responsive body turning is permanent, and the approved crouch rules
+remain. F8 is absent.
 
-## Jogging zigzag resistance on Ctrl Modes v10
-
-[Download Ctrl Modes v11 reversal resistance](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v11_Reversal_Resistance.zip).
-
-Rapid jogging A/D opposites temporarily increase native direction inertia,
-including diagonals. Spam maintains resistance; steady input smoothly restores
-normal response. This adds no forced stops, frame freezes or animation command
-restarts. Body turning, Ctrl transitions, crouch rules and stopping curves
-remain from v10. Extract fresh and run the launcher; test in standing jogging.
-Mocked tracker/filter and movement regressions passed; native animation/path
-and gameplay heaviness need DayZ testing. V10 remains the fallback. This Ctrl
-Modes v11 is distinct from the historical original Movement Logic v11.
+The later Ctrl Modes v11, v12 and v13 reversal experiments are superseded and
+must not be included in the baseline. Their files remain historical tests.
+The older Ctrl Modes v4 and original Movement Logic v11 are historical versions.
 
 ## Later walk entry with stronger jog-to-walk momentum
 
