@@ -608,3 +608,20 @@ Windows preparer, animation playback/physical velocity remain local requirements
 
 Artifact: artifacts/MovementLab_Scroll_Jog_Sprint_v1.zip.
 SHA256:12073dc4c1c8beccaa29c30f56ad4ac0737c826105d468a5fab39f5c9790773e.
+
+## Jog/sprint v2 corrected default crossings
+
+Walking fourth121% trigger selects jog80 level2. Jogging:1 transient79% -> walking
+defaultlevel1~85%;2 real80% default;3 native100%;4 transient101% -> native sprint.
+Sprint99 downward trigger returns native jog100 atlevel3. Custom80 profiles now
+select when joglevel2. Walking121 normalizes savedwalk3/savedjog2, jogging79
+normalizes savedwalk1/savedjog2. Single-notch processing retained. Existing
+scroll-sprint brake exposure, native Shift, Ctrl and crouch ownership retained;
+no new animation/FPS changes. Actual translated controller tests pass30/60/144FPS
+both callback orders, ascending/descending crossings,100 walk/jog reversal cycles,
+idle crosses, sprint exposure/full stop and crouch clearing; inherited regressions/
+schema pass. Native compilation/playback/velocity pending local test.
+Earlier packages and approved Six Levels v4 remain preserved.
+
+Artifact: artifacts/MovementLab_Scroll_Jog_Sprint_v2.zip.
+SHA256:3aead464c12aad6e5b3df29c980a5795ff822a4bd3b307cd4fcc18eb9309d87e.

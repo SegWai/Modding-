@@ -7,6 +7,15 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Jog/sprint scroll v2: corrected default mode boundaries
+
+[Download scroll test v2](artifacts/MovementLab_Scroll_Jog_Sprint_v2.zip).
+Walking121 boundary now enters jogging80% level2. Jogging levels:1 79% trigger
+returns default walking~85%,2 80% default,3 native100%,4 101% trigger enters
+native sprint. Sprint99 trigger still returns native jogging100% (now level3).
+Previous24FPS jogging and walking resources retained. Local boundary checks pass;
+native confirmation pending. Extract separately and launch. Earlier versions preserved.
+
 ## Separate test: scroll jogging80/100 into native sprint
 
 [Download jogging/sprint scroll test](artifacts/MovementLab_Scroll_Jog_Sprint_v1.zip).
