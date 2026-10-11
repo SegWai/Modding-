@@ -7,6 +7,16 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Sprint travel90/110 comparison test
+
+[Download sprint90/110 test](artifacts/MovementLab_Sprint_Travel90_110_Test_v1.zip).
+Sprintlevel2 now targets90% native ground displacement; level3 targets110%.
+Down again through99 trigger still returns jogging100%. Native animation clips
+retained, so foot cadence mismatch may appear. Actual ground-speed logs retained.
+Existing eligibility/collision/braking guards and corrected scroll v2 rules preserved.
+Local callback/controller checks pass; native physical outcome pending. Previous
+packages preserved. Extract separately and run Launch-Movement-Test.cmd.
+
 ## Sprint travel120 diagnostic: physical displacement
 
 [Download sprint travel test](artifacts/MovementLab_Sprint_Travel120_Test_v1.zip).

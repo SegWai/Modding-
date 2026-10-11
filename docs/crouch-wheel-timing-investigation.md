@@ -726,3 +726,23 @@ Earlier tests and approved v4 preserved.
 
 Artifact: artifacts/MovementLab_Sprint_Travel120_Test_v1.zip.
 SHA256:69a88634540842e5d8849e19dadd3cd329e62de57b07da3e74f5be951785c8e6.
+
+## Sprint travel90/110 v1
+
+User requested level2 sprint10% slower and finallevel110%. Separate source from
+travel120 experiment. Grounded eligible achieved scroll-sprintlevel2 now scales
+native horizontal proposed displacement0.90. Level3 uses1.10, collision fraction
+can block added travel while preserving native validated step. Heights unchanged.
+Braking retains native envelopes as previous diagnostic. Scroll99->nativejog100,
+walking/jogging/crouch rules unchanged. Native sprint clips deliberately retained,
+foot pace mismatch possible. Actual ground speed measurement callbacks retained.
+
+Actual callback arithmetic tests pass30/60/144FPS: native8m/s proposals become7.2
+atlevel2 and8.8 atlevel3, height unchanged, collision restriction, falling/parent/
+gait/brake/mode/level guards. Inherited actual translated controller regressions,
+native animation/preparer/mission byte preservation and PBO/ZIP checks pass.
+Native DayZ compile/OnPhysMove alignment outcome/actual final speed and animation
+remain user-side requirements. Earlier packages and approved v4 preserved.
+
+Artifact: artifacts/MovementLab_Sprint_Travel90_110_Test_v1.zip.
+SHA256:5ec4510327fb2124e420829c0281c4bd82e04a08a3a235ee53ffda43b297ce9d.
