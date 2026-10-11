@@ -1,3 +1,11 @@
+## Six-level v4: consistent Shift fast crouch
+
+[Download six-level v4](artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
+User confirmed v3 entry defaults work but held Shift sometimes stays at60%.
+V4 explicitly requests native fast gait while crouched with Shift and directional
+input, matching the wheel-native request. Saved defaults, speed tiers and all
+animation assets unchanged. Extract fresh and launch; native confirmation pending.
+
 ## Six-level v3: crouch entry defaults
 
 [Download six-level v3](artifacts/MovementLab_Crouch_Wheel_Six_Levels_v3.zip).

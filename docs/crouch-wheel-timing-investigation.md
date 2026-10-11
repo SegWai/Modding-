@@ -334,3 +334,31 @@ remain user-side confirmation; no new stable approval claimed.
 
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels_v3.zip`.
 SHA256: `21038e24fba7c0fe03bb591a57c4bcb3890a9f6ccbd378dae079bf5ac4b0ae09`.
+
+
+## Six-level v4: consistent held-Shift request
+
+User confirms v3 works but crouching while holding Shift+direction sometimes
+remains normal60%. Source inspection shows saved wheel-native6 explicitly owns
+gait3, while held Shift at another saved level merely disables our slow override
+and relies on native input behavior. No current native runtime input trace
+establishes whether Turbo filtering, standing walk intent or another mechanism
+caused the report.
+
+V4 replaces the explicit-fast condition with `moving && shift`, where local
+`shift` already includes physical Turbo action or saved wheel6. This explicitly
+requests gait3 for both sources. Idle/blocked eligibility remain unchanged,
+releasing Shift returns to saved tier unless saved6, and crouch-exit standing
+rules remain intact. Standing/mission/source profiles/graph/FPS/preparer bytes
+are identical to v3. It does not latch fast crouch after input release.
+
+Translated actual-code checks pass30/60/144FPS both callback orders. Added mock
+cases suppress native Turbo interpretation while leaving input held: fast gait
+remains3 for default60% entry, both standing modes, eight directional key masks,
+Ctrl-held cases and wheel retargeting. Shift release restores saved tier; saved6
+still fast without Shift; no movement releases override. Existing tests updated
+to expect owned fast override, rather than native-bypass ownership. Controller
+entry/standing/strafe/schema/PBO/ZIP checks pass. Native runtime still pending.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip`.
+SHA256: `bfee1d3ff3f45fdb38baee99eb6f33379d7ccaf582147265150b0eae3bb0544d`.
