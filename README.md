@@ -3,19 +3,23 @@
 DayZ remains the base game. The goal is original player animations and movement
 inspired by the weight and pacing of Red Dead Redemption 2.
 
-## Current approved baseline: Ctrl Modes v10
+## Current approved stable baseline: v10 Strafe Test v2
 
-[Download baseline v10](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v10_Later_Walk_Blend.zip).
+[Download the stable version](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v10_Strafe_Test_v2.zip).
 
-The user selected v10, with stronger momentum before walking, as the baseline
-for all further movement changes. Use `ctrl-mode-test/MovementLabCtrlModeTest_v10/`
-and its existing test ZIP unchanged. Ctrl toggles walking/jogging, held Shift
-sprints, responsive body turning is permanent, and the approved crouch rules
-remain. F8 is absent.
+The user approved v10 Strafe Test v2 as the current stable version. All future
+movement changes must start from `ctrl-mode-test/MovementLabCtrlModeTest_v10_Strafe_v2/`.
+The approved ZIP remains unchanged.
 
-The later Ctrl Modes v11, v12 and v13 reversal experiments are superseded and
-must not be included in the baseline. Their files remain historical tests.
-The older Ctrl Modes v4 and original Movement Logic v11 are historical versions.
+This retains original v10's stronger jog-to-walk momentum, Ctrl modes,
+Shift sprint, permanent responsive turning and crouch rules. Abrupt pure
+A/D reversals request near-stop movement; repeated reversals keep it slow.
+Holding one direction for more than 0.30 seconds starts a short smooth
+recovery, while releasing all movement lets the character stop normally.
+F8 is absent.
+
+Original Ctrl Modes v10 remains a fallback. The v11–v13 reversal experiments
+and v10 Strafe Test v1 are superseded historical tests, not the stable baseline.
 
 ## Later walk entry with stronger jog-to-walk momentum
 
