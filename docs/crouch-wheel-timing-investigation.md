@@ -433,3 +433,25 @@ test requirements; this is a separate test, not a newly approved stable baseline
 
 Artifact: `artifacts/MovementLab_Standing_Walk_Three_Levels_v1.zip`.
 SHA256: `ee657ba430f8d98212aec3f38ef014b6e7e1c02dea06a65b87594c2caff5b8f3`.
+
+## Standing walk three levels v2: ~85/100/120 test
+
+User requested level1/default85%, level2 100%, level3 120%. Separate source/package
+created from standing walk three-level v1; no earlier files or approved v4 changed.
+Standing L1 retimes original30FPS clips to26FPS (86.67%, closest integer to85%).
+L2 custom resources now retime to36FPS (120%). Selector inputs changed to1=custom
+L2 (120%),2=native (100%),3=custom L1 (~85%). Saved walking level1/2/3 retains
+reversed encoding3/2/1. Non-erect masking and vanilla bypass now select2 (native),
+so crouch remains native on the shared Walk source nodes. Default walking saved
+level1 and reset on crouch exit retained. Crouch wheel, gait mode rules, jogging,
+sprint, braking, acceleration, direction fix and strafe logic unchanged.
+
+Actual translated controller regression and walk-wheel defaults/clamps/reset/input
+isolation tests pass30/60/144FPS with both callback orders. Table/mapping scopes,
+six graph selectors, native source preservation and FPS-only byte changes verified;
+36/30=1.2 and26/30 approximates0.85. PBO/header/source/footer and ZIP checks pass.
+Windows preparation and native animation/root-motion travel speed, including any
+native speed cap at120%, remain user-side test requirements.
+
+Artifact: `artifacts/MovementLab_Standing_Walk_Three_Levels_v2.zip`.
+SHA256: `291f352a19bbbceda4cd397dc23bb224a73502ddf28e5d6ebd80bf474652bb9a`.

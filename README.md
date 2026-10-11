@@ -7,6 +7,17 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate walking test v2: ~85%,100%,120%
+
+[Download standing walk levels v2](artifacts/MovementLab_Standing_Walk_Three_Levels_v2.zip).
+Default walking level1 and crouch-exit walking selection now target85% (26 FPS,
+86.67% actual nominal playback). Level2 uses untouched native100% walking;
+level3 uses36 FPS for120% nominal walking pace. Scroll in standing walking mode;
+no F8 toggle. Existing Ctrl walk/jog, Shift sprint, crouch wheel and movement
+logic retained. Extract separately and run `Launch-Movement-Test.cmd`.
+Local translated-controller/schema/PBO checks pass; actual120% travel speed and
+animation require in-game testing. Earlier versions and approved v4 are preserved.
+
 ## Separate version: three standing walking speeds
 
 [Download standing walk levels v1](artifacts/MovementLab_Standing_Walk_Three_Levels_v1.zip).
