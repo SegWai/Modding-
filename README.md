@@ -1,3 +1,11 @@
+## Crouch wheel v5: hidden 90% comparison
+
+[Download v5](artifacts/MovementLab_Crouch_Wheel_Test_v5.zip). Extract into a fresh
+folder and run `Launch-Movement-Test.cmd`. **F8 OFF** (default) compares the v4
+behavior; **F8 ON** inserts a brief automatic hidden 90% slow-crouch clip stage
+when scrolling downward from level 5. Five selectable levels remain unchanged;
+upward scrolling never triggers the hidden stage. Native visual result pending.
+
 ## Experimental crouch wheel v4: timed animation blends
 
 [Download v4](artifacts/MovementLab_Crouch_Wheel_Test_v4.zip). Extract the entire

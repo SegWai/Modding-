@@ -106,3 +106,34 @@ Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v4.zip`.
 SHA256: `00b73f7cb53753ee4ff648a3d89b246091d5b4e697dff5a0dfaf3f566f061954`.
 Rollback: close DayZ and run the existing original v1 launcher folder. Neither
 preparer writes the original DZ assets.
+
+
+## V5: user-requested hidden 90% A/B bridge
+
+Separate package, F8 defaults OFF. The v4 four-tier timed selector is retained
+under `CroWheelNormalG`; a new outer timed blend uses a transient float variable
+`MovementLabHidden90` to select `CroHidden90G`. Its added Locomotion group copies
+all CroWheel4 mappings, changing only six walk paths to H90 variants retimed to
+27FPS (90% of original slow-crouch 30FPS). This does not establish 90% of measured
+native fast-crouch velocity; level5 is a different native gait. Existing native
+gait interpolation is retained during bridge entry/exit.
+
+Only a moving, eligible crouch scroll-down from selected level5 with effective
+pace at least4.95 starts the bridge. .10s entry, .10s hidden stage, .10s exit;
+lower queued targets resume existing v4 deceleration afterward. Further downward
+scroll never resets or skips the stage. Upward scroll, Shift, no directional
+input, ineligible stance, or F8 OFF cancels it. The hidden stage never changes the
+selected integer wheel level, is never directly selectable and cannot persist.
+OFF adds an inactive graph wrapper but retains the original v4 controller path;
+initial activation/transition interpretation of the wrapper remains native-test
+pending. F8 toggles only this experiment; existing F7 remains separate.
+
+Validation: actual translated default-OFF controller regressions and new bridge
+cases passed at30/60/144FPS, both callback orders. Complete added group mappings,
+15-group AST count, quote-aware graph/table brace balance, six supplied ANM
+27FPS-only retiming checks, PBO contents/footer and ZIP integrity passed.
+Windows preparation, native Enforce compilation, measured travel and visual
+foot-contact continuity remain unexecuted here. Original v1 and v4 unchanged.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v5.zip`.
+SHA256: `e0b24bb92428ed6429dad7419c7b64a0f85f2b93435e83791e477702304b5a41`.
