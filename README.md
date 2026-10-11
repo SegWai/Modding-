@@ -15,6 +15,21 @@ is now the working default listed above.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Video reference and direct crouch pose-blend test
+
+[Side-by-side reversed upward vs actual downward](artifacts/Crouch_Transition_Reference/reversed_upward_vs_actual_downward.mp4).
+[Full uploaded clip reversed](artifacts/Crouch_Transition_Reference/full_clip_reversed.mp4).
+[Download pose-blend test v2](artifacts/MovementLab_Crouch_PoseExit_Test_v2.zip).
+
+Uploaded4.14s clip shows abrupt right-arm/upper-body change around2.4–2.5s.
+Comparison uses reversed source0.2–1.4s on left and source2.2–3.4s forward on right,
+both half-speed; reversed ground/steps are only a visual pose reference.
+New separate test from corrected scroll v2 controls crouch fast pose contribution
+directly over.55s on fast->87. Rejected speed-descent v1 excluded. Native upward
+blend and all velocity requests retained. Clips play forward, no freeze/rewind.
+No claim of exact native foot-phase transfer; local graph-variable/controller
+checks pass, native compile/visual continuity pending. Default v2 preserved.
+
 ## Separate test: smooth fast-crouch descent to87%
 
 [Download crouch descent test](artifacts/MovementLab_Crouch_Descent_Test_v1.zip).

@@ -825,3 +825,37 @@ continuity require local test. Corrected v2 default/source/artifact unchanged.
 
 Artifact: artifacts/MovementLab_Crouch_Descent_Test_v1.zip.
 SHA256:f02fd604a6f7df70ddc303af39a91588fd32ccff777618ec43f567385524c166.
+
+## Uploaded transition video and direct pose-weight experiment v2
+
+User rejected descentv1 and provided4.14s854x48030FPS recording. Contact-sheet and
+full30FPS2.2–3.0s frames inspected: right forearm drops and upper-body pose changes
+rapidly around2.4–2.5s. Feet are not fully visible; cannot establish loop frame0
+reset from this recording. Upward transition spans pose changes more gradually.
+Generated whole clip reverse (124frames4.133s, no audio) and side-by-side reversed
+upward source0.2–1.4s vs actual downward2.2–3.4s, both half-speed. Cropped comparison
+800x480,71frames2.367s. First preview inspected and both videos fully decode.
+Reversed clip is user-requested visual reference, not desired backward foot motion.
+
+New pose-exit v2 built separately from corrected scroll v2, excludes rejected
+gait-descent controller. On fast->saved87 edge (achievedgait>2.05), new controller
+captures native healthy fast weight clamp(gait-2,0,1), smoothstep fades it to0 over
+.55s. Two independent root floats indicate active override and fast-pose weight.
+Only CroRunSprintBlendMLWheel expression changes: inactive retains original
+native factor; active uses explicit decaying weight times(1-Injured). Native
+velocity requests1/3 untouched, source clips continue forward. No frame freeze,
+clip rewind or synchronization-table rewrite. Same eligibility/stop/stance/
+lower-tier/Shift reversal cancellation. Controller timer only advances once per
+command callback. This tests body-pose continuity; exact walking foot phase
+transfer is still unproven, not solved merely by numeric blend weights.
+
+Actual translated controller/independent variable bindings tests pass30/60/144FPS
+both callback orders: fast->87 startsweight1 while requestgait remains1, monotonic
+decay/complete, mission reads don't advance timer, Shift reverse, lower tier/input
+stop cancellation and inherited standing/crouch/strafe/jog-sprint regressions.
+Schema/mappings, preparer/mission/template/instance byte preservation checked;
+PBO/ZIP verified. Native graph expression/compiler/playback/phase need local test.
+Corrected scroll v2 remains default and untouched.
+
+Artifact: artifacts/MovementLab_Crouch_PoseExit_Test_v2.zip.
+SHA256:e1a6e4999c45abb0553f2e1dc187e9de091bdb49939effd49eecdc3614e024e3.
