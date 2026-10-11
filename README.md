@@ -1,3 +1,11 @@
+## Experimental crouch wheel v4: timed animation blends
+
+[Download v4](artifacts/MovementLab_Crouch_Wheel_Test_v4.zip). Extract the entire
+ZIP into a fresh folder, close DayZ, keep Steam running and run
+`Launch-Movement-Test.cmd`. This separate experiment adds timed pose transitions
+between wheel tiers. Native visual result is pending; v1 remains the approved
+working version below. See [investigation](docs/crouch-wheel-timing-investigation.md).
+
 # MovementLab
 
 DayZ remains the base game. The goal is original player animations and movement
