@@ -7,6 +7,18 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Sprint travel120 diagnostic: physical displacement
+
+[Download sprint travel test](artifacts/MovementLab_Sprint_Travel120_Test_v1.zip).
+Earlier sprint clip120 test reportedly slowed the character; not a verified fix.
+This separate test starts from corrected scroll v2 and attempts20% extra horizontal
+displacement at grounded achieved scroll-sprint level3 using documented OnPhysMove
+and CollisionMoveTest. Native sprint animations retained; foot sliding possible.
+Level2 native100 and99->jog100 boundary remain. Logs include measured GetPosition
+ground speed atlevels2/3 plus native/adjusted proposals. Native callback semantics,
+actual velocity and compilation require local test; local arithmetic/gates and
+controller/package checks passed. All prior packages and baseline preserved.
+
 ## Sprint120 test from corrected scroll v2
 
 [Download sprint120 test](artifacts/MovementLab_Sprint120_Test_v1.zip).

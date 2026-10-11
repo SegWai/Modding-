@@ -691,3 +691,38 @@ test requirements. Approved v4 and earlier packages preserved.
 
 Artifact: artifacts/MovementLab_Sprint120_Test_v1.zip.
 SHA256:af465ae04d9e0cc55efdad60cdc04692734b0236c45142d7b9c29152764c8c11.
+
+## Sprint travel120 physical diagnostic
+
+User reported earlier sprint120 clip test very slow, then requested actual faster
+travel. Exact earlier failure not established; no new native logs provided.
+New separate test starts from corrected scroll v2, preserves all animation/
+preparer/mission bytes, adds sprintlevel3 and physical callback intervention.
+Official Human SDK documents OnPhysMove(dt,transform[4]) before final transform/
+alignment, plus CollisionMoveTest(dir,offset,scale,ignore,out hit...) collision
+fraction. Native override gait3 is an animation/gait state, not m/s and cannot
+establish120% physical speed. New callback calculates horizontal delta between
+current GetPosition and proposed transform translation, tests120% proposal with
+CollisionMoveTest, applies max(1,1.2*fraction) to x/z preserving height and validated
+native base movement. Only eligible grounded unattached local fully achieved
+standing scroll-sprintlevel3, directional input, no braking and sane timestep.
+No SetPosition teleport or physics velocity override. Native replay/network
+semantics are not validated; experiment is offline only.
+
+Added logs record proposed base/adjusted m/s and independently sample actual
+GetPosition x/z travel over0.5s intervals for native sprintlevel2 versuslevel3.
+Proposal logs are not proof of final speed; actual speed logs/native test needed.
+Native animation stays100% to isolate travel, so foot sliding may occur. Correction
+against cached heading/native movement may still reject transform adjustment;
+documented callback availability does not prove practical result.
+
+Actual callback translated to C++ against mock checks120% arithmetic at30/60/144FPS,
+height preservation, obstacle fraction/no extra travel, eligibility/falling/parent/
+gait/brake/level gates. Existing actual controller regression harness passes after
+excluding separate physics/measurement callbacks from controller-only SDK. Ground
+measurement callback not native-tested. Animation/preparer/mission byte preservation
+and PBO/ZIP verified. Native Windows compile/playback/final displacement unexecuted.
+Earlier tests and approved v4 preserved.
+
+Artifact: artifacts/MovementLab_Sprint_Travel120_Test_v1.zip.
+SHA256:69a88634540842e5d8849e19dadd3cd329e62de57b07da3e74f5be951785c8e6.
