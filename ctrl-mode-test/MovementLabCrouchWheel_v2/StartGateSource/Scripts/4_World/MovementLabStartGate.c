@@ -67,8 +67,8 @@ modded class PlayerBase
             float rate = 10.0;
             if (m_MovementLabCrouchLevel < m_MovementLabCrouchPace)
                 rate = 5.0;
-            float change = Math.Clamp(m_MovementLabCrouchLevel - m_MovementLabCrouchPace, -rate * Math.Max(dt, 0), rate * Math.Max(dt, 0));
-            m_MovementLabCrouchPace = m_MovementLabCrouchPace + change;
+            float paceChange = Math.Clamp(m_MovementLabCrouchLevel - m_MovementLabCrouchPace, -rate * Math.Max(dt, 0), rate * Math.Max(dt, 0));
+            m_MovementLabCrouchPace = m_MovementLabCrouchPace + paceChange;
         }
         else
             m_MovementLabCrouchPace = m_MovementLabCrouchLevel;
