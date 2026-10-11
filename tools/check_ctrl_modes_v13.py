@@ -309,7 +309,7 @@ int main(){
  // A brief sprint request cannot inflate the achieved walking stop.
  game={};api={};Probe brief;MissionProbe bm;game.player=&brief;api.a[0].value=1;api.a[6].value=1;
  tick(brief,bm,.016f,false);api.a[0].value=0;tick(brief,bm,.016f,false);assert(bm.m_MovementLabBrakeStart<=1);
- std::cout<<"Standing/crouch/start/stop regression checks and signed pure-strafe momentum checks passed at 30/60/144 FPS, both callback orders. Opposite momentum persists initially; zero crossing within 0.15-0.30s; spam slew bounded; native ownership restored on release. Native DayZ compile/animation validation pending.\n"; live mode returns leave native direction unpinned. Four crouch rules passed across prior walk/jog modes and release orders: native fast crouch, preserved slow exit mode, jog-only fast exit and fresh standing Shift restores sprint. Jog-to-walk momentum is monotonic, retains more early gait, and finishes on the same tick/deadline as v9 in every direction. Pure jogging strafes slow below 1.6 and recover to 2 with bounded per-frame gait changes, including spam; jogging reversals trigger bounded native-filter resistance; sustained/spammed/diagonal/both-held inputs do not restart startup, braking or angle ownership; resistance fades and excludes walking/sprint/crouch. Native Enforce/animation test pending.\n";
+ std::cout<<"Standing/crouch/start/stop regression checks and signed pure-strafe momentum checks passed at 30/60/144 FPS, both callback orders. Opposite momentum persists initially; zero crossing within 0.15-0.30s; spam slew bounded; native ownership restored on release. Native DayZ compile/animation validation pending.\n";
 }
 '''
 with tempfile.TemporaryDirectory(prefix='ctrl-modes-') as temp:
