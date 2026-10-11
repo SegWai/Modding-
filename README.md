@@ -3,6 +3,15 @@
 DayZ remains the base game. The goal is original player animations and movement
 inspired by the weight and pacing of Red Dead Redemption 2.
 
+## Working crouch wheel version: v1
+
+[Download working crouch wheel v1](https://github.com/SegWai/Modding-/raw/6a17a24/artifacts/MovementLab_Crouch_Wheel_Test_v1.zip).
+
+The user confirmed this version works. Keep `ctrl-mode-test/MovementLabCrouchWheel_v1/`
+and its ZIP unchanged. Subsequent wheel momentum v2/v3 tests were rejected for
+jumping animations. Continue using v1 while investigating continuous playback
+and phase-preserving transitions. See [timing findings](docs/crouch-wheel-timing-investigation.md).
+
 ## Current approved stable baseline: v10 Strafe Test v2
 
 [Download the stable version](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v10_Strafe_Test_v2.zip).
