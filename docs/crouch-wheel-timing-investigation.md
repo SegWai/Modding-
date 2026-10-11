@@ -493,3 +493,34 @@ All earlier packages and approved Six Levels v4 remain unchanged.
 
 Artifact: `artifacts/MovementLab_Standing_Walk_Three_Levels_v3.zip`.
 SHA256: `5708c33fef03dd6c62968b6a199a266a5cd2805d7fa4fab7c16e2a0a32bac394`.
+
+## Standing jogging two-level wheel v1
+
+User requested jogging level1 100%, level2 130%. Separate source/artifact built
+from walking v3, whose native speed effect remained unconfirmed. Six RunB/BL/BR/F/
+FL/FR healthy standing resources get39FPS variants from original30FPS, retaining
+all bytes except FPS. Jog selection defaults1 and clamps1..2 with wheel input
+only in eligible standing jog mode without held Shift. Ctrl, crouch and walking
+retain prior mode/input logic. Jog selection persists across mode and stance
+changes; no additional screen message or F8 comparison added.
+
+Full upright cloned branch now uses five custom groups: L1,L1J2,L2,L2J2,NJ2,
+combined with original native Erc group. Saved walking encoding3/2/1 plus3 when
+jogging130 selected resolves graph inputs6/5/4. Each J2 group copies matching
+walk profile and original native Erc non-jog rows, retargeting only six Run slots
+to39FPS variants. 195 custom mappings (39x5) in original58-slot schema. Native
+full sprint resources are unchanged; jogging parts of acceleration/braking/sprint
+blends inherit chosen jogging pace. Existing gait and timer logic preserved.
+Jog wheel processing runs before walking graph update for immediate selection.
+
+Validation: actual translated controller baseline plus jogging defaults/clamps,
+walk/jog/crouch wheel isolation, Shift/menu/prone/vanilla exclusions, persistence,
+all six combinations,30/60/144FPS both callback orders passed. Schema/order and
+mapping scopes, all combined groups' non-jog row equality, native graph node
+preservation and39/30=1.3 FPS-only mutation checked. PBO/ZIP verification passed.
+Windows preparer, native compilation, phase continuity and actual physical travel
+speed remain local test requirements. Original approved v4 and prior packages
+remain unchanged.
+
+Artifact: `artifacts/MovementLab_Standing_Jog_Two_Levels_v1.zip`.
+SHA256: `817d231f3aa0d214ac9a9a72c5b80dd696abdfb2672a47d2c0a0947a792212cd`.

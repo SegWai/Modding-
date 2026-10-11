@@ -1,0 +1,1 @@
+Jogging130% uses39FPS variants of original30FPS RunB/BL/BR/F/FL/FR clips. Custom upright branch group selection combines each walking profile with jogging100 or130%. Native sprint and all other resources are preserved. Existing gait/timer logic is unchanged. Native playback and velocity pending local confirmation.

@@ -7,6 +7,20 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate jogging wheel test:100%,130%
+
+[Download jogging two-level test v1](artifacts/MovementLab_Standing_Jog_Two_Levels_v1.zip).
+Built on walking v3's whole upright branch test. In standing jogging mode,
+scroll up selects130% and scroll down100% (default). Ctrl still changes walk/jog;
+Shift still sprints. Walking and crouch retain independent levels. Jogging level
+persists across mode/stance changes. No new screen messages or F8 toggle.
+Six separate jogging clips use39FPS instead of native30FPS. Existing gait/timer
+logic and sprint clips preserved; jogging portions of transitions use saved pace.
+Extract separately and run `Launch-Movement-Test.cmd`. Native playback and travel
+speed pending; local translated-controller/schema/package checks passed. If
+unchanged, close DayZ, run `Collect-Logs.cmd`, and send its generated ZIP.
+Earlier experiments and approved v4 remain preserved.
+
 ## Walking test v3: full upright branch selection
 
 [Download walking test v3](artifacts/MovementLab_Standing_Walk_Three_Levels_v3.zip).
