@@ -7,6 +7,19 @@ future experiments separately.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 
+## Separate version: three standing walking speeds
+
+[Download standing walk levels v1](artifacts/MovementLab_Standing_Walk_Three_Levels_v1.zip).
+Extract separately and run `Launch-Movement-Test.cmd`. Ctrl selects walking;
+scroll up/down in standing walk mode selects70%, approximately85%, or native100%.
+Walking level1 (70%) is the initial selection and resets on every crouch-to-standing
+exit. Existing crouch-exit walk/jog mode rules are retained: the reset changes
+the walking speed selection, not the prior jog mode. F8 is removed. Shift sprint
+and the independent crouch wheel retain their existing behavior. Native animation
+FPS is integer, so level2 uses26/30=86.67%, nearest to85%; level1 is exact21/30=70%.
+Native confirmation pending; schema, translated controller and package checks
+pass. Approved Six Levels v4 and the previous F8 comparison remain preserved.
+
 ## Separate test: standing walking at half pace
 
 [Download F8 walking comparison](artifacts/MovementLab_Standing_Walk_Half_Speed_Test_v1.zip).

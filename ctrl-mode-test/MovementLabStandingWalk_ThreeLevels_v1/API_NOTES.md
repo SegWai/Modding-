@@ -1,0 +1,1 @@
+Only crouch gait request condition changes: moving && shift (Shift or savedlevel6) explicitly owns gait3. Original saved default60%/sprint-entry6 logic, standing methods, mission, graph/profile/FPS remain unchanged. Native playtest pending.

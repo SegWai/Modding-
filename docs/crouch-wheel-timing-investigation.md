@@ -400,3 +400,36 @@ The approved v4 ZIP checksum remains unchanged.
 
 Artifact: `artifacts/MovementLab_Standing_Walk_Half_Speed_Test_v1.zip`.
 SHA256: `5923d1ba5fc750cbc83df733d5ce04348451fe7132ea06de20f0681aa09ae5d3`.
+
+## Standing walk three levels v1 (separate version)
+
+User requested removing F8 and walking levels70/85/100, default70 and crouch-exit70.
+Created separate source/package; previous F8 test and approved Six Levels v4
+remain unchanged. No F8 flag, input handler or animation variable remains.
+Walking selection defaults1 and clamps1..3, scrollable only when standing in
+walking mode without Shift and under the existing local-player/menu/command
+eligibility checks. Crouch retains its independent wheel handler. On a crouch
+to upright edge, standing walk selection resets1 before graph update; same-frame
+standing wheel input is ignored so the exit remains70%. Existing crouch-exit gait
+mode rules are retained; this resets walk pace rather than forcing jog to walk.
+
+Custom standing column has L1/L2, six directions each. L1 clips retime30->21FPS
+(exact70%). L2 retimes30->26FPS (86.67%, nearest integer FPS to85%). Level3 selects
+untouched native walking. Graph selector encoding3/2/1 corresponds to walking
+levels1/2/3; non-erect stance masks to native1. Existing crouch and all other graph
+nodes/mappings are preserved, and all native clips retain original data. The
+script always applies selected walking graph level when mod enabled; no toggle
+is needed. F7 vanilla comparison still selects native clips. Walking portions
+of start/braking transitions inherit chosen pace; jog/sprint remain original.
+
+Tests: translated actual controller at30/60/144FPS, both callback orders, verifies
+all level changes and limits, default/reset after slow and fast crouch, independent
+crouch scrolling, standing Shift/jog/menu input exclusion, separate float bindings
+and vanilla bypass. Full inherited standing/crouch/strafe regression harness passes.
+Schema counts/sorted columns/mapping scope, all selectors, baseline node/method
+preservation, FPS-only mutation and approved ZIP integrity checked. PBO/ZIP checks
+pass. Native DayZ compile/playback/root motion and Windows preparer remain local
+test requirements; this is a separate test, not a newly approved stable baseline.
+
+Artifact: `artifacts/MovementLab_Standing_Walk_Three_Levels_v1.zip`.
+SHA256: `ee657ba430f8d98212aec3f38ef014b6e7e1c02dea06a65b87594c2caff5b8f3`.
