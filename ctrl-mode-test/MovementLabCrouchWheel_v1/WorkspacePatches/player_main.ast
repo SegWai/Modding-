@@ -29,7 +29,7 @@ $animsettemplate {
     "FacialTalking"
     "FacialTired"
     "FacialUnconscious"
-   
+
   }
  }
  $groupType "ActionContinuous" {
@@ -175,7 +175,7 @@ $animsettemplate {
     "WashHandsPondCro"
     "WashHandsWellCro"
     "WringCro"
-   
+
   }
   $anims {
     "Action"
@@ -185,7 +185,7 @@ $animsettemplate {
     "Loop"
     "Out"
     "Out2"
-   
+
   }
  }
  $groupType "ActionInLoopOut" {
@@ -214,12 +214,12 @@ $animsettemplate {
     "LowerFlag"
     "MineRockErc"
     "RaiseFlag"
-   
+
   }
   $anims {
     "Cancel"
     "InLoopOut"
-   
+
   }
  }
  $groupType "ActionOnce" {
@@ -342,12 +342,12 @@ $animsettemplate {
     "trailer_mask_Dallas"
     "trailer_mask_Hoxton"
     "trailer_mask_Wolf"
-   
+
   }
   $anims {
     "Once"
     "OnceRas"
-   
+
   }
  }
  $groupType "Combat" {
@@ -357,7 +357,7 @@ $animsettemplate {
     "Cro"
     "Erc"
     "Pne"
-   
+
   }
   $anims {
     "Bayonet"
@@ -390,7 +390,7 @@ $animsettemplate {
     "StrikeR03"
     "StrikeRInplace01"
     "StrikeRInplace03"
-   
+
   }
  }
  $groupType "Damage" {
@@ -403,7 +403,7 @@ $animsettemplate {
     "ErcRas"
     "Pne"
     "PneRas"
-   
+
   }
   $anims {
     "Heavy B"
@@ -419,7 +419,7 @@ $animsettemplate {
     "Light F Block"
     "Light L"
     "Light R"
-   
+
   }
  }
  $groupType "Deaths" {
@@ -434,7 +434,7 @@ $animsettemplate {
     "PneBack"
     "PneBackRas"
     "PneRas"
-   
+
   }
   $anims {
     "BodyBack"
@@ -453,7 +453,7 @@ $animsettemplate {
     "UnconsciousWaterFront"
     "UnconsciousWaterLeft"
     "UnconsciousWaterRight"
-   
+
   }
  }
  $groupType "Falls" {
@@ -463,7 +463,7 @@ $animsettemplate {
     "Erc"
     "Pne"
     "Uncon"
-   
+
   }
   $anims {
     "DeathForward"
@@ -473,7 +473,7 @@ $animsettemplate {
     "LandHeavy"
     "LandLight"
     "LandMedium"
-   
+
   }
  }
  $groupType "Gesture" {
@@ -534,7 +534,7 @@ $animsettemplate {
     "WatchingCro"
     "WatchingErc"
     "WatchingPne"
-   
+
   }
   $anims {
     "In"
@@ -553,7 +553,7 @@ $animsettemplate {
     "WalkF"
     "WalkFL"
     "WalkFR"
-   
+
   }
  }
  $groupType "GestureOnce" {
@@ -600,12 +600,12 @@ $animsettemplate {
     "TauntThroatCro"
     "TauntThroatErc"
     "TauntThroatPne"
-   
+
   }
   $anims {
     "Once"
     "RasOnce"
-   
+
   }
  }
  $groupType "Jumping" {
@@ -616,7 +616,7 @@ $animsettemplate {
     "IdleR"
     "LFoot"
     "RFoot"
-   
+
   }
   $anims {
     "JumpBLIn"
@@ -635,7 +635,7 @@ $animsettemplate {
     "JumpSpotOut"
     "JumpSprintIn"
     "JumpSprintOut"
-   
+
   }
  }
  $groupType "Kneeling" {
@@ -645,7 +645,7 @@ $animsettemplate {
     "Cro"
     "Erc"
     "Pne"
-   
+
   }
   $anims {
     "ActionLoop"
@@ -653,7 +653,7 @@ $animsettemplate {
     "Loop"
     "Out"
     "Out2"
-   
+
   }
  }
  $groupType "Ladder" {
@@ -662,7 +662,7 @@ $animsettemplate {
   $groupnames {
     "LeftFoot"
     "RightFoot"
-   
+
   }
   $anims {
     "Down"
@@ -685,7 +685,7 @@ $animsettemplate {
     "Look"
     "Up"
     "UpFast"
-   
+
   }
  }
  $groupType "Locomotion" {
@@ -706,7 +706,7 @@ $animsettemplate {
     "PneRas"
     "WaterHigh"
     "WaterLow"
-   
+
   }
   $anims {
     "Aim"
@@ -767,7 +767,7 @@ $animsettemplate {
     "WalkL"
     "WalkR"
     "WalkSlidingPose"
-   
+
   }
  }
  $groupType "LocomotionInjured" {
@@ -782,7 +782,7 @@ $animsettemplate {
     "PneB"
     "PneBRas"
     "PneRas"
-   
+
   }
   $anims {
     "Aim"
@@ -835,7 +835,7 @@ $animsettemplate {
     "WalkR"
     "WalkSlidingPose"
     "WeaponObstructed"
-   
+
   }
  }
  $groupType "RPS" {
@@ -843,7 +843,7 @@ $animsettemplate {
   #nanims 6
   $groupnames {
     "Erc"
-   
+
   }
   $anims {
     "In"
@@ -852,7 +852,7 @@ $animsettemplate {
     "Pump"
     "Rock"
     "Scissors"
-   
+
   }
  }
  $groupType "Restrained" {
@@ -863,7 +863,7 @@ $animsettemplate {
     "Erc"
     "Kneel"
     "Pne"
-   
+
   }
   $anims {
     "GoCrouch"
@@ -889,7 +889,7 @@ $animsettemplate {
     "WalkF"
     "WalkFL"
     "WalkFR"
-   
+
   }
  }
  $groupType "Suicide" {
@@ -907,14 +907,14 @@ $animsettemplate {
     "sword"
     "unarmed"
     "woodaxe"
-   
+
   }
   $anims {
     "Cancelled"
     "In"
     "Loop"
     "Out"
-   
+
   }
  }
  $groupType "Surrender" {
@@ -924,7 +924,7 @@ $animsettemplate {
     "Cro"
     "Erc"
     "Pne"
-   
+
   }
   $anims {
     "GoCrouch"
@@ -949,7 +949,7 @@ $animsettemplate {
     "WalkFR"
     "WalkL"
     "WalkR"
-   
+
   }
  }
  $groupType "Swim" {
@@ -957,7 +957,7 @@ $animsettemplate {
   #nanims 9
   $groupnames {
     "Normal"
-   
+
   }
   $anims {
     "Fast"
@@ -969,7 +969,7 @@ $animsettemplate {
     "StrafeL"
     "StrafeR"
     "UnconDeath"
-   
+
   }
  }
  $groupType "Throw" {
@@ -980,7 +980,7 @@ $animsettemplate {
     "Erc"
     "Pne"
     "PoB"
-   
+
   }
   $anims {
     "AimPose"
@@ -1008,7 +1008,7 @@ $animsettemplate {
     "WalkF"
     "WalkFL"
     "WalkFR"
-   
+
   }
  }
  $groupType "Unconscious" {
@@ -1023,7 +1023,7 @@ $animsettemplate {
     "WaterDeep"
     "WaterShallowCro"
     "WaterShallowErc"
-   
+
   }
   $anims {
     "Death"
@@ -1038,7 +1038,7 @@ $animsettemplate {
     "InWalkRSlow"
     "Loop"
     "Out"
-   
+
   }
  }
  $groupType "Vehicle" {
@@ -1055,7 +1055,7 @@ $animsettemplate {
     "Truck_01_cargo"
     "Truck_02"
     "Van_01"
-   
+
   }
   $anims {
     "AccelerationSpine"
@@ -1136,7 +1136,7 @@ $animsettemplate {
     "PassengerR_SwitchSeat_CoDriver"
     "PassengerR_SwitchSeat_Driver"
     "PassengerR_SwitchSeat_PassengerL"
-   
+
   }
  }
  $groupType "VehicleActions" {
@@ -1153,7 +1153,7 @@ $animsettemplate {
     "Truck_01_cargo"
     "Truck_02"
     "Van_01"
-   
+
   }
   $anims {
     "CodriverDoorClose"
@@ -1173,7 +1173,7 @@ $animsettemplate {
     "PassengerLDoorOpen"
     "PassengerRDoorClose"
     "PassengerRDoorOpen"
-   
+
   }
  }
  $groupType "VerticalMovement" {
@@ -1181,7 +1181,7 @@ $animsettemplate {
   #nanims 9
   $groupnames {
     "ErcRun"
-   
+
   }
   $anims {
     "Climb110"
@@ -1193,7 +1193,7 @@ $animsettemplate {
     "ClimbOver150Out"
     "ClimbOver190In"
     "ClimbOver190Out"
-   
+
   }
  }
  $groupType "WeaponChange" {
@@ -1202,7 +1202,7 @@ $animsettemplate {
   $groupnames {
     "ErcCro"
     "Pne"
-   
+
   }
   $anims {
     "1HDLeftBackSlotHide"
@@ -1226,7 +1226,7 @@ $animsettemplate {
     "RifleRightBackSlotHide"
     "RifleRightBackSlotShow"
     "TakeHeavyItem"
-   
+
   }
  }
  $groupType "WeaponOperations" {
@@ -1235,7 +1235,7 @@ $animsettemplate {
   $groupnames {
     "ErcRas"
     "PneRas"
-   
+
   }
   $anims {
     "ChamberingBulletL"
@@ -1280,7 +1280,7 @@ $animsettemplate {
     "ReloadMagazineDetach"
     "ReloadNoMagBullet"
     "ReloadNoMagNoBullet"
-   
+
   }
  }
 }

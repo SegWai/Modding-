@@ -5,5 +5,5 @@ import package_movement_logic_test as packer
 packer.SOURCE=packer.ROOT/'ctrl-mode-test/MovementLabCrouchWheel_v1'
 packer.OUTPUT=packer.ROOT/'artifacts/MovementLab_Crouch_Wheel_Test_v1.zip'
 packer.ARCHIVE_ROOT=packer.SOURCE.name
-packer.VALIDATION_EXTRA={'variant':'five-level wheel graph groups and local complete unarmed/workspace repacks','evidence':'v3 RPT original unarmed clips missing under shared-prefix package','limitations':'Windows PowerShell preparer and DayZ native playtest unexecuted here; original source assets required locally'}
+packer.VALIDATION_EXTRA={'variant':'five-level wheel graph groups and local complete unarmed/workspace repacks','evidence':'v3 RPT original unarmed clips missing under shared-prefix package','checks':'translated actual wheel/controller checks passed at 30/60/144 FPS both orders; graph/group/path consistency and resource brace balance checked','limitations':'Windows PowerShell preparer and DayZ native playtest unexecuted here; original source assets required locally'}
 if __name__=='__main__':packer.main()

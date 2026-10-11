@@ -2117,7 +2117,7 @@ $animsetinstance {
    "WeaponChange.Pne.RifleLeftBackSlotShow" "{7893098C03EA3A0B}DZ/anims/anm/player/weaponswitch/p_pne_slot_backL_show_rfl.anm"
    "WeaponChange.Pne.RifleRightBackSlotHide" "{A8512FA337457F51}DZ/anims/anm/player/weaponswitch/p_pne_slot_backR_hide_rfl.anm"
    "WeaponChange.Pne.RifleRightBackSlotShow" "{95504290FA131C98}DZ/anims/anm/player/weaponswitch/p_pne_slot_backR_show_rfl.anm"
-  
+
    "Locomotion.CroWheel2.Aim" "{45460379923FAC3E}DZ/anims/anm/player/layered/aim/unarmed/p_erc_ras_aimspace.anm"
    "Locomotion.CroWheel2.GoErect" "{BDC43D0B94F0D0BA}DZ/anims/anm/player/moves/unarmed/transitions/p_cro_trans_erc_low.anm"
    "Locomotion.CroWheel2.GoProne" "{7F855C09D37A0A56}DZ/anims/anm/player/moves/unarmed/transitions/p_cro_trans_pne_low.anm"
@@ -2231,3 +2231,5 @@ $animsetinstance {
    "Locomotion.CroWheel5.WalkFR" "DZ/anims/anm/player/moves/unarmed/WheelVariants/L5/p_cro_walkfr.anm"
    "Locomotion.CroWheel5.WalkSlidingPose" "{0A1AFB5EABA0E9F1}DZ/anims/anm/player/layered/stop/p_cro_run_stop_poses.anm"
  }
+
+}

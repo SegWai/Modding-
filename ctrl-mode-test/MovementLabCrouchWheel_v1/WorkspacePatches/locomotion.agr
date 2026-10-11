@@ -159,11 +159,11 @@ Y(45):     X(-45) = 7, X(0) = 7, X(45) = 7"
 			 "CroIdleLowArmIK" "" "CroIdleLowG" "//! global values
 weight = 1.0
 
-LHandIKTarget 
+LHandIKTarget
 chain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 chainAxis = +x
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -204,11 +204,11 @@ chainAxis = -x"
 			 "CroMoveLowArmIK" "" "CroMoveLowG" "//! global values
 weight = 1.0
 
-LHandIKTarget 
+LHandIKTarget
 chain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 chainAxis = +x
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -473,11 +473,11 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 			 "ErcIdleLowArmIK" "" "ErcIdleLowG" "//! global values
 weight = 1.0
 
-LHandIKTarget 
+LHandIKTarget
 chain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 chainAxis = +x
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -534,11 +534,11 @@ chainAxis = -x"
 			 "ErcMoveLowArmIK" "" "ErcMoveLowG" "//! global values
 weight = 1.0
 
-LHandIKTarget 
+LHandIKTarget
 chain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 chainAxis = +x
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -847,7 +847,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 			 "FallMaster" "TagFall"
 			$States 14 {
 				$State {
-					 "FallForward" "TagFalling" "FallForwardBlendT" "(IsCommand(CMD_Fall) && GetCommandI(CMD_Fall) == 0) || 
+					 "FallForward" "TagFalling" "FallForwardBlendT" "(IsCommand(CMD_Fall) && GetCommandI(CMD_Fall) == 0) ||
 (IsCommand(CMD_Restrained_Fall) && GetCommandI(CMD_Restrained_Fall) == 0) " "realtime" 0
 					$EditorData {
 						#EditorPos 48.5 9.9000006
@@ -987,23 +987,23 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 //   |                |-  LeftHandIKTarget  (where left hand is on weapon)
 //   |- RightHandOrigin ( inverse transform where hand originally was)
 
-// basic setup - 
+// basic setup -
 // hand - bone which represents hand holding weapon
 // weapon - bone which represents weapon node in hand
 // weaponrotator - bone - around which weapon rotates
 hand = RightHand
 weapon = RightHand_Dummy
-weaponrotator = RightArm 
+weaponrotator = RightArm
 weaponaxis= -x
 
-//! 
+//!
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainaxis=-x
 secchain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 secchainaxis=+x
 
-ikpose_chainoffset = RightHandOrigin              						// bone in ikpose specifying where was 
-ikpose_weaponoffset = RightHand_Dummy      								// weapon offset from RHand 
+ikpose_chainoffset = RightHandOrigin              						// bone in ikpose specifying where was
+ikpose_weaponoffset = RightHand_Dummy      								// weapon offset from RHand
 ikpose_secchainoffset = LeftHandIKTarget      							// secondary chain ik target offset (relative to weapon)
 ikpose_chainmiddledir = RightForeArmDirection							// hand to elbow direction (from hand)
 ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)
@@ -1180,11 +1180,11 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 			 "IdleLowIK" "" "IdleLowSTM" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x"
 			$EditorData {
@@ -1258,11 +1258,11 @@ chainAxis = -x"
 			 "IdleRasIK" "" "IdleRasSTM" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x"
 			$EditorData {
@@ -1320,7 +1320,7 @@ chainAxis = -x"
 				 -90.0 "JumpBLInAnim"
 				 90.0 "JumpBRInAnim"
 				 180.0 "JumpBRightInAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 29.2000008 5.2000003
@@ -1365,7 +1365,7 @@ chainAxis = -x"
 				 -90.0 "JumpBLOutAnim"
 				 90.0 "JumpBROutAnim"
 				 180.0 "JumpBRightOutAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 37.9000015 5.2000003
@@ -1410,7 +1410,7 @@ chainAxis = -x"
 				 -0.001 "JumpFLeftInAnim"
 				 0.0 "JumpFRightInAnim"
 				 90.0 "JumpFRInAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 24.8000011 5.2000003
@@ -1455,7 +1455,7 @@ chainAxis = -x"
 				 -0.001 "JumpFLeftOutAnim"
 				 0.0 "JumpFRightOutAnim"
 				 90.0 "JumpFROutAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 33.7999992 5.2000003
@@ -2470,11 +2470,11 @@ chainAxis = -x"
 			 "MovementLowIK" "" "MovementLowSTM" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x"
 			$EditorData {
@@ -2540,11 +2540,11 @@ chainAxis = -x"
 			 "MovementRasIK" "" "MovementRasSTM" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x"
 			$EditorData {
@@ -2592,7 +2592,7 @@ chainAxis = -x"
 //   |                |-  LeftHandIKTarget  (where left hand is on weapon)
 //   |- RightHandOrigin ( inverse transform where hand originally was)
 
-// basic setup - 
+// basic setup -
 // hand - bone which represents hand holding weapon
 // weapon - bone which represents weapon node in hand
 // weaponrotator - bone - around which weapon rotates
@@ -2606,8 +2606,8 @@ chainaxis=-x
 secchain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 secchainaxis=+x
 
-ikpose_chainoffset = RightHandOrigin              			// bone in ikpose specifying where was 
-ikpose_weaponoffset = RightHand_Dummy      			// weapon offset from RHand 
+ikpose_chainoffset = RightHandOrigin              			// bone in ikpose specifying where was
+ikpose_weaponoffset = RightHand_Dummy      			// weapon offset from RHand
 ikpose_secchainoffset = LeftHandIKTarget      			// secondary chain ik target offset (relative to weapon)
 ikpose_chainmiddledir = RightForeArmDirection			// hand to elbow direction (from hand)
 ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)
@@ -2883,11 +2883,11 @@ outputweaponoffsettobuffer = true
 			 "PneIdleLowArmIK" "" "AnimNodeSource" "//! global values
 weight = 1.0
 
-LHandIKTarget 
+LHandIKTarget
 chain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 chainAxis = +x
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -2944,11 +2944,11 @@ chainAxis = -x"
 			 "PneMoveLowArmIK" "" "PneMoveHeadLookT" "//! global values
 weight = 1.0
 
-LHandIKTarget 
+LHandIKTarget
 chain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 chainAxis = +x
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -2974,7 +2974,7 @@ chainAxis = -x"
 					 "Run" "" "PneRunCyclic" "MovementSpeed < 3
 ||
 (
-MovementSpeed == 3 
+MovementSpeed == 3
 &&
 (MovementDirection < -45 || MovementDirection > 45)
 )
@@ -3008,7 +3008,7 @@ Injured >= 0.5" "0.5" "GetLowerTime()" 1 "S"
 &&
 MovementDirection >= -45
 &&
-MovementDirection <= 45 
+MovementDirection <= 45
 &&
 Injured < 0.5" "0.5" "GetLowerTime()" 1 "S"
 				}
@@ -3279,7 +3279,7 @@ Y(90): X(-180) = 82, X(-90) = 92, X(0) = 102, X(90) = 112, X(180) = 122"
 				 -45.0 "PneSprintFLSrc"
 				 0.0 "PneSprintFSrc"
 				 45.0 "PneSprintFRSrc"
-				
+
 			}
 			$EditorData {
 				#EditorPos -23.5 -63.6000023
@@ -3937,7 +3937,7 @@ Y(45):     X(-45) = 7, X(0) = 7, X(45) = 7"
 				 -90.0 "RunFLInjBlend"
 				 0.0 "RunFInjBlend"
 				 90.0 "RunFRInjBlend"
-				
+
 			}
 			$EditorData {
 				#EditorPos -13.1000004 -95.5
@@ -3987,7 +3987,7 @@ Y(45):     X(-45) = 7, X(0) = 7, X(45) = 7"
 			 "SickIK" "" "SickAddQ" "//! global values
 weight = 1.0
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -4216,11 +4216,11 @@ chainAxis = -x"
 			 "SlidePoseIK" "" "SlidePoseT" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x"
 			$EditorData {
@@ -4301,7 +4301,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 -45.0 "SprintFLAnim"
 				 0.0 "SprintFAnim"
 				 45.0 "SprintFRAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 0.5 -90.5999985
@@ -4335,11 +4335,11 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 			 "StanceChangeIK" "" "StanceChangeSTM" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x"
 			$EditorData {
@@ -4392,7 +4392,7 @@ chainAxis = -x"
 					}
 				}
 				$State {
-					 "ErcToPneMove" "TagErcToPneMove" "ErcToPneMoveT" "Stance == 2 && HasVariableChanged(Stance, 0) && MovementSpeed > 0 
+					 "ErcToPneMove" "TagErcToPneMove" "ErcToPneMoveT" "Stance == 2 && HasVariableChanged(Stance, 0) && MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -4402,7 +4402,7 @@ MovementDirection >= -50 && MovementDirection <= 50
 					}
 				}
 				$State {
-					 "PneToErcMove" "TagPneToErcMove" "PneToErcMoveT" "Stance == 0 && HasVariableChanged(Stance, 2) && MovementSpeed > 0 
+					 "PneToErcMove" "TagPneToErcMove" "PneToErcMoveT" "Stance == 0 && HasVariableChanged(Stance, 2) && MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -4412,7 +4412,7 @@ MovementDirection >= -50 && MovementDirection <= 50
 					}
 				}
 				$State {
-					 "CroToPneMove" "TagCroToPneMove" "CroToPneMoveT" "Stance == 2 && HasVariableChanged(Stance, 1) && MovementSpeed > 0 
+					 "CroToPneMove" "TagCroToPneMove" "CroToPneMoveT" "Stance == 2 && HasVariableChanged(Stance, 1) && MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -4422,11 +4422,11 @@ MovementDirection >= -50 && MovementDirection <= 50
 					}
 				}
 				$State {
-					 "PneToCroMove" "TagPneToCroMove" "PneToCroMoveT" "Stance == 1 
+					 "PneToCroMove" "TagPneToCroMove" "PneToCroMoveT" "Stance == 1
 &&
-HasVariableChanged(Stance, 2) 
-&& 
-MovementSpeed > 0 
+HasVariableChanged(Stance, 2)
+&&
+MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -4492,7 +4492,7 @@ MovementDirection >= -50 && MovementDirection <= 50
 					 "PneToErc" "CroToErc" "Stance == 1 && GetLowerTime() > 0.5" "0.3" "GetLowerTime()" 1 "S"
 				}
 				$Transition {
-					 "CroToPne" "CroToPneMove" "MovementSpeed > 0 
+					 "CroToPne" "CroToPneMove" "MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -4508,7 +4508,7 @@ MovementDirection >= -50 && MovementDirection <= 50
 					 "PneToCroMove" "PneToCro" "MovementSpeed == 0 || Raised" "0.3" "GetLowerTime()" 1 "S"
 				}
 				$Transition {
-					 "PneToCro" "PneToCroMove" "MovementSpeed > 0 
+					 "PneToCro" "PneToCroMove" "MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -4518,7 +4518,7 @@ MovementDirection >= -50 && MovementDirection <= 50
 					 "PneToCroMove" "CroToPneMove" "Stance == 2" "0.3" "1.0-GetLowerTime()" 1 "S"
 				}
 				$Transition {
-					 "ErcToPne" "ErcToPneMove" "MovementSpeed > 0 
+					 "ErcToPne" "ErcToPneMove" "MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -4537,7 +4537,7 @@ MovementDirection >= -50 && MovementDirection <= 50
 					 "PneToErcMove" "PneToErc" "MovementSpeed == 0 || Raised" "0.3" "GetLowerTime()" 1 "S"
 				}
 				$Transition {
-					 "PneToErc" "PneToErcMove" "MovementSpeed > 0 
+					 "PneToErc" "PneToErcMove" "MovementSpeed > 0
 &&
 MovementDirection >= -50 && MovementDirection <= 50
 &&
@@ -5391,11 +5391,11 @@ Y(45):     X(-45) = 6, X(0) = 7, X(45) = 8"
 			 "ThrowIK" "" "ThrowIdleShakeB" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x"
 			$EditorData {
@@ -5999,7 +5999,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "ThrowCroTurn0"
 				 1.0 "ThrowCroTurnR90"
 				 2.0 "ThrowCroTurnR180"
-				
+
 			}
 			$EditorData {
 				#EditorPos -73.0999985 -64.7000046
@@ -6013,7 +6013,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "ThrowErcTurn0"
 				 1.0 "ThrowErcTurnR90"
 				 2.0 "ThrowErcTurnR180"
-				
+
 			}
 			$EditorData {
 				#EditorPos -79.5 -64.7000046
@@ -6135,7 +6135,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 -90.0 "ThrowWalkFLSrc"
 				 0.0 "ThrowWalkFSrc"
 				 90.0 "ThrowWalkFRSrc"
-				
+
 			}
 			$EditorData {
 				#EditorPos -65.5 -54.9000015
@@ -6366,7 +6366,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 -90.0 "WalkFLInjBlend"
 				 0.0 "WalkFInjBlend"
 				 90.0 "WalkFRInjBlend"
-				
+
 			}
 			$EditorData {
 				#EditorPos 7.5999999 -95.5999985
@@ -6558,7 +6558,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 -90.0 "WalkFLSrc"
 				 0.0 "WalkFSrc"
 				 90.0 "WalkFRSrc"
-				
+
 			}
 			$EditorData {
 				#EditorPos -16.3000011 -81.5
@@ -7092,20 +7092,20 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 			 "LadderIK" "" "LadderLookT" "//! global values
 weight = 1.0
 
-LFootIKTarget 
+LFootIKTarget
 chain = LeftUpLeg, LeftUpLegRoll, LeftLeg, LeftLegRoll, LeftFoot
 chainAxis = +x
 
-RFootIKTarget 
+RFootIKTarget
 chain = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot
 chainAxis = -x
 
 
-LHandIKTarget 
+LHandIKTarget
 chain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand
 chainAxis = +x
 
-RHandIKTarget 
+RHandIKTarget
 chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand
 chainAxis = -x"
 			$EditorData {
@@ -7588,7 +7588,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "CroTurnIdleInjAnimSync"
 				 1.0 "CroTurnInjR90SyncAnim"
 				 2.0 "CroTurnInjR180SyncAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 0.9 -4.0999999
@@ -7652,7 +7652,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "CroTurnIdleAnimSync"
 				 1.0 "CroTurnR90SyncAnim"
 				 2.0 "CroTurnR180SyncAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos -5.4000001 -4.0999999
@@ -7751,7 +7751,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "ErcTurnIdleInjAnimSync"
 				 1.0 "ErcTurnInjR90SyncAnim"
 				 2.0 "ErcTurnInjR180SyncAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 14.6000004 -4.0999999
@@ -7815,7 +7815,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "ErcTurnIdleAnimSync"
 				 1.0 "ErcTurnR90SyncAnim"
 				 2.0 "ErcTurnR180SyncAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 8.3000002 -4.0999999
@@ -8145,7 +8145,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "PneTurnIdleInjAnimSync"
 				 1.0 "PneTurnInjR90SyncAnim"
 				 2.0 "PneTurnInjR180SyncAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 28.0 -4.0999999
@@ -8209,7 +8209,7 @@ RFootIKTarget = RightUpLeg, RightUpLegRoll, RightLeg, RightLegRoll, RightFoot"
 				 0.0 "PneTurnIdleAnimSync"
 				 1.0 "PneTurnR90SyncAnim"
 				 2.0 "PneTurnR180SyncAnim"
-				
+
 			}
 			$EditorData {
 				#EditorPos 21.7000008 -4.2000003
