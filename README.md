@@ -1,9 +1,17 @@
-## Current best version: Crouch Wheel Six Levels v4
+## Current default: corrected scroll test v2
+
+User selected corrected scroll test v2 on 2026-10-12 as the default for future work.
+Start changes from `ctrl-mode-test/MovementLabScroll_JogSprint_v2/`. Preserve its
+source and ZIP unchanged; package new tests separately. Later crouch and sprint
+experiments are outside this baseline.
+
+[Download corrected scroll test v2](https://github.com/SegWai/Modding-/raw/6c4d275/artifacts/MovementLab_Scroll_Jog_Sprint_v2.zip).
+
+## Previously approved preserved version: Crouch Wheel Six Levels v4
 
 User approved this version on 2026-10-11 as the best version so far.
-Use `ctrl-mode-test/MovementLabCrouchWheel_SixLevels_v4/` as the baseline for
-future changes. Preserve its source, ZIP and research/version history; package
-future experiments separately.
+Its source, ZIP and version history remain preserved. Corrected scroll test v2
+is now the working default listed above.
 
 [Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 

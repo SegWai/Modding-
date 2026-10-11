@@ -746,3 +746,14 @@ remain user-side requirements. Earlier packages and approved v4 preserved.
 
 Artifact: artifacts/MovementLab_Sprint_Travel90_110_Test_v1.zip.
 SHA256:5ec4510327fb2124e420829c0281c4bd82e04a08a3a235ee53ffda43b297ce9d.
+
+## Default reset: corrected scroll test v2 (2026-10-12)
+
+User selected corrected scroll test v2 as default for all future work.
+Start from ctrl-mode-test/MovementLabScroll_JogSprint_v2; preserve its source/ZIP
+unchanged and package new tests separately. Later crouch/sprint experiments are
+outside this baseline. Previously approved v4 and all histories stay preserved.
+
+Artifact: artifacts/MovementLab_Scroll_Jog_Sprint_v2.zip.
+Pinned commit:6c4d275.
+SHA256:3aead464c12aad6e5b3df29c980a5795ff822a4bd3b307cd4fcc18eb9309d87e.
