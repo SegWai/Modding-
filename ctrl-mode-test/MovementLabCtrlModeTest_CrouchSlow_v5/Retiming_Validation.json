@@ -1,0 +1,56 @@
+[
+  {
+    "file": "p_cro_walkfl.anm",
+    "old_fps": 30,
+    "new_fps": 6,
+    "original_sha256": "8d7aa1ceb9e791686e1172deddd70254ea2a007502bc9667cb36007c4f885f14",
+    "retimed_sha256": "12e27d5e16948545904e7671965e1493b06e0883fcff2cc91f09684958d9ccb9",
+    "changed_offset": 28,
+    "bytes": 139358
+  },
+  {
+    "file": "p_cro_walkfr.anm",
+    "old_fps": 30,
+    "new_fps": 6,
+    "original_sha256": "ed15fec4214a32b990cdbb6e8c3bdddf2f0055b885e5d237364ed097741670e9",
+    "retimed_sha256": "e71cfcc8c48ceec9be70f3b18a2900174b7602dc2be111225c29a5f4768b62d2",
+    "changed_offset": 28,
+    "bytes": 139530
+  },
+  {
+    "file": "p_cro_walkb.anm",
+    "old_fps": 30,
+    "new_fps": 6,
+    "original_sha256": "479ab1ef81bd3b950389947a6e1662f1d07bcd2624164d9950b8a2c07128fd2b",
+    "retimed_sha256": "47125b6d47aecb3849ea76a82f785da3b3a5da275e950ee6a00be626ec2a1968",
+    "changed_offset": 28,
+    "bytes": 134702
+  },
+  {
+    "file": "p_cro_walkf.anm",
+    "old_fps": 30,
+    "new_fps": 6,
+    "original_sha256": "d4bcf9de2e691f614606f113d457ed8bb51f0dbf0724417f2938c05a064358a7",
+    "retimed_sha256": "2b6b2e2eb37bf2168672ee0539c5d460f5c69d941e4f6f151c4cbe91cdc89fd8",
+    "changed_offset": 28,
+    "bytes": 141562
+  },
+  {
+    "file": "p_cro_walkbr.anm",
+    "old_fps": 30,
+    "new_fps": 6,
+    "original_sha256": "d679b2ff717b4cc50b7a0e66e4e1b87bc316ce042f1d09a172ef0282f68f1809",
+    "retimed_sha256": "0d6dfe6dd6aa69714c5c2e7ab33784fc101761cb089e38994b688e3dd49fb544",
+    "changed_offset": 28,
+    "bytes": 139192
+  },
+  {
+    "file": "p_cro_walkbl.anm",
+    "old_fps": 30,
+    "new_fps": 6,
+    "original_sha256": "370d50ce7f8ca46be3033e335e9a886ea90bdf1dec38487a7063a2e06a6788f6",
+    "retimed_sha256": "7abf673220a756932d68c5c094b9eda21f35641aa5ceae3978b2f4947758d102",
+    "changed_offset": 28,
+    "bytes": 139888
+  }
+]
