@@ -362,3 +362,12 @@ entry/standing/strafe/schema/PBO/ZIP checks pass. Native runtime still pending.
 
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip`.
 SHA256: `bfee1d3ff3f45fdb38baee99eb6f33379d7ccaf582147265150b0eae3bb0544d`.
+
+## User approval: preserved best version (2026-10-11)
+
+User requested: “save this as the best version till now. dont delete this one from logs”.
+Six Levels v4 is now the approved baseline for subsequent work. Preserve its
+source, artifact, and this investigation history; make future tests separately.
+The preserved package is pinned to commit `1eb9e67`, with the SHA256 above.
+This records user approval; cloud validation remains the local checks described
+above, rather than a native runtime test performed in this environment.

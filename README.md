@@ -1,10 +1,19 @@
+## Current best version: Crouch Wheel Six Levels v4
+
+User approved this version on 2026-10-11 as the best version so far.
+Use `ctrl-mode-test/MovementLabCrouchWheel_SixLevels_v4/` as the baseline for
+future changes. Preserve its source, ZIP and research/version history; package
+future experiments separately.
+
+[Download the preserved v4 package](https://github.com/SegWai/Modding-/raw/1eb9e67/artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
+
 ## Six-level v4: consistent Shift fast crouch
 
 [Download six-level v4](artifacts/MovementLab_Crouch_Wheel_Six_Levels_v4.zip).
 User confirmed v3 entry defaults work but held Shift sometimes stays at60%.
 V4 explicitly requests native fast gait while crouched with Shift and directional
 input, matching the wheel-native request. Saved defaults, speed tiers and all
-animation assets unchanged. Extract fresh and launch; native confirmation pending.
+animation assets unchanged. User subsequently approved v4 as the current best version.
 
 ## Six-level v3: crouch entry defaults
 
@@ -90,12 +99,12 @@ and its ZIP unchanged. Subsequent wheel momentum v2/v3 tests were rejected for
 jumping animations. Continue using v1 while investigating continuous playback
 and phase-preserving transitions. See [timing findings](docs/crouch-wheel-timing-investigation.md).
 
-## Current approved stable baseline: v10 Strafe Test v2
+## Historical approved standing baseline: v10 Strafe Test v2
 
 [Download the stable version](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v10_Strafe_Test_v2.zip).
 
-The user approved v10 Strafe Test v2 as the current stable version. All future
-movement changes must start from `ctrl-mode-test/MovementLabCtrlModeTest_v10_Strafe_v2/`.
+The user previously approved v10 Strafe Test v2 as the stable standing version.
+The current combined movement baseline is Six Levels v4, listed above.
 The approved ZIP remains unchanged.
 
 This retains original v10's stronger jog-to-walk momentum, Ctrl modes,
