@@ -757,3 +757,45 @@ outside this baseline. Previously approved v4 and all histories stay preserved.
 Artifact: artifacts/MovementLab_Scroll_Jog_Sprint_v2.zip.
 Pinned commit:6c4d275.
 SHA256:3aead464c12aad6e5b3df29c980a5795ff822a4bd3b307cd4fcc18eb9309d87e.
+
+## Corrected scroll v2: directional crouch transition investigation (2026-10-12)
+
+User observes87->nativefast smooth, nativefast->87 looks like walking loop restarts.
+Readonly checks confirm levels5 and6 both select CroWheel5G/custom L5 subtree;
+there is no top-level source-column/group change at this exact endpoint. L5WalkF
+is p_cro_walkF variant26FPS; L5SprintF/FL/FR use original p_cro_runF/FL/FR. Script
+moving slow crouch requests normalizedgait1, fast crouch gait3; these are native
+gait values, not physical percentages. CroRunSprintBlendMLWheel is AnimNodeBlend
+with clamp((MovementSpeed-2)*(1-Injured),0,1). Healthy blend fast weights0 at<=2,
+.25 at2.25,.5 at2.5,.75 at2.75,1 at3. Transition therefore depends on achieved
+MovementSpeed trajectory through2..3, not selected wheel percent.
+
+WalkFSrcMLWheel SourceSync uses Walk sync line; SprintFAnimMLWheel SourceSync
+uses RunSprint. Supplied player_synctable.asy has separate normalized marker maps:
+Walk RDown.25/LUp.31/LDown.85/RUp.90; RunSprint LUp.15/RDown.40/RUp.60/LDown.90.
+Both use named foot events but different phase definitions. No explicit
+cross-group current-foot-phase transfer appears in this blend's serialized
+parameters; native SourceSync cross-group behavior remains undocumented here.
+WalkBlendSTMMLWheel manages forward/back branch states and directional
+transitions, not a dedicated fast-to-slow crouch exit state.
+
+Mission exits standing brake handling when crouched, cancels brake and delegates
+to UpdateCrouchRules. Thus standing mode slowdowns/timer envelopes do not manage
+this nativefast->slow crouch handoff. RunSprint native filter modifier remains
+heavy4 when standing mission brakeinactive; native directional timing asymmetry
+not established. Direct requested3->1 could cross blend range rapidly. Both a
+rapid blend-weight fall and loss/mismatch of walking foot phase are candidates.
+Cannot claim frame0 restart from source alone: need native phase/achieved-speed
+telemetry or slowed video. Exact smooth ascent vs rough descent cause unconfirmed.
+
+Checked actual supplied crouchWalkF ANM event block: first RFootDown/LFootUp/
+LFootDown/RFootUp store frame indices8/11/26/31 before marker strings. FPS-only
+retiming does not itself introduce fixed original-seconds event timestamps; no
+evidence for a timestamp-corruption cause in this inspected format.
+
+Baseline source/package unchanged; SHA256 remains
+3aead464c12aad6e5b3df29c980a5795ff822a4bd3b307cd4fcc18eb9309d87e.
+Desired behavior: forward-progressing foot cycle with reverse blend weights and
+deceleration, not reversed clip playback. Useful next native diagnostic would
+compare achievedgait3..2 descent duration vs ascent and check active foot phase/
+walk-source activation at the handoff before editing a separate test.
