@@ -1,7 +1,15 @@
-## Current default: corrected scroll test v2
+## Current default: confirmed crouch pose-blend test v2
+
+User confirmed the pose transition works and selected this as the default on
+2026-10-12. Start future work from `ctrl-mode-test/MovementLabCrouch_PoseExit_v2/`.
+Preserve its source, ZIP and history unchanged; publish new tests separately.
+
+[Download the confirmed default](https://github.com/SegWai/Modding-/raw/044fd7b/artifacts/MovementLab_Crouch_PoseExit_Test_v2.zip).
+
+## Previous working default: corrected scroll test v2
 
 User selected corrected scroll test v2 on 2026-10-12 as the default for future work.
-Start changes from `ctrl-mode-test/MovementLabScroll_JogSprint_v2/`. Preserve its
+This historical baseline is `ctrl-mode-test/MovementLabScroll_JogSprint_v2/`. Preserve its
 source and ZIP unchanged; package new tests separately. Later crouch and sprint
 experiments are outside this baseline.
 

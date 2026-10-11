@@ -859,3 +859,12 @@ Corrected scroll v2 remains default and untouched.
 
 Artifact: artifacts/MovementLab_Crouch_PoseExit_Test_v2.zip.
 SHA256:e1a6e4999c45abb0553f2e1dc187e9de091bdb49939effd49eecdc3614e024e3.
+
+## Confirmed default: crouch pose-exit v2 (2026-10-12)
+
+User confirmed the direct pose blend works, then explicitly selected the package
+from044fd7b as default and authorized extending smoothing across movement speed,
+stance and direction transitions. Future work starts from
+ctrl-mode-test/MovementLabCrouch_PoseExit_v2; preserve its source/artifact unchanged.
+New broad smoothing tests remain separate until user confirms them.
+Default ZIP SHA256:e1a6e4999c45abb0553f2e1dc187e9de091bdb49939effd49eecdc3614e024e3.
