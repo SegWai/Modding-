@@ -1,3 +1,11 @@
+## Crouch wheel v6: native-speed freeze correction test
+
+[Download v6](artifacts/MovementLab_Crouch_Wheel_Test_v6.zip). V5 was reported
+frozen at native speed with F8 OFF and ON. V6 removes the experimental timed
+selectors, restores working v1 wheel selection and retains a separate F8 hidden
+stage comparison. Extract fresh, launch and test level5 with F8 OFF first.
+Native visual correction is pending; original v1 remains available unchanged.
+
 ## Crouch wheel v5: hidden 90% comparison
 
 [Download v5](artifacts/MovementLab_Crouch_Wheel_Test_v5.zip). Extract into a fresh

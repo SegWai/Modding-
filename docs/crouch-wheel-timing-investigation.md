@@ -137,3 +137,34 @@ foot-contact continuity remain unexecuted here. Original v1 and v4 unchanged.
 
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v5.zip`.
 SHA256: `e0b24bb92428ed6429dad7419c7b64a0f85f2b93435e83791e477702304b5a41`.
+
+
+## V6: regression after v5 native-speed test
+
+User reported a frozen pose at level5 in both F8 OFF and ON, narrowing this
+beyond activation of the hidden stage. Both states still use v4's nested timed
+selectors and v5's outer timed wrapper. The actual engine failure mechanism is
+not established by a still screenshot or script mock.
+
+Checked Cro and CroWheel5 mappings: same28 slots, including original native
+SprintF/FL/FR and Aim resources. All downstream locomotion nodes after the new
+header are byte-identical to user-confirmed v1. This rules out a changed run
+clip mapping in those checked slots; it does not prove all runtime assets loaded.
+
+V6 removes the experimental nested timed selector chain and outer timed wrapper.
+It restores v1's wheel BlendN selector under CroWheelNormalG. A short continuously
+weighted BlendN wrapper adds the hidden27FPS stage with0.10s ramp in,0.10s hold,
+0.10s ramp out. Five selectable tiers, downward-only trigger, cancellation,
+standing controller and original asset preservation remain unchanged. F8 OFF
+now compares this restored selector with the existing downward controller pace,
+not v4's rejected timed graph. Original v1/v4/v5 packages remain unchanged.
+
+Translated actual controller and hidden-stage tests passed at30/60/144FPS,
+both callback orders. Structural tests verify no new timed selector remains
+in the header and all original downstream graph nodes remain byte-identical.
+Package PBO/source/footer and ZIP integrity pass. User must first verify native
+level5 animates with F8 OFF; correction is not yet native-confirmed. If it still
+freezes, use original v1 and inspect v6 RPT/script asset/binding output next.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v6.zip`.
+SHA256: `1547fd3894016d96f0b67654facf74677e97ee5aded55043776de0cc6f73f2f4`.
