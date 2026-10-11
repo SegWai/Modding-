@@ -273,3 +273,37 @@ Enforce/DayZ/Windows preparation remain user-side verification.
 
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels.zip`.
 SHA256: `ec112e729f5b3b604a297f0f6736fc4ab087c4c45834b8fa2a3d5e745487a027`.
+
+
+## Six-level v2: source retention during87%-to-native handoff
+
+Uploaded `DayZ 2026-10-11 18-44-43 (online-video-cutter.com).mp4` is a3.237-second
+excerpt. Entire excerpt inspected with sampled frames; crouched leg pose lingers
+before movement resumes. It does not contain an absolute1:50 timestamp or
+telemetry demonstrating a specific native gait/filter value. No new runtime
+RPT was provided with this recording.
+
+Source inspection identifies a plausible fallback: previous selector switches
+from L5 custom walk26FPS directly to native Cro, whose walk clip has been retimed
+to9FPS for level1. `CroRunSprintBlend` uses walk while filtered MovementSpeed is
+at/below2 and blends native crouch run above2. If the engine gait is still
+building after the override request3, selecting native Cro exposes9FPS walk
+before fast gait completes. This is a code-path hypothesis, not a measured
+native trace of the recording. Deactivating/restarting the alternate subtree
+can also affect continuity.
+
+V2 changes exactly one graph input: selector6 now references CroWheel5G, as
+selector5 does. L5 walk remains26FPS until native gait3 activates the unchanged
+original native SprintF/FL/FR mappings. Script still clamps1..6 and requests
+native3 at6/Shift; all script, mission and clip-preparer bytes are unchanged.
+No speed percentage, controller timing or standing rule changes. Old Group6
+remains unused. The shared node avoids both immediate9FPS fallback and a
+selector-induced activation of a different native subtree at5->6.
+
+Actual translated six-level controllers/regressions and schema checks pass;
+structural differential proves a single graph-line change and verifies L5 fast
+clips exactly match native Cro run references. Native animation/filter behavior
+and measured travel remain user playtest pending. Previous packages unchanged.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Six_Levels_v2.zip`.
+SHA256: `ce0f372dbe365ca41d075003fd577c12a069f8250a0b14b308dc32f5cf28f4ef`.

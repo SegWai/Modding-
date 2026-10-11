@@ -1,0 +1,1 @@
+Levels5/6 share L5 source group. Native gait3 still uses unchanged original crouch-run clips;26FPS walk retained until native gait transitions. Controller/FPS/standing behavior unchanged. Native visual result pending.

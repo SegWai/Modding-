@@ -1,3 +1,12 @@
+## Six-level v2: 87% to native source handoff test
+
+[Download six-level v2](artifacts/MovementLab_Crouch_Wheel_Six_Levels_v2.zip).
+Uploaded excerpt shows a lingering step during the fast-gait handoff. V2 changes
+only the selector's level6 connection to retain level5's26FPS walk source while
+native gait builds; unchanged original fast-crouch clips remain its endpoint.
+Speeds/controller/timers unchanged. Extract fresh and launch. Local checks pass;
+native visual outcome pending.
+
 ## Six selectable crouch speeds: new test
 
 [Download six-level test](artifacts/MovementLab_Crouch_Wheel_Six_Levels.zip).
