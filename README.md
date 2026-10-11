@@ -12,6 +12,19 @@ current default/best baseline. Ctrl toggles walking/jogging, held Shift sprints,
 and F8 compares body-turn response. Stable v4 remains unchanged while testing
 new crouch behavior below. V11 is retained as the historical original baseline.
 
+## Jogging zigzag resistance on Ctrl Modes v10
+
+[Download Ctrl Modes v11 reversal resistance](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v11_Reversal_Resistance.zip).
+
+Rapid jogging A/D opposites temporarily increase native direction inertia,
+including diagonals. Spam maintains resistance; steady input smoothly restores
+normal response. This adds no forced stops, frame freezes or animation command
+restarts. Body turning, Ctrl transitions, crouch rules and stopping curves
+remain from v10. Extract fresh and run the launcher; test in standing jogging.
+Mocked tracker/filter and movement regressions passed; native animation/path
+and gameplay heaviness need DayZ testing. V10 remains the fallback. This Ctrl
+Modes v11 is distinct from the historical original Movement Logic v11.
+
 ## Later walk entry with stronger jog-to-walk momentum
 
 [Download Ctrl Modes v10 later walk blend](https://github.com/SegWai/Modding-/raw/refs/heads/main/artifacts/MovementLab_Ctrl_Modes_v10_Later_Walk_Blend.zip).
