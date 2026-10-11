@@ -168,3 +168,38 @@ freezes, use original v1 and inspect v6 RPT/script asset/binding output next.
 
 Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v6.zip`.
 SHA256: `1547fd3894016d96f0b67654facf74677e97ee5aded55043776de0cc6f73f2f4`.
+
+
+## V7: v6 also reported frozen, isolate against exact original
+
+User confirmed v6 still freezes with both F8 states. No native runtime trace
+has been supplied, so neither the timed-selector hypothesis nor the v6 change
+is a confirmed fix. V6 still added a nested selector wrapper; v5/v6 inserted
+CroHidden90 between existing CroWheel5 and CroRas group names. Those are two
+remaining differences from v1, not established engine failure causes.
+
+V7 removes every extra selector wrapper, restoring the exact v1 locomotion
+text except one additional input4.5 and its GroupSelect. Original group names
+retain their order, and CroHidden90 is appended. F8 OFF now feeds original
+integer levels and snaps the gait pace to match v1, so an OFF test no longer
+silently retains rejected fractional slowdown behavior. ON retains downward
+bridge entry/hold/exit and lower-target pacing. The added unused graph slot and
+group still mean OFF assets are not byte-identical to v1, hence the control.
+
+The package includes KnownWorkingV1, a byte-identical copy of every file in
+original v1, with its own launcher, script PBO, workspace patches, preparer and
+profile folder. Top-level Launch-Known-Working-v1.cmd launches it separately;
+DayZ must be closed before switching. A same-package control separates native
+runtime/local-source regressions from the hidden experiment. If v1 works but
+v7 fails, collect the latter's logs. If both fail, inspect runtime assets/input
+state/logs before more graph experimentation.
+
+Translated v1 OFF regressions and hidden controls pass30/60/144FPS in both
+callback orders. Structural checks reconstruct exact original locomotion after
+removing only added slot/node and reconstruct exact AST after removing appended
+group/count increment. Control files are all byte-verified against original v1.
+PBO/ZIP packaging checks pass. Native compilation and visual result pending.
+Collect-Logs.cmd/ps1 packages this test folder's RPT/log files for next diagnosis.
+
+Artifact: `artifacts/MovementLab_Crouch_Wheel_Test_v7.zip`.
+SHA256: `1042c4724648bc18be131248b61bd5ca2190c5b23985d1cb0f262b2f698df674`.

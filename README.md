@@ -1,3 +1,12 @@
+## Crouch wheel v7: freeze isolation with exact v1 control
+
+[Download v7](artifacts/MovementLab_Crouch_Wheel_Test_v7.zip). V6 was also reported
+frozen at native speed with both toggle states. V7 removes every added selector
+wrapper and preserves original group order. First run
+`Launch-Known-Working-v1.cmd` (isolated exact v1 copy), then close DayZ and run
+`Launch-Movement-Test.cmd` (v7, F8 OFF initially). Native result pending. If v7
+still freezes, `Collect-Logs.cmd` creates an archive for diagnosis.
+
 ## Crouch wheel v6: native-speed freeze correction test
 
 [Download v6](artifacts/MovementLab_Crouch_Wheel_Test_v6.zip). V5 was reported
