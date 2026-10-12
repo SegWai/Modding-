@@ -1156,3 +1156,9 @@ Userrequested0.7s. Changedaimtimer/divisor1->0.7only; gate/handoff/pavedspawn/bl
 ### Linkedv2Revision21 —0.3s aim decay
 
 Userrequested0.3s. Changedonlyexclusiveaimtimer/divisor0.7->0.3; gate/handoff/pavedspawn/blackgear/unlimitedstamina/noNPCsretained. Actualcontrollerchecks30/60/144FPSbothorderspass. Packaged; nativeperceptionpending. LinkedRevision20preserved.
+
+### Linkedv2Revision22 — temporary sprint aim momentum removed
+
+Userrequestedremoveitentirely; removedentiretemporary140%feature: qualificationtimer/raisegrace/handoff/decay/wheellock andF140graphnodes/42FPSvariants. Standingaimcontroller andworkspace/clipplan restoredtoRevision9 normalmodebehavior, whilecurrentblackgear/unlimitedstamina/pavedairfieldspawn/noNPCs retained. Sprint->aimfastlevel3/120%; wheelavailableimmediately. Priorversionspreserved.
+
+Actual-controllerchecks30/60/144FPSbothcallbackorderspassed; added immediatepost-sprintaimwheeldown3->2->1 checks. Structuralassertions:no140nodes/no42FPS/noqualification/decaygate/oneplayerCreatePlayer. Native testpending.
