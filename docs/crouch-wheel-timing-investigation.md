@@ -1104,3 +1104,9 @@ Translated actual-controller checks pass30/60/144FPS both callback orders plus r
 ### Revision12 — longer sprint-entry aim decay
 
 User requested140 ->100 over1.5 seconds. Changed only the aim sprint timer duration and corresponding normalized progress divisor from0.5 to1.5. Existing bounded0.25s handoff and wheel lock retained; maximum total1.75s. Graph/clip plans unchanged. Updated actual-controller duration tests passed30/60/144FPS and both callback orders, including wheel lock, native endpoint and weapon scope. Native visible effect still requires user test. Revision11 preserved.
+
+### Revision13 — sustained full-sprint qualification
+
+User requested140% only after1 continuous second fully sprinting, excluding jogging/acceleration. Added achieved gait>=2.99 duration accumulator while local upright lowered movement is eligible. Requested Shift/scroll sprint alone can no longer trigger140. Anything below threshold, crouch, stop or UI pause resets qualification. A qualified raise retains existing250ms entry grace for native sprint input clearing and consumes qualification once. Existing1.5s decay and maximum250ms handoff unchanged. Native gait is a movement-state proxy rather than direct visual animation frame inspection.
+
+Actual-controller checks passed30/60/144FPS both callback orders; added checks for long accelerating gait2.9, half-second full sprint, interrupted sprint, successful full-second qualification and reset on stop/crouch/menu. Graph and clips unchanged. Native runtime test pending. Revision12 preserved.
