@@ -1018,3 +1018,7 @@ User archive contains130 ASIs,129 player template instances plus1 menu. Eleven d
 
 ### Armed speeds v13 — ANIMSET5 compatibility
 User surrender walkB upload is FORM/ANIMSET5, FPS\0 at20, BEchunk length4 at24, LEuint32 FPS30 at28: same retiming layout as verified ANIMSET6. V12 rejected solely because it required ANIMSET6. V13 armed preparation accepts both verified versions with FORM/FPS chunk-size/FPS range validation, writes onlybytes28..31. Actual uploaded5/6 binaries retiming invariant tests pass;129 inheritance plan checks remain unchanged. Levels/pose/World/mission/camera and mapping plan unchanged. Native full Windows preparation still requires user test.
+
+
+### Camera toggle v14
+V toggles static wider-view flag via guarded/latching mission KeyPress/KeyRelease. Third-person base camera adds smoothed .15m distance/.05m height erect or .30m distance/no extraheight crouch. Current view default, reset on mission init/finish. Crouch correction unchanged and executes after base adjustment. First-person/iron sights separate classes untouched. Native V action bindings unchanged; native collision solver can shorten requested distances. Core movement, graph, armed instance plan and clip preparation byte-identical tov13. SDK keyrelease/camera APIs inspected, PBO/ZIP validated; local Windows/native visuals pending.

@@ -1,0 +1,1 @@
+V14: press V to toggle current/wider third-person view. Standing extra15cm distance/5cm height; crouch extra30cm distance/no added height. Default current view. First-person and iron sights untouched. Existing steady slow/fast crouch camera preserved. Native camera/collision and armed preparation test required.
