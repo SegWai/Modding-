@@ -1194,3 +1194,9 @@ UserrequestsSlowaim1=53,2=93,3=113; walk1->aim2/walk2->aim3; walk1=73; jog/sprin
 MissionBeginBrakewalkingtargetduration1.5s; walkingreturnusesfraction²(3-2fraction)directlysprint/jog->walk1,removestagedplateauonlyforwalkingreturns. Fullstoptarget0previouslogicretained. Inputsteering/releasedkeyretargetexisting. Nativeposefiltersretaindynamicgaitblend. AltADS/doubleShift/latequalifying140aim1.5s/noNPC/blackloadout/stamina/pavedspawnretained.
 
 Actualcontrollerchecks30/60/144FPSbothorderspassincludingmonotonic1.5sreturnfromgait2/3,Slowaimprofiles/reentry/modes,momentum. FPS/source/graphcheckspass; ADSbody/toggletestsunchangedpass. Nativevisiblevelocity/poseplaybackandcompilepending. Earlierbuildspreserved.
+
+### Linkedv2Revision28 — slow aim55/100/150
+
+UserrequestsSlowaim1=55,2=100,3=150. RenamedS53/S93/S113->S55/S100/S150,ASTlabelslexicallysorted; logicalprofileindices3/4/5unchanged. Generatedproperarmedraisedwalkvariants17/30/45FPS. 55requestedfallsbetween16and17FPS; chosen17gives56.67%,100/150exactplaybackrate. Controllerentrymapping/wheelonlylowest/ADS/Shiftbindings/standingwalk73/1.5smomentumunchanged. NoNPCs. Earlierbuildspreserved.
+
+Actualcontrollerchecks30/60/144FPSbothorderspass; source/graphscopes/nativeADSgupposespreserved; rateassertions17/30/45pass. Nativefeelpending. IntegerFPSroundingdisclosed.
