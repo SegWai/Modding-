@@ -1,0 +1,1 @@
+Camera/loadout v10: third-person slow crouch uses fast-crouch movement height with smoothing. Vanilla BDU/plate carrier gear; test Field Backpack90 slots/two weapon attachments. Four weapons loaded plus one spare magazine each and reserve ammo fills cargo. Existing movement code preserved. Native camera/config/inventory test required.

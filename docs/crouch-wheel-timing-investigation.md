@@ -1002,3 +1002,7 @@ User reports intermittent double steps on v7. Raw wheel state can be observed by
 
 ### Immediate scroll targets v9 — walking pose handoff rate test
 User confirmed v8 wheel behaviour. Uploaded1.033s/30FPS rear-view clip shows brief torso/arm change around walking handoff; feet cropped, phase reset not established. V9 caps decreasing WalkJogPose at dt/.45 when walking selected, after existing filter, to prevent abrupt native achieved-gait drops from causing a fast outgoing-pose collapse. Animation clips still play normally; graph and speed/brake methods unchanged. Added achieved-gait1/pose1 regression passes30/60/144FPS bothorders; native visual improvement unverified. V8 preserved.
+
+
+### Camera/loadout v10
+User requests fast-crouch viewpoint for slow crouch and military shooting-test inventory. Native third-person crouch camera uses distance1.4, model offset0/.7/.1, local offset0/.3/0 and movement-dependent height SmoothCD((clamp(m_iMovement,1,3)-1)*.5*.4). Camera test adds smoothed difference to fast target .4 for moving crouch; idle remains native, first-person/sights unchanged. Custom FieldBackpack90-slot cargo with Shoulder/Melee attachments; BDU/plate carrier/helmet/gloves/boots/balaclava vanilla gear; M4A1 andSVD backpack attachments, MP5K player shoulder, FNX holster. Each gets full mag+chamber, one spare and cargo ammo fills round robin. Native slots/config availability not verified here; failures print loadout logs. Existing World, graphs/preparer and mission movement/brake methods unchanged. No MMG dependency. Prior v8/v9 preserved.
