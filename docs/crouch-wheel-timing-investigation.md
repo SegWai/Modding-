@@ -1078,3 +1078,7 @@ Standing aim entry fromwalkflagtrue atanywalktier selects slowhighest(original10
 
 ### Separate v2 Revision7 — Shift latches fast aiming
 User requestspressShiftfromslowaim tofastwithoutrequiringhold, releasecannotreturnslow;Ctrlonlyslowreturn. V7 detectsShift risingedge; setsbaseFast/highest120. Ctrlprioritytoggleseffectivebase/highest levels; holdingShiftwhileCtrlslow doesnotoverrideuntilfreshrelease/press. WalkingentrySloworiginal100/jogentryFast120 unchanged. Slow73/native100 andfast80/native100/120 wheeltiers, upperpose/F8/crouchpreserved. Actual-controllerpress/release/heldCtrl/freshpress/entrytests30/60/144FPS bothorders passed;nativevalidationpending.
+
+
+### Separate v2 Revision8 — tier-aware aim entry/default exit
+Entry walking1/2 ->slowaim1/2; joggingdisplaylevel1/internal2(80) ->fastaim1; joggingdisplaylevel2/internal3(native100)->fastaim2; scrollsprint orunconsumedphysicalShift->fastaim3. Exitstandingaim maps effectiveSlow/Fast towalking/jogging default80, clears scrollsprint andconsumesanycurrentheldShiftuntilrelease toavoidreturningsprint. New aiming session flags distinguishloweringfrommenu/action interruptions; selectedtiers retainedacrossineligibletemporarycontexts. Wheelup increases/downdecreases (userline3 down-tohigher interpretedtypo). ExistingShiftlatch/Ctrltoggle/fast80/native100/120/slows73/original100/cro/F8/upperposes preserved. Controller testsfiveentrycases/temporarymenu/reentry/defaultreturn/changedmodeexit30/60/144FPS bothorders passed;nativevalidationpending.
