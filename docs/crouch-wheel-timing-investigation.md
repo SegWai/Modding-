@@ -1082,3 +1082,9 @@ User requestspressShiftfromslowaim tofastwithoutrequiringhold, releasecannotretu
 
 ### Separate v2 Revision8 — tier-aware aim entry/default exit
 Entry walking1/2 ->slowaim1/2; joggingdisplaylevel1/internal2(80) ->fastaim1; joggingdisplaylevel2/internal3(native100)->fastaim2; scrollsprint orunconsumedphysicalShift->fastaim3. Exitstandingaim maps effectiveSlow/Fast towalking/jogging default80, clears scrollsprint andconsumesanycurrentheldShiftuntilrelease toavoidreturningsprint. New aiming session flags distinguishloweringfrommenu/action interruptions; selectedtiers retainedacrossineligibletemporarycontexts. Wheelup increases/downdecreases (userline3 down-tohigher interpretedtypo). ExistingShiftlatch/Ctrltoggle/fast80/native100/120/slows73/original100/cro/F8/upperposes preserved. Controller testsfiveentrycases/temporarymenu/reentry/defaultreturn/changedmodeexit30/60/144FPS bothorders passed;nativevalidationpending.
+
+### Separate aimed movement v2 Revision9
+
+User reported jog level2 did not feel like native fast aim level2 and lowering fast aim level2 returned to jog level1. Revision8 explicitly reset every aim exit to jog80; Revision9 maps fast aim80 to jog80 and fast aim100/120 to jog100. Slow aim exits still select default walk80. Entry jog100 mapping remains internal jog3 -> fast aim2, now with a log identifying source and selected tier. Fast aim level2 bypasses retimed foot-source groups and uses the original native source branches, like the previously corrected native slow aim level2. The Shift edge latch initializes from actual held input on aim entry. All earlier builds retained.
+
+Actual-controller translated C++ checks passed at30/60/144 FPS in both callback orders, including five entry mappings, native source binding outputs, exit/reentry mappings, menu persistence, and existing movement regressions. Graph/clip mappings unchanged. Windows native compilation, animation and velocity remain user-test dependent.
