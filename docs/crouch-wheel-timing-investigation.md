@@ -1200,3 +1200,9 @@ Actualcontrollerchecks30/60/144FPSbothorderspassincludingmonotonic1.5sreturnfrom
 UserrequestsSlowaim1=55,2=100,3=150. RenamedS53/S93/S113->S55/S100/S150,ASTlabelslexicallysorted; logicalprofileindices3/4/5unchanged. Generatedproperarmedraisedwalkvariants17/30/45FPS. 55requestedfallsbetween16and17FPS; chosen17gives56.67%,100/150exactplaybackrate. Controllerentrymapping/wheelonlylowest/ADS/Shiftbindings/standingwalk73/1.5smomentumunchanged. NoNPCs. Earlierbuildspreserved.
 
 Actualcontrollerchecks30/60/144FPSbothorderspass; source/graphscopes/nativeADSgupposespreserved; rateassertions17/30/45pass. Nativefeelpending. IntegerFPSroundingdisclosed.
+
+### Linkedv2Revision29 — jogging2 to crouch momentum fade
+
+Userrequestjog2->fastcro6->slowcro5, same140aimlogic. NamedMomentumFade, distinctfromPoseSmoothing; glossarysaved. Captureuprightloweredjog2selectedandachieved>=1.7beforecroentry. Existingachievedsprintentrytakespriority. Jog2entrybeginsfastcro6pose/gait3,thenlevels5target~87,continuousnativefastposesourceweight1->0andgait3->1over1.5ssmoothstep; existingcrouchexitgraphreused. Wheelinputdiscardedduringfade. HeldShiftfromentrysuppresseduntilrelease,preventingimmediatefastreentry. Walking/jog1cro60 andnormalfullsprintcro6retained. Cancelfadeonstop/stanceexit/aim. Speedpercentagesfastnativeandslow87relative todifferentmodebases, notnumeric100to87linearvelocity.
+
+Actualcontrollerchecks30/60/144FPSbothorderspass:fastposeatentry,monotonicpose/gait,1.5scompletionatlevel5,wheellock/unlock,walking/jog1exclusion; priorstanding/aimtestsandgraph/sourcechecks unchangedpass. Nativecompile/visual/physicspending. PriorRevision28preserved.
