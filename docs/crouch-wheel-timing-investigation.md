@@ -971,3 +971,10 @@ raw-input semantics, target capture and visual continuity pending in-game test.
 
 Artifact: artifacts/MovementLab_Immediate_Scroll_Targets_v2.zip.
 SHA256:52eb7aff06bd3de8feb4ff87e0bb7336e35134b90960918769449b3cbec5c3a0.
+
+
+### Immediate scroll targets v3 — frame capture experiment
+
+User v2 logs (2026-10-12 12:40) contain standing target 5 repeatedly, no proof of an animation-dependent target reset, and raw wheel values only -1/0/1. Raw-zero action fallback also contributes events. Logs cannot establish the number of physical notches lost. Earlier claim that the higher target was not retained was too strong.
+
+V3 calls the existing wheel capture from Mission OnUpdate before super, retaining time-deduplicated simulation fallback and existing pending queue. This tests transient input sampling between character updates; native frame timing and wheel retention are not proven locally. No graphs, pose timing, gait, brake, or crouch rules changed. Local translated tests cover five separate capture calls before one command, persistent target settlement, focus/menu guards, and inherited regressions. Default PoseExit v2 preserved. Collect-Logs produces MovementLab-Wheel-Targets-v3-Logs.zip.
