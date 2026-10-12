@@ -1166,3 +1166,7 @@ Actual-controllerchecks30/60/144FPSbothcallbackorderspassed; added immediatepost
 ### Linkedv2Revision23 —1.5s slowdown,noNPCs
 
 Userclarifiedkeep140boostandrequested1.5sagain. BasedonRevision19 (notRevision22removalorRevision18NPCtest). Changedtimer/divisor1->1.5only; qualification/handoff/blackloadout/unlimitedstamina/pavedspawn/noNPCsretained. Actualcontrollerchecks30/60/144FPSbothorderspass. Earlierbuildspreserved; nativeperceptionpending.
+
+### Linkedv2Revision24 — qualify duringlate sprintacceleration
+
+UserconfirmedRevision23worksbutrequested140aimentrybeforetechnicalfullsprint. Lowerachievedgaitthreshold2.9->2.7andsustainedduration1s->0.35s. Onlyuprightloweredeligiblemovementcounted; belowthresholdresets; ordinaryjogginggait2andbriefsprinttapsdonotqualify. Existingraisegrace/handoff/1.5sdecay/blackloadout/unlimitedstamina/pavedspawn/noNPCsunchanged. Actualcontrollerchecks30/60/144FPSbothorderspass; addedsustained2.75qualifies,.2snear-sprintdoesnot,2.65doesnot,returntojogresets. Nativefeelpending; confirmedRevision23preserved.
