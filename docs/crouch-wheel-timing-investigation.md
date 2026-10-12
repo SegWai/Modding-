@@ -1144,3 +1144,7 @@ UploadedRevision14logs showfastaimlevel1,timer0 at eachentry despiteachievedgait
 User confirmed140 visible onRevision17, requested nexttest of1.5s. Preserve workingRevision17 gate/graph/clips, change only aimtimer/divisor0.5->1.5. Range bug also remainsauthorized: userreported25characters despitefive slots. Rootcause notproven. Addlive-slotspawn guard andoffline range cleanup100m removing alluntrackedPlayerBase characters, preservingcontrolledplayerandfive assignedslotcharacters (deadassigned targets retaineduntil3s replacement). Cleanuponstartup/oncepersecond; no multiplayer effects. This isoffline test-zone cleanup, notgeneral NPCmod.
 
 Actual-controller timing/gate/regressions passed30/60/144FPSbothcallbackorders. Actualscheduler checks20cycles/five targets/3000ms respawn pass. Actualcleanup method translated tested25->five, player/propspreserved, multiplayerdisabled. Native compile/query/result and1.5s visible effect still require usertest. Prior versionspreserved.
+
+### Revision19 —1s aim decay, all testNPCs removed
+
+UserconfirmedRevision18 momentumworks; requests1s slowdown andremove/fixflickeringtargets. Selectedremove: deletedentirerangeNPC class/slots/spawn/respawn/cull/cleanup, leavingonlycontrolledplayerCreatePlayer. Pavedairfieldspawnsearch,blackgear/unlimitedstamina retained. Changedonlyaimtimer/progressnormalization1.5->1s; workinggateunchanged. Actualcontrollerchecks30/60/144FPSbothorderspass; staticallyverifiedoneCreatePlayercall,norangeNPCmethods/file. Native1splaybackpending; previousconfirmedRevision18preserved.
