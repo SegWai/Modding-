@@ -1126,3 +1126,9 @@ User reports140 still invisible. Revision14 native logs requested, not received 
 Five unselected PlayerBase targets spawn20m ahead on a line10m spacing. Per-target mission scheduler detects death, waits3000ms, deletes corpse, replaces same class/position, repeats indefinitely and cleans up on mission finish. Native command idle override applied only to flagged live targets, normal death processing preserved. Black/unlimited-stamina loadout retained.
 
 Existing actual-controller regressions pass. Actual target update method translated and tested20 death cycles/five targets, no respawn2999ms, replacement3000ms and corpse cleanup. Native animation speed/compilation/spawn surface/NPC stationary behavior remain unverified. User logs/in-game test required to finish140 diagnosis.
+
+### Revision16 — single five-person line and restored aim timing
+
+User requested exactlyfive individual targets10m apart, same paved location as player; previous code alreadyhadfive slots (no five-group loop), but now initialization guarded to prevent repeatedOnInit duplicating targets. Target offsets20/30/40/50/60m along unit direction0.6,0,-0.8, oneCreatePlayer per slot. Spawn searches nearbyNWAF terrain surface names for asphalt/concrete runway and verifies60m line sampled every5m. Bounded300m search; logs success or fallback if surface names not recognized. Native pavement position still requires user confirmation.
+
+Restored140->100 timer and progress normalization1.5->0.5 seconds as requested; other qualification/handoff/lock rules retained. No claim this proves visible140 nowworks. Existing actual-controller checks passed30/60/144FPS both callback orders. Actual target scheduler checks five targets,20cycles, respawn3000ms and no early2999ms passed. Native runtime tests pending.
