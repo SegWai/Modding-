@@ -1,0 +1,1 @@
+v2rev7: Shift press while slowaim latches fastaimhighest120; releasingShift doesnotreturnslow. Ctrl togglesbaseaimmode, theonlyreturntoslow. Walk entryslow native100; jogentryfast120. Slowtiers73/native100,fast80/native100/120 unchanged. Wheelwithinmode, F8/croaim/poses preserved. Native test pending.

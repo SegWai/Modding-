@@ -1074,3 +1074,7 @@ Removed101/99 boundary logic in aimed standingwheel. Slow clamps1..2;fastclamps1
 
 ### Separate v2 Revision6 — derive aim entry from lowered mode
 Standing aim entry fromwalkflagtrue atanywalktier selects slowhighest(original100);fromjogflagfalse atanyjogtier selects fasthighest120. Ctrl toggleseffectiveaimmode andresetsbothselectedtiershighest. Storedbaseaimmode persistswithoutShift: holdingShift.10s onlytemporarily overridesSlowbase toFast; release restoresSlowbase. Fastbase cannotbechangedtoSlowbyShift. Ctrl duringShifttempFast selectsSlow/suppressescurrenthold untilrelease/repress. Wheelclamps currentmode, aimingpose/clipplans/F8/crounchanged. Actual-controller entry/CTRL/Shiftrelease/raised3/4/defaults/cro tests30/60/144FPS bothorders and inheritedchecks passed;nativevalidationpending.
+
+
+### Separate v2 Revision7 — Shift latches fast aiming
+User requestspressShiftfromslowaim tofastwithoutrequiringhold, releasecannotreturnslow;Ctrlonlyslowreturn. V7 detectsShift risingedge; setsbaseFast/highest120. Ctrlprioritytoggleseffectivebase/highest levels; holdingShiftwhileCtrlslow doesnotoverrideuntilfreshrelease/press. WalkingentrySloworiginal100/jogentryFast120 unchanged. Slow73/native100 andfast80/native100/120 wheeltiers, upperpose/F8/crouchpreserved. Actual-controllerpress/release/heldCtrl/freshpress/entrytests30/60/144FPS bothorders passed;nativevalidationpending.
