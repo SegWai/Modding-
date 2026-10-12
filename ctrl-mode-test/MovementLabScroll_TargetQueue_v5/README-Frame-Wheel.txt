@@ -1,0 +1,1 @@
+V5: immediate wheel target selection; active slowdown to walking uses established momentum budget from current gait, rather than compressing it into remaining sprint-to-jog time. Upward controller, pose smoothing, graphs and crouch preserved.
