@@ -1,0 +1,1 @@
+V16 wider view only: erect/walk/jog/sprint45cm farther at default height; crouch60cm farther. V cycles default third/wider third/first. Existing crouch correction, movement, armed fixes and loadout unchanged. Native visual check pending.

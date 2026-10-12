@@ -1026,3 +1026,7 @@ V toggles static wider-view flag via guarded/latching mission KeyPress/KeyReleas
 
 ### Camera cycle v15 — three perspectives
 User confirms native V switches third/first and interferes with v14 two-view flag. SDK DayZPlayerImplement.SetIsInThirdPerson verified; UAPersonView action ForceDisable during offline mission, restored on finish. V key handler now cycles mode0 default3rd,1 wider3rd,2 first; sets wider flag only1 and native perspective mode!=2. Existing key hold latch/menu guard preserved; third-disabled world guard. Initial spawn defaults3rd. Actual helper translated to C++ passed30 cycle presses; native input lifecycle/camera test pending. Existing wider camera geometry/crouch correction, World movement, graphs, armed mappings and prepare unchanged.
+
+
+### Camera cycle v16 — wider offsets revision
+Only wider-view targets changed from erect+.15m/+ .05m height to+.45m/default height and crouch+.30m to+.60m distance. Current/default and first-person cycle retained; existing crouch correction unchanged. Mission/World/graphs/armed plan/preparer byte-identical tov15. Package verified; native camera collision/viewpoint pending local test.
