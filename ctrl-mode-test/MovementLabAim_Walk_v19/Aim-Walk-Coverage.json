@@ -1,0 +1,38 @@
+{
+  "base": "v13",
+  "standing_target_percent": [
+    65,
+    75,
+    85,
+    100
+  ],
+  "standing_actual_percent": [
+    66.66666666666667,
+    76.66666666666667,
+    86.66666666666667,
+    100
+  ],
+  "crouch_fps": [
+    9,
+    14,
+    18,
+    22,
+    26
+  ],
+  "original_nodes_wrapped": [
+    "WalkBSrc",
+    "WalkBLSrc",
+    "WalkBRSrc",
+    "WalkFSrc",
+    "WalkFLSrc",
+    "WalkFRSrc"
+  ],
+  "unchanged_upper_body": [
+    "ErcMoveRasG",
+    "CroMoveRasG",
+    "ErcADST",
+    "CroADST",
+    "AimRunObstBlend",
+    "NormalWeaponIK"
+  ]
+}
