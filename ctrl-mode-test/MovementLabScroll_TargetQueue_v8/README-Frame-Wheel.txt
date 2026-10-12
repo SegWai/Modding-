@@ -1,0 +1,1 @@
+V8: Mission frame action-edge capture only. No raw-wheel polling or simulation fallback to double-count a persistent wheel value. Queue, speed levels, momentum and pose smoothing unchanged. Native fast-wheel capture requires user test.

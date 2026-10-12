@@ -994,3 +994,7 @@ User reports a subtle bump from lowest jog80 to any walking pace. Cause not prov
 
 ### Immediate scroll targets v7 — walking level revision
 Walking1 now24FPS/80%, walking2 native100%, walking3 boundary directly to jog80. Removed sustained120 selection; compatibility StandingWalkVariants/L2 is30FPS to ensure no120 fallback. Crouch variants unchanged. Boundary saves walkLevel2 for outgoing pose; downward jog boundary still returns default walk1 now80. Local schema/controller/boundary and pose tests pass30/60/144FPS bothorders. Mission and pose helper unchanged fromv6. Native playback requires local freshly prepared test.
+
+
+### Immediate scroll targets v8 — single action-event owner
+User reports intermittent double steps on v7. Raw wheel state can be observed by frame and simulation callers at different game times and supplemented by action fallback; actual per-notch count not known from prior logs. V8 eliminates both duplication paths: frame Mission reader alone uses Prev/Next LocalPress action events; removes raw polling and CommandHandler capture fallback. Frame-time dedup retained, queue persists. Local regression asserts persistent raw value never changes selection, one action event moves walk80->native100 only, subsequent frames remain there, and multiple explicit action events accumulate across frames before simulation. Momentum/pose/levels preserved. Native rapid event delivery remains unverified and requires user test.
