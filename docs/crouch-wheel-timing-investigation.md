@@ -990,3 +990,7 @@ User confirmed v4 selection works but rapid downward retarget compresses sprint-
 
 ### Immediate scroll targets v6 — slow-jog/walk endpoint pose test
 User reports a subtle bump from lowest jog80 to any walking pace. Cause not proven from video/native graph phase; test applies smoothstep to achieved-gait walk/jog pose target only when walk mode selected with jogLevel2. Endpoints remain0/1, derivative tends to0 at endpoints. Existing low-pass remains; same shared pose variable feeds wrapped walking/jogging graphs. V5 World source byte-identical after removing the four-line addition; mission, all graphs and preparation identical. Full local controller regressions pass, native visual confirmation pending. No claim that phase or root motion is verified by mock tests. V5 and default PoseExitv2 preserved.
+
+
+### Immediate scroll targets v7 — walking level revision
+Walking1 now24FPS/80%, walking2 native100%, walking3 boundary directly to jog80. Removed sustained120 selection; compatibility StandingWalkVariants/L2 is30FPS to ensure no120 fallback. Crouch variants unchanged. Boundary saves walkLevel2 for outgoing pose; downward jog boundary still returns default walk1 now80. Local schema/controller/boundary and pose tests pass30/60/144FPS bothorders. Mission and pose helper unchanged fromv6. Native playback requires local freshly prepared test.

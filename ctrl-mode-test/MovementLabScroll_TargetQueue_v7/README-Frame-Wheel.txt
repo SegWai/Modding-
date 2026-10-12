@@ -1,0 +1,1 @@
+V7 walking levels: 1=80% (24FPS), 2=native100%, 3=transition to jogging80%. Former120% removed. Jogging/sprint/crouch and v6 pose/momentum preserved. Compatibility L2 clips now native30FPS, never120%.
