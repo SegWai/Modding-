@@ -1118,3 +1118,11 @@ User reportedRevision13 never triggers. Strict achieved gait2.99 may not be reac
 Offline-only StaminaHandler overrides preserve native processing while removing load-based cap and depletion; PlayerBase.IsOverloaded returnsfalse only in enabled offline test. No multiplayer changes. All tactical clothing/vest/holster/pouches black; custom backpack now smaller AssaultBag_Black model with42 cargo slots and two weapon slots. Existing four weapons/loaded and spare magazines retained; spare loose ammo fills smaller pack. Spawn moved fromcoast toNWAF4610/10180 surface height every launch.
 
 Actual controller and inherited graph checks passed30/60/144FPS both callback orders. Translated stamina methods checked600 updates/full cap/no depletion and multiplayer fallbacks. Loadout class references and spawn checked statically. Native compile/spawn and felt momentum remain user-test dependent. Earlier versions preserved.
+
+### Revision15 — sprint-entry diagnostics and paved target range
+
+User reports140 still invisible. Revision14 native logs requested, not received at packaging. No proven root cause; do not claim fixed. Test extends qualified raise grace250ms ->1s while retaining immediate reset on lowered slowdown; logs achieved sprint gait, sustained timer, qualified expiry, profile and decay timer to distinguish eligibility from playback. Duration1.5s unchanged. NWAF spawn moved to intended paved runway4500/10300; exact surface requires native check.
+
+Five unselected PlayerBase targets spawn20m ahead on a line10m spacing. Per-target mission scheduler detects death, waits3000ms, deletes corpse, replaces same class/position, repeats indefinitely and cleans up on mission finish. Native command idle override applied only to flagged live targets, normal death processing preserved. Black/unlimited-stamina loadout retained.
+
+Existing actual-controller regressions pass. Actual target update method translated and tested20 death cycles/five targets, no respawn2999ms, replacement3000ms and corpse cleanup. Native animation speed/compilation/spawn surface/NPC stationary behavior remain unverified. User logs/in-game test required to finish140 diagnosis.
