@@ -1,0 +1,1 @@
+V9 pose handoff test: downward walk/jog pose weight is limited to dt/.45 when returning to walking. All v8 wheel capture, levels, speed requests, momentum timings and graph files unchanged. Native visual validation pending.

@@ -998,3 +998,7 @@ Walking1 now24FPS/80%, walking2 native100%, walking3 boundary directly to jog80.
 
 ### Immediate scroll targets v8 — single action-event owner
 User reports intermittent double steps on v7. Raw wheel state can be observed by frame and simulation callers at different game times and supplemented by action fallback; actual per-notch count not known from prior logs. V8 eliminates both duplication paths: frame Mission reader alone uses Prev/Next LocalPress action events; removes raw polling and CommandHandler capture fallback. Frame-time dedup retained, queue persists. Local regression asserts persistent raw value never changes selection, one action event moves walk80->native100 only, subsequent frames remain there, and multiple explicit action events accumulate across frames before simulation. Momentum/pose/levels preserved. Native rapid event delivery remains unverified and requires user test.
+
+
+### Immediate scroll targets v9 — walking pose handoff rate test
+User confirmed v8 wheel behaviour. Uploaded1.033s/30FPS rear-view clip shows brief torso/arm change around walking handoff; feet cropped, phase reset not established. V9 caps decreasing WalkJogPose at dt/.45 when walking selected, after existing filter, to prevent abrupt native achieved-gait drops from causing a fast outgoing-pose collapse. Animation clips still play normally; graph and speed/brake methods unchanged. Added achieved-gait1/pose1 regression passes30/60/144FPS bothorders; native visual improvement unverified. V8 preserved.
