@@ -1152,3 +1152,7 @@ UserconfirmedRevision18 momentumworks; requests1s slowdown andremove/fixflickeri
 ### Revision20 —0.7s aim decay
 
 Userrequested0.7s. Changedaimtimer/divisor1->0.7only; gate/handoff/pavedspawn/blackgear/unlimitedstamina/noNPCsretained. Actualcontrollerchecks30/60/144FPSbothorderspass withdurationroundedtosimulationframe. Packaged; nativeperceptionpending. Revision19preserved.
+
+### Linkedv2Revision21 —0.3s aim decay
+
+Userrequested0.3s. Changedonlyexclusiveaimtimer/divisor0.7->0.3; gate/handoff/pavedspawn/blackgear/unlimitedstamina/noNPCsretained. Actualcontrollerchecks30/60/144FPSbothorderspass. Packaged; nativeperceptionpending. LinkedRevision20preserved.
