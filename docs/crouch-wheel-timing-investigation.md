@@ -1110,3 +1110,11 @@ User requested140 ->100 over1.5 seconds. Changed only the aim sprint timer durat
 User requested140% only after1 continuous second fully sprinting, excluding jogging/acceleration. Added achieved gait>=2.99 duration accumulator while local upright lowered movement is eligible. Requested Shift/scroll sprint alone can no longer trigger140. Anything below threshold, crouch, stop or UI pause resets qualification. A qualified raise retains existing250ms entry grace for native sprint input clearing and consumes qualification once. Existing1.5s decay and maximum250ms handoff unchanged. Native gait is a movement-state proxy rather than direct visual animation frame inspection.
 
 Actual-controller checks passed30/60/144FPS both callback orders; added checks for long accelerating gait2.9, half-second full sprint, interrupted sprint, successful full-second qualification and reset on stop/crouch/menu. Graph and clips unchanged. Native runtime test pending. Revision12 preserved.
+
+### Revision14 — attainable sprint qualification and offline test loadout
+
+User reportedRevision13 never triggers. Strict achieved gait2.99 may not be reached: earlier native logs showed sprint around2.97. Revised condition>=2.9 plus active sprint request and1 continuous second (still resets below threshold/ineligible). This is a test hypothesis, not proven fromRevision13 logs. Added regression sustained2.97 qualifies, early2.8 does not. Decay1.5s retained.
+
+Offline-only StaminaHandler overrides preserve native processing while removing load-based cap and depletion; PlayerBase.IsOverloaded returnsfalse only in enabled offline test. No multiplayer changes. All tactical clothing/vest/holster/pouches black; custom backpack now smaller AssaultBag_Black model with42 cargo slots and two weapon slots. Existing four weapons/loaded and spare magazines retained; spare loose ammo fills smaller pack. Spawn moved fromcoast toNWAF4610/10180 surface height every launch.
+
+Actual controller and inherited graph checks passed30/60/144FPS both callback orders. Translated stamina methods checked600 updates/full cap/no depletion and multiplayer fallbacks. Loadout class references and spawn checked statically. Native compile/spawn and felt momentum remain user-test dependent. Earlier versions preserved.
