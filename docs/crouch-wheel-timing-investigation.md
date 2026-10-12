@@ -1148,3 +1148,7 @@ Actual-controller timing/gate/regressions passed30/60/144FPSbothcallbackorders. 
 ### Revision19 —1s aim decay, all testNPCs removed
 
 UserconfirmedRevision18 momentumworks; requests1s slowdown andremove/fixflickeringtargets. Selectedremove: deletedentirerangeNPC class/slots/spawn/respawn/cull/cleanup, leavingonlycontrolledplayerCreatePlayer. Pavedairfieldspawnsearch,blackgear/unlimitedstamina retained. Changedonlyaimtimer/progressnormalization1.5->1s; workinggateunchanged. Actualcontrollerchecks30/60/144FPSbothorderspass; staticallyverifiedoneCreatePlayercall,norangeNPCmethods/file. Native1splaybackpending; previousconfirmedRevision18preserved.
+
+### Revision20 —0.7s aim decay
+
+Userrequested0.7s. Changedaimtimer/divisor1->0.7only; gate/handoff/pavedspawn/blackgear/unlimitedstamina/noNPCsretained. Actualcontrollerchecks30/60/144FPSbothorderspass withdurationroundedtosimulationframe. Packaged; nativeperceptionpending. Revision19preserved.
