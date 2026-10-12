@@ -1,0 +1,1 @@
+Separate v2 revision2: slow aim1=30%,2=47%,3=60%default,4=73%,5=native100%; fast aim1=80%,2=native100%,3=120%. Slow101 edge tofast80; fast99 edge toslow default60. Ctrl toggles slowdefault60/fastnative100. Existing crouchaimtiers/native aim layers preserved. Original v2/v21 unchanged; native visual/velocity test required.
