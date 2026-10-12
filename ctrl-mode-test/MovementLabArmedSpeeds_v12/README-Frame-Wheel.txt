@@ -1,0 +1,1 @@
+Armed speeds v12: preserve weapon/object-specific Locomotion overrides in custom groups; retime native armed crouch walking to30% so it matches actual level1. Standing80/native100 and jog80/native100 retained. Reads required original clips from D:\DayZProjects; originals not modified. Raised-aim native branch not yet changed. Native test required.
