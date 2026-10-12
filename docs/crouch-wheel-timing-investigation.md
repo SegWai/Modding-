@@ -928,3 +928,46 @@ root motion remain user-side tests; broad test is not newly approved default.
 Artifact: artifacts/MovementLab_All_Pose_Smoothing_Test_v1.zip.
 SHA256:4e5ba33842d8b9a3d033a2b54eb5b05cbe56d77babe97da17004a41648ed071c.
 Default artifact remains e1a6e4999c45abb0553f2e1dc187e9de091bdb49939effd49eecdc3614e024e3.
+
+## Confirmed broad smoothing and immediate scroll target v2
+
+User confirmed broad locomotion smoothing v1 works perfectly. Default remains
+explicitly preserved PoseExitv2. User now requests immediate target selection
+from rapid wheel bursts across walk/jog/sprint and crouch tiers, with animations
+continuing toward selected target after scrolling stops. Existing code reads
+LocalPress boolean, which cannot convey several notches in one update; native
+raw wheel behavior not captured yet, so input collapse diagnosis is provisional.
+
+Separate source from confirmed AllPoseSmoothingv1. Adds documented native
+GetMouseState(MouseState.WHEEL) polling once per GetGame.GetTime sample. Signed
+counts accepted; magnitude>=120 interpreted as120-unit deltas, anomalous counts
+bounded16. Action LocalPress fallback used only if raw0, avoids double-counting.
+Accumulated pending count bounded32, cleared across physical stance change/
+menu/pause/unfocused game. Input.HasGameFocus checked per official SDK. Native
+wheel sign/units and timing require real hardware validation; diagnostics log
+raw count/normalized steps.
+
+Standing consumes full count by stepping selected-mode fields and normalizing
+existing mode boundary after each notch, without consulting achieved speed or
+waiting for pose completion. Preserves asymmetric corrected v2 jog80->walk85 rule,
+rather than replacing it with a linear down-to-walk120 ladder. Crouch applies
+whole count and clamps1..6 after original entry reset. No further scroll required
+once target selected. Existing acceleration, braking, pose profile timers then
+approach retained target. Pending count retained across temporary command
+ineligibility, applied when eligible; physicalShift can still override current
+gait, while stored target selection changes underneath. No new UI messages.
+All graph/clip/preparer/mission and Smoothing-Coverage bytes unchanged.
+
+Tests: actual translated source at30/60/144FPS both callback orders passes5-notch
+lowestwalk->maxsprint selection before animation catches up, no-more-input settle,
+rapid descent to walk,600-unit burst normalization, endpointclamps, same-frame
+dedup, asymmetric jog return, crouch endpoint bursts/settling, temporary command
+queue, menu and game-focus drops. Inherited full input/brake/crouch/pose/direction
+regressions pass. SDK harness extended with actual signatures and raw wheel/time/
+focus mock; namespaces converted for C++ only. A single-line guarded log changed
+to braces because harness removes logs. Default artifact checksum and confirmed
+broad graph/timer methods verified unchanged. PBO/ZIP checks pass. Native compile,
+raw-input semantics, target capture and visual continuity pending in-game test.
+
+Artifact: artifacts/MovementLab_Immediate_Scroll_Targets_v2.zip.
+SHA256:52eb7aff06bd3de8feb4ff87e0bb7336e35134b90960918769449b3cbec5c3a0.

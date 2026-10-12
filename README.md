@@ -6,6 +6,22 @@ Preserve its source, ZIP and history unchanged; publish new tests separately.
 
 [Download the confirmed default](https://github.com/SegWai/Modding-/raw/044fd7b/artifacts/MovementLab_Crouch_PoseExit_Test_v2.zip).
 
+## Separate test: immediate counted scroll targets v2
+
+[Download immediate scroll targets](artifacts/MovementLab_Immediate_Scroll_Targets_v2.zip).
+Based on the broad smoothing test the user confirmed works perfectly. Raw wheel
+notches are counted, normalized for common120-unit deltas and processed against
+selected target mode, independent of animation progress. A burst can select max
+sprint from lowest walking in one update; poses/native acceleration then settle
+without more scrolling. Downward bursts and crouch endpoints behave likewise.
+Each notch follows existing corrected-v2 boundaries, including jog80->defaultwalk85.
+Queue survives temporary command restrictions; menus/pause/stance changes clear
+stale pending input. HasGameFocus blocks UI scrolling. Same-frame samples deduplicated.
+Broad smoothing graph/clip/pose timers and movement rules retained. Default PoseExit
+v2 remains preserved. Native mouse wheel sign/units/capture and visuals require
+local test; local actual-code regressions and burst/settling checks pass. Extract
+separately and launch. Logs include raw wheel/step/target values for diagnosis.
+
 ## Separate test: broad locomotion pose smoothing v1
 
 [Download all movement pose-smoothing test](artifacts/MovementLab_All_Pose_Smoothing_Test_v1.zip).
