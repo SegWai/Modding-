@@ -1,0 +1,30 @@
+{
+  "branch": "v2 revision4",
+  "slow_numbered_percent": [
+    73,
+    100
+  ],
+  "slow_default_level": 1,
+  "fast_numbered_percent": [
+    80,
+    100,
+    120
+  ],
+  "fast_default_level": 2,
+  "crouch_percent": [
+    30,
+    47,
+    60,
+    73,
+    87
+  ],
+  "trigger_percent": [
+    101,
+    99
+  ],
+  "native_aim_layers": "unchanged",
+  "note": "Custom73% plus originalnative100%, no custom highest slowaim clip path",
+  "comparison_key": "F8",
+  "comparison_scope": "standing aim only",
+  "slow_level2": "Original native source branches, same as F8 native comparison; custom profile blend disabled"
+}

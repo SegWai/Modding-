@@ -1,0 +1,1 @@
+v2 Revision4: slowaimlevel1 custom73%default;level2 original native walking sources with both custom movement branches disabled, same path asF8 native comparison. Fastaim/croaim/F8/Ctrl unchanged. Earlier revisions preserved. Native difference verification required.
