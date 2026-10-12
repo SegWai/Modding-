@@ -1,0 +1,1 @@
+v2rev5: no wheel mode boundaries while aiming. Slow73/native original100; fast80/native100/120. HoldShiftfast, releaseShiftslow. Ctrl forces slow; if pressed during heldShift, release/repressShift toreturnfast. Wheel clamps within currentmode, remembers itslevels. F8comparison andcroaimunchanged. Native test required.

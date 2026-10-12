@@ -1066,3 +1066,7 @@ User removes slowaimlevels1/2/3 (30/47/60), leaves73/native100; renumbered1=73de
 
 ### Separate v2 Revision4 — original native slow source at highest tier
 User perceives customhighest100 differently from F8original. V4 keeps custom73defaultlevel1, butlevel2 nowdisablesbothcustomwalking/running source branches exactlyasF8 nativecomparison (standingSlowMode only), selecting originalnativeSyncWalk sources. Samegait1/Ctrl logicandallF8 flags preserved; noFPS/camera/fast/cro edits. Actual-controller assertionlevel2WalkActive0/FastActive0 andallrev3comparison/tier/cro/lowerregressions passed. Graph/mapping/clipplans unchanged. Native parity stillrequireslocaltest; no claim of measuredvelocity equivalencefrommock. Earlierrevisions preserved.
+
+
+### Separate v2 Revision5 — aim wheel never changes modes
+Removed101/99 boundary logic in aimed standingwheel. Slow clamps1..2;fastclamps1..3. Aim defaultSlow, physicalShift heldselectsFast/releaseSlow;CtrlwhileShift forcesSlow andsuppressescurrentShift untilrelease/repress. Wheelremembersmodelevels andnevercrosses. F8nativecomparison andcroaim unchanged; nativetopSlow source preserved. Actual-controllerclamp/spam/Shift/CTRLatheldShift/release/repress/comparison/crochecks30/60/144FPS bothorders passed. Graphs/clipplans untouched. Native validationpending.
