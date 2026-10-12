@@ -1,0 +1,64 @@
+from pathlib import Path
+import re,json
+ROOT=Path(__file__).resolve().parents[1];SOURCE=ROOT/'ctrl-mode-test/MovementLabAim_Walk_v20'
+def block_end(s,start):
+ i=s.index('{',start);depth=0;q=False;esc=False
+ for j in range(i,len(s)):
+  c=s[j]
+  if q:
+   if esc:esc=False
+   elif c=='\\':esc=True
+   elif c=='"':q=False
+  elif c=='"':q=True
+  elif c=='{':depth+=1
+  elif c=='}':
+   depth-=1
+   if depth==0:return j+1
+ raise AssertionError('unclosed block')
+
+w=(SOURCE/'StartGateSource/Scripts/4_World/MovementLabStartGate.c').read_text();mission=(SOURCE/'Missions/MovementLabMovementLogic.ChernarusPlus/init.c').read_text()
+# Reuse actual-controller translation and inherited controller regressions.
+text=(ROOT/'tools/check_scroll_target_queue_v9.py').read_text();a=text.index('# Reuse baseline actual-controller translation');b=text.index("exec(compile(harness,'walk-level-controller-harness','exec'))")+len("exec(compile(harness,'walk-level-controller-harness','exec'))")
+chunk=text[a:b]
+extra='\n for(int fps:{30,60,144})for(bool order:{false,true}){\n  game={};api={};MovementLabStartGate::Enabled=true;Probe p;MissionProbe m;game.player=&p;float dt=1.f/fps;api.a[0].value=1;\n  tick(p,m,dt,order);int previousJog=p.m_MovementLabJogLevel;bool previousMode=p.m_MovementLabWalkMode;\n  p.raised=true;tick(p,m,dt,order);assert(p.m_MovementLabAimStandingLevel==4 && p.move.speed==1 && p.aimActive==1);\n  api.a[6].value=1;ticks(p,m,fps,dt,order);assert(p.move.speed==1 && p.raised);\n  for(int level=3;level>=1;level--){api.a[8].press=true;tick(p,m,dt,order);assert(p.m_MovementLabAimStandingLevel==level);}\n  ticks(p,m,fps,dt,order);assert(p.aimProfile<1.04f);\n  for(int i=0;i<10;i++){api.a[7].press=true;tick(p,m,dt,order);}\n  assert(p.m_MovementLabAimStandingLevel==4 && p.m_MovementLabJogLevel==previousJog && p.m_MovementLabWalkMode==previousMode);\n  p.stance=1;tick(p,m,dt,order);assert(p.m_MovementLabAimCrouchLevel==3 && p.aimProfile==7 && p.move.speed==1);\n  for(int i=0;i<10;i++){api.a[7].press=true;tick(p,m,dt,order);}assert(p.m_MovementLabAimCrouchLevel==5);\n  ticks(p,m,fps,dt,order);assert(p.move.speed==1 && p.aimProfile>8.96f);\n  for(int i=0;i<10;i++){api.a[8].press=true;tick(p,m,dt,order);}assert(p.m_MovementLabAimCrouchLevel==1);\n  ticks(p,m,fps,dt,order);assert(p.aimProfile<5.04f);\n  api.a[0].value=0;tick(p,m,dt,order);assert(p.move.speed==0 && p.raised);\n  p.raised=false;api.a[6].value=0;tick(p,m,dt,order);assert(p.aimActive==0 && !p.m_MovementLabAimOwnsSpeed);\n }\n'
+chunk=chunk.replace("new_tests+=target_tests",'new_tests+=target_tests\nnew_tests+='+repr(extra))
+chunk=chunk.replace("exec(compile(harness,'walk-level-controller-harness','exec'))", "harness=harness.replace('int BindVariableFloat(const char* n){','int BindVariableFloat(const char* n){if(std::string(n)==\"MovementLabAimWalkActive\")return 28;if(std::string(n)==\"MovementLabAimWalkProfile\")return 29;')\nharness=harness.replace('float animLevel=1,animHalf=0,exitActive=0,exitWeight=0;', 'float animLevel=1,animHalf=0,exitActive=0,exitWeight=0,aimActive=0,aimProfile=4;')\nharness=harness.replace('if(id==11)animHalf=v;', 'if(id==28)aimActive=v;else if(id==29)aimProfile=v;else if(id==11)animHalf=v;')\nexec(compile(harness,'walk-level-controller-harness','exec'))")
+exec(compile(chunk,'aim-walk-controller-harness','exec'))
+import json
+old=ROOT/'ctrl-mode-test/MovementLabArmedSpeeds_v13'
+graph=(SOURCE/'WorkspacePatches/locomotion.agr').read_text();original=(old/'WorkspacePatches/locomotion.agr').read_text()
+def nodes(s):
+ out={}
+ for match in re.finditer(r'\$Node\s+\w+\s*\{',s):
+  raw=s[match.start():block_end(s,match.start())];name=re.search(r'"([^"\n]+)"',raw)[1]
+  assert name not in out,name;out[name]=raw
+ return out
+new=nodes(graph);previous=nodes(original);slots=['WalkB','WalkBL','WalkBR','WalkF','WalkFL','WalkFR']
+for name,raw in previous.items():
+ if name in [x+'Src' for x in slots]:assert new[name+'MLNative']==raw.replace('"'+name+'"','"'+name+'MLNative"',1)
+ else:assert new[name]==raw,name
+assert len(new)==len(previous)+120
+assert not graph[block_end(graph,graph.index('$AnimGraph')):].strip()
+sheets=[(m.start(),block_end(graph,m.start())) for m in re.finditer(r'\$Sheet\s+"[^"\n]+"\s*\{',graph)]
+for m in re.finditer(r'\$Node\s+\w+\s*\{',graph):assert any(a<m.start()<block_end(graph,m.start())<b for a,b in sheets)
+plan=json.loads((SOURCE/'Armed-Speed-Plan.json').read_text());variants={'DZ/anims/anm/player/moves/unarmed/'+v['output']:v for v in plan['variants']}
+originals=Path('/tmp/player-main-upload/player_main')
+for instance in plan['instances']:
+ t=(originals/instance['file']).read_text(errors='replace');rows=dict(re.findall(r'"([^"\n]+)"\s+"([^"\n]+)"',t.split('$animations',1)[-1]))
+ for key,value in instance['add'].items():
+  if not key.startswith('ZZMovementLabAimWalk.'):continue
+  _,level,slot=key.split('.');assert slot in slots
+  native='Locomotion.'+('CroRas' if level.startswith('C') else 'ErcRas')+'.'+slot
+  expected=re.sub(r'^\{[^}]+\}','',rows[native]).lower()
+  actual=variants[value]['source'].lower() if value in variants else re.sub(r'^\{[^}]+\}','',value).lower()
+  assert actual==expected,(instance['file'],key)
+assert (SOURCE/'StartGateSource/Scripts/4_World/MovementLabTestCamera.c').read_bytes()==(old/'StartGateSource/Scripts/4_World/MovementLabTestCamera.c').read_bytes()
+assert '#Var MovementLabAimWalkActive float 0 0 1 ""' in (SOURCE/'WorkspacePatches/player_main.agr').read_text()
+assert '#ngrouptypes 30' in (SOURCE/'WorkspacePatches/player_main.ast').read_text()
+print('Only six synchronized walking leaves wrapped; every native aim/ADS/IK/recoil node unchanged. Scoped walk-only native source mappings, root/sheet containment,4/5 tier bounds and lowered regressions passed. Native playback/firing pending.')
+
+base=ROOT/'ctrl-mode-test/MovementLabAim_Walk_v19'
+for file in (base/'WorkspacePatches').iterdir():assert file.read_bytes()==(SOURCE/'WorkspacePatches'/file.name).read_bytes()
+for rel in ['Prepare-Crouch-Clips.ps1','Armed-Speed-Plan.json','Missions/MovementLabMovementLogic.ChernarusPlus/init.c']:
+ assert (base/rel).read_bytes()==(SOURCE/rel).read_bytes()
+print('Diagnostic only: graph, clip plans, preparation and mission identical to v19.')

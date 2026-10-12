@@ -1,0 +1,1 @@
+V20 diagnostic ONLY: v19 graph/mappings/clips/controllers unchanged; logs aiming eligibility, requested tier/profile, actual graph bindings, achieved gait and physical velocity. No on-screen messages. Test standing and crouched aiming wheel extremes while holding W, then close game and Collect-Logs.
