@@ -1,0 +1,1 @@
+Camera/loadout v11: corrected backpack config/script parent AliceBag_Green. Custom90-slot/two-weapon pack equipped explicitly; native backpack and inventory placement fallback no longer abort weapon loadout. Moving crouch camera desired height independent of gait, subtracting native movement height exactly; stationary native target preserved. Native validation pending.
