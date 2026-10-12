@@ -1162,3 +1162,7 @@ Userrequested0.3s. Changedonlyexclusiveaimtimer/divisor0.7->0.3; gate/handoff/pa
 Userrequestedremoveitentirely; removedentiretemporary140%feature: qualificationtimer/raisegrace/handoff/decay/wheellock andF140graphnodes/42FPSvariants. Standingaimcontroller andworkspace/clipplan restoredtoRevision9 normalmodebehavior, whilecurrentblackgear/unlimitedstamina/pavedairfieldspawn/noNPCs retained. Sprint->aimfastlevel3/120%; wheelavailableimmediately. Priorversionspreserved.
 
 Actual-controllerchecks30/60/144FPSbothcallbackorderspassed; added immediatepost-sprintaimwheeldown3->2->1 checks. Structuralassertions:no140nodes/no42FPS/noqualification/decaygate/oneplayerCreatePlayer. Native testpending.
+
+### Linkedv2Revision23 —1.5s slowdown,noNPCs
+
+Userclarifiedkeep140boostandrequested1.5sagain. BasedonRevision19 (notRevision22removalorRevision18NPCtest). Changedtimer/divisor1->1.5only; qualification/handoff/blackloadout/unlimitedstamina/pavedspawn/noNPCsretained. Actualcontrollerchecks30/60/144FPSbothorderspass. Earlierbuildspreserved; nativeperceptionpending.
