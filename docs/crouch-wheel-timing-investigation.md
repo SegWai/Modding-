@@ -1070,3 +1070,7 @@ User perceives customhighest100 differently from F8original. V4 keeps custom73de
 
 ### Separate v2 Revision5 — aim wheel never changes modes
 Removed101/99 boundary logic in aimed standingwheel. Slow clamps1..2;fastclamps1..3. Aim defaultSlow, physicalShift heldselectsFast/releaseSlow;CtrlwhileShift forcesSlow andsuppressescurrentShift untilrelease/repress. Wheelremembersmodelevels andnevercrosses. F8nativecomparison andcroaim unchanged; nativetopSlow source preserved. Actual-controllerclamp/spam/Shift/CTRLatheldShift/release/repress/comparison/crochecks30/60/144FPS bothorders passed. Graphs/clipplans untouched. Native validationpending.
+
+
+### Separate v2 Revision6 — derive aim entry from lowered mode
+Standing aim entry fromwalkflagtrue atanywalktier selects slowhighest(original100);fromjogflagfalse atanyjogtier selects fasthighest120. Ctrl toggleseffectiveaimmode andresetsbothselectedtiershighest. Storedbaseaimmode persistswithoutShift: holdingShift.10s onlytemporarily overridesSlowbase toFast; release restoresSlowbase. Fastbase cannotbechangedtoSlowbyShift. Ctrl duringShifttempFast selectsSlow/suppressescurrenthold untilrelease/repress. Wheelclamps currentmode, aimingpose/clipplans/F8/crounchanged. Actual-controller entry/CTRL/Shiftrelease/raised3/4/defaults/cro tests30/60/144FPS bothorders and inheritedchecks passed;nativevalidationpending.
