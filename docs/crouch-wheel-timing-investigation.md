@@ -1022,3 +1022,7 @@ User surrender walkB upload is FORM/ANIMSET5, FPS\0 at20, BEchunk length4 at24, 
 
 ### Camera toggle v14
 V toggles static wider-view flag via guarded/latching mission KeyPress/KeyRelease. Third-person base camera adds smoothed .15m distance/.05m height erect or .30m distance/no extraheight crouch. Current view default, reset on mission init/finish. Crouch correction unchanged and executes after base adjustment. First-person/iron sights separate classes untouched. Native V action bindings unchanged; native collision solver can shorten requested distances. Core movement, graph, armed instance plan and clip preparation byte-identical tov13. SDK keyrelease/camera APIs inspected, PBO/ZIP validated; local Windows/native visuals pending.
+
+
+### Camera cycle v15 — three perspectives
+User confirms native V switches third/first and interferes with v14 two-view flag. SDK DayZPlayerImplement.SetIsInThirdPerson verified; UAPersonView action ForceDisable during offline mission, restored on finish. V key handler now cycles mode0 default3rd,1 wider3rd,2 first; sets wider flag only1 and native perspective mode!=2. Existing key hold latch/menu guard preserved; third-disabled world guard. Initial spawn defaults3rd. Actual helper translated to C++ passed30 cycle presses; native input lifecycle/camera test pending. Existing wider camera geometry/crouch correction, World movement, graphs, armed mappings and prepare unchanged.

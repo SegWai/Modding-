@@ -1,0 +1,1 @@
+V15: V cycles default third-person -> wider third-person -> first-person -> default. Native UAPersonView action disabled during offline mission and restored on exit. Default/wider distances unchanged from v14; movement, armed fixes, loadout and crouch correction preserved. Native cycle check required.
