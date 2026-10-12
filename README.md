@@ -6,6 +6,22 @@ Preserve its source, ZIP and history unchanged; publish new tests separately.
 
 [Download the confirmed default](https://github.com/SegWai/Modding-/raw/044fd7b/artifacts/MovementLab_Crouch_PoseExit_Test_v2.zip).
 
+## Separate test: broad locomotion pose smoothing v1
+
+[Download all movement pose-smoothing test](artifacts/MovementLab_All_Pose_Smoothing_Test_v1.zip).
+Confirmed PoseExit v2 above remains default. This separate test adds direct walk/
+jog/sprint pose weights, independently blended walking/jog wheel profiles, all
+slow-crouch profile changes, fast exit to all lower tiers, lateral side-to-side
+poses, and longer native direction/stance/start/stop pose crossfades. Stand/
+crouch/prone handoffs keep original clips, tags and phase conditions. No gait/input/
+brake timer method changes. Clips remain forward; no frozen frame. See
+Smoothing-Coverage.json in package for scope. Unrelated combat/actions/vehicles
+are unchanged. Local translated controller/schema/package checks pass; native
+compile/feet/motion/visual continuity require testing. Pose blending can affect
+root motion, so velocity retention is not claimed from mocks. F7 still compares
+input filters but does not undo every edited graph window; use confirmed default
+package for exact rollback. Extract separately and launch as before.
+
 ## Previous working default: corrected scroll test v2
 
 User selected corrected scroll test v2 on 2026-10-12 as the default for future work.

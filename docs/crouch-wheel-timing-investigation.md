@@ -868,3 +868,63 @@ stance and direction transitions. Future work starts from
 ctrl-mode-test/MovementLabCrouch_PoseExit_v2; preserve its source/artifact unchanged.
 New broad smoothing tests remain separate until user confirms them.
 Default ZIP SHA256:e1a6e4999c45abb0553f2e1dc187e9de091bdb49939effd49eecdc3614e024e3.
+
+## Broad locomotion pose smoothing v1
+
+User authorized applying the confirmed direct-pose approach to movement speed/
+stance changes and keeping PoseExit v2 as default. Default preserved and marked
+before new work. Separate source derives from confirmed PoseExit v2. Graph:
+21 original nodes modified,22 new wrapper/matrix/side nodes,99 manifest entries
+covering node rewrites and transition-duration edits. Adds8 independently bound
+floats: active, walk/jog pose, jog/sprint pose, walking profile, jog rate profile,
+crouch profile, lateral side weight and lateral active weight.
+
+WalkRunSprintBlendT native and standing clone plus raised WalkRunBlendT now wrap
+their unchanged original T nodes and a direct variable-driven walk/run pose blend.
+Standing RunSprintBlendF native/clone combine original native factor when inactive
+with filtered fast-pose factor when active. Variables follow achieved native gait,
+bounded0..1 with.16s feedback span. Separate two-axis walking-profile/jog-rate
+matrix avoids scalar profile changes crossing unrelated speed rows. Walking level
+floats1..3 and jog80/native100 mixture use.20s feedback; target values unchanged.
+Slow crouch profile floats1..5 smoothly blend existing branches. Confirmed .55s
+fast-exit pose controller extends to any lower selected crouch tier; while active
+holds highest slow profile5, then blends toward selected lower tier.
+
+Five forward cyclic nodes (native walk/run, cloned walk/run and crouch clone)
+wrap original direction cycles and a direct left/right pose blend. Lateral side
+weight follows current movement angle, active within65..115deg side range and
+fades with.16s span. Blends left/right source poses without intermediate forward
+source, retaining original native directional branches for other angles. Native
+forward/back state machine crossfade durations extended to at least.42s. Existing
+transition conditions/normalized-foot-time gates/phase offsets untouched. Erect/
+crouch moving posture crossfades .50s, native stance-change edges at least.38s,
+start/stop/sliding-pose handoffs in StanceMaster at least.40s. Original stance clips/
+tags retained, including stand/crouch/prone route via StanceChangeSTM.
+Unrelated actions/combat/vehicle/gestures are outside this locomotion experiment.
+
+Source adds pose-variable helper only, original input/wanted gait/start/brake/
+crouch/strafe rules and mission byte-preserved; broadens confirmed exit target
+condition <=5 and adds helper to command orchestration. Root/template/instance
+clip mappings and FPS preparer unchanged. No freezes/rewinds or velocity API
+intervention. Actual root-motion trajectory may nevertheless change from graph
+pose weights; mocks do not prove physical speeds retained. Native F7 graph fallback
+wrappers retain original speed nodes, but native graph transition duration edits
+remain active; exact comparison requires loading preserved default.
+
+Validation: actual translated controller and independent animation bindings pass
+30/60/144FPS both callback orders, full inherited input/standing/crouch/strafe/
+scroll-boundary regressions, known fast->87, fast exit to other tiers, monotonic
+wheel-profile changes, bounded pose weights and lateral reversal/eligibility cases.
+Method comparison verifies every default movement helper unchanged except command
+orchestration and intended exit broadening. State machine conditions, clips/tags
+and phase offset tokens identical apart from blend-duration values. Original
+speedT nodes retained exactly under aliases. Graph schema/count/mapping/binding
+and preserved default checksum validated. An inherited test expected cancelling
+exit atlevel4; updated for intentional broader exit. A new scenario initially set
+fast level before crouch entry default reset; corrected setup enters crouch first.
+Reruns pass. PBO/ZIP checks pass. Native DayZ compiler/graph animation/foot phase/
+root motion remain user-side tests; broad test is not newly approved default.
+
+Artifact: artifacts/MovementLab_All_Pose_Smoothing_Test_v1.zip.
+SHA256:4e5ba33842d8b9a3d033a2b54eb5b05cbe56d77babe97da17004a41648ed071c.
+Default artifact remains e1a6e4999c45abb0553f2e1dc187e9de091bdb49939effd49eecdc3614e024e3.
