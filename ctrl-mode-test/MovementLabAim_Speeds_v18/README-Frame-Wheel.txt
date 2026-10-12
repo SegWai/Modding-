@@ -1,0 +1,1 @@
+V18 fixes graph nodes incorrectly appended outside graph/sheet in v17. Adds offline DIAG diagnostic inventory plugin registration bypassing IsDebug filtering for PluginInventoryDebug only. Same aiming tiers, mappings, movement and v13 cameras/loadout. Native crash reproduction and shooting test required.

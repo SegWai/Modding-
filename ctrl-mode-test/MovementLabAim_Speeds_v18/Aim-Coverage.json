@@ -1,0 +1,34 @@
+{
+  "base": "MovementLabArmedSpeeds_v13",
+  "standing_aim": "walk80/native100 -> jog80/native100; no sprint",
+  "crouch_aim": [
+    30,
+    47,
+    60,
+    73,
+    87
+  ],
+  "wrapped_native_nodes": [
+    "CroMoveRasG",
+    "ErcMoveRasG"
+  ],
+  "added_nodes": [
+    "CroMoveRasGMLL1",
+    "CroMoveRasGMLL2",
+    "CroMoveRasGMLL3",
+    "CroMoveRasGMLL4",
+    "CroMoveRasGMLL5",
+    "CroMoveRasGMLNative",
+    "CroMoveRasGMLSmooth",
+    "ErcMoveRasGMLL1",
+    "ErcMoveRasGMLL1J2",
+    "ErcMoveRasGMLL2",
+    "ErcMoveRasGMLL2J2",
+    "ErcMoveRasGMLNJ2",
+    "ErcMoveRasGMLNative",
+    "ErcMoveRasGMLRow100",
+    "ErcMoveRasGMLRow80",
+    "ErcMoveRasGMLSmooth"
+  ],
+  "preserved": "Every other existing locomotion node unchanged, including ADS, recoil/IK layers"
+}
