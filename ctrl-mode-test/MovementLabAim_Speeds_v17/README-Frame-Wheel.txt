@@ -1,0 +1,1 @@
+Aimed speed v17 BASE v13, no V camera changes. Raised walking80/100 and jogging80/100 with scroll, no aiming sprint. Crouch aim30/47/60/73/87, no fast tier or Shift override while raised. Native ADS/aim/recoil/fire layers retained; instance-specific raised clip mapping retimed locally. Native aim/jog limitations, visual phase and shooting require game test.
