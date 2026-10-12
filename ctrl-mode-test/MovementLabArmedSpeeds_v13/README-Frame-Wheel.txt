@@ -1,0 +1,1 @@
+V13 armed speed test: supports verified ANIMSET5 and ANIMSET6 FPS chunks. Only four FPS bytes retimed. Weapon/item overrides, crouch fallback repair, levels and all movement/camera/loadout logic unchanged from v12. Native test pending.
