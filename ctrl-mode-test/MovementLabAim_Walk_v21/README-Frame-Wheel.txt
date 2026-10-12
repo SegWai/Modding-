@@ -1,0 +1,1 @@
+V21 fixes raised stance eligibility: native raised erect3/crouch4 accepted and crouch4 classified correctly. Graph, clips, tiers and aim geometry unchanged. Standing65/75/85/native100 targets; crouch30/47/60default/73/87. Native confirmation required; diagnostic logs retained.
