@@ -1,0 +1,44 @@
+{
+  "separate_branch": "v2",
+  "base": "v21 with old standing profiles removed",
+  "slow_aim_percent": [
+    10,
+    100
+  ],
+  "fast_aim_percent": [
+    30,
+    100
+  ],
+  "wheel_sequence": [
+    "slow10",
+    "slow100",
+    "fast30",
+    "fast100"
+  ],
+  "transition_markers": [
+    101,
+    99
+  ],
+  "crouch_percent": [
+    30,
+    47,
+    60,
+    73,
+    87
+  ],
+  "wrapped_sources": [
+    "WalkBSrc",
+    "WalkBLSrc",
+    "WalkBRSrc",
+    "WalkFSrc",
+    "WalkFLSrc",
+    "WalkFRSrc",
+    "RunBSrc",
+    "RunBLSrc",
+    "RunBRSrc",
+    "RunFSrc",
+    "RunFLSrc",
+    "RunFRSrc"
+  ],
+  "upper_body": "native graph unchanged"
+}
