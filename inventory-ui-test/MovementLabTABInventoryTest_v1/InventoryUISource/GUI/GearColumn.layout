@@ -1,0 +1,22 @@
+FrameWidgetClass MovementLabGearColumn {
+ visible 1
+ nofocus 1
+ position 0 0
+ size 96 100
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  ItemPreviewWidgetClass MovementLabGearPreview {
+   visible 1
+   nofocus 1
+   position 2 15
+   size 92 66
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+ }
+}
