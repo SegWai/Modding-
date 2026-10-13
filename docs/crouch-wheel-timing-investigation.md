@@ -1226,3 +1226,7 @@ Added check_anim_template_index.py validatesrootcontainment/groupcounts,alphabet
 Userrequestsadditionalhiddenjog1->crouchmomentumfadewithtarget4. Newlogicalhidden8reuseexisting95fastcroclipgroup,1.5sfadeto4~73. Targetfieldgeneralizespriorfixed5; jog2/sprintretainhidden7->5~87. Jog1capturecurrentselectedlevel1internal2andachieved>=1.7inlowereduprightstate,walkingexcluded. Hidden7/8notwheelpickable,normalmax6,wheellockeduntilfadeends. NoextraAST/graph/clipchanges; sortedRevision31templateexactpreserved. Nativehidden95speednotnewretime, same entryrateassumedfrom“samething”.
 
 Actualcontrollerchecks30/60/144FPSbothorderspassjog1hidden8->4,existingjog2/sprinthidden7->5,wheelmax6,standing/aimmomentum andsourcegraph/templatechecks. Nativefeel/compilepending; previousbuildspreserved.
+
+### Linkedv2Revision33 — crouch4/5 aim entry mapping
+
+Userrequestcro4->aimcro4 andcro5->aimcro5. Aimcroentrynowcopiesloweredcrolevelif4or5; otherloweredlevelsretaindefaultaim3/60. NoFPS/graph/clip/control/fadechanges. Actualcontrollertests30/60/144FPSbothorderscoverall6loweredcroentries, expectedprofile4/5preservation/otherdefault3,andsubsequentwheelinput; priorregressionspass. Native testpending; earlierbuildspreserved.
