@@ -1,0 +1,55 @@
+    protected bool MovementLabSetIconUV(int icon)
+    {
+        float x0;
+        float y0;
+        float x1;
+        float y1;
+        switch (icon)
+        {
+            case 0: x0 = 0.023925781; y0 = 0.126953125; x1 = 0.102050781; y1 = 0.270507812; break;
+            case 1: x0 = 0.109375000; y0 = 0.126953125; x1 = 0.189941406; y1 = 0.270507812; break;
+            case 2: x0 = 0.197265625; y0 = 0.126953125; x1 = 0.277343750; y1 = 0.270507812; break;
+            case 3: x0 = 0.285156250; y0 = 0.126953125; x1 = 0.364746094; y1 = 0.270507812; break;
+            case 4: x0 = 0.374023438; y0 = 0.126953125; x1 = 0.459960938; y1 = 0.270507812; break;
+            case 5: x0 = 0.483886719; y0 = 0.126953125; x1 = 0.559570312; y1 = 0.270507812; break;
+            case 6: x0 = 0.567382812; y0 = 0.126953125; x1 = 0.640625000; y1 = 0.270507812; break;
+            case 7: x0 = 0.648437500; y0 = 0.126953125; x1 = 0.723632812; y1 = 0.270507812; break;
+            case 8: x0 = 0.730957031; y0 = 0.126953125; x1 = 0.808105469; y1 = 0.270507812; break;
+            case 9: x0 = 0.023925781; y0 = 0.372070312; x1 = 0.093261719; y1 = 0.535156250; break;
+            case 10: x0 = 0.101074219; y0 = 0.372070312; x1 = 0.171386719; y1 = 0.535156250; break;
+            case 11: x0 = 0.189941406; y0 = 0.372070312; x1 = 0.266601562; y1 = 0.535156250; break;
+            case 12: x0 = 0.274902344; y0 = 0.372070312; x1 = 0.348144531; y1 = 0.535156250; break;
+            case 13: x0 = 0.359863281; y0 = 0.372070312; x1 = 0.437011719; y1 = 0.535156250; break;
+            case 14: x0 = 0.447265625; y0 = 0.372070312; x1 = 0.514648438; y1 = 0.535156250; break;
+            case 15: x0 = 0.530761719; y0 = 0.372070312; x1 = 0.613769531; y1 = 0.535156250; break;
+            case 16: x0 = 0.633789062; y0 = 0.372070312; x1 = 0.804687500; y1 = 0.535156250; break;
+            case 17: x0 = 0.026367188; y0 = 0.644531250; x1 = 0.114746094; y1 = 0.812500000; break;
+            case 18: x0 = 0.123046875; y0 = 0.644531250; x1 = 0.212402344; y1 = 0.812500000; break;
+            case 19: x0 = 0.233398438; y0 = 0.644531250; x1 = 0.322265625; y1 = 0.812500000; break;
+            case 20: x0 = 0.332031250; y0 = 0.644531250; x1 = 0.425292969; y1 = 0.812500000; break;
+            case 21: x0 = 0.436035156; y0 = 0.644531250; x1 = 0.534667969; y1 = 0.812500000; break;
+            case 22: x0 = 0.556152344; y0 = 0.641601562; x1 = 0.805175781; y1 = 0.817382812; break;
+            case 23: x0 = 0.000000000; y0 = 0.000000000; x1 = 0.612304688; y1 = 0.612304688; break;
+            default: return false;
+        }
+        float uv[4][2];
+        uv[0][0] = x0; uv[0][1] = y0;
+        uv[1][0] = x1; uv[1][1] = y0;
+        uv[2][0] = x1; uv[2][1] = y1;
+        uv[3][0] = x0; uv[3][1] = y1;
+        m_MovementLabSpeedImage.SetUV(uv);
+        float atlasHeight = 1024;
+        if (icon == 23)
+            atlasHeight = 2048;
+        float pixelWidth = (x1 - x0) * 2048;
+        float pixelHeight = (y1 - y0) * atlasHeight;
+        float aspect = pixelWidth / pixelHeight;
+        float availableWidth = 88;
+        if (icon == 16 || icon == 22)
+            availableWidth = 132;
+        float iconWidth = Math.Min(availableWidth, 80 * aspect);
+        float iconHeight = iconWidth / aspect;
+        m_MovementLabSpeedImage.SetPos(0, (80 - iconHeight) / 2);
+        m_MovementLabSpeedImage.SetSize(iconWidth, iconHeight);
+        return true;
+    }
