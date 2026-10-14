@@ -1,0 +1,33 @@
+FrameWidgetClass MovementLabViewmodelRoot {
+ visible 0
+ ignorepointer 1
+ color 0 0 0 0
+ position 0 0
+ size 1 1
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  ItemPreviewWidgetClass MovementLabArmsPreview {
+   visible 1
+   ignorepointer 1
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+  ItemPreviewWidgetClass MovementLabGunPreview {
+   visible 1
+   ignorepointer 1
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+ }
+}
