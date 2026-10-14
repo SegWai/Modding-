@@ -1,0 +1,792 @@
+{
+  "base": "Confirmed PoseExit v2 (044fd7b)",
+  "changes": [
+    {
+      "node": "CroMoveLowG",
+      "change": "continuous slow-crouch speed profile blends; preserves highest branch during confirmed fast exit"
+    },
+    {
+      "node": "ErcMoveLowG",
+      "change": "independent walking profile and jog80/native100 crossfades"
+    },
+    {
+      "node": "MovementLowSTM",
+      "edge": [
+        "Erc",
+        "Cro"
+      ],
+      "change": "pose crossfade duration0.35->0.5; conditions/phase/tag kept"
+    },
+    {
+      "node": "MovementLowSTM",
+      "edge": [
+        "Cro",
+        "Erc"
+      ],
+      "change": "pose crossfade duration0.35->0.5; conditions/phase/tag kept"
+    },
+    {
+      "node": "MovementRasSTM",
+      "edge": [
+        "Erc",
+        "Cro"
+      ],
+      "change": "pose crossfade duration0.3->0.5; conditions/phase/tag kept"
+    },
+    {
+      "node": "MovementRasSTM",
+      "edge": [
+        "Cro",
+        "Erc"
+      ],
+      "change": "pose crossfade duration0.3->0.5; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunBlendSTM",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunBlendSTM",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunBlendSTM",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunBlendSTM",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunFowardCyclic",
+      "change": "lateral left/right pose crossfade without interpolating through forward pose"
+    },
+    {
+      "node": "RunSprintBlendF",
+      "change": "direct smoothed jogging/sprint pose weight"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToCro",
+        "CroToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToErc",
+        "ErcToCro"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToCro",
+        "CroToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToPne",
+        "PneToCro"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToPne",
+        "PneToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToErc",
+        "ErcToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToCro",
+        "CroToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToCro",
+        "ErcToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToErc",
+        "CroToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToErc",
+        "ErcToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToCro",
+        "PneToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToErc",
+        "PneToCro"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToPne",
+        "PneToCro"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToPne",
+        "PneToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToPne",
+        "CroToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToPne",
+        "ErcToCro"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToCro",
+        "CroToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToErc",
+        "CroToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToPne",
+        "CroToPneMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToPneMove",
+        "CroToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToPneMove",
+        "PneToCroMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToCroMove",
+        "PneToCro"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToCro",
+        "PneToCroMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToCroMove",
+        "CroToPneMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToPne",
+        "ErcToPneMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToPneMove",
+        "ErcToPne"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToPneMove",
+        "PneToErcMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToErcMove",
+        "ErcToPneMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToErcMove",
+        "PneToErc"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToErc",
+        "PneToErcMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToCroMove",
+        "PneToErcMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "PneToErcMove",
+        "PneToCroMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "CroToPneMove",
+        "PneToErcMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceChangeSTM",
+      "edge": [
+        "ErcToPneMove",
+        "PneToCroMove"
+      ],
+      "change": "pose crossfade duration0.3->0.38; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "",
+        "SlidingPose"
+      ],
+      "change": "pose crossfade duration0.2->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "IdleLow",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "MovementLow",
+        "IdleLow"
+      ],
+      "change": "pose crossfade duration0.35->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "MovementRas",
+        "IdleRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "MovementLow",
+        "StanceChange"
+      ],
+      "change": "pose crossfade duration0.2->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "IdleRas",
+        "StanceChange"
+      ],
+      "change": "pose crossfade duration0.2->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "IdleRas",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "StanceChange",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "IdleLow",
+        "StanceChange"
+      ],
+      "change": "pose crossfade duration0.2->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "StanceChange",
+        "IdleLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "StanceChange",
+        "IdleRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "StanceChange",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "MovementRas",
+        "StanceChange"
+      ],
+      "change": "pose crossfade duration0.2->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "IdleLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "IdleRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "StanceChange",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "StanceChange",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementRas"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "IdleLow",
+        "MovementLow"
+      ],
+      "change": "pose crossfade duration0.3->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "StanceMaster",
+      "edge": [
+        "SlidingPose",
+        "StanceChange"
+      ],
+      "change": "pose crossfade duration0.2->0.4; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTM",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTM",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTM",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTM",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkFowardCyclic",
+      "change": "lateral left/right pose crossfade without interpolating through forward pose"
+    },
+    {
+      "node": "WalkRunBlendT",
+      "change": "direct walk/jog pose weights; original preserved for inactive mode"
+    },
+    {
+      "node": "WalkRunSprintBlendT",
+      "change": "direct walk/jog pose weights; original preserved for inactive mode"
+    },
+    {
+      "node": "WalkBlendSTMMLWheel",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTMMLWheel",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTMMLWheel",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTMMLWheel",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkFowardCyclicMLWheel",
+      "change": "lateral left/right pose crossfade without interpolating through forward pose"
+    },
+    {
+      "node": "RunBlendSTMMLStandingWheel",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunBlendSTMMLStandingWheel",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunBlendSTMMLStandingWheel",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunBlendSTMMLStandingWheel",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "RunFowardCyclicMLStandingWheel",
+      "change": "lateral left/right pose crossfade without interpolating through forward pose"
+    },
+    {
+      "node": "RunSprintBlendFMLStandingWheel",
+      "change": "direct smoothed jogging/sprint pose weight"
+    },
+    {
+      "node": "WalkBlendSTMMLStandingWheel",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTMMLStandingWheel",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.3->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTMMLStandingWheel",
+      "edge": [
+        "Back",
+        "Forward"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkBlendSTMMLStandingWheel",
+      "edge": [
+        "Forward",
+        "Back"
+      ],
+      "change": "pose crossfade duration0.4->0.42; conditions/phase/tag kept"
+    },
+    {
+      "node": "WalkFowardCyclicMLStandingWheel",
+      "change": "lateral left/right pose crossfade without interpolating through forward pose"
+    },
+    {
+      "node": "WalkRunSprintBlendTMLStandingWheel",
+      "change": "direct walk/jog pose weights; original preserved for inactive mode"
+    }
+  ],
+  "variables": {
+    "MovementLabAllSmoothActive": [
+      0,
+      0,
+      1
+    ],
+    "MovementLabWalkJogPose": [
+      0,
+      0,
+      1
+    ],
+    "MovementLabJogSprintPose": [
+      0,
+      0,
+      1
+    ],
+    "MovementLabWalkingPoseLevel": [
+      1,
+      1,
+      3
+    ],
+    "MovementLabJogRatePose": [
+      0,
+      0,
+      1
+    ],
+    "MovementLabCrouchPoseLevel": [
+      3,
+      1,
+      5
+    ],
+    "MovementLabLateralPose": [
+      0.5,
+      0,
+      1
+    ],
+    "MovementLabLateralActive": [
+      0,
+      0,
+      1
+    ]
+  },
+  "limits": "Native compilation and visual/foot-phase validation pending; covers locomotion transitions, not unrelated combat/actions/vehicle animations."
+}
