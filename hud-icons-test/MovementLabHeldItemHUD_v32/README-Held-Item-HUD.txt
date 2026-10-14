@@ -1,0 +1,1 @@
+v32 replacesv31 background with actual uploaded Untitled-2.png(301x101RGBA alpha2..255). Previous original removed in this package; PNG stored byte-identical and convertedPAA updated. All HUD scripts, preview sizing, labels and gameplay unchanged. Local appearance check required.
