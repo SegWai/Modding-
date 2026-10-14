@@ -1,0 +1,7 @@
+Generated in Blender 4.3.2 from the attributed reference mesh.
+Developer rebuild uses tools/build_viewmodel_arms_v2.py and ArmAToolbox
+commit 016c9b8f30f8a9da3fb53b2afb2b28cbff7c057e.
+ArmAToolbox upstream: https://github.com/AlwarrenSidh/ArmAToolbox
+The output P3D is static MLOD; it has no humanoid animation skeleton.
+The editable rig source preserves arm weights and skeleton names for later work.
+Windows native model loading/preview and precise hand/gun grip are pending.
