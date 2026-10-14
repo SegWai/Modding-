@@ -1,0 +1,1 @@
+PSD HUD v4. Silhouette SVG curves traced from user PSD; raster shape overlap >94% validated. Vector rendered at4x then1024x512 native PAA. Display remains140x70. Native sound bars right of stamina and bottom-to-top. Equipped-item panel below stamina, native action prompts retained. Native render/compile/layout need local DayZ test. No movement changes.
