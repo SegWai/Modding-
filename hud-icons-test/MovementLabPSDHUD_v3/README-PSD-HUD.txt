@@ -1,0 +1,1 @@
+PSD HUD v3: original PSD artwork exported without pre-downsampling on1024x512 PAA canvases. Aiming aligned by torso position rather than rifle bounding width. Same140x70 display and stamina anchor asv2. Speeds/controls unchanged. Native rendering needs local test.
