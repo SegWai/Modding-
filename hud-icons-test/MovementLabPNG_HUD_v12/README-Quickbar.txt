@@ -1,0 +1,1 @@
+v12: gun preview fraction reduced88% to70% of slot width/height. Other objects remain60%. Downward offset doubled10% to20% of slot height. Other HUD and gameplay unchanged. Native visual check required; requested lower position can extend preview area below slot.
