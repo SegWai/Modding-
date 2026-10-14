@@ -1,0 +1,1 @@
+PSD HUD v2: indicator doubled from 70x35 to140x70 pixels, anchored above right end of stamina bar. Original512x256 textures retained. No movement, speeds, level mapping or controls changed. Extract fresh folder and launch. Native DayZ rendering needs local test.
