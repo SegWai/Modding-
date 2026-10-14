@@ -1,0 +1,1 @@
+v10: all custom item previews shifted downward5% of slot height. Size and horizontal centring unchanged fromv9. Enlarged slots, quantities, controls, stance HUD and gameplay unchanged. Local native visual check required.
