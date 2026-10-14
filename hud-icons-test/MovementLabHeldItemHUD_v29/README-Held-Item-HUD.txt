@@ -1,0 +1,1 @@
+v29 +10% fire-mode image size; gun preview raised3% card height. Count magazine.GetAmmoCount/GetAmmoMax only; internal-mag weapons use internal counts/max; chamber excluded; no mag0/0. Right-aligned glyph end tolerance0.5px and0.25px inset fix finaldigit clipping from float rounding. Regression numeric float32 checks32cases. Native visual check required.
