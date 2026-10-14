@@ -1,0 +1,1 @@
+v34 returns to Untitled-1.png from New folder.rar(299x99RGBA alpha1..255). BlackRGB tint retained fromv33; sourcefade used without greyRGB. PreviousUntitled-2 removed. OtherHUD/gameplay scripts unchanged. Native appearance test required.
