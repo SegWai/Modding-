@@ -1,0 +1,1 @@
+Quickbar v7: replace recursive widget scaling with direct slot geometry and centred item previews. Native-sized labels retained. Weapons use88% of enlarged slot preview; magazines/objects60%. Slots remain1.5x native. Controls, inventory data, stance HUD and movement unchanged. Native compile/render/rebinding need local test.
