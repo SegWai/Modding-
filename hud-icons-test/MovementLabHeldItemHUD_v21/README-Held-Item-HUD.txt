@@ -1,0 +1,1 @@
+v21 removes the duplicate-render outline experiment completely. One live held-item preview. Smooth smaller Arial Bold, stamina width, stance scaling, quickslots and gameplay retained. No weapon-outline effect. Native local visual check required.
