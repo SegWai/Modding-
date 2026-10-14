@@ -663,7 +663,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
         }
     }
 
-    protected void MovementLabEquipSnafuClothing(PlayerBase player, string slotName, string fallbackClass)
+    protected void MovementLabEquipMMGClothing(PlayerBase player, string slotName, string fallbackClass)
     {
         int clothingCount = GetGame().ConfigGetChildrenCount("CfgVehicles");
         int slotId = InventorySlots.GetSlotIdFromString(slotName);
@@ -680,7 +680,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
                 GetGame().ConfigGetText(path + " displayName", label);
                 string identity = clothingClass + " " + label;
                 identity.ToLower();
-                if (!identity.Contains("snafu"))
+                if (!identity.Contains("mmg") && !identity.Contains("mighty"))
                     continue;
                 if (pass == 0 && !identity.Contains("black"))
                     continue;
@@ -697,7 +697,7 @@ class MovementLabMovementLogicMission extends MissionGameplay
             }
         }
         MovementLabAddItem(player, fallbackClass);
-        Print("[MovementLab Gear] No loaded SNAFU clothing for " + slotName + "; native black fallback.");
+        Print("[MovementLab Gear] No loaded MMG clothing for " + slotName + "; native black fallback.");
     }
 
     protected void MovementLabEquipTestPlayer(PlayerBase player)
@@ -710,13 +710,13 @@ class MovementLabMovementLogicMission extends MissionGameplay
             MovementLabEquipNativeFallback(player);
             return;
         }
-        MovementLabEquipSnafuClothing(player, "Body", "TacticalShirt_Black");
-        MovementLabEquipSnafuClothing(player, "Legs", "CargoPants_Black");
-        MovementLabEquipSnafuClothing(player, "Feet", "MilitaryBoots_Black");
-        MovementLabEquipSnafuClothing(player, "Gloves", "TacticalGloves_Black");
-        MovementLabEquipSnafuClothing(player, "Headgear", "BallisticHelmet_Black");
-        MovementLabEquipSnafuClothing(player, "Mask", "BalaclavaMask_Black");
-        MovementLabEquipSnafuClothing(player, "Vest", "PlateCarrierVest_Black");
+        MovementLabEquipMMGClothing(player, "Body", "TacticalShirt_Black");
+        MovementLabEquipMMGClothing(player, "Legs", "CargoPants_Black");
+        MovementLabEquipMMGClothing(player, "Feet", "MilitaryBoots_Black");
+        MovementLabEquipMMGClothing(player, "Gloves", "TacticalGloves_Black");
+        MovementLabEquipMMGClothing(player, "Headgear", "BallisticHelmet_Black");
+        MovementLabEquipMMGClothing(player, "Mask", "BalaclavaMask_Black");
+        MovementLabEquipMMGClothing(player, "Vest", "PlateCarrierVest_Black");
         EntityAI snafuPack = player.GetInventory().CreateAttachment("MovementLabTestBackpack");
         if (!snafuPack)
             snafuPack = player;

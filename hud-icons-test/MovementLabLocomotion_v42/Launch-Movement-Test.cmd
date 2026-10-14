@@ -29,8 +29,11 @@ if errorlevel 1 goto failed
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%movementlabTestDir%Configure-SNAFU.ps1" -GameDirectory "%movementlabGameDir%"
 if errorlevel 1 goto failed
 set /p "movementlabSnafuMod=" < "%movementlabTestDir%SNAFU-Resolved-Path.txt"
-echo Image-based stance and speed HUD test. SNAFU Weapons is loaded. Steam must be running.
-start "" /D "%movementlabGameDir%" "%movementlabGameDir%\DayZDiag_x64.exe" "-mission=%movementlabTestDir%Missions\MovementLabMovementLogic.ChernarusPlus" "-mod=%movementlabTestDir%@MovementLabStartGate;%movementlabTestDir%@MovementLabSlowCrouchClips;%movementlabSnafuMod%" "-profiles=%movementlabTestDir%Profiles\MovementLogic" -nosplash -noPause -filePatching -doLogs -scriptDebug=true
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%movementlabTestDir%Configure-MMG.ps1" -GameDirectory "%movementlabGameDir%"
+if errorlevel 1 goto failed
+set /p "movementlabMmgMod=" < "%movementlabTestDir%MMG-Resolved-Path.txt"
+echo Locomotion and six-stance HUD test. SNAFU Weapons and MMG gear loaded. Steam must be running.
+start "" /D "%movementlabGameDir%" "%movementlabGameDir%\DayZDiag_x64.exe" "-mission=%movementlabTestDir%Missions\MovementLabMovementLogic.ChernarusPlus" "-mod=%movementlabTestDir%@MovementLabStartGate;%movementlabTestDir%@MovementLabSlowCrouchClips;%movementlabSnafuMod%;%movementlabMmgMod%" "-profiles=%movementlabTestDir%Profiles\MovementLogic" -nosplash -noPause -filePatching -doLogs -scriptDebug=true
 exit /b 0
 :failed
 pause
