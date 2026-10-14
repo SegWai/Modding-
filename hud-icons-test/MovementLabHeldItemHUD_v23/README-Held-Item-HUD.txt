@@ -1,0 +1,1 @@
+v23 includes static gun preview fromv22 and textured held-panel background. Background asset recreated from inline reference using imagegen; not an exact extracted original alpha file. Alpha-capable PAA replaces flat tint, other labels/quickslots/gameplay retained. Static preview local clone/native rendering needs in-game check.
