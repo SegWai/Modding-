@@ -1,0 +1,66 @@
+FrameWidgetClass MovementLabHeldItemRoot {
+ visible 0
+ ignorepointer 1
+ position 0 0
+ size 300 100
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  ItemPreviewWidgetClass MLWeaponOutline0 {
+   visible 0
+   ignorepointer 1
+   color 0 0 0 1
+   position 0.07 0.07
+   size 0.86 0.86
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+  ItemPreviewWidgetClass MLWeaponOutline1 {
+   visible 0
+   ignorepointer 1
+   color 0 0 0 1
+   position 0.07 0.07
+   size 0.86 0.86
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+  ItemPreviewWidgetClass MLWeaponOutline2 {
+   visible 0
+   ignorepointer 1
+   color 0 0 0 1
+   position 0.07 0.07
+   size 0.86 0.86
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+  ItemPreviewWidgetClass MLWeaponOutline3 {
+   visible 0
+   ignorepointer 1
+   color 0 0 0 1
+   position 0.07 0.07
+   size 0.86 0.86
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+  ItemPreviewWidgetClass MovementLabHeldRender {
+   visible 1
+   ignorepointer 1
+   position 0.07 0.07
+   size 0.86 0.86
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+ }
+}

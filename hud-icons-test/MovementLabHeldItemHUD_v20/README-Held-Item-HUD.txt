@@ -1,0 +1,1 @@
+v20: experimental black weapon-outline offsets increased1px to10px. Preview/font/quickslots/gameplay unchanged. This is offset tinted live render passes, not a native silhouette-outline shader. Native tint and visual result require local test.
