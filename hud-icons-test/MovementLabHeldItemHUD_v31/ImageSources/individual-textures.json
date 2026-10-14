@@ -1,0 +1,482 @@
+[
+  {
+    "id": 0,
+    "name": "crouch_1",
+    "file": "icon_00.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      49,
+      130,
+      209,
+      277
+    ],
+    "fitted_size": [
+      256,
+      235
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 1,
+    "name": "crouch_2",
+    "file": "icon_01.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      224,
+      130,
+      389,
+      277
+    ],
+    "fitted_size": [
+      256,
+      228
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 2,
+    "name": "crouch_3",
+    "file": "icon_02.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      404,
+      130,
+      568,
+      277
+    ],
+    "fitted_size": [
+      256,
+      229
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 3,
+    "name": "crouch_4",
+    "file": "icon_03.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      584,
+      130,
+      747,
+      277
+    ],
+    "fitted_size": [
+      256,
+      231
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 4,
+    "name": "crouch_5",
+    "file": "icon_04.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      766,
+      130,
+      942,
+      277
+    ],
+    "fitted_size": [
+      256,
+      214
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 5,
+    "name": "crouch_aim_1",
+    "file": "icon_05.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      991,
+      130,
+      1146,
+      277
+    ],
+    "fitted_size": [
+      256,
+      243
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 6,
+    "name": "crouch_aim_2",
+    "file": "icon_06.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      1162,
+      130,
+      1312,
+      277
+    ],
+    "fitted_size": [
+      256,
+      251
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 7,
+    "name": "crouch_aim_3",
+    "file": "icon_07.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      1328,
+      130,
+      1482,
+      277
+    ],
+    "fitted_size": [
+      256,
+      244
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 8,
+    "name": "crouch_aim_4",
+    "file": "icon_08.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      1497,
+      130,
+      1655,
+      277
+    ],
+    "fitted_size": [
+      256,
+      238
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 9,
+    "name": "standing_idle",
+    "file": "icon_09.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      49,
+      381,
+      191,
+      548
+    ],
+    "fitted_size": [
+      218,
+      256
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 10,
+    "name": "crouch_idle",
+    "file": "icon_10.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      207,
+      381,
+      351,
+      548
+    ],
+    "fitted_size": [
+      221,
+      256
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 11,
+    "name": "walking_1",
+    "file": "icon_11.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      389,
+      381,
+      546,
+      548
+    ],
+    "fitted_size": [
+      241,
+      256
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 12,
+    "name": "walking_2",
+    "file": "icon_12.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      563,
+      381,
+      713,
+      548
+    ],
+    "fitted_size": [
+      230,
+      256
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 13,
+    "name": "jogging_1",
+    "file": "icon_13.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      737,
+      381,
+      895,
+      548
+    ],
+    "fitted_size": [
+      242,
+      256
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 14,
+    "name": "jogging_2",
+    "file": "icon_14.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      916,
+      381,
+      1054,
+      548
+    ],
+    "fitted_size": [
+      212,
+      256
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 15,
+    "name": "sprinting",
+    "file": "icon_15.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      1087,
+      381,
+      1257,
+      548
+    ],
+    "fitted_size": [
+      256,
+      251
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 16,
+    "name": "crouch_momentum",
+    "file": "icon_16.paa",
+    "texture_size": [
+      512,
+      256
+    ],
+    "source_rect": [
+      1298,
+      381,
+      1648,
+      548
+    ],
+    "fitted_size": [
+      512,
+      244
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 17,
+    "name": "slow_aim_1",
+    "file": "icon_17.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      54,
+      660,
+      235,
+      832
+    ],
+    "fitted_size": [
+      256,
+      243
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 18,
+    "name": "slow_aim_2",
+    "file": "icon_18.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      252,
+      660,
+      435,
+      832
+    ],
+    "fitted_size": [
+      256,
+      241
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 19,
+    "name": "fast_aim_1",
+    "file": "icon_19.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      478,
+      660,
+      660,
+      832
+    ],
+    "fitted_size": [
+      256,
+      242
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 20,
+    "name": "fast_aim_2",
+    "file": "icon_20.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      680,
+      660,
+      871,
+      832
+    ],
+    "fitted_size": [
+      256,
+      231
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 21,
+    "name": "fast_aim_3",
+    "file": "icon_21.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      893,
+      660,
+      1095,
+      832
+    ],
+    "fitted_size": [
+      256,
+      218
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 22,
+    "name": "aim_momentum",
+    "file": "icon_22.paa",
+    "texture_size": [
+      512,
+      256
+    ],
+    "source_rect": [
+      1139,
+      657,
+      1649,
+      837
+    ],
+    "fitted_size": [
+      512,
+      181
+    ],
+    "mip_levels": 7
+  },
+  {
+    "id": 23,
+    "name": "slow_aim_3",
+    "file": "icon_23.paa",
+    "texture_size": [
+      256,
+      256
+    ],
+    "source_rect": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "fitted_size": [
+      256,
+      256
+    ],
+    "mip_levels": 7
+  }
+]
