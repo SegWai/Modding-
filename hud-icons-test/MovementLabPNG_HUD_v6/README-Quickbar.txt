@@ -1,0 +1,1 @@
+HUD quickslot test: native HUD quickbar widgets enlarged1.5x in pixel-sized dimensions, with relative item previews filling larger tiles. Inventory TAB quickbar not modified. Native slot bindings/count/controller remain unchanged. Existing PNG stance HUD and movement retained. Local compile/render/layout check required.
