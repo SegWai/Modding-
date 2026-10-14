@@ -1,0 +1,1 @@
+Quickslots v8 restores visible v6 quickbar positioning and1.5x container sizes. Skips recursive item wrapper scaling; centres preview in its own parent using relative coords. Small objects60%, guns88%. Does not set absolute slot/background coordinates or force quickbar root size asv7 did. Native visibility/bindings unchanged. Local native rendering test required.
