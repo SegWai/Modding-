@@ -1,0 +1,1 @@
+v30 removes held-panel grey fill entirely; thin outline, gun preview, Arial labels, corrected counts/fireicons and stamina retained. Previously added background was a recreation frominline preview, not exactoriginalPNG. Native visual test required.
