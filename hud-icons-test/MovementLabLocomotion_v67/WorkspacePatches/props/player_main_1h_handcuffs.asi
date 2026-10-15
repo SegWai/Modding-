@@ -1,0 +1,32 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfCro.In" {
+   Resource "{FACED3002E28B3BB}DZ/anims/anm/player/actions/items/p_cro_handcuff_self_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfCro.Loop" {
+   Resource "{86EB06FCE3958BAE}DZ/anims/anm/player/actions/items/p_cro_handcuff_self_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfCro.Out" {
+   Resource "{DBBC09FC3FC7EB95}DZ/anims/anm/player/actions/items/p_cro_handcuff_self_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfCro.Out2" {
+   Resource "{D484CB4F42936FCC}DZ/anims/anm/player/actions/items/p_cro_handcuff_self_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfErc.In" {
+   Resource "{27BCEDFECE163583}DZ/anims/anm/player/actions/items/p_erc_handcuff_self_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfErc.Loop" {
+   Resource "{A7B11DAA02653D2E}DZ/anims/anm/player/actions/items/p_erc_handcuff_self_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfErc.Out" {
+   Resource "{7AE52312BDD3006A}DZ/anims/anm/player/actions/items/p_erc_handcuff_self_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RestrainSelfErc.Out2" {
+   Resource "{AB285886DC4EF597}DZ/anims/anm/player/actions/items/p_erc_handcuff_self_canceled.anm"
+  }
+ }
+}

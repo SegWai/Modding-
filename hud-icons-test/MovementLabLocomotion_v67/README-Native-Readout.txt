@@ -1,0 +1,1 @@
+v27 hides native ia_item(name/health/quantity) and ia_item_subdesc(fire mode/zeroing distance) after every native ItemActionsWidget.Update. Prior ia_item_left-only hide missed these groups. Customcard, actionprompts, quickslots, magtest and gameplay unchanged. Native check required.

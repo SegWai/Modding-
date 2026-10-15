@@ -1,0 +1,5 @@
+{
+  "checks": "315 scenarios running production handoff math; working 1.30 workspace byte-preserved; native movement input preserved; PBO and ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test",
+  "change": "Camera offset follows measured native heading transfer instead of being cleared on movement input"
+}
