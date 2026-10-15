@@ -1,0 +1,23 @@
+Original diagnostic arm-lift keyframes and authoring script: MovementLab project.
+This test uses no Rockstar assets.
+
+Reference character rig and mesh are adapted from:
+jdfnc24/DayZAnimationPluginDemo
+https://github.com/jdfnc24/DayZAnimationPluginDemo
+commit 7075310c8aa3ae75f9487168577661809e5caa15
+asset: _AssetSamples/JD_Master_Rig (No IK Bones).blend
+Exporter: Mrtea101 / contributors, from the same repository.
+The upstream MIT notice is reproduced in EXPORTER_LICENSE.txt.
+
+DayZ reference character material is attributed to BOHEMIA INTERACTIVE a.s.
+Official reference: https://github.com/BohemiaInteractive/DayZ-Misc
+The official reference assets use the Arma and Dayz Public License Share Alike
+(ADPL-SA). The included DayZ rig/mesh and derivatives are supplied under those
+terms: attribution, noncommercial use, Arma/DayZ only, share alike.
+Full license:
+https://www.bohemia.net/community/licenses/arma-and-dayz-public-license-share-alike-adpl-sa
+No endorsement by Bohemia or the community contributors is implied.
+
+This bundle adapts the reference blend by removing camera rigs/control objects
+and IK constraints and adding new procedural arm-lift keyframes. Skeleton rest
+transforms and the reference body are retained for DayZ compatibility testing.

@@ -1,0 +1,4 @@
+v48 same-side turns
+Stationary, non-aiming only. Body holds front until signed camera yaw reaches +/-145 degrees. The body turns fully toward the camera direction captured at crossing, on the same side looked toward. Smooth 0.55-second root-heading handoff retained. Head limit +/-90 degrees; camera continues beyond it.
+Yaw/path tracking is continuous through +/-180, so rapid turns that cross the rear do not reverse into a shorter turn on the opposite side. Only native output angles and world camera matrix yaw are normalized; turn target, body history and head-side inputs keep their signed path. Logs label LEFT/RIGHT requests. Native aiming and locomotion return on exit.
+Camera/head graphs and all other gameplay/loadout source files unchanged from v47. Signed-threshold and wrap-path regressions checked; native DayZ compiler and runtime testing remain unavailable. In-game smoothness, direction and feet animation need local verification.
