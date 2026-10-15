@@ -1,0 +1,10 @@
+{
+  "checks": "Static 1.30 schema, graph dependencies, custom variable and mapping declarations, preserved handoff source, package integrity",
+  "source": "User-provided freshly extracted DayZ 1.30 player_main.7z",
+  "graph_nodes_checked": 2216,
+  "custom_nodes_ported": 422,
+  "custom_variables": 23,
+  "custom_groups": 5,
+  "custom_clip_mappings_checked": 3047,
+  "native_compile_and_playtest": "pending local DayZ 1.30 test"
+}
