@@ -1,0 +1,6 @@
+v47 correction following uploaded v46 video and logs
+Confirmed: v46 was active; turn request at 01:08:21.237, 146.68 degrees, with a timer completion at 01:08:21.805. Completion did not verify actual visual alignment.
+Head fix: 22 look Pose2 nodes now retain identifier-only variable inputs. Each has a native and a clamped-input branch controlled by a proper Blend node. Native rear-look reset branches are disabled only while custom head control is active.
+Camera fix: during stationary non-aiming look, first/third-person camera rotation uses an independent world-space basis. Native head/offset processing receives at most +/-90 degrees. Root and native heading outputs stay together during the turn; no second target heading jump. Camera translation remains player anchored; no world-position writes.
+Rules retained: stationary only, non-aiming, head +/-90, camera past145 triggers full-body alignment to captured camera direction. Smooth turn 0.55 sec. Movement/aiming exits restore native controls. Existing stance icons, movement levels, sway and MMG/SNAFU loadout retained.
+New folder extraction required; launcher regenerates graph PBO. Native compiler and runtime animation/camera testing remain unavailable in cloud. Actual camera anchoring, head and feet animation, and movement handoff need local verification.
