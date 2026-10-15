@@ -1,0 +1,1 @@
+v44 fixes both errors confirmed in uploaded v43 logs: HeadingModel and UpdateLRAngleUnlocked overrides now use native parameter names exactly. No intended behavior changes. Native DayZ compilation and head-look animation still require in-game verification.
