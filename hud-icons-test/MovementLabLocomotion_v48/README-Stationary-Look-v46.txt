@@ -1,0 +1,6 @@
+v46 stationary non-aiming test
+Head animation input is explicitly clamped to +/-90 degrees separately from camera yaw, using two new graph variables. Movement and aiming use the original LookDirX expression when the clamp is off.
+Mouse yaw sampled once per camera frame timestamp, not accumulated in HeadingModel. Native heading/camera sign convention corrected.
+Crossing +/-145 degrees captures the full camera direction as the body turn target. It no longer requests a 45-degree step. A 0.55-second smoothstep handoff writes the native HeadingModel root orientation to the captured direction, so it does not stop within the native turn dead zone. Head pose is recomputed against that body heading throughout the turn. Foot animation quality still needs runtime testing.
+Turn timeout 2.5 seconds releases to native controls; move or aim to reset if triggered. Native controls also resume on movement, aiming, actions, stance changes or menu. Existing speed levels, weapon sway, loadout and stance indicators retained.
+Fresh extraction is required: Prepare-Crouch-Clips.ps1 must build the updated animation graphs. Native compilation, actual head pose, turn animation and camera/movement handoff require DayZ runtime testing; cannot be verified here.
