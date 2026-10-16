@@ -1,0 +1,13 @@
+{
+  "version": 79,
+  "checks": [
+    "v78 existing runtime source and animation graphs byte-identical",
+    "one fixture spawn call after offline player selection",
+    "Gunter uses verified native Hatchback_02 OnDebugSpawn equipment/fluids setup",
+    "native PhysicsSetRagdoll and HandleDeath signatures checked against SDK",
+    "ragdoll restricted to explicitly marked offline NPC on death",
+    "PBO headers/payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Pending local DayZ 1.30 test; runtime not available here",
+  "ragdoll": "Native API enabled on NPC death; engine support and physical behaviour unverified"
+}

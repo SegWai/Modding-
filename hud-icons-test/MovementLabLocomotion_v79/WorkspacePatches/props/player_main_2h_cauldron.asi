@@ -1,0 +1,164 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsCro.In" {
+   Resource "{32EE35EF647BB9BE}DZ/anims/anm/player/actions/healing/p_cro_cleanhands_cauldron_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsCro.Loop" {
+   Resource "{375CE7039EDC7ECB}DZ/anims/anm/player/actions/healing/p_cro_cleanhands_cauldron_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsCro.Out" {
+   Resource "{45C3CDE9E71662C9}DZ/anims/anm/player/actions/healing/p_cro_cleanhands_cauldron_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsErc.In" {
+   Resource "{A7C69CF91D10AF8B}DZ/anims/anm/player/actions/healing/p_erc_cleanhands_cauldron_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsErc.Loop" {
+   Resource "{01FC41DEC5ECB182}DZ/anims/anm/player/actions/healing/p_erc_cleanhands_cauldron_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsErc.Out" {
+   Resource "{F66EC101C67B7CA7}DZ/anims/anm/player/actions/healing/p_erc_cleanhands_cauldron_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsPne.In" {
+   Resource "{3AF87FA88A1F0F16}DZ/anims/anm/player/actions/healing/p_pne_cleanhands_cauldron_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsPne.Loop" {
+   Resource "{A41E00FEDEDD58D9}DZ/anims/anm/player/actions/healing/p_pne_cleanhands_cauldron_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsPne.Out" {
+   Resource "{C1EF468D9F251377}DZ/anims/anm/player/actions/healing/p_pne_cleanhands_cauldron_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.In" {
+   Resource "{D1F02389E4166ED6}DZ/anims/anm/player/actions/items/p_cro_cauldron_drink_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Loop" {
+   Resource "{CFDFD543EEFC96D7}DZ/anims/anm/player/actions/items/p_cro_cauldron_drink_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Out" {
+   Resource "{7C419F7FC6620F40}DZ/anims/anm/player/actions/items/p_cro_cauldron_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.In" {
+   Resource "{70A9096766028529}DZ/anims/anm/player/actions/items/p_erc_cauldron_drink_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Loop" {
+   Resource "{1B4E93B696632B9A}DZ/anims/anm/player/actions/items/p_erc_cauldron_drink_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Out" {
+   Resource "{5D1B84292792B9C0}DZ/anims/anm/player/actions/items/p_erc_cauldron_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.In" {
+   Resource "{2EEC6EC71ADAF1C4}DZ/anims/anm/player/actions/items/p_pne_cauldron_drink_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Loop" {
+   Resource "{445F4D13D4FF64E3}DZ/anims/anm/player/actions/items/p_pne_cauldron_drink_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Out" {
+   Resource "{FAF037A7C478A847}DZ/anims/anm/player/actions/items/p_pne_cauldron_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.In" {
+   Resource "{217E7755A1991740}DZ/anims/anm/player/actions/items/p_cro_cauldron_emptying_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.Loop" {
+   Resource "{B10B8960F7349C69}DZ/anims/anm/player/actions/items/p_cro_cauldron_emptying_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.Out" {
+   Resource "{74AD2DEF6F674293}DZ/anims/anm/player/actions/items/p_cro_cauldron_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.Out2" {
+   Resource "{74AD2DEF6F674293}DZ/anims/anm/player/actions/items/p_cro_cauldron_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.In" {
+   Resource "{B3C97B4237D96692}DZ/anims/anm/player/actions/items/p_erc_cauldron_emptying_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.Loop" {
+   Resource "{242320768E5F8A5C}DZ/anims/anm/player/actions/items/p_erc_cauldron_emptying_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.Out" {
+   Resource "{D687649191110C97}DZ/anims/anm/player/actions/items/p_erc_cauldron_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.Out2" {
+   Resource "{D687649191110C97}DZ/anims/anm/player/actions/items/p_erc_cauldron_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.In" {
+   Resource "{9AE979C6633D7F0E}DZ/anims/anm/player/actions/items/p_cro_cauldron_fb_emptying_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Loop" {
+   Resource "{BB69C9C998C2C20C}DZ/anims/anm/player/actions/items/p_cro_cauldron_fb_emptying_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Out" {
+   Resource "{EA693C5BE1A47464}DZ/anims/anm/player/actions/items/p_cro_cauldron_fb_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Out2" {
+   Resource "{EA693C5BE1A47464}DZ/anims/anm/player/actions/items/p_cro_cauldron_fb_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.In" {
+   Resource "{2944752E42506160}DZ/anims/anm/player/actions/items/p_erc_cauldron_fb_emptying_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Loop" {
+   Resource "{7D5A380044B984C4}DZ/anims/anm/player/actions/items/p_erc_cauldron_fb_emptying_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Out" {
+   Resource "{DCC99A86BA94BB2D}DZ/anims/anm/player/actions/items/p_erc_cauldron_fb_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Out2" {
+   Resource "{DCC99A86BA94BB2D}DZ/anims/anm/player/actions/items/p_erc_cauldron_fb_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottlePondCro.In" {
+   Resource "{6B0A14E7125FA694}DZ/anims/anm/player/actions/items/p_cro_cauldron_fill_pond_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottlePondCro.Loop" {
+   Resource "{DC9F33A2020A3EB8}DZ/anims/anm/player/actions/items/p_cro_cauldron_fill_pond_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottlePondCro.Out" {
+   Resource "{CD4C92140CEB0324}DZ/anims/anm/player/actions/items/p_cro_cauldron_fill_pond_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottlePondErc.In" {
+   Resource "{C9205D99EC29E890}DZ/anims/anm/player/actions/items/p_erc_cauldron_fill_pond_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottlePondErc.Loop" {
+   Resource "{6F323F4A236720D6}DZ/anims/anm/player/actions/items/p_erc_cauldron_fill_pond_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottlePondErc.Out" {
+   Resource "{58643B0275801511}DZ/anims/anm/player/actions/items/p_erc_cauldron_fill_pond_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottleWellCro.In" {
+   Resource "{994D69D450B544C6}DZ/anims/anm/player/actions/items/p_cro_cauldron_fill_well_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottleWellCro.Loop" {
+   Resource "{6B37176DACC00648}DZ/anims/anm/player/actions/items/p_cro_cauldron_fill_well_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottleWellCro.Out" {
+   Resource "{89680C5493A1E7D1}DZ/anims/anm/player/actions/items/p_cro_cauldron_fill_well_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillContainerSnowCro.In" {
+   Resource "{D58AA91363049A7E}DZ/anims/anm/player/actions/environment/p_cro_fill_cauldron_snow_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillContainerSnowCro.Loop" {
+   Resource "{1B75BC6313A49C53}DZ/anims/anm/player/actions/environment/p_cro_fill_cauldron_snow_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillContainerSnowCro.Out" {
+   Resource "{4FF863BDDAD44B9F}DZ/anims/anm/player/actions/environment/p_cro_fill_cauldron_snow_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Cro.In" {
+   Resource "{3DC14926DD38F133}DZ/anims/anm/player/actions/misc/p_cro_washface_pot_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Cro.Loop" {
+   Resource "{624B069464237F4F}DZ/anims/anm/player/actions/misc/p_cro_washface_pot_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Cro.Out" {
+   Resource "{76FB8CA34CA7811D}DZ/anims/anm/player/actions/misc/p_cro_washface_pot_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Erc.In" {
+   Resource "{4FE99850E1D05577}DZ/anims/anm/player/actions/misc/p_erc_washface_pot_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Erc.Loop" {
+   Resource "{C3122C7AE63794B0}DZ/anims/anm/player/actions/misc/p_erc_washface_pot_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Erc.Out" {
+   Resource "{AB89B25DAC990725}DZ/anims/anm/player/actions/misc/p_erc_washface_pot_out.anm"
+  }
+ }
+}

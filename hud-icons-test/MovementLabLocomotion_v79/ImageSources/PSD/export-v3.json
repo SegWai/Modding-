@@ -1,0 +1,380 @@
+[
+  {
+    "icon": 0,
+    "layer": "Crouch Walk",
+    "original_size": [
+      171,
+      203
+    ],
+    "torso_centre": 202,
+    "placement": [
+      125,
+      117
+    ],
+    "level_lines": 1
+  },
+  {
+    "icon": 1,
+    "layer": "Crouch Walk",
+    "original_size": [
+      171,
+      203
+    ],
+    "torso_centre": 202,
+    "placement": [
+      125,
+      117
+    ],
+    "level_lines": 2
+  },
+  {
+    "icon": 2,
+    "layer": "Crouch Walk",
+    "original_size": [
+      171,
+      203
+    ],
+    "torso_centre": 202,
+    "placement": [
+      125,
+      117
+    ],
+    "level_lines": 3
+  },
+  {
+    "icon": 3,
+    "layer": "Crouch Walk",
+    "original_size": [
+      171,
+      203
+    ],
+    "torso_centre": 202,
+    "placement": [
+      125,
+      117
+    ],
+    "level_lines": 4
+  },
+  {
+    "icon": 4,
+    "layer": "Crouch Jog",
+    "original_size": [
+      203,
+      222
+    ],
+    "torso_centre": 202,
+    "placement": [
+      109,
+      98
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 5,
+    "layer": "Crouch Aiming Jog ",
+    "original_size": [
+      296,
+      227
+    ],
+    "torso_centre": 202,
+    "placement": [
+      103,
+      93
+    ],
+    "level_lines": 1
+  },
+  {
+    "icon": 6,
+    "layer": "Crouch Aiming Jog ",
+    "original_size": [
+      296,
+      227
+    ],
+    "torso_centre": 202,
+    "placement": [
+      103,
+      93
+    ],
+    "level_lines": 2
+  },
+  {
+    "icon": 7,
+    "layer": "Crouch Aiming Jog ",
+    "original_size": [
+      296,
+      227
+    ],
+    "torso_centre": 202,
+    "placement": [
+      103,
+      93
+    ],
+    "level_lines": 3
+  },
+  {
+    "icon": 8,
+    "layer": "Crouch Aiming Jog ",
+    "original_size": [
+      296,
+      227
+    ],
+    "torso_centre": 202,
+    "placement": [
+      103,
+      93
+    ],
+    "level_lines": 4
+  },
+  {
+    "icon": 9,
+    "layer": "Standing Stationary",
+    "original_size": [
+      123,
+      307
+    ],
+    "torso_centre": 202,
+    "placement": [
+      149,
+      13
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 10,
+    "layer": "Crouch Stationary",
+    "original_size": [
+      147,
+      199
+    ],
+    "torso_centre": 202,
+    "placement": [
+      137,
+      121
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 11,
+    "layer": "Walk",
+    "original_size": [
+      171,
+      306
+    ],
+    "torso_centre": 202,
+    "placement": [
+      125,
+      14
+    ],
+    "level_lines": 1
+  },
+  {
+    "icon": 12,
+    "layer": "Walk",
+    "original_size": [
+      171,
+      306
+    ],
+    "torso_centre": 202,
+    "placement": [
+      125,
+      14
+    ],
+    "level_lines": 2
+  },
+  {
+    "icon": 13,
+    "layer": "Jog",
+    "original_size": [
+      150,
+      306
+    ],
+    "torso_centre": 202,
+    "placement": [
+      135,
+      14
+    ],
+    "level_lines": 1
+  },
+  {
+    "icon": 14,
+    "layer": "Jog",
+    "original_size": [
+      150,
+      306
+    ],
+    "torso_centre": 202,
+    "placement": [
+      135,
+      14
+    ],
+    "level_lines": 2
+  },
+  {
+    "icon": 15,
+    "layer": "Sprint",
+    "original_size": [
+      243,
+      306
+    ],
+    "torso_centre": 202,
+    "placement": [
+      89,
+      14
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 16,
+    "layer": "Crouch Jog",
+    "original_size": [
+      203,
+      222
+    ],
+    "torso_centre": 202,
+    "placement": [
+      109,
+      98
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 17,
+    "layer": "Walk while Aiming",
+    "original_size": [
+      238,
+      307
+    ],
+    "torso_centre": 213,
+    "placement": [
+      135,
+      13
+    ],
+    "level_lines": 1
+  },
+  {
+    "icon": 18,
+    "layer": "Walk while Aiming",
+    "original_size": [
+      238,
+      307
+    ],
+    "torso_centre": 213,
+    "placement": [
+      135,
+      13
+    ],
+    "level_lines": 2
+  },
+  {
+    "icon": 19,
+    "layer": "Jog while Aiming",
+    "original_size": [
+      271,
+      305
+    ],
+    "torso_centre": 204,
+    "placement": [
+      111,
+      15
+    ],
+    "level_lines": 1
+  },
+  {
+    "icon": 20,
+    "layer": "Jog while Aiming",
+    "original_size": [
+      271,
+      305
+    ],
+    "torso_centre": 204,
+    "placement": [
+      111,
+      15
+    ],
+    "level_lines": 2
+  },
+  {
+    "icon": 21,
+    "layer": "Jog while Aiming",
+    "original_size": [
+      271,
+      305
+    ],
+    "torso_centre": 204,
+    "placement": [
+      111,
+      15
+    ],
+    "level_lines": 3
+  },
+  {
+    "icon": 22,
+    "layer": "140% to 100% momentum change when Spriting to Aim",
+    "original_size": [
+      253,
+      271
+    ],
+    "torso_centre": 205,
+    "placement": [
+      128,
+      49
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 23,
+    "layer": "Walk while Aiming",
+    "original_size": [
+      238,
+      307
+    ],
+    "torso_centre": 213,
+    "placement": [
+      135,
+      13
+    ],
+    "level_lines": 3
+  },
+  {
+    "icon": 24,
+    "layer": "Prone without Aiming",
+    "original_size": [
+      302,
+      90
+    ],
+    "torso_centre": 202,
+    "placement": [
+      8,
+      230
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 25,
+    "layer": "Prone while Aiming",
+    "original_size": [
+      405,
+      90
+    ],
+    "torso_centre": 202,
+    "placement": [
+      8,
+      230
+    ],
+    "level_lines": 0
+  },
+  {
+    "icon": 26,
+    "layer": "Crouch Aiming Stationary",
+    "original_size": [
+      262,
+      204
+    ],
+    "torso_centre": 202,
+    "placement": [
+      137,
+      116
+    ],
+    "level_lines": 0
+  }
+]
