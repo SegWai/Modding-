@@ -1,0 +1,50 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2D145A4F7212F85E}DZ/anims/workspaces/player/player_main/player_main_pistol.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{4D19DBE98CB7073D}DZ/anims/anm/player/reloads/pb6p9/p_erc_chambering1_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Open" {
+   Resource "{675CC55160C65E97}DZ/anims/anm/player/reloads/pb6p9/p_erc_chambering_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{89D7F2EF9BA6CDAA}DZ/anims/anm/player/reloads/pb6p9/p_erc_jam_PB6P9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{34222B055F86E6A0}DZ/anims/anm/player/reloads/pb6p9/p_erc_reload_action1_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{DBA2166783CBB8B9}DZ/anims/anm/player/reloads/pb6p9/p_erc_reload_action_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{AFE1A252F6A3ED72}DZ/anims/anm/player/reloads/pb6p9/p_erc_reload_mag_bullet_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{4D983BF65088FC6B}DZ/anims/anm/player/reloads/pb6p9/p_erc_reload_noMag_bullet_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{F1030DCCD2FEDF52}DZ/anims/anm/player/reloads/pb6p9/p_pne_chambering1_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Open" {
+   Resource "{D6FE920A6EFDED83}DZ/anims/anm/player/reloads/pb6p9/p_pne_chambering_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{C1BE929D79017896}DZ/anims/anm/player/reloads/pb6p9/p_pne_jam_PB6P9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{91C06A2544B70FFB}DZ/anims/anm/player/reloads/pb6p9/p_pne_reload_action1_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{EC2391EBDA95D769}DZ/anims/anm/player/reloads/pb6p9/p_pne_reload_action_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{2568132C1CBC4F6B}DZ/anims/anm/player/reloads/pb6p9/p_pne_reload_mag_bullet_pb6p9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{051573BB467B5A24}DZ/anims/anm/player/reloads/pb6p9/p_pne_reload_noMag_bullet_pb6p9_ras.anm"
+  }
+ }
+}
