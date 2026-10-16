@@ -1,0 +1,11 @@
+{
+  "version": 78,
+  "checks": [
+    "All v77 existing scripts, mission and workspace patches byte-identical",
+    "Camera override signatures and degree units checked against native source",
+    "Native helper limit arithmetic checked for large inputs and narrower ranges",
+    "PBO payload/header/SHA1 validated",
+    "ZIP integrity validated"
+  ],
+  "native_compile_and_playtest": "Pending local DayZ 1.30 test; runtime unavailable here"
+}

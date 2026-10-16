@@ -1,0 +1,62 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{38BBE67C64FE89BC}DZ/anims/anm/player/reloads/Repeater/p_erc_chambering_loop_bullet_open_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{82969A18822B695F}DZ/anims/anm/player/reloads/Repeater/p_erc_chambering_loop_nobullet_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{5637A8C8F663CEB8}DZ/anims/anm/player/reloads/Repeater/p_erc_fire_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{28DD42B02F38F822}DZ/anims/anm/player/reloads/Repeater/p_erc_fire_empty_cocked_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{76BA6AA717AFE67C}DZ/anims/anm/player/reloads/Repeater/p_erc_fire_jam_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{A0266CB85BF42CC2}DZ/anims/anm/player/reloads/Repeater/p_erc_jam_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{FEBAAF3AA4C92A04}DZ/anims/anm/player/reloads/Repeater/p_erc_jam_cancel_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{993FDB4B507095BA}DZ/anims/anm/player/reloads/Repeater/p_erc_reload_action_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{F613BCE95FC1769B}DZ/anims/anm/player/reloads/Repeater/p_erc_reload_action_open_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{6C2E0C1164B402E3}DZ/anims/anm/player/reloads/Repeater/p_pne_chambering_loop_bullet_open_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{A96B6D2E883A28C0}DZ/anims/anm/player/reloads/Repeater/p_pne_chambering_loop_nobullet_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{0872CF688ABBBA55}DZ/anims/anm/player/reloads/Repeater/p_pne_fire_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{EDF6C1392A774FB3}DZ/anims/anm/player/reloads/Repeater/p_pne_fire_empty_cocked_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{CAA0BC8249E63E13}DZ/anims/anm/player/reloads/Repeater/p_pne_fire_jam_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{F9148788704716FD}DZ/anims/anm/player/reloads/Repeater/p_pne_jam_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{C93B28B6FD9745D4}DZ/anims/anm/player/reloads/Repeater/p_pne_jam_cancel_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{165FEC971D0F4102}DZ/anims/anm/player/reloads/Repeater/p_pne_reload_action_Repeater_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{FAAC559720806835}DZ/anims/anm/player/reloads/Repeater/p_pne_reload_action_open_Repeater_ras.anm"
+  }
+ }
+}
