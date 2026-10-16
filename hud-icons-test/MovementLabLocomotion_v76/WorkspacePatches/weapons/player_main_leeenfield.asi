@@ -1,0 +1,98 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{7F49A687CE77F16E}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_chambering_loop_bullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{3557572909699FFE}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_chambering_loop_nobullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{908BB7DBB65FADCA}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_fire_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{65E2F51FB890CDF3}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_fire_empty_cocked_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{1FD2B4316962366F}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_fire_jam_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{CBDCAEAE110F5934}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_jam_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{8AE2863AAF2CA94E}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_jam_cancel_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{23A6D77903C8FE44}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_reload_action_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadBoltAction2" {
+   Resource "{679D7C2FDFA073C2}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_reload_action2_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{418F2DC7FB46D73A}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_reload_mag_bullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{6251303FFC1D0AE9}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_reload_mag_nobullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{B6B6E0BCD03BE607}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_reload_mag_remove_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{D19062F53FC3144B}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_reload_nomag_bullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagNoBullet" {
+   Resource "{0040A664795632F0}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_reload_nomag_nobullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{54B451B1C466B0F1}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_chambering_loop_bullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{90328150F5928CD0}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_chambering_loop_nobullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{CF9A697EF4C3E2B3}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_fire_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{015E21AFEB495692}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_fire_empty_cocked_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{285333BD303C59BF}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_fire_jam_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{6C371D20F2E548B3}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_jam_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{59E035B0659C5711}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_jam_cancel_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{4B6A430E2E092711}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_reload_action_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadBoltAction2" {
+   Resource "{2F103462C953D58D}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_reload_action2_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{2533F977A89F4C5B}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_reload_mag_bullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{DDE0F835C6192160}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_reload_mag_nobullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{D20A340C83E27D66}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_reload_mag_remove_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{6E21AAFF05C73FC2}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_reload_nomag_bullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagNoBullet" {
+   Resource "{F5E6207A34DDF7B0}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_reload_nomag_nobullet_LeeEnfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{A3950DDDAC9F6341}DZ/anims/anm/player/reloads/LeeEnfield/p_erc_chambering_Closed_Enfield_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{EB184590BA6CC50E}DZ/anims/anm/player/reloads/LeeEnfield/p_pne_chambering_Closed_Enfield_ras.anm"
+  }
+ }
+}

@@ -1,0 +1,5 @@
+v57 removes the directional pose selector
+Uploaded v56 logs show one ACTIVE and one RELEASE, with 183 rendered-yaw samples and body yaw fixed at0. This rules out repeated activation in that session but does not identify the exact bone/graph causing the visible snap.
+The camera-direction-based left/right animation handoff is removed completely. Native MoveHeadLookPose is selected continuously for both sides while stationary, not aiming. A 0.25-second damped mode-entry/exit fade replaces angle-triggered crossfades. There is no side/centre yaw threshold or delayed side change in this selector.
+Right-looking now uses the same head source as left-looking. Camera limits and controls remain unchanged. Native movement/aiming pose returns on mode exit. All other locomotion, gear, sway and HUD retained.
+Fresh extraction required for graph rebuild. Source checks verify no yaw-dependent source switch, unique graph nodes and unchanged camera method; archive integrity passed. Native compilation, head/arm alignment on both sides and remaining native animation transitions require in-game verification.

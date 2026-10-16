@@ -1,0 +1,5 @@
+{
+  "checks": "Shared idle/turn correction graph routing; exactly one shoulder correction; continuous turn head source; native turn clips/transitions retained; walking/running paths exclude correction; v75 camera/input/pose scripts and remaining workspace unchanged; PBO/ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 visual turn-in-place test",
+  "change": "Move shoulder correction after combined idle/turn state-machine blend so it does not disappear while turning"
+}

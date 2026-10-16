@@ -1,0 +1,45 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ IkPose "{F7A52CEE6628658F}DZ/anims/anm/player/ik/weapons/izh18.anm"
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{5811E1303A760C7B}DZ/anims/anm/player/reloads/IZH18/p_erc_chambering_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{4AD43399C278CCE4}DZ/anims/anm/player/reloads/IZH18/p_erc_fire_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireCocked" {
+   Resource "{CE7FFAC687F2D8FE}DZ/anims/anm/player/reloads/IZH18/p_erc_fire_empty_cocked_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{E216F2874F5CF3F5}DZ/anims/anm/player/reloads/IZH18/p_erc_jam_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{520FC4A5B91166D4}DZ/anims/anm/player/reloads/IZH18/p_erc_jam_cancel_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{ABF1B73DC1E5DF03}DZ/anims/anm/player/reloads/IZH18/p_erc_reload_action_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{E9B3B66B344DBF6F}DZ/anims/anm/player/reloads/IZH18/p_pne_chambering_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{6BD78FE493240875}DZ/anims/anm/player/reloads/IZH18/p_pne_fire_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireCocked" {
+   Resource "{44F64BB86DED7AE7}DZ/anims/anm/player/reloads/IZH18/p_pne_fire_empty_cocked_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{AA7F92F5ADFB46C9}DZ/anims/anm/player/reloads/IZH18/p_pne_jam_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{E3AD93FEB72AD5C0}DZ/anims/anm/player/reloads/IZH18/p_pne_jam_cancel_IZH18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{9C7030B198BBB0D3}DZ/anims/anm/player/reloads/IZH18/p_pne_reload_action_IZH18_ras.anm"
+  }
+ }
+}
