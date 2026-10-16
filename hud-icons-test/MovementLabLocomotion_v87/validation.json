@@ -1,0 +1,12 @@
+{
+  "version": 87,
+  "checks": [
+    "All v86 runtime scripts and graph patches byte-identical",
+    "Starting grenade allocation precedes weapon/magazine creation in both loadout paths",
+    "Backpack direct cargo creation plus other-inventory fallback inspected",
+    "Refill ceiling two, throttle and no-space retry retained",
+    "PBO header/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required",
+  "diagnosis": "Late allocation/full backpack path addressed; no user logs supplied to confirm precise runtime cause"
+}
