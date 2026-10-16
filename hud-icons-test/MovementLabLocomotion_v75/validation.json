@@ -1,0 +1,5 @@
+{
+  "checks": "Shoulder correction and combat guard match retained v66 implementation; continuous movement/idle blending retained; camera/input/root control code absent from pose-only module; v66 graph and remaining runtime sources byte-preserved; PBO/ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test",
+  "change": "Retain squared shoulders and smoothed poses independently from normal native look/body-turn controls"
+}

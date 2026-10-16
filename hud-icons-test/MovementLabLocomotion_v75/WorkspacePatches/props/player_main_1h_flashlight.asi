@@ -1,0 +1,125 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{8F69E288CFC2B70D}DZ/anims/workspaces/player/player_main/props/player_main_1h_torch.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.MoveLook" {
+   Resource "{1E5630BE39B2A63D}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.MoveLook" {
+   Resource "{1E5630BE39B2A63D}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.MoveLook" {
+   Resource "{1E5630BE39B2A63D}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.MoveLook" {
+   Resource "{1E5630BE39B2A63D}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.MoveLook" {
+   Resource "{1E5630BE39B2A63D}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Look" {
+   Resource "{6B2DC0E3FC75B075}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Look" {
+   Resource "{6B2DC0E3FC75B075}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Look" {
+   Resource "{6B2DC0E3FC75B075}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Look" {
+   Resource "{6B2DC0E3FC75B075}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Look" {
+   Resource "{6B2DC0E3FC75B075}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.MoveLook" {
+   Resource "{F850A5951DC52C89}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.MoveLook" {
+   Resource "{F850A5951DC52C89}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.MoveLook" {
+   Resource "{F850A5951DC52C89}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.MoveLook" {
+   Resource "{F850A5951DC52C89}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.Look" {
+   Resource "{9759FEDC25EE99E5}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.Look" {
+   Resource "{9759FEDC25EE99E5}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.Look" {
+   Resource "{9759FEDC25EE99E5}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.Look" {
+   Resource "{9759FEDC25EE99E5}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTuneCro.In" {
+   Resource "{DFA36776CEFA81F5}DZ/anims/anm/player/actions/items/p_cro_flashlight_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTuneCro.Loop" {
+   Resource "{B6B6FF574F69AB9A}DZ/anims/anm/player/actions/items/p_cro_flashlight_tuneDown.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTuneCro.Out" {
+   Resource "{71B1094D6B9E7407}DZ/anims/anm/player/actions/items/p_cro_flashlight_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTuneErc.In" {
+   Resource "{F459C92F879DF405}DZ/anims/anm/player/actions/items/p_erc_flashlight_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTuneErc.Loop" {
+   Resource "{6227B9A237F616D7}DZ/anims/anm/player/actions/items/p_erc_flashlight_tuneDown.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTuneErc.Out" {
+   Resource "{12124F4DCB930DD2}DZ/anims/anm/player/actions/items/p_erc_flashlight_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTunePne.In" {
+   Resource "{BC30A95D653A4139}DZ/anims/anm/player/actions/items/p_pne_flashlight_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTunePne.Loop" {
+   Resource "{3D366707756A59AE}DZ/anims/anm/player/actions/items/p_pne_flashlight_tuneDown.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.ItemTunePne.Out" {
+   Resource "{3311F3309ACFC943}DZ/anims/anm/player/actions/items/p_pne_flashlight_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOffCro.Once" {
+   Resource "{6309CC9AB62B8D16}DZ/anims/anm/player/actions/items/p_cro_flashlight_off.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOffErc.Once" {
+   Resource "{00AA8A9A1626F4C3}DZ/anims/anm/player/actions/items/p_erc_flashlight_off.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOffPne.Once" {
+   Resource "{21A936E7477A3052}DZ/anims/anm/player/actions/items/p_pne_flashlight_off.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOnCro.Once" {
+   Resource "{627335F1B1E19DEB}DZ/anims/anm/player/actions/items/p_cro_flashlight_on.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOnErc.Once" {
+   Resource "{49899BA8F886E81B}DZ/anims/anm/player/actions/items/p_erc_flashlight_on.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOnPne.Once" {
+   Resource "{01E0FBDA1A215D27}DZ/anims/anm/player/actions/items/p_pne_flashlight_on.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.Sprint_StrikeR01" {
+   Resource "{621CC52AF86DD1F9}DZ/anims/anm/player/attacks/1hd/flashlight/p_erc_flashlight_attackR_charge.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.Look" {
+   Resource "{9759FEDC25EE99E5}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.MoveLook" {
+   Resource "{F850A5951DC52C89}DZ/anims/anm/player/layered/look/p_1hd_flashlight_cro_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Look" {
+   Resource "{6B2DC0E3FC75B075}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.MoveLook" {
+   Resource "{1E5630BE39B2A63D}DZ/anims/anm/player/layered/look/p_1hd_flashlight_erc_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.Look" {
+   Resource "{8352E6A6B22564B1}DZ/anims/anm/player/layered/look/p_1hd_flashlight_pne_look.anm"
+  }
+ }
+}

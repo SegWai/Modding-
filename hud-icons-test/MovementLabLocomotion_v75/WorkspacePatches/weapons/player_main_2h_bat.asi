@@ -1,0 +1,47 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "Combat.Erc.Block" {
+   Resource "{ECB570452D292EEC}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_block_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeL" {
+   Resource "{97CFB4A26F073A58}DZ/anims/anm/player/moves/2handed/p_2hd_erc_evadeL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeR" {
+   Resource "{FB011E73FB515B3C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_evadeR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.Sprint_StrikeR01" {
+   Resource "{8C0CB7E60317F5ED}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackR_charged_baseball.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL01" {
+   Resource "{961BCE58071E46BF}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackL_Light_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL02" {
+   Resource "{8E6BD9911D10E732}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackL_Heavy_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace01" {
+   Resource "{31914821C4A2F2A5}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackL_Light_inplace_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace02" {
+   Resource "{036FE7D38CB15241}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackL_Heavy_inplace_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR01" {
+   Resource "{149F3E2F4D94286A}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackR_Light_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR03" {
+   Resource "{0CEF29E6579A89E7}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackR_Heavy_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace01" {
+   Resource "{F1C60B1294D29587}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackR_Light_inplace_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace03" {
+   Resource "{C338A4E0DCC13563}DZ/anims/anm/player/attacks/2hd/baseball bat/p_2hd_erc_attackR_Heavy_inplace_baseball_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light F Block" {
+   Resource "{9C91C69274811811}DZ/anims/anm/player/hits/Light/p_2h_baseball_erc_block_ras_hit_light_F.anm"
+  }
+ }
+}
