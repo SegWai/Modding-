@@ -1,0 +1,5 @@
+{
+  "checks": "315 actual-source handoff math scenarios using native negative-heading convention; v67 sign regression reproduced; third-person prone helper covered; working 1.30 workspace byte-preserved; PBO and ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test",
+  "limitation": "v67 numerical test used an incorrect camera-heading sign assumption; no runtime claim"
+}

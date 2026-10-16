@@ -1,0 +1,17 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{8F69E288CFC2B70D}DZ/anims/workspaces/player/player_main/props/player_main_1h_torch.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionOnce.ItemTriggerCro.Once" {
+   Resource "{7D968A3B50A0DDEF}DZ/anims/anm/player/actions/items/p_cro_GPS_Button.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemTriggerErc.Once" {
+   Resource "{64F3E805BF59A7A9}DZ/anims/anm/player/actions/items/p_erc_GPS_Button.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemTriggerPne.Once" {
+   Resource "{D064F5BCF0FA830D}DZ/anims/anm/player/actions/items/p_pne_GPS_Button.anm"
+  }
+ }
+}
