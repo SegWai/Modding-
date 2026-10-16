@@ -1,0 +1,16 @@
+{
+  "build_logged": "v69",
+  "heading_samples": 46,
+  "stable_render_samples": 16,
+  "max_world_basis_error_degrees": 0.0003999999999848569,
+  "native_input_relation": "engine heading = -input heading",
+  "render_relation_confirmed": "rendered world yaw = engine heading + camera local offset",
+  "first_turn": {
+    "initial_world_yaw": 260.0,
+    "v69_changed_target": 159.172,
+    "v69_previous_rendered_yaw": 320.0,
+    "v71_remaining_offset": 0,
+    "v71_predicted_world_yaw": -100.828
+  },
+  "native_v71_runtime": "pending"
+}

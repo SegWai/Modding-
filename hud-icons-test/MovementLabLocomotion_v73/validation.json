@@ -1,0 +1,5 @@
+{
+  "checks": "9,000 actual-source geometry cases using native heading/model position spaces; initial framing retained; fixed origin with view/body direction changes; player translation followed; v71 head/look script and 1.30 graphs unchanged; PBO/ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test; native rendering/blending and wall collisions unverified",
+  "scope": "Third-person non-aiming fixed-position pivot selected by user; based on v71; no v72 right-shoulder code"
+}
