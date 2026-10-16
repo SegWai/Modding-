@@ -1,0 +1,5 @@
+{
+  "checks": "315 production yaw-math scenarios; uploaded v69 log regression replay (46 heading samples and 16 settled render comparisons); no world-target accumulator or HeadingModel override; no timed recenter; working animation graph bytes unchanged; PBO/ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test",
+  "change": "Use v68 yaw handoff without timed release; preserve free-look pitch when movement starts; eliminate v69 synthetic-input feedback"
+}

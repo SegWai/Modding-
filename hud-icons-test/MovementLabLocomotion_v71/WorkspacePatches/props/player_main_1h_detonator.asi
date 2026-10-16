@@ -1,0 +1,17 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{8F69E288CFC2B70D}DZ/anims/workspaces/player/player_main/props/player_main_1h_torch.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionOnce.ItemTriggerCro.Once" {
+   Resource "{1D88D6453A276439}DZ/anims/anm/player/actions/items/p_cro_detonator_trigger.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemTriggerErc.Once" {
+   Resource "{BCD1FCABB8338FC6}DZ/anims/anm/player/actions/items/p_erc_detonator_trigger.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemTriggerPne.Once" {
+   Resource "{E2949B0BC4EBFB2B}DZ/anims/anm/player/actions/items/p_pne_detonator_trigger.anm"
+  }
+ }
+}

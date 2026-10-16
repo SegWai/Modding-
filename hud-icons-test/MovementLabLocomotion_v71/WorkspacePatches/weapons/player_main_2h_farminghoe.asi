@@ -1,0 +1,44 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.In" {
+   Resource "{D6D7CCE621C2ADE0}DZ/anims/anm/player/actions/environment/p_2hd_erc_farminghoe_digging_worms_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Loop" {
+   Resource "{E8E2503DB8E36CE9}DZ/anims/anm/player/actions/environment/p_2hd_erc_farminghoe_digging_worms_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Out" {
+   Resource "{D58CB4C3E6DD8E2A}DZ/anims/anm/player/actions/environment/p_2hd_erc_farminghoe_digging_worms_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.In" {
+   Resource "{80E96017BB3E92D1}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group2_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Loop" {
+   Resource "{2A7DD9EB37882C81}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group2_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Out" {
+   Resource "{9BCA9A213DF99A13}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group2_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigCacheErc.Cancel" {
+   Resource "{DDD36AF64EC7F9E9}DZ/anims/anm/player/actions/horticulture/p_erc_hoe_dig_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigCacheErc.InLoopOut" {
+   Resource "{61499C8B97E61E69}DZ/anims/anm/player/actions/horticulture/p_erc_hoe_digcache.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigErc.Cancel" {
+   Resource "{DDD36AF64EC7F9E9}DZ/anims/anm/player/actions/horticulture/p_erc_hoe_dig_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigErc.InLoopOut" {
+   Resource "{34364F89C04922BF}DZ/anims/anm/player/actions/horticulture/p_erc_hoe_dig.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigManipulateErc.Cancel" {
+   Resource "{DDD36AF64EC7F9E9}DZ/anims/anm/player/actions/horticulture/p_erc_hoe_dig_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigManipulateErc.InLoopOut" {
+   Resource "{8C591DE6D7625A84}DZ/anims/anm/player/actions/horticulture/p_erc_hoe_dig_manipulate.anm"
+  }
+ }
+}
