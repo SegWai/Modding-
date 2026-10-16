@@ -1,0 +1,77 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponChange.Pne.RifleLeftBackSlotShow" {
+   Resource "{EDF3463F0739D8BB}DZ/anims/anm/player/reloads/Saiga/p_erc_reload_mag_remove_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{F78F158647D868F2}DZ/anims/anm/player/reloads/Saiga/p_erc_chambering_Closed_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{3436410863E7DC38}DZ/anims/anm/player/reloads/Saiga/p_erc_fire_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{129F02FB85B1E00E}DZ/anims/anm/player/reloads/Saiga/p_erc_fire_empty_automatic_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{D7AFFFB7E7C7BBE4}DZ/anims/anm/player/reloads/Saiga/p_erc_fire_Jam_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{3F483B86AE5B8283}DZ/anims/anm/player/reloads/Saiga/p_erc_unjam_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{FB251D419E1AB8FE}DZ/anims/anm/player/reloads/Saiga/p_erc_unjam_cancel_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{55417DC5E5B8393B}DZ/anims/anm/player/reloads/Saiga/p_erc_reloadAction_Closed_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{0122EDC23B653024}DZ/anims/anm/player/reloads/Saiga/p_erc_reload_mag_noBullet_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{0122EDC23B653024}DZ/anims/anm/player/reloads/Saiga/p_erc_reload_mag_noBullet_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{EDF3463F0739D8BB}DZ/anims/anm/player/reloads/Saiga/p_erc_reload_mag_remove_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{65A5247596FB4820}DZ/anims/anm/player/reloads/Saiga/p_erc_reload_noMag_bullet_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{7D06A4F8ADC7CAEB}DZ/anims/anm/player/reloads/Saiga/p_pne_chambering_Closed_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{1535FD7532BB18A9}DZ/anims/anm/player/reloads/Saiga/p_pne_fire_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{D7B4817280FE579F}DZ/anims/anm/player/reloads/Saiga/p_pne_fire_empty_automatic_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{70444C39042DAA63}DZ/anims/anm/player/reloads/Saiga/p_pne_fire_Jam_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{B27E56C37AB62ECE}DZ/anims/anm/player/reloads/Saiga/p_pne_unjam_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{661BFE1009151863}DZ/anims/anm/player/reloads/Saiga/p_pne_unjam_cancel_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{1DCC3588F34B9F74}DZ/anims/anm/player/reloads/Saiga/p_pne_reloadAction_Closed_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{49AFA58F2D96966B}DZ/anims/anm/player/reloads/Saiga/p_pne_reload_mag_noBullet_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{49AFA58F2D96966B}DZ/anims/anm/player/reloads/Saiga/p_pne_reload_mag_noBullet_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{677AF741ED267AA2}DZ/anims/anm/player/reloads/Saiga/p_pne_reload_mag_remove_Saiga_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{2D286C388008EE6F}DZ/anims/anm/player/reloads/Saiga/p_pne_reload_noMag_bullet_Saiga_ras.anm"
+  }
+ }
+}

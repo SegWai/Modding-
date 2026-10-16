@@ -1,0 +1,1187 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet Hits {
+   Nodes {
+    AnimSrcNodeWeaponIk DamageFullBodyIK {
+     EditorPos 5.1 -12.1
+     Child "DamageFullBodySTM"
+     IkconfigName "WeaponIKTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHand_Dummy (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHand_Dummy"\
+     "weaponrotator = RightArm "\
+     "weaponaxis= -x"\
+     ""\
+     "chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand"\
+     "chainaxis=-x"\
+     "secchain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand"\
+     "secchainaxis=+x"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              			// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHand_Dummy      			// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      			// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection			// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection			// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"\
+     ""\
+     ""
+     BlendInTime 0.36
+     BlendOutTime 0.15
+     WeightAim "isbitset(ArmIK, 0)"
+     WeightPrimaryChain "isbitset(ArmIK, 1)"
+     WeightSecondaryChain "isbitset(ArmIK, 2)"
+     WeaponDirLr "AimIKX"
+     WeaponDirUd "AimY"
+    }
+    AnimSrcNodeBlend DamageFullBodyMaster {
+     EditorPos 5.2 -13.8
+     BlendWeight "0.0"
+     Child0 "DamageFullBodyIK"
+     Child1 "FacialHeavyHitAnim"
+     OptimizeMin 0
+     OptimizeMax 0
+    }
+    AnimSrcNodeStateMachine DamageFullBodySTM {
+     Tags {
+      "TagDamageFullBody"
+     }
+     EditorPos 5.1 -10.7
+     states {
+      AnimSrcNodeState DamageHeavyErcRas {
+       EditorPos 5.6 -9.4
+       Child "DamageHeavyErcRas"
+       StartCondition "Stance == 0 && Raised && IsCommand(CMD_DamageHeavy)"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState DamageHeavyErc {
+       EditorPos 8 -9.4
+       Child "DamageHeavyErc"
+       StartCondition "Stance == 0 && !Raised && IsCommand(CMD_DamageHeavy)"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState DamageHeavyCroRas {
+       EditorPos 11.5 -9.4
+       Child "DamageHeavyCroRas"
+       StartCondition "Stance == 1 && Raised && IsCommand(CMD_DamageHeavy)"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState DamageHeavyCro {
+       EditorPos 13.9 -9.4
+       Child "DamageHeavyCro"
+       StartCondition "Stance == 1 && !Raised && IsCommand(CMD_DamageHeavy)"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState DamageHeavyPneRas {
+       EditorPos 17.5 -9.4
+       Child "DamageHeavyPneRas"
+       StartCondition "Stance == 2 && Raised && IsCommand(CMD_DamageHeavy)"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState DamageHeavyPne {
+       EditorPos 20.4 -9.4
+       Child "DamageHeavyPne"
+       StartCondition "Stance == 2 && !Raised && IsCommand(CMD_DamageHeavy)"
+       TimeStorage Inherit
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect DamageHeavyCro {
+     EditorPos 13.9 -7.6
+     Child "DamageHeavyDirSTM"
+     Group "Damage"
+     Column "Cro"
+    }
+    AnimSrcNodeGroupSelect DamageHeavyCroRas {
+     EditorPos 11.5 -7.6
+     Child "DamageHeavyDirSTM"
+     Group "Damage"
+     Column "CroRas"
+    }
+    AnimSrcNodeStateMachine DamageHeavyDirSTM {
+     EditorPos 11.7 -4.6
+     states {
+      AnimSrcNodeState Back {
+       EditorPos 14.2 -2.2
+       Child "HeavyB"
+       StartCondition "DamageDirection <= -135 || DamageDirection >= 135"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Forward {
+       EditorPos 14.2 -3.2
+       Child "HeavyF"
+       StartCondition "DamageDirection > -45 && DamageDirection < 45"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Left {
+       EditorPos 12 -2.7
+       Child "HeavyL"
+       StartCondition "DamageDirection <= -45 && DamageDirection > -135"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Right {
+       EditorPos 16.4 -2.7
+       Child "HeavyR"
+       StartCondition "DamageDirection >= 45 && DamageDirection < 135"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect DamageHeavyErc {
+     EditorPos 8 -7.6
+     Child "DamageHeavyDirSTM"
+     Group "Damage"
+     Column "Erc"
+    }
+    AnimSrcNodeGroupSelect DamageHeavyErcRas {
+     EditorPos 5.6 -7.6
+     Child "DamageHeavyDirSTM"
+     Group "Damage"
+     Column "ErcRas"
+    }
+    AnimSrcNodeGroupSelect DamageHeavyPne {
+     EditorPos 20.4 -7.6
+     Child "DamageHeavyDirSTM"
+     Group "Damage"
+     Column "Pne"
+    }
+    AnimSrcNodeGroupSelect DamageHeavyPneRas {
+     EditorPos 17.5 -7.6
+     Child "DamageHeavyDirSTM"
+     Group "Damage"
+     Column "PneRas"
+    }
+    AnimSrcNodeSource DamageLightBSrc {
+     EditorPos -8.2 -0.5
+     Source "Damage.Light B"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect DamageLightCro {
+     EditorPos -6.8 -7.2
+     Child "DamageLightDirectional"
+     Group "Damage"
+     Column "Cro"
+    }
+    AnimSrcNodeGroupSelect DamageLightCroRas {
+     EditorPos -4.7 -5.1
+     Child "DamageLightDirectional"
+     Group "Damage"
+     Column "CroRas"
+    }
+    AnimSrcNodeBlendN DamageLightDirectional {
+     EditorPos -5.9 -1.4
+     BlendWeight "DamageDirection"
+     BlendFn S
+     Thresholds {
+      -180 -90 0 90 180
+     }
+     Children {
+      "DamageLightBSrc" "DamageLightLSrc" "DamageLightFT" "DamageLightRSrc"
+     }
+     IsCyclic 1
+    }
+    AnimSrcNodeGroupSelect DamageLightErc {
+     EditorPos -1.2 -7.3
+     Child "DamageLightDirectional"
+     Group "Damage"
+     Column "Erc"
+    }
+    AnimSrcNodeGroupSelect DamageLightErcRas {
+     EditorPos 1.2 -7.3
+     Child "DamageLightDirectional"
+     Group "Damage"
+     Column "ErcRas"
+    }
+    AnimSrcNodeSource DamageLightFBlockSrc {
+     EditorPos -3.9 1
+     Source "Damage.Light F Block"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource DamageLightFSrc {
+     EditorPos -6 1
+     Source "Damage.Light F"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT DamageLightFT {
+     EditorPos -4.9 0.1
+     BlendTime "0.3"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 0 && Raised && MeleeBlock"
+     Child0 "DamageLightFSrc"
+     Child1 "DamageLightFBlockSrc"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource DamageLightLSrc {
+     EditorPos -7.1 0.1
+     Source "Damage.Light L"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect DamageLightPne {
+     EditorPos -15.1 -7.3
+     Child "DamageLightDirectional"
+     Group "Damage"
+     Column "Pne"
+    }
+    AnimSrcNodeBlendN DamageLightPneBackB {
+     EditorPos -9.8 -6.7
+     BlendWeight "AimX"
+     BlendFn S
+     Thresholds {
+      -135 -60 0 60 135
+     }
+     Children {
+      "DamageLightCroRas" "DamageLightPneRas" "DamageLightPneRas" "DamageLightPneRas"
+     }
+     IsCyclic 1
+    }
+    AnimSrcNodeGroupSelect DamageLightPneRas {
+     EditorPos -9.4 -4.9
+     Child "DamageLightDirectional"
+     Group "Damage"
+     Column "PneRas"
+    }
+    AnimSrcNodeSource DamageLightRSrc {
+     EditorPos -3.9 -0.6
+     Source "Damage.Light R"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeStateMachine DamageLightSTM {
+     Tags {
+      "TagDamage"
+     }
+     EditorPos -1.7 -10.7
+     states {
+      AnimSrcNodeState DamageLightErc {
+       EditorPos -1.3 -9.4
+       Child "DamageLightErc"
+       StartCondition "Stance == 0 && !Raised && GetCommandI(CMD_Damage) == 0 || IsTag(\"TagProneBack\")"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState DamageLightErcRas {
+       EditorPos 1.3 -9.4
+       Child "DamageLightErcRas"
+       StartCondition "Stance == 0 && Raised && GetCommandI(CMD_Damage) == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState DamageLightCro {
+       EditorPos -6.8 -9.4
+       Child "DamageLightCro"
+       StartCondition "Stance == 1 && !Raised && GetCommandI(CMD_Damage) == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState DamageLightPne {
+       EditorPos -15.1 -9.4
+       Child "DamageLightPne"
+       StartCondition "Stance == 2 && !Raised && GetCommandI(CMD_Damage) == 0 && !IsTag(\"TagProneBack\")"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState DamageLightCroRas {
+       EditorPos -3.9 -9.4
+       Child "DamageLightCroRas"
+       StartCondition "Stance == 1 && Raised && GetCommandI(CMD_Damage) == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState DamageLightPneRas {
+       EditorPos -10.3 -9.4
+       Child "DamageLightPneBackB"
+       StartCondition "Stance == 2 && Raised && GetCommandI(CMD_Damage) == 0 && !IsTag(\"TagProneBack\")"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE26983755}" {
+       FromState "DamageLightErc"
+       ToState "DamageLightErcRas"
+       Duration "0.2"
+       StartTime "GetLowerTime()"
+       Condition "Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983774}" {
+       FromState "DamageLightErcRas"
+       ToState "DamageLightErc"
+       Duration "0.2"
+       StartTime "GetLowerTime()"
+       Condition "!Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698378D}" {
+       FromState "DamageLightCroRas"
+       ToState "DamageLightCro"
+       Duration "0.2"
+       StartTime "GetLowerTime()"
+       Condition "!Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983784}" {
+       FromState "DamageLightCro"
+       ToState "DamageLightCroRas"
+       Duration "0.2"
+       StartTime "GetLowerTime()"
+       Condition "Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698379C}" {
+       FromState "DamageLightPneRas"
+       ToState "DamageLightPne"
+       Duration "0.2"
+       StartTime "GetLowerTime()"
+       Condition "!Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983797}" {
+       FromState "DamageLightPne"
+       ToState "DamageLightPneRas"
+       Duration "0.2"
+       StartTime "GetLowerTime()"
+       Condition "Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeBlend DamageMaster {
+     EditorPos -1.7 -12.2
+     BlendWeight "0.0"
+     Child0 "DamageLightSTM"
+     Child1 "FacialLightHitAnim"
+     OptimizeMin 0
+     OptimizeMax 0
+    }
+    AnimSrcNodeSource FacialHeavyHitAnim {
+     EditorPos 6.5 -13
+     Source "Facial.FacialHitHeavy"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FacialLightHitAnim {
+     EditorPos -0.6 -11.5
+     Source "Facial.FacialHitLight"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyB {
+     EditorPos 14.2 0.5
+     Source "Damage.Heavy B"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyF {
+     EditorPos 14.2 -0.4
+     Source "Damage.Heavy F"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyL {
+     EditorPos 12 -0.4
+     Source "Damage.Heavy L"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyR {
+     EditorPos 16.4 -0.4
+     Source "Damage.Heavy R"
+     Looptype "No Loop"
+    }
+   }
+  }
+  AnimSrcGraphSheet Combat {
+   Nodes {
+    AnimSrcNodeSource BayonetAnim {
+     EditorPos -13.9 -6
+     Source "Combat.Erc.Bayonet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FacialAngryAnim {
+     EditorPos -4 -14.2
+     Source "Facial.FacialAnger"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyLAnim {
+     EditorPos 0.4 -5
+     Source "Combat.Erc.StrikeL02"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyLInPlaceAnim {
+     EditorPos -2.3 -5.9
+     Source "Combat.Erc.StrikeLInplace02"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyRAnim {
+     EditorPos 0.4 -5.9
+     Source "Combat.Erc.StrikeR03"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource HeavyRInPlaceAnim {
+     EditorPos -2.3 -5
+     Source "Combat.Erc.StrikeRInplace03"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource LightLAnim {
+     EditorPos 3.1 -5.9
+     Source "Combat.Erc.StrikeL01"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource LightLInPlaceAnim {
+     EditorPos -4.9 -5
+     Source "Combat.Erc.StrikeLInplace01"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource LightRAnim {
+     EditorPos 3.1 -5
+     Source "Combat.Erc.StrikeR01"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource LightRInplaceAnim {
+     EditorPos -4.9 -5.9
+     Source "Combat.Erc.StrikeRInplace01"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlend MeleeFacialB {
+     EditorPos -5.1 -15.2
+     BlendWeight "0.0"
+     Child0 "MeleeSTM0"
+     Child1 "FacialAngryAnim"
+     OptimizeMin 0
+     OptimizeMax 0
+    }
+    AnimSrcNodeBlendT MeleeIKB {
+     EditorPos -5 -17.2
+     BlendTime "0.3"
+     BlendFn S
+     TriggerOn "WeaponType == 6"
+     TriggerOff "WeaponType != 6"
+     Condition ""
+     Child0 "MeleeWeaponIK"
+     Child1 "MeleeFacialB"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 0
+    }
+    AnimSrcNodeQueue MeleeMasterQ {
+     EditorPos -5.1 -19.3
+     Child "MeleeRotNode"
+     QueueItems {
+      AnimSrcNodeQueueItem "{6930A8DE269834AC}" {
+       Child "DamageMaster"
+       StartExpr "IsCommand(CMD_Damage)"
+       InterruptExpr ""
+       StartTime ""
+       BlendInTime 0.1
+       BlendOutTime 0.3
+       InterruptOthers 1
+       IsReentrant 0
+      }
+     }
+    }
+    AnimSrcNodeProcTransform MeleeRotNode {
+     EditorPos -5.1 -18.4
+     Child "MeleeIKB"
+     Expression "LeanForward * 0.01745329251994329576923690768489"
+     Bones {
+      AnimSrcNodeProcTrBoneItem "{6930A8DE269834C1}" {
+       Bone "spine"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.3
+      }
+      AnimSrcNodeProcTrBoneItem "{6930A8DE269834D6}" {
+       Bone "spine1"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.2
+      }
+      AnimSrcNodeProcTrBoneItem "{6930A8DE269834D2}" {
+       Bone "spine2"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.1
+      }
+      AnimSrcNodeProcTrBoneItem "{6930A8DE269834D1}" {
+       Bone "spine3"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.1
+      }
+      AnimSrcNodeProcTrBoneItem "{6930A8DE269834ED}" {
+       Bone "leftshoulder"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.3
+      }
+      AnimSrcNodeProcTrBoneItem "{6930A8DE269834E9}" {
+       Bone "rightshoulder"
+       Axis X
+       Space Model
+       Op Rotate
+       Amount 0.3
+      }
+      AnimSrcNodeProcTrBoneItem "{6930A8DE269834E3}" {
+       Bone "Collision"
+       Axis Z
+       Space Local
+       Op Translate
+       Amount -0.2
+      }
+     }
+    }
+    AnimSrcNodeStateMachine MeleeSTM0 {
+     Tags {
+      "TagMelee"
+     }
+     EditorPos -5.2 -13.1
+     states {
+      AnimSrcNodeState "Light R" {
+       EditorPos 3.1 -9.5
+       Child "LightRAnim"
+       StartCondition "GetCommandI(CMD_Melee_Attack2) == 0 && GetCommandF(CMD_Melee_Attack2) == 0.0 && Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "Light L" {
+       EditorPos 3.1 -10.9
+       Child "LightLAnim"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "Heavy R" {
+       EditorPos 0.4 -12
+       Child "HeavyRAnim"
+       StartCondition "GetCommandI(CMD_Melee_Attack2) == 1 && GetCommandF(CMD_Melee_Attack2) == 0.0 && Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "Heavy L" {
+       EditorPos 0.4 -8.3
+       Child "HeavyLAnim"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "Light R Inplace" {
+       EditorPos -4.9 -10.9
+       Child "LightRInplaceAnim"
+       StartCondition "GetCommandI(CMD_Melee_Attack2) == 0 && GetCommandF(CMD_Melee_Attack2) == 1.0 && Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "Light L Inplace" {
+       EditorPos -4.9 -9.5
+       Child "LightLInPlaceAnim"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "Heavy R Inplace" {
+       EditorPos -2.3 -8.3
+       Child "HeavyRInPlaceAnim"
+       StartCondition "GetCommandI(CMD_Melee_Attack2) == 1 && GetCommandF(CMD_Melee_Attack2) == 1.0 && Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "Heavy L Inplace" {
+       EditorPos -2.3 -12
+       Child "HeavyLInPlaceAnim"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ProneOnBackKick {
+       EditorPos -10.3 -10.9
+       Child "PneKickAnim"
+       StartCondition "Stance == 2 && Raised && (AimX <= -125 || AimX >= 125)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState SprintCharge {
+       EditorPos -16.6 -10.9
+       Child "SprintChargeR01Anim"
+       StartCondition "GetCommandI(CMD_Melee_Attack2)==1 && Stance == 0 && MovementSpeed > 2.1 && MovementDirection >= -50 && MovementDirection <= 50"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState PneAttack {
+       EditorPos -7.6 -10.9
+       Child "PneAttackAnim"
+       StartCondition "Stance == 2 && Raised && AimX >= -65 && AimX <= 65"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Bayonet {
+       EditorPos -13.9 -10.9
+       Child "BayonetAnim"
+       StartCondition "GetCommandI(CMD_Melee_Attack2) == 2 && Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState StealthAttack_Liver {
+       Tags {
+        "TagNoTurn"
+       }
+       EditorPos -19.2 -10.9
+       Child "StealthAttack_LiverAnim"
+       StartCondition "GetCommandI(CMD_Melee_Stealth) == 1 && Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState StealthAttack_Neck {
+       Tags {
+        "TagNoTurn"
+       }
+       EditorPos -21.8 -10.9
+       Child "StealthAttack_NeckAnim"
+       StartCondition "GetCommandI(CMD_Melee_Stealth) == 2 && Stance == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE2698358E}" {
+       FromState "Light L"
+       ToState "Light R"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeR01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983586}" {
+       FromState "Light R"
+       ToState "Light L"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983581}" {
+       FromState "Heavy L"
+       ToState "Heavy R"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeR02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698359B}" {
+       FromState "Heavy R"
+       ToState "Heavy L"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983592}" {
+       FromState "Light L"
+       ToState "Heavy R"
+       Duration "0.2"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeR03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835AD}" {
+       FromState "Heavy R"
+       ToState "Light L"
+       Duration "0.2"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835A5}" {
+       FromState "Light R"
+       ToState "Heavy L"
+       Duration "0.2"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835BD}" {
+       FromState "Heavy L"
+       ToState "Light R"
+       Duration "0.2"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeR01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835B4}" {
+       FromState "Heavy R Inplace"
+       ToState "Heavy L"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835CF}" {
+       FromState "Heavy L"
+       ToState "Heavy R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplace03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835C7}" {
+       FromState "Heavy L Inplace"
+       ToState "Heavy R"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeR03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835DE}" {
+       FromState "Heavy R"
+       ToState "Heavy L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835D9}" {
+       FromState "Light R Inplace"
+       ToState "Light L"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835D3}" {
+       FromState "Light L"
+       ToState "Light R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplaceR01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835EA}" {
+       FromState "Light L Inplace"
+       ToState "Light R"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeR01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835E5}" {
+       FromState "Light R"
+       ToState "Light L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835FC}" {
+       FromState "Heavy R Inplace"
+       ToState "Light L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269835F5}" {
+       FromState "Light L Inplace"
+       ToState "Heavy R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplace03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698320C}" {
+       FromState "Light R Inplace"
+       ToState "Heavy L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983204}" {
+       FromState "Heavy L Inplace"
+       ToState "Light R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplace01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698321F}" {
+       FromState "Light R Inplace"
+       ToState "Light L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698322E}" {
+       FromState "Light L Inplace"
+       ToState "Light R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplace01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983226}" {
+       FromState "Heavy R Inplace"
+       ToState "Heavy L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983221}" {
+       FromState "Heavy L Inplace"
+       ToState "Heavy R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplace03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698323B}" {
+       FromState "Light R"
+       ToState "Heavy L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983235}" {
+       FromState "Heavy L Inplace"
+       ToState "Light R"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983242}" {
+       FromState "Light L Inplace"
+       ToState "Heavy R"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeR03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698325B}" {
+       FromState "Heavy R"
+       ToState "Light L Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeLInplace01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983255}" {
+       FromState "Light R Inplace"
+       ToState "Heavy L"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL02\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698326C}" {
+       FromState "Heavy L"
+       ToState "Light R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplace01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26983262}" {
+       FromState "Light L"
+       ToState "Heavy R Inplace"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeRInplace03\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 1 && GetCommandF(CMD_Melee_Combo) == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698327D}" {
+       FromState "Heavy R Inplace"
+       ToState "Light L"
+       Duration "0.3"
+       StartTime "GetEventTime(\"Combat.Erc.StrikeL01\", \"BlendIn\")"
+       Condition "GetCommandI(CMD_Melee_Combo) == 0 && GetCommandF(CMD_Melee_Combo) == 0.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeWeaponIk MeleeWeaponIK {
+     EditorPos -6.5 -16.3
+     Child "MeleeFacialB"
+     IkconfigName "WeaponIKTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHand_Dummy (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHand_Dummy"\
+     "weaponrotator = RightArm "\
+     "weaponaxis= -x"\
+     ""\
+     ""\
+     "chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand"\
+     "chainaxis=-x"\
+     "secchain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand"\
+     "secchainaxis=+x"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              						// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHand_Dummy      								// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      							// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection							// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection							// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"\
+     ""\
+     ""
+     BlendInTime 0.36
+     BlendOutTime 0.15
+     WeightAim "false"
+     WeightPrimaryChain "isbitset(ArmIK, 1)"
+     WeightSecondaryChain "isbitset(ArmIK, 2)"
+     WeaponDirLr "AimIKX"
+     WeaponDirUd "AimY"
+    }
+    AnimSrcNodeSource PneAttackAnim {
+     EditorPos -7.6 -5.9
+     Source "Combat.Pne.StrikeR01"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource PneKickAnim {
+     EditorPos -10.3 -5.9
+     Source "Combat.Pne.Kick"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource SprintChargeR01Anim {
+     EditorPos -16.6 -6
+     Source "Combat.Erc.Sprint_StrikeR01"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource StealthAttack_LiverAnim {
+     EditorPos -19.2 -6
+     Source "Combat.Erc.StealthAttack_Liver"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource StealthAttack_NeckAnim {
+     EditorPos -21.8 -6
+     Source "Combat.Erc.StealthAttack_Neck"
+     Looptype "No Loop"
+    }
+   }
+  }
+  AnimSrcGraphSheet WeaponActions {
+   Nodes {
+    AnimSrcNodeSource FireAnim {
+     EditorPos -0.6 -5.7
+     Source "WeaponOperations.Fire"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireCockedAnim {
+     EditorPos 3.6 -5.7
+     Source "WeaponOperations.FireCocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireEmptyAutomatic {
+     EditorPos 7.8 -5.7
+     Source "WeaponOperations.FireEmptyAutomatic"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireJamAnim {
+     EditorPos 10 -5.7
+     Source "WeaponOperations.FireJam"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireLastAnim {
+     EditorPos 1.5 -5.7
+     Source "WeaponOperations.FireLast"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireUncocked {
+     EditorPos 5.7 -5.7
+     Source "WeaponOperations.FireUncocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeStateMachine WeaponFireSTM {
+     EditorPos 2.8 -8.6
+     states {
+      AnimSrcNodeState Fire {
+       EditorPos -0.6 -7.3
+       Child "FireAnim"
+       StartCondition "GetCommandI(CMD_WeaponFire) == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FireLast {
+       EditorPos 1.5 -7.3
+       Child "FireLastAnim"
+       StartCondition "GetCommandI(CMD_WeaponFire) == 1"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FireCocked {
+       EditorPos 3.6 -7.3
+       Child "FireCockedAnim"
+       StartCondition "GetCommandI(CMD_WeaponFire) == 2"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FireUncocked {
+       EditorPos 5.7 -7.3
+       Child "FireUncocked"
+       StartCondition "GetCommandI(CMD_WeaponFire) == 3"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FireEmpty {
+       EditorPos 7.8 -7.3
+       Child "FireEmptyAutomatic"
+       StartCondition "GetCommandI(CMD_WeaponFire) == 4"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FireJam {
+       EditorPos 10 -7.3
+       Child "FireJamAnim"
+       StartCondition "GetCommandI(CMD_WeaponFire) == 5"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect WeaponStanceErc {
+     EditorPos 1.7 -9.9
+     Child "WeaponFireSTM"
+     Group "WeaponOperations"
+     Column "ErcRas"
+    }
+    AnimSrcNodeStateMachine WeaponStanceMaster {
+     Tags {
+      "TagWeaponFire"
+     }
+     EditorPos 1.3 -13.1
+     states {
+      AnimSrcNodeState WeaponStanceErc {
+       EditorPos 1.7 -11.7
+       Child "WeaponStanceErc"
+       StartCondition "Stance != 2"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState WeaponStancePne {
+       EditorPos 4.1 -11.7
+       Child "WeaponStancePne"
+       StartCondition "Stance == 2"
+       TimeStorage Inherit
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect WeaponStancePne {
+     EditorPos 4.1 -9.9
+     Child "WeaponFireSTM"
+     Group "WeaponOperations"
+     Column "PneRas"
+    }
+   }
+  }
+ }
+}

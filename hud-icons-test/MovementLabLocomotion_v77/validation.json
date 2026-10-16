@@ -1,0 +1,13 @@
+{
+  "version": 77,
+  "native_compile_and_playtest": "Pending local DayZ 1.30 test; game runtime unavailable here",
+  "checks": [
+    "v76 posture graph and existing runtime scripts byte-identical",
+    "native m_fTurnAngle uses degrees; set to 90 after super initialization",
+    "bottle and improvised suppressors excluded on both attachment passes",
+    "compatible real suppressors preferred before muzzle fallback",
+    "PBO headers, source payload and SHA1 verified by packer",
+    "ZIP integrity verified"
+  ],
+  "suppressor_compatibility": "Resolved against installed mod classes and engine CreateAttachmentEx at runtime; installed SNAFU configs not available here"
+}

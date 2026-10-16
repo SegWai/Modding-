@@ -1,0 +1,44 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.Aim" {
+   Resource "{267D590775413786}DZ/anims/anm/player/actions/items/optics/scope/p_cro_optics_scope_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.In" {
+   Resource "{968A98FF8557726E}DZ/anims/anm/player/actions/items/optics/scope/p_cro_optics_scope_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.Loop" {
+   Resource "{C12140FB8202804E}DZ/anims/anm/player/actions/items/optics/scope/p_cro_optics_scope_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.Out" {
+   Resource "{52DDAF72996E2105}DZ/anims/anm/player/actions/items/optics/scope/p_cro_optics_scope_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.Aim" {
+   Resource "{FB0F67F9957FB1BE}DZ/anims/anm/player/actions/items/optics/scope/p_erc_optics_scope_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.In" {
+   Resource "{E4A24989B9BFD62A}DZ/anims/anm/player/actions/items/optics/scope/p_erc_optics_scope_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.Loop" {
+   Resource "{60786A1500166BB1}DZ/anims/anm/player/actions/items/optics/scope/p_erc_optics_scope_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.Out" {
+   Resource "{8FAF918C7950A73D}DZ/anims/anm/player/actions/items/optics/scope/p_erc_optics_scope_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.Aim" {
+   Resource "{A23D8CC9BECC8B81}DZ/anims/anm/player/actions/items/optics/scope/p_pne_optics_scope_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.In" {
+   Resource "{699424CC6D527A67}DZ/anims/anm/player/actions/items/optics/scope/p_pne_optics_scope_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.Loop" {
+   Resource "{3E3D0DB57CCE1F5C}DZ/anims/anm/player/actions/items/optics/scope/p_pne_optics_scope_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.Out" {
+   Resource "{D69D7ABC52E39D02}DZ/anims/anm/player/actions/items/optics/scope/p_pne_optics_scope_out.anm"
+  }
+ }
+}

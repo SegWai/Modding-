@@ -1,0 +1,92 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{4A830EEA350B0C48}DZ/anims/anm/player/reloads/R12/p_erc_chambering_boltOpen_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{FB5FD6ADBCC97B2F}DZ/anims/anm/player/reloads/R12/p_erc_chambering_boltClosed_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Open_Bullet" {
+   Resource "{A7A93EE410F65C3A}DZ/anims/anm/player/reloads/R12/p_erc_chambering_loop_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Open_NoBullet" {
+   Resource "{4A830EEA350B0C48}DZ/anims/anm/player/reloads/R12/p_erc_chambering_boltOpen_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{4A830EEA350B0C48}DZ/anims/anm/player/reloads/R12/p_erc_chambering_boltOpen_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed_Uncocked" {
+   Resource "{FB5FD6ADBCC97B2F}DZ/anims/anm/player/reloads/R12/p_erc_chambering_boltClosed_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{DEB7D81BC7F5DF5A}DZ/anims/anm/player/reloads/R12/p_erc_fire_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{DC924257EAA54E8E}DZ/anims/anm/player/reloads/R12/p_erc_fire_empty_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{A0FD15DCF4065597}DZ/anims/anm/player/reloads/R12/p_erc_fire_jam_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireLast" {
+   Resource "{6A10BC9C291669F5}DZ/anims/anm/player/reloads/R12/p_erc_fire_last_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{D58F37BDB0AE486A}DZ/anims/anm/player/reloads/R12/p_erc_jam_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{EC1855AC9B59981A}DZ/anims/anm/player/reloads/MP133/p_rfl_erc_jam_cancel_MP133_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{118A7EA0E7FB131C}DZ/anims/anm/player/reloads/R12/p_erc_reload_action_closed_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{F5BABD0F085650CF}DZ/anims/anm/player/reloads/R12/p_erc_reload_action_open_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{C00ABF94DF14AE51}DZ/anims/anm/player/reloads/R12/p_pne_chambering_boltOpen_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{B3D29EE0AA3ADD60}DZ/anims/anm/player/reloads/R12/p_pne_chambering_boltClosed_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Open_Bullet" {
+   Resource "{9028B96849A833EA}DZ/anims/anm/player/reloads/R12/p_pne_chambering_loop_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Open_NoBullet" {
+   Resource "{C00ABF94DF14AE51}DZ/anims/anm/player/reloads/R12/p_pne_chambering_boltOpen_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{C00ABF94DF14AE51}DZ/anims/anm/player/reloads/R12/p_pne_chambering_boltOpen_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed_Uncocked" {
+   Resource "{B3D29EE0AA3ADD60}DZ/anims/anm/player/reloads/R12/p_pne_chambering_boltClosed_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{3E1F346D9FA1E5B1}DZ/anims/anm/player/reloads/R12/p_pne_fire_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{7B79F1D9094F5F09}DZ/anims/anm/player/reloads/R12/p_pne_fire_empty_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{F9CFFEECDFB56FA8}DZ/anims/anm/player/reloads/R12/p_pne_fire_jam_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireLast" {
+   Resource "{3455DB3C55CE1D18}DZ/anims/anm/player/reloads/R12/p_pne_fire_last_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{571C8477D1D8FA49}DZ/anims/anm/player/reloads/R12/p_pne_jam_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{5DBA02F795622B0E}DZ/anims/anm/player/reloads/MP133/p_rfl_pne_jam_cancel_MP133_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{7946EAD7CA3ACA49}DZ/anims/anm/player/reloads/R12/p_pne_reload_action_closed_R12_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{7ADA8AD345298477}DZ/anims/anm/player/reloads/R12/p_pne_reload_action_open_R12_ras.anm"
+  }
+ }
+}
