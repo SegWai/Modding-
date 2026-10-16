@@ -1,0 +1,13 @@
+{
+  "version": 81,
+  "checks": [
+    "Only range NPC module and mission changed versus v80 runtime/animation sources",
+    "Native EEOnDamageCalculated, OnUnconsciousStart and ForceStanceUp signatures checked against SDK",
+    "Female pre-damage veto and non-extending five-second recovery deadline inspected",
+    "Male five-second respawn and corpse deletion inspected",
+    "Native death handler restored; forced physics-ragdoll loop removed",
+    "PBO headers/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Pending local DayZ 1.30 test; runtime unavailable here",
+  "timing": "Male replaced five seconds after death observation; female wake requested five seconds after unconscious start, then normal wake/stand animations"
+}

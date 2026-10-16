@@ -1,0 +1,35 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{A9E024113D0454AE}DZ/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.In" {
+   Resource "{0B96A0913D64DE88}DZ/anims/anm/player/actions/consumption/p_cro_drink_ayran_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Loop" {
+   Resource "{F6671CCFE75F0FED}DZ/anims/anm/player/actions/consumption/p_cro_drink_ayran_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Out" {
+   Resource "{478717D1FC3C35D5}DZ/anims/anm/player/actions/consumption/p_cro_drink_ayran_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.In" {
+   Resource "{6835E6919D69A75D}DZ/anims/anm/player/actions/consumption/p_erc_drink_ayran_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Loop" {
+   Resource "{2B152231076189D5}DZ/anims/anm/player/actions/consumption/p_erc_drink_ayran_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Out" {
+   Resource "{35AFC6A7C0D49191}DZ/anims/anm/player/actions/consumption/p_erc_drink_ayran_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.In" {
+   Resource "{49365AECCC3563CC}DZ/anims/anm/player/actions/consumption/p_pne_drink_ayran_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Loop" {
+   Resource "{7227C9012CD2B3EA}DZ/anims/anm/player/actions/consumption/p_pne_drink_ayran_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Out" {
+   Resource "{B899ABE214393DDC}DZ/anims/anm/player/actions/consumption/p_pne_drink_ayran_out.anm"
+  }
+ }
+}
