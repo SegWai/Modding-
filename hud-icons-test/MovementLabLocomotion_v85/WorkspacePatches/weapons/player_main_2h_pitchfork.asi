@@ -1,0 +1,110 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.In" {
+   Resource "{8746F209B5AD8EBC}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group9_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Loop" {
+   Resource "{14ADBE98DF7B7BCC}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group9_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Out" {
+   Resource "{BA7AC0565A994079}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group9_out.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL01" {
+   Resource "{5EF1F4B3F1DD557E}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Light_spear_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL02" {
+   Resource "{1007C15176C91575}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Heavy_spear_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace01" {
+   Resource "{2C651B2FE8DE9C2F}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Light_spear_InPlace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace02" {
+   Resource "{A24A367A25628F73}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Heavy_spear_InPlace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR01" {
+   Resource "{5EF1F4B3F1DD557E}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Light_spear_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR03" {
+   Resource "{1007C15176C91575}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Heavy_spear_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace01" {
+   Resource "{2C651B2FE8DE9C2F}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Light_spear_InPlace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace03" {
+   Resource "{A24A367A25628F73}DZ/anims/anm/player/attacks/2hd/spear/p_2hd_erc_attackR_Heavy_spear_InPlace_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.CampfireCro.In" {
+   Resource "{9B05D29D55300783}DZ/anims/anm/player/gestures/campfire/p_1hd_campfire_getIn.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.CampfireCro.Loop" {
+   Resource "{1CC3CFA0FC0FD2D8}DZ/anims/anm/player/gestures/campfire/p_1hd_campfire_idle01.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.CampfireCro.Out" {
+   Resource "{443286864536CFF7}DZ/anims/anm/player/gestures/campfire/p_1hd_campfire_getOut.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Aim" {
+   Resource "{101E4D07A797C34A}DZ/anims/anm/player/layered/aim/2handed/p_2hd_spear_erc_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Idle" {
+   Resource "{7AFD602114BCB7E9}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_idle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.IdleExhausted" {
+   Resource "{3883FD7453182779}DZ/anims/anm/player/moves/spear/exhausted/p_2h_spear_erc_ras_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunB" {
+   Resource "{97C393006A702CDA}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBL" {
+   Resource "{4D49A9D5EB617DB7}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBR" {
+   Resource "{218703047F371CD3}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunF" {
+   Resource "{80149C1FC73BC602}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFL" {
+   Resource "{72598AFEC4169732}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFR" {
+   Resource "{1E97202F5040F656}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Turn0" {
+   Resource "{39D856562B9EB429}DZ/anims/anm/player/moves/spear/turns/p_2hd_spear_erc_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL180" {
+   Resource "{B697E12F1386AAC5}DZ/anims/anm/player/moves/spear/turns/p_2hd_spear_erc_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL90" {
+   Resource "{FCEDC8E27B5B40D4}DZ/anims/anm/player/moves/spear/turns/p_2hd_spear_erc_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnR180" {
+   Resource "{B738D285E4D6B9D5}DZ/anims/anm/player/moves/spear/turns/p_2hd_spear_erc_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnR90" {
+   Resource "{31593D7D20806391}DZ/anims/anm/player/moves/spear/turns/p_2hd_spear_erc_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkB" {
+   Resource "{85F972ABE6429DB0}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBL" {
+   Resource "{9474B9711AE5FF7E}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBR" {
+   Resource "{F8BA13A08EB39E1A}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkF" {
+   Resource "{922E7DB44B097768}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFL" {
+   Resource "{AB649A5A359215FB}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFR" {
+   Resource "{C7AA308BA1C4749F}DZ/anims/anm/player/moves/spear/p_2hd_spear_erc_walkFR_ras.anm"
+  }
+ }
+}

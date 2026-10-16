@@ -1,0 +1,13 @@
+{
+  "version": 85,
+  "checks": [
+    "Only NPC timing and mission polling changed versus v84 runtime/graph sources",
+    "Native death handler allowed before physics takeover",
+    "100ms/2s boundaries, skipped intervals, guards and repeated cycles tested using actual timing method compiled in C++ harness with mocked native calls",
+    "Female simulation re-enabled before five-second wake/stand",
+    "Male eight-second respawn retained",
+    "PBO source/header/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required",
+  "timing_precision": "Frame-quantized mission polling; native animation/physics takeover not verified in-engine"
+}
