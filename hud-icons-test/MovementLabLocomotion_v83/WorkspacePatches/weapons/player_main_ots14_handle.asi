@@ -1,0 +1,38 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{A4C439D8AC42EB41}DZ/anims/anm/player/reloads/OTS14/p_erc_chambering_OTS14_handle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{1B4C7DFCFDCB4827}DZ/anims/anm/player/reloads/OTS14/p_erc_jam_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{BFD61B01A7736F83}DZ/anims/anm/player/reloads/OTS14/p_erc_reload_action_OTS14_handle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{58FE1D1D35621236}DZ/anims/anm/player/reloads/OTS14/p_erc_reload_mag_noBullet_OTS14_handle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{0DC5574230BD4B6E}DZ/anims/anm/player/reloads/OTS14/p_erc_reload_noMag_bullet_OTS14_handle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{2E4D88A6465D4958}DZ/anims/anm/player/reloads/OTS14/p_pne_chambering_OTS14_handle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{53251D8E1F6CFD1B}DZ/anims/anm/player/reloads/OTS14/p_pne_jam_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{7AFD9888A23CD812}DZ/anims/anm/player/reloads/OTS14/p_pne_reload_action_OTS14_handle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{AD589B0378E9D776}DZ/anims/anm/player/reloads/OTS14/p_pne_reload_mag_noBullet_OTS14_handle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{F863D15C7D368E2E}DZ/anims/anm/player/reloads/OTS14/p_pne_reload_noMag_bullet_OTS14_handle_ras.anm"
+  }
+ }
+}

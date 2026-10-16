@@ -1,0 +1,13 @@
+{
+  "version": 83,
+  "checks": [
+    "Only range NPC module changed versus v82 runtime and animation files",
+    "Spawn path disables physics ragdoll",
+    "Male death and female unconscious-start enable physics ragdoll",
+    "Female recovery disables ragdoll before native wake/stand",
+    "Male one-second freeze and five-second respawn retained",
+    "PBO source/header/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ runtime required",
+  "limitation": "Transition from female unconscious physics ragdoll to native wake/standing animation remains unverified"
+}
