@@ -1,0 +1,11 @@
+{
+  "version": 88,
+  "checks": [
+    "Male death path enables immediate ragdoll and has no fall animation command",
+    "Male zero cutoff disables timer freeze; eight-second respawn unchanged",
+    "Female recovery/ragdoll timing source byte-identical",
+    "Other runtime scripts and animation graph files byte-identical",
+    "PBO headers/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required"
+}

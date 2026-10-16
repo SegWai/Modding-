@@ -1,0 +1,44 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.EatCro.In" {
+   Resource "{899BA0F3612BFB47}DZ/anims/anm/player/actions/consumption/p_cro_eat_candy_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatCro.Loop" {
+   Resource "{C3D5B5A33ED413B4}DZ/anims/anm/player/actions/consumption/p_cro_eat_candy_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatCro.Out" {
+   Resource "{399C539A9DFFE33E}DZ/anims/anm/player/actions/consumption/p_cro_eat_candy_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatErc.In" {
+   Resource "{CD236C396886B2FF}DZ/anims/anm/player/actions/consumption/p_erc_eat_candy_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatErc.Loop" {
+   Resource "{A076F3A39ED96A61}DZ/anims/anm/player/actions/consumption/p_erc_eat_candy_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatErc.Out" {
+   Resource "{1266FDC3D49896CE}DZ/anims/anm/player/actions/consumption/p_erc_eat_candy_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPne.In" {
+   Resource "{2D8B804F30D28814}DZ/anims/anm/player/actions/consumption/p_pne_eat_candy_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPne.Loop" {
+   Resource "{81754FDECF85AEF0}DZ/anims/anm/player/actions/consumption/p_pne_eat_candy_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPne.Out" {
+   Resource "{5A0F9DB1363F23F2}DZ/anims/anm/player/actions/consumption/p_pne_eat_candy_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPneBack.In" {
+   Resource "{BDBD9B6025236E35}DZ/anims/anm/player/actions/consumption/p_pne_onback_eat_candy_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPneBack.Loop" {
+   Resource "{AB95D46FFB32721A}DZ/anims/anm/player/actions/consumption/p_pne_onback_eat_candy_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPneBack.Out" {
+   Resource "{FCD32F9B2A0AF3D0}DZ/anims/anm/player/actions/consumption/p_pne_onback_eat_candy_out.anm"
+  }
+ }
+}

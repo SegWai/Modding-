@@ -1,0 +1,50 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingFast_Closed" {
+   Resource "{849A1F99048A7A0E}DZ/anims/anm/player/reloads/MauserRed9/p_erc_chambering_fast1_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingFast_Open" {
+   Resource "{85C235F2202AE3BD}DZ/anims/anm/player/reloads/MauserRed9/p_erc_chambering_fast_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop" {
+   Resource "{D67911A30F2E324E}DZ/anims/anm/player/reloads/MauserRed9/p_erc_chambering_loop_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{4497166080E8767B}DZ/anims/anm/player/reloads/MauserRed9/p_erc_chambering_loop1_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{F0C4A60219F74B4F}DZ/anims/anm/player/reloads/MauserRed9/p_erc_jam_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{5D1CD6F817944ADC}DZ/anims/anm/player/reloads/MauserRed9/p_erc_reload_action1_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{511842C22E3000B1}DZ/anims/anm/player/reloads/MauserRed9/p_erc_reload_action_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingFast_Closed" {
+   Resource "{8825F6E77BCB64A0}DZ/anims/anm/player/reloads/MauserRed9/p_pne_chambering_fast1_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingFast_Open" {
+   Resource "{40E9B67B2565542C}DZ/anims/anm/player/reloads/MauserRed9/p_pne_chambering_fast_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop" {
+   Resource "{1352922A0A6185DF}DZ/anims/anm/player/reloads/MauserRed9/p_pne_chambering_loop_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{4828FF1EFFA968D5}DZ/anims/anm/player/reloads/MauserRed9/p_pne_chambering_loop1_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{572F158CFA1D5AC8}DZ/anims/anm/player/reloads/MauserRed9/p_pne_jam_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{15919EB50167EC93}DZ/anims/anm/player/reloads/MauserRed9/p_pne_reload_action1_MauserRed9_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{39D4D6B503F1D9E4}DZ/anims/anm/player/reloads/MauserRed9/p_pne_reload_action_MauserRed9_ras.anm"
+  }
+ }
+}
