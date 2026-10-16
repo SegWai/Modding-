@@ -1,0 +1,16 @@
+{
+  "version": 86,
+  "checks": [
+    "Only NPC/mission changed versus v85 runtime and graph sources",
+    "Male 300ms ragdoll-on, 2s off and 8s respawn inspected; female timing retained",
+    "Actual timer method checked via compiled C++ mock harness: boundaries, long frames, guards, repeat cycle",
+    "Grenade refill has carried-count ceiling two, 250ms throttle and backpack-space retry",
+    "M67 native class exists in SDK",
+    "PBO headers/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required",
+  "limitations": [
+    "Unconscious animation command on a dead actor requires native acceptance testing",
+    "Grenade refill depends on available backpack space; dropping/transferring away also replenishes"
+  ]
+}

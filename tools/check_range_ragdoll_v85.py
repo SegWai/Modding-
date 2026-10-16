@@ -1,6 +1,6 @@
 from pathlib import Path
-import subprocess,tempfile
-p=Path(__file__).resolve().parents[1]/'hud-icons-test/MovementLabLocomotion_v85/StartGateSource/Scripts/4_World/MovementLabRangeNPC.c'
+import subprocess,tempfile,sys
+p=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).resolve().parents[1]/'hud-icons-test/MovementLabLocomotion_v85/StartGateSource/Scripts/4_World/MovementLabRangeNPC.c'
 s=p.read_text();method=s[s.index('    void MovementLabUpdateRangeRagdoll()'):s.index('    override void OnUnconsciousStart()')].replace('GetGame().','GetGame()->')
 harness=r'''
 #include <cassert>

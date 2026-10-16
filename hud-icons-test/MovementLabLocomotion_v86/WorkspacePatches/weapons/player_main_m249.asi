@@ -1,0 +1,32 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{44FEC24962C7779F}DZ/anims/anm/player/reloads/M249/p_erc_chambering1_m249_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Open" {
+   Resource "{452FC4A2E355E20E}DZ/anims/anm/player/reloads/M249/p_erc_chambering_m249_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{F189A88B700CC51D}DZ/anims/anm/player/reloads/M249/p_erc_reload_action_m249_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{AD82EB7C77226D63}DZ/anims/anm/player/reloads/M249/p_erc_reload_mag_noBullet_m249_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{44FEC24962C7779F}DZ/anims/anm/player/reloads/M249/p_erc_chambering1_m249_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Open" {
+   Resource "{452FC4A2E355E20E}DZ/anims/anm/player/reloads/M249/p_erc_chambering_m249_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{F189A88B700CC51D}DZ/anims/anm/player/reloads/M249/p_erc_reload_action_m249_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{AD82EB7C77226D63}DZ/anims/anm/player/reloads/M249/p_erc_reload_mag_noBullet_m249_ras.anm"
+  }
+ }
+}

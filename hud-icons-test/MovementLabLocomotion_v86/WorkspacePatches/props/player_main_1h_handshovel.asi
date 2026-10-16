@@ -1,0 +1,35 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{B81FFF44D015B873}DZ/anims/workspaces/player/player_main/weapons/player_main_1h_pipe.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.In" {
+   Resource "{357D2D0B06F731CA}DZ/anims/anm/player/actions/environment/p_1hd_cro_fieldShovel_digging_worms_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Loop" {
+   Resource "{F264CFA041D392D6}DZ/anims/anm/player/actions/environment/p_1hd_cro_fieldShovel_digging_worms_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Out" {
+   Resource "{58F96DF29FE2A1A3}DZ/anims/anm/player/actions/environment/p_1hd_cro_fieldShovel_digging_worms_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigCacheErc.Cancel" {
+   Resource "{F797600A8181AC1D}DZ/anims/anm/player/actions/horticulture/p_cro_handshovel_dig_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigCacheErc.InLoopOut" {
+   Resource "{F38A16814F1C8C9A}DZ/anims/anm/player/actions/horticulture/p_cro_handshovel_digcache.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigErc.Cancel" {
+   Resource "{F797600A8181AC1D}DZ/anims/anm/player/actions/horticulture/p_cro_handshovel_dig_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigErc.InLoopOut" {
+   Resource "{BA189A6BF5AF388C}DZ/anims/anm/player/actions/horticulture/p_cro_handshovel_dig.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigManipulateErc.Cancel" {
+   Resource "{F797600A8181AC1D}DZ/anims/anm/player/actions/horticulture/p_cro_handshovel_dig_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DigManipulateErc.InLoopOut" {
+   Resource "{BA189A6BF5AF388C}DZ/anims/anm/player/actions/horticulture/p_cro_handshovel_dig.anm"
+  }
+ }
+}
