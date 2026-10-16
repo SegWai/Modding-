@@ -1,0 +1,5 @@
+{
+  "checks": "Source scripts, animation workspace and mission byte-identical to v68; PBO and ZIP integrity",
+  "status": "Rollback of v69 regression; remaining v68 camera drift unresolved",
+  "native_compile_and_playtest": "not run here"
+}

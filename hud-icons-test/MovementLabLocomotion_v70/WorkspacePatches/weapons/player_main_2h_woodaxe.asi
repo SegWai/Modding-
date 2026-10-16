@@ -1,0 +1,44 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.SplittingFirewoodCro.In" {
+   Resource "{CBCCD7A18FE50378}DZ/anims/anm/player/actions/items/p_cro_splitting_firewood_2hd_axe_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SplittingFirewoodCro.Loop" {
+   Resource "{C220555E6222C30A}DZ/anims/anm/player/actions/items/p_cro_splitting_firewood_2hd_axe_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SplittingFirewoodCro.Out" {
+   Resource "{310FC0B6EABF9037}DZ/anims/anm/player/actions/items/p_cro_splitting_firewood_2hd_axe_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.HackTreeErc.Cancel" {
+   Resource "{54A0D58B5D70B042}DZ/anims/anm/player/actions/horticulture/p_2hd_woodaxe_erc_hack_tree_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.HackTreeErc.InLoopOut" {
+   Resource "{C0FAA282E880528E}DZ/anims/anm/player/actions/horticulture/p_2hd_woodaxe_erc_hack_tree.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.Block" {
+   Resource "{6E91EC97E9DA26D2}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_block_fireaxe_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.Sprint_StrikeR01" {
+   Resource "{8BA3A02A4D0096F1}DZ/anims/anm/player/attacks/2hd/Fireaxe/p_2hd_erc_attackR_charged_fireaxe.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL01" {
+   Resource "{D69D6451F36871B8}DZ/anims/anm/player/attacks/2hd/Fireaxe/p_2hd_erc_attackL_Light_fireaxe_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL02" {
+   Resource "{A7B7A62CC480DB80}DZ/anims/anm/player/attacks/2hd/Fireaxe/p_2hd_erc_attackL_Heavy_fireaxe_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR01" {
+   Resource "{FD86EDBECDE5835F}DZ/anims/anm/player/attacks/2hd/Fireaxe/p_2hd_erc_attackR_Light_fireaxe_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR03" {
+   Resource "{8CAC2FC3FA0D2967}DZ/anims/anm/player/attacks/2hd/Fireaxe/p_2hd_erc_attackR_Heavy_fireaxe_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light F Block" {
+   Resource "{7893C1777DA6C8EC}DZ/anims/anm/player/hits/Light/p_2h_fireaxe_erc_block_ras_hit_light_F.anm"
+  }
+ }
+}
