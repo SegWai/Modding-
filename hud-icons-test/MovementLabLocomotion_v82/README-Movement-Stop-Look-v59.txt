@@ -1,0 +1,5 @@
+v59 movement-to-stop look continuity
+Non-aiming pose selection now remains continuous throughout walking/jogging/sprinting and idle. Moving and idle look layers use the same native head-only source while the mode is eligible; the stationary-only pose activation threshold is removed. The ordinary/sprint look-layer crossover is bypassed only for this custom continuous pose. Native fallback sources remain for other modes.
+Automatic free-look and extended camera limits still apply only while stationary. Movement speed, braking, momentum and gait source animations are unchanged. The extra 10-degree head yaw eases on movement/stop entry/exit instead of resetting instantly. Aiming/actions restore native behavior.
+Eight unraised look-layer routes updated, including vanilla and custom crouch/standing wheel routes. Four native/head source blends added. Fresh extraction required so the launcher rebuilds the graph PBO.
+Source/graph checks and archive integrity passed; native compile and visual walk/jog/sprint-to-stop animation testing pending in DayZ.

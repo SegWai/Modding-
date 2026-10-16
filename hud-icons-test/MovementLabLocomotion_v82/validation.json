@@ -1,0 +1,13 @@
+{
+  "version": 82,
+  "checks": [
+    "Only NPC module/mission modified versus v81 runtime and graph sources",
+    "Native ragdoll, damage and simulation method signatures inspected",
+    "Male EEKilled schedules one-second ragdoll switch-off; five-second respawn retained",
+    "Female engine damage vetoed and calculated global health damage applied manually with lethal-hit knockout",
+    "No female per-frame health refill; full restore on recovery deadline",
+    "PBO headers/payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ runtime required",
+  "experimental_limitation": "Native PhysicsSetRagdoll(true) on a living actor may collapse it and prevent native standing/recovery. Persistent active ragdoll support is not established by available SDK. This is a test package, not verified living active ragdoll implementation."
+}

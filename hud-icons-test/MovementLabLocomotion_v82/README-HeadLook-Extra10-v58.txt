@@ -1,0 +1,4 @@
+v58 adds 10 degrees on each side
+Camera bounds extend the v57 native endpoints by 10 degrees (normally -160/+160 to -170/+170). A continuous graph rotation on the Head bone adds up to +/-10 degrees of model-space yaw, reaching its full additional rotation at each new camera stop. No torso, shoulder or arm bones are targeted. Extra head yaw ramps linearly with look angle, with no centre threshold or directional pose switch.
+The v57 continuous head-only pose and 0.25-second mode blend are retained. Extra yaw resets on movement/aiming exit. All other gameplay, sway, HUD and loadout unchanged.
+Fresh extraction needed for graph rebuild. Source/graph-node and archive checks passed. Native compilation, Head ymr axis response, visible endpoint angle and head/camera alignment require local DayZ verification.
