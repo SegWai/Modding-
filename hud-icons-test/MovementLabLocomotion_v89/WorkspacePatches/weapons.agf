@@ -1,0 +1,2456 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet Reload {
+   Nodes {
+    AnimSrcNodeBlendT ChamberingCross1Loop {
+     EditorPos 63 -1.5
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingCross1LoopErc"
+     Child1 "ChamberingCross1LoopPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceInLoopOut ChamberingCross1LoopErc {
+     EditorPos 61.5 -0.7
+     Source "WeaponOperations.ErcRas.ChamberingLoop1"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "IsCommand(CMD_Reload_Exit)"
+    }
+    AnimSrcNodeSourceInLoopOut ChamberingCross1LoopPne {
+     EditorPos 64.4 -0.7
+     Source "WeaponOperations.PneRas.ChamberingLoop1"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "IsCommand(CMD_Reload_Exit)"
+    }
+    AnimSrcNodeBlendT ChamberingCross2OpenFullLoop {
+     EditorPos 71.9 -1.6
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingCross2OpenFullLoopErc"
+     Child1 "ChamberingCross2OpenFullLoopPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceInLoopOut ChamberingCross2OpenFullLoopErc {
+     EditorPos 70.5 -0.8
+     Source "WeaponOperations.ErcRas.ChamberingLoop1"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "IsCommand(CMD_Reload_Exit)"
+    }
+    AnimSrcNodeSourceInLoopOut ChamberingCross2OpenFullLoopPne {
+     EditorPos 72.9 -0.2
+     Source "WeaponOperations.ErcRas.ChamberingLoop1"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "IsCommand(CMD_Reload_Exit)"
+    }
+    AnimSrcNodeStateMachine ChamberingCrossbowSM {
+     EditorPos 57.6 -5.1
+     states {
+      AnimSrcNodeState ChamberingCross0Closed {
+       EditorPos 57.5 -3.9
+       Child "Chambering_Closed"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==21"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingCross1Open {
+       EditorPos 60.7 -3.9
+       Child "Chambering_Open"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==22"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingCross2OpenFull {
+       EditorPos 68.6 -3.9
+       Child "Chambering_Open"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==23"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ChamberingCross2OpenFullLoop {
+       EditorPos 71.9 -3.9
+       Child "ChamberingCross2OpenFullLoop"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingCross1Loop {
+       EditorPos 63 -3.2
+       Child "ChamberingCross1Loop"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingCross1OpenEnd {
+       EditorPos 65.4 -3.9
+       Child "ReloadAction_Open"
+       StartCondition "IsEvent (\"BlendOut2\")"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE269807AC}" {
+       FromState "ChamberingCross0Closed"
+       ToState "ChamberingCross1Open"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.Chambering1\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269807BA}" {
+       FromState "ChamberingCross1Open"
+       ToState "ChamberingCross1Loop"
+       Duration "0.3"
+       StartTime "0.0"
+       Condition "RemainingTimeLess(0.01)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269807B3}" {
+       FromState "ChamberingCross2OpenFull"
+       ToState "ChamberingCross2OpenFullLoop"
+       Duration "0.3"
+       StartTime "0.0"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269807CA}" {
+       FromState "ChamberingCross1Open"
+       ToState "ChamberingCross1OpenEnd"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadBoltAction1\", \"BlendIn\")"
+       Condition "false"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ChamberingFastSM {
+     EditorPos 49.9 -5.1
+     states {
+      AnimSrcNodeState ChamberingFast_Open {
+       EditorPos 50.1 -3.9
+       Child "ChamberingFast_Open"
+       StartCondition "GetCommandI(CMD_Reload_ChamberingFast)==0"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ChamberingFast_Closed {
+       EditorPos 52.7 -3.9
+       Child "ChamberingFast_Closed"
+       StartCondition "GetCommandI(CMD_Reload_ChamberingFast)==1"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE269807E9}" {
+       FromState "ChamberingFast_Open"
+       ToState "ChamberingFast_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingFast1\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ChamberingLoopingSM {
+     EditorPos 45.2 -0.8
+     states {
+      AnimSrcNodeState ChamberingLoop_Closed_NoBullet {
+       EditorPos 53.4 1.2
+       Child "ChamberingLoop_Closed_NoBullet"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==10"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ChamberingLoop_Closed_Bullet {
+       EditorPos 57.3 1.2
+       Child "Loop_Closed_Bullet"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==12"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberLoop_Open_NoBullet {
+       EditorPos 43.6 1.3
+       Child "ChamberingLoop_Open_NoBullet"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==13"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ChamberLoop_Open_Bullet {
+       EditorPos 45.9 2.6
+       Child "Loop_Open_Bullet"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==14"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberShotgunNoBullet {
+       EditorPos 38.2 0.5
+       Child "Loop_Shotgun_Bullet"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==15"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ChamberShotgunBullet {
+       EditorPos 34.3 0.5
+       Child "Loop_Shotgun_Bullet"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==16"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ShotgunReloadAction {
+       EditorPos 40.3 1.5
+       Child "Shotgun_NoBullet"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Shotgun_ReloadAction_Closed {
+       EditorPos 43.6 0.3
+       Child "Shotgun_NoBullet"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==9"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ChamberLoop_Open_NoBullet_Finish {
+       EditorPos 49.5 1.2
+       Child "ChamberingLoop_Open_NoBullet"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE2698045E}" {
+       FromState "ChamberingLoop_Closed_NoBullet"
+       ToState "ChamberingLoop_Closed_Bullet"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingLoop_Closed_Bullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980454}" {
+       FromState "ChamberShotgunNoBullet"
+       ToState "ShotgunReloadAction"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingLoop_Closed_NoBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698046F}" {
+       FromState "Shotgun_ReloadAction_Closed"
+       ToState "ChamberLoop_Open_NoBullet"
+       Duration "0.2"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingLoop_Open_NoBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980466}" {
+       FromState "ChamberLoop_Open_NoBullet"
+       ToState "ChamberLoop_Open_Bullet"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingLoop_Open_Bullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn Linear
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698047F}" {
+       FromState "ChamberLoop_Open_NoBullet"
+       ToState "ChamberLoop_Open_NoBullet_Finish"
+       Duration "0.1"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingLoop_Open_NoBullet\", \"BlendIn2\")"
+       Condition "GetCommandI(CMD_Reload_Chambering)==11"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ChamberingOneSM {
+     EditorPos 21 -5.3
+     states {
+      AnimSrcNodeState Chambering_Open {
+       EditorPos 21.2 -4
+       Child "Chambering_Open"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==0"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Chambering_Closed {
+       EditorPos 24.1 -1.4
+       Child "Chambering_Closed"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==1"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Chambering_Closed_Uncocked {
+       EditorPos 27 -4
+       Child "Chambering_Closed_Uncocked"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==2"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE26980491}" {
+       FromState "Chambering_Open"
+       ToState "Chambering_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.Chambering_Closed\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269804A8}" {
+       FromState "Chambering_Closed_Uncocked"
+       ToState "Chambering_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.Chambering_Closed\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ChamberingOneUniqueSM {
+     EditorPos 31.5 -5.3
+     states {
+      AnimSrcNodeState Chambering_Open_Unique {
+       EditorPos 31.5 -4
+       Child "Chambering_Open"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==4"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Chambering_Closed_Unique {
+       EditorPos 34.6 -4
+       Child "Chambering_Closed"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==5"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ChamberingTwoSM {
+     EditorPos 38.5 -5.2
+     states {
+      AnimSrcNodeState ChamberingTwoInS {
+       EditorPos 38.9 -4
+       Child "ChamberingIn"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==6"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingTwoOutS {
+       EditorPos 41.8 -4
+       Child "ChamberingOut"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE269804E3}" {
+       FromState "ChamberingTwoInS"
+       ToState "ChamberingTwoOutS"
+       Duration "0.0"
+       StartTime "0.0"
+       Condition "GetCommandI(CMD_Reload_Chambering)==7 && IsEvent(\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeSource ClipEndAnim {
+     EditorPos 102.1 -0.1
+     Source "WeaponOperations.ReloadClipOut"
+     Looptype "No Loop"
+    }
+    AnimSrcNodePose ClipEndWaitPose {
+     EditorPos 99.7 -0.1
+     Source "WeaponOperations.ReloadClipPose"
+     Time "ActionProgressEnd"
+    }
+    AnimSrcNodeSource ClipInBulletAnim {
+     EditorPos 92.5 -0.7
+     Source "WeaponOperations.ReloadClipInNoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ClipInNoBulletAnim {
+     EditorPos 92.5 0
+     Source "WeaponOperations.ReloadClipInBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSourceSync ClipInsertAnim {
+     EditorPos 97.3 -0.1
+     Source "WeaponOperations.ReloadClipPose"
+     Looptype "No Loop"
+     SyncLine "Transitions"
+    }
+    AnimSrcNodePose ClipStartWaitPose {
+     EditorPos 94.9 -0.1
+     Source "WeaponOperations.ReloadClipPose"
+     Time "ActionProgress"
+    }
+    AnimSrcNodeStateMachine DoubleBarrelSTM {
+     EditorPos 75.4 1.4
+     states {
+      AnimSrcNodeState "NoBullet_BulletL+R" {
+       EditorPos 74 3.4
+       Child "ChamberingDBNoBulletL"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==18"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState NoBullet_BulletL {
+       EditorPos 71.5 3.4
+       Child "ChamberingIn"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==17"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Bullet_R {
+       EditorPos 78.9 3.4
+       Child "ChamberingDBBulletR"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==19"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Bullet_L {
+       EditorPos 81.4 3.4
+       Child "ChamberingDBBulletL"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==20"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState BulletR_DB {
+       EditorPos 76.2 5
+       Child "ChamberingDBNoBulletL+R"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Reload_BulletR {
+       EditorPos 78.9 5.1
+       Child "ChamberingDBNoBulletR"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Reload_BulletL {
+       EditorPos 81.4 5.1
+       Child "ChamberingDBNoBulletL"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Cancel {
+       EditorPos 73.9 5
+       Child "ChamberingDBCancel"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState "BulletL+R_Derringer" {
+       EditorPos 76.4 3.4
+       Child "ChamberingIn"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)==24"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE2698059C}" {
+       FromState "NoBullet_BulletL+R"
+       ToState "BulletR_DB"
+       Duration "0.25"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingOut\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980597}" {
+       FromState "Bullet_R"
+       ToState "Reload_BulletR"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.Chambering_NoBulletR\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269805AE}" {
+       FromState "Bullet_L"
+       ToState "Reload_BulletL"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.Chambering_NoBulletL\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269805A8}" {
+       FromState "NoBullet_BulletL+R"
+       ToState "Cancel"
+       Duration "0.2"
+       StartTime ""
+       Condition "GetCommandI(CMD_Reload_Chambering)== -1"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269805A3}" {
+       FromState "BulletL+R_Derringer"
+       ToState "BulletR_DB"
+       Duration "0.25"
+       StartTime "GetEventTime(\"WeaponOperations.ChamberingOut\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269805BD}" {
+       FromState "BulletL+R_Derringer"
+       ToState "Cancel"
+       Duration "0.2"
+       StartTime ""
+       Condition "GetCommandI(CMD_Reload_Chambering)== -1"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect ErcRas {
+     EditorPos 4.3 -11.7
+     Child "ReloadStanceChange"
+     Group "WeaponOperations"
+     Column "ErcRas"
+    }
+    AnimSrcNodeBlendT Loop_Closed_Bullet {
+     EditorPos 57.3 3.8
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "Loop_Closed_BulletErc"
+     Child1 "Loop_Closed_BulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceInLoopOut Loop_Closed_BulletErc {
+     EditorPos 56.1 4.7
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Closed_Bullet"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "GetCommandI(CMD_Reload_Chambering)==11"
+    }
+    AnimSrcNodeSourceInLoopOut Loop_Closed_BulletPne {
+     EditorPos 58.5 4.7
+     Source "WeaponOperations.PneRas.ChamberingLoop_Closed_Bullet"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "GetCommandI(CMD_Reload_Chambering)==11"
+    }
+    AnimSrcNodeBlendT Loop_Open_Bullet {
+     EditorPos 49.5 4.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "Loop_Open_BulletErc"
+     Child1 "Loop_Open_BulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceInLoopOut Loop_Open_BulletErc {
+     EditorPos 48.4 5
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Open_Bullet"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "GetCommandI(CMD_Reload_Chambering)==11"
+    }
+    AnimSrcNodeSourceInLoopOut Loop_Open_BulletPne {
+     EditorPos 50.8 5
+     Source "WeaponOperations.PneRas.ChamberingLoop_Open_Bullet"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "GetCommandI(CMD_Reload_Chambering)==11"
+    }
+    AnimSrcNodeBlendT Loop_Shotgun_Bullet {
+     EditorPos 34.5 4.4
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "Loop_Shotgun_BulletErc"
+     Child1 "Loop_Shotgun_BulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceInLoopOut Loop_Shotgun_BulletErc {
+     EditorPos 33 5.1
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Closed_Bullet"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "GetCommandI(CMD_Reload_Chambering)==11"
+    }
+    AnimSrcNodeSourceInLoopOut Loop_Shotgun_BulletPne {
+     EditorPos 35.8 5.1
+     Source "WeaponOperations.PneRas.ChamberingLoop_Closed_Bullet"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "GetCommandI(CMD_Reload_Chambering)==11"
+    }
+    AnimSrcNodeStateMachine Mag_Detach_STM {
+     EditorPos -3.2 -5.1
+     states {
+      AnimSrcNodeState RifleMag_Detach_Start {
+       EditorPos -3 -3.9
+       Child "ReloadMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==17"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState RifleMag_Detach_End {
+       EditorPos -0.1 -3.9
+       Child "ReloadMagazineDetach"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState PistolMag_Detach {
+       EditorPos 3 -3.9
+       Child "ReloadMagazineDetach"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==16"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE26980257}" {
+       FromState "RifleMag_Detach_Start"
+       ToState "RifleMag_Detach_End"
+       Duration "0.3"
+       StartTime "0.0"
+       Condition "IsEvent (\"BlendOut2\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect PneRas {
+     EditorPos 8.6 -11.7
+     Child "ReloadStanceChange"
+     Group "WeaponOperations"
+     Column "PneRas"
+    }
+    AnimSrcNodeStateMachine ReloadBoltAction_SM {
+     EditorPos 11.4 -5.4
+     states {
+      AnimSrcNodeState ReloadAction_Open {
+       EditorPos 9 -4.1
+       Child "ReloadAction_Open"
+       StartCondition "GetCommandI(CMD_Reload_BoltAction)==0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadAction_Closed {
+       EditorPos 11.4 -4.1
+       Child "ReloadAction_Closed"
+       StartCondition "GetCommandI(CMD_Reload_BoltAction)==1"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadActionSpecial {
+       EditorPos 14 -4.1
+       Child "ReloadBoltAction2"
+       StartCondition "GetCommandI(CMD_Reload_BoltAction)==2"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadAction_Closed_uncocked {
+       EditorPos 16.7 -4.1
+       Child "ReloadAction_Closed_Uncocked"
+       StartCondition "GetCommandI(CMD_Reload_BoltAction)==3"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ReloadMagazinePistol {
+     EditorPos -22.8 -5.2
+     states {
+      AnimSrcNodeState MagNoBullet_Close_uncocked {
+       EditorPos -12.7 -3.8
+       Child "ReloadMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==9"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState NoMagNoBullet_Close {
+       EditorPos -26.3 -3.8
+       Child "ReloadNoMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==13"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState NoMagNoBullet_Open {
+       EditorPos -18.9 -3.8
+       Child "ReloadNoMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==14"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagBullet_Close {
+       EditorPos -9.7 -3.8
+       Child "ReloadMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==10"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadActionPst_Open {
+       EditorPos -18.9 1.4
+       Child "ReloadAction_Open"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadActionPst_Closed {
+       EditorPos -26.3 1.4
+       Child "ReloadAction_Closed"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState NoMagBullet_Close {
+       EditorPos -22.8 -3.8
+       Child "ReloadNoMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==11"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagNoBullet_Open {
+       EditorPos -7.2 -3.8
+       Child "ReloadMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==15"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagNoBullet_ {
+       EditorPos -26.3 -1.4
+       Child "ReloadMagBullet"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagBullet_ {
+       EditorPos -22.8 -1.4
+       Child "ReloadMagBullet"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState MagOpen_ {
+       EditorPos -18.9 -1.4
+       Child "ReloadMagBullet"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ReloadActionPst_Closed_Uncocked {
+       EditorPos -22.9 1.4
+       Child "ReloadAction_Closed_Uncocked"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState NoMagNoBullet_Close_uncocked {
+       EditorPos -30 -3.8
+       Child "ReloadNoMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==8"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagNoBullet_0 {
+       EditorPos -30 -1.4
+       Child "ReloadMagBullet"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagNoBullet_Close {
+       EditorPos -15.7 -3.8
+       Child "ReloadMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==12"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagNoBullet_1 {
+       EditorPos -15.7 -1.4
+       Child "ReloadMagBullet"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE26980311}" {
+       FromState "MagNoBullet_Open"
+       ToState "ReloadActionPst_Open"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Open\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980328}" {
+       FromState "MagNoBullet_Close_uncocked"
+       ToState "ReloadActionPst_Closed_Uncocked"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Closed_Uncocked\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980323}" {
+       FromState "MagNoBullet_"
+       ToState "ReloadActionPst_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Closed\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698033D}" {
+       FromState "NoMagNoBullet_Close"
+       ToState "MagNoBullet_"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980333}" {
+       FromState "NoMagBullet_Close"
+       ToState "MagBullet_"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698034A}" {
+       FromState "NoMagNoBullet_Open"
+       ToState "MagOpen_"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980340}" {
+       FromState "MagOpen_"
+       ToState "ReloadActionPst_Open"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Open\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698035D}" {
+       FromState "NoMagNoBullet_Close_uncocked"
+       ToState "MagNoBullet_0"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980354}" {
+       FromState "MagNoBullet_0"
+       ToState "ReloadActionPst_Closed_Uncocked"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Closed_Uncocked\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698036E}" {
+       FromState "MagNoBullet_Close"
+       ToState "MagNoBullet_1"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut2\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980368}" {
+       FromState "MagNoBullet_1"
+       ToState "ReloadActionPst_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Closed\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ReloadMagazineRifle {
+     EditorPos 6.4 5.2
+     states {
+      AnimSrcNodeState MagBullet_Rifle {
+       EditorPos 5.7 6.6
+       Child "ReloadMagNoBullet"
+       StartCondition "IsCommand (CMD_Reload_Magazine)  && GetCommandI(CMD_Reload_Magazine)==0"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState NoMagBullet_Rifle {
+       EditorPos 14.4 6.5
+       Child "ReloadNoMagBullet"
+       StartCondition "IsCommand (CMD_Reload_Magazine)  && GetCommandI(CMD_Reload_Magazine)==1"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState MagNoBullet_Rifle_Close {
+       EditorPos -3.6 6.6
+       Child "ReloadMagNoBullet"
+       StartCondition "IsCommand (CMD_Reload_Magazine)  && GetCommandI(CMD_Reload_Magazine)==2"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState NoMagNoBullet_Rifle_Close {
+       EditorPos 8.2 6.6
+       Child "ReloadNoMagBullet"
+       StartCondition "IsCommand (CMD_Reload_Magazine)  && GetCommandI(CMD_Reload_Magazine)==3"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ReloadActionRifle {
+       EditorPos 5.8 11.9
+       Child "ReloadAction_Open"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Bullet_Rifle {
+       EditorPos 5.7 9.8
+       Child "ReloadNoMagBullet"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Bullet_Rifle_Closed {
+       EditorPos -3.6 9.7
+       Child "ReloadNoMagBullet"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagNoBullet_Rifle_Open {
+       EditorPos 1.2 8.5
+       Child "ReloadMagNoBullet"
+       StartCondition "IsCommand (CMD_Reload_Magazine)  && GetCommandI(CMD_Reload_Magazine)==4"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState ReloadActionRifle_Closed {
+       EditorPos -3.6 11.8
+       Child "ReloadAction_Closed"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Bullet_Rifle_Open {
+       EditorPos 1.2 10.3
+       Child "ReloadNoMagBullet"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState NoMagNoBullet_Rifle_Open {
+       EditorPos 11.3 6.6
+       Child "ReloadNoMagBullet"
+       StartCondition "IsCommand (CMD_Reload_Magazine)  && GetCommandI(CMD_Reload_Magazine)==5"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE269803DE}" {
+       FromState "MagBullet_Rifle"
+       ToState "Bullet_Rifle"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadNoMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269803D6}" {
+       FromState "MagNoBullet_Rifle_Close"
+       ToState "Bullet_Rifle_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadNoMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269803D1}" {
+       FromState "Bullet_Rifle_Closed"
+       ToState "ReloadActionRifle_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Closed\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269803E8}" {
+       FromState "NoMagNoBullet_Rifle_Close"
+       ToState "ReloadActionRifle_Closed"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Closed\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269803E0}" {
+       FromState "Bullet_Rifle_Open"
+       ToState "ReloadActionRifle"
+       Duration "0.45"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Open\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269803FA}" {
+       FromState "NoMagNoBullet_Rifle_Open"
+       ToState "ReloadActionRifle"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadAction_Open\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698000D}" {
+       FromState "MagNoBullet_Rifle_Open"
+       ToState "Bullet_Rifle_Open"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadNoMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ReloadMagazineSRifle {
+     EditorPos -40.5 -5.4
+     states {
+      AnimSrcNodeState BulletMag_SRifle {
+       EditorPos -48.1 -2
+       Child "ReloadMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==20"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState NoMagBullet_SRifle {
+       EditorPos -48.1 -3.9
+       Child "ReloadNoMagBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==21"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState MagNoBullet_SRifle {
+       EditorPos -42.7 -3.9
+       Child "ReloadMagNoBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==22"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState NoMagNoBullet_SRifle {
+       EditorPos -35.3 -3.9
+       Child "ReloadNoMagNoBullet"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)==23"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState BulletMag_SRifle_main {
+       EditorPos -39.3 -2.5
+       Child "ReloadMagBullet"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState FinalBoltAction {
+       EditorPos -39.3 -0.9
+       Child "ReloadBoltAction2"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE2698004A}" {
+       FromState "NoMagBullet_SRifle"
+       ToState "BulletMag_SRifle"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980045}" {
+       FromState "MagNoBullet_SRifle"
+       ToState "BulletMag_SRifle_main"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698005F}" {
+       FromState "NoMagNoBullet_SRifle"
+       ToState "BulletMag_SRifle_main"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadMagBullet\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980059}" {
+       FromState "BulletMag_SRifle_main"
+       ToState "FinalBoltAction"
+       Duration "0.3"
+       StartTime "GetEventTime(\"WeaponOperations.ReloadBoltAction2\", \"BlendIn\")"
+       Condition "IsEvent (\"BlendOut\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ReloadStanceChange {
+     Tags {
+      "TagWeaponReload"
+     }
+     EditorPos 6.2 -9.3
+     states {
+      AnimSrcNodeState ReloadBoltAction_S {
+       EditorPos 11.4 -7.4
+       Child "ReloadBoltAction_SM"
+       StartCondition "GetCommandI(CMD_Reload_BoltAction)>=0 && GetCommandI(CMD_Reload_BoltAction)<=3"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingOne {
+       EditorPos 21 -7.2
+       Child "ChamberingOneSM"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)>=0 && GetCommandI(CMD_Reload_Chambering)<=3"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingLoop {
+       EditorPos 45.3 -7.3
+       Child "ChamberingLoopingSM"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)>=9 && GetCommandI(CMD_Reload_Chambering)<=16"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingTwo {
+       EditorPos 38.5 -7.3
+       Child "ChamberingTwoSM"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)>=6 && GetCommandI(CMD_Reload_Chambering)<=7"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingFastS {
+       EditorPos 49.9 -7.2
+       Child "ChamberingFastSM"
+       StartCondition "IsCommand(CMD_Reload_ChamberingFast)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadMagazineSRifle {
+       EditorPos -40.5 -7.7
+       Child "ReloadMagazineSRifle"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)>=20 && GetCommandI(CMD_Reload_Magazine)<=23"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadMagazinePistol {
+       EditorPos -22.7 -7.7
+       Child "ReloadMagazinePistol"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)>=8 && GetCommandI(CMD_Reload_Magazine)<=15"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadMagazineRifle {
+       EditorPos 6.4 -7.4
+       Child "ReloadMagazineRifle"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)>=0 && GetCommandI(CMD_Reload_Magazine)<=5"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingOneUnique {
+       EditorPos 31.5 -7.3
+       Child "ChamberingOneUniqueSM"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)>=4 && GetCommandI(CMD_Reload_Chambering)<=5"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingCrossbow {
+       EditorPos 57.6 -7.2
+       Child "ChamberingCrossbowSM"
+       StartCondition "GetCommandI(CMD_Reload_Chambering)>=21 && GetCommandI(CMD_Reload_Chambering)<=23"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState WeaponJamming {
+       EditorPos 79.7 -6.9
+       Child "WeaponJamSTM"
+       StartCondition "GetCommandI(CMD_Weapon_Jam) ==  1"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState Mag_Detach {
+       EditorPos -3.1 -7.3
+       Child "Mag_Detach_STM"
+       StartCondition "GetCommandI(CMD_Reload_Magazine)>=16 && GetCommandI(CMD_Reload_Magazine)<=17"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState ChamberingDoubleBarrel {
+       EditorPos 75.6 -7
+       Child "DoubleBarrelSTM"
+       StartCondition "(GetCommandI(CMD_Reload_Chambering)>=17 && GetCommandI(CMD_Reload_Chambering)<=20) || GetCommandI(CMD_Reload_Chambering)==24"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState WeaponCheckJam {
+       EditorPos 87.3 -6.9
+       Child "WeaponCheckJamT"
+       StartCondition "GetCommandI(CMD_Weapon_Jam) ==  2"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState WeaponStripperClip {
+       EditorPos 92.3 -7
+       Child "StripperClipSTM"
+       StartCondition "IsCommand(CMD_Reload_Clip)"
+       TimeStorage Inherit
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeStateMachine ReloadStanceChanges {
+     Tags {
+      "TagWeaponReload"
+     }
+     EditorPos 4 -16.7
+     states {
+      AnimSrcNodeState ReloadErc {
+       EditorPos 4.3 -15.2
+       Child "ErcRas"
+       StartCondition "Stance == 0 || Stance ==1"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState ReloadPne {
+       EditorPos 8.6 -15.2
+       Child "PneRas"
+       StartCondition "Stance == 2"
+       TimeStorage Inherit
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE26980109}" {
+       FromState "ReloadErc"
+       ToState "ReloadPne"
+       Duration "0.3"
+       StartTime "GetLowerTime()"
+       Condition "Stance == 2"
+       BlendFn S2
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980100}" {
+       FromState "ReloadPne"
+       ToState "ReloadErc"
+       Duration "0.3"
+       StartTime "GetLowerTime()"
+       Condition "Stance == 0 || Stance ==1"
+       BlendFn S2
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeBlendT Shotgun_NoBullet {
+     EditorPos 40.5 4.4
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "Shotgun_NoBulletErc"
+     Child1 "Shotgun_NoBulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource Shotgun_NoBulletErc {
+     EditorPos 38.9 5.1
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource Shotgun_NoBulletPne {
+     EditorPos 42 5.1
+     Source "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeStateMachine StripperClipSTM {
+     EditorPos 92.3 -4.9
+     states {
+      AnimSrcNodeState InBullet {
+       EditorPos 92.5 -3.6
+       Child "ClipInBulletAnim"
+       StartCondition "GetCommandI(CMD_Reload_Clip) == 1"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState StartWait {
+       EditorPos 94.9 -2.9
+       Child "ClipStartWaitPose"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Insert {
+       Tags {
+        "TagWeaponReloadBulletSwitch"
+       }
+       EditorPos 97.3 -2.9
+       Child "ClipInsertAnim"
+       StartCondition ""
+       TimeStorage "Normalized Time"
+       IsExit 0
+      }
+      AnimSrcNodeState EndWait {
+       EditorPos 99.7 -2.9
+       Child "ClipEndWaitPose"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState End {
+       EditorPos 102.1 -2.9
+       Child "ClipEndAnim"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState InNoBullet {
+       EditorPos 92.5 -2.9
+       Child "ClipInNoBulletAnim"
+       StartCondition "GetCommandI(CMD_Reload_Clip) == 0"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState EndWaitAnim {
+       EditorPos 99.7 -3.6
+       Child "ClipEndWaitPose"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE26980180}" {
+       FromState "InBullet"
+       ToState "StartWait"
+       Duration "0.4"
+       StartTime ""
+       Condition "RemainingTimeLess(0.4)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2698019A}" {
+       FromState "StartWait"
+       ToState "Insert"
+       Duration "0.1"
+       StartTime "ActionProgress"
+       Condition "GetLowerRTime() > 0.35"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980197}" {
+       FromState "EndWait"
+       ToState "End"
+       Duration "0.4"
+       StartTime ""
+       Condition "GetLowerRTime() > 0.1"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE26980191}" {
+       FromState "InNoBullet"
+       ToState "StartWait"
+       Duration "0.4"
+       StartTime ""
+       Condition "RemainingTimeLess(0.4)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269801AB}" {
+       FromState "Insert"
+       ToState "EndWaitAnim"
+       Duration "0.0"
+       StartTime ""
+       Condition "GetLowerTime() >= ActionProgressEnd-0.05 && ActionProgressEnd == 1.0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269801A2}" {
+       FromState "Insert"
+       ToState "EndWait"
+       Duration "0.0"
+       StartTime ""
+       Condition "GetLowerTime() >= ActionProgressEnd-0.05"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269801BF}" {
+       FromState "EndWaitAnim"
+       ToState "End"
+       Duration "0.4"
+       StartTime ""
+       Condition "GetLowerRTime() > 0.1"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeSource WeaponCheckJamErc {
+     EditorPos 86.2 -3.8
+     Source "WeaponOperations.ErcRas.Jamming Check"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource WeaponCheckJamPne {
+     EditorPos 88.4 -3.8
+     Source "WeaponOperations.PneRas.Jamming Check"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT WeaponCheckJamT {
+     EditorPos 87.3 -4.7
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 2 && AimX >= -35 && AimX <= 35"
+     Child0 "WeaponCheckJamErc"
+     Child1 "WeaponCheckJamPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlendT WeaponJamAnim {
+     EditorPos 79.6 -0.5
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "WeaponJamAnimErc"
+     Child1 "WeaponJamAnimPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSourceInLoopOut WeaponJamAnimErc {
+     EditorPos 78.2 0.3
+     Source "WeaponOperations.ErcRas.Jamming"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "false"
+    }
+    AnimSrcNodeSourceInLoopOut WeaponJamAnimPne {
+     EditorPos 80.8 0.3
+     Source "WeaponOperations.PneRas.Jamming"
+     InEvent "LoopStart"
+     OutEvent "LoopEnd"
+     EndExpression "false"
+    }
+    AnimSrcNodeStateMachine WeaponJamSTM {
+     EditorPos 79.7 -5.1
+     states {
+      AnimSrcNodeState InLoop {
+       EditorPos 79.6 -3.8
+       Child "WeaponJamAnim"
+       StartCondition "true"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Out {
+       EditorPos 82.7 -3.8
+       Child "Jamming"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState Cancel {
+       EditorPos 82.7 -2.4
+       Child "JammingCancel"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE2699FE19}" {
+       FromState "InLoop"
+       ToState "Out"
+       Duration "0.2"
+       StartTime "GetEventTime(\"WeaponOperations.Jamming\", \"LoopEnd\")-0.2"
+       Condition "GetCommandI(CMD_Weapon_Jam) ==  0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699FE11}" {
+       FromState "InLoop"
+       ToState "Cancel"
+       Duration "0.2"
+       StartTime ""
+       Condition "GetCommandI(CMD_Weapon_Jam) ==  -1"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+   }
+  }
+  AnimSrcGraphSheet ReloadNodes {
+   Nodes {
+    AnimSrcNodeBlendT ChamberingDBBulletL {
+     EditorPos 23.9 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingDBBulletL_Erc"
+     Child1 "ChamberingDBBulletL_Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingDBBulletL_Erc {
+     EditorPos 23.9 -8.5
+     Source "WeaponOperations.ErcRas.ChamberingBulletL"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingDBBulletL_Pne {
+     EditorPos 23.9 -7.9
+     Source "WeaponOperations.PneRas.ChamberingBulletL"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingDBBulletR {
+     EditorPos 21.1 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingDBBulletR_Erc"
+     Child1 "ChamberingDBBulletR_Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingDBBulletR_Erc {
+     EditorPos 21.1 -8.5
+     Source "WeaponOperations.ErcRas.ChamberingBulletR"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingDBBulletR_Pne {
+     EditorPos 21.1 -7.9
+     Source "WeaponOperations.PneRas.ChamberingBulletR"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingDBCancel {
+     EditorPos 27.3 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingDBCancel_Erc"
+     Child1 "ChamberingDBCancel_Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingDBCancel_Erc {
+     EditorPos 27.3 -8.5
+     Source "WeaponOperations.ErcRas.ChamberingCancel"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingDBCancel_Pne {
+     EditorPos 27.3 -7.9
+     Source "WeaponOperations.PneRas.ChamberingCancel"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingDBNoBulletL {
+     EditorPos 14.4 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingDBNoBulletL_Erc"
+     Child1 "ChamberingDBNoBulletL_Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlendT "ChamberingDBNoBulletL+R" {
+     EditorPos 17.6 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingDBNoBulletL+R_Erc"
+     Child1 "ChamberingDBNoBulletL+R_Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource "ChamberingDBNoBulletL+R_Erc" {
+     EditorPos 17.6 -8.5
+     Source "WeaponOperations.ErcRas.ChamberingOut"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource "ChamberingDBNoBulletL+R_Pne" {
+     EditorPos 17.6 -7.9
+     Source "WeaponOperations.PneRas.ChamberingOut"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingDBNoBulletL_Erc {
+     EditorPos 14.5 -8.5
+     Source "WeaponOperations.ErcRas.Chambering_NoBulletL"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingDBNoBulletL_Pne {
+     EditorPos 14.5 -7.9
+     Source "WeaponOperations.PneRas.Chambering_NoBulletL"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingDBNoBulletR {
+     EditorPos 11.3 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingDBNoBulletR_Erc"
+     Child1 "ChamberingDBNoBulletR_Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingDBNoBulletR_Erc {
+     EditorPos 11.3 -8.5
+     Source "WeaponOperations.ErcRas.Chambering_NoBulletR"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingDBNoBulletR_Pne {
+     EditorPos 11.3 -7.9
+     Source "WeaponOperations.PneRas.Chambering_NoBulletR"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingFast_Closed {
+     EditorPos 4.4 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingFast_ClosedErc"
+     Child1 "ChamberingFast_ClosedPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingFast_ClosedErc {
+     EditorPos 4.4 -8.5
+     Source "WeaponOperations.ErcRas.ChamberingFast_Closed"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingFast_ClosedPne {
+     EditorPos 4.4 -7.9
+     Source "WeaponOperations.PneRas.ChamberingFast_Closed"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingFast_Open {
+     EditorPos 1.4 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingFast_OpenErc"
+     Child1 "ChamberingFast_OpenPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingFast_OpenErc {
+     EditorPos 1.4 -8.5
+     Source "WeaponOperations.ErcRas.ChamberingFast_Open"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingFast_OpenPne {
+     EditorPos 1.4 -7.9
+     Source "WeaponOperations.PneRas.ChamberingFast_Open"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingIn {
+     EditorPos -1.6 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingInErc"
+     Child1 "ChamberingInPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingInErc {
+     EditorPos -1.6 -8.5
+     Source "WeaponOperations.ErcRas.ChamberingIn"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingInPne {
+     EditorPos -1.6 -7.9
+     Source "WeaponOperations.PneRas.ChamberingIn"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingLook {
+     EditorPos -4.7 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingLookErc"
+     Child1 "ChamberingLookPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingLookErc {
+     EditorPos -4.7 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingLook"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLookPne {
+     EditorPos -4.7 -7.8
+     Source "WeaponOperations.PneRas.ChamberingLook"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingLoop {
+     EditorPos -7.8 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingLoopErc"
+     Child1 "ChamberingLoopPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlendT ChamberingLoop1 {
+     EditorPos -11.1 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingLoop1Erc"
+     Child1 "ChamberingLoop1Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingLoop1Erc {
+     EditorPos -11.1 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingLoop1"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLoop1Pne {
+     EditorPos -11.1 -7.8
+     Source "WeaponOperations.PneRas.ChamberingLoop1"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLoopErc {
+     EditorPos -7.8 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingLoop"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLoopPne {
+     EditorPos -7.8 -7.8
+     Source "WeaponOperations.PneRas.ChamberingLoop"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingLoop_Closed_Bullet {
+     EditorPos -14.9 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingLoop_Closed_BulletErc"
+     Child1 "ChamberingLoop_Closed_BulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingLoop_Closed_BulletErc {
+     EditorPos -14.9 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Closed_Bullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLoop_Closed_BulletPne {
+     EditorPos -14.9 -7.8
+     Source "WeaponOperations.PneRas.ChamberingLoop_Closed_Bullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingLoop_Closed_NoBullet {
+     EditorPos -18.9 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingLoop_Closed_NoBulletErc"
+     Child1 "ChamberingLoop_Closed_NoBulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingLoop_Closed_NoBulletErc {
+     EditorPos -18.9 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLoop_Closed_NoBulletPne {
+     EditorPos -18.9 -7.8
+     Source "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingLoop_Open_Bullet {
+     EditorPos -22.8 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingLoop_Open_BulletErc"
+     Child1 "ChamberingLoop_Open_BulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingLoop_Open_BulletErc {
+     EditorPos -22.7 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Open_Bullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLoop_Open_BulletPne {
+     EditorPos -22.7 -7.8
+     Source "WeaponOperations.PneRas.ChamberingLoop_Open_Bullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingLoop_Open_NoBullet {
+     EditorPos -26.7 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingLoop_Open_NoBulletErc"
+     Child1 "ChamberingLoop_Open_NoBulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingLoop_Open_NoBulletErc {
+     EditorPos -26.7 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingLoop_Open_NoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingLoop_Open_NoBulletPne {
+     EditorPos -26.7 -7.8
+     Source "WeaponOperations.PneRas.ChamberingLoop_Open_NoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ChamberingOut {
+     EditorPos -29.4 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ChamberingOutErc"
+     Child1 "ChamberingOutPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ChamberingOutErc {
+     EditorPos -29.4 -8.4
+     Source "WeaponOperations.ErcRas.ChamberingOut"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ChamberingOutPne {
+     EditorPos -29.4 -7.8
+     Source "WeaponOperations.PneRas.ChamberingOut"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT Chambering_Closed {
+     EditorPos -32.3 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "Chambering_ClosedErc"
+     Child1 "Chambering_ClosedPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource Chambering_ClosedErc {
+     EditorPos -32.3 -8.4
+     Source "WeaponOperations.ErcRas.Chambering_Closed"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource Chambering_ClosedPne {
+     EditorPos -32.3 -7.8
+     Source "WeaponOperations.PneRas.Chambering_Closed"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT Chambering_Closed_Uncocked {
+     EditorPos -36 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "Chambering_Closed_UncockedErc"
+     Child1 "Chambering_Closed_UncockedPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource Chambering_Closed_UncockedErc {
+     EditorPos -36 -8.4
+     Source "WeaponOperations.ErcRas.Chambering_Closed_Uncocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource Chambering_Closed_UncockedPne {
+     EditorPos -36 -7.8
+     Source "WeaponOperations.PneRas.Chambering_Closed_Uncocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT Chambering_Open {
+     EditorPos -38.8 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "Chambering_OpenErc"
+     Child1 "Chambering_OpenPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource Chambering_OpenErc {
+     EditorPos -38.8 -8.4
+     Source "WeaponOperations.ErcRas.Chambering_Open"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource Chambering_OpenPne {
+     EditorPos -38.8 -7.8
+     Source "WeaponOperations.PneRas.Chambering_Open"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT Fire {
+     EditorPos -41.5 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 2 && AimX >= -35 && AimX <= 35"
+     Child0 "FireErc"
+     Child1 "FirePne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlendT FireCocked {
+     EditorPos -44.3 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 2 && AimX >= -35 && AimX <= 35"
+     Child0 "FireCockedErc"
+     Child1 "FireCockedPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource FireCockedErc {
+     EditorPos -44.3 -8.4
+     Source "WeaponOperations.ErcRas.FireCocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireCockedPne {
+     EditorPos -44.3 -7.8
+     Source "WeaponOperations.PneRas.FireCocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT FireEmptyAutomatic {
+     EditorPos -47.3 -9.1
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 2 && AimX >= -35 && AimX <= 35"
+     Child0 "FireEmptyAutomaticErc"
+     Child1 "FireEmptyAutomaticPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource FireEmptyAutomaticErc {
+     EditorPos -47.3 -8.4
+     Source "WeaponOperations.ErcRas.FireEmptyAutomatic"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireEmptyAutomaticPne {
+     EditorPos -47.3 -7.8
+     Source "WeaponOperations.PneRas.FireEmptyAutomatic"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireErc {
+     EditorPos -41.5 -8.4
+     Source "WeaponOperations.ErcRas.Fire"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT FireJam {
+     EditorPos -50 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 2 && AimX >= -35 && AimX <= 35"
+     Child0 "FireJamErc"
+     Child1 "FireJamPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource FireJamErc {
+     EditorPos -50 -8.5
+     Source "WeaponOperations.ErcRas.FireJam"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireJamPne {
+     EditorPos -50 -7.9
+     Source "WeaponOperations.PneRas.FireJam"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT FireLast {
+     EditorPos -53 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 2 && AimX >= -35 && AimX <= 35"
+     Child0 "FireLastErc"
+     Child1 "FireLastPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource FireLastErc {
+     EditorPos -53 -8.5
+     Source "WeaponOperations.ErcRas.FireLast"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireLastPne {
+     EditorPos -53 -7.9
+     Source "WeaponOperations.PneRas.FireLast"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FirePne {
+     EditorPos -41.5 -7.8
+     Source "WeaponOperations.PneRas.Fire"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT FireUncocked {
+     EditorPos -55.7 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 2 && AimX >= -35 && AimX <= 35"
+     Child0 "FireUncockedErc"
+     Child1 "FireUncockedPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource FireUncockedErc {
+     EditorPos -55.7 -8.5
+     Source "WeaponOperations.ErcRas.FireUncocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FireUncockedPne {
+     EditorPos -55.7 -7.9
+     Source "WeaponOperations.PneRas.FireUncocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT Jamming {
+     EditorPos -60.8 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "JammingErc"
+     Child1 "JammingPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeBlendT JammingCancel {
+     EditorPos -58.2 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "JammingCancelErc"
+     Child1 "JammingCancelPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource JammingCancelErc {
+     EditorPos -58.2 -8.5
+     Source "WeaponOperations.ErcRas.Jamming Cancel"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource JammingCancelPne {
+     EditorPos -58.2 -7.9
+     Source "WeaponOperations.PneRas.Jamming Cancel"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource JammingErc {
+     EditorPos -60.7 -8.5
+     Source "WeaponOperations.ErcRas.Jamming"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource JammingPne {
+     EditorPos -60.7 -7.9
+     Source "WeaponOperations.PneRas.Jamming"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadAction_Closed {
+     EditorPos -63.7 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadAction_ClosedErc"
+     Child1 "ReloadAction_ClosedPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadAction_ClosedErc {
+     EditorPos -63.7 -8.5
+     Source "WeaponOperations.ErcRas.ReloadAction_Closed"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadAction_ClosedPne {
+     EditorPos -63.7 -7.9
+     Source "WeaponOperations.PneRas.ReloadAction_Closed"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadAction_Closed_Uncocked {
+     EditorPos -67.4 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadAction_Closed_UncockedErc"
+     Child1 "ReloadAction_Closed_UncockedPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadAction_Closed_UncockedErc {
+     EditorPos -67.4 -8.5
+     Source "WeaponOperations.ErcRas.ReloadAction_Closed_Uncocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadAction_Closed_UncockedPne {
+     EditorPos -67.4 -7.9
+     Source "WeaponOperations.PneRas.ReloadAction_Closed_Uncocked"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadAction_Open {
+     EditorPos -70.2 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadAction_OpenErc"
+     Child1 "ReloadAction_OpenPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadAction_OpenErc {
+     EditorPos -70.2 -8.5
+     Source "WeaponOperations.ErcRas.ReloadAction_Open"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadAction_OpenPne {
+     EditorPos -70.2 -7.9
+     Source "WeaponOperations.PneRas.ReloadAction_Open"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadBoltAction2 {
+     EditorPos -73 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadBoltAction2Erc"
+     Child1 "ReloadBoltAction2Pne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadBoltAction2Erc {
+     EditorPos -73 -8.5
+     Source "WeaponOperations.ErcRas.ReloadBoltAction2"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadBoltAction2Pne {
+     EditorPos -73 -7.9
+     Source "WeaponOperations.PneRas.ReloadBoltAction2"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadMagBullet {
+     EditorPos -75.9 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadMagBulletErc"
+     Child1 "ReloadMagBulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadMagBulletErc {
+     EditorPos -75.9 -8.5
+     Source "WeaponOperations.ErcRas.ReloadMagBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadMagBulletPne {
+     EditorPos -75.9 -7.9
+     Source "WeaponOperations.PneRas.ReloadMagBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadMagNoBullet {
+     EditorPos -78.7 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadMagNoBulletErc"
+     Child1 "ReloadMagNoBulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadMagNoBulletErc {
+     EditorPos -78.7 -8.5
+     Source "WeaponOperations.ErcRas.ReloadMagNoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadMagNoBulletPne {
+     EditorPos -78.7 -7.9
+     Source "WeaponOperations.PneRas.ReloadMagNoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadMagazineDetach {
+     EditorPos -81.6 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadMagazineDetachErc"
+     Child1 "ReloadMagazineDetachPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadMagazineDetachErc {
+     EditorPos -81.6 -8.5
+     Source "WeaponOperations.ErcRas.ReloadMagazineDetach"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadMagazineDetachPne {
+     EditorPos -81.6 -7.9
+     Source "WeaponOperations.PneRas.ReloadMagazineDetach"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadNoMagBullet {
+     EditorPos -84.3 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadNoMagBulletErc"
+     Child1 "ReloadNoMagBulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadNoMagBulletErc {
+     EditorPos -84.3 -8.5
+     Source "WeaponOperations.ErcRas.ReloadNoMagBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadNoMagBulletPne {
+     EditorPos -84.3 -7.9
+     Source "WeaponOperations.PneRas.ReloadNoMagBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeBlendT ReloadNoMagNoBullet {
+     EditorPos -87.2 -9.2
+     BlendTime "0.4"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "(Stance == 2 && AimX >= -50 && AimX <= 50 && Raised) || (!Raised && Stance == 2)"
+     Child0 "ReloadNoMagNoBulletErc"
+     Child1 "ReloadNoMagNoBulletPne"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 1
+    }
+    AnimSrcNodeSource ReloadNoMagNoBulletErc {
+     EditorPos -87.2 -8.5
+     Source "WeaponOperations.ErcRas.ReloadNoMagNoBullet"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource ReloadNoMagNoBulletPne {
+     EditorPos -87.2 -7.9
+     Source "WeaponOperations.PneRas.ReloadNoMagNoBullet"
+     Looptype "No Loop"
+    }
+   }
+  }
+ }
+}

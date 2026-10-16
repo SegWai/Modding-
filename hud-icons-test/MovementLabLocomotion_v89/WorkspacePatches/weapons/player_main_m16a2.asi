@@ -1,0 +1,92 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{DF2C0C9FB20AC7F4}DZ/anims/anm/player/reloads/m16a2/p_erc_chambering_Closed_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Open" {
+   Resource "{CF21E69EB534891F}DZ/anims/anm/player/reloads/m16a2/p_erc_chambering_Open_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{2540608A96B68908}DZ/anims/anm/player/reloads/m16a2/p_erc_fire_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{D02AE6497988CB9C}DZ/anims/anm/player/reloads/m16a2/p_erc_fire_empty_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{849AAEDEE96B505C}DZ/anims/anm/player/reloads/m16a2/p_erc_fire_jam_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireLast" {
+   Resource "{5266593FD7D9C70B}DZ/anims/anm/player/reloads/m16a2/p_erc_fire_last_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{28730D01FD59B935}DZ/anims/anm/player/reloads/m16a2/p_erc_jam_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{38C1ADD840431954}DZ/anims/anm/player/reloads/m16a2/p_erc_jam_cancel_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{AEB773F302D86D22}DZ/anims/anm/player/reloads/m16a2/p_erc_reload_action_Closed_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{E0B7BFAB6116B452}DZ/anims/anm/player/reloads/m16a2/p_erc_reload_action_Open_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{3AB4567A30357D88}DZ/anims/anm/player/reloads/m16a2/p_erc_reload_mag_nobullet_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{3AB4567A30357D88}DZ/anims/anm/player/reloads/m16a2/p_erc_reload_mag_nobullet_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{C5505F26F2EB77BD}DZ/anims/anm/player/reloads/m16a2/p_erc_reload_mag_remove_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{5E339FCD9DAB058C}DZ/anims/anm/player/reloads/m16a2/p_erc_reload_nomag_bullet_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{55A5BDE1581565ED}DZ/anims/anm/player/reloads/m16a2/p_pne_chambering_Closed_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Open" {
+   Resource "{1C2355147F847740}DZ/anims/anm/player/reloads/m16a2/p_pne_chambering_Open_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{0443DCF7C7EA4D99}DZ/anims/anm/player/reloads/m16a2/p_pne_fire_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{6188B11277B37888}DZ/anims/anm/player/reloads/m16a2/p_pne_fire_empty_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{23711D500A8141DB}DZ/anims/anm/player/reloads/m16a2/p_pne_fire_jam_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireLast" {
+   Resource "{0D77879A95458872}DZ/anims/anm/player/reloads/m16a2/p_pne_fire_last_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{601A6D731FFE0C09}DZ/anims/anm/player/reloads/m16a2/p_pne_jam_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{8963FA834E78AA40}DZ/anims/anm/player/reloads/m16a2/p_pne_jam_cancel_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{6B9CF07A0797DAB3}DZ/anims/anm/player/reloads/m16a2/p_pne_reload_action_Closed_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{887B2BDC4CD76D07}DZ/anims/anm/player/reloads/m16a2/p_pne_reload_action_Open_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{72391E3726C6DBC7}DZ/anims/anm/player/reloads/m16a2/p_pne_reload_mag_nobullet_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{72391E3726C6DBC7}DZ/anims/anm/player/reloads/m16a2/p_pne_reload_mag_nobullet_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{4FD9EE5818F4D5A4}DZ/anims/anm/player/reloads/m16a2/p_pne_reload_mag_remove_m16a2_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{16BED7808B58A3C3}DZ/anims/anm/player/reloads/m16a2/p_pne_reload_nomag_bullet_m16a2_ras.anm"
+  }
+ }
+}

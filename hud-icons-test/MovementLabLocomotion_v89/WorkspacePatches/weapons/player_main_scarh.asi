@@ -1,0 +1,92 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{5CF667DADB73D6AA}DZ/anims/anm/player/reloads/SCAR/p_erc_chambering_Closed_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Open" {
+   Resource "{4C9BE3392592F9B5}DZ/anims/anm/player/reloads/SCAR/p_erc_chambering_Open_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{5886AD7F0D6C4E70}DZ/anims/anm/player/reloads/SCAR/p_erc_fire_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{61CBB8E8836EBE82}DZ/anims/anm/player/reloads/SCAR/p_erc_fire_empty_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{2921AC63F5F486BB}DZ/anims/anm/player/reloads/SCAR/p_erc_fire_jam_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireLast" {
+   Resource "{7CCE7B308869AFFF}DZ/anims/anm/player/reloads/SCAR/p_erc_fire_last_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{AC39CC888AC41AF0}DZ/anims/anm/player/reloads/SCAR/p_erc_jam_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{5745C68F80BBC15F}DZ/anims/anm/player/reloads/SCAR/p_erc_jam_cancel_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{53459382EA2D127B}DZ/anims/anm/player/reloads/SCAR/p_erc_reload_action_Closed_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{F5AE4BE03112CE81}DZ/anims/anm/player/reloads/SCAR/p_erc_reload_action_Open_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{CA0CA426AC46E147}DZ/anims/anm/player/reloads/SCAR/p_erc_reload_mag_nobullet_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{CA0CA426AC46E147}DZ/anims/anm/player/reloads/SCAR/p_erc_reload_mag_nobullet_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{EF77B7C79E0519BB}DZ/anims/anm/player/reloads/SCAR/p_erc_reload_mag_remove_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{587D05B1F35578A3}DZ/anims/anm/player/reloads/SCAR/p_erc_reload_nomag_bullet_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{D3965006960C0212}DZ/anims/anm/player/reloads/SCAR/p_pne_chambering_Closed_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Open" {
+   Resource "{E979A2193EA310EE}DZ/anims/anm/player/reloads/SCAR/p_pne_chambering_Open_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{10EFCD0DEFCBFB4C}DZ/anims/anm/player/reloads/SCAR/p_pne_fire_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{3EDA664DC1F2F1FB}DZ/anims/anm/player/reloads/SCAR/p_pne_fire_empty_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{7764CBC3892CF256}DZ/anims/anm/player/reloads/SCAR/p_pne_fire_jam_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireLast" {
+   Resource "{DB25C8BE6B83BE78}DZ/anims/anm/player/reloads/SCAR/p_pne_fire_last_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{4C9120FED290201B}DZ/anims/anm/player/reloads/SCAR/p_pne_jam_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{0854182AC2278E26}DZ/anims/anm/player/reloads/SCAR/p_pne_jam_cancel_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{1BC8DBCFFCDEB434}DZ/anims/anm/player/reloads/SCAR/p_pne_reload_action_Closed_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{7F27FA9EDB0D6C98}DZ/anims/anm/player/reloads/SCAR/p_pne_reload_action_Open_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{A2C0305181873812}DZ/anims/anm/player/reloads/SCAR/p_pne_reload_mag_nobullet_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{A2C0305181873812}DZ/anims/anm/player/reloads/SCAR/p_pne_reload_mag_nobullet_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{6017801BD37ACD03}DZ/anims/anm/player/reloads/SCAR/p_pne_reload_mag_remove_SCAR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{30B191C6DE94A1F6}DZ/anims/anm/player/reloads/SCAR/p_pne_reload_nomag_bullet_SCAR_ras.anm"
+  }
+ }
+}

@@ -1,0 +1,80 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{8EF5FDCFA25CF360}DZ/anims/anm/player/reloads/MP18/p_erc_fire_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireCocked" {
+   Resource "{31B9EA26F7BCA0B0}DZ/anims/anm/player/reloads/MP18/p_erc_fire_empty_automatic_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{31B9EA26F7BCA0B0}DZ/anims/anm/player/reloads/MP18/p_erc_fire_empty_automatic_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{2BDD23D384C1A560}DZ/anims/anm/player/reloads/MP18/p_erc_fire_Jam_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireUncocked" {
+   Resource "{31B9EA26F7BCA0B0}DZ/anims/anm/player/reloads/MP18/p_erc_fire_empty_automatic_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{3D1953422BB2C1D4}DZ/anims/anm/player/reloads/MP18/p_erc_unjam_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{3FE000D05246743E}DZ/anims/anm/player/reloads/MP18/p_erc_unjam_cancel_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{16EB947EED742D82}DZ/anims/anm/player/reloads/MP18/p_erc_reloadAction_Closed_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{424AFCF245DE3FC3}DZ/anims/anm/player/reloads/MP18/p_erc_reload_mag_nobullet_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{424AFCF245DE3FC3}DZ/anims/anm/player/reloads/MP18/p_erc_reload_mag_nobullet_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{68FE331E8E22C704}DZ/anims/anm/player/reloads/MP18/p_erc_reload_mag_remove_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{D03B5D651ACDA627}DZ/anims/anm/player/reloads/MP18/p_erc_reload_nomag_bullet_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{C69C9DBD40FB465C}DZ/anims/anm/player/reloads/MP18/p_pne_fire_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireCocked" {
+   Resource "{7934A26BE14F06FF}DZ/anims/anm/player/reloads/MP18/p_pne_fire_empty_automatic_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{7934A26BE14F06FF}DZ/anims/anm/player/reloads/MP18/p_pne_fire_empty_automatic_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{75984473F819D18D}DZ/anims/anm/player/reloads/MP18/p_pne_fire_Jam_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireUncocked" {
+   Resource "{7BC4F7702781A2BD}DZ/anims/anm/player/reloads/PM73/p_pne_fire_empty_PM73_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{1C1AEF3F7AEE0545}DZ/anims/anm/player/reloads/MP18/p_pne_unjam_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{83FAD6F50C0FAC51}DZ/anims/anm/player/reloads/MP18/p_pne_unjam_cancel_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{7E270009C0B5F4D7}DZ/anims/anm/player/reloads/MP18/p_pne_reloadAction_Closed_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{2A866885681FE696}DZ/anims/anm/player/reloads/MP18/p_pne_reload_mag_nobullet_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{2A866885681FE696}DZ/anims/anm/player/reloads/MP18/p_pne_reload_mag_nobullet_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{E79E04C2C35D13BC}DZ/anims/anm/player/reloads/MP18/p_pne_reload_mag_remove_MP18_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{B8F7C912370C7F72}DZ/anims/anm/player/reloads/MP18/p_pne_reload_nomag_bullet_MP18_ras.anm"
+  }
+ }
+}
