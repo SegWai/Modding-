@@ -1,0 +1,26 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.UnrestrainTargetCro.In" {
+   Resource "{90DB917C19EACD97}DZ/anims/anm/player/actions/items/p_1hd_keys_cro_unlock_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.UnrestrainTargetCro.Loop" {
+   Resource "{13659800FD848B9E}DZ/anims/anm/player/actions/items/p_1hd_keys_cro_unlock_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.UnrestrainTargetCro.Out" {
+   Resource "{CF06897C794759FC}DZ/anims/anm/player/actions/items/p_1hd_keys_cro_unlock_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.UnrestrainTargetErc.In" {
+   Resource "{BA1909E0856BA652}DZ/anims/anm/player/actions/items/p_1hd_keys_erc_unlock_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.UnrestrainTargetErc.Loop" {
+   Resource "{C0ACF3712170A75C}DZ/anims/anm/player/actions/items/p_1hd_keys_erc_unlock_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.UnrestrainTargetErc.Out" {
+   Resource "{D663EB4296BE23BA}DZ/anims/anm/player/actions/items/p_1hd_keys_erc_unlock_out.anm"
+  }
+ }
+}

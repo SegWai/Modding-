@@ -1,0 +1,14 @@
+{
+  "version": 84,
+  "checks": [
+    "Only target code and mission changed versus v83 runtime/animation sources",
+    "Male four-second ragdoll timer and eight-second respawn inspected",
+    "Female damage lookup includes hit zone/highest fallback; health accounting deferred out of pre-damage callback",
+    "Explicit native unconscious and upright wake command signatures checked against SDK",
+    "Unconscious state initialized only after native command returns successfully",
+    "PBO header/payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ test required",
+  "not_implemented": "Selective hands/feet ragdoll disable: no per-limb switch exposed in script API",
+  "diagnosis": "Candidate causes addressed; no new logs/runtime available to confirm cause of prior knockout failure"
+}
