@@ -1,0 +1,38 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "Combat.Erc.Block" {
+   Resource "{FDAECBF4BD4D9D40}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_block_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeL" {
+   Resource "{2BFFAD5490674A32}DZ/anims/anm/player/moves/2handed/p_2hd_erc_extinguisher_evadeL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeR" {
+   Resource "{4731078504312B56}DZ/anims/anm/player/moves/2handed/p_2hd_erc_extinguisher_evadeR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.Sprint_StrikeR01" {
+   Resource "{0427DA895D3B5C45}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_charged_extinguisher.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL01" {
+   Resource "{503B784028E2FBE1}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackL_Light_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL02" {
+   Resource "{980BCE4622A49C7E}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackL_Heavy_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR01" {
+   Resource "{88D78825A80419BC}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_Light_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR03" {
+   Resource "{2B186F59D49E6811}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_ Heavy_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light F Block" {
+   Resource "{E0CFCBF6A5787BD8}DZ/anims/anm/player/hits/Light/p_2h_extinguisher_erc_block_ras_hit_light_F.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Idle" {
+   Resource "{2F335EB53DD3FE8C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_extinguisher_ras.anm"
+  }
+ }
+}

@@ -1,0 +1,5 @@
+{
+  "checks": "315 production yaw-offset scenarios with delayed engine heading and mouse input; read-only HeadingModel observation; pitch promotion source inspection; working 1.30 graph bytes unchanged; PBO and ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test",
+  "change": "Hold rendered world yaw using engine heading, remove timed yaw recenter, promote free-look pitch into normal movement camera base"
+}
