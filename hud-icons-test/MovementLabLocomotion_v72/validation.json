@@ -1,0 +1,5 @@
+{
+  "checks": "10,500 actual-source camera-pivot geometry scenarios; default forward framing preserved; native distance/orientation untouched; v71 head/movement scripts and 1.30 animation graph bytes unchanged; PBO/ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test including collision response near walls",
+  "change": "Body-relative right-shoulder camera origin; counteract native positional orbit; force right-shoulder selection"
+}

@@ -1,0 +1,80 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingBulletL" {
+   Resource "{B457E71D3D28E103}DZ/anims/anm/player/reloads/IZH43/p_erc_chambering_in_BulletL_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingBulletR" {
+   Resource "{0E3CA6EAC9BE2FCD}DZ/anims/anm/player/reloads/IZH43/p_erc_chambering_in_BulletR_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingCancel" {
+   Resource "{A927C2E9199B87AA}DZ/anims/anm/player/reloads/IZH43/p_erc_chambering_cancel_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingOut" {
+   Resource "{71EAD3A85D6E3B02}DZ/anims/anm/player/reloads/IZH43/p_erc_chambering_out_noBullet_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_NoBulletL" {
+   Resource "{102D60DBEFEBA602}DZ/anims/anm/player/reloads/IZH43/p_erc_chambering_in_noBulletL_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_NoBulletR" {
+   Resource "{AA46212C1B7D68CC}DZ/anims/anm/player/reloads/IZH43/p_erc_chambering_in_noBulletR_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{5191E9DE527504F0}DZ/anims/anm/player/reloads/IZH43/p_erc_fire_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{3BE73BA109B43A68}DZ/anims/anm/player/reloads/IZH43/p_erc_fire_empty_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{5D055651282BDB04}DZ/anims/anm/player/reloads/IZH43/p_erc_fire_Jam_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{62B846B05237CE5D}DZ/anims/anm/player/reloads/IZH43/p_erc_unjam_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{CC333EEBA25216D9}DZ/anims/anm/player/reloads/IZH43/p_erc_unjam_cancel_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{58C9643CF8FF8E38}DZ/anims/anm/player/reloads/IZH43/p_erc_reload_action_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingBulletL" {
+   Resource "{B8E80E634269FFAD}DZ/anims/anm/player/reloads/IZH43/p_pne_chambering_in_BulletL_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingBulletR" {
+   Resource "{02834F94B6FF3163}DZ/anims/anm/player/reloads/IZH43/p_pne_chambering_in_BulletR_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingCancel" {
+   Resource "{23AE7397F38425B3}DZ/anims/anm/player/reloads/IZH43/p_pne_chambering_cancel_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingOut" {
+   Resource "{9272F65441189C2C}DZ/anims/anm/player/reloads/IZH43/p_pne_chambering_out_noBullet_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_NoBulletL" {
+   Resource "{F3B54527F39D012C}DZ/anims/anm/player/reloads/IZH43/p_pne_chambering_in_noBulletL_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_NoBulletR" {
+   Resource "{49DE04D0070BCFE2}DZ/anims/anm/player/reloads/IZH43/p_pne_chambering_in_noBulletR_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{709255A30329C061}DZ/anims/anm/player/reloads/IZH43/p_pne_fire_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{8A456CFA078F897C}DZ/anims/anm/player/reloads/IZH43/p_pne_fire_empty_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{FAEEE5DFCBC1CA83}DZ/anims/anm/player/reloads/IZH43/p_pne_fire_Jam_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{EF8E2BF586DA6210}DZ/anims/anm/player/reloads/IZH43/p_pne_unjam_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{510DDDBA355DB644}DZ/anims/anm/player/reloads/IZH43/p_pne_unjam_cancel_IZH43_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{6F48E3B0A1A1E1E8}DZ/anims/anm/player/reloads/IZH43/p_pne_reload_action_IZH43_ras.anm"
+  }
+ }
+}
