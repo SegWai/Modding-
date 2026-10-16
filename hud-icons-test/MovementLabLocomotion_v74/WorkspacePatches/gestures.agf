@@ -1,0 +1,757 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet Facial {
+   Nodes {
+    AnimSrcNodeSource FacialAnimAngry {
+     EditorPos 5.2 -2
+     Source "Facial.FacialAnger"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimConfused {
+     EditorPos 6.4 -2.7
+     Source "Facial.FacialConfused"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimDisgusted {
+     EditorPos 7.5 -2
+     Source "Facial.FacialDisgusted"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimFear {
+     EditorPos 8.7 -2.7
+     Source "Facial.FacialFear"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimHappy {
+     EditorPos 9.9 -2
+     Source "Facial.FacialHappy"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimJoy {
+     EditorPos 12.3 -2
+     Source "Facial.FacialJoy"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimLaughter {
+     EditorPos 11.1 -2.7
+     Source "Facial.FacialLaugher"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimNeutral {
+     EditorPos 3.9 -7.4
+     Source "Facial.FacialNeutral"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FacialAnimPain {
+     EditorPos 13.4 -2.7
+     Source "Facial.FacialPain"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimSadness {
+     EditorPos 14.6 -2
+     Source "Facial.FacialSadness"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimSpooked {
+     EditorPos 15.8 -2.7
+     Source "Facial.FacialSpooked"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimSurprised {
+     EditorPos 17 -2
+     Source "Facial.FacialSuprised"
+     Looptype Loop
+    }
+    AnimSrcNodeSource FacialAnimTired {
+     EditorPos 18.2 -2.7
+     Source "Facial.FacialTired"
+     Looptype Loop
+    }
+    AnimSrcNodeStateMachine FacialMaster {
+     EditorPos 1.9 -10.7
+     states {
+      AnimSrcNodeState Neutral {
+       EditorPos 2.7 -9.5
+       Child "FacialAnimNeutral"
+       StartCondition "True"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Other {
+       EditorPos 5.2 -9.5
+       Child "FacialStateMachine"
+       StartCondition "False"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState NeutralOut {
+       EditorPos 7.7 -9.5
+       Child "FacialAnimNeutral"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE2699D824}" {
+       FromState "Neutral"
+       ToState "Other"
+       Duration "0.2"
+       StartTime ""
+       Condition "True"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D836}" {
+       FromState "Other"
+       ToState "NeutralOut"
+       Duration "0.2"
+       StartTime ""
+       Condition "GetCommandI(CMD_Expression) == -1"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine FacialStateMachine {
+     EditorPos 5.2 -6.3
+     states {
+      AnimSrcNodeState Angry {
+       EditorPos 5.2 -4.4
+       Child "FacialAnimAngry"
+       StartCondition "GetCommandI(CMD_Expression) == 0"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Confused {
+       EditorPos 6.4 -5.1
+       Child "FacialAnimConfused"
+       StartCondition "GetCommandI(CMD_Expression) == 1"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Disgusted {
+       EditorPos 7.5 -4.4
+       Child "FacialAnimDisgusted"
+       StartCondition "GetCommandI(CMD_Expression) == 2"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Fear {
+       EditorPos 8.7 -5.1
+       Child "FacialAnimFear"
+       StartCondition "GetCommandI(CMD_Expression) == 3"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Happy {
+       EditorPos 9.9 -4.4
+       Child "FacialAnimHappy"
+       StartCondition "GetCommandI(CMD_Expression) == 4"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Joy {
+       EditorPos 12.3 -4.4
+       Child "FacialAnimJoy"
+       StartCondition "GetCommandI(CMD_Expression) == 6"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Laughter {
+       EditorPos 11.1 -5.1
+       Child "FacialAnimLaughter"
+       StartCondition "GetCommandI(CMD_Expression) == 5"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Pain {
+       EditorPos 13.4 -5.1
+       Child "FacialAnimPain"
+       StartCondition "GetCommandI(CMD_Expression) == 7"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Sadness {
+       EditorPos 14.6 -4.4
+       Child "FacialAnimSadness"
+       StartCondition "GetCommandI(CMD_Expression) == 8"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Spooked {
+       EditorPos 15.8 -5.1
+       Child "FacialAnimSpooked"
+       StartCondition "GetCommandI(CMD_Expression) == 9"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Surprised {
+       EditorPos 17 -4.4
+       Child "FacialAnimSurprised"
+       StartCondition "GetCommandI(CMD_Expression) == 10"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Tired {
+       EditorPos 18.2 -5.1
+       Child "FacialAnimTired"
+       StartCondition "GetCommandI(CMD_Expression) == 11"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+    }
+   }
+  }
+  AnimSrcGraphSheet Unconscious {
+   Nodes {
+    AnimSrcNodeSource FacialUnconsciousAnim {
+     EditorPos 2.5 -16.6
+     Source "Facial.FacialUnconscious"
+     Looptype Loop
+    }
+    AnimSrcNodeSource UnconDeepOutAnim {
+     EditorPos 9.6 -4.9
+     Source "Unconscious.WaterDeep.Out"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconFastBAnim {
+     EditorPos -4.5 7
+     Source "Unconscious.InFastB"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconFastFAnim {
+     EditorPos -6.7 7
+     Source "Unconscious.InFastF"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconFastLAnim {
+     EditorPos -0.1 7
+     Source "Unconscious.InFastL"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconFastRAnim {
+     EditorPos -2.3 7
+     Source "Unconscious.InFastR"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconInAnim {
+     EditorPos 3.2 7
+     Source "Unconscious.InSlow"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect UnconInDeepG {
+     EditorPos -3.3 -6.4
+     Child "UnconsciousInDirSTM"
+     Group "Unconscious"
+     Column "WaterDeep"
+    }
+    AnimSrcNodeBlendT UnconInShallowT {
+     EditorPos -1 -6.4
+     BlendTime "0.3"
+     BlendFn S
+     TriggerOn ""
+     TriggerOff ""
+     Condition "Stance == 0"
+     Child0 "UnconShallowCroG"
+     Child1 "UnconShallowErcG"
+     OptimizeMin 1
+     OptimizeMax 1
+     SelectMainPath 0
+    }
+    AnimSrcNodeGroupSelect UnconInWaterG {
+     EditorPos -5.6 -6.4
+     Child "UnconsciousInDirSTM"
+     Group "Unconscious"
+     Column "Water"
+    }
+    AnimSrcNodeSource UnconLandIdleAnim {
+     EditorPos 4.2 -4.7
+     Source "Unconscious.Pne.Loop"
+     Looptype Loop
+    }
+    AnimSrcNodeSource UnconLandOutAnim {
+     EditorPos 6.8 -6.3
+     Source "Unconscious.Pne.Out"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect UnconShallowCroG {
+     EditorPos -2.1 -5.6
+     Child "UnconsciousInDirSTM"
+     Group "Unconscious"
+     Column "WaterShallowCro"
+    }
+    AnimSrcNodeGroupSelect UnconShallowErcG {
+     EditorPos 0.1 -5.6
+     Child "UnconsciousInDirSTM"
+     Group "Unconscious"
+     Column "WaterShallowErc"
+    }
+    AnimSrcNodeSource UnconShallowIdleAnim {
+     EditorPos 4.2 -5.5
+     Source "Unconscious.WaterShallowCro.Loop"
+     Looptype Loop
+    }
+    AnimSrcNodeSource UnconShallowOutAnim {
+     EditorPos 8.2 -5.6
+     Source "Unconscious.WaterShallowCro.Out"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconSinkAnim {
+     EditorPos 12.5 -3.5
+     Source "Unconscious.Water.Death"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconWalkBInAnim {
+     EditorPos 7.7 7
+     Source "Unconscious.InWalkBSlow"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconWalkFInAnim {
+     EditorPos 5.5 7
+     Source "Unconscious.InWalkFSlow"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconWalkLInAnim {
+     EditorPos 12.1 7
+     Source "Unconscious.InWalkLSlow"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconWalkRInAnim {
+     EditorPos 9.9 7
+     Source "Unconscious.InWalkRSlow"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconWaterIdleAnim {
+     EditorPos 4.2 -6.3
+     Source "Unconscious.Water.Loop"
+     Looptype Loop
+    }
+    AnimSrcNodeSource UnconWaterOutAnim {
+     EditorPos 11 -4.2
+     Source "Unconscious.Water.Out"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect UnconsciousCroLowG {
+     EditorPos 5.5 1.2
+     Child "UnconsciousInDirSTM"
+     Group "Unconscious"
+     Column "Cro"
+    }
+    AnimSrcNodeGroupSelect UnconsciousErcLowG {
+     EditorPos 1.9 1.2
+     Child "UnconsciousInDirSTM"
+     Group "Unconscious"
+     Column "Erc"
+    }
+    AnimSrcNodeBlend UnconsciousFacialB {
+     EditorPos 1.4 -17.8
+     BlendWeight "0.0"
+     Child0 "UnconsciousMaster"
+     Child1 "FacialUnconsciousAnim"
+     OptimizeMin 0
+     OptimizeMax 0
+    }
+    AnimSrcNodeWeaponIk UnconsciousIK {
+     EditorPos 1.4 -19.1
+     Child "UnconsciousFacialB"
+     IkconfigName "WeaponIKTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHand_Dummy (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHand_Dummy"\
+     "weaponrotator = RightArm "\
+     "weaponaxis= -x"\
+     ""\
+     "//! "\
+     "chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand"\
+     "chainaxis=-x"\
+     "secchain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand"\
+     "secchainaxis=+x"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              						// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHand_Dummy      								// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      							// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection							// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection							// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"\
+     ""\
+     ""
+     BlendInTime 0.3
+     BlendOutTime 0.2
+     WeightAim "isbitset(ArmIK, 0)"
+     WeightPrimaryChain "isbitset(ArmIK, 1)"
+     WeightSecondaryChain "isbitset(ArmIK, 2)"
+     WeaponDirLr "AimIKX"
+     WeaponDirUd "AimY"
+    }
+    AnimSrcNodeStateMachine UnconsciousInDirSTM {
+     EditorPos -2.7 4.1
+     states {
+      AnimSrcNodeState SlowIn {
+       EditorPos 3.2 5.2
+       Child "UnconInAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 1 && MovementSpeed == 0"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState SlowWalkF {
+       EditorPos 5.5 5.2
+       Child "UnconWalkFInAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 1 && MovementSpeed > 0 && inRange(MovementDirection, -45.0, 45.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState SlowWalkB {
+       EditorPos 7.7 5.2
+       Child "UnconWalkBInAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 1 && MovementSpeed > 0 && (MovementDirection > 135 || MovementDirection < -135)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState SlowWalkR {
+       EditorPos 9.9 5.2
+       Child "UnconWalkRInAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 1 && MovementSpeed > 0 && inRange(MovementDirection, 45.0, 135.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState SlowWalkL {
+       EditorPos 12.1 5.2
+       Child "UnconWalkLInAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 1 && MovementSpeed > 0 && inRange(MovementDirection, -135.0, -45.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FastFoward {
+       EditorPos -6.7 5.2
+       Child "UnconFastFAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 0 && inRange(DamageDirection, -45.0, 45.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FastBack {
+       EditorPos -4.5 5.2
+       Child "UnconFastBAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 0 && (DamageDirection < -135 || DamageDirection > 135)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FastRight {
+       EditorPos -2.3 5.2
+       Child "UnconFastRAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 0 && inRange(DamageDirection, 45.0, 135.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState FastLeft {
+       EditorPos -0.1 5.2
+       Child "UnconFastLAnim"
+       StartCondition "GetCommandF(CMD_Unconscious) == 0 && inRange(DamageDirection, -135.0, -45.0)"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeStateMachine UnconsciousMaster {
+     Tags {
+      "TagUnconscious"
+     }
+     EditorPos 1.4 -14.9
+     states {
+      AnimSrcNodeState InLand {
+       Tags {
+        "TagUnconsciousLand"
+       }
+       EditorPos 1.5 -10
+       Child "UnconsciousStanceSTM"
+       StartCondition "True"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState IdleLand {
+       Tags {
+        "TagUnconsciousLand"
+       }
+       EditorPos 4.2 -9.7
+       Child "UnconLandIdleAnim"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState OutLand {
+       Tags {
+        "TagUnconsciousLand"
+       }
+       EditorPos 6.8 -10
+       Child "UnconLandOutAnim"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState InWater {
+       EditorPos -5.6 -12.4
+       Child "UnconInWaterG"
+       StartCondition "GetCommandI(CMD_Unconscious) == 3 && False"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState IdleWater {
+       EditorPos 4.2 -12.4
+       Child "UnconWaterIdleAnim"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState OutWater {
+       Tags {
+        "TagUnconsciousWater"
+       }
+       EditorPos 11 -12.4
+       Child "UnconWaterOutAnim"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState OutShallowWater {
+       Tags {
+        "TagUnconsciousShallow"
+       }
+       EditorPos 8.2 -10.8
+       Child "UnconShallowOutAnim"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState IdleShallowWater {
+       EditorPos 4.2 -11.2
+       Child "UnconShallowIdleAnim"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState InShallowWater {
+       EditorPos -1 -10.8
+       Child "UnconInShallowT"
+       StartCondition "GetCommandI(CMD_Unconscious) == 1 && False"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState OutSinkWater {
+       EditorPos 12.5 -13.2
+       Child "UnconSinkAnim"
+       StartCondition "False"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState InDeepWater {
+       EditorPos -3.3 -11.6
+       Child "UnconInDeepG"
+       StartCondition "GetCommandI(CMD_Unconscious) == 2 && False"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState OutDeepWater {
+       EditorPos 9.6 -11.6
+       Child "UnconDeepOutAnim"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+      AnimSrcNodeState RagdollRecovery {
+       EditorPos 19.6 -9
+       Child "RagdollRecoverySTM"
+       TimeStorage "Real Time"
+       IsExit 1
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE2699D6C1}" {
+       FromState "InLand"
+       ToState "IdleLand"
+       Duration "0.1"
+       StartTime ""
+       Condition "RemainingTimeLess(0.1)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6D9}" {
+       FromState "InWater"
+       ToState "IdleWater"
+       Duration "0.1"
+       StartTime ""
+       Condition "RemainingTimeLess(0.1)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6D3}" {
+       FromState "IdleLand"
+       ToState "OutLand"
+       Duration "0.3"
+       StartTime ""
+       Condition "GetCommandI(CMD_Unconscious_Exit) == 0"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6EC}" {
+       FromState "InShallowWater"
+       ToState "IdleShallowWater"
+       Duration "0.1"
+       StartTime ""
+       Condition "RemainingTimeLess(0.1)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6E6}" {
+       FromState "IdleWater"
+       ToState "OutWater"
+       Duration "0.2"
+       StartTime ""
+       Condition "IsCommand(CMD_Unconscious_Exit)"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6E3}" {
+       FromState "IdleWater"
+       ToState "OutSinkWater"
+       Duration ""
+       StartTime ""
+       Condition "false"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6FC}" {
+       FromState "InDeepWater"
+       ToState "IdleWater"
+       Duration ""
+       StartTime ""
+       Condition "false"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6F9}" {
+       FromState "IdleWater"
+       ToState "OutDeepWater"
+       Duration ""
+       StartTime ""
+       Condition "false"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE2699D6F2}" {
+       FromState "InLand"
+       ToState "OutLand"
+       Duration "0.3"
+       StartTime ""
+       Condition "GetCommandI(CMD_Unconscious_Exit) == 0"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{694EE85ABF91D45E}" {
+       FromState "IdleLand"
+       ToState "RagdollRecovery"
+       Duration "0.3"
+       Condition "GetCommandI(CMD_Unconscious_Exit) > 0"
+      }
+      AnimSrcNodeTransition "{694EEC8B92E2E370}" {
+       FromState "InLand"
+       ToState "RagdollRecovery"
+       Duration "0.3"
+       Condition "GetCommandI(CMD_Unconscious_Exit) > 0"
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect UnconsciousPneLowG {
+     EditorPos 8.8 1.2
+     Child "UnconsciousInDirSTM"
+     Group "Unconscious"
+     Column "Pne"
+    }
+    AnimSrcNodeStateMachine UnconsciousStanceSTM {
+     EditorPos 1.5 -2.1
+     states {
+      AnimSrcNodeState Erc {
+       EditorPos 1.9 -0.9
+       Child "UnconsciousErcLowG"
+       StartCondition "Stance == 0"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState Cro {
+       EditorPos 5.5 -0.9
+       Child "UnconsciousCroLowG"
+       StartCondition "Stance == 1"
+       TimeStorage Inherit
+       IsExit 1
+      }
+      AnimSrcNodeState Pne {
+       EditorPos 8.8 -0.9
+       Child "UnconsciousPneLowG"
+       StartCondition "Stance == 2"
+       TimeStorage Inherit
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeStateMachine RagdollRecoverySTM {
+     EditorPos 19.7 -4.8
+     states {
+      AnimSrcNodeState Front {
+       EditorPos 17.7 -3.7
+       Child "RagdollRecoveryFrontSrc"
+       StartCondition "GetCommandI(CMD_Unconscious_Exit) == 1"
+       IsExit 1
+      }
+      AnimSrcNodeState Left {
+       EditorPos 20.1 -3.7
+       Child "RagdollRecoveryLeftSrc"
+       StartCondition "GetCommandI(CMD_Unconscious_Exit) == 2"
+       IsExit 1
+      }
+      AnimSrcNodeState Back {
+       EditorPos 22.4 -3.7
+       Child "RagdollRecoveryBackSrc"
+       StartCondition "GetCommandI(CMD_Unconscious_Exit) == 3"
+       IsExit 1
+      }
+      AnimSrcNodeState Right {
+       EditorPos 24.7 -3.7
+       Child "RagdollRecoveryRightSrc"
+       StartCondition "GetCommandI(CMD_Unconscious_Exit) == 4"
+       IsExit 1
+      }
+     }
+    }
+    AnimSrcNodeSource RagdollRecoveryFrontSrc {
+     EditorPos 17.7 -1.4
+     Source "{00B1092BDAF15DE7}RagdollRecovery.Pne.Front"
+    }
+    AnimSrcNodeSource RagdollRecoveryLeftSrc {
+     EditorPos 20.1 -1.4
+     Source "{D6B4E89F6C71C8AE}RagdollRecovery.Pne.Left"
+    }
+    AnimSrcNodeSource RagdollRecoveryBackSrc {
+     EditorPos 22.4 -1.4
+     Source "{CFEECC8E5B8D9CEC}RagdollRecovery.Pne.Back"
+    }
+    AnimSrcNodeSource RagdollRecoveryRightSrc {
+     EditorPos 24.7 -1.4
+     Source "{D180B599D356521D}RagdollRecovery.Pne.Right"
+    }
+   }
+  }
+ }
+}

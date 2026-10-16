@@ -1,0 +1,5 @@
+{
+  "checks": "1.30 graph/schema/clip mapping checks; eight native head/torso look nodes verified byte-identical to supplied 1.30 originals; custom lock/camera modules and variables absent; remaining v66 runtime source, mission/loadout and speed plan byte-preserved; PBO/ZIP integrity",
+  "native_compile_and_playtest": "pending local DayZ 1.30 test",
+  "change": "Remove stationary head/body lock, camera limits, handoff and later camera experiments; restore native head/camera look controls"
+}

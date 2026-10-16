@@ -5,8 +5,10 @@ import argparse
 parser=argparse.ArgumentParser(description='Port MovementLab v65 animation changes into native DayZ 1.30 source schemas.')
 parser.add_argument('--old-workspace',type=Path,required=True)
 parser.add_argument('--new-workspace',type=Path,required=True)
+parser.add_argument('--source-package',type=Path)
+parser.add_argument('--output-package',type=Path)
 args=parser.parse_args()
-root=Path(__file__).resolve().parents[1];src=root/'hud-icons-test/MovementLabLocomotion_v65';dst=root/'hud-icons-test/MovementLabLocomotion_v66';base=args.new_workspace;oldbase=args.old_workspace
+root=Path(__file__).resolve().parents[1];src=args.source_package or root/'hud-icons-test/MovementLabLocomotion_v65';dst=args.output_package or root/'hud-icons-test/MovementLabLocomotion_v66';base=args.new_workspace;oldbase=args.old_workspace
 shutil.copytree(src,dst,dirs_exist_ok=True)
 patch=dst/'WorkspacePatches';shutil.rmtree(patch);shutil.copytree(base,patch)
 # Obsolete legacy fragments must not shadow the new .agf graph files.
