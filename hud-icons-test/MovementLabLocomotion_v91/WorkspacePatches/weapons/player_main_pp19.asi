@@ -1,0 +1,74 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{9FD9EBCD8A195399}DZ/anims/anm/player/reloads/Bizon/p_erc_chambering_Closed_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{44860DC5DA055E05}DZ/anims/anm/player/reloads/Bizon/p_erc_fire_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{E10F6B31745B3126}DZ/anims/anm/player/reloads/Bizon/p_erc_fire_empty_automatic_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{17B88030A6A6D6A4}DZ/anims/anm/player/reloads/Bizon/p_erc_fire_Jam_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{853784711B0B7945}DZ/anims/anm/player/reloads/Bizon/p_erc_unjam_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{E985DE5D5F9D873D}DZ/anims/anm/player/reloads/Bizon/p_erc_unjam_cancel_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{115BAA3124A1614E}DZ/anims/anm/player/reloads/Bizon/p_erc_reloadAction_Closed_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{45383A36FA7C6851}DZ/anims/anm/player/reloads/Bizon/p_erc_reload_mag_noBullet_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{45383A36FA7C6851}DZ/anims/anm/player/reloads/Bizon/p_erc_reload_mag_noBullet_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{85A5B874CAF8E3D0}DZ/anims/anm/player/reloads/Bizon/p_erc_reload_mag_remove_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{21BFF38157E21055}DZ/anims/anm/player/reloads/Bizon/p_erc_reload_noMag_bullet_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{15505AB36006F180}DZ/anims/anm/player/reloads/Bizon/p_pne_chambering_Closed_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{6585B1B88B599A94}DZ/anims/anm/player/reloads/Bizon/p_pne_fire_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{2424E8B8711486B7}DZ/anims/anm/player/reloads/Bizon/p_pne_fire_empty_automatic_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{B05333BE454CC723}DZ/anims/anm/player/reloads/Bizon/p_pne_fire_Jam_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{0801E934CFE6D508}DZ/anims/anm/player/reloads/Bizon/p_pne_unjam_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{74BB3D0CC89227A0}DZ/anims/anm/player/reloads/Bizon/p_pne_unjam_cancel_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{59D6E27C3252C701}DZ/anims/anm/player/reloads/Bizon/p_pne_reloadAction_Closed_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{0DB5727BEC8FCE1E}DZ/anims/anm/player/reloads/Bizon/p_pne_reload_mag_noBullet_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{0DB5727BEC8FCE1E}DZ/anims/anm/player/reloads/Bizon/p_pne_reload_mag_noBullet_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{0F2C090A20E741C9}DZ/anims/anm/player/reloads/Bizon/p_pne_reload_mag_remove_Bizon_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{6932BBCC4111B61A}DZ/anims/anm/player/reloads/Bizon/p_pne_reload_noMag_bullet_Bizon_ras.anm"
+  }
+ }
+}

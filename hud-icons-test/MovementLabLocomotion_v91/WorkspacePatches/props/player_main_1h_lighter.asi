@@ -1,0 +1,26 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.StartFireCro.In" {
+   Resource "{6338B55164646BCF}DZ/anims/anm/player/actions/items/p_cro_ignite_by_lighter_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.StartFireCro.Loop" {
+   Resource "{2165DBBA1679FFAB}DZ/anims/anm/player/actions/items/p_cro_ignite_by_lighter_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.StartFireCro.Out" {
+   Resource "{6D8BE8E82BA3819A}DZ/anims/anm/player/actions/items/p_cro_ignite_by_lighter_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.StartFireErc.In" {
+   Resource "{F18FB946F2241A1D}DZ/anims/anm/player/actions/items/p_erc_ignite_by_lighter_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.StartFireErc.Loop" {
+   Resource "{B44D72AC6F12E99E}DZ/anims/anm/player/actions/items/p_erc_ignite_by_lighter_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.StartFireErc.Out" {
+   Resource "{CFA1A196D5D5CF9E}DZ/anims/anm/player/actions/items/p_erc_ignite_by_lighter_out.anm"
+  }
+ }
+}

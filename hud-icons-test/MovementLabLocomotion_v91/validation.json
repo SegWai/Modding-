@@ -1,0 +1,13 @@
+{
+  "version": 91,
+  "checks": [
+    "Existing runtime/graph files preserved except blast target filter and mission integration",
+    "Actual infected Update method tested in compiled mock harness: staggered/simultaneous deaths, independent 5s deadlines, living preservation, corpse cleanup, missing bodies, multiplayer guard",
+    "Five initial positions verified at 20m horizontal radius",
+    "Native ZombieBase death handler, impulse death enum and AI spawn flags checked against SDK",
+    "Mission cleanup hook and single group initialization inspected",
+    "PBO source/header/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required",
+  "behaviour": "Native AI may roam/chase immediately. Death uses native impulse/ragdoll path; in-engine appearance unverified."
+}
