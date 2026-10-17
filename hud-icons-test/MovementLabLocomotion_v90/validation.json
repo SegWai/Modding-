@@ -1,0 +1,12 @@
+{
+  "version": 90,
+  "checks": [
+    "All prior runtime scripts and animation files byte-identical; new male patrol module plus mission hook only",
+    "Actual patrol method compiled with mocked native APIs: endpoints, rotated body axes, death/input-release, guards, fresh-instance restart",
+    "Common creation helper initializes patrol after orientation, including respawn path",
+    "Native input APIs already used by existing movement controller; no teleport loop",
+    "PBO header/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required",
+  "limitation": "Native NPC input acceptance, gait animation, inertia and endpoint overshoot need in-game verification"
+}

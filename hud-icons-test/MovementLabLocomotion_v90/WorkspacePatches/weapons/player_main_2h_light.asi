@@ -1,0 +1,20 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL01" {
+   Resource "{BAA69F27B0E723B8}DZ/anims/anm/player/attacks/2hd/p_2hd_light_erc_attack_L_03.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL02" {
+   Resource "{CDACF7AF4445CCC8}DZ/anims/anm/player/attacks/2hd/p_2hd_light_erc_attack_L_02.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR01" {
+   Resource "{EE95BAFF15B5EA77}DZ/anims/anm/player/attacks/2hd/p_2hd_light_erc_attack_R_01.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR03" {
+   Resource "{778B03660852DBE7}DZ/anims/anm/player/attacks/2hd/p_2hd_light_erc_attack_R_02.anm"
+  }
+ }
+}
