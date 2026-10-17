@@ -1,0 +1,20 @@
+{
+  "version": 94,
+  "checks": [
+    "One visible infected and confirmed-death five-second replacement retained",
+    "Existing mission/camera/player locomotion/other NPC/graph files unchanged",
+    "No forced infected death-animation selection; hidden Human physics driver instead",
+    "SDK e3dda95b2b9730bdc0dba931abb35304b484bbfc exposes actual Human ragdoll state and bone read/write APIs",
+    "Actual Update/Stop source compiled with mocks: delayed activation, root/bone transfer, one-shot momentum, timeout fallback, layer/simulation restoration and idempotent cleanup",
+    "Driver removed on incompatible map, activation timeout, corpse replacement and mission shutdown",
+    "PBO headers/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "NOT RUN; experimental prototype requires local DayZ 1.30 test",
+  "unverified": [
+    "Human/infected bone bind compatibility and dimensions",
+    "SetBoneGlobal visible pose updates on a frozen infected mesh",
+    "Native hidden-driver simulation/collisions and grenade response",
+    "Root/model-space bone alignment"
+  ],
+  "research": "RAGDOLL-RESEARCH-v94.md contains primary source links and limitations"
+}
