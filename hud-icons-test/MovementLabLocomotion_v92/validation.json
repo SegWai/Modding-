@@ -1,0 +1,14 @@
+{
+  "version": 92,
+  "checks": [
+    "Only infected fixture manager and death module changed versus v91 runtime/graph/mission sources",
+    "Actual death hook + manager update compiled in mock harness: no periodic or missing-reference spawns; one-shot kill notification; independent 5s deadlines; live preservation; corpse deletion; five-slot count",
+    "Five preferred appearances and public-config distinct-class fallback inspected",
+    "Native infected physics death command/signature and sync fields checked against SDK",
+    "Failed spawn casts delete untracked objects; no spawn retry without death",
+    "PBO headers/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required",
+  "ragdoll_limitation": "Explicit native ANIM_DEATH_IMPULSE command is used, but visible ragdoll behaviour remains unverified in-engine",
+  "diagnosis": "Null/cast-failure periodic replacement paths removed; actual prior cause unconfirmed without runtime logs"
+}
