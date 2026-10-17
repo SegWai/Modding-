@@ -1,0 +1,19 @@
+{
+  "version": 95,
+  "reported_v94_failure": "Human helper visibly ragdolled while infected remained frozen in its living pose; bone transfer did not achieve the intended visible result",
+  "checks": [
+    "Only experimental ragdoll helper changed versus v94 runtime/mission/graph sources",
+    "Manual bone-copy path removed; infected VObject assigned to native physical actor instead",
+    "Mesh-handle and actual ragdoll-state gates precede replacement reveal",
+    "Actual visibility/Update/Stop methods tested with compiled mock APIs: at-most-one visible body through script render-state changes, pending activation, takeover, reassertion, timeout, wrong-model fallback, one-shot momentum, cleanup",
+    "Driver hidden/deleted before original visibility restored",
+    "Native SetObject/GetVObject/camera-mask/visible-flag APIs checked against SDK",
+    "PBO headers/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "NOT RUN; experimental native mesh-binding test requires local DayZ",
+  "unverified": [
+    "Whether changing Human VObject controls all skinned body rendering",
+    "Infected mesh binding to Human physics skeleton and correct deformation",
+    "Native visibility resets/child visuals and physics interactions"
+  ]
+}

@@ -1,0 +1,13 @@
+MovementLab v94 - experimental physics-driven infected corpse
+
+This is a prototype for the one living zombie from v93, not another forced death-animation setting. It uses an invisible native Human ragdoll as a physics driver and copies matching bone poses onto the zombie's actual original body after death. The driver is dead, hidden, excluded from vicinity icons and never selected/controlled. The visible body retains its infected mesh/textures. Alive infected AI is unchanged.
+
+At confirmed infected death, create one hidden native SurvivorM_Denis driver, map up to 31 named humanoid bones, require at least 12 matches plus essential head/pelvis/arm/leg bones, initialize the driver from the infected pose and call Human.PhysicsSetRagdoll(true). Wait up to 500ms for Human.PhysicsIsRagdoll() to confirm activation. Only then suspend the zombie's own animation/simulation and collision response, track the driver's root transform and copy model-space bone transforms with SetBoneGlobal every mission frame. Failed bone maps/activation delete the driver and retain the original native corpse.
+
+The same zombie slot remains counted as one visible zombie. Its confirmed-death five-second respawn removes both the invisible driver and visible corpse before spawning its replacement. There is also explicit cleanup on mission shutdown. No periodic spawn, no death-animation override, no change to the other range characters.
+
+IMPORTANT: native compilation and in-game execution are unavailable here. Matching bone names are only a compatibility guard, not proof that bind axes/poses match or that SetBoneGlobal updates a frozen infected mesh correctly. Physics activation is runtime-checked, but the visible pose transfer needs a local test. The invisible driver is an additional engine entity, not a second visible AI enemy. This prototype may fail or show deformation; do not treat it as a verified native infected ragdoll feature.
+
+Requires DayZ 1.30 Human.PhysicsIsRagdoll, as exposed by official script revision e3dda95b2b9730bdc0dba931abb35304b484bbfc (Build 1.30.164078). That revision documents a real Human ragdoll switch and separates the old system into PhysicsSetSimpleDeath. Infected still has no corresponding native ragdoll switch.
+
+Extract into a fresh folder and restart the mission. Kill the one zombie; inspect whether limbs react independently and the original infected appearance remains. Logs begin [MovementLab Zombie Ragdoll] and distinguish failed bone mapping, failed activation, and confirmed driver activation. Grenade blast impulses can affect the hidden driver via the existing PlayerBase blast path.

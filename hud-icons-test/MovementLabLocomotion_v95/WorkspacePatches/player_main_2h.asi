@@ -1,0 +1,2984 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{0F5E6205A5E823C3}DZ/anims/workspaces/player/player_main/player_main.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchMomentum.F97.SprintFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ddeef07ab4dd916785ce.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchMomentum.F93.SprintFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/2e3ca81ab58b63d4f9d8.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchMomentum.F97.SprintFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/4d210d19f1129367620f.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchMomentum.F93.SprintFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/6c8eb271ebce54811c01.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchMomentum.F97.SprintF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/72829c04161f3f28abd1.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchMomentum.F93.SprintF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/e89eaef1ded0edb0aa72.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/38c5f034b2d0c1d42002.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/72023a8e5f37e4dbb6a5.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/25c0f4d086a965a302b8.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/f49c43922596e3b12ef4.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/d5b036675c1848390f17.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/5861b8c36cfd916ca253.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ac83141c3c412da18bef.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/aee93d3c457defe3bbb1.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3df8c5d5928692aaea49.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/472ee3c7d56928710cde.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/70b4023893645f48f587.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/607c55ee5d2b928be716.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/8a3df2217344e2811abd.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/2c987b058b21e665e612.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/9d65c036bd8bc4a1ae1d.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/b12c3df26dcca50064b2.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/17b31be309dbffcf2f2e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/085082a858021a2ece4c.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/8fbba252ef08a7f2ce95.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/219431b58f24ecb16f73.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/6e3aa97aeab06020f083.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/49e2e8c674a885c78408.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/45ea4c6f90e08deb3533.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/681480d4c0b77215fa1e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/032a743135d84160eb1e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/faca2ca795e5206a492e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/a7a3a7288f5dba8dd4eb.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/bcd0d71eb1462c98582a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/35b9f20ac6c1c5b24868.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/c810b7b0d4755441cfad.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/48c75f491cb13cbd8083.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/e6bebc85822d04dbcfce.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/aa259ce4f9e10ed77dc2.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3975e5e3ae4c9ab55bc0.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/da3bed3c785cbc1e84bb.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/9eb86db106ac9bbc7d6d.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/1ba8153747130d50abac.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunFR" {
+   Resource "{824F1567D1C99932}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/5258c19479bd8eeef605.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/debd6a1c2fea100bb2eb.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunFL" {
+   Resource "{EE81BFB6459FF856}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ac9d1fb33b8bd347a34a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/91362882cf34bca3d29e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunF" {
+   Resource "{3AC37E4912390E23}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/59377c34b8e4759868ed.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/58ea02131b493534b52b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunBR" {
+   Resource "{BD5F364CFEBE73B7}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ec016d4cc55bf886aa5a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/c0e47c1bade4f5173e4f.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunBL" {
+   Resource "{D1919C9D6AE812D3}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/2297828c31ac53934ee2.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ee779ae3d66b3d091c7e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunB" {
+   Resource "{2D147156BF72E4FB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/0d3e03a11d75ef981cab.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.WalkSlidingPose" {
+   Resource "{331DE464979CBD9D}DZ/anims/anm/player/layered/stop/p_2hd_erc_walk_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.WalkSlidingPose" {
+   Resource "{331DE464979CBD9D}DZ/anims/anm/player/layered/stop/p_2hd_erc_walk_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.WalkSlidingPose" {
+   Resource "{331DE464979CBD9D}DZ/anims/anm/player/layered/stop/p_2hd_erc_walk_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.WalkSlidingPose" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/f953ad07895276d23400.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.WalkSlidingPose" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/f953ad07895276d23400.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.WalkFR" {
+   Resource "{190404FA95F4CC6D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.WalkFR" {
+   Resource "{190404FA95F4CC6D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.WalkFR" {
+   Resource "{190404FA95F4CC6D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/43361636d45c6fd5e672.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/43361636d45c6fd5e672.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.WalkFL" {
+   Resource "{75CAAE2B01A2AD09}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.WalkFL" {
+   Resource "{75CAAE2B01A2AD09}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.WalkFL" {
+   Resource "{75CAAE2B01A2AD09}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/e6e5dd0d6ccd7b0f3aa5.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/e6e5dd0d6ccd7b0f3aa5.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.WalkF" {
+   Resource "{43FF03FC88CB00BD}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.WalkF" {
+   Resource "{43FF03FC88CB00BD}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.WalkF" {
+   Resource "{43FF03FC88CB00BD}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/20bd3e7af3d3773b950e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/20bd3e7af3d3773b950e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.WalkBR" {
+   Resource "{261427D1BA8326E8}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.WalkBR" {
+   Resource "{261427D1BA8326E8}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.WalkBR" {
+   Resource "{261427D1BA8326E8}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ce4012638d38110ec238.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ce4012638d38110ec238.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.WalkBL" {
+   Resource "{4ADA8D002ED5478C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.WalkBL" {
+   Resource "{4ADA8D002ED5478C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.WalkBL" {
+   Resource "{4ADA8D002ED5478C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/edfefc136b71a1d144e1.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/edfefc136b71a1d144e1.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.WalkB" {
+   Resource "{54280CE32580EA65}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.WalkB" {
+   Resource "{54280CE32580EA65}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.WalkB" {
+   Resource "{54280CE32580EA65}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3470d19c2b75f2f64192.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3470d19c2b75f2f64192.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.TurnR90" {
+   Resource "{39971E50BD18C7BA}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.TurnR90" {
+   Resource "{39971E50BD18C7BA}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.TurnR90" {
+   Resource "{39971E50BD18C7BA}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.TurnR90" {
+   Resource "{39971E50BD18C7BA}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.TurnR90" {
+   Resource "{39971E50BD18C7BA}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.TurnR180" {
+   Resource "{EC9F31E138E5C007}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.TurnR180" {
+   Resource "{EC9F31E138E5C007}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.TurnR180" {
+   Resource "{EC9F31E138E5C007}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.TurnR180" {
+   Resource "{EC9F31E138E5C007}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.TurnR180" {
+   Resource "{EC9F31E138E5C007}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.TurnL90" {
+   Resource "{F423EBCFE6C3E4FF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.TurnL90" {
+   Resource "{F423EBCFE6C3E4FF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.TurnL90" {
+   Resource "{F423EBCFE6C3E4FF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.TurnL90" {
+   Resource "{F423EBCFE6C3E4FF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.TurnL90" {
+   Resource "{F423EBCFE6C3E4FF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.TurnL180" {
+   Resource "{ED30024BCFB5D317}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.TurnL180" {
+   Resource "{ED30024BCFB5D317}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.TurnL180" {
+   Resource "{ED30024BCFB5D317}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.TurnL180" {
+   Resource "{ED30024BCFB5D317}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.TurnL180" {
+   Resource "{ED30024BCFB5D317}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Turn0" {
+   Resource "{FF31C88E574AEAEF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Turn0" {
+   Resource "{FF31C88E574AEAEF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Turn0" {
+   Resource "{FF31C88E574AEAEF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Turn0" {
+   Resource "{FF31C88E574AEAEF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Turn0" {
+   Resource "{FF31C88E574AEAEF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.SprintFR" {
+   Resource "{32834CE3C54F68AF}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.SprintFR" {
+   Resource "{32834CE3C54F68AF}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.SprintFR" {
+   Resource "{32834CE3C54F68AF}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.SprintFR" {
+   Resource "{32834CE3C54F68AF}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.SprintFR" {
+   Resource "{32834CE3C54F68AF}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.SprintFL" {
+   Resource "{5E4DE632511909CB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.SprintFL" {
+   Resource "{5E4DE632511909CB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.SprintFL" {
+   Resource "{5E4DE632511909CB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.SprintFL" {
+   Resource "{5E4DE632511909CB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.SprintFL" {
+   Resource "{5E4DE632511909CB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.SprintF" {
+   Resource "{5A622FE10FBE3573}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.SprintF" {
+   Resource "{5A622FE10FBE3573}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.SprintF" {
+   Resource "{5A622FE10FBE3573}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.SprintF" {
+   Resource "{5A622FE10FBE3573}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.SprintF" {
+   Resource "{5A622FE10FBE3573}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.SickSneeze" {
+   Resource "{0B9B143590807EB9}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.SickSneeze" {
+   Resource "{0B9B143590807EB9}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.SickSneeze" {
+   Resource "{0B9B143590807EB9}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.SickSneeze" {
+   Resource "{0B9B143590807EB9}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.SickSneeze" {
+   Resource "{0B9B143590807EB9}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.SickHot" {
+   Resource "{E7C6628F258805B7}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.SickHot" {
+   Resource "{E7C6628F258805B7}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.SickHot" {
+   Resource "{E7C6628F258805B7}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.SickHot" {
+   Resource "{E7C6628F258805B7}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.SickHot" {
+   Resource "{E7C6628F258805B7}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.SickCough" {
+   Resource "{BC52524E1E9FD6D3}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.SickCough" {
+   Resource "{BC52524E1E9FD6D3}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.SickCough" {
+   Resource "{BC52524E1E9FD6D3}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.SickCough" {
+   Resource "{BC52524E1E9FD6D3}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.SickCough" {
+   Resource "{BC52524E1E9FD6D3}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.SickCold" {
+   Resource "{9E1C621CD7D0548E}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.SickCold" {
+   Resource "{9E1C621CD7D0548E}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.SickCold" {
+   Resource "{9E1C621CD7D0548E}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.SickCold" {
+   Resource "{9E1C621CD7D0548E}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.SickCold" {
+   Resource "{9E1C621CD7D0548E}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.RunSlidingPose" {
+   Resource "{A42EAF9B18B35D5C}DZ/anims/anm/player/layered/stop/p_2hd_erc_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.RunSlidingPose" {
+   Resource "{A42EAF9B18B35D5C}DZ/anims/anm/player/layered/stop/p_2hd_erc_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.RunSlidingPose" {
+   Resource "{A42EAF9B18B35D5C}DZ/anims/anm/player/layered/stop/p_2hd_erc_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.RunSlidingPose" {
+   Resource "{A42EAF9B18B35D5C}DZ/anims/anm/player/layered/stop/p_2hd_erc_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.RunSlidingPose" {
+   Resource "{A42EAF9B18B35D5C}DZ/anims/anm/player/layered/stop/p_2hd_erc_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/470b7ef95cffd2e8739b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/470b7ef95cffd2e8739b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.RunFR" {
+   Resource "{CF465E6793828183}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/470b7ef95cffd2e8739b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.RunFR" {
+   Resource "{CF465E6793828183}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/e21288cdea0a3d3354fc.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/e21288cdea0a3d3354fc.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.RunFL" {
+   Resource "{A388F4B607D4E0E7}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/e21288cdea0a3d3354fc.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.RunFL" {
+   Resource "{A388F4B607D4E0E7}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/f192f14ef18d43bd3a49.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/f192f14ef18d43bd3a49.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.RunF" {
+   Resource "{77CA354950721692}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/f192f14ef18d43bd3a49.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.RunF" {
+   Resource "{77CA354950721692}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/b7e8297c5685e9bfa817.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/b7e8297c5685e9bfa817.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.RunBR" {
+   Resource "{F0567D4CBCF56B06}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/b7e8297c5685e9bfa817.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.RunBR" {
+   Resource "{F0567D4CBCF56B06}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/89e5189012061f303764.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/89e5189012061f303764.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.RunBL" {
+   Resource "{9C98D79D28A30A62}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/89e5189012061f303764.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.RunBL" {
+   Resource "{9C98D79D28A30A62}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/91567d005ad7765d3cdf.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/91567d005ad7765d3cdf.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.RunB" {
+   Resource "{601D3A56FD39FC4A}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/91567d005ad7765d3cdf.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.RunB" {
+   Resource "{601D3A56FD39FC4A}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Look" {
+   Resource "{57E119101FF6D855}DZ/anims/anm/player/layered/look/p_2h_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Look" {
+   Resource "{57E119101FF6D855}DZ/anims/anm/player/layered/look/p_2h_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Look" {
+   Resource "{57E119101FF6D855}DZ/anims/anm/player/layered/look/p_2h_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Look" {
+   Resource "{57E119101FF6D855}DZ/anims/anm/player/layered/look/p_2h_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Look" {
+   Resource "{57E119101FF6D855}DZ/anims/anm/player/layered/look/p_2h_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.IdleExhausted" {
+   Resource "{208077B0FD1A1469}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_erc_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.IdleExhausted" {
+   Resource "{208077B0FD1A1469}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_erc_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.IdleExhausted" {
+   Resource "{208077B0FD1A1469}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_erc_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.IdleExhausted" {
+   Resource "{208077B0FD1A1469}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_erc_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.IdleExhausted" {
+   Resource "{208077B0FD1A1469}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_erc_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Idle05" {
+   Resource "{6D5CCDEC5495AC5E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle05.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Idle05" {
+   Resource "{6D5CCDEC5495AC5E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle05.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Idle05" {
+   Resource "{6D5CCDEC5495AC5E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle05.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Idle05" {
+   Resource "{6D5CCDEC5495AC5E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle05.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Idle05" {
+   Resource "{6D5CCDEC5495AC5E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle05.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Idle04" {
+   Resource "{1A56A564A037432E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle04.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Idle04" {
+   Resource "{1A56A564A037432E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle04.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Idle04" {
+   Resource "{1A56A564A037432E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle04.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Idle04" {
+   Resource "{1A56A564A037432E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle04.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Idle04" {
+   Resource "{1A56A564A037432E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle04.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Idle03" {
+   Resource "{1D915F35C6B1F9ED}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle03.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Idle03" {
+   Resource "{1D915F35C6B1F9ED}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle03.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Idle03" {
+   Resource "{1D915F35C6B1F9ED}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle03.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Idle03" {
+   Resource "{1D915F35C6B1F9ED}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle03.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Idle03" {
+   Resource "{1D915F35C6B1F9ED}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle03.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Idle02" {
+   Resource "{6A9B37BD3213169D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle02.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Idle02" {
+   Resource "{6A9B37BD3213169D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle02.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Idle02" {
+   Resource "{6A9B37BD3213169D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle02.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Idle02" {
+   Resource "{6A9B37BD3213169D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle02.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Idle02" {
+   Resource "{6A9B37BD3213169D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle02.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Idle01" {
+   Resource "{F3858E242FF4270D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle01.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Idle01" {
+   Resource "{F3858E242FF4270D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle01.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Idle01" {
+   Resource "{F3858E242FF4270D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle01.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Idle01" {
+   Resource "{F3858E242FF4270D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle01.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Idle01" {
+   Resource "{F3858E242FF4270D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle01.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.Idle" {
+   Resource "{8D23C97783F56779}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.Idle" {
+   Resource "{8D23C97783F56779}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.Idle" {
+   Resource "{8D23C97783F56779}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.Idle" {
+   Resource "{8D23C97783F56779}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.Idle" {
+   Resource "{8D23C97783F56779}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.GoProneMove" {
+   Resource "{C0CD2F1D1DBA3107}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.GoProneMove" {
+   Resource "{C0CD2F1D1DBA3107}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.GoProneMove" {
+   Resource "{C0CD2F1D1DBA3107}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.GoProneMove" {
+   Resource "{C0CD2F1D1DBA3107}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.GoProneMove" {
+   Resource "{C0CD2F1D1DBA3107}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.GoProne" {
+   Resource "{2C73E3FD6D5D3765}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.GoProne" {
+   Resource "{2C73E3FD6D5D3765}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.GoProne" {
+   Resource "{2C73E3FD6D5D3765}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.GoProne" {
+   Resource "{2C73E3FD6D5D3765}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.GoProne" {
+   Resource "{2C73E3FD6D5D3765}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.NJ2.GoCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2J2.GoCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L2.GoCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1J2.GoCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabStandingWalk.L1.GoCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.WalkSlidingPose" {
+   Resource "{8574B4CDF943EBDC}DZ/anims/anm/player/layered/stop/p_2hd_cro_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.WalkSlidingPose" {
+   Resource "{8574B4CDF943EBDC}DZ/anims/anm/player/layered/stop/p_2hd_cro_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.WalkSlidingPose" {
+   Resource "{8574B4CDF943EBDC}DZ/anims/anm/player/layered/stop/p_2hd_cro_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.WalkSlidingPose" {
+   Resource "{8574B4CDF943EBDC}DZ/anims/anm/player/layered/stop/p_2hd_cro_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/b4b3fc25b7bd82999d67.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/890fcb1ceaa38dc37c92.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/8db286cd187fa50cc09e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3c0e8e159de7fd0da156.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/7874a0f9cbc19b7bf998.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/06daf93607b97fea2710.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/83be96cd232b3b0b4b02.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3fbed9929bddf63b36a6.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/ddb22a65e9478b1d2058.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/18bc994cfe1fa34072bc.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/1e384e8be88fc6d07a02.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/6be8ec8201135b58be5a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/4b79fa5ebfe315a59b5a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/33399da64b72b5327a49.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/d2d2953da669ec14b981.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/9d659347ce25e3dfeb18.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/15260ba7d91392a07e47.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/171165e3f4e8768ae273.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/15520bee498ed61db7a1.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/96bb8d6abd462a5e4249.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/afb5bc4511a2c576cb76.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/5fa98bf57052a052190b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/601b153375cae71e4ece.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/b141dc2158d1eed7a78e.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.TurnR90" {
+   Resource "{7D2FD29AB4B58E02}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.TurnR90" {
+   Resource "{7D2FD29AB4B58E02}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.TurnR90" {
+   Resource "{7D2FD29AB4B58E02}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.TurnR90" {
+   Resource "{7D2FD29AB4B58E02}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.TurnR180" {
+   Resource "{C7659FB87182B5F7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.TurnR180" {
+   Resource "{C7659FB87182B5F7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.TurnR180" {
+   Resource "{C7659FB87182B5F7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.TurnR180" {
+   Resource "{C7659FB87182B5F7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.TurnL90" {
+   Resource "{B09B2705EF6EAD47}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.TurnL90" {
+   Resource "{B09B2705EF6EAD47}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.TurnL90" {
+   Resource "{B09B2705EF6EAD47}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.TurnL90" {
+   Resource "{B09B2705EF6EAD47}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.TurnL180" {
+   Resource "{C6CAAC1286D2A6E7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.TurnL180" {
+   Resource "{C6CAAC1286D2A6E7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.TurnL180" {
+   Resource "{C6CAAC1286D2A6E7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.TurnL180" {
+   Resource "{C6CAAC1286D2A6E7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.Turn0" {
+   Resource "{E654AAB0B8B390A9}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.Turn0" {
+   Resource "{E654AAB0B8B390A9}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.Turn0" {
+   Resource "{E654AAB0B8B390A9}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.Turn0" {
+   Resource "{E654AAB0B8B390A9}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.SprintFR" {
+   Resource "{E584C6FB0F03EA46}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.SprintFR" {
+   Resource "{E584C6FB0F03EA46}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.SprintFR" {
+   Resource "{E584C6FB0F03EA46}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.SprintFR" {
+   Resource "{E584C6FB0F03EA46}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.SprintFL" {
+   Resource "{894A6C2A9B558B22}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.SprintFL" {
+   Resource "{894A6C2A9B558B22}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.SprintFL" {
+   Resource "{894A6C2A9B558B22}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.SprintFL" {
+   Resource "{894A6C2A9B558B22}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.SprintF" {
+   Resource "{91CCA06274059C26}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.SprintF" {
+   Resource "{91CCA06274059C26}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.SprintF" {
+   Resource "{91CCA06274059C26}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.SprintF" {
+   Resource "{91CCA06274059C26}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.SickSneeze" {
+   Resource "{D8527F444C74527B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.SickSneeze" {
+   Resource "{D8527F444C74527B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.SickSneeze" {
+   Resource "{D8527F444C74527B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.SickSneeze" {
+   Resource "{D8527F444C74527B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.SickHot" {
+   Resource "{01C0F7A401FF8F03}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.SickHot" {
+   Resource "{01C0F7A401FF8F03}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.SickHot" {
+   Resource "{01C0F7A401FF8F03}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.SickHot" {
+   Resource "{01C0F7A401FF8F03}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.SickCough" {
+   Resource "{A5373070F166AC95}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.SickCough" {
+   Resource "{A5373070F166AC95}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.SickCough" {
+   Resource "{A5373070F166AC95}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.SickCough" {
+   Resource "{A5373070F166AC95}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.SickCold" {
+   Resource "{B4DEFA804B513F4B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.SickCold" {
+   Resource "{B4DEFA804B513F4B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.SickCold" {
+   Resource "{B4DEFA804B513F4B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.SickCold" {
+   Resource "{B4DEFA804B513F4B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.Look" {
+   Resource "{AB95272FC66DF1C5}DZ/anims/anm/player/layered/look/p_2h_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.Look" {
+   Resource "{AB95272FC66DF1C5}DZ/anims/anm/player/layered/look/p_2h_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.Look" {
+   Resource "{AB95272FC66DF1C5}DZ/anims/anm/player/layered/look/p_2h_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.Look" {
+   Resource "{AB95272FC66DF1C5}DZ/anims/anm/player/layered/look/p_2h_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.IdleExhausted" {
+   Resource "{0A42EF2C619B7FAC}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_cro_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.IdleExhausted" {
+   Resource "{0A42EF2C619B7FAC}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_cro_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.IdleExhausted" {
+   Resource "{0A42EF2C619B7FAC}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_cro_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.IdleExhausted" {
+   Resource "{0A42EF2C619B7FAC}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_cro_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.Idle" {
+   Resource "{6B255C5CA782EDCD}DZ/anims/anm/player/moves/2handed/p_2hd_cro_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.Idle" {
+   Resource "{6B255C5CA782EDCD}DZ/anims/anm/player/moves/2handed/p_2hd_cro_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.Idle" {
+   Resource "{6B255C5CA782EDCD}DZ/anims/anm/player/moves/2handed/p_2hd_cro_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.Idle" {
+   Resource "{6B255C5CA782EDCD}DZ/anims/anm/player/moves/2handed/p_2hd_cro_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.GoProneMove" {
+   Resource "{619405F39FAEDAF8}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.GoProneMove" {
+   Resource "{619405F39FAEDAF8}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.GoProneMove" {
+   Resource "{619405F39FAEDAF8}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.GoProneMove" {
+   Resource "{619405F39FAEDAF8}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.GoProne" {
+   Resource "{07894DA4243A4295}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.GoProne" {
+   Resource "{07894DA4243A4295}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.GoProne" {
+   Resource "{07894DA4243A4295}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.GoProne" {
+   Resource "{07894DA4243A4295}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L5.GoErect" {
+   Resource "{C5C82CA663B09879}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L4.GoErect" {
+   Resource "{C5C82CA663B09879}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L3.GoErect" {
+   Resource "{C5C82CA663B09879}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabCrouchSpeeds.L2.GoErect" {
+   Resource "{C5C82CA663B09879}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.BlowFireplaceCro.In" {
+   Resource "{9E1025DB13481BFF}DZ/anims/anm/player/actions/items/p_2hd_cro_blow_fireplace_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.BlowFireplaceCro.Loop" {
+   Resource "{88AF907272CFE7F0}DZ/anims/anm/player/actions/items/p_2hd_cro_blow_fireplace_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.BlowFireplaceCro.Out" {
+   Resource "{5A06476E9A8269BB}DZ/anims/anm/player/actions/items/p_2hd_cro_blow_fireplace_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.In" {
+   Resource "{D6D7CCE621C2ADE0}DZ/anims/anm/player/actions/environment/p_2hd_erc_farminghoe_digging_worms_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Loop" {
+   Resource "{E8E2503DB8E36CE9}DZ/anims/anm/player/actions/environment/p_2hd_erc_farminghoe_digging_worms_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Out" {
+   Resource "{D58CB4C3E6DD8E2A}DZ/anims/anm/player/actions/environment/p_2hd_erc_farminghoe_digging_worms_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatSnowCro.In" {
+   Resource "{E3E9DD803ED2D109}DZ/anims/anm/player/actions/consumption/p_2hd_cro_eat_snow_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatSnowCro.Loop" {
+   Resource "{F109F4F74B748E1F}DZ/anims/anm/player/actions/consumption/p_2hd_cro_eat_snow_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatSnowCro.Out" {
+   Resource "{4A19DC72E02B3357}DZ/anims/anm/player/actions/consumption/p_2hd_cro_eat_snow_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.InteractCro.In" {
+   Resource "{CB51F8A4D2959D72}DZ/anims/anm/player/actions/environment/p_2hd_cro_interact_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.InteractCro.Loop" {
+   Resource "{E447DE35AAD631DA}DZ/anims/anm/player/actions/environment/p_2hd_cro_interact_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.InteractCro.Out" {
+   Resource "{AC20C5EB9A219A37}DZ/anims/anm/player/actions/environment/p_2hd_cro_interact_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.InteractErc.In" {
+   Resource "{189893D50E61B1B0}DZ/anims/anm/player/actions/environment/p_2hd_erc_interact_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.InteractErc.Loop" {
+   Resource "{CFBD706CE3B1442A}DZ/anims/anm/player/actions/environment/p_2hd_erc_interact_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.InteractErc.Out" {
+   Resource "{E8980921938CD38F}DZ/anims/anm/player/actions/environment/p_2hd_erc_interact_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryCro.In" {
+   Resource "{7F976070C48B60FB}DZ/anims/anm/player/actions/misc/p_2hd_cro_search_inventory_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryCro.Loop" {
+   Resource "{7F4AF0FFF8C89962}DZ/anims/anm/player/actions/misc/p_2hd_cro_search_inventory_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryCro.Out" {
+   Resource "{7F361B78468E0514}DZ/anims/anm/player/actions/misc/p_2hd_cro_search_inventory_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryErc.In" {
+   Resource "{AB062685BC14DDB6}DZ/anims/anm/player/actions/misc/p_2hd_erc_search_inventory_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryErc.Loop" {
+   Resource "{DD60B98106BED766}DZ/anims/anm/player/actions/misc/p_2hd_erc_search_inventory_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryErc.Out" {
+   Resource "{ED81176FD0CE74C6}DZ/anims/anm/player/actions/misc/p_2hd_erc_search_inventory_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryPne.In" {
+   Resource "{F417F820FE8892CF}DZ/anims/anm/player/actions/misc/p_2hd_pne_search_inventory_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryPne.Loop" {
+   Resource "{617A6FA458F70F09}DZ/anims/anm/player/actions/misc/p_2hd_pne_search_inventory_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SearchInventoryPne.Out" {
+   Resource "{5C234034DEF5C7D2}DZ/anims/anm/player/actions/misc/p_2hd_pne_search_inventory_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.In" {
+   Resource "{A7B7042AAD90C372}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group4_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Loop" {
+   Resource "{AB9D9BA05BB1280F}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group4_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Out" {
+   Resource "{87F612B1461785A7}DZ/anims/anm/player/actions/items/p_cro_2hd_sharpening_group4_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.VomitingCro.In" {
+   Resource "{D15B46B390656E3B}DZ/anims/anm/player/actions/misc/p_2hd_cro_vomiting_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.VomitingCro.Loop" {
+   Resource "{C5125BB9545B6BCF}DZ/anims/anm/player/actions/misc/p_2hd_cro_vomiting_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.VomitingCro.Out" {
+   Resource "{D724A50BB562E240}DZ/anims/anm/player/actions/misc/p_2hd_cro_vomiting_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DisassembleErc.Cancel" {
+   Resource "{150D9E15533D08A0}DZ/anims/anm/player/actions/basebuilding/p_2hd_fireaxe_erc_disassemble_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.DisassembleErc.InLoopOut" {
+   Resource "{3D86083034048A24}DZ/anims/anm/player/actions/basebuilding/p_2hd_fireaxe_erc_disassemble.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.HackTreeErc.Cancel" {
+   Resource "{F5694F7FC2FD92B9}DZ/anims/anm/player/actions/horticulture/p_2hd_erc_hack_tree_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.HackTreeErc.InLoopOut" {
+   Resource "{449EC569589112F2}DZ/anims/anm/player/actions/horticulture/p_2hd_erc_hack_tree.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.MineRockErc.Cancel" {
+   Resource "{4DFBC69D30E8F7D7}DZ/anims/anm/player/actions/horticulture/p_erc_pickaxe_dig_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "ActionInLoopOut.MineRockErc.InLoopOut" {
+   Resource "{C9E8B7E3314194D6}DZ/anims/anm/player/actions/horticulture/p_erc_pickaxe_mine.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.AttachItemCro.Once" {
+   Resource "{6CB2867196EAEA4C}DZ/anims/anm/player/actions/environment/p_2hd_cro_attach_item.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.AttachItemErc.Once" {
+   Resource "{BF7BED004A1EC68E}DZ/anims/anm/player/actions/environment/p_2hd_erc_attach_item.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.CloseLidCro.Once" {
+   Resource "{CED65D755242EC15}DZ/anims/anm/player/actions/environment/p_2h_cro_low_lid_close.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.CloseLidErc.Once" {
+   Resource "{E52CF32C1B2599E5}DZ/anims/anm/player/actions/environment/p_2h_erc_low_lid_close.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.DropItemHandsCro.Once" {
+   Resource "{1C37740FF91DD140}DZ/anims/anm/player/actions/items/dropping/p_2hd_cro_drop_hands.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.DropItemHandsErc.Once" {
+   Resource "{0552163116E4AB06}DZ/anims/anm/player/actions/items/dropping/p_2hd_erc_drop_hands.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.DropItemHandsPne.Once" {
+   Resource "{B1C50B8859478FA2}DZ/anims/anm/player/actions/items/dropping/p_2hd_pne_drop_hands.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.DropItemInventoryCro.Once" {
+   Resource "{FB70D59EB564E2E1}DZ/anims/anm/player/actions/items/dropping/p_2hd_cro_drop_inventory.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.DropItemInventoryErc.Once" {
+   Resource "{98D3939E15699B34}DZ/anims/anm/player/actions/items/dropping/p_2hd_erc_drop_inventory.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.InteractOnceCro.Once" {
+   Resource "{17B41B108B01286C}DZ/anims/anm/player/actions/environment/p_2h_cro_interact.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.InteractOnceErc.Once" {
+   Resource "{F1B28E3BAF76A2D8}DZ/anims/anm/player/actions/environment/p_2h_erc_interact.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.OpenDoorCro.Once" {
+   Resource "{032F83CC58390841}DZ/anims/anm/player/actions/environment/p_2h_cro_low_door_open.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.OpenDoorErc.Once" {
+   Resource "{28D52D95115E7DB1}DZ/anims/anm/player/actions/environment/p_2h_erc_low_door_open.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.OpenLidCro.Once" {
+   Resource "{3367DFB0875BA78E}DZ/anims/anm/player/actions/environment/p_2h_cro_low_lid_open.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.OpenLidErc.Once" {
+   Resource "{77DF137A8EF6EE36}DZ/anims/anm/player/actions/environment/p_2h_erc_low_lid_open.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpHandsCro.Once" {
+   Resource "{7BE68FDC7618F2AE}DZ/anims/anm/player/actions/environment/p_2hd_cro_pickUp_hands.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpHandsErc.Once" {
+   Resource "{3F5E43167FB5BB16}DZ/anims/anm/player/actions/environment/p_2hd_erc_pickUp_hands.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpHandsPne.Once" {
+   Resource "{DFF6AF6027E181FD}DZ/anims/anm/player/actions/environment/p_2hd_pne_pickUp_hands.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpHandsPneB.Once" {
+   Resource "{D63BCE41BE3359A1}DZ/anims/anm/player/actions/environment/p_2hd_pne_onback_pickUp_hands.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpInventoryCro.Once" {
+   Resource "{B76F57CD1B5B94F7}DZ/anims/anm/player/actions/environment/p_2hd_cro_pickUp_inventory.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpInventoryErc.Once" {
+   Resource "{6A1D6933FB6512CF}DZ/anims/anm/player/actions/environment/p_2hd_erc_pickUp_inventory.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpInventoryPne.Once" {
+   Resource "{332F8203D0D628F0}DZ/anims/anm/player/actions/environment/p_2hd_pne_pickUp_inventory.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.PickUpInventoryPneB.Once" {
+   Resource "{528D31F2A3841709}DZ/anims/anm/player/actions/environment/p_2hd_pne_onback_pickUp_inventory.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.SipPondCro.Once" {
+   Resource "{8BA48A1CA760DFFD}DZ/anims/anm/player/actions/consumption/p_2hd_cro_drink_sip.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeL" {
+   Resource "{97CFB4A26F073A58}DZ/anims/anm/player/moves/2handed/p_2hd_erc_evadeL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeR" {
+   Resource "{FB011E73FB515B3C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_evadeR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.Sprint_StrikeR01" {
+   Resource "{0427DA895D3B5C45}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_charged_extinguisher.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL01" {
+   Resource "{503B784028E2FBE1}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackL_Light_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL02" {
+   Resource "{980BCE4622A49C7E}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackL_Heavy_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace01" {
+   Resource "{14ACD7E647AB3A25}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackL_Light_inplace_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace02" {
+   Resource "{BBE4EF42D7D82579}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackL_Heavy_inplace_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR01" {
+   Resource "{88D78825A80419BC}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_Light_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR03" {
+   Resource "{2B186F59D49E6811}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_ Heavy_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace01" {
+   Resource "{DD28F8E8C1BB7CA5}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_Light_inplace_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace03" {
+   Resource "{A5D2F77BE73C602F}DZ/anims/anm/player/attacks/2hd/extinguisher/p_2hd_erc_attackR_ Heavy_inplace_extinguisher_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Pne.Kick" {
+   Resource "{B757B92DA7C41B39}DZ/anims/anm/player/attacks/2hd/p_2hd_pne_onBack_kick.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Pne.StrikeL01" {
+   Resource "{C3F80994AC1FCD2B}DZ/anims/anm/player/moves/2handed/p_2hd_pne_attack_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Pne.StrikeL02" {
+   Resource "{C3F80994AC1FCD2B}DZ/anims/anm/player/moves/2handed/p_2hd_pne_attack_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Pne.StrikeR01" {
+   Resource "{C3F80994AC1FCD2B}DZ/anims/anm/player/moves/2handed/p_2hd_pne_attack_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Pne.StrikeR03" {
+   Resource "{C3F80994AC1FCD2B}DZ/anims/anm/player/moves/2handed/p_2hd_pne_attack_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Heavy B" {
+   Resource "{F4895AD58986929A}DZ/anims/anm/player/hits/Heavy/p_2hd_cro_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Heavy F" {
+   Resource "{F4895AD58986929A}DZ/anims/anm/player/hits/Heavy/p_2hd_cro_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Heavy L" {
+   Resource "{F4895AD58986929A}DZ/anims/anm/player/hits/Heavy/p_2hd_cro_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Heavy R" {
+   Resource "{F4895AD58986929A}DZ/anims/anm/player/hits/Heavy/p_2hd_cro_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Light B" {
+   Resource "{078F68E6DB91C69A}DZ/anims/anm/player/hits/Light/p_2h_cro_low_hit_light_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Light F" {
+   Resource "{99562B2EA0F04DC9}DZ/anims/anm/player/hits/Light/p_2h_cro_low_hit_light_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Light L" {
+   Resource "{08009C44169CB31C}DZ/anims/anm/player/hits/Light/p_2h_cro_low_hit_light_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Cro.Light R" {
+   Resource "{F90BA41065C386F0}DZ/anims/anm/player/hits/Light/p_2h_cro_low_hit_light_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.Light B" {
+   Resource "{58E9A384E6321786}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.Light F" {
+   Resource "{C630E04C9D539CD5}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.Light L" {
+   Resource "{576657262B3F6200}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.CroRas.Light R" {
+   Resource "{A66D6F72586057EC}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Heavy B" {
+   Resource "{76BD6367324FA263}DZ/anims/anm/player/hits/Heavy/p_2h_erc_low_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Heavy F" {
+   Resource "{E86420AF492E2930}DZ/anims/anm/player/hits/Heavy/p_2h_erc_low_hit_heavy_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Heavy L" {
+   Resource "{793297C5FF42D7E5}DZ/anims/anm/player/hits/Heavy/p_2h_erc_low_hit_heavy_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Heavy R" {
+   Resource "{8839AF918C1DE209}DZ/anims/anm/player/hits/Heavy/p_2h_erc_low_hit_heavy_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Light B" {
+   Resource "{75A7B990E77962DE}DZ/anims/anm/player/hits/Light/p_2h_erc_low_hit_light_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Light F" {
+   Resource "{EB7EFA589C18E98D}DZ/anims/anm/player/hits/Light/p_2h_erc_low_hit_light_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Light L" {
+   Resource "{7A284D322A741758}DZ/anims/anm/player/hits/Light/p_2h_erc_low_hit_light_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Erc.Light R" {
+   Resource "{8B237566592B22B4}DZ/anims/anm/player/hits/Light/p_2h_erc_low_hit_light_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Heavy B" {
+   Resource "{5BF379733304D73B}DZ/anims/anm/player/hits/Heavy/p_2h_erc_ras_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Heavy F" {
+   Resource "{C52A3ABB48655C68}DZ/anims/anm/player/hits/Heavy/p_2h_erc_ras_hit_heavy_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Heavy L" {
+   Resource "{547C8DD1FE09A2BD}DZ/anims/anm/player/hits/Heavy/p_2h_erc_ras_hit_heavy_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Heavy R" {
+   Resource "{A577B5858D569751}DZ/anims/anm/player/hits/Heavy/p_2h_erc_ras_hit_heavy_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light B" {
+   Resource "{58E9A384E6321786}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light F" {
+   Resource "{C630E04C9D539CD5}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light F Block" {
+   Resource "{E0CFCBF6A5787BD8}DZ/anims/anm/player/hits/Light/p_2h_extinguisher_erc_block_ras_hit_light_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light L" {
+   Resource "{576657262B3F6200}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.ErcRas.Light R" {
+   Resource "{A66D6F72586057EC}DZ/anims/anm/player/hits/Light/p_2h_erc_ras_hit_light_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Heavy B" {
+   Resource "{A5D3826E34040C7B}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Heavy F" {
+   Resource "{3B0AC1A64F658728}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Heavy L" {
+   Resource "{AA5C76CCF90979FD}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Heavy R" {
+   Resource "{5B574E988A564C11}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Light B" {
+   Resource "{F891D4D53394CE93}DZ/anims/anm/player/hits/Light/p_2h_pne_low_hit_light_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Light F" {
+   Resource "{6648971D48F545C0}DZ/anims/anm/player/hits/Light/p_2h_pne_low_hit_light_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Light L" {
+   Resource "{F71E2077FE99BB15}DZ/anims/anm/player/hits/Light/p_2h_pne_low_hit_light_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.Pne.Light R" {
+   Resource "{061518238DC68EF9}DZ/anims/anm/player/hits/Light/p_2h_pne_low_hit_light_R.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.Heavy B" {
+   Resource "{A5D3826E34040C7B}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_B.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.Heavy F" {
+   Resource "{3B0AC1A64F658728}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_F.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.Heavy L" {
+   Resource "{AA5C76CCF90979FD}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_L.anm"
+  }
+  AnimSetInstanceSource_Line "Damage.PneRas.Heavy R" {
+   Resource "{5B574E988A564C11}DZ/anims/anm/player/hits/Heavy/p_2hd_pne_hit_heavy_R.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.CroRas.BodyBack" {
+   Resource "{387E153112E3B5F7}DZ/anims/anm/player/deaths/2handed/p_2hd_cro_low_death01_B.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.CroRas.BodyFront" {
+   Resource "{A6A756F969823EA4}DZ/anims/anm/player/deaths/2handed/p_2hd_cro_low_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.CroRas.BodyLeft" {
+   Resource "{37F1E193DFEEC071}DZ/anims/anm/player/deaths/2handed/p_2hd_cro_low_death01_L.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.CroRas.BodyRight" {
+   Resource "{C6FAD9C7ACB1F59D}DZ/anims/anm/player/deaths/2handed/p_2hd_cro_low_death01_R.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Erc.BodyBack" {
+   Resource "{1384BB685B84C007}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_low_death01_B.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Erc.BodyFront" {
+   Resource "{8D5DF8A020E54B54}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_low_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Erc.BodyLeft" {
+   Resource "{1C0B4FCA9689B581}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_low_death01_L.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Erc.BodyRight" {
+   Resource "{ED00779EE5D6806D}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_low_death01_R.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.ErcRas.BodyBack" {
+   Resource "{8D104E6D138B3439}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_ras_death01_B.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.ErcRas.BodyFront" {
+   Resource "{13C90DA568EABF6A}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_ras_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.ErcRas.BodyLeft" {
+   Resource "{829FBACFDE8641BF}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_ras_death01_L.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.ErcRas.BodyRight" {
+   Resource "{7394829BADD97453}DZ/anims/anm/player/deaths/2handed/p_2hd_erc_ras_death01_R.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Pne.BodyBack" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Pne.BodyFront" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Pne.BodyLeft" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.Pne.BodyRight" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.PneBack.BodyFront" {
+   Resource "{7EB9CDC37A3D0BB1}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_onBack_low_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.PneBackRas.BodyFront" {
+   Resource "{E02D38C63232FF8F}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_onBack_ras_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.PneRas.BodyBack" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.PneRas.BodyFront" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.PneRas.BodyLeft" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Deaths.PneRas.BodyRight" {
+   Resource "{157D09D0FC7DB4DD}DZ/anims/anm/player/deaths/2handed/p_2hd_pne_death01_F.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Erc.FallBack" {
+   Resource "{9C7E634851485652}DZ/anims/anm/player/moves/2handed/falling/p_2hd_fall_back.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Erc.FallForward" {
+   Resource "{73110EE7C51896AE}DZ/anims/anm/player/moves/2handed/falling/p_2hd_fall.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Erc.LandBack" {
+   Resource "{24FDBCE7E6F0CC45}DZ/anims/anm/player/moves/2handed/falling/p_2h_land_back.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Erc.LandHeavy" {
+   Resource "{3187B418FA8A6CCC}DZ/anims/anm/player/moves/2handed/falling/p_2h_land_high.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Erc.LandLight" {
+   Resource "{4EA535177FECC137}DZ/anims/anm/player/moves/2handed/falling/p_2h_land_low.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Erc.LandMedium" {
+   Resource "{6A73C68701C8E170}DZ/anims/anm/player/moves/2handed/falling/p_2h_land_med.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Pne.FallForward" {
+   Resource "{540D5DA89A62B4F7}DZ/anims/anm/player/moves/2handed/falling/p_2hd_pne_fall.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Pne.LandHeavy" {
+   Resource "{E6157D32BEC66CFC}DZ/anims/anm/player/moves/2handed/falling/p_2hd_pne_land_heavy.anm"
+  }
+  AnimSetInstanceSource_Line "Falls.Pne.LandMedium" {
+   Resource "{98D1987DD7F6350C}DZ/anims/anm/player/moves/2handed/falling/p_2hd_pne_land_medium.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.FacepalmCro.In" {
+   Resource "{164C37B14F449CE9}DZ/anims/anm/player/gestures/facepalm/p_2hd_cro_facepalm_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.FacepalmCro.Loop" {
+   Resource "{3ECDC395EFD3C37F}DZ/anims/anm/player/gestures/facepalm/p_2hd_cro_facepalm_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.FacepalmCro.Out" {
+   Resource "{62880478F7B2D2C8}DZ/anims/anm/player/gestures/facepalm/p_2hd_cro_facepalm_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.FacepalmErc.In" {
+   Resource "{C5855CC093B0B02B}DZ/anims/anm/player/gestures/facepalm/p_2hd_erc_facepalm_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.FacepalmErc.Loop" {
+   Resource "{15376DCCA6B4B68F}DZ/anims/anm/player/gestures/facepalm/p_2hd_erc_facepalm_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.FacepalmErc.Out" {
+   Resource "{2630C8B2FE1F9B70}DZ/anims/anm/player/gestures/facepalm/p_2hd_erc_facepalm_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldCro.In" {
+   Resource "{0AE9961627E9231F}DZ/anims/anm/player/gestures/hold/p_2hd_cro_hold_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldCro.Loop" {
+   Resource "{03E32FCFFAF1112E}DZ/anims/anm/player/gestures/hold/p_2hd_cro_hold_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldCro.Out" {
+   Resource "{7A417120D82B9446}DZ/anims/anm/player/gestures/hold/p_2hd_cro_hold_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldErc.In" {
+   Resource "{2D4DC8368A18EB29}DZ/anims/anm/player/gestures/hold/p_2hd_erc_hold_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldErc.Loop" {
+   Resource "{2921B75366707AEB}DZ/anims/anm/player/gestures/hold/p_2hd_erc_hold_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldErc.Out" {
+   Resource "{9C47E40BFC5C1EF2}DZ/anims/anm/player/gestures/hold/p_2hd_erc_hold_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldPne.In" {
+   Resource "{7085C6648CD38888}DZ/anims/anm/player/gestures/hold/p_2hd_pne_hold_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldPne.Loop" {
+   Resource "{C3622257A8C61525}DZ/anims/anm/player/gestures/hold/p_2hd_pne_hold_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.HoldPne.Out" {
+   Resource "{71D487C3F69F18C0}DZ/anims/anm/player/gestures/hold/p_2hd_pne_hold_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningCro.In" {
+   Resource "{B018D6B8F798AA4F}DZ/anims/anm/player/gestures/listening/p_2hd_cro_listening_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningCro.Loop" {
+   Resource "{321401A0B1AE3B4A}DZ/anims/anm/player/gestures/listening/p_2hd_cro_listening_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningCro.Out" {
+   Resource "{C03BBC6D2AE38A22}DZ/anims/anm/player/gestures/listening/p_2hd_cro_listening_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningErc.In" {
+   Resource "{F4A01A72FE35E3F7}DZ/anims/anm/player/gestures/listening/p_2hd_erc_listening_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningErc.Loop" {
+   Resource "{51B747A011A3429F}DZ/anims/anm/player/gestures/listening/p_2hd_erc_listening_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningErc.Out" {
+   Resource "{EBC112346384FFD2}DZ/anims/anm/player/gestures/listening/p_2hd_erc_listening_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningPne.In" {
+   Resource "{1408F604A661D91C}DZ/anims/anm/player/gestures/listening/p_2hd_pne_listening_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningPne.Loop" {
+   Resource "{70B4FBDD40FF860E}DZ/anims/anm/player/gestures/listening/p_2hd_pne_listening_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ListeningPne.Out" {
+   Resource "{A3A8724681234AEE}DZ/anims/anm/player/gestures/listening/p_2hd_pne_listening_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.MilitarySaluteErc.In" {
+   Resource "{B7831746A9ADA824}DZ/anims/anm/player/gestures/salut/p_2hd_erc_salute_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.MilitarySaluteErc.Loop" {
+   Resource "{BC50D930F83B0EE9}DZ/anims/anm/player/gestures/salut/p_2hd_erc_salute_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.MilitarySaluteErc.Out" {
+   Resource "{D5D8064AEB9D5648}DZ/anims/anm/player/gestures/salut/p_2hd_erc_salute_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKCro.In" {
+   Resource "{0CC237A146562E62}DZ/anims/anm/player/gestures/affirmations/p_2hd_cro_ok_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKCro.Loop" {
+   Resource "{1E568E7E23EC0178}DZ/anims/anm/player/gestures/affirmations/p_2hd_cro_ok_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKCro.Out" {
+   Resource "{9D3263D33AB068BF}DZ/anims/anm/player/gestures/affirmations/p_2hd_cro_ok_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKErc.In" {
+   Resource "{2511CC62E9C450D0}DZ/anims/anm/player/gestures/affirmations/p_2hd_erc_ok_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKErc.Loop" {
+   Resource "{39F2D05E8E1DC94E}DZ/anims/anm/player/gestures/affirmations/p_2hd_erc_ok_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKErc.Out" {
+   Resource "{52257CE23C623E4C}DZ/anims/anm/player/gestures/affirmations/p_2hd_erc_ok_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKPne.In" {
+   Resource "{28D4538C13081352}DZ/anims/anm/player/gestures/affirmations/p_2hd_pne_ok_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKPne.Loop" {
+   Resource "{643ADE0C88D6AAEF}DZ/anims/anm/player/gestures/affirmations/p_2hd_pne_ok_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.OKPne.Out" {
+   Resource "{0E1FD93C4B0CBFBE}DZ/anims/anm/player/gestures/affirmations/p_2hd_pne_ok_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointCro.In" {
+   Resource "{D2B5F4357124B5B4}DZ/anims/anm/player/gestures/point/p_2hd_cro_point_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointCro.Loop" {
+   Resource "{7A5A5A9C25233A3C}DZ/anims/anm/player/gestures/point/p_2hd_cro_point_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointCro.Out" {
+   Resource "{FE8701D60E8736F5}DZ/anims/anm/player/gestures/point/p_2hd_cro_point_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointErc.In" {
+   Resource "{34B3611E55533F00}DZ/anims/anm/player/gestures/point/p_2hd_erc_point_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointErc.Loop" {
+   Resource "{633F38A2CADA407A}DZ/anims/anm/player/gestures/point/p_2hd_erc_point_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointErc.Out" {
+   Resource "{D445994A92065D30}DZ/anims/anm/player/gestures/point/p_2hd_erc_point_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointPne.In" {
+   Resource "{D92002D65F903932}DZ/anims/anm/player/gestures/point/p_2hd_pne_point_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointPne.Loop" {
+   Resource "{D7A8251B857964DE}DZ/anims/anm/player/gestures/point/p_2hd_pne_point_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.PointPne.Out" {
+   Resource "{3E060C4E5CB032FE}DZ/anims/anm/player/gestures/point/p_2hd_pne_point_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SaluteCro.In" {
+   Resource "{4A36FFD6BA0DE98B}DZ/anims/anm/player/gestures/greeting/p_2hd_cro_greeting_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SaluteCro.Loop" {
+   Resource "{64E2206FFBECE462}DZ/anims/anm/player/gestures/greeting/p_2hd_cro_greeting_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SaluteCro.Out" {
+   Resource "{7F2DB3A8D68D2169}DZ/anims/anm/player/gestures/greeting/p_2hd_cro_greeting_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SaluteErc.In" {
+   Resource "{99FF94A766F9C549}DZ/anims/anm/player/gestures/greeting/p_2hd_erc_greeting_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SaluteErc.Loop" {
+   Resource "{4F188E36B28B9192}DZ/anims/anm/player/gestures/greeting/p_2hd_erc_greeting_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SaluteErc.Out" {
+   Resource "{3B957F62DF2068D1}DZ/anims/anm/player/gestures/greeting/p_2hd_erc_greeting_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SalutePne.In" {
+   Resource "{1B6C276D078F776A}DZ/anims/anm/player/gestures/greeting/p_2hd_pne_greeting_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SalutePne.Loop" {
+   Resource "{0771EE44502C24AE}DZ/anims/anm/player/gestures/greeting/p_2hd_pne_greeting_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SalutePne.Out" {
+   Resource "{DB3D93148774523A}DZ/anims/anm/player/gestures/greeting/p_2hd_pne_greeting_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilenceCro.In" {
+   Resource "{0CCA6FF71751B0FA}DZ/anims/anm/player/gestures/silence/p_2hd_cro_silence_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilenceCro.Loop" {
+   Resource "{D46613F3A1F1D8C6}DZ/anims/anm/player/gestures/silence/p_2hd_cro_silence_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilenceCro.Out" {
+   Resource "{956A35823D2EF0BF}DZ/anims/anm/player/gestures/silence/p_2hd_cro_silence_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilenceErc.In" {
+   Resource "{15AF0DC9F8A8CABC}DZ/anims/anm/player/gestures/silence/p_2hd_erc_silence_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilenceErc.Loop" {
+   Resource "{90DEDF39A85C917E}DZ/anims/anm/player/gestures/silence/p_2hd_erc_silence_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilenceErc.Out" {
+   Resource "{46A35EF3E1DADC7D}DZ/anims/anm/player/gestures/silence/p_2hd_erc_silence_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilencePne.In" {
+   Resource "{A1381070B70BEE18}DZ/anims/anm/player/gestures/silence/p_2hd_pne_silence_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilencePne.Loop" {
+   Resource "{7076334FF008AB95}DZ/anims/anm/player/gestures/silence/p_2hd_pne_silence_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SilencePne.Out" {
+   Resource "{C430ED3980AC6E5E}DZ/anims/anm/player/gestures/silence/p_2hd_pne_silence_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SitACro.In" {
+   Resource "{850BEE91E1895570}DZ/anims/anm/player/gestures/sit/p_2hd_cro_sit_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SitACro.Loop" {
+   Resource "{576F16B05B01D190}DZ/anims/anm/player/gestures/sit/p_2hd_cro_sit_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.SitACro.Out" {
+   Resource "{72879BD52D96E15F}DZ/anims/anm/player/gestures/sit/p_2hd_cro_sit_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownCro.In" {
+   Resource "{04C678AC67318812}DZ/anims/anm/player/gestures/thumbdown/p_2hd_cro_thumbDown_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownCro.Loop" {
+   Resource "{6B821DA8B000CFA3}DZ/anims/anm/player/gestures/thumbdown/p_2hd_cro_thumbDown_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownCro.Out" {
+   Resource "{0B1BA2784193C101}DZ/anims/anm/player/gestures/thumbdown/p_2hd_cro_thumbDown_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownErc.In" {
+   Resource "{407EB4666E9CC1AA}DZ/anims/anm/player/gestures/thumbdown/p_2hd_erc_thumbDown_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownErc.Loop" {
+   Resource "{08215BA8100DB676}DZ/anims/anm/player/gestures/thumbdown/p_2hd_erc_thumbDown_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownErc.Out" {
+   Resource "{20E10C2108F4B4F1}DZ/anims/anm/player/gestures/thumbdown/p_2hd_erc_thumbDown_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownPne.In" {
+   Resource "{A0D6581036C8FB41}DZ/anims/anm/player/gestures/thumbdown/p_2hd_pne_thumbDown_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownPne.Loop" {
+   Resource "{2922E7D5415172E7}DZ/anims/anm/player/gestures/thumbdown/p_2hd_pne_thumbDown_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbDownPne.Out" {
+   Resource "{68886C53EA5301CD}DZ/anims/anm/player/gestures/thumbdown/p_2hd_pne_thumbDown_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpCro.In" {
+   Resource "{0AA04765BEE026A8}DZ/anims/anm/player/gestures/thumbup/p_2hd_cro_thumbUp_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpCro.Loop" {
+   Resource "{D80399B2A045DF2C}DZ/anims/anm/player/gestures/thumbup/p_2hd_cro_thumbUp_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpCro.Out" {
+   Resource "{339002B9D12E2346}DZ/anims/anm/player/gestures/thumbup/p_2hd_cro_thumbUp_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpErc.In" {
+   Resource "{13C5255B51195CEE}DZ/anims/anm/player/gestures/thumbup/p_2hd_erc_thumbUp_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpErc.Loop" {
+   Resource "{9CBB5578A9E89694}DZ/anims/anm/player/gestures/thumbup/p_2hd_erc_thumbUp_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpErc.Out" {
+   Resource "{E05969C80DDA0F84}DZ/anims/anm/player/gestures/thumbup/p_2hd_erc_thumbUp_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpPne.In" {
+   Resource "{A75238E21EBA784A}DZ/anims/anm/player/gestures/thumbup/p_2hd_pne_thumbUp_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpPne.Loop" {
+   Resource "{7C13B90EF1BCAC7F}DZ/anims/anm/player/gestures/thumbup/p_2hd_pne_thumbUp_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.ThumbUpPne.Out" {
+   Resource "{62CADA026CACBDA7}DZ/anims/anm/player/gestures/thumbup/p_2hd_pne_thumbUp_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingCro.In" {
+   Resource "{0F909274784C5D4D}DZ/anims/anm/player/gestures/watching/p_2hd_cro_watching_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingCro.Loop" {
+   Resource "{31A5960F24E39F16}DZ/anims/anm/player/gestures/watching/p_2hd_cro_watching_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingCro.Out" {
+   Resource "{088694D1DAFD1C0A}DZ/anims/anm/player/gestures/watching/p_2hd_cro_watching_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingErc.In" {
+   Resource "{DC59F905A4B8718F}DZ/anims/anm/player/gestures/watching/p_2hd_erc_watching_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingErc.Loop" {
+   Resource "{1A5F38566D84EAE6}DZ/anims/anm/player/gestures/watching/p_2hd_erc_watching_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingErc.Out" {
+   Resource "{4C3E581BD35055B2}DZ/anims/anm/player/gestures/watching/p_2hd_erc_watching_out.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingPne.In" {
+   Resource "{5ECA4ACFC5CEC3AC}DZ/anims/anm/player/gestures/watching/p_2hd_pne_watching_in.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingPne.Loop" {
+   Resource "{523658248F235FDA}DZ/anims/anm/player/gestures/watching/p_2hd_pne_watching_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Gesture.WatchingPne.Out" {
+   Resource "{AC96B46D8B046F59}DZ/anims/anm/player/gestures/watching/p_2hd_pne_watching_out.anm"
+  }
+  AnimSetInstanceSource_Line "GestureOnce.NodHeadPne.Once" {
+   Resource "{CA7C8534A85D78B8}DZ/anims/anm/player/gestures/affirmations/p_2hd_pne_nodhead.anm"
+  }
+  AnimSetInstanceSource_Line "GestureOnce.ShakeHeadPne.Once" {
+   Resource "{886CA12D5B0225D9}DZ/anims/anm/player/gestures/affirmations/p_2hd_pne_shakehead.anm"
+  }
+  AnimSetInstanceSource_Line "GestureOnce.ShrugCro.Once" {
+   Resource "{59B132DABF6A2C9C}DZ/anims/anm/player/gestures/affirmations/p_2hd_cro_shrug.anm"
+  }
+  AnimSetInstanceSource_Line "GestureOnce.ShrugErc.Once" {
+   Resource "{7062C91910F8522E}DZ/anims/anm/player/gestures/affirmations/p_2hd_erc_shrug.anm"
+  }
+  AnimSetInstanceSource_Line "GestureOnce.ShrugPne.Once" {
+   Resource "{7DA756F7EA3411AC}DZ/anims/anm/player/gestures/affirmations/p_2hd_pne_shrug.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.IdleL.JumpSpotIn" {
+   Resource "{E25DDC8772209EA4}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_jump_idle_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.IdleL.JumpSpotOut" {
+   Resource "{BCE83AD5BB8EA8C4}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_jump_idle_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBRIn" {
+   Resource "{A0B149BD5F959372}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpR_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBROut" {
+   Resource "{0F99C13AB73B32CD}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpR_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBackIn" {
+   Resource "{9E568DA0C5612717}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpB_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpBackOut" {
+   Resource "{1CAE3CB8B3BE81BB}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpB_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpFLIn" {
+   Resource "{E687E9A45B804BD7}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpL_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpFLOut" {
+   Resource "{2FEE7FB91519371B}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpL_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpForwardIn" {
+   Resource "{602B34289D539CE3}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpF_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpForwardOut" {
+   Resource "{B91BB32DE66AF62F}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpF_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpSprintIn" {
+   Resource "{592AB8E485ECA44F}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_sprint_jumpF_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.LFoot.JumpSprintOut" {
+   Resource "{C246DB545D1F3B33}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_sprint_jumpF_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBLIn" {
+   Resource "{E687E9A45B804BD7}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpL_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBLOut" {
+   Resource "{2FEE7FB91519371B}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpL_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBackIn" {
+   Resource "{9E568DA0C5612717}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpB_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpBackOut" {
+   Resource "{1CAE3CB8B3BE81BB}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpB_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpFRIn" {
+   Resource "{A0B149BD5F959372}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpR_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpFROut" {
+   Resource "{0F99C13AB73B32CD}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpR_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpForwardIn" {
+   Resource "{602B34289D539CE3}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpF_R_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpForwardOut" {
+   Resource "{B91BB32DE66AF62F}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jumpF_R_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpSprintIn" {
+   Resource "{592AB8E485ECA44F}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_sprint_jumpF_L_50_in.anm"
+  }
+  AnimSetInstanceSource_Line "Jumping.RFoot.JumpSprintOut" {
+   Resource "{C246DB545D1F3B33}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_sprint_jumpF_L_50_out.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.GoErect" {
+   Resource "{C5C82CA663B09879}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.GoProne" {
+   Resource "{07894DA4243A4295}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.GoProneMove" {
+   Resource "{619405F39FAEDAF8}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.Idle" {
+   Resource "{6B255C5CA782EDCD}DZ/anims/anm/player/moves/2handed/p_2hd_cro_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.IdleExhausted" {
+   Resource "{0A42EF2C619B7FAC}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_cro_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.Look" {
+   Resource "{AB95272FC66DF1C5}DZ/anims/anm/player/layered/look/p_2h_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.SickCold" {
+   Resource "{B4DEFA804B513F4B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.SickCough" {
+   Resource "{A5373070F166AC95}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.SickHot" {
+   Resource "{01C0F7A401FF8F03}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.SickSneeze" {
+   Resource "{D8527F444C74527B}DZ/anims/anm/player/moves/2handed/sick/p_2hd_cro_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.SprintF" {
+   Resource "{91CCA06274059C26}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.SprintFL" {
+   Resource "{894A6C2A9B558B22}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.SprintFR" {
+   Resource "{E584C6FB0F03EA46}DZ/anims/anm/player/moves/2handed/p_2hd_cro_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.Turn0" {
+   Resource "{E654AAB0B8B390A9}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.TurnL180" {
+   Resource "{C6CAAC1286D2A6E7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.TurnL90" {
+   Resource "{B09B2705EF6EAD47}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.TurnR180" {
+   Resource "{C7659FB87182B5F7}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.TurnR90" {
+   Resource "{7D2FD29AB4B58E02}DZ/anims/anm/player/moves/2handed/turns/p_2hd_cro_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/0add1731e00289fc465b.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/a5b0071d1f7c79e98b8f.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/c3b07f3c9deec502ff14.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/45b527bf79c8d062f333.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/6fb2d82dd28788e22619.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/0d98baf8e451f2961f7b.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Cro.WalkSlidingPose" {
+   Resource "{8574B4CDF943EBDC}DZ/anims/anm/player/layered/stop/p_2hd_cro_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoErect" {
+   Resource "{88C167A621FB80C8}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.GoProne" {
+   Resource "{07894DA4243A4295}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.Idle" {
+   Resource "{6B255C5CA782EDCD}DZ/anims/anm/player/moves/2handed/p_2hd_cro_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.Look" {
+   Resource "{AB95272FC66DF1C5}DZ/anims/anm/player/layered/look/p_2h_cro_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.CroRas.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.GoCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.GoProne" {
+   Resource "{2C73E3FD6D5D3765}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.GoProneMove" {
+   Resource "{C0CD2F1D1DBA3107}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_transMove_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Idle" {
+   Resource "{8D23C97783F56779}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Idle01" {
+   Resource "{F3858E242FF4270D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle01.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Idle02" {
+   Resource "{6A9B37BD3213169D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle02.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Idle03" {
+   Resource "{1D915F35C6B1F9ED}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle03.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Idle04" {
+   Resource "{1A56A564A037432E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle04.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Idle05" {
+   Resource "{6D5CCDEC5495AC5E}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle05.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.IdleExhausted" {
+   Resource "{208077B0FD1A1469}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_erc_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Look" {
+   Resource "{57E119101FF6D855}DZ/anims/anm/player/layered/look/p_2h_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.RunB" {
+   Resource "{601D3A56FD39FC4A}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.RunBL" {
+   Resource "{9C98D79D28A30A62}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.RunBR" {
+   Resource "{F0567D4CBCF56B06}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.RunF" {
+   Resource "{77CA354950721692}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.RunFL" {
+   Resource "{A388F4B607D4E0E7}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.RunFR" {
+   Resource "{CF465E6793828183}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.RunSlidingPose" {
+   Resource "{A42EAF9B18B35D5C}DZ/anims/anm/player/layered/stop/p_2hd_erc_run_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.SickCold" {
+   Resource "{9E1C621CD7D0548E}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.SickCough" {
+   Resource "{BC52524E1E9FD6D3}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.SickHot" {
+   Resource "{E7C6628F258805B7}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.SickSneeze" {
+   Resource "{0B9B143590807EB9}DZ/anims/anm/player/moves/2handed/sick/p_2hd_erc_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.SprintF" {
+   Resource "{5A622FE10FBE3573}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.SprintFL" {
+   Resource "{5E4DE632511909CB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.SprintFR" {
+   Resource "{32834CE3C54F68AF}DZ/anims/anm/player/moves/2handed/p_2hd_erc_sprintFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.Turn0" {
+   Resource "{FF31C88E574AEAEF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.TurnL180" {
+   Resource "{ED30024BCFB5D317}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.TurnL90" {
+   Resource "{F423EBCFE6C3E4FF}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.TurnR180" {
+   Resource "{EC9F31E138E5C007}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.TurnR90" {
+   Resource "{39971E50BD18C7BA}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.WalkB" {
+   Resource "{54280CE32580EA65}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.WalkBL" {
+   Resource "{4ADA8D002ED5478C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.WalkBR" {
+   Resource "{261427D1BA8326E8}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.WalkF" {
+   Resource "{43FF03FC88CB00BD}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.WalkFL" {
+   Resource "{75CAAE2B01A2AD09}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.WalkFR" {
+   Resource "{190404FA95F4CC6D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Erc.WalkSlidingPose" {
+   Resource "{331DE464979CBD9D}DZ/anims/anm/player/layered/stop/p_2hd_erc_walk_low_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Aim" {
+   Resource "{10805A5CC65A4D51}DZ/anims/anm/player/layered/aim/2handed/p_2hd_erc_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimRun" {
+   Resource "{9CE173F9F000F0E5}DZ/anims/anm/player/layered/aim/2handed/p_2h_erc_walk_ras_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimWalk" {
+   Resource "{167B58CA419A5D65}DZ/anims/anm/player/layered/aim/2handed/p_2hd_erc_walk_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.GoProne" {
+   Resource "{617AA8FD2F162FD4}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Idle" {
+   Resource "{C02A8277C1BE7FC8}DZ/anims/anm/player/moves/2handed/p_2hd_erc_idle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.IdleExhausted" {
+   Resource "{DE093D32B30F8396}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_erc_ras_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Look" {
+   Resource "{57E119101FF6D855}DZ/anims/anm/player/layered/look/p_2h_erc_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunB" {
+   Resource "{2D147156BF72E4FB}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBL" {
+   Resource "{D1919C9D6AE812D3}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBR" {
+   Resource "{BD5F364CFEBE73B7}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunF" {
+   Resource "{3AC37E4912390E23}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFL" {
+   Resource "{EE81BFB6459FF856}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFR" {
+   Resource "{824F1567D1C99932}DZ/anims/anm/player/moves/2handed/p_2hd_erc_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunSlidingPose" {
+   Resource "{FEA85EF4BB87CA39}DZ/anims/anm/player/layered/stop/p_2hd_erc_run_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Turn0" {
+   Resource "{B238838E1501F25E}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL180" {
+   Resource "{A039494B8DFECBA6}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL90" {
+   Resource "{B92AA0CFA488FC4E}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnR180" {
+   Resource "{A1967AE17AAED8B6}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnR90" {
+   Resource "{749E5550FF53DF0B}DZ/anims/anm/player/moves/2handed/turns/p_2hd_erc_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkB" {
+   Resource "{192147E367CBF2D4}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBL" {
+   Resource "{07D3C6006C9E5F3D}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBR" {
+   Resource "{6B1D6CD1F8C83E59}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkF" {
+   Resource "{0EF648FCCA80180C}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFL" {
+   Resource "{38C3E52B43E9B5B8}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFR" {
+   Resource "{540D4FFAD7BFD4DC}DZ/anims/anm/player/moves/2handed/p_2hd_erc_walkFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkSlidingPose" {
+   Resource "{699B150B34A82AF8}DZ/anims/anm/player/layered/stop/p_2hd_erc_walk_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.EvadeL" {
+   Resource "{6E51E21B62EF064D}DZ/anims/anm/player/moves/2handed/p_2hd_pne_evadeL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.EvadeR" {
+   Resource "{029F48CAF6B96729}DZ/anims/anm/player/moves/2handed/p_2hd_pne_evadeR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.GoCrouch" {
+   Resource "{CA6ABCEAD270AB83}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.GoCrouchMove" {
+   Resource "{30F877D83CE86C30}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_transMove_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.GoErect" {
+   Resource "{A65BE28DC87058B5}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.GoErectMove" {
+   Resource "{5CC929BF26E89F06}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_transMove_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.Idle" {
+   Resource "{60B0AABF8936614B}DZ/anims/anm/player/moves/2handed/p_2hd_pne_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.IdleExhausted" {
+   Resource "{CAC3E2B433AC7BA7}DZ/anims/anm/player/moves/2handed/exhausted/p_2h_pne_exhausted.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.Look" {
+   Resource "{BF9E3F5551A60C91}DZ/anims/anm/player/layered/look/p_2h_pne_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.SickCold" {
+   Resource "{745FF71819663B40}DZ/anims/anm/player/moves/2handed/sick/p_2hd_pne_sick_cold.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.SickCough" {
+   Resource "{08C54FF7513CF277}DZ/anims/anm/player/moves/2handed/sick/p_2hd_pne_sick_cough.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.SickHot" {
+   Resource "{0A5501472F4B0385}DZ/anims/anm/player/moves/2handed/sick/p_2hd_pne_sick_hot.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.SickSneeze" {
+   Resource "{8908A7FFF1F6CC9A}DZ/anims/anm/player/moves/2handed/sick/p_2hd_pne_sick_sneeze.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.SprintF" {
+   Resource "{9A5956815AB110A0}DZ/anims/anm/player/moves/2handed/p_2hd_pne_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.SprintFL" {
+   Resource "{49CB61B2C9628F29}DZ/anims/anm/player/moves/2handed/p_2hd_pne_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.SprintFR" {
+   Resource "{2505CB635D34EE4D}DZ/anims/anm/player/moves/2handed/p_2hd_pne_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.Turn0" {
+   Resource "{4BA6D53718E9CE4B}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.TurnL180" {
+   Resource "{A55962392D12662B}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.TurnL90" {
+   Resource "{148B07B9BE97DE14}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.TurnR180" {
+   Resource "{A4F65193DA42753B}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.TurnR90" {
+   Resource "{D93FF226E54CFD51}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkB" {
+   Resource "{BE6B99E7EB3685AB}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkBL" {
+   Resource "{FE4D90B961766328}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkBR" {
+   Resource "{92833A68F520024C}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkF" {
+   Resource "{A9BC96F8467D6F73}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkFL" {
+   Resource "{C15DB3924E0189AD}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkFR" {
+   Resource "{AD931943DA57E8C9}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkL" {
+   Resource "{8DF90F48CA4F4FAF}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.Pne.WalkR" {
+   Resource "{E137A5995E192ECB}DZ/anims/anm/player/moves/2handed/p_2hd_pne_walkR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.EvadeL" {
+   Resource "{B6CC6626B1DC17D3}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_evadeL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.EvadeR" {
+   Resource "{DA02CCF7258A76B7}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_evadeR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.GoCrouch" {
+   Resource "{D46543BF2B5EE7C5}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_onBack_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.GoErect" {
+   Resource "{B8541DD8315E14F3}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_onBack_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.Idle" {
+   Resource "{93ED398DCB513B02}DZ/anims/anm/player/moves/2handed/p_2hd_pne_idle_onBack_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.RunB" {
+   Resource "{6FBB361D174BE35C}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.RunBL" {
+   Resource "{26D01484B24572B6}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.RunBR" {
+   Resource "{4A1EBE55261313D2}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.RunF" {
+   Resource "{786C3902BA000984}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.RunL" {
+   Resource "{30E70A63A264483C}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_walkR_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.RunR" {
+   Resource "{5C29A0B236322958}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_walkL_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.Turn0" {
+   Resource "{DC8F18E634C96F50}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_onBack_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.TurnL180" {
+   Resource "{13AB88BD3CA4084A}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_onBack_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.TurnL90" {
+   Resource "{18E6A0F9F594AF4F}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_onBack_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.TurnR180" {
+   Resource "{1204BB17CBF41B5A}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_onBack_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneB.TurnR90" {
+   Resource "{D5525566AE4F8C0A}DZ/anims/anm/player/moves/2handed/turns/p_2hd_pne_onBack_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneBRas.Aim" {
+   Resource "{8757E2305B510614}DZ/anims/anm/player/moves/2handed/p_2hd_pne_to_onBack_aim.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneBRas.EvadeL" {
+   Resource "{FBC52D26F3970F62}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_evadeL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneBRas.EvadeR" {
+   Resource "{970B87F767C16E06}DZ/anims/anm/player/moves/2handed/p_2hd_pne_onback_evadeR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneBRas.GoCrouch" {
+   Resource "{D46543BF2B5EE7C5}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_onBack_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneBRas.GoErect" {
+   Resource "{F55D56D873150C42}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_onBack_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.AimToBack" {
+   Resource "{8757E2305B510614}DZ/anims/anm/player/moves/2handed/p_2hd_pne_to_onBack_aim.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.EvadeL" {
+   Resource "{2358A91B20A41EFC}DZ/anims/anm/player/moves/2handed/p_2hd_pne_evadeL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.EvadeR" {
+   Resource "{4F9603CAB4F27F98}DZ/anims/anm/player/moves/2handed/p_2hd_pne_evadeR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoCrouch" {
+   Resource "{CA6ABCEAD270AB83}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.GoErect" {
+   Resource "{EB52A98D8A3B4004}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.Look" {
+   Resource "{BF9E3F5551A60C91}DZ/anims/anm/player/layered/look/p_2h_pne_look.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneRas.MoveLook" {
+   Resource "{554C0AA8B1401D2F}DZ/anims/anm/player/layered/look/p_movelook.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.GoErect" {
+   Resource "{DD5966FE445C0A68}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_cro_inj_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.GoProne" {
+   Resource "{1F1807FC03D6D084}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_cro_inj_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.Idle" {
+   Resource "{0C3576539D9BCCA5}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.Look" {
+   Resource "{113BE489042B4CB5}DZ/anims/anm/player/layered/look/Injured/p_2h_cro_inj_look.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.Turn0" {
+   Resource "{2C956C51F33CBA48}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_cro_inj_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.TurnL180" {
+   Resource "{20560A5262FD88ED}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_cro_inj_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.TurnL90" {
+   Resource "{9FAD85DAA343B80C}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_cro_inj_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.TurnR180" {
+   Resource "{21F939F895AD9BFD}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_cro_inj_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.TurnR90" {
+   Resource "{52197045F8989B49}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_cro_inj_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.WalkB" {
+   Resource "{F69D2CD69FF3743B}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.WalkBL" {
+   Resource "{409B6F52526E0BB9}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.WalkBR" {
+   Resource "{2C55C583C6386ADD}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.WalkF" {
+   Resource "{E14A23C932B89EE3}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.WalkFL" {
+   Resource "{7F8B4C797D19E13C}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Cro.WalkFR" {
+   Resource "{1345E6A8E94F8058}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.CroRas.GoErect" {
+   Resource "{90502DFE061712D9}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_cro_inj_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.CroRas.GoProne" {
+   Resource "{1F1807FC03D6D084}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_cro_inj_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.CroRas.Idle" {
+   Resource "{0C3576539D9BCCA5}DZ/anims/anm/player/moves/2handed/injured/p_2hd_cro_inj_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.CroRas.Look" {
+   Resource "{113BE489042B4CB5}DZ/anims/anm/player/layered/look/Injured/p_2h_cro_inj_look.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.GoCrouch" {
+   Resource "{10311277DC4812A1}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_erc_inj_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.GoProne" {
+   Resource "{BE412D1281C23B7B}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_erc_inj_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.Idle" {
+   Resource "{488DBA999436851D}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.Look" {
+   Resource "{F73D71A2205CC601}DZ/anims/anm/player/layered/look/Injured/p_2h_erc_inj_look.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.RunB" {
+   Resource "{A5B349B8EAFA1E2E}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runB_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.RunBL" {
+   Resource "{15D759F1DBB7E1CC}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.RunBR" {
+   Resource "{7919F3204FE180A8}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.RunF" {
+   Resource "{B26446A747B1F4F6}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runF_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.RunFL" {
+   Resource "{2AC77ADAF4C00B49}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.RunFR" {
+   Resource "{4609D00B60966A2D}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.Turn0" {
+   Resource "{4F362A515331C39D}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.TurnL180" {
+   Resource "{810F20BCE0E96312}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.TurnL90" {
+   Resource "{42DFBB24437D3E34}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.TurnR180" {
+   Resource "{80A0131617B97002}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.TurnR90" {
+   Resource "{8F6B4EBB18A61D71}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.WalkB" {
+   Resource "{DD67828FD69401CB}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.WalkBL" {
+   Resource "{23382952F263726C}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.WalkBR" {
+   Resource "{4FF6838366351308}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.WalkF" {
+   Resource "{CAB08D907BDFEB13}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.WalkFL" {
+   Resource "{1C280A79DD1498E9}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Erc.WalkFR" {
+   Resource "{70E6A0A84942F98D}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.Aim" {
+   Resource "{ECBB09EB12F2CC05}DZ/anims/anm/player/layered/aim/2handed/p_2h_erc_inj_ras_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.GoCrouch" {
+   Resource "{10311277DC4812A1}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_erc_inj_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.GoProne" {
+   Resource "{F3486612C38923CA}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_erc_inj_trans_pne_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.Idle" {
+   Resource "{0584F199D67D9DAC}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_idle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.Look" {
+   Resource "{F73D71A2205CC601}DZ/anims/anm/player/layered/look/Injured/p_2h_erc_inj_look.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.RunB" {
+   Resource "{E8BA02B8A8B1069F}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.RunBL" {
+   Resource "{58DE12F199FCF97D}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.RunBR" {
+   Resource "{3410B8200DAA9819}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.RunF" {
+   Resource "{FF6D0DA705FAEC47}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.RunFL" {
+   Resource "{67CE31DAB68B13F8}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.RunFR" {
+   Resource "{0B009B0B22DD729C}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.Turn0" {
+   Resource "{023F6151117ADB2C}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.TurnL180" {
+   Resource "{CC066BBCA2A27BA3}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.TurnL90" {
+   Resource "{0FD6F02401362685}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.TurnR180" {
+   Resource "{CDA9581655F268B3}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.TurnR90" {
+   Resource "{C26205BB5AED05C0}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_erc_inj_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.WalkB" {
+   Resource "{906EC98F94DF197A}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.WalkBL" {
+   Resource "{6E316252B0286ADD}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.WalkBR" {
+   Resource "{02FFC883247E0BB9}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.WalkF" {
+   Resource "{87B9C6903994F3A2}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.WalkFL" {
+   Resource "{512141799F5F8058}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.ErcRas.WalkFR" {
+   Resource "{3DEFEBA80B09E13C}DZ/anims/anm/player/moves/2handed/injured/p_2hd_erc_inj_walkFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.GoCrouch" {
+   Resource "{4E7475D7A090664C}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.GoErect" {
+   Resource "{22452BB0BA90957A}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.Idle" {
+   Resource "{A82556EFCC62BFF6}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_idle_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.Look" {
+   Resource "{1AAE126A2A9FC033}DZ/anims/anm/player/layered/look/Injured/p_2h_pne_inj_look.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.Turn0" {
+   Resource "{6E35962C026D070C}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_pne_inj_turn_0_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.TurnL180" {
+   Resource "{DF4A471C9C3117FF}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_pne_inj_turnL_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.TurnL90" {
+   Resource "{1BED501468CE040B}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_pne_inj_turnL_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.TurnR180" {
+   Resource "{DEE574B66B6104EF}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_pne_inj_turnR_180_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.TurnR90" {
+   Resource "{D659A58B3315274E}DZ/anims/anm/player/moves/2handed/injured/turns/p_2hd_pne_inj_turnR_90_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkB" {
+   Resource "{950EE2FD3433B4F7}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkB_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkBL" {
+   Resource "{023B952FA33FB6FD}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkBL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkBR" {
+   Resource "{6EF53FFE3769D799}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkBR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkF" {
+   Resource "{82D9EDE299785E2F}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkF_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkFL" {
+   Resource "{3D2BB6048C485C78}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkFL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkFR" {
+   Resource "{51E51CD5181E3D1C}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkFR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkL" {
+   Resource "{A69C7452154A7EF3}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkL_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.Pne.WalkR" {
+   Resource "{CA52DE83811C1F97}DZ/anims/anm/player/moves/2handed/injured/p_2hd_pne_inj_walkR_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.PneB.GoCrouch" {
+   Resource "{1ADFB5D456A271CA}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_onBack_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.PneB.GoErect" {
+   Resource "{76EEEBB34CA282FC}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_onBack_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.PneBRas.GoCrouch" {
+   Resource "{1ADFB5D456A271CA}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_onBack_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.PneBRas.GoErect" {
+   Resource "{3BE7A0B30EE99A4D}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_onBack_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.PneRas.GoCrouch" {
+   Resource "{4E7475D7A090664C}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.PneRas.GoErect" {
+   Resource "{6F4C60B0F8DB8DCB}DZ/anims/anm/player/moves/2handed/injured/transitions/p_2hd_pne_inj_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "LocomotionInjured.PneRas.Look" {
+   Resource "{1AAE126A2A9FC033}DZ/anims/anm/player/layered/look/Injured/p_2h_pne_inj_look.anm"
+  }
+  AnimSetInstanceSource_Line "RPS.Erc.In" {
+   Resource "{E144915D6B1FC5E6}DZ/anims/anm/player/gestures/rps/p_2h_erc_rps_in.anm"
+  }
+  AnimSetInstanceSource_Line "RPS.Erc.Out" {
+   Resource "{62B4C2F07EEBB171}DZ/anims/anm/player/gestures/rps/p_2h_erc_rps_out.anm"
+  }
+  AnimSetInstanceSource_Line "RPS.Erc.Paper" {
+   Resource "{8E6284BAAAE2A5F5}DZ/anims/anm/player/gestures/rps/p_2h_erc_rps_paper.anm"
+  }
+  AnimSetInstanceSource_Line "RPS.Erc.Pump" {
+   Resource "{5615EF01D1F57A88}DZ/anims/anm/player/gestures/rps/p_2h_erc_rps_pump.anm"
+  }
+  AnimSetInstanceSource_Line "RPS.Erc.Rock" {
+   Resource "{99A4E82451E73230}DZ/anims/anm/player/gestures/rps/p_2h_erc_rps_rock.anm"
+  }
+  AnimSetInstanceSource_Line "RPS.Erc.Scissors" {
+   Resource "{771DA381BFC05516}DZ/anims/anm/player/gestures/rps/p_2h_erc_rps_scissors.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.1hd.Cancelled" {
+   Resource "{E6CAEE4B9921925A}DZ/anims/anm/player/gestures/suicide/p_1hd_cro_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.1hd.In" {
+   Resource "{CEBEDDF2D12FC21F}DZ/anims/anm/player/gestures/suicide/p_1hd_cro_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.1hd.Loop" {
+   Resource "{AB200347E5BECF39}DZ/anims/anm/player/gestures/suicide/p_1hd_cro_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.1hd.Out" {
+   Resource "{48C6144687D62D7B}DZ/anims/anm/player/gestures/suicide/p_1hd_cro_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.fireaxe.Cancelled" {
+   Resource "{E200A1C4A5994079}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_fireaxe_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.fireaxe.In" {
+   Resource "{E11EC025B58F4004}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_fireaxe_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.fireaxe.Loop" {
+   Resource "{F8CCE03B068E6A27}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_fireaxe_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.fireaxe.Out" {
+   Resource "{38E5BA2EEE6E5371}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_fireaxe_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pitchfork.Cancelled" {
+   Resource "{2326441EDBA36473}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_pitchfork_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pitchfork.In" {
+   Resource "{BD0445B6A365E28E}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_pitchfork_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pitchfork.Loop" {
+   Resource "{F96813880EF667CB}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_pitchfork_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pitchfork.Out" {
+   Resource "{450DF91D6C8648D0}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_pitchfork_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pst.Cancelled" {
+   Resource "{204D3ECE2CE1ADA7}DZ/anims/anm/player/gestures/suicide/p_pst_cro_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pst.In" {
+   Resource "{E44F3FBD25FC52AA}DZ/anims/anm/player/gestures/suicide/p_pst_cro_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pst.Loop" {
+   Resource "{6F6CAB588926367F}DZ/anims/anm/player/gestures/suicide/p_pst_cro_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.pst.Out" {
+   Resource "{62D9A5103AD4273D}DZ/anims/anm/player/gestures/suicide/p_pst_cro_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.rfl.Cancelled" {
+   Resource "{0431EAE4A8C748B3}DZ/anims/anm/player/gestures/suicide/p_rfl_cro_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.rfl.In" {
+   Resource "{171DAC7A3D2ADA6B}DZ/anims/anm/player/gestures/suicide/p_rfl_cro_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.rfl.Loop" {
+   Resource "{F4CB009129B88E25}DZ/anims/anm/player/gestures/suicide/p_rfl_cro_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.rfl.Out" {
+   Resource "{71E32EE1301E665B}DZ/anims/anm/player/gestures/suicide/p_rfl_cro_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.spear.Cancelled" {
+   Resource "{1B6049370D70490B}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_spear_suicide_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.spear.In" {
+   Resource "{DEA0C47F7743E09E}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_spear_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.spear.Loop" {
+   Resource "{6DF11D2461715699}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_spear_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.spear.Out" {
+   Resource "{30E2E11F7B152994}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_spear_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.sword.Cancelled" {
+   Resource "{D2FFD972CE72697C}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_medievalsword_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.sword.In" {
+   Resource "{15861DC55F9E3AC7}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_medievalsword_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.sword.Loop" {
+   Resource "{B81B3D824AAFD7EE}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_medievalsword_suicide_idle.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.sword.Out" {
+   Resource "{6FB35254D72AA77D}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_medievalsword_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.unarmed.Cancelled" {
+   Resource "{487F242CAAF59799}DZ/anims/anm/player/gestures/suicide/p_cro_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.unarmed.In" {
+   Resource "{D7C37C31A96158F0}DZ/anims/anm/player/gestures/suicide/p_cro_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.unarmed.Loop" {
+   Resource "{D83EEC4F80DEDAD0}DZ/anims/anm/player/gestures/suicide/p_cro_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.unarmed.Out" {
+   Resource "{83CC82A0ECC2A8B9}DZ/anims/anm/player/gestures/suicide/p_cro_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.woodaxe.Cancelled" {
+   Resource "{EBBF3810F1E924C6}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_woodaxe_suicide_cancelled.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.woodaxe.In" {
+   Resource "{4930B68BA7F44830}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_woodaxe_suicide_in.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.woodaxe.Loop" {
+   Resource "{529207525AB83213}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_woodaxe_suicide_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Suicide.woodaxe.Out" {
+   Resource "{BE75CC89D512C1DC}DZ/anims/anm/player/gestures/suicide/p_2hd_erc_woodaxe_suicide_out.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.AimPose" {
+   Resource "{8DC837DDFDAFB433}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_throw_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.AimPoseWalk" {
+   Resource "{8DC837DDFDAFB433}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_throw_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.Cancel" {
+   Resource "{63548265EC8B824D}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_throw_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.Idle" {
+   Resource "{3E004731BE0A498B}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_throw_idle.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.In" {
+   Resource "{FEADA7554D5A447E}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_throw_in.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.Out2hd" {
+   Resource "{F1FB3ADA4372C24A}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_throw_out.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.SlidingPose" {
+   Resource "{F3C484DA7B55BA20}DZ/anims/anm/player/layered/stop/p_2hd_cro_walk_throw_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.ToErect" {
+   Resource "{C5C82CA663B09879}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.ToProne" {
+   Resource "{07894DA4243A4295}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_cro_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.Turn0" {
+   Resource "{95999075FEB0E0DA}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_cro_turn_0_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.TurnL180" {
+   Resource "{BECE3BE4B34B065B}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_cro_turnL_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.TurnL90" {
+   Resource "{7C8C1EF41F3D4E8A}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_cro_turnL_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.TurnR180" {
+   Resource "{04A57A1347DDC895}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_cro_turnR_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.TurnR90" {
+   Resource "{914F55E8E6C46819}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_cro_turnR_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.WalkB" {
+   Resource "{3EC99B12D7DB1D6A}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_walkB_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.WalkBL" {
+   Resource "{0E123100760D97CC}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_walkBL_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.WalkBR" {
+   Resource "{498BA2B385485C79}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_walkBR_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.WalkF" {
+   Resource "{98E9B1CEF9EA788F}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_walkF_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.WalkFL" {
+   Resource "{D86A5C83460F8C26}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_walkFL_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Cro.WalkFR" {
+   Resource "{9FF3CF30B54A4793}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_cro_walkFR_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.AimPose" {
+   Resource "{EE6B71DD5DA2CDE6}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.AimPoseWalk" {
+   Resource "{EE6B71DD5DA2CDE6}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.Cancel" {
+   Resource "{27EC4EAFE526CBF5}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.Idle" {
+   Resource "{0340BC1CD7D791AE}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.In" {
+   Resource "{18AB327E692DCECA}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_in.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.Out2hd" {
+   Resource "{DB39A246DFF3A98F}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_out.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.Shake" {
+   Resource "{BF155CD1071EE03D}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_strength_shake.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.SlidingPose" {
+   Resource "{51EECDA48523F424}DZ/anims/anm/player/layered/stop/p_2hd_erc_walk_throw_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.Strength" {
+   Resource "{E41EE623F991D355}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_throw_strength.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.ToCrouch" {
+   Resource "{8203DC9830D71EBF}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.ToProne" {
+   Resource "{2C73E3FD6D5D3765}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_erc_trans_pne_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.Turn0" {
+   Resource "{D1215CBFF71DA962}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_erc_turn_0_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.TurnL180" {
+   Resource "{CCE6EA928FA3A21F}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_erc_turnL_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.TurnL90" {
+   Resource "{1F2F58F4BF30375F}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_erc_turnL_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.TurnR180" {
+   Resource "{768DAB657B356CD1}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_erc_turnR_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.TurnR90" {
+   Resource "{F2EC13E846C911CC}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_erc_turnR_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.WalkB" {
+   Resource "{ED00F0630B2F31A8}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_walkB_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.WalkBL" {
+   Resource "{4AAAFDCA7FA0DE74}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_walkBL_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.WalkBR" {
+   Resource "{0D336E798CE515C1}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_walkBR_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.WalkF" {
+   Resource "{4B20DABF251E544D}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_walkF_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.WalkFL" {
+   Resource "{9CD290494FA2C59E}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_walkFL_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Erc.WalkFR" {
+   Resource "{DB4B03FABCE70E2B}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_erc_walkFR_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.AimPose" {
+   Resource "{CF68CDA00CFE0977}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_throw_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.Cancel" {
+   Resource "{C744A2D9BD72F11E}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_throw_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.Idle" {
+   Resource "{B7D7A1A59874B50A}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_throw_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.In" {
+   Resource "{F53851B663EEC8F8}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_throw_in.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.Out2hd" {
+   Resource "{317A37421145C641}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_throw_out.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.Shake" {
+   Resource "{0EB70B8A09255329}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_throw_strength_shake.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.Strength" {
+   Resource "{C51D5A5EA8CD17C4}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_throw_strength.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.ToCrouch" {
+   Resource "{CA6ABCEAD270AB83}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.ToErect" {
+   Resource "{A65BE28DC87058B5}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.Turn0" {
+   Resource "{3189B0C9AF499389}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_turn_0_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.TurnL180" {
+   Resource "{41D087D75B4E0E52}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_turnL_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.TurnL90" {
+   Resource "{3E2CE489EE6CF3CE}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_turnL_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.TurnR180" {
+   Resource "{FBBBC620AFD8C09C}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_turnR_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.Pne.TurnR90" {
+   Resource "{D3EFAF951795D55D}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_turnR_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.AimPose" {
+   Resource "{A708FB512A49DD08}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_onback_throw_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.Cancel" {
+   Resource "{8B39310670A13534}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_onback_throw_cancel.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.Idle" {
+   Resource "{662995CC014256D5}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_onback_throw_loop.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.In" {
+   Resource "{6C7C98CB6F9AE392}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_onback_throw_in.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.Out2hd" {
+   Resource "{35E2FA103DD2B24E}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_onback_throw_out.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.Shake" {
+   Resource "{43B3BE5BBC273AAD}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_onback_throw_strength_shake.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.Strength" {
+   Resource "{AD7D6CAF8E7AC3BB}DZ/anims/anm/player/moves/2handed/throwing/p_2hd_pne_onback_throw_strength.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.ToCrouch" {
+   Resource "{D46543BF2B5EE7C5}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_onBack_trans_cro_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.ToErect" {
+   Resource "{B8541DD8315E14F3}DZ/anims/anm/player/moves/2handed/transitions/p_2hd_pne_onBack_trans_erc_low.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.Turn0" {
+   Resource "{BD00AFE8E0BD713C}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_onback_turn_0_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.TurnL180" {
+   Resource "{770CA37B7111CC05}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_onback_turnL_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.TurnL90" {
+   Resource "{FDF1D668AB2BCC02}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_onback_turnL_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.TurnR180" {
+   Resource "{CD67E28C858702CB}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_onback_turnR_180_throw.anm"
+  }
+  AnimSetInstanceSource_Line "Throw.PoB.TurnR90" {
+   Resource "{10329D7452D2EA91}DZ/anims/anm/player/moves/2handed/throwing/turns/p_2hd_pne_onback_turnR_90_throw.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.Climb110" {
+   Resource "{D5286BE063AFB6AF}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_climb_110.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.Climb150" {
+   Resource "{C21857BCAEE44CCA}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_climb_150.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.Climb190" {
+   Resource "{FB481359F9384265}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_climb_190.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.ClimbOver110In" {
+   Resource "{4E0F405B67F8121E}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jump_110_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.ClimbOver110Out" {
+   Resource "{0FA158302D3458B6}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_jump_110_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.ClimbOver150In" {
+   Resource "{AF195356145CE83F}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_climb_150_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.ClimbOver150Out" {
+   Resource "{BBC7A28296B91119}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_climb_150_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.ClimbOver190In" {
+   Resource "{0337220243CA4610}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_climb_190_over_in.anm"
+  }
+  AnimSetInstanceSource_Line "VerticalMovement.ErcRun.ClimbOver190Out" {
+   Resource "{746348254E21746B}DZ/anims/anm/player/moves/2handed/jump/p_2hd_erc_run_climb_190_over_out.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.ErcCro.2HDLeftBackSlotHide" {
+   Resource "{CF11C66392A719B2}DZ/anims/anm/player/weaponswitch/p_2hd_erc_slot_backL_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.ErcCro.2HDLeftBackSlotShow" {
+   Resource "{476BC8FC10E7CBE5}DZ/anims/anm/player/weaponswitch/p_2hd_erc_slot_backL_show.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.ErcCro.2HDRightBackSlotHide" {
+   Resource "{CC914ED21DAE6222}DZ/anims/anm/player/weaponswitch/p_2hd_erc_slot_backR_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.ErcCro.2HDRightBackSlotShow" {
+   Resource "{44EB404D9FEEB075}DZ/anims/anm/player/weaponswitch/p_2hd_erc_slot_backR_show.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.Pne.2HDLeftBackSlotHide" {
+   Resource "{4227AB26464AB5FF}DZ/anims/anm/player/weaponswitch/p_2hd_pne_slot_backL_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.Pne.2HDLeftBackSlotShow" {
+   Resource "{CA5DA5B9C40A67A8}DZ/anims/anm/player/weaponswitch/p_2hd_pne_slot_backL_show.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.Pne.2HDRightBackSlotHide" {
+   Resource "{41A72397C943CE6F}DZ/anims/anm/player/weaponswitch/p_2hd_pne_slot_backR_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.Pne.2HDRightBackSlotShow" {
+   Resource "{C9DD2D084B031C38}DZ/anims/anm/player/weaponswitch/p_2hd_pne_slot_backR_show.anm"
+  }
+ }
+}
