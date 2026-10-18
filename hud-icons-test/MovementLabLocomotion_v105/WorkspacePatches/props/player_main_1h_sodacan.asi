@@ -1,0 +1,59 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.In" {
+   Resource "{C2C58CE0B5907EAC}DZ/anims/anm/player/actions/consumption/p_cro_drink_can_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Loop" {
+   Resource "{9518BCD5C2C9D12A}DZ/anims/anm/player/actions/consumption/p_cro_drink_can_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Out" {
+   Resource "{E8C2ACED2AADAB1A}DZ/anims/anm/player/actions/consumption/p_cro_drink_can_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.In" {
+   Resource "{867D402ABC3D3714}DZ/anims/anm/player/actions/consumption/p_erc_drink_can_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Loop" {
+   Resource "{F6BBFAD562C4A8FF}DZ/anims/anm/player/actions/consumption/p_erc_drink_can_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Out" {
+   Resource "{C33802B463CADEEA}DZ/anims/anm/player/actions/consumption/p_erc_drink_can_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.In" {
+   Resource "{66D5AC5CE4690DFF}DZ/anims/anm/player/actions/consumption/p_pne_drink_can_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Loop" {
+   Resource "{D7B846A833986C6E}DZ/anims/anm/player/actions/consumption/p_pne_drink_can_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Out" {
+   Resource "{8B5162C6816D6BD6}DZ/anims/anm/player/actions/consumption/p_pne_drink_can_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.In" {
+   Resource "{E6C1323D8A2DDC3F}DZ/anims/anm/player/actions/consumption/p_cro_emptying_fb_can_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Loop" {
+   Resource "{D6583D6C35659274}DZ/anims/anm/player/actions/consumption/p_cro_emptying_fb_can_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Out" {
+   Resource "{6935E668B88EDF1B}DZ/anims/anm/player/actions/consumption/p_cro_emptying_fb_can_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Out2" {
+   Resource "{93B35C83D2A11A2A}DZ/anims/anm/player/actions/consumption/p_cro_emptying_fb_can_empty.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.In" {
+   Resource "{C79B296B6BDD6ABF}DZ/anims/anm/player/actions/consumption/p_erc_emptying_fb_can_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Loop" {
+   Resource "{44EF317BA325E3A6}DZ/anims/anm/player/actions/consumption/p_erc_emptying_fb_can_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Out" {
+   Resource "{BDA4A09DC0116256}DZ/anims/anm/player/actions/consumption/p_erc_emptying_fb_can_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Out2" {
+   Resource "{319915FD2CD7542E}DZ/anims/anm/player/actions/consumption/p_erc_emptying_fb_can_empty.anm"
+  }
+ }
+}

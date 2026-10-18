@@ -1,0 +1,57 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ IkPose "{139AFB2DF6656444}DZ/anims/anm/player/ik/weapons/mosin9130.anm"
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{F9BA3A0F18483285}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_chambering_loop_bullet_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{9481D45D15BCD8E4}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_chambering_loop_nobullet_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{414E3A64EFACBEFF}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_fire_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{3175190330291D3A}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_fire_empty_cocked_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{04F140F1E68B55BE}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_fire_jam_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{479AEA120127D2EF}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_jam_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{3ED449DBF435671C}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_jam_cancel_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{DF79699DDE0894A4}DZ/anims/anm/player/reloads/Mosin_1903/p_erc_reload_action_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_Bullet" {
+   Resource "{0C1CBC1155C3F7C5}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_chambering_loop_bullet_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{F07BFD1EC385CE31}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_chambering_loop_nobullet_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{E6A589EA0C46AF78}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_fire_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{3DCAF07D4F680394}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_fire_empty_cocked_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{99CFA3A07184F523}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_fire_jam_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{19DF8DB27DFFA602}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_jam_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{9B3608FBEF048E47}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_jam_cancel_Mosin1903_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{55F0D8E3341736BD}DZ/anims/anm/player/reloads/Mosin_1903/p_pne_reload_action_Mosin1903_ras.anm"
+  }
+ }
+}

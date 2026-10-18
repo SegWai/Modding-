@@ -1,0 +1,45 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ IkPose "{F7A52CEE6628658F}DZ/anims/anm/player/ik/weapons/izh18.anm"
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{4878643D5D497380}DZ/anims/anm/player/reloads/IZH18Spartan/p_erc_chambering_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{3E056E4B9B063B9C}DZ/anims/anm/player/reloads/IZH18Spartan/p_erc_fire_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireCocked" {
+   Resource "{2095BFE504DC41B6}DZ/anims/anm/player/reloads/IZH18Spartan/p_erc_fire_empty_cocked_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{21FAEFDAA6AB7DC6}DZ/anims/anm/player/reloads/IZH18Spartan/p_erc_jam_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{209FB263E89895CB}DZ/anims/anm/player/reloads/IZH18Spartan/p_erc_jam_cancel_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{165F22EFD7E773DC}DZ/anims/anm/player/reloads/IZH18Spartan/p_erc_reload_action_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{C2F1D543B756D199}DZ/anims/anm/player/reloads/IZH18Spartan/p_pne_chambering_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{821FB86EC54FE3F3}DZ/anims/anm/player/reloads/IZH18Spartan/p_pne_fire_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireCocked" {
+   Resource "{9F2477EF3ED86A3F}DZ/anims/anm/player/reloads/IZH18Spartan/p_pne_fire_empty_cocked_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{9058B881A890CED2}DZ/anims/anm/player/reloads/IZH18Spartan/p_pne_jam_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{AA16031D028737D2}DZ/anims/anm/player/reloads/IZH18Spartan/p_pne_jam_cancel_IZH18Spartan_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{D374A166D2A8C44D}DZ/anims/anm/player/reloads/IZH18Spartan/p_pne_reload_action_IZH18Spartan_ras.anm"
+  }
+ }
+}
