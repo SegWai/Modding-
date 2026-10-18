@@ -1,0 +1,12 @@
+{
+  "purpose": "Collect extracted native assets for human/infected rig comparison; does not implement a ragdoll",
+  "checks": [
+    "12 Python fixture tests passed for the actual shared selection rules and upload audit parser",
+    "Verified human/infected workspace and model selection; animation clips/textures excluded",
+    "Verified multipart manifests, hashes, model headers, source bone-array parsing and incomplete-input reporting",
+    "Verified rejection of path traversal, duplicate paths, unlisted files, hash tampering and size-limit violations",
+    "Collector archive integrity checked"
+  ],
+  "windows_collector_execution": "NOT RUN: Windows PowerShell runtime is unavailable in this Linux environment",
+  "native_model_and_ragdoll_verification": "Pending actual asset upload and local DayZ Tools/game testing"
+}

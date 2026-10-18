@@ -1,0 +1,15 @@
+{
+  "roots": ["dz/anims", "dz/characters"],
+  "include": [
+    "^dz/anims/workspaces/.*(?:player_main|infected|zomb|human).*\\.(?:agr|agf|ast|asi|phys|physics|phx|ragdoll|skeleton|cfg|cpp|bin|xml|json)$",
+    "^dz/anims/.*(?:ragdoll|rag_doll|skeleton).*\\.(?:agr|agf|ast|asi|phys|physics|phx|ragdoll|skeleton|cfg|cpp|bin|xml|json)$",
+    "^dz/anims/(?:[^/]+/)*(?:config\\.(?:cpp|bin)|model\\.cfg)$",
+    "^dz/characters/(?:[^/]+/)*(?:config\\.(?:cpp|bin)|model\\.cfg)$",
+    "^dz/characters/(?:bodies|zombies)/.*\\.(?:phys|physics|phx|ragdoll|skeleton|xml|json)$",
+    "^dz/characters/zombies/.*hermit.*\\.p3d$",
+    "^dz/characters/bodies/.*\\.p3d$",
+    "^dz/characters/heads/.*denis.*\\.p3d$"
+  ],
+  "max_file_bytes": 18874368,
+  "part_budget_bytes": 20971520
+}
