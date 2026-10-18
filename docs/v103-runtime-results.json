@@ -1,0 +1,219 @@
+{
+  "deaths": 13,
+  "activated": 13,
+  "revealed": 13,
+  "failed": 0,
+  "source_crawling": 0,
+  "source_raised_arms": 2,
+  "visual_outcome": "Not supplied; native activation/readiness does not establish visual continuity.",
+  "records": [
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=true gait=3",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=true left=<-0.177142, 1.215568, 0.469313> right=<0.177003, 1.227195, 0.389570>",
+      "activated": "stage=activated head=<0.013288, 1.571648, 0.095227> pelvis=<-0.038157, 0.961704, 0.011321> crawling=false raisedArms=true gait=3"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.022577, 1.610673, 0.029158> pelvis=<-0.017335, 0.996306, -0.013317> crawling=false raisedArms=false gait=0"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0.207128",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.013164, 1.632846, 0.073020> pelvis=<-0.011318, 1.023644, -0.008759> crawling=false raisedArms=false gait=0.207128"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=1",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229> crawling=false raisedArms=false gait=1"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<-0.005406, 1.654693, 0.126605> pelvis=<-0.003984, 1.056909, -0.003104> crawling=false raisedArms=false gait=0"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0.96739",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.024052, 1.610864, 0.033206> pelvis=<-0.014930, 0.996634, -0.012857> crawling=false raisedArms=false gait=0.96739"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=1.76071",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.023758, 1.610847, 0.032348> pelvis=<-0.015444, 0.996584, -0.012927> crawling=false raisedArms=false gait=1.76071"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0.982324",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229> crawling=false raisedArms=false gait=0.982324"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229> crawling=false raisedArms=false gait=0"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229> crawling=false raisedArms=false gait=0"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229> crawling=false raisedArms=false gait=0"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=true gait=2.70608",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=true left=<-0.183494, 1.189577, 0.459985> right=<0.184954, 1.202659, 0.386846>",
+      "activated": "stage=activated head=<0.015324, 1.575100, 0.097658> pelvis=<-0.034847, 0.965391, 0.010637> crawling=false raisedArms=true gait=2.70608"
+    },
+    {
+      "source_pose": "stage=source_pose crawling=false raisedArms=false gait=0",
+      "stages": [
+        "source_pose",
+        "death_capture",
+        "warming",
+        "pose_seed",
+        "activated",
+        "momentum",
+        "revealed",
+        "followthrough",
+        "followthrough"
+      ],
+      "pose_seed": "stage=pose_seed crawling=false raisedArms=false left=<0.000000, 0.000000, 0.000000> right=<0.000000, 0.000000, 0.000000>",
+      "activated": "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229> crawling=false raisedArms=false gait=0"
+    }
+  ]
+}
