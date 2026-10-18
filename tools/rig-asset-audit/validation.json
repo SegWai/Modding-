@@ -5,8 +5,9 @@
     "Verified human/infected workspace and model selection; animation clips/textures excluded",
     "Verified multipart manifests, hashes, model headers, source bone-array parsing and incomplete-input reporting",
     "Verified rejection of path traversal, duplicate paths, unlisted files, hash tampering and size-limit violations",
-    "Collector archive integrity checked"
+    "Collector archive integrity checked",
+    "7 bounded skeleton/ragdoll parser tests passed; actual upload confirms 159 identical bones/parents, 11 compatible ragdoll bones"
   ],
   "windows_collector_execution": "NOT RUN: Windows PowerShell runtime is unavailable in this Linux environment",
-  "native_model_and_ragdoll_verification": "Pending actual asset upload and local DayZ Tools/game testing"
+  "native_model_and_ragdoll_verification": "202 verified uploaded assets inspected; 4 ODOL56 skeleton tables identical; native activation and bind matrices remain unverified"
 }

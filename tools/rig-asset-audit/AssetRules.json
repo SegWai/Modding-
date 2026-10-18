@@ -1,5 +1,8 @@
 {
-  "roots": ["dz/anims", "dz/characters"],
+  "roots": [
+    "dz/anims",
+    "dz/characters"
+  ],
   "include": [
     "^dz/anims/workspaces/.*(?:player_main|infected|zomb|human).*\\.(?:agr|agf|ast|asi|phys|physics|phx|ragdoll|skeleton|cfg|cpp|bin|xml|json)$",
     "^dz/anims/.*(?:ragdoll|rag_doll|skeleton).*\\.(?:agr|agf|ast|asi|phys|physics|phx|ragdoll|skeleton|cfg|cpp|bin|xml|json)$",
@@ -8,7 +11,10 @@
     "^dz/characters/(?:bodies|zombies)/.*\\.(?:phys|physics|phx|ragdoll|skeleton|xml|json)$",
     "^dz/characters/zombies/.*hermit.*\\.p3d$",
     "^dz/characters/bodies/.*\\.p3d$",
-    "^dz/characters/heads/.*denis.*\\.p3d$"
+    "^dz/characters/heads/.*denis.*\\.p3d$",
+    "^dz/anims/workspaces/(?:player|infected)/models/.*editorpreview\\.xob$",
+    "^dz/anims/workspaces/(?:player|infected)/.*\\.(?:asy|aw)$",
+    "^dz/characters/(?:bodies/(?:player_testing|player_f_testing)|zombies/z_hermit_m)\\.xob$"
   ],
   "max_file_bytes": 18874368,
   "part_budget_bytes": 20971520

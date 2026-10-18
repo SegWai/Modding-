@@ -23,7 +23,7 @@ class AuditTests(unittest.TestCase):
     def test_selection_rules(self):
         import re
         def chosen(p):return any(re.search(pattern,p.replace('\\','/'),re.I) for pattern in RULES['include'])
-        for path in [r'dz\anims\workspaces\infected_main\infected.asi','dz/anims/workspaces/player_main/locomotion.agf','dz/characters/zombies/hermit_skinny/body.p3d','dz/characters/bodies/male/body.p3d','dz/characters/zombies/model.cfg','dz/anims/data/ragdoll.phys']:
+        for path in [r'dz\anims\workspaces\infected_main\infected.asi','dz/anims/workspaces/player_main/locomotion.agf','dz/characters/zombies/hermit_skinny/body.p3d','dz/characters/bodies/male/body.p3d','dz/characters/zombies/model.cfg','dz/anims/data/ragdoll.phys','dz/anims/workspaces/player/models/player_m_editorpreview.xob','dz/anims/workspaces/infected/models/z_hermit_m_editorpreview.xob','dz/anims/workspaces/infected/synctable.asy','dz/characters/zombies/z_hermit_m.xob','dz/characters/bodies/player_testing.xob']:
             self.assertTrue(chosen(path),path)
         for path in ['dz/anims/workspaces/player_main/walk.anm','dz/characters/zombies/hermit_skinny/texture.paa','Profiles/script.log','dz/characters/zombies/soldier/body.p3d']:
             self.assertFalse(chosen(path),path)
