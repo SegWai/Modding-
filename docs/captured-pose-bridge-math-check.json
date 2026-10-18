@@ -1,0 +1,9 @@
+{
+  "scope": "Offline reconstruction from supplied XOB rest transforms, not captured death frames or a native test.",
+  "shared_nodes": 91,
+  "max_matrix_reconstruction_error": 1.6653345369377348e-14,
+  "graph_control_count": 546,
+  "graph_procedural_node_count": 546,
+  "native_graph_application": "Not integrated or validated; enum/axes/pivot/propagation conventions require native verification.",
+  "full_frame_handoff": "Not implemented in the gameplay package."
+}
