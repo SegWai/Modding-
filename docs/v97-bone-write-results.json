@@ -1,0 +1,59 @@
+{
+  "runs": [
+    {
+      "session": 1,
+      "starts": 2,
+      "finished_frame_counts": [
+        209,
+        217
+      ],
+      "write_results": [
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.181596, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.147624, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.176100, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.141129, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>"
+      ],
+      "captures": [
+        "stage=captured position=<0.000000, 0.000000, 0.000000>",
+        "stage=captured position=<0.000000, 0.000000, 0.000000>"
+      ]
+    },
+    {
+      "session": 2,
+      "starts": 6,
+      "finished_frame_counts": [
+        420,
+        418,
+        425,
+        416,
+        422,
+        428
+      ],
+      "write_results": [
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.180497, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.173901, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.180497, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.172801, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.180497, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.175000, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.181596, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.170602, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.180497, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.172801, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.000000, 0.180497, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>",
+        "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.000000, 0.170602, 0.000000> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.000000, 0.000000, 0.000000>"
+      ],
+      "captures": [
+        "stage=captured position=<0.000000, 0.000000, 0.000000>",
+        "stage=captured position=<0.000000, 0.000000, 0.000000>",
+        "stage=captured position=<0.000000, 0.000000, 0.000000>",
+        "stage=captured position=<0.000000, 0.000000, 0.000000>",
+        "stage=captured position=<0.000000, 0.000000, 0.000000>",
+        "stage=captured position=<0.000000, 0.000000, 0.000000>"
+      ]
+    }
+  ],
+  "user_visible_result": "Native death animation only; no visible head movement.",
+  "interpretation": "Callbacks ran. Proxy lookup returned41, all captured matrices zero; matrix writes rejected and reads false. These invalid-input attempts do not establish skeletal write availability.",
+  "next_change": "v98 uses inherited DayZCreature.GetBoneIndexByName and validates the transform basis/position before writing."
+}
