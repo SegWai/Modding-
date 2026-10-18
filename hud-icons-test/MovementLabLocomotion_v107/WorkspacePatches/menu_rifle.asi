@@ -1,0 +1,61 @@
+AnimSetInstanceSource {
+ Template "{2542460F11BD94B7}DZ/anims/workspaces/player/player_menu/player_menu.ast"
+ ParentTemplates {
+ }
+ Lines {
+  AnimSetInstanceSource_Line "Default.Normal.Idle01" {
+   Resource "{6999D78DBAA43087}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle04.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle02" {
+   Resource "{1E93BF054E06DFF7}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle05.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle03" {
+   Resource "{878D069C53E1EE67}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle06.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle04" {
+   Resource "{F0876E14A7430117}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle07.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle05" {
+   Resource "{8802F23E9EEC9BE1}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle08.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle06" {
+   Resource "{878D069C53E1EE67}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle06.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle07" {
+   Resource "{F0876E14A7430117}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle07.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle08" {
+   Resource "{8802F23E9EEC9BE1}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle08.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle09" {
+   Resource "{FF089AB66A4E7491}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle09.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle10" {
+   Resource "{0348D3DDCC18D3A0}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle10.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle11" {
+   Resource "{7442BB5538BA3CD0}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle11.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle12" {
+   Resource "{ED5C02CC255D0D40}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle12.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle13" {
+   Resource "{9A566A44D1FFE230}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle13.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle14" {
+   Resource "{9D919015B77958F3}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle14.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle15" {
+   Resource "{EA9BF89D43DBB783}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle15.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle16" {
+   Resource "{738541045E3C8613}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle16.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.Idle17" {
+   Resource "{048F298CAA9E6963}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idle17.anm"
+  }
+  AnimSetInstanceSource_Line "Default.Normal.IdleMain" {
+   Resource "{1C99C040E1FF1091}DZ/anims/anm/player/menu/rifle/p_menu_rifle_idleMain.anm"
+  }
+ }
+}

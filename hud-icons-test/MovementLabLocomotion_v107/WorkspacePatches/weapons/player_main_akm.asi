@@ -1,0 +1,75 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ IkPose "{F7A52CEE6628658F}DZ/anims/anm/player/ik/weapons/izh18.anm"
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{B3DA38AE1EEA3954}DZ/anims/anm/player/reloads/AKM/p_erc_chambering_Closed_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{50EDD1C64CAAF032}DZ/anims/anm/player/reloads/AKM/p_erc_fire_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{67DC47B5FE80A981}DZ/anims/anm/player/reloads/AKM/p_erc_fire_empty_automatic_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{5C1ADE9E222548A6}DZ/anims/anm/player/reloads/AKM/p_erc_fire_Jam_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{96CDFBBA0F874266}DZ/anims/anm/player/reloads/AKM/p_erc_jam_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{DCF743FEB466F7E9}DZ/anims/anm/player/reloads/AKM/p_erc_jam_cancel_AKM.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{23D4B5F1676D561C}DZ/anims/anm/player/reloads/AKM/p_erc_reloadAction_Closed_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{F6C115816F65EB04}DZ/anims/anm/player/reloads/AKM/p_erc_reload_mag_noBullet_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{F6C115816F65EB04}DZ/anims/anm/player/reloads/AKM/p_erc_reload_mag_noBullet_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{5A59AA4548ACBD2A}DZ/anims/anm/player/reloads/AKM/p_erc_reload_mag_remove_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{ED602EB6B14CA29A}DZ/anims/anm/player/reloads/AKM/p_erc_reload_noMag_bullet_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{60D88B24D45AC70B}DZ/anims/anm/player/reloads/AKM/p_pne_chambering_Closed_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{B0453DB014FECAD9}DZ/anims/anm/player/reloads/AKM/p_pne_fire_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{0F10D3C2D34170D4}DZ/anims/anm/player/reloads/AKM/p_pne_fire_empty_automatic_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{052835AE09967299}DZ/anims/anm/player/reloads/AKM/p_pne_fire_Jam_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{145E48706EF1F045}DZ/anims/anm/player/reloads/AKM/p_pne_jam_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{FDF4FF83E53A3378}DZ/anims/anm/player/reloads/AKM/p_pne_jam_cancel_AKM.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{A95D048F8D72F405}DZ/anims/anm/player/reloads/AKM/p_pne_reloadAction_Closed_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{7C48A4FF857A491D}DZ/anims/anm/player/reloads/AKM/p_pne_reload_mag_noBullet_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{7C48A4FF857A491D}DZ/anims/anm/player/reloads/AKM/p_pne_reload_mag_noBullet_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{895B19CF821C4375}DZ/anims/anm/player/reloads/AKM/p_pne_reload_mag_remove_AKM_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{67E99FC85B530083}DZ/anims/anm/player/reloads/AKM/p_pne_reload_noMag_bullet_AKM_ras.anm"
+  }
+ }
+}

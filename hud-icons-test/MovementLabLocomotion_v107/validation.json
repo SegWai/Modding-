@@ -1,0 +1,12 @@
+{
+  "version": 93,
+  "checks": [
+    "Only infected group size/registration and death-notification module changed",
+    "Exactly one slot initialized; no forced infected death command/mode/handler remains",
+    "Confirmed-death five-second replacement retained",
+    "All human NPC/camera/locomotion/runtime graph files unchanged",
+    "PBO headers/source payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Not run; local DayZ required",
+  "not_implemented": "Custom character-style infected ragdoll: corresponding Human API not exposed on DayZInfected; native death behaviour preserved instead of forced substitute animation"
+}

@@ -1,0 +1,1284 @@
+{
+  "ordered_bones": [
+    "scene_root",
+    "pelvis",
+    "lefthip_helper",
+    "lefthipextra",
+    "leftupleg",
+    "righthip_helper",
+    "righthipextra",
+    "rightupleg",
+    "spine",
+    "leftuplegroll",
+    "rightuplegroll",
+    "spine1",
+    "leftkneeextra",
+    "leftleg",
+    "rightkneeextra",
+    "rightleg",
+    "spine2",
+    "leftlegroll",
+    "rightlegroll",
+    "spine3",
+    "leftfoot",
+    "leftshoulder",
+    "neck",
+    "rightfoot",
+    "rightshoulder",
+    "leftarm",
+    "lefttoebase",
+    "neck1",
+    "rightarm",
+    "righttoebase",
+    "head",
+    "leftarmextra",
+    "leftarmroll",
+    "rightarmextra",
+    "rightarmroll",
+    "leftelbowextra",
+    "leftforearm",
+    "rightelbowextra",
+    "rightforearm",
+    "leftforearmextra",
+    "leftforearmroll",
+    "rightforearmextra",
+    "rightforearmroll",
+    "lefthand",
+    "leftwristextra",
+    "righthand",
+    "rightwristextra",
+    "lefthand_dummy",
+    "lefthandindex1",
+    "lefthandmiddle1",
+    "lefthandpinky1",
+    "lefthandring",
+    "lefthandthumb1",
+    "righthand_dummy",
+    "righthandindex1",
+    "righthandmiddle1",
+    "righthandpinky1",
+    "righthandring",
+    "righthandthumb1",
+    "lefthandindex2",
+    "lefthandmiddle2",
+    "lefthandpinky2",
+    "lefthandring1",
+    "lefthandthumb2",
+    "righthandindex2",
+    "righthandmiddle2",
+    "righthandpinky2",
+    "righthandring1",
+    "righthandthumb2",
+    "lefthandindex3",
+    "lefthandmiddle3",
+    "lefthandpinky3",
+    "lefthandring2",
+    "lefthandthumb3",
+    "righthandindex3",
+    "righthandmiddle3",
+    "righthandpinky3",
+    "righthandring2",
+    "righthandthumb3",
+    "lefthandindex4",
+    "lefthandmiddle4",
+    "lefthandpinky4",
+    "lefthandring3",
+    "lefthandthumb4",
+    "righthandindex4",
+    "righthandmiddle4",
+    "righthandpinky4",
+    "righthandring3",
+    "righthandthumb4",
+    "lefthandring4",
+    "righthandring4"
+  ],
+  "parents": {
+    "lefthandindex4": "lefthandindex3",
+    "leftarmextra": "leftarm",
+    "neck": "spine3",
+    "lefthandindex3": "lefthandindex2",
+    "righthandpinky1": "righthand",
+    "righthandring": "righthand",
+    "righthandpinky2": "righthandpinky1",
+    "righthandring2": "righthandring1",
+    "righthandindex2": "righthandindex1",
+    "leftlegroll": "leftleg",
+    "rightkneeextra": "rightuplegroll",
+    "rightelbowextra": "rightarmroll",
+    "righthandmiddle4": "righthandmiddle3",
+    "rightarmroll": "rightarm",
+    "lefthandpinky4": "lefthandpinky3",
+    "lefthandthumb2": "lefthandthumb1",
+    "rightupleg": "pelvis",
+    "spine": "pelvis",
+    "rightforearmroll": "rightforearm",
+    "lefthandthumb4": "lefthandthumb3",
+    "leftelbowextra": "leftarmroll",
+    "righthandmiddle1": "righthand",
+    "head": "neck1",
+    "leftshoulder": "spine3",
+    "righthand": "rightforearmroll",
+    "leftkneeextra": "leftuplegroll",
+    "rightforearm": "rightarmroll",
+    "lefthandmiddle4": "lefthandmiddle3",
+    "leftarmroll": "leftarm",
+    "lefthandring1": "lefthandring",
+    "righthandpinky4": "righthandpinky3",
+    "leftforearmextra": "leftforearm",
+    "rightforearmextra": "rightforearm",
+    "rightfoot": "rightlegroll",
+    "rightleg": "rightuplegroll",
+    "spine2": "spine1",
+    "lefthandindex1": "lefthand",
+    "righthandring4": "righthandring3",
+    "righthandindex3": "righthandindex2",
+    "lefthand_dummy": "lefthand",
+    "spine1": "spine",
+    "lefthandpinky3": "lefthandpinky2",
+    "righthandring3": "righthandring2",
+    "lefthip_helper": "pelvis",
+    "leftforearm": "leftarmroll",
+    "lefthandring4": "lefthandring3",
+    "lefttoebase": "leftfoot",
+    "righthip_helper": "pelvis",
+    "rightarm": "rightshoulder",
+    "rightuplegroll": "rightupleg",
+    "leftwristextra": "leftforearmroll",
+    "lefthandpinky2": "lefthandpinky1",
+    "leftleg": "leftuplegroll",
+    "lefthandring": "lefthand",
+    "righthandthumb4": "righthandthumb3",
+    "righthandthumb1": "righthand",
+    "righthandthumb2": "righthandthumb1",
+    "lefthandthumb1": "lefthand",
+    "righthandindex4": "righthandindex3",
+    "rightshoulder": "spine3",
+    "righttoebase": "rightfoot",
+    "rightarmextra": "rightarm",
+    "lefthipextra": "pelvis",
+    "leftupleg": "pelvis",
+    "pelvis": "scene_root",
+    "rightwristextra": "rightforearmroll",
+    "lefthandring3": "lefthandring2",
+    "righthandindex1": "righthand",
+    "leftfoot": "leftlegroll",
+    "lefthandpinky1": "lefthand",
+    "neck1": "neck",
+    "leftforearmroll": "leftforearm",
+    "scene_root": null,
+    "leftarm": "leftshoulder",
+    "lefthandmiddle1": "lefthand",
+    "righthandthumb3": "righthandthumb2",
+    "righthandmiddle2": "righthandmiddle1",
+    "righthandring1": "righthandring",
+    "lefthandmiddle2": "lefthandmiddle1",
+    "leftuplegroll": "leftupleg",
+    "righthand_dummy": "righthand",
+    "righthipextra": "pelvis",
+    "lefthandring2": "lefthandring1",
+    "rightlegroll": "rightleg",
+    "lefthandmiddle3": "lefthandmiddle2",
+    "spine3": "spine2",
+    "lefthandindex2": "lefthandindex1",
+    "righthandmiddle3": "righthandmiddle2",
+    "righthandpinky3": "righthandpinky2",
+    "lefthandthumb3": "lefthandthumb2",
+    "lefthand": "leftforearmroll"
+  },
+  "binding_names": {
+    "scene_root": {
+      "rotation_xyz": [
+        "MLCapturedPose_0_Rotate_X",
+        "MLCapturedPose_0_Rotate_Y",
+        "MLCapturedPose_0_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_0_Translate_X",
+        "MLCapturedPose_0_Translate_Y",
+        "MLCapturedPose_0_Translate_Z"
+      ]
+    },
+    "pelvis": {
+      "rotation_xyz": [
+        "MLCapturedPose_1_Rotate_X",
+        "MLCapturedPose_1_Rotate_Y",
+        "MLCapturedPose_1_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_1_Translate_X",
+        "MLCapturedPose_1_Translate_Y",
+        "MLCapturedPose_1_Translate_Z"
+      ]
+    },
+    "lefthip_helper": {
+      "rotation_xyz": [
+        "MLCapturedPose_2_Rotate_X",
+        "MLCapturedPose_2_Rotate_Y",
+        "MLCapturedPose_2_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_2_Translate_X",
+        "MLCapturedPose_2_Translate_Y",
+        "MLCapturedPose_2_Translate_Z"
+      ]
+    },
+    "lefthipextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_3_Rotate_X",
+        "MLCapturedPose_3_Rotate_Y",
+        "MLCapturedPose_3_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_3_Translate_X",
+        "MLCapturedPose_3_Translate_Y",
+        "MLCapturedPose_3_Translate_Z"
+      ]
+    },
+    "leftupleg": {
+      "rotation_xyz": [
+        "MLCapturedPose_4_Rotate_X",
+        "MLCapturedPose_4_Rotate_Y",
+        "MLCapturedPose_4_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_4_Translate_X",
+        "MLCapturedPose_4_Translate_Y",
+        "MLCapturedPose_4_Translate_Z"
+      ]
+    },
+    "righthip_helper": {
+      "rotation_xyz": [
+        "MLCapturedPose_5_Rotate_X",
+        "MLCapturedPose_5_Rotate_Y",
+        "MLCapturedPose_5_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_5_Translate_X",
+        "MLCapturedPose_5_Translate_Y",
+        "MLCapturedPose_5_Translate_Z"
+      ]
+    },
+    "righthipextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_6_Rotate_X",
+        "MLCapturedPose_6_Rotate_Y",
+        "MLCapturedPose_6_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_6_Translate_X",
+        "MLCapturedPose_6_Translate_Y",
+        "MLCapturedPose_6_Translate_Z"
+      ]
+    },
+    "rightupleg": {
+      "rotation_xyz": [
+        "MLCapturedPose_7_Rotate_X",
+        "MLCapturedPose_7_Rotate_Y",
+        "MLCapturedPose_7_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_7_Translate_X",
+        "MLCapturedPose_7_Translate_Y",
+        "MLCapturedPose_7_Translate_Z"
+      ]
+    },
+    "spine": {
+      "rotation_xyz": [
+        "MLCapturedPose_8_Rotate_X",
+        "MLCapturedPose_8_Rotate_Y",
+        "MLCapturedPose_8_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_8_Translate_X",
+        "MLCapturedPose_8_Translate_Y",
+        "MLCapturedPose_8_Translate_Z"
+      ]
+    },
+    "leftuplegroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_9_Rotate_X",
+        "MLCapturedPose_9_Rotate_Y",
+        "MLCapturedPose_9_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_9_Translate_X",
+        "MLCapturedPose_9_Translate_Y",
+        "MLCapturedPose_9_Translate_Z"
+      ]
+    },
+    "rightuplegroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_10_Rotate_X",
+        "MLCapturedPose_10_Rotate_Y",
+        "MLCapturedPose_10_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_10_Translate_X",
+        "MLCapturedPose_10_Translate_Y",
+        "MLCapturedPose_10_Translate_Z"
+      ]
+    },
+    "spine1": {
+      "rotation_xyz": [
+        "MLCapturedPose_11_Rotate_X",
+        "MLCapturedPose_11_Rotate_Y",
+        "MLCapturedPose_11_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_11_Translate_X",
+        "MLCapturedPose_11_Translate_Y",
+        "MLCapturedPose_11_Translate_Z"
+      ]
+    },
+    "leftkneeextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_12_Rotate_X",
+        "MLCapturedPose_12_Rotate_Y",
+        "MLCapturedPose_12_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_12_Translate_X",
+        "MLCapturedPose_12_Translate_Y",
+        "MLCapturedPose_12_Translate_Z"
+      ]
+    },
+    "leftleg": {
+      "rotation_xyz": [
+        "MLCapturedPose_13_Rotate_X",
+        "MLCapturedPose_13_Rotate_Y",
+        "MLCapturedPose_13_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_13_Translate_X",
+        "MLCapturedPose_13_Translate_Y",
+        "MLCapturedPose_13_Translate_Z"
+      ]
+    },
+    "rightkneeextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_14_Rotate_X",
+        "MLCapturedPose_14_Rotate_Y",
+        "MLCapturedPose_14_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_14_Translate_X",
+        "MLCapturedPose_14_Translate_Y",
+        "MLCapturedPose_14_Translate_Z"
+      ]
+    },
+    "rightleg": {
+      "rotation_xyz": [
+        "MLCapturedPose_15_Rotate_X",
+        "MLCapturedPose_15_Rotate_Y",
+        "MLCapturedPose_15_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_15_Translate_X",
+        "MLCapturedPose_15_Translate_Y",
+        "MLCapturedPose_15_Translate_Z"
+      ]
+    },
+    "spine2": {
+      "rotation_xyz": [
+        "MLCapturedPose_16_Rotate_X",
+        "MLCapturedPose_16_Rotate_Y",
+        "MLCapturedPose_16_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_16_Translate_X",
+        "MLCapturedPose_16_Translate_Y",
+        "MLCapturedPose_16_Translate_Z"
+      ]
+    },
+    "leftlegroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_17_Rotate_X",
+        "MLCapturedPose_17_Rotate_Y",
+        "MLCapturedPose_17_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_17_Translate_X",
+        "MLCapturedPose_17_Translate_Y",
+        "MLCapturedPose_17_Translate_Z"
+      ]
+    },
+    "rightlegroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_18_Rotate_X",
+        "MLCapturedPose_18_Rotate_Y",
+        "MLCapturedPose_18_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_18_Translate_X",
+        "MLCapturedPose_18_Translate_Y",
+        "MLCapturedPose_18_Translate_Z"
+      ]
+    },
+    "spine3": {
+      "rotation_xyz": [
+        "MLCapturedPose_19_Rotate_X",
+        "MLCapturedPose_19_Rotate_Y",
+        "MLCapturedPose_19_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_19_Translate_X",
+        "MLCapturedPose_19_Translate_Y",
+        "MLCapturedPose_19_Translate_Z"
+      ]
+    },
+    "leftfoot": {
+      "rotation_xyz": [
+        "MLCapturedPose_20_Rotate_X",
+        "MLCapturedPose_20_Rotate_Y",
+        "MLCapturedPose_20_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_20_Translate_X",
+        "MLCapturedPose_20_Translate_Y",
+        "MLCapturedPose_20_Translate_Z"
+      ]
+    },
+    "leftshoulder": {
+      "rotation_xyz": [
+        "MLCapturedPose_21_Rotate_X",
+        "MLCapturedPose_21_Rotate_Y",
+        "MLCapturedPose_21_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_21_Translate_X",
+        "MLCapturedPose_21_Translate_Y",
+        "MLCapturedPose_21_Translate_Z"
+      ]
+    },
+    "neck": {
+      "rotation_xyz": [
+        "MLCapturedPose_22_Rotate_X",
+        "MLCapturedPose_22_Rotate_Y",
+        "MLCapturedPose_22_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_22_Translate_X",
+        "MLCapturedPose_22_Translate_Y",
+        "MLCapturedPose_22_Translate_Z"
+      ]
+    },
+    "rightfoot": {
+      "rotation_xyz": [
+        "MLCapturedPose_23_Rotate_X",
+        "MLCapturedPose_23_Rotate_Y",
+        "MLCapturedPose_23_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_23_Translate_X",
+        "MLCapturedPose_23_Translate_Y",
+        "MLCapturedPose_23_Translate_Z"
+      ]
+    },
+    "rightshoulder": {
+      "rotation_xyz": [
+        "MLCapturedPose_24_Rotate_X",
+        "MLCapturedPose_24_Rotate_Y",
+        "MLCapturedPose_24_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_24_Translate_X",
+        "MLCapturedPose_24_Translate_Y",
+        "MLCapturedPose_24_Translate_Z"
+      ]
+    },
+    "leftarm": {
+      "rotation_xyz": [
+        "MLCapturedPose_25_Rotate_X",
+        "MLCapturedPose_25_Rotate_Y",
+        "MLCapturedPose_25_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_25_Translate_X",
+        "MLCapturedPose_25_Translate_Y",
+        "MLCapturedPose_25_Translate_Z"
+      ]
+    },
+    "lefttoebase": {
+      "rotation_xyz": [
+        "MLCapturedPose_26_Rotate_X",
+        "MLCapturedPose_26_Rotate_Y",
+        "MLCapturedPose_26_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_26_Translate_X",
+        "MLCapturedPose_26_Translate_Y",
+        "MLCapturedPose_26_Translate_Z"
+      ]
+    },
+    "neck1": {
+      "rotation_xyz": [
+        "MLCapturedPose_27_Rotate_X",
+        "MLCapturedPose_27_Rotate_Y",
+        "MLCapturedPose_27_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_27_Translate_X",
+        "MLCapturedPose_27_Translate_Y",
+        "MLCapturedPose_27_Translate_Z"
+      ]
+    },
+    "rightarm": {
+      "rotation_xyz": [
+        "MLCapturedPose_28_Rotate_X",
+        "MLCapturedPose_28_Rotate_Y",
+        "MLCapturedPose_28_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_28_Translate_X",
+        "MLCapturedPose_28_Translate_Y",
+        "MLCapturedPose_28_Translate_Z"
+      ]
+    },
+    "righttoebase": {
+      "rotation_xyz": [
+        "MLCapturedPose_29_Rotate_X",
+        "MLCapturedPose_29_Rotate_Y",
+        "MLCapturedPose_29_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_29_Translate_X",
+        "MLCapturedPose_29_Translate_Y",
+        "MLCapturedPose_29_Translate_Z"
+      ]
+    },
+    "head": {
+      "rotation_xyz": [
+        "MLCapturedPose_30_Rotate_X",
+        "MLCapturedPose_30_Rotate_Y",
+        "MLCapturedPose_30_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_30_Translate_X",
+        "MLCapturedPose_30_Translate_Y",
+        "MLCapturedPose_30_Translate_Z"
+      ]
+    },
+    "leftarmextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_31_Rotate_X",
+        "MLCapturedPose_31_Rotate_Y",
+        "MLCapturedPose_31_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_31_Translate_X",
+        "MLCapturedPose_31_Translate_Y",
+        "MLCapturedPose_31_Translate_Z"
+      ]
+    },
+    "leftarmroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_32_Rotate_X",
+        "MLCapturedPose_32_Rotate_Y",
+        "MLCapturedPose_32_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_32_Translate_X",
+        "MLCapturedPose_32_Translate_Y",
+        "MLCapturedPose_32_Translate_Z"
+      ]
+    },
+    "rightarmextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_33_Rotate_X",
+        "MLCapturedPose_33_Rotate_Y",
+        "MLCapturedPose_33_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_33_Translate_X",
+        "MLCapturedPose_33_Translate_Y",
+        "MLCapturedPose_33_Translate_Z"
+      ]
+    },
+    "rightarmroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_34_Rotate_X",
+        "MLCapturedPose_34_Rotate_Y",
+        "MLCapturedPose_34_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_34_Translate_X",
+        "MLCapturedPose_34_Translate_Y",
+        "MLCapturedPose_34_Translate_Z"
+      ]
+    },
+    "leftelbowextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_35_Rotate_X",
+        "MLCapturedPose_35_Rotate_Y",
+        "MLCapturedPose_35_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_35_Translate_X",
+        "MLCapturedPose_35_Translate_Y",
+        "MLCapturedPose_35_Translate_Z"
+      ]
+    },
+    "leftforearm": {
+      "rotation_xyz": [
+        "MLCapturedPose_36_Rotate_X",
+        "MLCapturedPose_36_Rotate_Y",
+        "MLCapturedPose_36_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_36_Translate_X",
+        "MLCapturedPose_36_Translate_Y",
+        "MLCapturedPose_36_Translate_Z"
+      ]
+    },
+    "rightelbowextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_37_Rotate_X",
+        "MLCapturedPose_37_Rotate_Y",
+        "MLCapturedPose_37_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_37_Translate_X",
+        "MLCapturedPose_37_Translate_Y",
+        "MLCapturedPose_37_Translate_Z"
+      ]
+    },
+    "rightforearm": {
+      "rotation_xyz": [
+        "MLCapturedPose_38_Rotate_X",
+        "MLCapturedPose_38_Rotate_Y",
+        "MLCapturedPose_38_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_38_Translate_X",
+        "MLCapturedPose_38_Translate_Y",
+        "MLCapturedPose_38_Translate_Z"
+      ]
+    },
+    "leftforearmextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_39_Rotate_X",
+        "MLCapturedPose_39_Rotate_Y",
+        "MLCapturedPose_39_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_39_Translate_X",
+        "MLCapturedPose_39_Translate_Y",
+        "MLCapturedPose_39_Translate_Z"
+      ]
+    },
+    "leftforearmroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_40_Rotate_X",
+        "MLCapturedPose_40_Rotate_Y",
+        "MLCapturedPose_40_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_40_Translate_X",
+        "MLCapturedPose_40_Translate_Y",
+        "MLCapturedPose_40_Translate_Z"
+      ]
+    },
+    "rightforearmextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_41_Rotate_X",
+        "MLCapturedPose_41_Rotate_Y",
+        "MLCapturedPose_41_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_41_Translate_X",
+        "MLCapturedPose_41_Translate_Y",
+        "MLCapturedPose_41_Translate_Z"
+      ]
+    },
+    "rightforearmroll": {
+      "rotation_xyz": [
+        "MLCapturedPose_42_Rotate_X",
+        "MLCapturedPose_42_Rotate_Y",
+        "MLCapturedPose_42_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_42_Translate_X",
+        "MLCapturedPose_42_Translate_Y",
+        "MLCapturedPose_42_Translate_Z"
+      ]
+    },
+    "lefthand": {
+      "rotation_xyz": [
+        "MLCapturedPose_43_Rotate_X",
+        "MLCapturedPose_43_Rotate_Y",
+        "MLCapturedPose_43_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_43_Translate_X",
+        "MLCapturedPose_43_Translate_Y",
+        "MLCapturedPose_43_Translate_Z"
+      ]
+    },
+    "leftwristextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_44_Rotate_X",
+        "MLCapturedPose_44_Rotate_Y",
+        "MLCapturedPose_44_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_44_Translate_X",
+        "MLCapturedPose_44_Translate_Y",
+        "MLCapturedPose_44_Translate_Z"
+      ]
+    },
+    "righthand": {
+      "rotation_xyz": [
+        "MLCapturedPose_45_Rotate_X",
+        "MLCapturedPose_45_Rotate_Y",
+        "MLCapturedPose_45_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_45_Translate_X",
+        "MLCapturedPose_45_Translate_Y",
+        "MLCapturedPose_45_Translate_Z"
+      ]
+    },
+    "rightwristextra": {
+      "rotation_xyz": [
+        "MLCapturedPose_46_Rotate_X",
+        "MLCapturedPose_46_Rotate_Y",
+        "MLCapturedPose_46_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_46_Translate_X",
+        "MLCapturedPose_46_Translate_Y",
+        "MLCapturedPose_46_Translate_Z"
+      ]
+    },
+    "lefthand_dummy": {
+      "rotation_xyz": [
+        "MLCapturedPose_47_Rotate_X",
+        "MLCapturedPose_47_Rotate_Y",
+        "MLCapturedPose_47_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_47_Translate_X",
+        "MLCapturedPose_47_Translate_Y",
+        "MLCapturedPose_47_Translate_Z"
+      ]
+    },
+    "lefthandindex1": {
+      "rotation_xyz": [
+        "MLCapturedPose_48_Rotate_X",
+        "MLCapturedPose_48_Rotate_Y",
+        "MLCapturedPose_48_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_48_Translate_X",
+        "MLCapturedPose_48_Translate_Y",
+        "MLCapturedPose_48_Translate_Z"
+      ]
+    },
+    "lefthandmiddle1": {
+      "rotation_xyz": [
+        "MLCapturedPose_49_Rotate_X",
+        "MLCapturedPose_49_Rotate_Y",
+        "MLCapturedPose_49_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_49_Translate_X",
+        "MLCapturedPose_49_Translate_Y",
+        "MLCapturedPose_49_Translate_Z"
+      ]
+    },
+    "lefthandpinky1": {
+      "rotation_xyz": [
+        "MLCapturedPose_50_Rotate_X",
+        "MLCapturedPose_50_Rotate_Y",
+        "MLCapturedPose_50_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_50_Translate_X",
+        "MLCapturedPose_50_Translate_Y",
+        "MLCapturedPose_50_Translate_Z"
+      ]
+    },
+    "lefthandring": {
+      "rotation_xyz": [
+        "MLCapturedPose_51_Rotate_X",
+        "MLCapturedPose_51_Rotate_Y",
+        "MLCapturedPose_51_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_51_Translate_X",
+        "MLCapturedPose_51_Translate_Y",
+        "MLCapturedPose_51_Translate_Z"
+      ]
+    },
+    "lefthandthumb1": {
+      "rotation_xyz": [
+        "MLCapturedPose_52_Rotate_X",
+        "MLCapturedPose_52_Rotate_Y",
+        "MLCapturedPose_52_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_52_Translate_X",
+        "MLCapturedPose_52_Translate_Y",
+        "MLCapturedPose_52_Translate_Z"
+      ]
+    },
+    "righthand_dummy": {
+      "rotation_xyz": [
+        "MLCapturedPose_53_Rotate_X",
+        "MLCapturedPose_53_Rotate_Y",
+        "MLCapturedPose_53_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_53_Translate_X",
+        "MLCapturedPose_53_Translate_Y",
+        "MLCapturedPose_53_Translate_Z"
+      ]
+    },
+    "righthandindex1": {
+      "rotation_xyz": [
+        "MLCapturedPose_54_Rotate_X",
+        "MLCapturedPose_54_Rotate_Y",
+        "MLCapturedPose_54_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_54_Translate_X",
+        "MLCapturedPose_54_Translate_Y",
+        "MLCapturedPose_54_Translate_Z"
+      ]
+    },
+    "righthandmiddle1": {
+      "rotation_xyz": [
+        "MLCapturedPose_55_Rotate_X",
+        "MLCapturedPose_55_Rotate_Y",
+        "MLCapturedPose_55_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_55_Translate_X",
+        "MLCapturedPose_55_Translate_Y",
+        "MLCapturedPose_55_Translate_Z"
+      ]
+    },
+    "righthandpinky1": {
+      "rotation_xyz": [
+        "MLCapturedPose_56_Rotate_X",
+        "MLCapturedPose_56_Rotate_Y",
+        "MLCapturedPose_56_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_56_Translate_X",
+        "MLCapturedPose_56_Translate_Y",
+        "MLCapturedPose_56_Translate_Z"
+      ]
+    },
+    "righthandring": {
+      "rotation_xyz": [
+        "MLCapturedPose_57_Rotate_X",
+        "MLCapturedPose_57_Rotate_Y",
+        "MLCapturedPose_57_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_57_Translate_X",
+        "MLCapturedPose_57_Translate_Y",
+        "MLCapturedPose_57_Translate_Z"
+      ]
+    },
+    "righthandthumb1": {
+      "rotation_xyz": [
+        "MLCapturedPose_58_Rotate_X",
+        "MLCapturedPose_58_Rotate_Y",
+        "MLCapturedPose_58_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_58_Translate_X",
+        "MLCapturedPose_58_Translate_Y",
+        "MLCapturedPose_58_Translate_Z"
+      ]
+    },
+    "lefthandindex2": {
+      "rotation_xyz": [
+        "MLCapturedPose_59_Rotate_X",
+        "MLCapturedPose_59_Rotate_Y",
+        "MLCapturedPose_59_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_59_Translate_X",
+        "MLCapturedPose_59_Translate_Y",
+        "MLCapturedPose_59_Translate_Z"
+      ]
+    },
+    "lefthandmiddle2": {
+      "rotation_xyz": [
+        "MLCapturedPose_60_Rotate_X",
+        "MLCapturedPose_60_Rotate_Y",
+        "MLCapturedPose_60_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_60_Translate_X",
+        "MLCapturedPose_60_Translate_Y",
+        "MLCapturedPose_60_Translate_Z"
+      ]
+    },
+    "lefthandpinky2": {
+      "rotation_xyz": [
+        "MLCapturedPose_61_Rotate_X",
+        "MLCapturedPose_61_Rotate_Y",
+        "MLCapturedPose_61_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_61_Translate_X",
+        "MLCapturedPose_61_Translate_Y",
+        "MLCapturedPose_61_Translate_Z"
+      ]
+    },
+    "lefthandring1": {
+      "rotation_xyz": [
+        "MLCapturedPose_62_Rotate_X",
+        "MLCapturedPose_62_Rotate_Y",
+        "MLCapturedPose_62_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_62_Translate_X",
+        "MLCapturedPose_62_Translate_Y",
+        "MLCapturedPose_62_Translate_Z"
+      ]
+    },
+    "lefthandthumb2": {
+      "rotation_xyz": [
+        "MLCapturedPose_63_Rotate_X",
+        "MLCapturedPose_63_Rotate_Y",
+        "MLCapturedPose_63_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_63_Translate_X",
+        "MLCapturedPose_63_Translate_Y",
+        "MLCapturedPose_63_Translate_Z"
+      ]
+    },
+    "righthandindex2": {
+      "rotation_xyz": [
+        "MLCapturedPose_64_Rotate_X",
+        "MLCapturedPose_64_Rotate_Y",
+        "MLCapturedPose_64_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_64_Translate_X",
+        "MLCapturedPose_64_Translate_Y",
+        "MLCapturedPose_64_Translate_Z"
+      ]
+    },
+    "righthandmiddle2": {
+      "rotation_xyz": [
+        "MLCapturedPose_65_Rotate_X",
+        "MLCapturedPose_65_Rotate_Y",
+        "MLCapturedPose_65_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_65_Translate_X",
+        "MLCapturedPose_65_Translate_Y",
+        "MLCapturedPose_65_Translate_Z"
+      ]
+    },
+    "righthandpinky2": {
+      "rotation_xyz": [
+        "MLCapturedPose_66_Rotate_X",
+        "MLCapturedPose_66_Rotate_Y",
+        "MLCapturedPose_66_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_66_Translate_X",
+        "MLCapturedPose_66_Translate_Y",
+        "MLCapturedPose_66_Translate_Z"
+      ]
+    },
+    "righthandring1": {
+      "rotation_xyz": [
+        "MLCapturedPose_67_Rotate_X",
+        "MLCapturedPose_67_Rotate_Y",
+        "MLCapturedPose_67_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_67_Translate_X",
+        "MLCapturedPose_67_Translate_Y",
+        "MLCapturedPose_67_Translate_Z"
+      ]
+    },
+    "righthandthumb2": {
+      "rotation_xyz": [
+        "MLCapturedPose_68_Rotate_X",
+        "MLCapturedPose_68_Rotate_Y",
+        "MLCapturedPose_68_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_68_Translate_X",
+        "MLCapturedPose_68_Translate_Y",
+        "MLCapturedPose_68_Translate_Z"
+      ]
+    },
+    "lefthandindex3": {
+      "rotation_xyz": [
+        "MLCapturedPose_69_Rotate_X",
+        "MLCapturedPose_69_Rotate_Y",
+        "MLCapturedPose_69_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_69_Translate_X",
+        "MLCapturedPose_69_Translate_Y",
+        "MLCapturedPose_69_Translate_Z"
+      ]
+    },
+    "lefthandmiddle3": {
+      "rotation_xyz": [
+        "MLCapturedPose_70_Rotate_X",
+        "MLCapturedPose_70_Rotate_Y",
+        "MLCapturedPose_70_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_70_Translate_X",
+        "MLCapturedPose_70_Translate_Y",
+        "MLCapturedPose_70_Translate_Z"
+      ]
+    },
+    "lefthandpinky3": {
+      "rotation_xyz": [
+        "MLCapturedPose_71_Rotate_X",
+        "MLCapturedPose_71_Rotate_Y",
+        "MLCapturedPose_71_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_71_Translate_X",
+        "MLCapturedPose_71_Translate_Y",
+        "MLCapturedPose_71_Translate_Z"
+      ]
+    },
+    "lefthandring2": {
+      "rotation_xyz": [
+        "MLCapturedPose_72_Rotate_X",
+        "MLCapturedPose_72_Rotate_Y",
+        "MLCapturedPose_72_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_72_Translate_X",
+        "MLCapturedPose_72_Translate_Y",
+        "MLCapturedPose_72_Translate_Z"
+      ]
+    },
+    "lefthandthumb3": {
+      "rotation_xyz": [
+        "MLCapturedPose_73_Rotate_X",
+        "MLCapturedPose_73_Rotate_Y",
+        "MLCapturedPose_73_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_73_Translate_X",
+        "MLCapturedPose_73_Translate_Y",
+        "MLCapturedPose_73_Translate_Z"
+      ]
+    },
+    "righthandindex3": {
+      "rotation_xyz": [
+        "MLCapturedPose_74_Rotate_X",
+        "MLCapturedPose_74_Rotate_Y",
+        "MLCapturedPose_74_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_74_Translate_X",
+        "MLCapturedPose_74_Translate_Y",
+        "MLCapturedPose_74_Translate_Z"
+      ]
+    },
+    "righthandmiddle3": {
+      "rotation_xyz": [
+        "MLCapturedPose_75_Rotate_X",
+        "MLCapturedPose_75_Rotate_Y",
+        "MLCapturedPose_75_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_75_Translate_X",
+        "MLCapturedPose_75_Translate_Y",
+        "MLCapturedPose_75_Translate_Z"
+      ]
+    },
+    "righthandpinky3": {
+      "rotation_xyz": [
+        "MLCapturedPose_76_Rotate_X",
+        "MLCapturedPose_76_Rotate_Y",
+        "MLCapturedPose_76_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_76_Translate_X",
+        "MLCapturedPose_76_Translate_Y",
+        "MLCapturedPose_76_Translate_Z"
+      ]
+    },
+    "righthandring2": {
+      "rotation_xyz": [
+        "MLCapturedPose_77_Rotate_X",
+        "MLCapturedPose_77_Rotate_Y",
+        "MLCapturedPose_77_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_77_Translate_X",
+        "MLCapturedPose_77_Translate_Y",
+        "MLCapturedPose_77_Translate_Z"
+      ]
+    },
+    "righthandthumb3": {
+      "rotation_xyz": [
+        "MLCapturedPose_78_Rotate_X",
+        "MLCapturedPose_78_Rotate_Y",
+        "MLCapturedPose_78_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_78_Translate_X",
+        "MLCapturedPose_78_Translate_Y",
+        "MLCapturedPose_78_Translate_Z"
+      ]
+    },
+    "lefthandindex4": {
+      "rotation_xyz": [
+        "MLCapturedPose_79_Rotate_X",
+        "MLCapturedPose_79_Rotate_Y",
+        "MLCapturedPose_79_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_79_Translate_X",
+        "MLCapturedPose_79_Translate_Y",
+        "MLCapturedPose_79_Translate_Z"
+      ]
+    },
+    "lefthandmiddle4": {
+      "rotation_xyz": [
+        "MLCapturedPose_80_Rotate_X",
+        "MLCapturedPose_80_Rotate_Y",
+        "MLCapturedPose_80_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_80_Translate_X",
+        "MLCapturedPose_80_Translate_Y",
+        "MLCapturedPose_80_Translate_Z"
+      ]
+    },
+    "lefthandpinky4": {
+      "rotation_xyz": [
+        "MLCapturedPose_81_Rotate_X",
+        "MLCapturedPose_81_Rotate_Y",
+        "MLCapturedPose_81_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_81_Translate_X",
+        "MLCapturedPose_81_Translate_Y",
+        "MLCapturedPose_81_Translate_Z"
+      ]
+    },
+    "lefthandring3": {
+      "rotation_xyz": [
+        "MLCapturedPose_82_Rotate_X",
+        "MLCapturedPose_82_Rotate_Y",
+        "MLCapturedPose_82_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_82_Translate_X",
+        "MLCapturedPose_82_Translate_Y",
+        "MLCapturedPose_82_Translate_Z"
+      ]
+    },
+    "lefthandthumb4": {
+      "rotation_xyz": [
+        "MLCapturedPose_83_Rotate_X",
+        "MLCapturedPose_83_Rotate_Y",
+        "MLCapturedPose_83_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_83_Translate_X",
+        "MLCapturedPose_83_Translate_Y",
+        "MLCapturedPose_83_Translate_Z"
+      ]
+    },
+    "righthandindex4": {
+      "rotation_xyz": [
+        "MLCapturedPose_84_Rotate_X",
+        "MLCapturedPose_84_Rotate_Y",
+        "MLCapturedPose_84_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_84_Translate_X",
+        "MLCapturedPose_84_Translate_Y",
+        "MLCapturedPose_84_Translate_Z"
+      ]
+    },
+    "righthandmiddle4": {
+      "rotation_xyz": [
+        "MLCapturedPose_85_Rotate_X",
+        "MLCapturedPose_85_Rotate_Y",
+        "MLCapturedPose_85_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_85_Translate_X",
+        "MLCapturedPose_85_Translate_Y",
+        "MLCapturedPose_85_Translate_Z"
+      ]
+    },
+    "righthandpinky4": {
+      "rotation_xyz": [
+        "MLCapturedPose_86_Rotate_X",
+        "MLCapturedPose_86_Rotate_Y",
+        "MLCapturedPose_86_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_86_Translate_X",
+        "MLCapturedPose_86_Translate_Y",
+        "MLCapturedPose_86_Translate_Z"
+      ]
+    },
+    "righthandring3": {
+      "rotation_xyz": [
+        "MLCapturedPose_87_Rotate_X",
+        "MLCapturedPose_87_Rotate_Y",
+        "MLCapturedPose_87_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_87_Translate_X",
+        "MLCapturedPose_87_Translate_Y",
+        "MLCapturedPose_87_Translate_Z"
+      ]
+    },
+    "righthandthumb4": {
+      "rotation_xyz": [
+        "MLCapturedPose_88_Rotate_X",
+        "MLCapturedPose_88_Rotate_Y",
+        "MLCapturedPose_88_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_88_Translate_X",
+        "MLCapturedPose_88_Translate_Y",
+        "MLCapturedPose_88_Translate_Z"
+      ]
+    },
+    "lefthandring4": {
+      "rotation_xyz": [
+        "MLCapturedPose_89_Rotate_X",
+        "MLCapturedPose_89_Rotate_Y",
+        "MLCapturedPose_89_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_89_Translate_X",
+        "MLCapturedPose_89_Translate_Y",
+        "MLCapturedPose_89_Translate_Z"
+      ]
+    },
+    "righthandring4": {
+      "rotation_xyz": [
+        "MLCapturedPose_90_Rotate_X",
+        "MLCapturedPose_90_Rotate_Y",
+        "MLCapturedPose_90_Rotate_Z"
+      ],
+      "translation_xyz": [
+        "MLCapturedPose_90_Translate_X",
+        "MLCapturedPose_90_Translate_Y",
+        "MLCapturedPose_90_Translate_Z"
+      ]
+    }
+  },
+  "controls": 546,
+  "native_graph_semantics": "Unverified; guarded runtime test"
+}
