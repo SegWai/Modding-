@@ -1,0 +1,35 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.EatCro.In" {
+   Resource "{23AD26FA05BC94CA}DZ/anims/anm/player/actions/consumption/p_cro_eat_fruit_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatCro.Loop" {
+   Resource "{718D256E87C89F50}DZ/anims/anm/player/actions/consumption/p_cro_eat_fruit_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatCro.Out" {
+   Resource "{221D419C1930A5B5}DZ/anims/anm/player/actions/consumption/p_cro_eat_fruit_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatErc.In" {
+   Resource "{6715EA300C11DD72}DZ/anims/anm/player/actions/consumption/p_erc_eat_fruit_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatErc.Loop" {
+   Resource "{122E636E27C5E685}DZ/anims/anm/player/actions/consumption/p_erc_eat_fruit_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatErc.Out" {
+   Resource "{09E7EFC55057D045}DZ/anims/anm/player/actions/consumption/p_erc_eat_fruit_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPne.In" {
+   Resource "{87BD06465445E799}DZ/anims/anm/player/actions/consumption/p_pne_eat_fruit_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPne.Loop" {
+   Resource "{332DDF1376992214}DZ/anims/anm/player/actions/consumption/p_pne_eat_fruit_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EatPne.Out" {
+   Resource "{418E8FB7B2F06579}DZ/anims/anm/player/actions/consumption/p_pne_eat_fruit_out.anm"
+  }
+ }
+}

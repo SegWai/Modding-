@@ -1,0 +1,3618 @@
+AnimSrcGraphFile {
+ Sheets {
+  AnimSrcGraphSheet MasterControl {
+   Nodes {
+    AnimSrcNodeBlend MasterControl {
+     BlendWeight "MLCapturedPoseActive"
+     Child0 "MovementLabOriginalMasterControl"
+     Child1 "MLCapturedPose_90_Translate_Z_Node"
+     OptimizeMin 1
+     OptimizeMax 1
+    }
+AnimSrcNodeProcTransform MLCapturedPose_0_Rotate_X_Node {
+ Child "APoseSrc"
+ Expression "MLCapturedPose_0_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{262C277D-231B-55AB-BF0F-820C0D1A97F2}" { Bone "scene_root" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_0_Rotate_Y_Node {
+ Child "MLCapturedPose_0_Rotate_X_Node"
+ Expression "MLCapturedPose_0_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5FD48BD9-B2F8-5A76-82DF-D26060AAC90A}" { Bone "scene_root" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_0_Rotate_Z_Node {
+ Child "MLCapturedPose_0_Rotate_Y_Node"
+ Expression "MLCapturedPose_0_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{C5A9799A-1B41-5261-8546-6842B5B4A5AE}" { Bone "scene_root" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_0_Translate_X_Node {
+ Child "MLCapturedPose_0_Rotate_Z_Node"
+ Expression "MLCapturedPose_0_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2DAF0925-CEF2-54D2-843F-63B4283F1736}" { Bone "scene_root" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_0_Translate_Y_Node {
+ Child "MLCapturedPose_0_Translate_X_Node"
+ Expression "MLCapturedPose_0_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{8E8636A2-E039-509D-BD64-15487F08FBCC}" { Bone "scene_root" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_0_Translate_Z_Node {
+ Child "MLCapturedPose_0_Translate_Y_Node"
+ Expression "MLCapturedPose_0_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{2214C338-224B-5C62-8534-50CD87C8344E}" { Bone "scene_root" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_1_Rotate_X_Node {
+ Child "MLCapturedPose_0_Translate_Z_Node"
+ Expression "MLCapturedPose_1_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{217DA4C7-6B15-579A-829A-BCC178C4FCF3}" { Bone "pelvis" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_1_Rotate_Y_Node {
+ Child "MLCapturedPose_1_Rotate_X_Node"
+ Expression "MLCapturedPose_1_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{EEF16BCB-1FA8-58CF-AE90-C1BA6A06A2A9}" { Bone "pelvis" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_1_Rotate_Z_Node {
+ Child "MLCapturedPose_1_Rotate_Y_Node"
+ Expression "MLCapturedPose_1_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{76B0A140-6FF3-5B69-8EA8-2ABB98A03CF2}" { Bone "pelvis" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_1_Translate_X_Node {
+ Child "MLCapturedPose_1_Rotate_Z_Node"
+ Expression "MLCapturedPose_1_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{CA3550BF-2715-5C1E-80A6-BFD7A981445F}" { Bone "pelvis" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_1_Translate_Y_Node {
+ Child "MLCapturedPose_1_Translate_X_Node"
+ Expression "MLCapturedPose_1_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{3452A279-306B-5B97-97E4-09B07F3DEAF2}" { Bone "pelvis" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_1_Translate_Z_Node {
+ Child "MLCapturedPose_1_Translate_Y_Node"
+ Expression "MLCapturedPose_1_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{BE88FABD-F4BD-5D61-9F53-3DA7886335E5}" { Bone "pelvis" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_2_Rotate_X_Node {
+ Child "MLCapturedPose_1_Translate_Z_Node"
+ Expression "MLCapturedPose_2_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{D499C579-865B-544E-BFA3-99CD8B567DBF}" { Bone "lefthip_helper" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_2_Rotate_Y_Node {
+ Child "MLCapturedPose_2_Rotate_X_Node"
+ Expression "MLCapturedPose_2_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{0F8703ED-E4A5-5F9F-B93C-2A027B8918FD}" { Bone "lefthip_helper" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_2_Rotate_Z_Node {
+ Child "MLCapturedPose_2_Rotate_Y_Node"
+ Expression "MLCapturedPose_2_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{9B9F4E1B-7842-5C41-A266-53BE2B325532}" { Bone "lefthip_helper" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_2_Translate_X_Node {
+ Child "MLCapturedPose_2_Rotate_Z_Node"
+ Expression "MLCapturedPose_2_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{178DA2A8-1FCB-508F-A3E1-A40D664BF0A1}" { Bone "lefthip_helper" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_2_Translate_Y_Node {
+ Child "MLCapturedPose_2_Translate_X_Node"
+ Expression "MLCapturedPose_2_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{1FBFD26B-B34C-5535-AF1E-698AA905419C}" { Bone "lefthip_helper" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_2_Translate_Z_Node {
+ Child "MLCapturedPose_2_Translate_Y_Node"
+ Expression "MLCapturedPose_2_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{88201414-8003-5C8A-B3BF-FB5E849E71CA}" { Bone "lefthip_helper" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_3_Rotate_X_Node {
+ Child "MLCapturedPose_2_Translate_Z_Node"
+ Expression "MLCapturedPose_3_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E71D1913-068C-58A2-8963-792D2D8E4905}" { Bone "lefthipextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_3_Rotate_Y_Node {
+ Child "MLCapturedPose_3_Rotate_X_Node"
+ Expression "MLCapturedPose_3_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{6AF3A324-3C22-5AE0-86C4-296296050A6E}" { Bone "lefthipextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_3_Rotate_Z_Node {
+ Child "MLCapturedPose_3_Rotate_Y_Node"
+ Expression "MLCapturedPose_3_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{6760277E-3BF2-5139-90A3-CDFA298CAFE7}" { Bone "lefthipextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_3_Translate_X_Node {
+ Child "MLCapturedPose_3_Rotate_Z_Node"
+ Expression "MLCapturedPose_3_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{01E5EC6D-4E93-5C00-8B5C-66C5E81E0B7A}" { Bone "lefthipextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_3_Translate_Y_Node {
+ Child "MLCapturedPose_3_Translate_X_Node"
+ Expression "MLCapturedPose_3_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{50DF7B0A-12C1-5643-8E1F-8439A48D982C}" { Bone "lefthipextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_3_Translate_Z_Node {
+ Child "MLCapturedPose_3_Translate_Y_Node"
+ Expression "MLCapturedPose_3_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{CBA2349F-373F-55F7-8EAC-9AFA6193D203}" { Bone "lefthipextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_4_Rotate_X_Node {
+ Child "MLCapturedPose_3_Translate_Z_Node"
+ Expression "MLCapturedPose_4_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E13400C2-A577-5EE4-8A21-8E5680B5FEDA}" { Bone "leftupleg" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_4_Rotate_Y_Node {
+ Child "MLCapturedPose_4_Rotate_X_Node"
+ Expression "MLCapturedPose_4_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{FAC3EEDF-352F-5939-B87B-B23A9BBA022E}" { Bone "leftupleg" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_4_Rotate_Z_Node {
+ Child "MLCapturedPose_4_Rotate_Y_Node"
+ Expression "MLCapturedPose_4_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{F9771FED-6F34-5F61-9AC3-EA4EE499D801}" { Bone "leftupleg" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_4_Translate_X_Node {
+ Child "MLCapturedPose_4_Rotate_Z_Node"
+ Expression "MLCapturedPose_4_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{09C71553-914D-53F1-A5DC-B6C41692B45E}" { Bone "leftupleg" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_4_Translate_Y_Node {
+ Child "MLCapturedPose_4_Translate_X_Node"
+ Expression "MLCapturedPose_4_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{CE422BB8-D507-5107-A545-D218C2B358CF}" { Bone "leftupleg" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_4_Translate_Z_Node {
+ Child "MLCapturedPose_4_Translate_Y_Node"
+ Expression "MLCapturedPose_4_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{55A47C63-C2F3-5AB9-AD75-A802D8686E56}" { Bone "leftupleg" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_5_Rotate_X_Node {
+ Child "MLCapturedPose_4_Translate_Z_Node"
+ Expression "MLCapturedPose_5_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{0FD02072-DB83-536C-A298-380EF33FA18F}" { Bone "righthip_helper" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_5_Rotate_Y_Node {
+ Child "MLCapturedPose_5_Rotate_X_Node"
+ Expression "MLCapturedPose_5_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5F103F1E-672E-54A8-B1CC-19BC0B99DE67}" { Bone "righthip_helper" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_5_Rotate_Z_Node {
+ Child "MLCapturedPose_5_Rotate_Y_Node"
+ Expression "MLCapturedPose_5_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{9B8F1CB7-D961-57D2-B94D-7D14EC55DD4E}" { Bone "righthip_helper" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_5_Translate_X_Node {
+ Child "MLCapturedPose_5_Rotate_Z_Node"
+ Expression "MLCapturedPose_5_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{4204CC81-7B80-54EA-B43C-E820297982C3}" { Bone "righthip_helper" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_5_Translate_Y_Node {
+ Child "MLCapturedPose_5_Translate_X_Node"
+ Expression "MLCapturedPose_5_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C6A00132-6534-5C80-B24D-76B2CCBA78D3}" { Bone "righthip_helper" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_5_Translate_Z_Node {
+ Child "MLCapturedPose_5_Translate_Y_Node"
+ Expression "MLCapturedPose_5_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{DCE9C795-D465-5768-9C8E-B8D71B3C3D4F}" { Bone "righthip_helper" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_6_Rotate_X_Node {
+ Child "MLCapturedPose_5_Translate_Z_Node"
+ Expression "MLCapturedPose_6_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B56BDEE9-371E-562F-9462-9E7E87DC61F2}" { Bone "righthipextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_6_Rotate_Y_Node {
+ Child "MLCapturedPose_6_Rotate_X_Node"
+ Expression "MLCapturedPose_6_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{0762BDA1-1D03-5E19-941E-203570E6D9B5}" { Bone "righthipextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_6_Rotate_Z_Node {
+ Child "MLCapturedPose_6_Rotate_Y_Node"
+ Expression "MLCapturedPose_6_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{5A0A2A80-7484-5315-9BD2-18550F2EEDDB}" { Bone "righthipextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_6_Translate_X_Node {
+ Child "MLCapturedPose_6_Rotate_Z_Node"
+ Expression "MLCapturedPose_6_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{4A6091A1-F02A-5DE9-83BE-9E9C6319ECAD}" { Bone "righthipextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_6_Translate_Y_Node {
+ Child "MLCapturedPose_6_Translate_X_Node"
+ Expression "MLCapturedPose_6_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{9980FEC0-2FD6-5981-862A-096DEB92C2FC}" { Bone "righthipextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_6_Translate_Z_Node {
+ Child "MLCapturedPose_6_Translate_Y_Node"
+ Expression "MLCapturedPose_6_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{A9C6E33C-5F90-5DD9-9F47-7965001B0921}" { Bone "righthipextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_7_Rotate_X_Node {
+ Child "MLCapturedPose_6_Translate_Z_Node"
+ Expression "MLCapturedPose_7_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E33CC8FB-C247-554F-B15B-1A120A95BCD6}" { Bone "rightupleg" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_7_Rotate_Y_Node {
+ Child "MLCapturedPose_7_Rotate_X_Node"
+ Expression "MLCapturedPose_7_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{A3F4B599-6BED-5050-991F-0990AEF57019}" { Bone "rightupleg" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_7_Rotate_Z_Node {
+ Child "MLCapturedPose_7_Rotate_Y_Node"
+ Expression "MLCapturedPose_7_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{5BD76DD6-8B30-52F3-8554-BCD44DC888E8}" { Bone "rightupleg" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_7_Translate_X_Node {
+ Child "MLCapturedPose_7_Rotate_Z_Node"
+ Expression "MLCapturedPose_7_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{0F99CB0F-B110-5D87-B550-041F19C4BA92}" { Bone "rightupleg" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_7_Translate_Y_Node {
+ Child "MLCapturedPose_7_Translate_X_Node"
+ Expression "MLCapturedPose_7_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{81CD3EC4-F9FC-56CC-8E99-06F233CDA39D}" { Bone "rightupleg" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_7_Translate_Z_Node {
+ Child "MLCapturedPose_7_Translate_Y_Node"
+ Expression "MLCapturedPose_7_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{5BF89F63-5EC0-558F-AF95-3F3DA62B2FC4}" { Bone "rightupleg" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_8_Rotate_X_Node {
+ Child "MLCapturedPose_7_Translate_Z_Node"
+ Expression "MLCapturedPose_8_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{FDA80659-FD3F-5E78-8DBD-AC67F976768A}" { Bone "spine" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_8_Rotate_Y_Node {
+ Child "MLCapturedPose_8_Rotate_X_Node"
+ Expression "MLCapturedPose_8_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{8E02C822-CCAB-53ED-8CBD-8A6C23382910}" { Bone "spine" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_8_Rotate_Z_Node {
+ Child "MLCapturedPose_8_Rotate_Y_Node"
+ Expression "MLCapturedPose_8_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{2B41A129-476A-58A4-9826-964456EDBA1F}" { Bone "spine" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_8_Translate_X_Node {
+ Child "MLCapturedPose_8_Rotate_Z_Node"
+ Expression "MLCapturedPose_8_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{70572E1B-D7F5-5975-B981-47F75CE2C7C9}" { Bone "spine" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_8_Translate_Y_Node {
+ Child "MLCapturedPose_8_Translate_X_Node"
+ Expression "MLCapturedPose_8_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{8E9C7838-06C6-53BA-BE81-A327D85B9AAD}" { Bone "spine" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_8_Translate_Z_Node {
+ Child "MLCapturedPose_8_Translate_Y_Node"
+ Expression "MLCapturedPose_8_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{3B7EDF7A-1F0C-5438-B2B6-1F1A51202549}" { Bone "spine" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_9_Rotate_X_Node {
+ Child "MLCapturedPose_8_Translate_Z_Node"
+ Expression "MLCapturedPose_9_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{35707BE0-5050-5958-A5CB-15E1E5FA2078}" { Bone "leftuplegroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_9_Rotate_Y_Node {
+ Child "MLCapturedPose_9_Rotate_X_Node"
+ Expression "MLCapturedPose_9_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{21F476FD-FA34-55BB-91FA-4A47D03D1B78}" { Bone "leftuplegroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_9_Rotate_Z_Node {
+ Child "MLCapturedPose_9_Rotate_Y_Node"
+ Expression "MLCapturedPose_9_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{CB53E185-E6AC-572D-BCBA-07E66BEE0103}" { Bone "leftuplegroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_9_Translate_X_Node {
+ Child "MLCapturedPose_9_Rotate_Z_Node"
+ Expression "MLCapturedPose_9_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{9C679504-3AB0-5265-8596-682BCBC09ECC}" { Bone "leftuplegroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_9_Translate_Y_Node {
+ Child "MLCapturedPose_9_Translate_X_Node"
+ Expression "MLCapturedPose_9_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{06C8970B-F866-5027-A001-A9380789B8B4}" { Bone "leftuplegroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_9_Translate_Z_Node {
+ Child "MLCapturedPose_9_Translate_Y_Node"
+ Expression "MLCapturedPose_9_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{60D1E444-D964-5158-B742-CCB334B06227}" { Bone "leftuplegroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_10_Rotate_X_Node {
+ Child "MLCapturedPose_9_Translate_Z_Node"
+ Expression "MLCapturedPose_10_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2F21A0D8-691B-5744-AA3C-77211E3BED69}" { Bone "rightuplegroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_10_Rotate_Y_Node {
+ Child "MLCapturedPose_10_Rotate_X_Node"
+ Expression "MLCapturedPose_10_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{6606E3D8-2975-5FB1-919C-3D96DB72DF18}" { Bone "rightuplegroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_10_Rotate_Z_Node {
+ Child "MLCapturedPose_10_Rotate_Y_Node"
+ Expression "MLCapturedPose_10_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{5C4075C2-54BD-569F-81F1-CC970A3CFCB5}" { Bone "rightuplegroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_10_Translate_X_Node {
+ Child "MLCapturedPose_10_Rotate_Z_Node"
+ Expression "MLCapturedPose_10_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{1771AE0F-18E3-53FA-A32B-25D226D22A76}" { Bone "rightuplegroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_10_Translate_Y_Node {
+ Child "MLCapturedPose_10_Translate_X_Node"
+ Expression "MLCapturedPose_10_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{6A6FF0D4-9936-583A-84A5-FF9D6060763B}" { Bone "rightuplegroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_10_Translate_Z_Node {
+ Child "MLCapturedPose_10_Translate_Y_Node"
+ Expression "MLCapturedPose_10_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{922F810D-162B-5634-89A9-FDD5013C8F30}" { Bone "rightuplegroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_11_Rotate_X_Node {
+ Child "MLCapturedPose_10_Translate_Z_Node"
+ Expression "MLCapturedPose_11_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{9507377C-AB81-51E8-A488-C673CF210E44}" { Bone "spine1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_11_Rotate_Y_Node {
+ Child "MLCapturedPose_11_Rotate_X_Node"
+ Expression "MLCapturedPose_11_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{3EC9E317-C64D-524D-9320-C661879D9FEF}" { Bone "spine1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_11_Rotate_Z_Node {
+ Child "MLCapturedPose_11_Rotate_Y_Node"
+ Expression "MLCapturedPose_11_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{26579093-A92B-5230-8866-75E85483BB58}" { Bone "spine1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_11_Translate_X_Node {
+ Child "MLCapturedPose_11_Rotate_Z_Node"
+ Expression "MLCapturedPose_11_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{869B9218-830B-5725-809B-DFAE33B99EE4}" { Bone "spine1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_11_Translate_Y_Node {
+ Child "MLCapturedPose_11_Translate_X_Node"
+ Expression "MLCapturedPose_11_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{BD784DD5-C0E4-534D-AEF7-4ED0C6878E78}" { Bone "spine1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_11_Translate_Z_Node {
+ Child "MLCapturedPose_11_Translate_Y_Node"
+ Expression "MLCapturedPose_11_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{3C1BE2F2-62C7-56B1-9A4B-66CA678D90E6}" { Bone "spine1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_12_Rotate_X_Node {
+ Child "MLCapturedPose_11_Translate_Z_Node"
+ Expression "MLCapturedPose_12_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{9A1B868E-8205-554C-B243-FDFEBA3905C6}" { Bone "leftkneeextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_12_Rotate_Y_Node {
+ Child "MLCapturedPose_12_Rotate_X_Node"
+ Expression "MLCapturedPose_12_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{E56B6E9C-41B6-5F34-8EDF-853D0CBE7FA5}" { Bone "leftkneeextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_12_Rotate_Z_Node {
+ Child "MLCapturedPose_12_Rotate_Y_Node"
+ Expression "MLCapturedPose_12_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{70AA55DA-94D0-5AEC-9E40-715AB08C6B42}" { Bone "leftkneeextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_12_Translate_X_Node {
+ Child "MLCapturedPose_12_Rotate_Z_Node"
+ Expression "MLCapturedPose_12_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{34B276E6-2623-5C34-A327-5FFE18A6789C}" { Bone "leftkneeextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_12_Translate_Y_Node {
+ Child "MLCapturedPose_12_Translate_X_Node"
+ Expression "MLCapturedPose_12_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{09D77120-3B30-59EE-BAD5-8B743293B1DB}" { Bone "leftkneeextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_12_Translate_Z_Node {
+ Child "MLCapturedPose_12_Translate_Y_Node"
+ Expression "MLCapturedPose_12_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{91A10AC7-E723-5C7B-8080-3B2F2F615F7D}" { Bone "leftkneeextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_13_Rotate_X_Node {
+ Child "MLCapturedPose_12_Translate_Z_Node"
+ Expression "MLCapturedPose_13_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{3589FBEF-CC2B-532F-916E-68A33B0420FD}" { Bone "leftleg" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_13_Rotate_Y_Node {
+ Child "MLCapturedPose_13_Rotate_X_Node"
+ Expression "MLCapturedPose_13_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{3967942E-E162-5E1A-B372-4D802C523853}" { Bone "leftleg" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_13_Rotate_Z_Node {
+ Child "MLCapturedPose_13_Rotate_Y_Node"
+ Expression "MLCapturedPose_13_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{51A14F0F-414A-5DC0-B9B8-224E26D3AFBE}" { Bone "leftleg" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_13_Translate_X_Node {
+ Child "MLCapturedPose_13_Rotate_Z_Node"
+ Expression "MLCapturedPose_13_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{BEEB9025-D00D-5D44-B34D-D1F24B685782}" { Bone "leftleg" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_13_Translate_Y_Node {
+ Child "MLCapturedPose_13_Translate_X_Node"
+ Expression "MLCapturedPose_13_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{662D714D-4552-5A09-B188-688DBD96E883}" { Bone "leftleg" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_13_Translate_Z_Node {
+ Child "MLCapturedPose_13_Translate_Y_Node"
+ Expression "MLCapturedPose_13_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{0F435D60-1BA5-5A14-8B52-2DCE7D4532A1}" { Bone "leftleg" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_14_Rotate_X_Node {
+ Child "MLCapturedPose_13_Translate_Z_Node"
+ Expression "MLCapturedPose_14_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{28DBAC2A-3334-543D-8FA9-F909138DD070}" { Bone "rightkneeextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_14_Rotate_Y_Node {
+ Child "MLCapturedPose_14_Rotate_X_Node"
+ Expression "MLCapturedPose_14_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{4982F068-4949-5440-8458-22D4C2966F97}" { Bone "rightkneeextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_14_Rotate_Z_Node {
+ Child "MLCapturedPose_14_Rotate_Y_Node"
+ Expression "MLCapturedPose_14_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{87AEEB53-2E91-5FEF-82EB-D344E396D2D0}" { Bone "rightkneeextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_14_Translate_X_Node {
+ Child "MLCapturedPose_14_Rotate_Z_Node"
+ Expression "MLCapturedPose_14_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2D5DA55A-7216-5E9B-AEBD-3400AB96E7AF}" { Bone "rightkneeextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_14_Translate_Y_Node {
+ Child "MLCapturedPose_14_Translate_X_Node"
+ Expression "MLCapturedPose_14_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C6989AC0-03C8-5CF3-99A0-93D8DFDB0FFA}" { Bone "rightkneeextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_14_Translate_Z_Node {
+ Child "MLCapturedPose_14_Translate_Y_Node"
+ Expression "MLCapturedPose_14_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{D124FDAB-1262-5442-9C8A-0F4CFB249046}" { Bone "rightkneeextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_15_Rotate_X_Node {
+ Child "MLCapturedPose_14_Translate_Z_Node"
+ Expression "MLCapturedPose_15_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2CCAC075-E686-543B-A90C-EDF88BD07A6B}" { Bone "rightleg" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_15_Rotate_Y_Node {
+ Child "MLCapturedPose_15_Rotate_X_Node"
+ Expression "MLCapturedPose_15_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F4ED50A4-F2E6-5A44-8DD1-D7997758965C}" { Bone "rightleg" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_15_Rotate_Z_Node {
+ Child "MLCapturedPose_15_Rotate_Y_Node"
+ Expression "MLCapturedPose_15_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{C576D3FD-A4DE-5A98-8E67-82CBD54AB31E}" { Bone "rightleg" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_15_Translate_X_Node {
+ Child "MLCapturedPose_15_Rotate_Z_Node"
+ Expression "MLCapturedPose_15_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{BDF04DD2-83A9-5589-81F9-4485668C4042}" { Bone "rightleg" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_15_Translate_Y_Node {
+ Child "MLCapturedPose_15_Translate_X_Node"
+ Expression "MLCapturedPose_15_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{270325E7-396C-5472-86D9-DC703BA09DB6}" { Bone "rightleg" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_15_Translate_Z_Node {
+ Child "MLCapturedPose_15_Translate_Y_Node"
+ Expression "MLCapturedPose_15_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{8E4EF432-C9C6-5AEE-9E25-403C7C46A223}" { Bone "rightleg" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_16_Rotate_X_Node {
+ Child "MLCapturedPose_15_Translate_Z_Node"
+ Expression "MLCapturedPose_16_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{7DC3B461-2B5C-5734-8876-30DD0249134E}" { Bone "spine2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_16_Rotate_Y_Node {
+ Child "MLCapturedPose_16_Rotate_X_Node"
+ Expression "MLCapturedPose_16_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{24EDFA6B-98AE-5A89-99C5-3C4E1EACDDD1}" { Bone "spine2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_16_Rotate_Z_Node {
+ Child "MLCapturedPose_16_Rotate_Y_Node"
+ Expression "MLCapturedPose_16_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{F6D54791-A178-573B-84D4-CAEF5D8A42F2}" { Bone "spine2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_16_Translate_X_Node {
+ Child "MLCapturedPose_16_Rotate_Z_Node"
+ Expression "MLCapturedPose_16_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{8CAA2F04-5EC5-5E46-A9EA-1B86ECB23CFA}" { Bone "spine2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_16_Translate_Y_Node {
+ Child "MLCapturedPose_16_Translate_X_Node"
+ Expression "MLCapturedPose_16_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{1D9ED6F8-BC42-5E07-96B2-7F03A19DAFA7}" { Bone "spine2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_16_Translate_Z_Node {
+ Child "MLCapturedPose_16_Translate_Y_Node"
+ Expression "MLCapturedPose_16_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{50609A28-50EB-5791-BFF8-28BB17550A03}" { Bone "spine2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_17_Rotate_X_Node {
+ Child "MLCapturedPose_16_Translate_Z_Node"
+ Expression "MLCapturedPose_17_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6DC81F17-020F-5136-9F3D-4DB09FC36440}" { Bone "leftlegroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_17_Rotate_Y_Node {
+ Child "MLCapturedPose_17_Rotate_X_Node"
+ Expression "MLCapturedPose_17_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C101A1CA-F5E0-52A9-9A35-3399E681522C}" { Bone "leftlegroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_17_Rotate_Z_Node {
+ Child "MLCapturedPose_17_Rotate_Y_Node"
+ Expression "MLCapturedPose_17_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{37ABCE24-03E5-50B8-9755-8AFF3F210F4B}" { Bone "leftlegroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_17_Translate_X_Node {
+ Child "MLCapturedPose_17_Rotate_Z_Node"
+ Expression "MLCapturedPose_17_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{C60BF75F-0BBF-5A99-B50D-37251358C68D}" { Bone "leftlegroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_17_Translate_Y_Node {
+ Child "MLCapturedPose_17_Translate_X_Node"
+ Expression "MLCapturedPose_17_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{819194B9-E78B-5BB2-9AFC-C7AFE7DCC297}" { Bone "leftlegroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_17_Translate_Z_Node {
+ Child "MLCapturedPose_17_Translate_Y_Node"
+ Expression "MLCapturedPose_17_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{9EC46129-862F-5E81-88B1-38365416696C}" { Bone "leftlegroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_18_Rotate_X_Node {
+ Child "MLCapturedPose_17_Translate_Z_Node"
+ Expression "MLCapturedPose_18_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{793EDF9D-F4DA-5EAF-A4C3-982617287F95}" { Bone "rightlegroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_18_Rotate_Y_Node {
+ Child "MLCapturedPose_18_Rotate_X_Node"
+ Expression "MLCapturedPose_18_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{FF7EFBAC-2FE8-570C-9F66-83A5FC444D2F}" { Bone "rightlegroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_18_Rotate_Z_Node {
+ Child "MLCapturedPose_18_Rotate_Y_Node"
+ Expression "MLCapturedPose_18_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{E053E318-C906-5799-A04C-AF8D776CEE0F}" { Bone "rightlegroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_18_Translate_X_Node {
+ Child "MLCapturedPose_18_Rotate_Z_Node"
+ Expression "MLCapturedPose_18_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{78DF65F6-E118-55A6-87D6-04F2E3B7E51D}" { Bone "rightlegroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_18_Translate_Y_Node {
+ Child "MLCapturedPose_18_Translate_X_Node"
+ Expression "MLCapturedPose_18_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{DE7C3007-2DA1-5680-90B3-0BCCA16C967A}" { Bone "rightlegroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_18_Translate_Z_Node {
+ Child "MLCapturedPose_18_Translate_Y_Node"
+ Expression "MLCapturedPose_18_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{EE197643-8C5F-56EB-A594-3AFFFB5862CF}" { Bone "rightlegroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_19_Rotate_X_Node {
+ Child "MLCapturedPose_18_Translate_Z_Node"
+ Expression "MLCapturedPose_19_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E43F67D9-0B19-5B0E-9D40-E459BEFBF9A8}" { Bone "spine3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_19_Rotate_Y_Node {
+ Child "MLCapturedPose_19_Rotate_X_Node"
+ Expression "MLCapturedPose_19_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{6178A56C-0BC0-5562-9999-A03622FABAA7}" { Bone "spine3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_19_Rotate_Z_Node {
+ Child "MLCapturedPose_19_Rotate_Y_Node"
+ Expression "MLCapturedPose_19_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{822E56B9-0539-57B0-9B85-CABF0090B05C}" { Bone "spine3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_19_Translate_X_Node {
+ Child "MLCapturedPose_19_Rotate_Z_Node"
+ Expression "MLCapturedPose_19_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{102C68C8-4696-5C51-B7FE-FB41CFC4A923}" { Bone "spine3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_19_Translate_Y_Node {
+ Child "MLCapturedPose_19_Translate_X_Node"
+ Expression "MLCapturedPose_19_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5D645F04-D039-5E0F-9A37-A9491EAC2C83}" { Bone "spine3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_19_Translate_Z_Node {
+ Child "MLCapturedPose_19_Translate_Y_Node"
+ Expression "MLCapturedPose_19_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{027718F2-2B3E-58C9-8CA0-610433FAC8CA}" { Bone "spine3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_20_Rotate_X_Node {
+ Child "MLCapturedPose_19_Translate_Z_Node"
+ Expression "MLCapturedPose_20_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{5AAA7B1B-146B-5094-A464-77E7EBBE6C83}" { Bone "leftfoot" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_20_Rotate_Y_Node {
+ Child "MLCapturedPose_20_Rotate_X_Node"
+ Expression "MLCapturedPose_20_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{FB850C07-CCC7-5C9A-8258-F62985C072D3}" { Bone "leftfoot" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_20_Rotate_Z_Node {
+ Child "MLCapturedPose_20_Rotate_Y_Node"
+ Expression "MLCapturedPose_20_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{71F03652-6165-515D-99DB-FA754FBFEAEF}" { Bone "leftfoot" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_20_Translate_X_Node {
+ Child "MLCapturedPose_20_Rotate_Z_Node"
+ Expression "MLCapturedPose_20_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{91A81E1A-E37B-55A9-BC01-8C06F7A1BC83}" { Bone "leftfoot" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_20_Translate_Y_Node {
+ Child "MLCapturedPose_20_Translate_X_Node"
+ Expression "MLCapturedPose_20_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{4E396960-D3C5-5016-8C44-4A30D1128BFE}" { Bone "leftfoot" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_20_Translate_Z_Node {
+ Child "MLCapturedPose_20_Translate_Y_Node"
+ Expression "MLCapturedPose_20_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{3D50603B-70E4-597B-A72E-0E62F3A5C04A}" { Bone "leftfoot" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_21_Rotate_X_Node {
+ Child "MLCapturedPose_20_Translate_Z_Node"
+ Expression "MLCapturedPose_21_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{1EF57A12-ADCB-53BE-9949-0AB9E09D3F8F}" { Bone "leftshoulder" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_21_Rotate_Y_Node {
+ Child "MLCapturedPose_21_Rotate_X_Node"
+ Expression "MLCapturedPose_21_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C40EEEFA-94E4-50F9-AC61-EFC280D5EF72}" { Bone "leftshoulder" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_21_Rotate_Z_Node {
+ Child "MLCapturedPose_21_Rotate_Y_Node"
+ Expression "MLCapturedPose_21_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{38393D74-F599-584B-A996-FFDD210DF4C5}" { Bone "leftshoulder" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_21_Translate_X_Node {
+ Child "MLCapturedPose_21_Rotate_Z_Node"
+ Expression "MLCapturedPose_21_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{4DA68716-7B0E-513F-8F1C-9152B8E1E6CE}" { Bone "leftshoulder" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_21_Translate_Y_Node {
+ Child "MLCapturedPose_21_Translate_X_Node"
+ Expression "MLCapturedPose_21_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5E8D95FA-A8EC-5A11-BC89-C99608ECFBDC}" { Bone "leftshoulder" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_21_Translate_Z_Node {
+ Child "MLCapturedPose_21_Translate_Y_Node"
+ Expression "MLCapturedPose_21_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{DF9A9C25-A1F0-5B1F-B49A-7473EDAA9F97}" { Bone "leftshoulder" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_22_Rotate_X_Node {
+ Child "MLCapturedPose_21_Translate_Z_Node"
+ Expression "MLCapturedPose_22_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{61191766-7B81-5FA0-964B-EA5C384F15EF}" { Bone "neck" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_22_Rotate_Y_Node {
+ Child "MLCapturedPose_22_Rotate_X_Node"
+ Expression "MLCapturedPose_22_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5082F5FC-4092-5463-903A-5EC026AF8571}" { Bone "neck" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_22_Rotate_Z_Node {
+ Child "MLCapturedPose_22_Rotate_Y_Node"
+ Expression "MLCapturedPose_22_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{3BCB0B68-22F6-5A82-B0A8-E31574D29761}" { Bone "neck" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_22_Translate_X_Node {
+ Child "MLCapturedPose_22_Rotate_Z_Node"
+ Expression "MLCapturedPose_22_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{60D353FC-2D04-5EAA-AA36-7EF87F818028}" { Bone "neck" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_22_Translate_Y_Node {
+ Child "MLCapturedPose_22_Translate_X_Node"
+ Expression "MLCapturedPose_22_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{9784FE68-0ACC-58DC-BFB9-7553080C0F93}" { Bone "neck" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_22_Translate_Z_Node {
+ Child "MLCapturedPose_22_Translate_Y_Node"
+ Expression "MLCapturedPose_22_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{0B5A070B-6C9F-5093-8EA9-8B3617E9FF3A}" { Bone "neck" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_23_Rotate_X_Node {
+ Child "MLCapturedPose_22_Translate_Z_Node"
+ Expression "MLCapturedPose_23_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{10B727B7-C1EA-5865-868A-63492A6549D0}" { Bone "rightfoot" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_23_Rotate_Y_Node {
+ Child "MLCapturedPose_23_Rotate_X_Node"
+ Expression "MLCapturedPose_23_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{D5CC5C99-E7A9-58F5-9FD1-AD64AD252A7E}" { Bone "rightfoot" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_23_Rotate_Z_Node {
+ Child "MLCapturedPose_23_Rotate_Y_Node"
+ Expression "MLCapturedPose_23_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{E0871B54-E8DB-5487-8E72-990F075016E7}" { Bone "rightfoot" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_23_Translate_X_Node {
+ Child "MLCapturedPose_23_Rotate_Z_Node"
+ Expression "MLCapturedPose_23_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{EC91D129-3E51-5E9D-93D0-0C8E34CBD9E0}" { Bone "rightfoot" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_23_Translate_Y_Node {
+ Child "MLCapturedPose_23_Translate_X_Node"
+ Expression "MLCapturedPose_23_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{78D74FED-94D1-5DF3-AE6B-27DFE946F685}" { Bone "rightfoot" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_23_Translate_Z_Node {
+ Child "MLCapturedPose_23_Translate_Y_Node"
+ Expression "MLCapturedPose_23_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{B3A453A3-8EEF-592E-B1B9-88837312907A}" { Bone "rightfoot" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_24_Rotate_X_Node {
+ Child "MLCapturedPose_23_Translate_Z_Node"
+ Expression "MLCapturedPose_24_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{CDD7231C-3541-550B-A8A6-3097611E2A58}" { Bone "rightshoulder" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_24_Rotate_Y_Node {
+ Child "MLCapturedPose_24_Rotate_X_Node"
+ Expression "MLCapturedPose_24_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{E3ADECE3-E146-5345-9431-74D0602ED27D}" { Bone "rightshoulder" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_24_Rotate_Z_Node {
+ Child "MLCapturedPose_24_Rotate_Y_Node"
+ Expression "MLCapturedPose_24_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{B50CF707-7B69-530D-A100-9B35A6F0DF7F}" { Bone "rightshoulder" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_24_Translate_X_Node {
+ Child "MLCapturedPose_24_Rotate_Z_Node"
+ Expression "MLCapturedPose_24_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E2EF9066-6417-5C17-B69B-BACCCA0D4CD4}" { Bone "rightshoulder" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_24_Translate_Y_Node {
+ Child "MLCapturedPose_24_Translate_X_Node"
+ Expression "MLCapturedPose_24_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{D58E1E56-7E1A-54D3-99B6-21BFB5A77C8E}" { Bone "rightshoulder" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_24_Translate_Z_Node {
+ Child "MLCapturedPose_24_Translate_Y_Node"
+ Expression "MLCapturedPose_24_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{AB10F908-6D01-5674-BFFC-267DB0855BAC}" { Bone "rightshoulder" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_25_Rotate_X_Node {
+ Child "MLCapturedPose_24_Translate_Z_Node"
+ Expression "MLCapturedPose_25_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{5A6341B7-0FD4-507B-A36B-9AE333502C42}" { Bone "leftarm" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_25_Rotate_Y_Node {
+ Child "MLCapturedPose_25_Rotate_X_Node"
+ Expression "MLCapturedPose_25_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{99254165-7E26-5A79-9D7E-C1B85D9D76D7}" { Bone "leftarm" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_25_Rotate_Z_Node {
+ Child "MLCapturedPose_25_Rotate_Y_Node"
+ Expression "MLCapturedPose_25_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{44576261-D961-50A7-896C-C72B50941F66}" { Bone "leftarm" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_25_Translate_X_Node {
+ Child "MLCapturedPose_25_Rotate_Z_Node"
+ Expression "MLCapturedPose_25_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{330A6241-4406-52A7-852D-10C9D3102367}" { Bone "leftarm" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_25_Translate_Y_Node {
+ Child "MLCapturedPose_25_Translate_X_Node"
+ Expression "MLCapturedPose_25_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{79E02B0B-0352-5B1E-AE90-4C41F0361AEF}" { Bone "leftarm" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_25_Translate_Z_Node {
+ Child "MLCapturedPose_25_Translate_Y_Node"
+ Expression "MLCapturedPose_25_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{3A15DEA0-8954-5EE5-BC8B-8711156A41F7}" { Bone "leftarm" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_26_Rotate_X_Node {
+ Child "MLCapturedPose_25_Translate_Z_Node"
+ Expression "MLCapturedPose_26_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{8DDCF279-29FA-57CD-AD4F-B5CB5808F323}" { Bone "lefttoebase" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_26_Rotate_Y_Node {
+ Child "MLCapturedPose_26_Rotate_X_Node"
+ Expression "MLCapturedPose_26_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{1BCA7A26-039E-532D-B79E-713BBD9DB3A7}" { Bone "lefttoebase" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_26_Rotate_Z_Node {
+ Child "MLCapturedPose_26_Rotate_Y_Node"
+ Expression "MLCapturedPose_26_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{8AC72866-A759-5156-8B4B-DF461BB38CBF}" { Bone "lefttoebase" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_26_Translate_X_Node {
+ Child "MLCapturedPose_26_Rotate_Z_Node"
+ Expression "MLCapturedPose_26_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{19B76974-4C68-5859-99D4-482ED564403B}" { Bone "lefttoebase" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_26_Translate_Y_Node {
+ Child "MLCapturedPose_26_Translate_X_Node"
+ Expression "MLCapturedPose_26_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F81B360D-FFCA-58EC-B056-082FAC9CDAD1}" { Bone "lefttoebase" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_26_Translate_Z_Node {
+ Child "MLCapturedPose_26_Translate_Y_Node"
+ Expression "MLCapturedPose_26_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{DD46F59C-A57A-5851-ABE2-9B2D68F9BC07}" { Bone "lefttoebase" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_27_Rotate_X_Node {
+ Child "MLCapturedPose_26_Translate_Z_Node"
+ Expression "MLCapturedPose_27_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6DD3FE45-7291-5D54-9D6B-2B785CD5860D}" { Bone "neck1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_27_Rotate_Y_Node {
+ Child "MLCapturedPose_27_Rotate_X_Node"
+ Expression "MLCapturedPose_27_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{BFD0F3A7-3CC4-57DF-8BEC-1EBCCEE28364}" { Bone "neck1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_27_Rotate_Z_Node {
+ Child "MLCapturedPose_27_Rotate_Y_Node"
+ Expression "MLCapturedPose_27_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{7E079958-22FF-5222-A265-92D399621B2B}" { Bone "neck1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_27_Translate_X_Node {
+ Child "MLCapturedPose_27_Rotate_Z_Node"
+ Expression "MLCapturedPose_27_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{88C3E0BE-C7CB-51EF-87DC-27C5ECF6F163}" { Bone "neck1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_27_Translate_Y_Node {
+ Child "MLCapturedPose_27_Translate_X_Node"
+ Expression "MLCapturedPose_27_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{80448CB0-715F-5DF0-A953-B7CEE7941C59}" { Bone "neck1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_27_Translate_Z_Node {
+ Child "MLCapturedPose_27_Translate_Y_Node"
+ Expression "MLCapturedPose_27_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{09A50930-CCFC-53A2-84D6-2496F3CD673F}" { Bone "neck1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_28_Rotate_X_Node {
+ Child "MLCapturedPose_27_Translate_Z_Node"
+ Expression "MLCapturedPose_28_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{D403CC0C-2FC5-5F60-8CF6-285344C7173F}" { Bone "rightarm" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_28_Rotate_Y_Node {
+ Child "MLCapturedPose_28_Rotate_X_Node"
+ Expression "MLCapturedPose_28_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{A84D55FC-DC41-55DC-827C-8D575B605F86}" { Bone "rightarm" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_28_Rotate_Z_Node {
+ Child "MLCapturedPose_28_Rotate_Y_Node"
+ Expression "MLCapturedPose_28_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{86C8B6C1-1102-5997-A443-AE38E549E980}" { Bone "rightarm" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_28_Translate_X_Node {
+ Child "MLCapturedPose_28_Rotate_Z_Node"
+ Expression "MLCapturedPose_28_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{3DEB2B3D-137D-5331-A0DD-C47CC60F0574}" { Bone "rightarm" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_28_Translate_Y_Node {
+ Child "MLCapturedPose_28_Translate_X_Node"
+ Expression "MLCapturedPose_28_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{3E0CBEC2-9980-5903-AB5A-4D60A7292FF1}" { Bone "rightarm" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_28_Translate_Z_Node {
+ Child "MLCapturedPose_28_Translate_Y_Node"
+ Expression "MLCapturedPose_28_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{F0E743A7-1A52-5F90-BD02-663467E2769D}" { Bone "rightarm" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_29_Rotate_X_Node {
+ Child "MLCapturedPose_28_Translate_Z_Node"
+ Expression "MLCapturedPose_29_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2CAF8E61-D172-5505-A0A1-9AAF491393F8}" { Bone "righttoebase" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_29_Rotate_Y_Node {
+ Child "MLCapturedPose_29_Rotate_X_Node"
+ Expression "MLCapturedPose_29_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{114E884F-B1B0-5FD0-AB34-29A9F3DCDDB2}" { Bone "righttoebase" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_29_Rotate_Z_Node {
+ Child "MLCapturedPose_29_Rotate_Y_Node"
+ Expression "MLCapturedPose_29_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{FD7AF309-321A-57C6-8851-68DA244231BE}" { Bone "righttoebase" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_29_Translate_X_Node {
+ Child "MLCapturedPose_29_Rotate_Z_Node"
+ Expression "MLCapturedPose_29_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{31EC73D7-E4AC-5530-8AE0-BFE9E1A4B88B}" { Bone "righttoebase" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_29_Translate_Y_Node {
+ Child "MLCapturedPose_29_Translate_X_Node"
+ Expression "MLCapturedPose_29_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{0663B553-0819-58DC-BA49-B65138391C35}" { Bone "righttoebase" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_29_Translate_Z_Node {
+ Child "MLCapturedPose_29_Translate_Y_Node"
+ Expression "MLCapturedPose_29_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{367C1CE1-A26A-55FA-A5BE-F2824D5D79D4}" { Bone "righttoebase" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_30_Rotate_X_Node {
+ Child "MLCapturedPose_29_Translate_Z_Node"
+ Expression "MLCapturedPose_30_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{50096796-DC60-53E6-9627-323B174A45AC}" { Bone "head" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_30_Rotate_Y_Node {
+ Child "MLCapturedPose_30_Rotate_X_Node"
+ Expression "MLCapturedPose_30_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{74073B15-82CF-5F3F-8A0B-574D87574232}" { Bone "head" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_30_Rotate_Z_Node {
+ Child "MLCapturedPose_30_Rotate_Y_Node"
+ Expression "MLCapturedPose_30_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{E5DD5474-190D-5ED6-9944-2A26FFEAD319}" { Bone "head" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_30_Translate_X_Node {
+ Child "MLCapturedPose_30_Rotate_Z_Node"
+ Expression "MLCapturedPose_30_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{BC1C093F-449E-525D-967F-D9FE535C3728}" { Bone "head" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_30_Translate_Y_Node {
+ Child "MLCapturedPose_30_Translate_X_Node"
+ Expression "MLCapturedPose_30_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{EBC20138-72C1-5478-9E5E-79344CD8C8FD}" { Bone "head" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_30_Translate_Z_Node {
+ Child "MLCapturedPose_30_Translate_Y_Node"
+ Expression "MLCapturedPose_30_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{9A47B19B-0657-58A3-9B3D-20910C182E01}" { Bone "head" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_31_Rotate_X_Node {
+ Child "MLCapturedPose_30_Translate_Z_Node"
+ Expression "MLCapturedPose_31_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E29B4B10-A4D2-5918-8E20-4598B1C55409}" { Bone "leftarmextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_31_Rotate_Y_Node {
+ Child "MLCapturedPose_31_Rotate_X_Node"
+ Expression "MLCapturedPose_31_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{26608FE0-7CCF-5ACD-8233-F00A958F204D}" { Bone "leftarmextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_31_Rotate_Z_Node {
+ Child "MLCapturedPose_31_Rotate_Y_Node"
+ Expression "MLCapturedPose_31_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{92F2D751-113F-5963-82CD-408ABDF0F2BD}" { Bone "leftarmextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_31_Translate_X_Node {
+ Child "MLCapturedPose_31_Rotate_Z_Node"
+ Expression "MLCapturedPose_31_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{FF7F97B4-BF25-50B4-93AD-A9EC7F546697}" { Bone "leftarmextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_31_Translate_Y_Node {
+ Child "MLCapturedPose_31_Translate_X_Node"
+ Expression "MLCapturedPose_31_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{81DD6A94-4DD1-5FEE-859F-D646FFBFD053}" { Bone "leftarmextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_31_Translate_Z_Node {
+ Child "MLCapturedPose_31_Translate_Y_Node"
+ Expression "MLCapturedPose_31_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{996371A4-61AD-54CC-BBD8-9D99EBB87083}" { Bone "leftarmextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_32_Rotate_X_Node {
+ Child "MLCapturedPose_31_Translate_Z_Node"
+ Expression "MLCapturedPose_32_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E9147C1F-EF27-5A9C-9497-6F0058A52851}" { Bone "leftarmroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_32_Rotate_Y_Node {
+ Child "MLCapturedPose_32_Rotate_X_Node"
+ Expression "MLCapturedPose_32_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{AD228BDD-EB14-5E2D-AD8B-44D9D4D349C4}" { Bone "leftarmroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_32_Rotate_Z_Node {
+ Child "MLCapturedPose_32_Rotate_Y_Node"
+ Expression "MLCapturedPose_32_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{D7958FF6-1ECF-5ECA-8697-E980169ECB79}" { Bone "leftarmroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_32_Translate_X_Node {
+ Child "MLCapturedPose_32_Rotate_Z_Node"
+ Expression "MLCapturedPose_32_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{C520D8E7-ACCF-58A8-9803-F41263125B25}" { Bone "leftarmroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_32_Translate_Y_Node {
+ Child "MLCapturedPose_32_Translate_X_Node"
+ Expression "MLCapturedPose_32_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{11A46BB6-FDF2-5104-A9DB-297BA32D535D}" { Bone "leftarmroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_32_Translate_Z_Node {
+ Child "MLCapturedPose_32_Translate_Y_Node"
+ Expression "MLCapturedPose_32_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{131435C0-DCF8-52B7-9D07-67A251D8028F}" { Bone "leftarmroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_33_Rotate_X_Node {
+ Child "MLCapturedPose_32_Translate_Z_Node"
+ Expression "MLCapturedPose_33_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{1023E063-FEB0-55AE-8765-FABD274BC84B}" { Bone "rightarmextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_33_Rotate_Y_Node {
+ Child "MLCapturedPose_33_Rotate_X_Node"
+ Expression "MLCapturedPose_33_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{4B565E71-3F6F-59B2-96CD-C766D669F4CF}" { Bone "rightarmextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_33_Rotate_Z_Node {
+ Child "MLCapturedPose_33_Rotate_Y_Node"
+ Expression "MLCapturedPose_33_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{EE18A830-3324-5A77-86E9-9A3F3BACADDC}" { Bone "rightarmextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_33_Translate_X_Node {
+ Child "MLCapturedPose_33_Rotate_Z_Node"
+ Expression "MLCapturedPose_33_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{AF2115B1-468F-5388-8477-A6F961466E9E}" { Bone "rightarmextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_33_Translate_Y_Node {
+ Child "MLCapturedPose_33_Translate_X_Node"
+ Expression "MLCapturedPose_33_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{A06C26E9-95E7-5DAB-911C-E7D8B6FE6E1A}" { Bone "rightarmextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_33_Translate_Z_Node {
+ Child "MLCapturedPose_33_Translate_Y_Node"
+ Expression "MLCapturedPose_33_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{B00BB61A-5946-5817-8EED-7562BE137820}" { Bone "rightarmextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_34_Rotate_X_Node {
+ Child "MLCapturedPose_33_Translate_Z_Node"
+ Expression "MLCapturedPose_34_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{EE9FFBF9-A48D-5106-95B4-D6CDF907FB80}" { Bone "rightarmroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_34_Rotate_Y_Node {
+ Child "MLCapturedPose_34_Rotate_X_Node"
+ Expression "MLCapturedPose_34_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2C659A39-3760-56D5-909E-296157CAF643}" { Bone "rightarmroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_34_Rotate_Z_Node {
+ Child "MLCapturedPose_34_Rotate_Y_Node"
+ Expression "MLCapturedPose_34_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{3026978F-7EFB-5EA1-93EC-C7FF904FA8EE}" { Bone "rightarmroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_34_Translate_X_Node {
+ Child "MLCapturedPose_34_Rotate_Z_Node"
+ Expression "MLCapturedPose_34_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{353A1DFD-B2EA-50C7-AFDD-ACEB46064EF3}" { Bone "rightarmroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_34_Translate_Y_Node {
+ Child "MLCapturedPose_34_Translate_X_Node"
+ Expression "MLCapturedPose_34_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{111513AB-FBAC-5868-92A4-FF13EFC8DFA1}" { Bone "rightarmroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_34_Translate_Z_Node {
+ Child "MLCapturedPose_34_Translate_Y_Node"
+ Expression "MLCapturedPose_34_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{7C97BC0E-A184-5A4F-88E6-28971F0D0844}" { Bone "rightarmroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_35_Rotate_X_Node {
+ Child "MLCapturedPose_34_Translate_Z_Node"
+ Expression "MLCapturedPose_35_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{54F37D17-9B35-581A-B46A-DE5DA86A0C93}" { Bone "leftelbowextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_35_Rotate_Y_Node {
+ Child "MLCapturedPose_35_Rotate_X_Node"
+ Expression "MLCapturedPose_35_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{29C772A8-7E23-58F9-85FB-2C443F6A5EF1}" { Bone "leftelbowextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_35_Rotate_Z_Node {
+ Child "MLCapturedPose_35_Rotate_Y_Node"
+ Expression "MLCapturedPose_35_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{ABD730BE-ADF0-5E5B-B387-97AF6DCB873E}" { Bone "leftelbowextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_35_Translate_X_Node {
+ Child "MLCapturedPose_35_Rotate_Z_Node"
+ Expression "MLCapturedPose_35_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{0FB4E038-A343-5C23-AF03-ED53190A70D3}" { Bone "leftelbowextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_35_Translate_Y_Node {
+ Child "MLCapturedPose_35_Translate_X_Node"
+ Expression "MLCapturedPose_35_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{66446677-FEBF-55DD-9785-813F6169C0C6}" { Bone "leftelbowextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_35_Translate_Z_Node {
+ Child "MLCapturedPose_35_Translate_Y_Node"
+ Expression "MLCapturedPose_35_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{7BE97A97-5AEF-5A97-8D4D-E52FB2A8F0D7}" { Bone "leftelbowextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_36_Rotate_X_Node {
+ Child "MLCapturedPose_35_Translate_Z_Node"
+ Expression "MLCapturedPose_36_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{46CC9B49-489D-579B-916D-378E884899D3}" { Bone "leftforearm" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_36_Rotate_Y_Node {
+ Child "MLCapturedPose_36_Rotate_X_Node"
+ Expression "MLCapturedPose_36_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{BEDB68F6-A00B-5B60-9AE9-98DDE676061E}" { Bone "leftforearm" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_36_Rotate_Z_Node {
+ Child "MLCapturedPose_36_Rotate_Y_Node"
+ Expression "MLCapturedPose_36_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{12EEB1B0-353D-54D4-BB56-44FB0678AB76}" { Bone "leftforearm" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_36_Translate_X_Node {
+ Child "MLCapturedPose_36_Rotate_Z_Node"
+ Expression "MLCapturedPose_36_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E09F49E9-F50B-5463-BBD0-21A7AB616015}" { Bone "leftforearm" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_36_Translate_Y_Node {
+ Child "MLCapturedPose_36_Translate_X_Node"
+ Expression "MLCapturedPose_36_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{411F9073-D1E9-51F7-9E80-EF5A348C01C3}" { Bone "leftforearm" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_36_Translate_Z_Node {
+ Child "MLCapturedPose_36_Translate_Y_Node"
+ Expression "MLCapturedPose_36_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{36C031B8-17C7-58E1-8C4D-0B224A130900}" { Bone "leftforearm" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_37_Rotate_X_Node {
+ Child "MLCapturedPose_36_Translate_Z_Node"
+ Expression "MLCapturedPose_37_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{24FBFEF1-7EBA-581B-93AF-9C54625DACFB}" { Bone "rightelbowextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_37_Rotate_Y_Node {
+ Child "MLCapturedPose_37_Rotate_X_Node"
+ Expression "MLCapturedPose_37_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{525F127F-C9C8-5ED2-98D4-794FD932BDFA}" { Bone "rightelbowextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_37_Rotate_Z_Node {
+ Child "MLCapturedPose_37_Rotate_Y_Node"
+ Expression "MLCapturedPose_37_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{2C83602C-ACB3-5BF9-B124-01F839EBECCA}" { Bone "rightelbowextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_37_Translate_X_Node {
+ Child "MLCapturedPose_37_Rotate_Z_Node"
+ Expression "MLCapturedPose_37_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{A09A9563-D5AD-5CE7-84F8-FAB0E62A8BBD}" { Bone "rightelbowextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_37_Translate_Y_Node {
+ Child "MLCapturedPose_37_Translate_X_Node"
+ Expression "MLCapturedPose_37_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{EDF83319-1513-55F8-90C5-D42F4AC9BDE8}" { Bone "rightelbowextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_37_Translate_Z_Node {
+ Child "MLCapturedPose_37_Translate_Y_Node"
+ Expression "MLCapturedPose_37_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{F35801D2-E2D1-55FB-8E62-469D8D6119A2}" { Bone "rightelbowextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_38_Rotate_X_Node {
+ Child "MLCapturedPose_37_Translate_Z_Node"
+ Expression "MLCapturedPose_38_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{8796C4ED-AA7A-5EDB-B574-D3651B06ECA3}" { Bone "rightforearm" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_38_Rotate_Y_Node {
+ Child "MLCapturedPose_38_Rotate_X_Node"
+ Expression "MLCapturedPose_38_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{100B0C48-955D-5668-98C1-A5D67CE3A3C0}" { Bone "rightforearm" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_38_Rotate_Z_Node {
+ Child "MLCapturedPose_38_Rotate_Y_Node"
+ Expression "MLCapturedPose_38_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{01BEFBA9-11BF-578C-B49D-01CA05609716}" { Bone "rightforearm" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_38_Translate_X_Node {
+ Child "MLCapturedPose_38_Rotate_Z_Node"
+ Expression "MLCapturedPose_38_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{8BD37410-FA1B-5704-ADE1-200765E9FEC1}" { Bone "rightforearm" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_38_Translate_Y_Node {
+ Child "MLCapturedPose_38_Translate_X_Node"
+ Expression "MLCapturedPose_38_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{EACA63C5-B98D-5F8A-ADFE-0E220A637933}" { Bone "rightforearm" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_38_Translate_Z_Node {
+ Child "MLCapturedPose_38_Translate_Y_Node"
+ Expression "MLCapturedPose_38_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{61C4F61D-BE1C-5B96-9ABB-80E9457110E4}" { Bone "rightforearm" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_39_Rotate_X_Node {
+ Child "MLCapturedPose_38_Translate_Z_Node"
+ Expression "MLCapturedPose_39_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{15094C6E-7143-5023-9701-BB86823F0F00}" { Bone "leftforearmextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_39_Rotate_Y_Node {
+ Child "MLCapturedPose_39_Rotate_X_Node"
+ Expression "MLCapturedPose_39_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{BA193060-1891-563E-920A-1A491E6A97C2}" { Bone "leftforearmextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_39_Rotate_Z_Node {
+ Child "MLCapturedPose_39_Rotate_Y_Node"
+ Expression "MLCapturedPose_39_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{A2303742-A29B-5368-8B44-510F7F55D253}" { Bone "leftforearmextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_39_Translate_X_Node {
+ Child "MLCapturedPose_39_Rotate_Z_Node"
+ Expression "MLCapturedPose_39_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{1A0C937C-D7D5-5C57-98C8-C44FB864DBCA}" { Bone "leftforearmextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_39_Translate_Y_Node {
+ Child "MLCapturedPose_39_Translate_X_Node"
+ Expression "MLCapturedPose_39_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{40C8F4CB-C12A-598B-B865-56FE9A889E59}" { Bone "leftforearmextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_39_Translate_Z_Node {
+ Child "MLCapturedPose_39_Translate_Y_Node"
+ Expression "MLCapturedPose_39_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{745FE60E-0023-51CB-9CA4-1B1EE4FC87F7}" { Bone "leftforearmextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_40_Rotate_X_Node {
+ Child "MLCapturedPose_39_Translate_Z_Node"
+ Expression "MLCapturedPose_40_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{125061BF-8DA9-52E2-A346-624EE75F59D4}" { Bone "leftforearmroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_40_Rotate_Y_Node {
+ Child "MLCapturedPose_40_Rotate_X_Node"
+ Expression "MLCapturedPose_40_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C707190B-367E-5803-B19E-921BF58DB175}" { Bone "leftforearmroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_40_Rotate_Z_Node {
+ Child "MLCapturedPose_40_Rotate_Y_Node"
+ Expression "MLCapturedPose_40_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{91427D4E-D347-522D-BF78-4ECF3E147AEB}" { Bone "leftforearmroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_40_Translate_X_Node {
+ Child "MLCapturedPose_40_Rotate_Z_Node"
+ Expression "MLCapturedPose_40_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{9F13174B-84D3-5E33-B291-360017553868}" { Bone "leftforearmroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_40_Translate_Y_Node {
+ Child "MLCapturedPose_40_Translate_X_Node"
+ Expression "MLCapturedPose_40_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{41FA5421-C5D7-5DFB-A216-9A51B12FD900}" { Bone "leftforearmroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_40_Translate_Z_Node {
+ Child "MLCapturedPose_40_Translate_Y_Node"
+ Expression "MLCapturedPose_40_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{A31D2356-1457-52DD-B9A0-E0A4F83B7985}" { Bone "leftforearmroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_41_Rotate_X_Node {
+ Child "MLCapturedPose_40_Translate_Z_Node"
+ Expression "MLCapturedPose_41_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{994E6BDD-6BCB-5FA0-AAC2-B2057DDAC9BF}" { Bone "rightforearmextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_41_Rotate_Y_Node {
+ Child "MLCapturedPose_41_Rotate_X_Node"
+ Expression "MLCapturedPose_41_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5DE6B975-73FA-5CC8-8DAF-5867C6A3FE44}" { Bone "rightforearmextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_41_Rotate_Z_Node {
+ Child "MLCapturedPose_41_Rotate_Y_Node"
+ Expression "MLCapturedPose_41_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{66F79CAA-491B-5662-A1D5-55BE30B01276}" { Bone "rightforearmextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_41_Translate_X_Node {
+ Child "MLCapturedPose_41_Rotate_Z_Node"
+ Expression "MLCapturedPose_41_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{1FA0D7E2-AC9C-5B59-8463-D027B74FE646}" { Bone "rightforearmextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_41_Translate_Y_Node {
+ Child "MLCapturedPose_41_Translate_X_Node"
+ Expression "MLCapturedPose_41_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{FB890441-5816-558A-AF3A-EE8AA10DFC3D}" { Bone "rightforearmextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_41_Translate_Z_Node {
+ Child "MLCapturedPose_41_Translate_Y_Node"
+ Expression "MLCapturedPose_41_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{1B7CB7D8-3137-5977-ABD5-4A5C01DB0A21}" { Bone "rightforearmextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_42_Rotate_X_Node {
+ Child "MLCapturedPose_41_Translate_Z_Node"
+ Expression "MLCapturedPose_42_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{1D9C59B0-3D28-53FC-8DA4-0239AF1124B7}" { Bone "rightforearmroll" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_42_Rotate_Y_Node {
+ Child "MLCapturedPose_42_Rotate_X_Node"
+ Expression "MLCapturedPose_42_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{8D5C66B2-B129-58B8-9BCD-60DC16D10626}" { Bone "rightforearmroll" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_42_Rotate_Z_Node {
+ Child "MLCapturedPose_42_Rotate_Y_Node"
+ Expression "MLCapturedPose_42_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{2EB1438F-3A06-5D56-BEDA-4EC45FE9DB2E}" { Bone "rightforearmroll" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_42_Translate_X_Node {
+ Child "MLCapturedPose_42_Rotate_Z_Node"
+ Expression "MLCapturedPose_42_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E4658F11-7362-5EBD-967E-0458A41A8383}" { Bone "rightforearmroll" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_42_Translate_Y_Node {
+ Child "MLCapturedPose_42_Translate_X_Node"
+ Expression "MLCapturedPose_42_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{71D1B194-11C7-520E-8C91-3F7AD555E344}" { Bone "rightforearmroll" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_42_Translate_Z_Node {
+ Child "MLCapturedPose_42_Translate_Y_Node"
+ Expression "MLCapturedPose_42_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{E44C5130-E7B3-5C86-A6E0-A431FE09B06D}" { Bone "rightforearmroll" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_43_Rotate_X_Node {
+ Child "MLCapturedPose_42_Translate_Z_Node"
+ Expression "MLCapturedPose_43_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{0D2838C8-7CBA-5013-8694-061767FC09EE}" { Bone "lefthand" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_43_Rotate_Y_Node {
+ Child "MLCapturedPose_43_Rotate_X_Node"
+ Expression "MLCapturedPose_43_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{A365CFD5-BB64-5F57-8216-1916E320D1A8}" { Bone "lefthand" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_43_Rotate_Z_Node {
+ Child "MLCapturedPose_43_Rotate_Y_Node"
+ Expression "MLCapturedPose_43_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{27332887-CCA5-5E3B-90CD-F6B915AC3DA7}" { Bone "lefthand" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_43_Translate_X_Node {
+ Child "MLCapturedPose_43_Rotate_Z_Node"
+ Expression "MLCapturedPose_43_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{3EC504E0-3F80-5A02-8FFE-BD16AF7220AE}" { Bone "lefthand" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_43_Translate_Y_Node {
+ Child "MLCapturedPose_43_Translate_X_Node"
+ Expression "MLCapturedPose_43_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{6CF79BCA-C0AA-51A9-B067-9C3B6FED9622}" { Bone "lefthand" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_43_Translate_Z_Node {
+ Child "MLCapturedPose_43_Translate_Y_Node"
+ Expression "MLCapturedPose_43_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{045CB737-0077-5500-9433-94AED969E108}" { Bone "lefthand" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_44_Rotate_X_Node {
+ Child "MLCapturedPose_43_Translate_Z_Node"
+ Expression "MLCapturedPose_44_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{5EA840E7-8B48-52B0-84FB-163784748C36}" { Bone "leftwristextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_44_Rotate_Y_Node {
+ Child "MLCapturedPose_44_Rotate_X_Node"
+ Expression "MLCapturedPose_44_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{0125474E-7D5F-5C9D-8490-E4AF6BE73561}" { Bone "leftwristextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_44_Rotate_Z_Node {
+ Child "MLCapturedPose_44_Rotate_Y_Node"
+ Expression "MLCapturedPose_44_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{2237CDCB-8A8E-5CD8-83C4-7C90679F5085}" { Bone "leftwristextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_44_Translate_X_Node {
+ Child "MLCapturedPose_44_Rotate_Z_Node"
+ Expression "MLCapturedPose_44_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6173E85C-C7F8-5763-BF61-17E1811AF024}" { Bone "leftwristextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_44_Translate_Y_Node {
+ Child "MLCapturedPose_44_Translate_X_Node"
+ Expression "MLCapturedPose_44_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{17BC2691-0AEE-525C-B542-4702583376C3}" { Bone "leftwristextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_44_Translate_Z_Node {
+ Child "MLCapturedPose_44_Translate_Y_Node"
+ Expression "MLCapturedPose_44_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{A69CD6AF-676B-5D91-A4C5-A3C6C4F3C018}" { Bone "leftwristextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_45_Rotate_X_Node {
+ Child "MLCapturedPose_44_Translate_Z_Node"
+ Expression "MLCapturedPose_45_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{BB390972-49B0-557C-8A59-C5FA8FF21CDB}" { Bone "righthand" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_45_Rotate_Y_Node {
+ Child "MLCapturedPose_45_Rotate_X_Node"
+ Expression "MLCapturedPose_45_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{02AE7612-8035-592B-BC00-C817A9579732}" { Bone "righthand" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_45_Rotate_Z_Node {
+ Child "MLCapturedPose_45_Rotate_Y_Node"
+ Expression "MLCapturedPose_45_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{8A859CEC-4FE5-5E98-A485-AC14E7E2CE3D}" { Bone "righthand" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_45_Translate_X_Node {
+ Child "MLCapturedPose_45_Rotate_Z_Node"
+ Expression "MLCapturedPose_45_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{D0BFEE06-0B50-5861-9021-9803C785C890}" { Bone "righthand" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_45_Translate_Y_Node {
+ Child "MLCapturedPose_45_Translate_X_Node"
+ Expression "MLCapturedPose_45_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{B5DACC16-FFEC-5DA6-875F-A1CA51533115}" { Bone "righthand" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_45_Translate_Z_Node {
+ Child "MLCapturedPose_45_Translate_Y_Node"
+ Expression "MLCapturedPose_45_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{B04DDF25-CAAD-5F0E-8BD5-99B27158C4FF}" { Bone "righthand" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_46_Rotate_X_Node {
+ Child "MLCapturedPose_45_Translate_Z_Node"
+ Expression "MLCapturedPose_46_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6EF76150-2FD8-5699-A33F-DD206EB9C1C4}" { Bone "rightwristextra" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_46_Rotate_Y_Node {
+ Child "MLCapturedPose_46_Rotate_X_Node"
+ Expression "MLCapturedPose_46_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{703D460F-B57E-522B-B669-2E42E2609475}" { Bone "rightwristextra" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_46_Rotate_Z_Node {
+ Child "MLCapturedPose_46_Rotate_Y_Node"
+ Expression "MLCapturedPose_46_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{CCBE3F00-BC33-574C-8783-29ED0B64246A}" { Bone "rightwristextra" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_46_Translate_X_Node {
+ Child "MLCapturedPose_46_Rotate_Z_Node"
+ Expression "MLCapturedPose_46_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{39C5CD2C-2199-55DF-938A-60848589FF20}" { Bone "rightwristextra" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_46_Translate_Y_Node {
+ Child "MLCapturedPose_46_Translate_X_Node"
+ Expression "MLCapturedPose_46_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{157872E8-AA15-5C22-897F-30AC223349DD}" { Bone "rightwristextra" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_46_Translate_Z_Node {
+ Child "MLCapturedPose_46_Translate_Y_Node"
+ Expression "MLCapturedPose_46_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{4FF58B3A-5DFD-501D-B1CE-59BF0273BAD3}" { Bone "rightwristextra" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_47_Rotate_X_Node {
+ Child "MLCapturedPose_46_Translate_Z_Node"
+ Expression "MLCapturedPose_47_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{F634A7B0-DF7C-5321-BE48-0C2EF0850A12}" { Bone "lefthand_dummy" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_47_Rotate_Y_Node {
+ Child "MLCapturedPose_47_Rotate_X_Node"
+ Expression "MLCapturedPose_47_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{E6580567-E859-5F74-9574-651D5EFD79DD}" { Bone "lefthand_dummy" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_47_Rotate_Z_Node {
+ Child "MLCapturedPose_47_Rotate_Y_Node"
+ Expression "MLCapturedPose_47_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{C16C3108-2467-5240-92CD-7D9053CDA232}" { Bone "lefthand_dummy" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_47_Translate_X_Node {
+ Child "MLCapturedPose_47_Rotate_Z_Node"
+ Expression "MLCapturedPose_47_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B4B18451-9E21-5990-A46B-CB88F01CA5A7}" { Bone "lefthand_dummy" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_47_Translate_Y_Node {
+ Child "MLCapturedPose_47_Translate_X_Node"
+ Expression "MLCapturedPose_47_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{257086A6-B79D-578B-B4EF-D41BD030CB59}" { Bone "lefthand_dummy" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_47_Translate_Z_Node {
+ Child "MLCapturedPose_47_Translate_Y_Node"
+ Expression "MLCapturedPose_47_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{4C92D73B-65CD-5E5D-8A12-31AB575BF9D1}" { Bone "lefthand_dummy" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_48_Rotate_X_Node {
+ Child "MLCapturedPose_47_Translate_Z_Node"
+ Expression "MLCapturedPose_48_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{4F2DB7C1-B0A5-5B0E-A6EE-A65FCF3139FD}" { Bone "lefthandindex1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_48_Rotate_Y_Node {
+ Child "MLCapturedPose_48_Rotate_X_Node"
+ Expression "MLCapturedPose_48_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{A45F6982-C098-573B-8989-F6854A6F559A}" { Bone "lefthandindex1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_48_Rotate_Z_Node {
+ Child "MLCapturedPose_48_Rotate_Y_Node"
+ Expression "MLCapturedPose_48_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{1CD00E83-C7BE-5444-ACF2-9C0FF1E443F0}" { Bone "lefthandindex1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_48_Translate_X_Node {
+ Child "MLCapturedPose_48_Rotate_Z_Node"
+ Expression "MLCapturedPose_48_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{652C606D-2077-5DB7-B98F-8783DFFA3649}" { Bone "lefthandindex1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_48_Translate_Y_Node {
+ Child "MLCapturedPose_48_Translate_X_Node"
+ Expression "MLCapturedPose_48_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{51939FB6-CD17-574F-812B-6966578DAAD0}" { Bone "lefthandindex1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_48_Translate_Z_Node {
+ Child "MLCapturedPose_48_Translate_Y_Node"
+ Expression "MLCapturedPose_48_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{49158D3A-6C4B-5BEE-971B-63D511B60C71}" { Bone "lefthandindex1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_49_Rotate_X_Node {
+ Child "MLCapturedPose_48_Translate_Z_Node"
+ Expression "MLCapturedPose_49_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{A9FF1B88-4CAB-552B-B957-E7D17F010617}" { Bone "lefthandmiddle1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_49_Rotate_Y_Node {
+ Child "MLCapturedPose_49_Rotate_X_Node"
+ Expression "MLCapturedPose_49_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{6811FB3C-512B-5C9D-9A41-A007391F9AB8}" { Bone "lefthandmiddle1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_49_Rotate_Z_Node {
+ Child "MLCapturedPose_49_Rotate_Y_Node"
+ Expression "MLCapturedPose_49_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{4A05ABE6-087E-5731-A7AA-D3B174163795}" { Bone "lefthandmiddle1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_49_Translate_X_Node {
+ Child "MLCapturedPose_49_Rotate_Z_Node"
+ Expression "MLCapturedPose_49_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{C6B8F412-AA2C-5DB8-A3A0-5D43C82F5334}" { Bone "lefthandmiddle1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_49_Translate_Y_Node {
+ Child "MLCapturedPose_49_Translate_X_Node"
+ Expression "MLCapturedPose_49_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{B6D807AF-07AB-5FEE-AA4A-100FDC350278}" { Bone "lefthandmiddle1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_49_Translate_Z_Node {
+ Child "MLCapturedPose_49_Translate_Y_Node"
+ Expression "MLCapturedPose_49_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{9E6911DB-C653-5B27-A03E-A30EB28D024B}" { Bone "lefthandmiddle1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_50_Rotate_X_Node {
+ Child "MLCapturedPose_49_Translate_Z_Node"
+ Expression "MLCapturedPose_50_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{DAEAA8BC-4D33-5B01-BFAD-7D45DAC83EE7}" { Bone "lefthandpinky1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_50_Rotate_Y_Node {
+ Child "MLCapturedPose_50_Rotate_X_Node"
+ Expression "MLCapturedPose_50_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{383450B4-67FD-5291-8E28-2E8FE4C32250}" { Bone "lefthandpinky1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_50_Rotate_Z_Node {
+ Child "MLCapturedPose_50_Rotate_Y_Node"
+ Expression "MLCapturedPose_50_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{EB023B9E-E299-542E-A723-7C3BCDAE4A19}" { Bone "lefthandpinky1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_50_Translate_X_Node {
+ Child "MLCapturedPose_50_Rotate_Z_Node"
+ Expression "MLCapturedPose_50_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E142814B-1BFA-5C19-9102-C69FBA1381BE}" { Bone "lefthandpinky1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_50_Translate_Y_Node {
+ Child "MLCapturedPose_50_Translate_X_Node"
+ Expression "MLCapturedPose_50_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{538516E6-0178-5021-BD85-52E2DC6E1EE8}" { Bone "lefthandpinky1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_50_Translate_Z_Node {
+ Child "MLCapturedPose_50_Translate_Y_Node"
+ Expression "MLCapturedPose_50_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{E1DAE5CF-B3A6-5995-BF54-0E108EC12C56}" { Bone "lefthandpinky1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_51_Rotate_X_Node {
+ Child "MLCapturedPose_50_Translate_Z_Node"
+ Expression "MLCapturedPose_51_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{40B9B541-5F79-56F5-93A8-639A3AB7E47F}" { Bone "lefthandring" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_51_Rotate_Y_Node {
+ Child "MLCapturedPose_51_Rotate_X_Node"
+ Expression "MLCapturedPose_51_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{AF50D9D2-B096-5B8D-A543-8784B8093B15}" { Bone "lefthandring" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_51_Rotate_Z_Node {
+ Child "MLCapturedPose_51_Rotate_Y_Node"
+ Expression "MLCapturedPose_51_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{C4BD2ACE-0995-5AF1-8F06-896760D3C5E3}" { Bone "lefthandring" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_51_Translate_X_Node {
+ Child "MLCapturedPose_51_Rotate_Z_Node"
+ Expression "MLCapturedPose_51_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{21DEE809-B954-57A2-8F21-814427EBB2B3}" { Bone "lefthandring" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_51_Translate_Y_Node {
+ Child "MLCapturedPose_51_Translate_X_Node"
+ Expression "MLCapturedPose_51_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{33DC8538-352E-5D1A-90E5-C62B09438886}" { Bone "lefthandring" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_51_Translate_Z_Node {
+ Child "MLCapturedPose_51_Translate_Y_Node"
+ Expression "MLCapturedPose_51_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{CE3DBBE8-FD23-5B73-BFCF-33E9CE7B31EE}" { Bone "lefthandring" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_52_Rotate_X_Node {
+ Child "MLCapturedPose_51_Translate_Z_Node"
+ Expression "MLCapturedPose_52_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{706275C1-ECD3-5115-9267-F99DEBA11EAA}" { Bone "lefthandthumb1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_52_Rotate_Y_Node {
+ Child "MLCapturedPose_52_Rotate_X_Node"
+ Expression "MLCapturedPose_52_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{05E5D05A-CAD4-5857-AB1B-D4E7EFF1B47B}" { Bone "lefthandthumb1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_52_Rotate_Z_Node {
+ Child "MLCapturedPose_52_Rotate_Y_Node"
+ Expression "MLCapturedPose_52_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{1EB18D1D-6817-56DF-A441-4AC5A19EEF4D}" { Bone "lefthandthumb1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_52_Translate_X_Node {
+ Child "MLCapturedPose_52_Rotate_Z_Node"
+ Expression "MLCapturedPose_52_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{FA9DA42C-BAD7-5E4C-BB22-06004CF5CDAE}" { Bone "lefthandthumb1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_52_Translate_Y_Node {
+ Child "MLCapturedPose_52_Translate_X_Node"
+ Expression "MLCapturedPose_52_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{0BA3AD3D-A2CB-5944-94E2-EF553824AEB6}" { Bone "lefthandthumb1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_52_Translate_Z_Node {
+ Child "MLCapturedPose_52_Translate_Y_Node"
+ Expression "MLCapturedPose_52_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{77832A61-F32B-5D1B-BD5A-417AEF00636F}" { Bone "lefthandthumb1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_53_Rotate_X_Node {
+ Child "MLCapturedPose_52_Translate_Z_Node"
+ Expression "MLCapturedPose_53_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{F7F4F719-C11B-5AC3-85E2-93CE164C3249}" { Bone "righthand_dummy" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_53_Rotate_Y_Node {
+ Child "MLCapturedPose_53_Rotate_X_Node"
+ Expression "MLCapturedPose_53_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{4639E682-8431-5321-AB0A-354A68E773F7}" { Bone "righthand_dummy" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_53_Rotate_Z_Node {
+ Child "MLCapturedPose_53_Rotate_Y_Node"
+ Expression "MLCapturedPose_53_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{A823A0A8-D632-5C95-AF9D-316BFC064BD3}" { Bone "righthand_dummy" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_53_Translate_X_Node {
+ Child "MLCapturedPose_53_Rotate_Z_Node"
+ Expression "MLCapturedPose_53_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{5E997187-21C6-5C90-98DE-A8A829F42700}" { Bone "righthand_dummy" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_53_Translate_Y_Node {
+ Child "MLCapturedPose_53_Translate_X_Node"
+ Expression "MLCapturedPose_53_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C8E08230-2993-564A-BC45-77542DB22C8C}" { Bone "righthand_dummy" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_53_Translate_Z_Node {
+ Child "MLCapturedPose_53_Translate_Y_Node"
+ Expression "MLCapturedPose_53_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{04ED5697-3A4C-5CEF-B381-0706EC17F827}" { Bone "righthand_dummy" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_54_Rotate_X_Node {
+ Child "MLCapturedPose_53_Translate_Z_Node"
+ Expression "MLCapturedPose_54_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{1A40FC76-DD68-5F65-AC30-556BA3486BEB}" { Bone "righthandindex1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_54_Rotate_Y_Node {
+ Child "MLCapturedPose_54_Rotate_X_Node"
+ Expression "MLCapturedPose_54_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{A5128514-A79E-589D-9533-ADBE51AF5F46}" { Bone "righthandindex1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_54_Rotate_Z_Node {
+ Child "MLCapturedPose_54_Rotate_Y_Node"
+ Expression "MLCapturedPose_54_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{AF31E86D-6FF8-52F9-AEBF-93D523365076}" { Bone "righthandindex1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_54_Translate_X_Node {
+ Child "MLCapturedPose_54_Rotate_Z_Node"
+ Expression "MLCapturedPose_54_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{075EA3D0-FD31-5A94-B140-E397CE152101}" { Bone "righthandindex1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_54_Translate_Y_Node {
+ Child "MLCapturedPose_54_Translate_X_Node"
+ Expression "MLCapturedPose_54_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F44EF418-6D4D-5A6F-A025-7649AC28BB45}" { Bone "righthandindex1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_54_Translate_Z_Node {
+ Child "MLCapturedPose_54_Translate_Y_Node"
+ Expression "MLCapturedPose_54_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{4697C7E0-08BE-5E9F-B4C5-4A0443460401}" { Bone "righthandindex1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_55_Rotate_X_Node {
+ Child "MLCapturedPose_54_Translate_Z_Node"
+ Expression "MLCapturedPose_55_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{A633C5F2-300B-52B7-BB1A-716D52332D59}" { Bone "righthandmiddle1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_55_Rotate_Y_Node {
+ Child "MLCapturedPose_55_Rotate_X_Node"
+ Expression "MLCapturedPose_55_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F3759FC7-9AE1-5572-A0C8-45AEB8B273E2}" { Bone "righthandmiddle1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_55_Rotate_Z_Node {
+ Child "MLCapturedPose_55_Rotate_Y_Node"
+ Expression "MLCapturedPose_55_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{A713505D-2C1F-563F-A5D7-9D1BF081888A}" { Bone "righthandmiddle1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_55_Translate_X_Node {
+ Child "MLCapturedPose_55_Rotate_Z_Node"
+ Expression "MLCapturedPose_55_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{4DDED52B-A18F-5F52-BDE1-C86F212E3ED4}" { Bone "righthandmiddle1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_55_Translate_Y_Node {
+ Child "MLCapturedPose_55_Translate_X_Node"
+ Expression "MLCapturedPose_55_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{48F77E40-7999-5A39-8146-23EB9513C1DC}" { Bone "righthandmiddle1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_55_Translate_Z_Node {
+ Child "MLCapturedPose_55_Translate_Y_Node"
+ Expression "MLCapturedPose_55_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{717D4EC4-CA20-5DC2-87C3-432D59D4116F}" { Bone "righthandmiddle1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_56_Rotate_X_Node {
+ Child "MLCapturedPose_55_Translate_Z_Node"
+ Expression "MLCapturedPose_56_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2E54A0E2-D47D-5C68-9538-1E8DE93F93A4}" { Bone "righthandpinky1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_56_Rotate_Y_Node {
+ Child "MLCapturedPose_56_Rotate_X_Node"
+ Expression "MLCapturedPose_56_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{7470FB42-DCB3-52B5-BC6E-3B946248F337}" { Bone "righthandpinky1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_56_Rotate_Z_Node {
+ Child "MLCapturedPose_56_Rotate_Y_Node"
+ Expression "MLCapturedPose_56_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{0A7E329E-7D26-511D-8890-59D472DC6315}" { Bone "righthandpinky1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_56_Translate_X_Node {
+ Child "MLCapturedPose_56_Rotate_Z_Node"
+ Expression "MLCapturedPose_56_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{0B36D353-6307-5698-BF88-DC1B0523DCF8}" { Bone "righthandpinky1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_56_Translate_Y_Node {
+ Child "MLCapturedPose_56_Translate_X_Node"
+ Expression "MLCapturedPose_56_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{3891FF1E-CDE9-57CF-8B1A-4FD9D52F3C9C}" { Bone "righthandpinky1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_56_Translate_Z_Node {
+ Child "MLCapturedPose_56_Translate_Y_Node"
+ Expression "MLCapturedPose_56_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{F160103A-7195-5812-A960-84BB73F946E9}" { Bone "righthandpinky1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_57_Rotate_X_Node {
+ Child "MLCapturedPose_56_Translate_Z_Node"
+ Expression "MLCapturedPose_57_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{27EB856A-8BDC-5FAA-BBF0-8AF013EC7DDB}" { Bone "righthandring" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_57_Rotate_Y_Node {
+ Child "MLCapturedPose_57_Rotate_X_Node"
+ Expression "MLCapturedPose_57_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2AEEC4F2-0C46-5CF7-8CD1-8B620A0E46EF}" { Bone "righthandring" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_57_Rotate_Z_Node {
+ Child "MLCapturedPose_57_Rotate_Y_Node"
+ Expression "MLCapturedPose_57_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{EC5A78DD-FF2A-5196-85D1-12F28D295AF4}" { Bone "righthandring" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_57_Translate_X_Node {
+ Child "MLCapturedPose_57_Rotate_Z_Node"
+ Expression "MLCapturedPose_57_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E08DC0B8-2A38-5C9B-996C-26594B683D5C}" { Bone "righthandring" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_57_Translate_Y_Node {
+ Child "MLCapturedPose_57_Translate_X_Node"
+ Expression "MLCapturedPose_57_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{00A0FC66-5E15-5FBB-BD71-F996C9D9D019}" { Bone "righthandring" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_57_Translate_Z_Node {
+ Child "MLCapturedPose_57_Translate_Y_Node"
+ Expression "MLCapturedPose_57_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{8ACCEFF3-E668-51D4-9751-5B85B3702BF7}" { Bone "righthandring" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_58_Rotate_X_Node {
+ Child "MLCapturedPose_57_Translate_Z_Node"
+ Expression "MLCapturedPose_58_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{27666E74-8E9C-5DB5-BEC1-F9CFEE5846AE}" { Bone "righthandthumb1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_58_Rotate_Y_Node {
+ Child "MLCapturedPose_58_Rotate_X_Node"
+ Expression "MLCapturedPose_58_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{161CAB0A-CF38-5007-B801-98FDF9F34AB4}" { Bone "righthandthumb1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_58_Rotate_Z_Node {
+ Child "MLCapturedPose_58_Rotate_Y_Node"
+ Expression "MLCapturedPose_58_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{2A9FF307-0A7B-5DA6-9FD8-6B4E45FAA91E}" { Bone "righthandthumb1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_58_Translate_X_Node {
+ Child "MLCapturedPose_58_Rotate_Z_Node"
+ Expression "MLCapturedPose_58_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{FA0E373D-40CA-5065-A955-10BED7B56F89}" { Bone "righthandthumb1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_58_Translate_Y_Node {
+ Child "MLCapturedPose_58_Translate_X_Node"
+ Expression "MLCapturedPose_58_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{4D7A65AA-D767-5610-8A99-BE108BE6C4C3}" { Bone "righthandthumb1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_58_Translate_Z_Node {
+ Child "MLCapturedPose_58_Translate_Y_Node"
+ Expression "MLCapturedPose_58_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{31F7DADE-4680-58CD-B08E-B8A3FF686D4F}" { Bone "righthandthumb1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_59_Rotate_X_Node {
+ Child "MLCapturedPose_58_Translate_Z_Node"
+ Expression "MLCapturedPose_59_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{C8FED996-E043-59D5-B38E-FFF912768607}" { Bone "lefthandindex2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_59_Rotate_Y_Node {
+ Child "MLCapturedPose_59_Rotate_X_Node"
+ Expression "MLCapturedPose_59_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{994C6C16-543F-5637-9102-0135A9AF7D2B}" { Bone "lefthandindex2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_59_Rotate_Z_Node {
+ Child "MLCapturedPose_59_Rotate_Y_Node"
+ Expression "MLCapturedPose_59_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{0193F2B8-BF3D-525A-88B2-E8203757409D}" { Bone "lefthandindex2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_59_Translate_X_Node {
+ Child "MLCapturedPose_59_Rotate_Z_Node"
+ Expression "MLCapturedPose_59_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{C9539575-BB0E-5942-B18C-5CF28D7F5863}" { Bone "lefthandindex2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_59_Translate_Y_Node {
+ Child "MLCapturedPose_59_Translate_X_Node"
+ Expression "MLCapturedPose_59_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{3007E088-9FE3-5DE9-B73B-5835878FA1FD}" { Bone "lefthandindex2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_59_Translate_Z_Node {
+ Child "MLCapturedPose_59_Translate_Y_Node"
+ Expression "MLCapturedPose_59_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{FC2B9E60-F13D-5E9B-A6D8-2171C38E88A1}" { Bone "lefthandindex2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_60_Rotate_X_Node {
+ Child "MLCapturedPose_59_Translate_Z_Node"
+ Expression "MLCapturedPose_60_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{992B686D-4795-5C2F-8F85-7EAA7527031B}" { Bone "lefthandmiddle2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_60_Rotate_Y_Node {
+ Child "MLCapturedPose_60_Rotate_X_Node"
+ Expression "MLCapturedPose_60_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{61A2A4E3-A48F-553D-B57B-6EEC9033E410}" { Bone "lefthandmiddle2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_60_Rotate_Z_Node {
+ Child "MLCapturedPose_60_Rotate_Y_Node"
+ Expression "MLCapturedPose_60_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{654273C5-7554-5238-A2FC-D4D188254BCF}" { Bone "lefthandmiddle2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_60_Translate_X_Node {
+ Child "MLCapturedPose_60_Rotate_Z_Node"
+ Expression "MLCapturedPose_60_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{66B9E0E6-0314-55EA-A42C-8B0641E4EC88}" { Bone "lefthandmiddle2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_60_Translate_Y_Node {
+ Child "MLCapturedPose_60_Translate_X_Node"
+ Expression "MLCapturedPose_60_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{07DADCCF-2BF3-5E95-8CCE-00AF4AEFD40B}" { Bone "lefthandmiddle2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_60_Translate_Z_Node {
+ Child "MLCapturedPose_60_Translate_Y_Node"
+ Expression "MLCapturedPose_60_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{B8A8DE0B-E59E-5708-A8EE-34B48DDF0BED}" { Bone "lefthandmiddle2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_61_Rotate_X_Node {
+ Child "MLCapturedPose_60_Translate_Z_Node"
+ Expression "MLCapturedPose_61_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{99BA358F-7539-590D-809B-6728BF6EC33C}" { Bone "lefthandpinky2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_61_Rotate_Y_Node {
+ Child "MLCapturedPose_61_Rotate_X_Node"
+ Expression "MLCapturedPose_61_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{BF7A035A-3366-5D02-AD99-A75AF5859A02}" { Bone "lefthandpinky2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_61_Rotate_Z_Node {
+ Child "MLCapturedPose_61_Rotate_Y_Node"
+ Expression "MLCapturedPose_61_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{D6787A72-B5B6-51BA-B4D3-47ABE8F4756C}" { Bone "lefthandpinky2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_61_Translate_X_Node {
+ Child "MLCapturedPose_61_Rotate_Z_Node"
+ Expression "MLCapturedPose_61_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B01E1914-C193-5334-A49E-1B376E631F88}" { Bone "lefthandpinky2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_61_Translate_Y_Node {
+ Child "MLCapturedPose_61_Translate_X_Node"
+ Expression "MLCapturedPose_61_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2CC62E5C-EA87-557D-98B8-5C119985DDA2}" { Bone "lefthandpinky2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_61_Translate_Z_Node {
+ Child "MLCapturedPose_61_Translate_Y_Node"
+ Expression "MLCapturedPose_61_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{804CFE90-F1DE-5EDE-BCFE-E5AD2E0A730B}" { Bone "lefthandpinky2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_62_Rotate_X_Node {
+ Child "MLCapturedPose_61_Translate_Z_Node"
+ Expression "MLCapturedPose_62_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{7A6B8422-C4F4-5959-AEE1-D85CB80D0D51}" { Bone "lefthandring1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_62_Rotate_Y_Node {
+ Child "MLCapturedPose_62_Rotate_X_Node"
+ Expression "MLCapturedPose_62_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{9E9FF929-67EC-5168-842E-47E4793C6B1F}" { Bone "lefthandring1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_62_Rotate_Z_Node {
+ Child "MLCapturedPose_62_Rotate_Y_Node"
+ Expression "MLCapturedPose_62_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{E817D277-16DE-5C6D-BA27-F969B9054C5F}" { Bone "lefthandring1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_62_Translate_X_Node {
+ Child "MLCapturedPose_62_Rotate_Z_Node"
+ Expression "MLCapturedPose_62_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{C41847A7-5209-56B2-86E5-273BD4C3A2CF}" { Bone "lefthandring1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_62_Translate_Y_Node {
+ Child "MLCapturedPose_62_Translate_X_Node"
+ Expression "MLCapturedPose_62_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{45B4AC81-3AAC-56B5-822B-ABA2EB609B82}" { Bone "lefthandring1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_62_Translate_Z_Node {
+ Child "MLCapturedPose_62_Translate_Y_Node"
+ Expression "MLCapturedPose_62_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{381360C5-A130-59B6-963F-99502C19A0C4}" { Bone "lefthandring1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_63_Rotate_X_Node {
+ Child "MLCapturedPose_62_Translate_Z_Node"
+ Expression "MLCapturedPose_63_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B0E542DB-FA76-5939-906C-3044FC0D8C33}" { Bone "lefthandthumb2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_63_Rotate_Y_Node {
+ Child "MLCapturedPose_63_Rotate_X_Node"
+ Expression "MLCapturedPose_63_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{83E94F5B-C74E-50DD-AA74-9971C48BA17C}" { Bone "lefthandthumb2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_63_Rotate_Z_Node {
+ Child "MLCapturedPose_63_Rotate_Y_Node"
+ Expression "MLCapturedPose_63_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{ADBB37CC-6ECF-5355-BBBD-75017624A027}" { Bone "lefthandthumb2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_63_Translate_X_Node {
+ Child "MLCapturedPose_63_Rotate_Z_Node"
+ Expression "MLCapturedPose_63_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{098081EA-555A-552A-B738-D9A2FA9B0102}" { Bone "lefthandthumb2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_63_Translate_Y_Node {
+ Child "MLCapturedPose_63_Translate_X_Node"
+ Expression "MLCapturedPose_63_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5923C8A2-DAB5-5899-9EEE-32AD7E8A77C3}" { Bone "lefthandthumb2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_63_Translate_Z_Node {
+ Child "MLCapturedPose_63_Translate_Y_Node"
+ Expression "MLCapturedPose_63_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{37BB1514-A357-5A56-85CA-BA68C1DE82A3}" { Bone "lefthandthumb2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_64_Rotate_X_Node {
+ Child "MLCapturedPose_63_Translate_Z_Node"
+ Expression "MLCapturedPose_64_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{954EEBAC-49BD-50E2-AFB6-E2BB4B27FC2C}" { Bone "righthandindex2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_64_Rotate_Y_Node {
+ Child "MLCapturedPose_64_Rotate_X_Node"
+ Expression "MLCapturedPose_64_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{BACA472F-FE5B-5284-8A9C-0AC722253D6D}" { Bone "righthandindex2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_64_Rotate_Z_Node {
+ Child "MLCapturedPose_64_Rotate_Y_Node"
+ Expression "MLCapturedPose_64_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{90480879-F3E7-5F12-9D13-DBE9BEA9C9EC}" { Bone "righthandindex2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_64_Translate_X_Node {
+ Child "MLCapturedPose_64_Rotate_Z_Node"
+ Expression "MLCapturedPose_64_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{802B096E-DB82-55B2-B8BF-2A51F24DB408}" { Bone "righthandindex2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_64_Translate_Y_Node {
+ Child "MLCapturedPose_64_Translate_X_Node"
+ Expression "MLCapturedPose_64_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{048A2B28-CB73-5DCB-829F-567CA028FC7B}" { Bone "righthandindex2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_64_Translate_Z_Node {
+ Child "MLCapturedPose_64_Translate_Y_Node"
+ Expression "MLCapturedPose_64_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{FEDF4E57-0021-53DB-AA79-25C8574493EB}" { Bone "righthandindex2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_65_Rotate_X_Node {
+ Child "MLCapturedPose_64_Translate_Z_Node"
+ Expression "MLCapturedPose_65_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{EF013007-754B-5164-BE17-51853AFB9783}" { Bone "righthandmiddle2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_65_Rotate_Y_Node {
+ Child "MLCapturedPose_65_Rotate_X_Node"
+ Expression "MLCapturedPose_65_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{9A9E8F50-CF60-5FCE-B881-496EDD1B7566}" { Bone "righthandmiddle2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_65_Rotate_Z_Node {
+ Child "MLCapturedPose_65_Rotate_Y_Node"
+ Expression "MLCapturedPose_65_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{41FB6E46-882C-5335-A543-166BD0F14414}" { Bone "righthandmiddle2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_65_Translate_X_Node {
+ Child "MLCapturedPose_65_Rotate_Z_Node"
+ Expression "MLCapturedPose_65_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{535BB79A-1C49-5115-824A-97FC8EA375D9}" { Bone "righthandmiddle2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_65_Translate_Y_Node {
+ Child "MLCapturedPose_65_Translate_X_Node"
+ Expression "MLCapturedPose_65_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2ED7F7AC-2C12-551C-86E6-F85BBBC68897}" { Bone "righthandmiddle2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_65_Translate_Z_Node {
+ Child "MLCapturedPose_65_Translate_Y_Node"
+ Expression "MLCapturedPose_65_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{EA38517B-D4B5-51FB-BF45-3B80FDF88149}" { Bone "righthandmiddle2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_66_Rotate_X_Node {
+ Child "MLCapturedPose_65_Translate_Z_Node"
+ Expression "MLCapturedPose_66_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{D3F3B709-4032-5E9F-8268-42DBB248D837}" { Bone "righthandpinky2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_66_Rotate_Y_Node {
+ Child "MLCapturedPose_66_Rotate_X_Node"
+ Expression "MLCapturedPose_66_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C7FB1CF9-BD92-5A02-AAF0-A9899B41BC6E}" { Bone "righthandpinky2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_66_Rotate_Z_Node {
+ Child "MLCapturedPose_66_Rotate_Y_Node"
+ Expression "MLCapturedPose_66_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{2F829B80-C993-5715-AA6B-4081AC48CE79}" { Bone "righthandpinky2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_66_Translate_X_Node {
+ Child "MLCapturedPose_66_Rotate_Z_Node"
+ Expression "MLCapturedPose_66_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{BC6972CD-5252-5038-B6F3-FB69DE72757C}" { Bone "righthandpinky2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_66_Translate_Y_Node {
+ Child "MLCapturedPose_66_Translate_X_Node"
+ Expression "MLCapturedPose_66_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2BA56F14-A07D-54DD-BFF7-CA7E093918F4}" { Bone "righthandpinky2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_66_Translate_Z_Node {
+ Child "MLCapturedPose_66_Translate_Y_Node"
+ Expression "MLCapturedPose_66_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{0DDC831D-B327-5FB3-8706-93FC4E43C599}" { Bone "righthandpinky2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_67_Rotate_X_Node {
+ Child "MLCapturedPose_66_Translate_Z_Node"
+ Expression "MLCapturedPose_67_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6B19D302-588F-5C4E-8BC2-2E09E23B45BF}" { Bone "righthandring1" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_67_Rotate_Y_Node {
+ Child "MLCapturedPose_67_Rotate_X_Node"
+ Expression "MLCapturedPose_67_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{9C7B71FA-F1E3-5C77-963A-E6094E9F73F3}" { Bone "righthandring1" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_67_Rotate_Z_Node {
+ Child "MLCapturedPose_67_Rotate_Y_Node"
+ Expression "MLCapturedPose_67_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{95A69534-9739-5EFC-A839-F47262EB1C1F}" { Bone "righthandring1" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_67_Translate_X_Node {
+ Child "MLCapturedPose_67_Rotate_Z_Node"
+ Expression "MLCapturedPose_67_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{78AC1D9A-8E17-5788-BA97-F01A2BDB05AA}" { Bone "righthandring1" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_67_Translate_Y_Node {
+ Child "MLCapturedPose_67_Translate_X_Node"
+ Expression "MLCapturedPose_67_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{57EBF64A-9589-5CBB-A838-D381F7016DED}" { Bone "righthandring1" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_67_Translate_Z_Node {
+ Child "MLCapturedPose_67_Translate_Y_Node"
+ Expression "MLCapturedPose_67_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{86744280-6B57-5DE1-A3CA-D140F85291A9}" { Bone "righthandring1" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_68_Rotate_X_Node {
+ Child "MLCapturedPose_67_Translate_Z_Node"
+ Expression "MLCapturedPose_68_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{5EA21DDF-191D-5AF1-83B3-2D8CA2B069D0}" { Bone "righthandthumb2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_68_Rotate_Y_Node {
+ Child "MLCapturedPose_68_Rotate_X_Node"
+ Expression "MLCapturedPose_68_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{624FB640-1089-5DD8-A0FB-A70B2639820B}" { Bone "righthandthumb2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_68_Rotate_Z_Node {
+ Child "MLCapturedPose_68_Rotate_Y_Node"
+ Expression "MLCapturedPose_68_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{17B8A254-9B64-5033-8C02-F3CFA9FACE67}" { Bone "righthandthumb2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_68_Translate_X_Node {
+ Child "MLCapturedPose_68_Rotate_Z_Node"
+ Expression "MLCapturedPose_68_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{12044C01-0234-57B5-9747-2CFBF87BC6D6}" { Bone "righthandthumb2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_68_Translate_Y_Node {
+ Child "MLCapturedPose_68_Translate_X_Node"
+ Expression "MLCapturedPose_68_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{FCCDCE64-7D14-5142-A3CD-6E396E36A5AD}" { Bone "righthandthumb2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_68_Translate_Z_Node {
+ Child "MLCapturedPose_68_Translate_Y_Node"
+ Expression "MLCapturedPose_68_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{45A11BF2-F179-55CB-8324-F2561D1440C5}" { Bone "righthandthumb2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_69_Rotate_X_Node {
+ Child "MLCapturedPose_68_Translate_Z_Node"
+ Expression "MLCapturedPose_69_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{F32D24A2-9997-5729-9974-04CB6281D1EB}" { Bone "lefthandindex3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_69_Rotate_Y_Node {
+ Child "MLCapturedPose_69_Rotate_X_Node"
+ Expression "MLCapturedPose_69_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5530FF99-F3C7-5FBF-92B1-E24A17AF3E4B}" { Bone "lefthandindex3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_69_Rotate_Z_Node {
+ Child "MLCapturedPose_69_Rotate_Y_Node"
+ Expression "MLCapturedPose_69_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{360FD31D-0602-5E3A-B7F0-80ADD0BC818F}" { Bone "lefthandindex3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_69_Translate_X_Node {
+ Child "MLCapturedPose_69_Rotate_Z_Node"
+ Expression "MLCapturedPose_69_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6F0330BE-04AA-5668-8A47-571229103E23}" { Bone "lefthandindex3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_69_Translate_Y_Node {
+ Child "MLCapturedPose_69_Translate_X_Node"
+ Expression "MLCapturedPose_69_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C0770600-6087-5D4B-9A84-46EB78D38B01}" { Bone "lefthandindex3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_69_Translate_Z_Node {
+ Child "MLCapturedPose_69_Translate_Y_Node"
+ Expression "MLCapturedPose_69_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{F919738F-3D71-5DBF-8513-59803CB9C6DB}" { Bone "lefthandindex3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_70_Rotate_X_Node {
+ Child "MLCapturedPose_69_Translate_Z_Node"
+ Expression "MLCapturedPose_70_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{714BFF7D-5D4A-53B2-AC12-38AB174AE756}" { Bone "lefthandmiddle3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_70_Rotate_Y_Node {
+ Child "MLCapturedPose_70_Rotate_X_Node"
+ Expression "MLCapturedPose_70_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{DFBE45C7-7842-5639-BD48-A866909FBC0C}" { Bone "lefthandmiddle3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_70_Rotate_Z_Node {
+ Child "MLCapturedPose_70_Rotate_Y_Node"
+ Expression "MLCapturedPose_70_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{BD3B5B93-E561-51D0-B4BA-F7EC7CEFFC9B}" { Bone "lefthandmiddle3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_70_Translate_X_Node {
+ Child "MLCapturedPose_70_Rotate_Z_Node"
+ Expression "MLCapturedPose_70_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{8EB73A30-7B60-571B-9102-FBC47063A2D9}" { Bone "lefthandmiddle3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_70_Translate_Y_Node {
+ Child "MLCapturedPose_70_Translate_X_Node"
+ Expression "MLCapturedPose_70_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F78E06BD-55E8-5DA8-A514-A4CDAF886C9F}" { Bone "lefthandmiddle3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_70_Translate_Z_Node {
+ Child "MLCapturedPose_70_Translate_Y_Node"
+ Expression "MLCapturedPose_70_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{1972A516-2B26-5AC2-8E38-B1F644B90A77}" { Bone "lefthandmiddle3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_71_Rotate_X_Node {
+ Child "MLCapturedPose_70_Translate_Z_Node"
+ Expression "MLCapturedPose_71_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6C807DAD-7A1F-5ACB-9B1B-3FD424593739}" { Bone "lefthandpinky3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_71_Rotate_Y_Node {
+ Child "MLCapturedPose_71_Rotate_X_Node"
+ Expression "MLCapturedPose_71_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{492344E2-D2B3-5709-87DD-1B65144EBB7B}" { Bone "lefthandpinky3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_71_Rotate_Z_Node {
+ Child "MLCapturedPose_71_Rotate_Y_Node"
+ Expression "MLCapturedPose_71_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{49A5D7EA-BD60-5B52-98CD-6D07AB5BAE05}" { Bone "lefthandpinky3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_71_Translate_X_Node {
+ Child "MLCapturedPose_71_Rotate_Z_Node"
+ Expression "MLCapturedPose_71_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B199E4DD-4ED3-55D4-BFB9-073F2A323F0E}" { Bone "lefthandpinky3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_71_Translate_Y_Node {
+ Child "MLCapturedPose_71_Translate_X_Node"
+ Expression "MLCapturedPose_71_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5958AD25-0D6D-5B97-8FD1-9CDB9D7EA807}" { Bone "lefthandpinky3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_71_Translate_Z_Node {
+ Child "MLCapturedPose_71_Translate_Y_Node"
+ Expression "MLCapturedPose_71_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{7FF1D8AD-F6AC-5980-ABBB-F3FF52A6587E}" { Bone "lefthandpinky3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_72_Rotate_X_Node {
+ Child "MLCapturedPose_71_Translate_Z_Node"
+ Expression "MLCapturedPose_72_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B54459F5-99C4-5CE6-9C88-6DCFAAC24166}" { Bone "lefthandring2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_72_Rotate_Y_Node {
+ Child "MLCapturedPose_72_Rotate_X_Node"
+ Expression "MLCapturedPose_72_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{17A208A1-463D-5A90-BB67-C26FCDBEF692}" { Bone "lefthandring2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_72_Rotate_Z_Node {
+ Child "MLCapturedPose_72_Rotate_Y_Node"
+ Expression "MLCapturedPose_72_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{AA1641A0-C79C-5D7E-8CDD-7B00C435E718}" { Bone "lefthandring2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_72_Translate_X_Node {
+ Child "MLCapturedPose_72_Rotate_Z_Node"
+ Expression "MLCapturedPose_72_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E45D05A0-FBFF-5F16-95CC-B5BB8FF41090}" { Bone "lefthandring2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_72_Translate_Y_Node {
+ Child "MLCapturedPose_72_Translate_X_Node"
+ Expression "MLCapturedPose_72_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{4B3EB574-8EA3-5C0A-8EBB-07D5D9D32579}" { Bone "lefthandring2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_72_Translate_Z_Node {
+ Child "MLCapturedPose_72_Translate_Y_Node"
+ Expression "MLCapturedPose_72_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{8658BC6E-4D8A-5312-9DC7-E13F9A4E99FD}" { Bone "lefthandring2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_73_Rotate_X_Node {
+ Child "MLCapturedPose_72_Translate_Z_Node"
+ Expression "MLCapturedPose_73_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{93424CF0-E835-5A69-9FD1-A8F4A9A9461F}" { Bone "lefthandthumb3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_73_Rotate_Y_Node {
+ Child "MLCapturedPose_73_Rotate_X_Node"
+ Expression "MLCapturedPose_73_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{B89C7BA2-C36F-569B-A7FD-D3B5A6ECB174}" { Bone "lefthandthumb3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_73_Rotate_Z_Node {
+ Child "MLCapturedPose_73_Rotate_Y_Node"
+ Expression "MLCapturedPose_73_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{5A0407A3-2ED1-53DC-B752-E2C51B37D5C4}" { Bone "lefthandthumb3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_73_Translate_X_Node {
+ Child "MLCapturedPose_73_Rotate_Z_Node"
+ Expression "MLCapturedPose_73_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{CD01FB0E-1E56-57E0-B664-E64B16ACA34E}" { Bone "lefthandthumb3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_73_Translate_Y_Node {
+ Child "MLCapturedPose_73_Translate_X_Node"
+ Expression "MLCapturedPose_73_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{E62982CD-0926-50D9-B3AD-E08872C22C10}" { Bone "lefthandthumb3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_73_Translate_Z_Node {
+ Child "MLCapturedPose_73_Translate_Y_Node"
+ Expression "MLCapturedPose_73_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{29006134-6B99-5177-962D-6305EDADB8C2}" { Bone "lefthandthumb3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_74_Rotate_X_Node {
+ Child "MLCapturedPose_73_Translate_Z_Node"
+ Expression "MLCapturedPose_74_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{EC34A5A3-BC19-5681-8A1B-7519E93A83B0}" { Bone "righthandindex3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_74_Rotate_Y_Node {
+ Child "MLCapturedPose_74_Rotate_X_Node"
+ Expression "MLCapturedPose_74_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{32E2F807-312C-5AF8-89E7-EE513610A485}" { Bone "righthandindex3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_74_Rotate_Z_Node {
+ Child "MLCapturedPose_74_Rotate_Y_Node"
+ Expression "MLCapturedPose_74_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{1984E006-308E-55D4-8C82-99E19FE5DB16}" { Bone "righthandindex3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_74_Translate_X_Node {
+ Child "MLCapturedPose_74_Rotate_Z_Node"
+ Expression "MLCapturedPose_74_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{FFF11A0D-125C-593D-A155-A087AE37A3C5}" { Bone "righthandindex3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_74_Translate_Y_Node {
+ Child "MLCapturedPose_74_Translate_X_Node"
+ Expression "MLCapturedPose_74_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{09E4A7B2-71E4-5DA2-A6C5-05F8FE790E15}" { Bone "righthandindex3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_74_Translate_Z_Node {
+ Child "MLCapturedPose_74_Translate_Y_Node"
+ Expression "MLCapturedPose_74_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{9EF12921-49FF-51A5-B134-D982FAAC014D}" { Bone "righthandindex3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_75_Rotate_X_Node {
+ Child "MLCapturedPose_74_Translate_Z_Node"
+ Expression "MLCapturedPose_75_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{6D064933-10AC-5221-977A-9BBCB7B333A6}" { Bone "righthandmiddle3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_75_Rotate_Y_Node {
+ Child "MLCapturedPose_75_Rotate_X_Node"
+ Expression "MLCapturedPose_75_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F16BDDC4-7428-5987-8FE0-7F29A4E81291}" { Bone "righthandmiddle3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_75_Rotate_Z_Node {
+ Child "MLCapturedPose_75_Rotate_Y_Node"
+ Expression "MLCapturedPose_75_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{C60AD4D6-86EC-5218-ADBF-CDC6E42DACCF}" { Bone "righthandmiddle3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_75_Translate_X_Node {
+ Child "MLCapturedPose_75_Rotate_Z_Node"
+ Expression "MLCapturedPose_75_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{9882EE00-099F-51BE-BEAD-27EE01985021}" { Bone "righthandmiddle3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_75_Translate_Y_Node {
+ Child "MLCapturedPose_75_Translate_X_Node"
+ Expression "MLCapturedPose_75_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2A35E928-D635-53C1-A16B-D3303C6A58A0}" { Bone "righthandmiddle3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_75_Translate_Z_Node {
+ Child "MLCapturedPose_75_Translate_Y_Node"
+ Expression "MLCapturedPose_75_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{C9558103-54E1-5D55-9C66-E2A70008E2CC}" { Bone "righthandmiddle3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_76_Rotate_X_Node {
+ Child "MLCapturedPose_75_Translate_Z_Node"
+ Expression "MLCapturedPose_76_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B1D87C58-E81A-5E91-A1AA-27FD641227C4}" { Bone "righthandpinky3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_76_Rotate_Y_Node {
+ Child "MLCapturedPose_76_Rotate_X_Node"
+ Expression "MLCapturedPose_76_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F9CA2134-03BF-54D1-A299-CD5134136A17}" { Bone "righthandpinky3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_76_Rotate_Z_Node {
+ Child "MLCapturedPose_76_Rotate_Y_Node"
+ Expression "MLCapturedPose_76_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{336D390A-C567-5948-96FD-C6517418F9B6}" { Bone "righthandpinky3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_76_Translate_X_Node {
+ Child "MLCapturedPose_76_Rotate_Z_Node"
+ Expression "MLCapturedPose_76_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{3F283DE1-5F25-5856-A9CC-067E435AB9FD}" { Bone "righthandpinky3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_76_Translate_Y_Node {
+ Child "MLCapturedPose_76_Translate_X_Node"
+ Expression "MLCapturedPose_76_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2944A8C0-A9D9-5AD0-B22A-9463B68ED460}" { Bone "righthandpinky3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_76_Translate_Z_Node {
+ Child "MLCapturedPose_76_Translate_Y_Node"
+ Expression "MLCapturedPose_76_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{B6188948-D71D-540F-9288-CA66BD6C0F80}" { Bone "righthandpinky3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_77_Rotate_X_Node {
+ Child "MLCapturedPose_76_Translate_Z_Node"
+ Expression "MLCapturedPose_77_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{964E802E-1563-5824-8F69-CD277A8221E1}" { Bone "righthandring2" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_77_Rotate_Y_Node {
+ Child "MLCapturedPose_77_Rotate_X_Node"
+ Expression "MLCapturedPose_77_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{947936AF-DB50-5E8F-90E6-7926357B213A}" { Bone "righthandring2" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_77_Rotate_Z_Node {
+ Child "MLCapturedPose_77_Rotate_Y_Node"
+ Expression "MLCapturedPose_77_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{91897B82-9F47-5727-BF65-86195145DE0E}" { Bone "righthandring2" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_77_Translate_X_Node {
+ Child "MLCapturedPose_77_Rotate_Z_Node"
+ Expression "MLCapturedPose_77_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{08C9A733-E2C6-5A1B-BC78-138166FF45B1}" { Bone "righthandring2" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_77_Translate_Y_Node {
+ Child "MLCapturedPose_77_Translate_X_Node"
+ Expression "MLCapturedPose_77_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{B3D00390-C7EA-59C3-A420-11A3EEF49215}" { Bone "righthandring2" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_77_Translate_Z_Node {
+ Child "MLCapturedPose_77_Translate_Y_Node"
+ Expression "MLCapturedPose_77_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{59494E08-9E33-5155-B8BD-487EC545BB5A}" { Bone "righthandring2" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_78_Rotate_X_Node {
+ Child "MLCapturedPose_77_Translate_Z_Node"
+ Expression "MLCapturedPose_78_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{C34B38B3-9DDF-5A54-9591-D4AA25293F10}" { Bone "righthandthumb3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_78_Rotate_Y_Node {
+ Child "MLCapturedPose_78_Rotate_X_Node"
+ Expression "MLCapturedPose_78_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F764A77A-5A83-5EAD-BD88-B5DBD0500231}" { Bone "righthandthumb3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_78_Rotate_Z_Node {
+ Child "MLCapturedPose_78_Rotate_Y_Node"
+ Expression "MLCapturedPose_78_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{56EA9F3C-4602-5913-BC5E-DF30939AFBCA}" { Bone "righthandthumb3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_78_Translate_X_Node {
+ Child "MLCapturedPose_78_Rotate_Z_Node"
+ Expression "MLCapturedPose_78_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{657FE80C-4D5F-53EB-B6E6-51459448F82A}" { Bone "righthandthumb3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_78_Translate_Y_Node {
+ Child "MLCapturedPose_78_Translate_X_Node"
+ Expression "MLCapturedPose_78_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{55FF0238-B33F-59EB-913F-84349598BDE7}" { Bone "righthandthumb3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_78_Translate_Z_Node {
+ Child "MLCapturedPose_78_Translate_Y_Node"
+ Expression "MLCapturedPose_78_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{7D18A688-0A38-5956-8CEC-AC4A2E5B4CDE}" { Bone "righthandthumb3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_79_Rotate_X_Node {
+ Child "MLCapturedPose_78_Translate_Z_Node"
+ Expression "MLCapturedPose_79_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{01B8D1A1-6541-5CF7-A3F9-8ADEA57F9FEF}" { Bone "lefthandindex4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_79_Rotate_Y_Node {
+ Child "MLCapturedPose_79_Rotate_X_Node"
+ Expression "MLCapturedPose_79_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5D4BA805-AFAA-51A6-B4D4-8287B3D78B78}" { Bone "lefthandindex4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_79_Rotate_Z_Node {
+ Child "MLCapturedPose_79_Rotate_Y_Node"
+ Expression "MLCapturedPose_79_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{5B2E0C60-723D-58F0-BBC4-49D1F95F6844}" { Bone "lefthandindex4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_79_Translate_X_Node {
+ Child "MLCapturedPose_79_Rotate_Z_Node"
+ Expression "MLCapturedPose_79_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{E1F1D306-576E-5096-A3D9-DA8F9701B0EE}" { Bone "lefthandindex4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_79_Translate_Y_Node {
+ Child "MLCapturedPose_79_Translate_X_Node"
+ Expression "MLCapturedPose_79_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{1E97D318-230A-5622-BD1A-2F7768F70E7A}" { Bone "lefthandindex4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_79_Translate_Z_Node {
+ Child "MLCapturedPose_79_Translate_Y_Node"
+ Expression "MLCapturedPose_79_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{D3180B2E-1A57-5B3A-A0E5-3912624965E3}" { Bone "lefthandindex4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_80_Rotate_X_Node {
+ Child "MLCapturedPose_79_Translate_Z_Node"
+ Expression "MLCapturedPose_80_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{F25E130B-8CD9-5690-9F53-37EEB9BD5628}" { Bone "lefthandmiddle4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_80_Rotate_Y_Node {
+ Child "MLCapturedPose_80_Rotate_X_Node"
+ Expression "MLCapturedPose_80_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{270B097F-19A8-593B-98E7-7A43A7FB96EA}" { Bone "lefthandmiddle4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_80_Rotate_Z_Node {
+ Child "MLCapturedPose_80_Rotate_Y_Node"
+ Expression "MLCapturedPose_80_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{6C287D3E-117B-5429-A35C-2CC5CA4C566E}" { Bone "lefthandmiddle4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_80_Translate_X_Node {
+ Child "MLCapturedPose_80_Rotate_Z_Node"
+ Expression "MLCapturedPose_80_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{B6BE13A3-9F0F-5E7C-8FB6-C6B9B6D85500}" { Bone "lefthandmiddle4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_80_Translate_Y_Node {
+ Child "MLCapturedPose_80_Translate_X_Node"
+ Expression "MLCapturedPose_80_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{F2A4BA44-B01E-5F0E-A4E1-54E897870993}" { Bone "lefthandmiddle4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_80_Translate_Z_Node {
+ Child "MLCapturedPose_80_Translate_Y_Node"
+ Expression "MLCapturedPose_80_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{AAC805C6-C617-5535-BBC1-7BDA590C68C1}" { Bone "lefthandmiddle4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_81_Rotate_X_Node {
+ Child "MLCapturedPose_80_Translate_Z_Node"
+ Expression "MLCapturedPose_81_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{9C72B605-A921-5DB9-B2A3-EB173C82B19C}" { Bone "lefthandpinky4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_81_Rotate_Y_Node {
+ Child "MLCapturedPose_81_Rotate_X_Node"
+ Expression "MLCapturedPose_81_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C3EEB163-8F5C-5AD7-A020-ED4F5A5F4901}" { Bone "lefthandpinky4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_81_Rotate_Z_Node {
+ Child "MLCapturedPose_81_Rotate_Y_Node"
+ Expression "MLCapturedPose_81_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{4BFF7682-B0C9-5941-B0DE-E18E36019207}" { Bone "lefthandpinky4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_81_Translate_X_Node {
+ Child "MLCapturedPose_81_Rotate_Z_Node"
+ Expression "MLCapturedPose_81_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{F310965B-EBFD-5774-8E5D-F4888A7BEEF6}" { Bone "lefthandpinky4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_81_Translate_Y_Node {
+ Child "MLCapturedPose_81_Translate_X_Node"
+ Expression "MLCapturedPose_81_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{D9F0A7E8-1489-5C1E-A063-41079D20C456}" { Bone "lefthandpinky4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_81_Translate_Z_Node {
+ Child "MLCapturedPose_81_Translate_Y_Node"
+ Expression "MLCapturedPose_81_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{78EE1E17-367F-5706-872B-D2A4212D7584}" { Bone "lefthandpinky4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_82_Rotate_X_Node {
+ Child "MLCapturedPose_81_Translate_Z_Node"
+ Expression "MLCapturedPose_82_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{997FCB84-81ED-56F7-B86D-EC40E3A529E0}" { Bone "lefthandring3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_82_Rotate_Y_Node {
+ Child "MLCapturedPose_82_Rotate_X_Node"
+ Expression "MLCapturedPose_82_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{2B77FB65-DF14-546D-A787-459986AD8F74}" { Bone "lefthandring3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_82_Rotate_Z_Node {
+ Child "MLCapturedPose_82_Rotate_Y_Node"
+ Expression "MLCapturedPose_82_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{EBE25455-8A32-57D8-A215-B246834EEF7E}" { Bone "lefthandring3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_82_Translate_X_Node {
+ Child "MLCapturedPose_82_Rotate_Z_Node"
+ Expression "MLCapturedPose_82_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{460DC355-E9EC-5779-8FBB-F0BB9E3DCE58}" { Bone "lefthandring3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_82_Translate_Y_Node {
+ Child "MLCapturedPose_82_Translate_X_Node"
+ Expression "MLCapturedPose_82_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{02A36243-6C45-514E-93CD-F9A044D631C2}" { Bone "lefthandring3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_82_Translate_Z_Node {
+ Child "MLCapturedPose_82_Translate_Y_Node"
+ Expression "MLCapturedPose_82_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{36EE18FD-5B0C-575D-9401-CAAA4BAEE174}" { Bone "lefthandring3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_83_Rotate_X_Node {
+ Child "MLCapturedPose_82_Translate_Z_Node"
+ Expression "MLCapturedPose_83_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{4E691ABF-0F8E-5E86-96AE-C82AE67E54BC}" { Bone "lefthandthumb4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_83_Rotate_Y_Node {
+ Child "MLCapturedPose_83_Rotate_X_Node"
+ Expression "MLCapturedPose_83_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{8BF9CC06-336E-52F7-AA4D-DFFD225D0033}" { Bone "lefthandthumb4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_83_Rotate_Z_Node {
+ Child "MLCapturedPose_83_Rotate_Y_Node"
+ Expression "MLCapturedPose_83_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{889AA55F-C6DD-556F-9F95-CC71F367F1BB}" { Bone "lefthandthumb4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_83_Translate_X_Node {
+ Child "MLCapturedPose_83_Rotate_Z_Node"
+ Expression "MLCapturedPose_83_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{EC504BBD-1E2A-5DD8-A9D2-F5136D16F96A}" { Bone "lefthandthumb4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_83_Translate_Y_Node {
+ Child "MLCapturedPose_83_Translate_X_Node"
+ Expression "MLCapturedPose_83_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{D9C9EE58-2F18-58D5-BE91-FCD91BE6FC6F}" { Bone "lefthandthumb4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_83_Translate_Z_Node {
+ Child "MLCapturedPose_83_Translate_Y_Node"
+ Expression "MLCapturedPose_83_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{1DF1FA80-348C-5BA4-A3F9-B7BE2B3941BB}" { Bone "lefthandthumb4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_84_Rotate_X_Node {
+ Child "MLCapturedPose_83_Translate_Z_Node"
+ Expression "MLCapturedPose_84_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{348E1FC3-CD18-51AB-959A-DD3097B990C5}" { Bone "righthandindex4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_84_Rotate_Y_Node {
+ Child "MLCapturedPose_84_Rotate_X_Node"
+ Expression "MLCapturedPose_84_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{3833677A-FC47-5C6D-B99B-3DA18505102D}" { Bone "righthandindex4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_84_Rotate_Z_Node {
+ Child "MLCapturedPose_84_Rotate_Y_Node"
+ Expression "MLCapturedPose_84_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{4712F6C6-1757-5599-BEE2-ADFB7E9E1342}" { Bone "righthandindex4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_84_Translate_X_Node {
+ Child "MLCapturedPose_84_Rotate_Z_Node"
+ Expression "MLCapturedPose_84_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{4B6959CF-FE35-53C9-BB99-7F6F54D07BA5}" { Bone "righthandindex4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_84_Translate_Y_Node {
+ Child "MLCapturedPose_84_Translate_X_Node"
+ Expression "MLCapturedPose_84_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{B0CD184F-4A61-5D1A-A9A3-748F71F315A9}" { Bone "righthandindex4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_84_Translate_Z_Node {
+ Child "MLCapturedPose_84_Translate_Y_Node"
+ Expression "MLCapturedPose_84_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{AC3D2B90-87D6-588F-A4F8-CC19D3C58275}" { Bone "righthandindex4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_85_Rotate_X_Node {
+ Child "MLCapturedPose_84_Translate_Z_Node"
+ Expression "MLCapturedPose_85_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2C578A8B-396A-5A59-BFDE-A99BF33099A5}" { Bone "righthandmiddle4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_85_Rotate_Y_Node {
+ Child "MLCapturedPose_85_Rotate_X_Node"
+ Expression "MLCapturedPose_85_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C6449A56-DE5A-5B4F-B862-967FF84A8EC8}" { Bone "righthandmiddle4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_85_Rotate_Z_Node {
+ Child "MLCapturedPose_85_Rotate_Y_Node"
+ Expression "MLCapturedPose_85_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{BF656364-B2A2-5B0A-B350-706EF04DACDE}" { Bone "righthandmiddle4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_85_Translate_X_Node {
+ Child "MLCapturedPose_85_Rotate_Z_Node"
+ Expression "MLCapturedPose_85_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{BAFFB793-455A-553D-AE1C-3E566E25ECDF}" { Bone "righthandmiddle4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_85_Translate_Y_Node {
+ Child "MLCapturedPose_85_Translate_X_Node"
+ Expression "MLCapturedPose_85_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{6C0FA0F4-98B3-52B7-8C03-1D12BB5BA4DA}" { Bone "righthandmiddle4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_85_Translate_Z_Node {
+ Child "MLCapturedPose_85_Translate_Y_Node"
+ Expression "MLCapturedPose_85_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{85B4F4F7-AB98-5369-8637-DDBE0CE14EB4}" { Bone "righthandmiddle4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_86_Rotate_X_Node {
+ Child "MLCapturedPose_85_Translate_Z_Node"
+ Expression "MLCapturedPose_86_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{7AD17883-E2B6-5D2F-83DB-A63840DC9BC4}" { Bone "righthandpinky4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_86_Rotate_Y_Node {
+ Child "MLCapturedPose_86_Rotate_X_Node"
+ Expression "MLCapturedPose_86_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{139AA9D8-F96F-5532-AB29-A280F3BF76D8}" { Bone "righthandpinky4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_86_Rotate_Z_Node {
+ Child "MLCapturedPose_86_Rotate_Y_Node"
+ Expression "MLCapturedPose_86_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{5BB2DD60-1419-5144-BD41-83AE084736FC}" { Bone "righthandpinky4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_86_Translate_X_Node {
+ Child "MLCapturedPose_86_Rotate_Z_Node"
+ Expression "MLCapturedPose_86_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{71C150A7-5EC4-5AF3-B932-00B86DB3E682}" { Bone "righthandpinky4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_86_Translate_Y_Node {
+ Child "MLCapturedPose_86_Translate_X_Node"
+ Expression "MLCapturedPose_86_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{52915FFC-DBEE-5C72-8BE8-FF4CEE58511C}" { Bone "righthandpinky4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_86_Translate_Z_Node {
+ Child "MLCapturedPose_86_Translate_Y_Node"
+ Expression "MLCapturedPose_86_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{76D9DC30-ABCC-50D5-A248-355C04402C61}" { Bone "righthandpinky4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_87_Rotate_X_Node {
+ Child "MLCapturedPose_86_Translate_Z_Node"
+ Expression "MLCapturedPose_87_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{2F43857C-9C45-55CC-BB50-86EFD31B0382}" { Bone "righthandring3" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_87_Rotate_Y_Node {
+ Child "MLCapturedPose_87_Rotate_X_Node"
+ Expression "MLCapturedPose_87_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{EAC66D65-A147-5767-98EB-22BF3078649D}" { Bone "righthandring3" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_87_Rotate_Z_Node {
+ Child "MLCapturedPose_87_Rotate_Y_Node"
+ Expression "MLCapturedPose_87_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{6505A17A-7A09-557B-ACA6-0D2FDA43B696}" { Bone "righthandring3" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_87_Translate_X_Node {
+ Child "MLCapturedPose_87_Rotate_Z_Node"
+ Expression "MLCapturedPose_87_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{7D262324-FE6F-5590-AE67-43D13093524C}" { Bone "righthandring3" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_87_Translate_Y_Node {
+ Child "MLCapturedPose_87_Translate_X_Node"
+ Expression "MLCapturedPose_87_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{CCB6C723-179E-54AC-9DFD-999351980A20}" { Bone "righthandring3" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_87_Translate_Z_Node {
+ Child "MLCapturedPose_87_Translate_Y_Node"
+ Expression "MLCapturedPose_87_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{BB3CFFE7-6E23-5EDD-9FEF-65ACC029D4EF}" { Bone "righthandring3" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_88_Rotate_X_Node {
+ Child "MLCapturedPose_87_Translate_Z_Node"
+ Expression "MLCapturedPose_88_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{751A19C4-969E-58B3-AAB1-A64FD0EF9772}" { Bone "righthandthumb4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_88_Rotate_Y_Node {
+ Child "MLCapturedPose_88_Rotate_X_Node"
+ Expression "MLCapturedPose_88_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{FDF4DAC9-70CE-5B40-B60F-D8CC36498C7B}" { Bone "righthandthumb4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_88_Rotate_Z_Node {
+ Child "MLCapturedPose_88_Rotate_Y_Node"
+ Expression "MLCapturedPose_88_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{872FF14D-BD8A-509A-B8CB-925FB6C9D6EA}" { Bone "righthandthumb4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_88_Translate_X_Node {
+ Child "MLCapturedPose_88_Rotate_Z_Node"
+ Expression "MLCapturedPose_88_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{7CAD1249-F696-5694-83D1-C276DBB25ED6}" { Bone "righthandthumb4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_88_Translate_Y_Node {
+ Child "MLCapturedPose_88_Translate_X_Node"
+ Expression "MLCapturedPose_88_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{C2E2BB95-FA31-59F8-BC33-6CAA65AB3044}" { Bone "righthandthumb4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_88_Translate_Z_Node {
+ Child "MLCapturedPose_88_Translate_Y_Node"
+ Expression "MLCapturedPose_88_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{919D0CA2-1A0E-5355-83BA-E667C131EF52}" { Bone "righthandthumb4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_89_Rotate_X_Node {
+ Child "MLCapturedPose_88_Translate_Z_Node"
+ Expression "MLCapturedPose_89_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{AE28D826-8A39-5903-AC06-9946BC0042BF}" { Bone "lefthandring4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_89_Rotate_Y_Node {
+ Child "MLCapturedPose_89_Rotate_X_Node"
+ Expression "MLCapturedPose_89_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{CD20BEFA-B630-5B45-944B-B54DA552F4C3}" { Bone "lefthandring4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_89_Rotate_Z_Node {
+ Child "MLCapturedPose_89_Rotate_Y_Node"
+ Expression "MLCapturedPose_89_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{397223CE-731A-579D-80BF-1C231BE7F138}" { Bone "lefthandring4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_89_Translate_X_Node {
+ Child "MLCapturedPose_89_Rotate_Z_Node"
+ Expression "MLCapturedPose_89_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{FB44E3A9-7F48-5DE0-8B54-85EA1F80FC65}" { Bone "lefthandring4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_89_Translate_Y_Node {
+ Child "MLCapturedPose_89_Translate_X_Node"
+ Expression "MLCapturedPose_89_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{8A0E5004-F8D2-59E9-ACA3-DF8B7A633DB6}" { Bone "lefthandring4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_89_Translate_Z_Node {
+ Child "MLCapturedPose_89_Translate_Y_Node"
+ Expression "MLCapturedPose_89_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{DA40A1DB-FDCE-56F8-92E4-E112B486F5DB}" { Bone "lefthandring4" Axis Z Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_90_Rotate_X_Node {
+ Child "MLCapturedPose_89_Translate_Z_Node"
+ Expression "MLCapturedPose_90_Rotate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{7ED893EC-BF42-5E22-98E1-923B73134F0D}" { Bone "righthandring4" Axis X Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_90_Rotate_Y_Node {
+ Child "MLCapturedPose_90_Rotate_X_Node"
+ Expression "MLCapturedPose_90_Rotate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{01702561-A951-5E21-BC31-86E8621030AD}" { Bone "righthandring4" Axis Y Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_90_Rotate_Z_Node {
+ Child "MLCapturedPose_90_Rotate_Y_Node"
+ Expression "MLCapturedPose_90_Rotate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{1B692951-D2AD-5B21-AFFD-A9861EE0A25B}" { Bone "righthandring4" Axis Z Space Model Op Rotate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_90_Translate_X_Node {
+ Child "MLCapturedPose_90_Rotate_Z_Node"
+ Expression "MLCapturedPose_90_Translate_X"
+ Bones { AnimSrcNodeProcTrBoneItem "{D6496499-8A30-5744-9719-67144AA401FC}" { Bone "righthandring4" Axis X Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_90_Translate_Y_Node {
+ Child "MLCapturedPose_90_Translate_X_Node"
+ Expression "MLCapturedPose_90_Translate_Y"
+ Bones { AnimSrcNodeProcTrBoneItem "{5A9812E3-1C3D-568C-AF92-4895DD802CC7}" { Bone "righthandring4" Axis Y Space Model Op Translate Amount 1 } }
+}
+AnimSrcNodeProcTransform MLCapturedPose_90_Translate_Z_Node {
+ Child "MLCapturedPose_90_Translate_Y_Node"
+ Expression "MLCapturedPose_90_Translate_Z"
+ Bones { AnimSrcNodeProcTrBoneItem "{AF3D5B07-EBD7-58A2-8840-2B43CF00ECB5}" { Bone "righthandring4" Axis Z Space Model Op Translate Amount 1 } }
+}
+
+    AnimSrcNodePose APoseSrc {
+     EditorPos 2.9 -17.6
+     Source "Locomotion.ErcRas.Idle"
+     Time "0.0"
+    }
+    AnimSrcNodeBlend InventoryFacialB {
+     EditorPos 14.1 -12.3
+     BlendWeight "1.0"
+     Child0 "InventoryIK"
+     Child1 "InventoryFacialIdleAnim"
+     OptimizeMin 1
+     OptimizeMax 0
+    }
+    AnimSrcNodeSource InventoryFacialIdleAnim {
+     EditorPos 15.2 -11.3
+     Source "Facial.FacialIdle01"
+     Looptype Loop
+    }
+    AnimSrcNodeWeaponIk InventoryIK {
+     EditorPos 14.1 -10.4
+     Child "InventoryIdleG"
+     IkconfigName "WeaponIkTest"
+     Ikconfig "// ik pose anim"\
+     "// (root - means RightHand - but right hand is not exported)"\
+     "//   |- RightHand_Dummy (where Weapon is)"\
+     "//   |                |-  LeftHandIKTarget  (where left hand is on weapon)"\
+     "//   |- RightHandOrigin ( inverse transform where hand originally was)"\
+     ""\
+     "// basic setup - "\
+     "// hand - bone which represents hand holding weapon"\
+     "// weapon - bone which represents weapon node in hand"\
+     "// weaponrotator - bone - around which weapon rotates"\
+     "hand = RightHand"\
+     "weapon = RightHand_Dummy"\
+     "weaponrotator = RightArm "\
+     "weaponaxis= -x"\
+     ""\
+     "//! "\
+     "chain = RightArm, RightArmRoll, RightForeArm, RightForeArmRoll, RightHand"\
+     "chainaxis=-x"\
+     "secchain = LeftArm, LeftArmRoll, LeftForeArm, LeftForeArmRoll, LeftHand"\
+     "secchainaxis=+x"\
+     ""\
+     "ikpose_chainoffset = RightHandOrigin              						// bone in ikpose specifying where was "\
+     "ikpose_weaponoffset = RightHand_Dummy      								// weapon offset from RHand "\
+     "ikpose_secchainoffset = LeftHandIKTarget      							// secondary chain ik target offset (relative to weapon)"\
+     "ikpose_chainmiddledir = RightForeArmDirection							// hand to elbow direction (from hand)"\
+     "ikpose_chainmiddlediro = RightHandOrigin,RightForeArmDirectionOrigin	// original hand to elbow direction (from hand)"\
+     "ikpose_secchainmiddledir = LeftForeArmDirection							// sec hand to elbow direction (from ikpose_secchainoffset)"\
+     "ikpose_secchainmiddlediro = LeftHandOrigin,LeftForeArmDirectionOrigin	// original sec hand to elbow direction (from ikpose_secchainoffset)"\
+     ""\
+     ""
+     BlendInTime 0.24
+     BlendOutTime 0.24
+     WeightAim "isbitset(ArmIK, 0)"
+     WeightPrimaryChain "isbitset(ArmIK, 1)"
+     WeightSecondaryChain "isbitset(ArmIK, 2)"
+     WeaponDirLr "AimIKX"
+     WeaponDirUd "AimX"
+    }
+    AnimSrcNodeGroupSelect InventoryIdleG {
+     EditorPos 14.1 -9.6
+     Child "InventoryIdleInjG"
+     Group "Locomotion"
+     Column "Erc"
+    }
+    AnimSrcNodeGroupSelect InventoryIdleInjG {
+     EditorPos 14.1 -8.8
+     Child "IdleAnim"
+     Group "LocomotionInjured"
+     Column "Erc"
+    }
+    AnimSrcNodeBlend MovementLabOriginalMasterControl {
+     EditorPos 4 -19.1
+     BlendWeight "1.0"
+     Child0 "APoseSrc"
+     Child1 "MasterControlSTM"
+     OptimizeMin 0
+     OptimizeMax 0
+    }
+    AnimSrcNodeStateMachine MasterControlSTM {
+     EditorPos 4.1 -15.3
+     states {
+      AnimSrcNodeState Movement {
+       EditorPos 4 -11.9
+       Child "LocomotionQ"
+       StartCondition "VehicleType == -1"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Vehicles {
+       EditorPos 2.8 -14
+       Child "VehicleMaster"
+       StartCondition "VehicleType > -1"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Falling {
+       EditorPos 0.4 -12.6
+       Child "FallMasterIK"
+       StartCondition ""
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Deaths {
+       Tags {
+        "TagDeath"
+       }
+       EditorPos 0.4 -14
+       Child "DeathStanceSTM"
+       StartCondition ""
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Swimming {
+       Tags {
+        "TagSwimming"
+       }
+       EditorPos 2.8 -9.9
+       Child "SwimmingHitQ"
+       StartCondition "GetCommandI(CMD_Swim) == 1"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Ladder {
+       EditorPos 0.4 -9.9
+       Child "LadderMaster"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState FullBodyActions {
+       EditorPos 7.6 -11.9
+       Child "FullBodyActionMaster"
+       StartCondition ""
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState FullBodyHits {
+       EditorPos 7.7 -14
+       Child "DamageFullBodyMaster"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Melee {
+       EditorPos 5.2 -14
+       Child "MeleeMasterQ"
+       StartCondition ""
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Unconscious {
+       Tags {
+        "TagUnconscious"
+       }
+       EditorPos 5.2 -9.9
+       Child "UnconsciousIK"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState VerticalMovement {
+       EditorPos 0.4 -11.2
+       Child "VerticalMaster"
+       StartCondition ""
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState FullBodyPneBActions {
+       Tags {
+        "TagProneBack"
+       }
+       EditorPos 7.6 -9.9
+       Child "FullBodyPneBActionMaster"
+       StartCondition ""
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState DeathOnBack {
+       EditorPos -1.8 -14
+       Child "DeathOnBackSTM"
+       StartCondition "false"
+       TimeStorage Inherit
+       IsExit 0
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE269EE199}" {
+       ToState "FullBodyActions"
+       Duration "0.4"
+       StartTime ""
+       Condition "IsCommand(CMD_FullBodyAction) && GetCommandI(CMD_FullBodyAction) == 72"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1AA}" {
+       ToState "Unconscious"
+       Duration "0.2"
+       StartTime ""
+       Condition "(GetCommandI(CMD_Unconscious) == 4) || (GetCommandI(CMD_Unconscious) == 0 && !IsTag(\"TagSwimming\") && !IsTag(\"TagVehicle\"))"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1A2}" {
+       FromState "Movement"
+       ToState "Vehicles"
+       Duration ""
+       StartTime ""
+       Condition "IsCommand(CMD_Vehicle_GetIn)"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1BD}" {
+       FromState "Vehicles"
+       ToState "Movement"
+       Duration ""
+       StartTime ""
+       Condition "RemainingTimeLess(0.01)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1B6}" {
+       ToState "Swimming"
+       Duration "0.6"
+       StartTime ""
+       Condition "GetCommandI(CMD_Swim) == 1 || (GetCommandI(CMD_Unconscious) == 1 && !IsTag(\"TagSwimming\"))"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1B0}" {
+       FromState "Falling"
+       ToState "Movement"
+       Duration "0.3"
+       StartTime "0.8"
+       Condition "RemainingTimeLess(0.1) || IsCommand(CMD_FallCancel)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x30 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1CB}" {
+       FromState "Falling"
+       ToState "Movement"
+       Duration "0.25"
+       StartTime ""
+       Condition "IsCommand(CMD_LandImmediate)"
+       BlendFn S
+       MotionVecBlend 0x30 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1C5}" {
+       ToState "Deaths"
+       Duration "0.1"
+       StartTime ""
+       Condition "IsCommand(CMD_Death)"\
+       "&&"\
+       "!IsTag(\"TagVehicle\")"\
+       "&&"\
+       "!IsTag(\"TagProneBack\")"\
+       "&&"\
+       "!((AimX < -90 || AimX > 90) && Raised)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1DF}" {
+       FromState "Swimming"
+       ToState "Vehicles"
+       Duration ""
+       StartTime ""
+       Condition "IsCommand(CMD_Vehicle_GetIn)"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1D7}" {
+       FromState "Swimming"
+       ToState "Movement"
+       Duration "0.5"
+       StartTime ""
+       Condition "GetCommandI(CMD_Swim) == 0"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1EF}" {
+       ToState "Falling"
+       Duration "0.25"
+       StartTime ""
+       Condition "IsCommand(CMD_Jump) || IsCommand(CMD_Fall)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1E8}" {
+       FromState "Movement"
+       ToState "Ladder"
+       Duration "0.3"
+       StartTime ""
+       Condition "IsCommand(CMD_Ladder_Enter)"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1E3}" {
+       FromState "Ladder"
+       ToState "Movement"
+       Duration "0.2"
+       StartTime "0.4"
+       Condition "RemainingTimeLess(0.2)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1FD}" {
+       FromState "Movement"
+       ToState "FullBodyPneBActions"
+       Duration "0.3"
+       StartTime ""
+       Condition "IsCommand(CMD_FullBodyAction) && IsTag(\"TagProneBack\") && !Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EE1F4}" {
+       FromState "Movement"
+       ToState "FullBodyActions"
+       Duration "0.3"
+       StartTime ""
+       Condition "IsCommand(CMD_FullBodyAction) && !IsTag(\"TagProneBack\") && !Raised"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE0F}" {
+       FromState "FullBodyPneBActions"
+       ToState "Movement"
+       Duration "0.6"
+       StartTime ""
+       Condition "(RemainingTimeLess(0.8) || GetCommandI(CMD_InternalAction) == -2) && !IsTag(\"TagActionOnce\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE2F}" {
+       FromState "FullBodyActions"
+       ToState "Movement"
+       Duration "0.3"
+       StartTime ""
+       Condition "RemainingTimeLess(0.1) || GetCommandI(CMD_InternalAction) == -2"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE29}" {
+       ToState "FullBodyHits"
+       Duration "0.1"
+       StartTime ""
+       Condition "IsCommand(CMD_DamageHeavy) && !IsTag(\"TagSwimming\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE22}" {
+       FromState "FullBodyHits"
+       ToState "Movement"
+       Duration "0.2"
+       StartTime ""
+       Condition "RemainingTimeLess(0.1)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE3C}" {
+       FromState "Movement"
+       ToState "Melee"
+       Duration "0.3"
+       StartTime ""
+       Condition "IsCommand(CMD_Melee_Attack2) && (Stance == 0 || (Stance == 2 && (!Raised || (Raised && ((AimX >= -65 && AimX <= 65) || (AimX <= -125 || AimX >= 125)))))) || IsCommand(CMD_Melee_Stealth) && Stance == 0"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE32}" {
+       FromState "Melee"
+       ToState "Movement"
+       Duration "0.35"
+       StartTime "0.25"
+       Condition "RemainingTimeLess(0.01) || IsCommand(CMD_Melee_Exit)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE4C}" {
+       FromState "Melee"
+       ToState "FullBodyHits"
+       Duration "0.3"
+       StartTime ""
+       Condition "IsCommand(CMD_DamageHeavy)"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE49}" {
+       FromState "Unconscious"
+       ToState "Movement"
+       Duration "0.4"
+       StartTime ""
+       Condition "RemainingTimeLess(0.4)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE5E}" {
+       FromState "Swimming"
+       ToState "Ladder"
+       Duration "0.3"
+       StartTime ""
+       Condition "IsCommand(CMD_Ladder_Enter)"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE5B}" {
+       FromState "VerticalMovement"
+       ToState "Movement"
+       Duration "0.4"
+       StartTime ""
+       Condition "RemainingTimeLess(0.1)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE54}" {
+       ToState "VerticalMovement"
+       Duration "0.2"
+       StartTime "0.0"
+       Condition "IsCommand(CMD_Climb) || IsCommand(CMD_ClimbOver) "
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE6E}" {
+       FromState "Unconscious"
+       ToState "Swimming"
+       Duration "0.4"
+       StartTime ""
+       Condition "IsTag(\"TagUnconsciousWater\") && RemainingTimeLess(0.4)"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE68}" {
+       FromState "FullBodyPneBActions"
+       ToState "Movement"
+       Duration "0.4"
+       StartTime ""
+       Condition "(RemainingTimeLess(0.4) || GetCommandI(CMD_InternalAction) == -2) && IsTag(\"TagActionOnce\")"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE62}" {
+       FromState "Melee"
+       ToState "Movement"
+       Duration "0.6"
+       StartTime "0.5"
+       Condition "IsEvent(\"CombatEarlyExitSprint\") && MovementSpeed > 0"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE7C}" {
+       FromState "Vehicles"
+       ToState "Deaths"
+       Duration ""
+       StartTime ""
+       Condition "false"
+       BlendFn S
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDE79}" {
+       ToState "DeathOnBack"
+       Duration "0.1"
+       StartTime ""
+       Condition "IsCommand(CMD_Death)"\
+       "&&"\
+       "!IsTag(\"TagVehicle\")"\
+       "&&"\
+       "(IsTag(\"TagProneBack\")"\
+       "||"\
+       "((AimX < -90 || AimX > 90) && Raised))"
+       BlendFn S
+       PostEval 1
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine MasterInventoryState {
+     EditorPos 12.4 -15.2
+     states {
+      AnimSrcNodeState Idle {
+       EditorPos 14.1 -14
+       Child "InventoryFacialB"
+       StartCondition "true"
+       TimeStorage Inherit
+       IsExit 0
+      }
+     }
+    }
+   }
+  }
+  AnimSrcGraphSheet Death {
+   Nodes {
+    AnimSrcNodeSource BodyBackAnim {
+     EditorPos 1.9 -8.1
+     Source "Deaths.BodyBack"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource BodyFrontAnim {
+     EditorPos 1.9 -8.7
+     Source "Deaths.BodyFront"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource BodyLeftAnim {
+     EditorPos 1.9 -7.5
+     Source "Deaths.BodyLeft"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource BodyRightAnim {
+     EditorPos 1.9 -6.9
+     Source "Deaths.BodyRight"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect DeathCroG {
+     EditorPos 1.4 -17.3
+     Child "DeathSTM"
+     Group "Deaths"
+     Column "Cro"
+    }
+    AnimSrcNodeGroupSelect DeathCroRasG {
+     EditorPos 1.4 -16.6
+     Child "DeathSTM"
+     Group "Deaths"
+     Column "CroRas"
+    }
+    AnimSrcNodeGroupSelect DeathErcG {
+     EditorPos -0.7 -17.3
+     Child "DeathSTM"
+     Group "Deaths"
+     Column "Erc"
+    }
+    AnimSrcNodeGroupSelect DeathErcRasG {
+     EditorPos -0.7 -16.6
+     Child "DeathSTM"
+     Group "Deaths"
+     Column "ErcRas"
+    }
+    AnimSrcNodeStateMachine DeathOnBackSTM {
+     EditorPos -5.7 -14.5
+     states {
+      AnimSrcNodeState Low {
+       EditorPos -5.5 -13.3
+       Child "PneBackDeathLowG"
+       StartCondition "true"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Ras {
+       EditorPos -2.7 -13.3
+       Child "PneBackDeathRasG"
+       StartCondition "false"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+    }
+    AnimSrcNodeGroupSelect DeathPneG {
+     EditorPos 3.5 -17.3
+     Child "DeathSTM"
+     Group "Deaths"
+     Column "Pne"
+    }
+    AnimSrcNodeGroupSelect DeathPneRasG {
+     EditorPos 3.5 -16.6
+     Child "DeathSTM"
+     Group "Deaths"
+     Column "PneRas"
+    }
+    AnimSrcNodeStateMachine DeathSTM {
+     EditorPos 1.3 -14.5
+     states {
+      AnimSrcNodeState BodyLeft {
+       EditorPos 1.9 -12
+       Child "BodyLeftAnim"
+       StartCondition "GetCommandI(CMD_Death) == 0 && inRange(GetCommandF(CMD_Death), -135.0, -45.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState BodyFront {
+       EditorPos 1.9 -13.2
+       Child "BodyFrontAnim"
+       StartCondition "GetCommandI(CMD_Death) == 0 && inRange(GetCommandF(CMD_Death), -45.0, 45.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState BodyRight {
+       EditorPos 1.9 -11.4
+       Child "BodyRightAnim"
+       StartCondition "GetCommandI(CMD_Death) == 0 && inRange(GetCommandF(CMD_Death), 45.0, 135.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState BodyBack {
+       EditorPos 1.9 -12.6
+       Child "BodyBackAnim"
+       StartCondition "GetCommandI(CMD_Death) == 0 && !inRange(GetCommandF(CMD_Death), -135.0, 135.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState FastFront {
+       EditorPos 8 -13.2
+       Child "FastFrontAnim"
+       StartCondition "GetCommandI(CMD_Death) == 10 && inRange(GetCommandF(CMD_Death), -45.0, 45.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState FastBack {
+       EditorPos 8 -12.6
+       Child "FastBackAnim"
+       StartCondition "GetCommandI(CMD_Death) == 10 && !inRange(GetCommandF(CMD_Death), -135.0, 135.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState FastLeft {
+       EditorPos 8 -12
+       Child "FastLeftAnim"
+       StartCondition "GetCommandI(CMD_Death) == 10 && inRange(GetCommandF(CMD_Death), -135.0, -45.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState FastRight {
+       EditorPos 8 -11.4
+       Child "FastRightAnim"
+       StartCondition "GetCommandI(CMD_Death) == 10 && inRange(GetCommandF(CMD_Death), 45.0, 135.0)"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState FallingLanding {
+       EditorPos 12.4 -13.2
+       Child "FallingLandingDeathAnim"
+       StartCondition "GetCommandI(CMD_Death) == 12"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState UnconsciousLand {
+       EditorPos 14.6 -13.2
+       Child "UnconDeathLandAnim"
+       StartCondition "GetCommandI(CMD_Death) == 13"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState UnconsciousWater {
+       EditorPos 16.8 -13.2
+       Child "UnconDeathWaterAnim"
+       StartCondition "GetCommandI(CMD_Death) == 14"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState Swim {
+       EditorPos 10.2 -13.2
+       Child "SwimDeathAnim"
+       StartCondition "GetCommandI(CMD_Death) == 11"
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState DeathWaterBack {
+       EditorPos 19.1 -12.2
+       Child "DeathWaterBackAnim"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState DeathWaterFront {
+       EditorPos 19.1 -13.2
+       Child "DeathWaterFrontAnim"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState DeathWaterLeft {
+       EditorPos 19.1 -11.3
+       Child "DeathWaterLeftAnim"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+      AnimSrcNodeState DeathWaterRight {
+       EditorPos 19.1 -10.4
+       Child "DeathWaterRightAnim"
+       StartCondition ""
+       TimeStorage "Real Time"
+       IsExit 0
+      }
+     }
+     transitions {
+      AnimSrcNodeTransition "{6930A8DE269EDFAD}" {
+       ToState "DeathWaterBack"
+       Duration "1.0"
+       StartTime "0.0"
+       Condition "GetCommandI(CMD_Death_To_Water) == 0 && !inRange(GetCommandF(CMD_Death_To_Water), -135.0, 135.0)"
+       BlendFn S2
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDFA4}" {
+       ToState "DeathWaterFront"
+       Duration "1.0"
+       StartTime "0.0"
+       Condition "GetCommandI(CMD_Death_To_Water) == 0 && inRange(GetCommandF(CMD_Death_To_Water), -45.0, 45.0)"
+       BlendFn S2
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDFBF}" {
+       ToState "DeathWaterLeft"
+       Duration "1.0"
+       StartTime "0.0"
+       Condition "GetCommandI(CMD_Death_To_Water) == 0 && inRange(GetCommandF(CMD_Death_To_Water), -135.0, -45.0)"
+       BlendFn S2
+       MotionVecBlend 0x33 0
+      }
+      AnimSrcNodeTransition "{6930A8DE269EDFB8}" {
+       ToState "DeathWaterRight"
+       Duration "1.0"
+       StartTime "0.0"
+       Condition "GetCommandI(CMD_Death_To_Water) == 0 && inRange(GetCommandF(CMD_Death_To_Water), 45.0, 135.0)"
+       BlendFn S2
+       MotionVecBlend 0x33 0
+      }
+     }
+    }
+    AnimSrcNodeStateMachine DeathStanceSTM {
+     EditorPos -1.2 -21.2
+     states {
+      AnimSrcNodeState Erc {
+       EditorPos -0.7 -19.7
+       Child "DeathErcG"
+       StartCondition "Stance == 0 && !Raised"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Cro {
+       EditorPos 1.4 -19.7
+       Child "DeathCroG"
+       StartCondition "Stance == 1 && !Raised"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState Pne {
+       EditorPos 3.5 -19.7
+       Child "DeathPneG"
+       StartCondition "Stance == 2 && !Raised"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState ErcRas {
+       EditorPos -0.7 -19
+       Child "DeathErcRasG"
+       StartCondition "Stance == 0 && Raised"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState CroRas {
+       EditorPos 1.4 -19
+       Child "DeathCroRasG"
+       StartCondition "Stance == 1 && Raised"
+       TimeStorage Inherit
+       IsExit 0
+      }
+      AnimSrcNodeState PneRas {
+       EditorPos 3.5 -19
+       Child "DeathPneRasG"
+       StartCondition "Stance == 2 && Raised"
+       TimeStorage Inherit
+       IsExit 0
+      }
+     }
+    }
+    AnimSrcNodeSource DeathWaterBackAnim {
+     Tags {
+      "TagDeathWater"
+     }
+     EditorPos 19.1 -8.1
+     Source "Deaths.UnconsciousWaterBack"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource DeathWaterFrontAnim {
+     Tags {
+      "TagDeathWater"
+     }
+     EditorPos 19.1 -8.7
+     Source "Deaths.UnconsciousWaterFront"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource DeathWaterLeftAnim {
+     Tags {
+      "TagDeathWater"
+     }
+     EditorPos 19.1 -7.5
+     Source "Deaths.UnconsciousWaterLeft"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource DeathWaterRightAnim {
+     Tags {
+      "TagDeathWater"
+     }
+     EditorPos 19.1 -6.9
+     Source "Deaths.UnconsciousWaterRight"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FallingLandingDeathAnim {
+     EditorPos 12.4 -8.7
+     Source "Deaths.Cro.Land"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FastBackAnim {
+     EditorPos 8 -8.1
+     Source "Deaths.FastBack"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FastFrontAnim {
+     EditorPos 8 -8.7
+     Source "Deaths.FastFront"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FastLeftAnim {
+     EditorPos 8 -7.5
+     Source "Deaths.FastLeft"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource FastRightAnim {
+     EditorPos 8 -6.9
+     Source "Deaths.FastRight"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeGroupSelect PneBackDeathLowG {
+     EditorPos -5.5 -11.6
+     Child "BodyFrontAnim"
+     Group "Deaths"
+     Column "PneBack"
+    }
+    AnimSrcNodeGroupSelect PneBackDeathRasG {
+     EditorPos -2.7 -11.6
+     Child "BodyFrontAnim"
+     Group "Deaths"
+     Column "PneBackRas"
+    }
+    AnimSrcNodeSource SwimDeathAnim {
+     Tags {
+      "TagDeathWater"
+     }
+     EditorPos 10.2 -8.7
+     Source "Deaths.Cro.Swim"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconDeathLandAnim {
+     EditorPos 14.6 -8.7
+     Source "Deaths.Cro.UnconsciousLand"
+     Looptype "No Loop"
+    }
+    AnimSrcNodeSource UnconDeathWaterAnim {
+     Tags {
+      "TagDeathWater"
+     }
+     EditorPos 16.8 -8.7
+     Source "Deaths.Cro.UnconsciousWater"
+     Looptype "No Loop"
+    }
+   }
+  }
+ }
+}

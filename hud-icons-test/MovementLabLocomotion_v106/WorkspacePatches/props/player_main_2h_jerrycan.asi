@@ -1,0 +1,146 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2DCC9BABB43BAAAE}DZ/anims/workspaces/player/player_main/player_main_2h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsCro.In" {
+   Resource "{82BB7F35720B5184}DZ/anims/anm/player/actions/healing/p_cro_cleanhands_jerrycan_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsCro.Loop" {
+   Resource "{107C1CDED3736DE6}DZ/anims/anm/player/actions/healing/p_cro_cleanhands_jerrycan_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsCro.Out" {
+   Resource "{4C347B3F5BEEA235}DZ/anims/anm/player/actions/healing/p_cro_cleanhands_jerrycan_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsErc.In" {
+   Resource "{1793D6230B6047B1}DZ/anims/anm/player/actions/healing/p_erc_cleanhands_jerrycan_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsErc.Loop" {
+   Resource "{26DCBA038843A2AF}DZ/anims/anm/player/actions/healing/p_erc_cleanhands_jerrycan_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.CleanHandsErc.Out" {
+   Resource "{FF9977D77A83BC5B}DZ/anims/anm/player/actions/healing/p_erc_cleanhands_jerrycan_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.In" {
+   Resource "{3F732C8B630CF4E0}DZ/anims/anm/player/actions/consumption/p_cro_jerrycan_drink_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Loop" {
+   Resource "{C240A28AF0C36014}DZ/anims/anm/player/actions/consumption/p_cro_jerrycan_drink_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Out" {
+   Resource "{417FE2CA2B763F3B}DZ/anims/anm/player/actions/consumption/p_cro_jerrycan_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkCro.Out2" {
+   Resource "{417FE2CA2B763F3B}DZ/anims/anm/player/actions/consumption/p_cro_jerrycan_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.In" {
+   Resource "{9E2A0665E1181F1F}DZ/anims/anm/player/actions/consumption/p_erc_jerrycan_drink_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Loop" {
+   Resource "{16D1E47F885CDD59}DZ/anims/anm/player/actions/consumption/p_erc_jerrycan_drink_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Out" {
+   Resource "{6025F99CCA8689BB}DZ/anims/anm/player/actions/consumption/p_erc_jerrycan_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkErc.Out2" {
+   Resource "{6025F99CCA8689BB}DZ/anims/anm/player/actions/consumption/p_erc_jerrycan_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.In" {
+   Resource "{C06F61C59DC06BF2}DZ/anims/anm/player/actions/consumption/p_pne_jerrycan_drink_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Loop" {
+   Resource "{49C03ADACAC09220}DZ/anims/anm/player/actions/consumption/p_pne_jerrycan_drink_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Out" {
+   Resource "{C7CE4A12296C983C}DZ/anims/anm/player/actions/consumption/p_pne_jerrycan_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DrinkPne.Out2" {
+   Resource "{C7CE4A12296C983C}DZ/anims/anm/player/actions/consumption/p_pne_jerrycan_drink_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.In" {
+   Resource "{408DB097DF79DBB4}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.Loop" {
+   Resource "{4D79A6A4D6513610}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.Out" {
+   Resource "{D3E5FD90EDEEAAF1}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselCro.Out2" {
+   Resource "{7798E7E9ED6D0D03}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_empty.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.In" {
+   Resource "{D23ABC804939AA66}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.Loop" {
+   Resource "{D8510FB2AF3A2025}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.Out" {
+   Resource "{71CFB4EE1398E4F5}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselErc.Out2" {
+   Resource "{C435EB01CC00136D}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_empty.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.In" {
+   Resource "{CD06FCE27BCDDA7A}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_fb_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Loop" {
+   Resource "{F71496B97037BBF3}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_fb_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Out" {
+   Resource "{37F626D09FF013CE}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_fb_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBCro.Out2" {
+   Resource "{519299D208A1A067}DZ/anims/anm/player/actions/items/p_cro_jerrycan_emptying_fb_empty.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.In" {
+   Resource "{7EABF00A5AA0C414}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_fb_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Loop" {
+   Resource "{31276770AC4CFD3B}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_fb_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Out" {
+   Resource "{0156800DC4C0DC87}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_fb_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.EmptyVesselFBErc.Out2" {
+   Resource "{824E1249B92FBC7C}DZ/anims/anm/player/actions/items/p_erc_jerrycan_emptying_fb_empty.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottleWellCro.In" {
+   Resource "{3E05B9ABD23CACA4}DZ/anims/anm/player/actions/items/p_cro_jerrycan_fill_well_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottleWellCro.Loop" {
+   Resource "{44F51756FDD191FA}DZ/anims/anm/player/actions/items/p_cro_jerrycan_fill_well_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillBottleWellCro.Out" {
+   Resource "{751A2390B2C44DA8}DZ/anims/anm/player/actions/items/p_cro_jerrycan_fill_well_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillContainerSnowCro.In" {
+   Resource "{8936672738D5C34F}DZ/anims/anm/player/actions/environment/p_cro_fill_jerrycan_snow_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillContainerSnowCro.Loop" {
+   Resource "{A724B346E1006F55}DZ/anims/anm/player/actions/environment/p_cro_fill_jerrycan_snow_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.FillContainerSnowCro.Out" {
+   Resource "{945B87C363C7EB3E}DZ/anims/anm/player/actions/environment/p_cro_fill_jerrycan_snow_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Cro.In" {
+   Resource "{7B4DF9ADA38D7C91}DZ/anims/anm/player/actions/misc/p_cro_washface_jerrycan_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Cro.Loop" {
+   Resource "{82276DF4B1A3ECF5}DZ/anims/anm/player/actions/misc/p_cro_washface_jerrycan_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Cro.Out" {
+   Resource "{EC9CA05A4ED083CB}DZ/anims/anm/player/actions/misc/p_cro_washface_jerrycan_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Erc.In" {
+   Resource "{E9FAF5BA35CD0D43}DZ/anims/anm/player/actions/misc/p_erc_washface_jerrycan_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Erc.Loop" {
+   Resource "{170FC4E2C8C8FAC0}DZ/anims/anm/player/actions/misc/p_erc_washface_jerrycan_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous2.WashFace_Erc.Out" {
+   Resource "{4EB6E924B0A6CDCF}DZ/anims/anm/player/actions/misc/p_erc_washface_jerrycan_out.anm"
+  }
+ }
+}
