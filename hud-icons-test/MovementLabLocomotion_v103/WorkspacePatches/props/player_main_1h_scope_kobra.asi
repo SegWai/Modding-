@@ -1,0 +1,17 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{0660861542DC5A75}DZ/anims/workspaces/player/player_main/props/player_main_1h_scope.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.Aim" {
+   Resource "{BFC01653B18CE1B1}DZ/anims/anm/player/actions/items/optics/scope/p_cro_optics_scope_kobra_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.Aim" {
+   Resource "{2AE8BF45C8E7F784}DZ/anims/anm/player/actions/items/optics/scope/p_erc_optics_scope_kobra_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.Aim" {
+   Resource "{B7D65C145FE85719}DZ/anims/anm/player/actions/items/optics/scope/p_pne_optics_scope_kobra_aim.anm"
+  }
+ }
+}
