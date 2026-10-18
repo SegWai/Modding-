@@ -44,3 +44,7 @@ Run `python tools/compare_ragdoll_skeletons.py Part-01.zip --output comparison.j
 Parser verification: `python tools/check_native_skeleton_comparison.py` (7 tests), `python tools/check_rig_asset_audit.py` (12 tests). Covers malformed/truncated skeleton tables, missing/cyclic parents, duplicate bones, unsupported versions, ragdoll nesting and the collector selection gap.
 
 Independent format cross-check: KoffeinFlummi/armake revision `e4940fae0d28c4dd07d9d2c591f8e056545fee3f`, src/p3d.c `write_skeleton`, writes the same name/flag/count/name-parent/terminator layout. That project writes a newer ODOL version and is not a complete DayZ56 decoder; its layout is corroboration, not proof of the rest of the file format. The comparison parser was written for this investigation without copying that implementation.
+
+## Follow-up
+
+The second upload supplied the omitted XOB files. The transform comparison is now recorded in [infected-xob-bind-comparison.md](infected-xob-bind-comparison.md). Its shared physical-bone transforms agree closely; this earlier report's missing-XOB status is historical. Native controller activation remains unverified.

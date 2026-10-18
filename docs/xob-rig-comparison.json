@@ -1,0 +1,347 @@
+{
+  "verified_asset_count": 218,
+  "physical_bone_comparison": [
+    {
+      "bone": "pelvis",
+      "human_parent": "Scene_Root",
+      "infected_parent": "Scene_Root",
+      "human_position": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "infected_position": [
+        0.0,
+        0.9999991655349731,
+        0.0
+      ],
+      "position_delta": 8.344650268554688e-07,
+      "rotation_delta_degrees": 0.0
+    },
+    {
+      "bone": "spine3",
+      "human_parent": "Spine2",
+      "infected_parent": "Spine2",
+      "human_position": [
+        3.532192838825304e-08,
+        1.2351032587083899,
+        0.030406566716500067
+      ],
+      "infected_position": [
+        3.197075978435271e-08,
+        1.2351013576373766,
+        0.030406587882325503
+      ],
+      "position_delta": 1.9011917893837435e-06,
+      "rotation_delta_degrees": 1.3115919625095422e-05
+    },
+    {
+      "bone": "head",
+      "human_parent": "Neck1",
+      "infected_parent": "Neck1",
+      "human_position": [
+        1.1583774171906175e-07,
+        1.619971763709237,
+        0.0002937373566847378
+      ],
+      "infected_position": [
+        8.60981958193674e-08,
+        1.619967719484455,
+        0.0002940548316868342
+      ],
+      "position_delta": 4.056775678355696e-06,
+      "rotation_delta_degrees": 2.013168567464636e-05
+    },
+    {
+      "bone": "leftarm",
+      "human_parent": "LeftShoulder",
+      "infected_parent": "LeftShoulder",
+      "human_position": [
+        0.16000011545436485,
+        1.4299690677831294,
+        0.010294541320708565
+      ],
+      "infected_position": [
+        0.16000002859970977,
+        1.4299676216301886,
+        0.010294557867641975
+      ],
+      "position_delta": 1.448853291434689e-06,
+      "rotation_delta_degrees": 0.0004246474777343315
+    },
+    {
+      "bone": "leftforearm",
+      "human_parent": "LeftArmRoll",
+      "infected_parent": "LeftArmRoll",
+      "human_position": [
+        0.375814152728781,
+        1.2486513281034963,
+        0.07847304023625619
+      ],
+      "infected_position": [
+        0.3758139431746268,
+        1.248650088647499,
+        0.07847079401875982
+      ],
+      "position_delta": 2.5740351889576487e-06,
+      "rotation_delta_degrees": 0.0004722008936514466
+    },
+    {
+      "bone": "rightarm",
+      "human_parent": "RightShoulder",
+      "infected_parent": "RightShoulder",
+      "human_position": [
+        -0.15992501110802926,
+        1.4302597940915938,
+        0.01027955931428498
+      ],
+      "infected_position": [
+        -0.15992498454297363,
+        1.4302575989607063,
+        0.010279698335937646
+      ],
+      "position_delta": 2.199689145168416e-06,
+      "rotation_delta_degrees": 0.00011502837553117748
+    },
+    {
+      "bone": "rightforearm",
+      "human_parent": "RightArmRoll",
+      "infected_parent": "RightArmRoll",
+      "human_position": [
+        -0.3757384231829507,
+        1.2489409076402127,
+        0.07845841356263926
+      ],
+      "infected_position": [
+        -0.3757379765594448,
+        1.248939061549153,
+        0.07845783151583233
+      ],
+      "position_delta": 1.9865304534667408e-06,
+      "rotation_delta_degrees": 0.0001852039515862964
+    },
+    {
+      "bone": "leftupleg",
+      "human_parent": "Pelvis",
+      "infected_parent": "Pelvis",
+      "human_position": [
+        0.10299995541572571,
+        0.9199997261166573,
+        0.0
+      ],
+      "infected_position": [
+        0.1029999703168869,
+        0.9199991673231125,
+        0.0
+      ],
+      "position_delta": 5.589921916098205e-07,
+      "rotation_delta_degrees": 5.4588126426632306e-05
+    },
+    {
+      "bone": "leftleg",
+      "human_parent": "LeftUpLegRoll",
+      "infected_parent": "LeftUpLegRoll",
+      "human_position": [
+        0.13394139204149272,
+        0.5011631920881707,
+        0.00433006758534147
+      ],
+      "infected_position": [
+        0.13394098693544437,
+        0.501162901261335,
+        0.004330081437779007
+      ],
+      "position_delta": 4.988817984349707e-07,
+      "rotation_delta_degrees": 0.00015262263643957174
+    },
+    {
+      "bone": "rightupleg",
+      "human_parent": "Pelvis",
+      "infected_parent": "Pelvis",
+      "human_position": [
+        -0.10299999266862869,
+        0.9199997186660767,
+        0.0
+      ],
+      "infected_position": [
+        -0.1029999703168869,
+        0.9199991375207901,
+        0.0
+      ],
+      "position_delta": 5.815749689008751e-07,
+      "rotation_delta_degrees": 2.0059138823654082e-05
+    },
+    {
+      "bone": "rightleg",
+      "human_parent": "RightUpLegRoll",
+      "infected_parent": "RightUpLegRoll",
+      "human_position": [
+        -0.13394111555047178,
+        0.5011627575448961,
+        0.004330022516787553
+      ],
+      "infected_position": [
+        -0.1339410183178666,
+        0.5011625903873799,
+        0.004330131607481129
+      ],
+      "position_delta": 2.2202836346604372e-07,
+      "rotation_delta_degrees": 3.1945284701302084e-05
+    }
+  ],
+  "interpretation": "Observed XOB6 node TR + XYZW quaternion, parent composition; inferred format, not official specification.",
+  "native_activation_tested": false,
+  "mesh_weights_decoded": false,
+  "rigs": {
+    "dz/anims/workspaces/infected/models/z_fatbiker_m_editorpreview.xob": {
+      "sha256": "5bb2869bc32d3d6ca3bb74fc69d22939d7cbaed953e6a07e2b053b262524fecb",
+      "node_count": 93,
+      "chunks": {
+        "HEAD": [
+          20,
+          6725
+        ],
+        "LODS": [
+          6733,
+          252725
+        ]
+      },
+      "node_table_offset": 1367
+    },
+    "dz/anims/workspaces/infected/models/z_hermit_editorpreview.xob": {
+      "sha256": "81331c4e644558a11a05ff9a370b92ecf475ffe19d044db25455c72df1934915",
+      "node_count": 93,
+      "chunks": {
+        "HEAD": [
+          20,
+          7007
+        ],
+        "LODS": [
+          7015,
+          137281
+        ]
+      },
+      "node_table_offset": 1359
+    },
+    "dz/anims/workspaces/infected/models/z_hermit_m_editorpreview.xob": {
+      "sha256": "8dacb3b45f79f18d4e5e07feb96c686788d1b227eb4ec297fbf97f14ec469612",
+      "node_count": 93,
+      "chunks": {
+        "HEAD": [
+          20,
+          7007
+        ],
+        "LODS": [
+          7015,
+          137302
+        ]
+      },
+      "node_table_offset": 1359
+    },
+    "dz/anims/workspaces/infected/models/z_normal_f_editorpreview.xob": {
+      "sha256": "ad28b07486dd7178a42899bcb039443ed1e7d5a66392034559a40a501dcee8a0",
+      "node_count": 93,
+      "chunks": {
+        "HEAD": [
+          20,
+          6732
+        ],
+        "LODS": [
+          6740,
+          238689
+        ]
+      },
+      "node_table_offset": 1374
+    },
+    "dz/anims/workspaces/infected/models/z_skater_f_editorpreview.xob": {
+      "sha256": "9c70105924cdcb27a849f116df63ef246b8b14fbd28e194518ac56ebca713c74",
+      "node_count": 93,
+      "chunks": {
+        "HEAD": [
+          20,
+          6728
+        ],
+        "LODS": [
+          6736,
+          213007
+        ]
+      },
+      "node_table_offset": 1370
+    },
+    "dz/anims/workspaces/player/models/player_f_editorpreview.xob": {
+      "sha256": "a5518260e336cf23885c89c4b1db9d356b789ea90809c65819df8d10c9c7eb45",
+      "node_count": 150,
+      "chunks": {
+        "HEAD": [
+          20,
+          11092
+        ],
+        "LODS": [
+          11100,
+          394018
+        ]
+      },
+      "node_table_offset": 2305
+    },
+    "dz/anims/workspaces/player/models/player_m_editorpreview.xob": {
+      "sha256": "9324baeda872ac343a1dc9d07bb2db4acd237f7fe71afcadf5d1d697dbeefcad",
+      "node_count": 148,
+      "chunks": {
+        "HEAD": [
+          20,
+          10881
+        ],
+        "LODS": [
+          10889,
+          374049
+        ]
+      },
+      "node_table_offset": 2238
+    },
+    "dz/characters/bodies/player_f_testing.xob": {
+      "sha256": "a5518260e336cf23885c89c4b1db9d356b789ea90809c65819df8d10c9c7eb45",
+      "node_count": 150,
+      "chunks": {
+        "HEAD": [
+          20,
+          11092
+        ],
+        "LODS": [
+          11100,
+          394018
+        ]
+      },
+      "node_table_offset": 2305
+    },
+    "dz/characters/bodies/player_testing.xob": {
+      "sha256": "5b1a65773cf38dd6fb55811d42458ce7f8200633533cbb7cb0290becb2baddf0",
+      "node_count": 148,
+      "chunks": {
+        "HEAD": [
+          20,
+          7671
+        ],
+        "LODS": [
+          7679,
+          9638
+        ]
+      },
+      "node_table_offset": 2247
+    },
+    "dz/characters/zombies/z_hermit_m.xob": {
+      "sha256": "d770f8c8848022600aaa03d328f402a2cbadb6cb61348c866a27c298505b577c",
+      "node_count": 92,
+      "chunks": {
+        "HEAD": [
+          20,
+          6956
+        ],
+        "LODS": [
+          6964,
+          137230
+        ]
+      },
+      "node_table_offset": 1344
+    }
+  }
+}
