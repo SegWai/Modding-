@@ -1,0 +1,33 @@
+{
+  "markers": [
+    "stage=lookup skeletalIndex=2090324343 proxyIndex=41",
+    "stage=start headIndex=2090324343 disabled=false",
+    "stage=position_check positionMS=<-0.090897, 1.454223, -0.002197> matrixPosition=<-0.090897, 1.454223, -0.002197> axis0=<-0.964896, 0.150174, 0.215460>",
+    "stage=captured position=<-0.090897, 1.454223, -0.002197>",
+    "stage=before_SetBoneMatrix",
+    "stage=write_result mode=1 writerIndex=41 matrixAccepted=false readable=false requested=<-0.090897, 1.630322, -0.002197> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<-0.090897, 1.454223, -0.002197>",
+    "stage=before_SetBoneGlobal",
+    "stage=write_result mode=2 writerIndex=41 matrixAccepted=false readable=false requested=<-0.090897, 1.629223, -0.002197> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<-0.132099, 0.120226, 0.050820>",
+    "stage=finished frames=417",
+    "stage=lookup skeletalIndex=2090324343 proxyIndex=41",
+    "stage=start headIndex=2090324343 disabled=false",
+    "stage=position_check positionMS=<-0.064889, 1.407908, -0.129234> matrixPosition=<-0.064889, 1.407908, -0.129234> axis0=<0.787532, 0.485259, -0.379892>",
+    "stage=captured position=<-0.064889, 1.407908, -0.129234>",
+    "stage=before_SetBoneMatrix",
+    "stage=write_result mode=1 writerIndex=41 matrixAccepted=false readable=false requested=<-0.064889, 1.588405, -0.129234> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<-0.064889, 1.407908, -0.129234>",
+    "stage=before_SetBoneGlobal",
+    "stage=write_result mode=2 writerIndex=41 matrixAccepted=false readable=false requested=<-0.064889, 1.581809, -0.129234> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<-0.340645, 0.134007, 0.150774>",
+    "stage=finished frames=397",
+    "stage=lookup skeletalIndex=2090324343 proxyIndex=41",
+    "stage=start headIndex=2090324343 disabled=false",
+    "stage=position_check positionMS=<0.062790, 1.418486, 0.211545> matrixPosition=<0.062790, 1.418486, 0.211545> axis0=<-0.206668, 0.972729, -0.105290>",
+    "stage=captured position=<0.062790, 1.418486, 0.211545>",
+    "stage=before_SetBoneMatrix",
+    "stage=write_result mode=1 writerIndex=41 matrixAccepted=false readable=false requested=<0.062790, 1.597884, 0.211545> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.062790, 1.418486, 0.211545>",
+    "stage=before_SetBoneGlobal",
+    "stage=write_result mode=2 writerIndex=41 matrixAccepted=false readable=false requested=<0.062790, 1.589088, 0.211545> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.155574, 0.146138, -1.275765>",
+    "stage=finished frames=431"
+  ],
+  "user_visible_result": "Nothing moved; native death animation only.",
+  "conclusion": "Three completed dead-infected probes, valid source transforms, generic model-index matrix writes rejected. Alongside v98, neither tested identifier worked. Generic matrix writes are not an established path to drive this infected mesh."
+}

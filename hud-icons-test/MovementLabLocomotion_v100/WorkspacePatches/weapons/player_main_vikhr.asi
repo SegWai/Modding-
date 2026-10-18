@@ -1,0 +1,80 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{CD1F3F63679FF6CE}DZ/anims/anm/player/reloads/Vikhr/p_erc_chambering_Closed_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{39A1D858F214FDE4}DZ/anims/anm/player/reloads/Vikhr/p_erc_fire_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{0F8246050BB1E99E}DZ/anims/anm/player/reloads/Vikhr/p_erc_fire_empty_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{F2277C0EDDAAA336}DZ/anims/anm/player/reloads/Vikhr/p_erc_fire_jam_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireLast" {
+   Resource "{CF2C9B757994663E}DZ/anims/anm/player/reloads/Vikhr/p_erc_fire_last_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{DB97C82E4A8D09C9}DZ/anims/anm/player/reloads/Vikhr/p_erc_unjam_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{6CC51BD74D06F5C4}DZ/anims/anm/player/reloads/Vikhr/p_erc_unjam_cancel_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{14F456611D129E0B}DZ/anims/anm/player/reloads/Vikhr/p_erc_reloadAction_Closed_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{4097C666C3CF9714}DZ/anims/anm/player/reloads/Vikhr/p_erc_reload_mag_noBullet_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{4097C666C3CF9714}DZ/anims/anm/player/reloads/Vikhr/p_erc_reload_mag_noBullet_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{D7636CDA277E4687}DZ/anims/anm/player/reloads/Vikhr/p_erc_reload_mag_remove_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{24100FD16E51EF10}DZ/anims/anm/player/reloads/Vikhr/p_erc_reload_noMag_bullet_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{47968E1D8D8054D7}DZ/anims/anm/player/reloads/Vikhr/p_pne_chambering_Closed_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{18A26425A3483975}DZ/anims/anm/player/reloads/Vikhr/p_pne_fire_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{BE20115E058A5A8A}DZ/anims/anm/player/reloads/Vikhr/p_pne_fire_empty_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{55CCCF803E40B2B1}DZ/anims/anm/player/reloads/Vikhr/p_pne_fire_jam_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireLast" {
+   Resource "{903D45D03B082947}DZ/anims/anm/player/reloads/Vikhr/p_pne_fire_last_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{56A1A56B9E60A584}DZ/anims/anm/player/reloads/Vikhr/p_pne_unjam_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{F1FBF886DA095559}DZ/anims/anm/player/reloads/Vikhr/p_pne_unjam_cancel_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{5C791E2C0BE13844}DZ/anims/anm/player/reloads/Vikhr/p_pne_reloadAction_Closed_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{081A8E2BD53C315B}DZ/anims/anm/player/reloads/Vikhr/p_pne_reload_mag_noBullet_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{081A8E2BD53C315B}DZ/anims/anm/player/reloads/Vikhr/p_pne_reload_mag_noBullet_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{5DEADDA4CD61E49E}DZ/anims/anm/player/reloads/Vikhr/p_pne_reload_mag_remove_Vikhr_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{6C9D479C78A2495F}DZ/anims/anm/player/reloads/Vikhr/p_pne_reload_noMag_bullet_Vikhr_ras.anm"
+  }
+ }
+}
