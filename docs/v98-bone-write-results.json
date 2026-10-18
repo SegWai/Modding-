@@ -1,0 +1,30 @@
+{
+  "markers": [
+    "stage=lookup skeletalIndex=2090324343 proxyIndex=41",
+    "stage=start headIndex=2090324343 disabled=false",
+    "stage=position_check positionMS=<0.081648, 1.419720, 0.167639> matrixPosition=<0.081648, 1.419720, 0.167639> axis0=<-0.166329, 0.948135, -0.270878>",
+    "stage=captured position=<0.081648, 1.419720, 0.167639>",
+    "stage=before_SetBoneMatrix",
+    "stage=write_result mode=1 matrixAccepted=false readable=false requested=<0.081648, 1.600217, 0.167639> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.081648, 1.419720, 0.167639>",
+    "stage=before_SetBoneGlobal",
+    "stage=write_result mode=2 matrixAccepted=false readable=false requested=<0.081648, 1.588125, 0.167639> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.155574, 0.146138, -1.275765>",
+    "stage=finished frames=424",
+    "stage=lookup skeletalIndex=2090324343 proxyIndex=41",
+    "stage=start headIndex=2090324343 disabled=false",
+    "stage=position_check positionMS=<-0.095903, 1.500643, 0.052906> matrixPosition=<-0.095903, 1.500643, 0.052906> axis0=<-0.724775, 0.230321, -0.649349>",
+    "stage=captured position=<-0.095903, 1.500643, 0.052906>",
+    "stage=before_SetBoneMatrix",
+    "stage=write_result mode=1 matrixAccepted=false readable=false requested=<-0.095903, 1.681140, 0.052906> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<-0.095903, 1.500643, 0.052906>",
+    "stage=before_SetBoneGlobal",
+    "stage=write_result mode=2 matrixAccepted=false readable=false requested=<-0.095903, 1.672345, 0.052906> matrixReadback=<0.000000, 0.000000, 0.000000> modelReadback=<0.010936, 0.109127, -0.021791>",
+    "stage=finished frames=393"
+  ],
+  "observations": [
+    "Two deaths completed; 424 and393 probe frames.",
+    "Skeletal reader identifier2090324343 gives nonzero matching positionMS and matrixPosition, and a nonzero basis.",
+    "Model identifier is41.",
+    "SetBoneMatrix and GetBoneMatrix returnfalse when passed the animation reader identifier.",
+    "Later modelReadback differs from requested pose; native death motion is not evidence that the write succeeded."
+  ],
+  "unresolved": "Generic writer identifier contract and visual bone control remain unverified."
+}

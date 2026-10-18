@@ -1,0 +1,1 @@
+v41: Fix line 483 compile error by renaming reserved Enforce keyword reference to framingReference. Object creation is split into simple expressions. All v40 framing, HUD, loadout and movement behavior retained. Native DayZ compilation must be verified in game.
