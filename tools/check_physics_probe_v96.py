@@ -31,6 +31,10 @@ class ProbeTests(unittest.TestCase):
         self.assertIn('exposes none',result['verdict'])
         self.assertEqual(result['human_ragdoll_samples'],1)
 
+    def test_actual_v96_zero_bone_positive_control(self):
+        text=trace('Human','human_death_now',0,0,0,ragdoll=True)+trace('Zombie','infected_death_now',0,0,0)
+        self.assertIn('cannot distinguish',analyze(text)['verdict'])
+
     def test_multiple_infected_bodies_not_claimed_ragdoll(self):
         text=trace('Human','human_death_now',0,11,11,ragdoll=True)+trace('Zombie','infected_death_now',0,11,11)
         self.assertIn('not proof',analyze(text)['verdict'])

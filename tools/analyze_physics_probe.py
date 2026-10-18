@@ -32,6 +32,8 @@ def analyze(text):
         verdict='No v96 probe markers found. This log cannot diagnose the physics path.'
     elif not human or not infected:
         verdict='Incomplete comparison: need completed dead-infected and active-human-ragdoll samples. Check unfinished stages and any compile/runtime errors.'
+    elif max_count(human,'bones')==0 and max_count(infected,'bones')==0:
+        verdict='Both the active human ragdoll and dead infected expose zero bones through this API. The positive control shows this enumeration cannot distinguish their articulated physics. Do not infer infected ragdoll absence from it.'
     elif max_count(human,'present')>1 and max_count(infected,'bones')==0:
         verdict='Working human exposes multiple bone physics bodies; dead infected exposes none through this API. Changing simulation flags on existing infected bones is not supported by these observations.'
     elif max_count(infected,'present')>1:
