@@ -1,0 +1,74 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{F2EE4B8B6F059D8E}DZ/anims/anm/player/reloads/Ruger1022/p_erc_chambering_Closed_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{A6F469B84FCD1D1F}DZ/anims/anm/player/reloads/Ruger1022/p_erc_fire_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{207F336C72BA04FE}DZ/anims/anm/player/reloads/Ruger1022/p_erc_fire_empty_automatic_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{3B5AAADA5E54D55C}DZ/anims/anm/player/reloads/Ruger1022/p_erc_fire_Jam_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{D197E11AB48F17E4}DZ/anims/anm/player/reloads/Ruger1022/p_erc_unjam_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{806F64D5B630813A}DZ/anims/anm/player/reloads/Ruger1022/p_erc_unjam_cancel_Ruger1022.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{EB292DF65EF7F8D7}DZ/anims/anm/player/reloads/Ruger1022/p_erc_reloadAction_Closed_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{9E5B49775DF83AA5}DZ/anims/anm/player/reloads/Ruger1022/p_erc_reload_mag_nobullet_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{9E5B49775DF83AA5}DZ/anims/anm/player/reloads/Ruger1022/p_erc_reload_mag_nobullet_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{2A3573CC2302846A}DZ/anims/anm/player/reloads/Ruger1022/p_erc_reload_mag_remove_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{AF003F4D7C232C03}DZ/anims/anm/player/reloads/Ruger1022/p_erc_reload_nomag_bullet_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{FE51A2F510448320}DZ/anims/anm/player/reloads/Ruger1022/p_pne_chambering_Closed_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{011FDA36AC270C98}DZ/anims/anm/player/reloads/Ruger1022/p_pne_fire_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{9FCEFB6648BE2F77}DZ/anims/anm/player/reloads/Ruger1022/p_pne_fire_empty_automatic_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{A664498BC95B75C1}DZ/anims/anm/player/reloads/Ruger1022/p_pne_fire_Jam_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{8E863FBFF613589D}DZ/anims/anm/player/reloads/Ruger1022/p_pne_unjam_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{1D518784213F21A7}DZ/anims/anm/player/reloads/Ruger1022/p_pne_unjam_cancel_Ruger1022.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{08B1080A42815FF9}DZ/anims/anm/player/reloads/Ruger1022/p_pne_reloadAction_Closed_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{9E5B49775DF83AA5}DZ/anims/anm/player/reloads/Ruger1022/p_erc_reload_mag_nobullet_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{7DC36C8B418E9D8B}DZ/anims/anm/player/reloads/Ruger1022/p_pne_reload_mag_nobullet_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{268A9AB25C439AC4}DZ/anims/anm/player/reloads/Ruger1022/p_pne_reload_mag_remove_Ruger1022_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{4C981AB160558B2D}DZ/anims/anm/player/reloads/Ruger1022/p_pne_reload_nomag_bullet_Ruger1022_ras.anm"
+  }
+ }
+}

@@ -1,0 +1,9 @@
+MovementLab v92 - five distinct infected, respawn only on confirmed death
+
+Exactly five managed slots, with preferred appearances: beige hermit, blue female journalist, policeman, soldier, female nurse. Each preferred class is checked against public runtime config; unavailable entries use a distinct public Zmb class, never a duplicate. Each slot retains its selected class for future respawns. Starts 20m from the player's initial spawn; native AI may roam.
+
+Only the tracked zombie's EEKilled event sets its replacement deadline, once, to death + 5000ms. Missing/streamed references, apparent IsAlive states, and failed spawns cannot trigger periodic replacements. No automatic failed-spawn retry. Failed casts delete the created object to avoid untracked zombies. Occupied slots cannot spawn another entity. At a confirmed death deadline, delete that slot's corpse before creating exactly one replacement; the other four slots stay untouched. Total managed slots remains five, counting both live entities and waiting corpses. Use a fresh mission/folder to clear zombies from previous tests.
+
+Marked zombie EEKilled now immediately starts native StartCommand_Death(ANIM_DEATH_IMPULSE, direction), sets native dead movement/mind sync state, and does not replace the physical death with default animations. The native infected death command is the available physics path; there is no Human.PhysicsSetRagdoll call on infected. Actual visible physics/ragdoll response still requires local testing and is not proven by enum selection alone. Diagnostic logs show every spawn and confirmed kill.
+
+Other NPCs, movement, grenades/blast and Gunter retained. Actual death-hook/slot-update logic tested with mocked native APIs, including no-death and missing-reference cases, staggered/simultaneous deaths and repeated kill callbacks. Native compilation and gameplay unverified. Extract into a fresh folder.
