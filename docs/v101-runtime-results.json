@@ -1,0 +1,20 @@
+{
+  "markers": [
+    "stage=death_capture velocity=<0.000000, 0.000000, 0.000000> sampleAge=17",
+    "stage=warming type=MovementLabHermitPhysicsCorpse shape=dz\\characters\\zombies\\hermit_above0.p3d velocity=<0.000000, 0.000000, 0.000000>",
+    "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229>",
+    "stage=momentum velocity=<0.000000, 0.000000, 0.000000> previousVelocity=<0.000000, 0.000000, 0.000000> mass=70.8333 impulse=<0.000000, 0.000000, 0.000000>",
+    "stage=revealed shape=dz\\characters\\zombies\\hermit_above0.p3d ragdoll=true position=<4442.722656, 339.048737, 10238.466797>",
+    "stage=death_capture velocity=<-0.009766, -0.000610, 0.214844> sampleAge=17",
+    "stage=warming type=MovementLabHermitPhysicsCorpse shape=dz\\characters\\zombies\\hermit_above0.p3d velocity=<-0.009766, -0.000610, 0.214844>",
+    "stage=activated head=<0.022474, 1.610678, 0.029228> pelvis=<-0.017365, 0.996306, -0.013229>",
+    "stage=momentum velocity=<-0.009766, -0.000610, 0.214844> previousVelocity=<0.000000, -0.326843, 0.000000> mass=70.8333 impulse=<-0.691732, 23.108160, 15.218098>",
+    "stage=revealed shape=dz\\characters\\zombies\\hermit_above0.p3d ragdoll=true position=<4440.127441, 339.018616, 10261.052734>"
+  ],
+  "observations": [
+    "Two initialized hermit-model ragdolls activated and revealed successfully.",
+    "Captured speeds:0 and approximately0.215m/s; visible gait is unknown from the upload.",
+    "Second impulse included vertical23.108Ns from canceling downward settling.",
+    "No followthrough measurement was present, so requested impulse cannot establish visible momentum."
+  ]
+}

@@ -1,0 +1,62 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{25DD29A4F365594C}DZ/anims/anm/player/reloads/Crossbow/p_erc_chambering1_loop_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{45E9662FC6463FF2}DZ/anims/anm/player/reloads/Crossbow/p_erc_reload_action1_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Open" {
+   Resource "{5C4A375F8B3A5580}DZ/anims/anm/player/reloads/Crossbow/p_erc_chambering1_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{BEB5471391AE2B12}DZ/anims/anm/player/reloads/Crossbow/p_erc_fire_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireCocked" {
+   Resource "{990C1D88516EC966}DZ/anims/anm/player/reloads/Crossbow/p_erc_fire_empty_cocked_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{C1418AAE33E82BDF}DZ/anims/anm/player/reloads/Crossbow/p_erc_fire_empty_uncocked_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireUncocked" {
+   Resource "{C1418AAE33E82BDF}DZ/anims/anm/player/reloads/Crossbow/p_erc_fire_empty_uncocked_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{FE6403E3211082EB}DZ/anims/anm/player/reloads/Crossbow/p_erc_reload_action_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadBoltAction2" {
+   Resource "{0373334FC25BA64A}DZ/anims/anm/player/reloads/Crossbow/p_erc_reload_action2_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingLoop_Closed_NoBullet" {
+   Resource "{6D5061E9E596FF03}DZ/anims/anm/player/reloads/Crossbow/p_pne_chambering1_loop_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{CF60D7512C599DEB}DZ/anims/anm/player/reloads/Crossbow/p_pne_reload_action1_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Open" {
+   Resource "{F9A8767F900BBCDB}DZ/anims/anm/player/reloads/Crossbow/p_pne_chambering1_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{E0F020B3ED765FFF}DZ/anims/anm/player/reloads/Crossbow/p_pne_fire_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireCocked" {
+   Resource "{5C279E0154217EF7}DZ/anims/anm/player/reloads/Crossbow/p_pne_fire_empty_cocked_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{A5FD5E1E6031B0BE}DZ/anims/anm/player/reloads/Crossbow/p_pne_fire_empty_uncocked_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireUncocked" {
+   Resource "{A5FD5E1E6031B0BE}DZ/anims/anm/player/reloads/Crossbow/p_pne_fire_empty_uncocked_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{7104343F6C6F5653}DZ/anims/anm/player/reloads/Crossbow/p_pne_reload_action_crossbow_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadBoltAction2" {
+   Resource "{89FA823128440453}DZ/anims/anm/player/reloads/Crossbow/p_pne_reload_action2_crossbow_ras.anm"
+  }
+ }
+}

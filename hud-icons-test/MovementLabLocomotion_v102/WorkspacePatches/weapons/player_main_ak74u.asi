@@ -1,0 +1,74 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{416372172B0AFA90}DZ/anims/workspaces/player/player_main/player_main_rifle.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{E464755D1E13A053}DZ/anims/anm/player/reloads/AK74U/p_erc_chambering_Closed_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{84F895A88F40FB02}DZ/anims/anm/player/reloads/AK74U/p_erc_fire_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{18FBCED7760614F0}DZ/anims/anm/player/reloads/AK74U/p_erc_fire_empty_automatic_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{C753B689B61A4F54}DZ/anims/anm/player/reloads/AK74U/p_erc_fire_Jam_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{61B9B8529642E8F0}DZ/anims/anm/player/reloads/AK74U/p_erc_unjam_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{1320CF6FB20B2B09}DZ/anims/anm/player/reloads/AK74U/p_erc_unjam_cancel_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{8AE531241CEAC211}DZ/anims/anm/player/reloads/AK74U/p_erc_reloadAction_Closed_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{1C7E2A55B52C950E}DZ/anims/anm/player/reloads/AK74U/p_erc_reload_mag_noBullet_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{1C7E2A55B52C950E}DZ/anims/anm/player/reloads/AK74U/p_erc_reload_mag_noBullet_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{E98DBBBF2013D824}DZ/anims/anm/player/reloads/AK74U/p_erc_reload_mag_remove_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{C4FB0857EEB95720}DZ/anims/anm/player/reloads/AK74U/p_erc_reload_noMag_bullet_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{8CA8E12A33D27906}DZ/anims/anm/player/reloads/AK74U/p_pne_chambering_Closed_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{09CEF8ED5BAD574F}DZ/anims/anm/player/reloads/AK74U/p_pne_fire_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{144427A909470A5E}DZ/anims/anm/player/reloads/AK74U/p_pne_fire_empty_automatic_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{9842682CF486002D}DZ/anims/anm/player/reloads/AK74U/p_pne_fire_Jam_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{388B5362BDF1D2CF}DZ/anims/anm/player/reloads/AK74U/p_pne_unjam_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{24A148E3EB5544D9}DZ/anims/anm/player/reloads/AK74U/p_pne_unjam_cancel_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{4FCEB2AD19A57580}DZ/anims/anm/player/reloads/AK74U/p_pne_reloadAction_Closed_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{D955A9DCB063229F}DZ/anims/anm/player/reloads/AK74U/p_pne_reload_mag_noBullet_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{D955A9DCB063229F}DZ/anims/anm/player/reloads/AK74U/p_pne_reload_mag_noBullet_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{81412FC80DD20171}DZ/anims/anm/player/reloads/AK74U/p_pne_reload_mag_remove_AKS74U_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{01D08BDEEBF6E0B1}DZ/anims/anm/player/reloads/AK74U/p_pne_reload_noMag_bullet_AKS74U_ras.anm"
+  }
+ }
+}
