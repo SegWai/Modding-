@@ -1,0 +1,8 @@
+{
+  "request": "Move rifle out of body centre toward the red-marked shoulder during leftward aimed leaning movement",
+  "interpretation": "Follow the image: picture-left shoulder is anatomical right on a front-facing NPC; positive local movement/lean.",
+  "change": "Shift both shoulder/arm roots8cm toward marked side before native weapon IK. F5 on/off comparison.",
+  "preserved": "Upright torso, head corrections, legs, gun cant, AK/Mosin loadout and unlimited ammo, ragdoll/respawn",
+  "native_status": "Needs in-game visual/direction/grip/sight check",
+  "user_confirmation": "Left on my screen, toward the red mark"
+}
