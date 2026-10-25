@@ -116,7 +116,7 @@
   "native_compilation_and_playback": "V29 NOT RUN: requires user Windows DayZDiag. Native exposure balance, weapon roll, gait, crouch and NPC behavior remain pending.",
   "pbo_sha256": {
     "@MLADSLeanLogic/Addons/MLADSLeanLogic.pbo": "415e9fb531821c00618558d1f53a16c9cec993c86c726ec87c976616d4bd8c28",
-    "@MLADSLeanWorkspace/Addons/MLADSLeanWorkspace.pbo": "6d99c235643d5fcc4dee28be2e515eeb253543549f7a04da6a9dd5d7dfd43025"
+    "@MLADSLeanWorkspace/Addons/MLADSLeanWorkspace.pbo": "94429594ce94078616921da6e98a29ffbe4b74b1d23b01db266abda3fb9dd512"
   },
   "pbo_headers_prefix_offsets_source_and_sha1": "passed: independently parsed and compared to every input file",
   "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
