@@ -1,0 +1,9 @@
+{
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "file": "scripts/3_game/human.c",
+  "weapon_command_declaration": "proto native \tHumanCommandWeapons\t\t\tGetCommandModifier_Weapons();",
+  "old_invalid_getter": "GetCommand_Weapons",
+  "correct_getter": "GetCommandModifier_Weapons",
+  "v5_observed_failure": "World module compile failure at both invalid getter calls.",
+  "native_v6_result": "Not compiled or run in this Linux environment."
+}
