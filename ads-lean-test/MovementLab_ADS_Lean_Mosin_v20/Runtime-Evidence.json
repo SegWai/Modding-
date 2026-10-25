@@ -1,0 +1,6 @@
+{
+  "baseline": "User v19 visual feedback: right-lean head remains too hidden behind aiming rifle",
+  "change": "Move the neck/head subtree during right lean: 10-degree anatomical-left neck bend, 2.5cm anatomical-left translation and 1cm upward translation. Keep earlier head corrections and range controller unchanged.",
+  "reason": "Head roll alone does not move the head centre enough to expose it beside the rifle.",
+  "native_status": "New graph change needs an in-game visual and sight alignment check"
+}
