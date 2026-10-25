@@ -1,0 +1,30 @@
+{
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "file": "scripts/3_game/human.c",
+  "weapon_command_declaration": "proto native \tHumanCommandWeapons\t\t\tGetCommandModifier_Weapons();",
+  "old_invalid_getter": "GetCommand_Weapons",
+  "correct_getter": "GetCommandModifier_Weapons",
+  "v5_observed_failure": "World module compile failure at both invalid getter calls.",
+  "native_v6_result": "Not compiled or run in this Linux environment.",
+  "npc_raised_stance": {
+    "declaration": "proto native void ForceStance(int pStanceIdx);",
+    "source": "scripts/3_game/human.c",
+    "sdk_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+    "documented_states": "Includes STANCEIDX_RAISEDERECT; -1 releases stance lock",
+    "runtime_status": "Requires user DayZ test"
+  },
+  "npc_aim_ik": {
+    "bind": "HumanAnimInterface.BindVariableInt(string pVariable)",
+    "write": "DayZPlayer.AnimSetInt(int pVar, int pInt), only in CommandHandler",
+    "variable": "ArmIK int 0..7, player_main.agr",
+    "mask": "7: aim bit0, primary arm bit1, secondary arm bit2; NormalWeaponIK in locomotion.agf",
+    "native_playback": "pending Windows test"
+  },
+  "npc_stance_lifecycle": {
+    "request": "ForceStance(STANCEIDX_RAISEDERECT) once per move-command startup; ForceStance(-1) on cleanup",
+    "completion": "DayZPlayerImplement.IsWeaponRaiseCompleted() checked before patrol and aim IK",
+    "raise_input": "OverrideRaise(ENABLED,true) once per movement-command startup; ENABLED persists until DISABLED at cleanup; no per-frame reinitialization",
+    "source": "scripts/3_game/human.c and scripts/4_world/entities/dayzplayerimplement.c",
+    "runtime_verification": "pending user test of v11"
+  }
+}

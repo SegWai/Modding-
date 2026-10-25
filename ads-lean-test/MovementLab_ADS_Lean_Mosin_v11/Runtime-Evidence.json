@@ -1,0 +1,12 @@
+{
+  "source_upload": "Mosin-Lean-v6-Logs-20261025-175450.zip",
+  "actual_build": "v10 per MLADSLEAN10 markers",
+  "observations": [
+    "demo_stance_requested_once logged once",
+    "raise_transitions becomes 2 then remains 2",
+    "NPC remains stance=0, native_raised=false, raise_complete=false, patrol_ready=false",
+    "custom gate=0, movement=0; binding checks succeed"
+  ],
+  "change": "Set OverrideRaise(ENABLED,true) once with initial stance request, retain real readiness gating. Do not repeat stance or reinitialize persistent input per tick.",
+  "verification_limit": "Native game playback not available; requires Windows DayZ verification"
+}
