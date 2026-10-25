@@ -1,0 +1,28 @@
+{
+  "pose_math_reconstruction_max_error": {
+    "left": 2.786795880709708e-06,
+    "right": 3.005379931475538e-06
+  },
+  "corrected_bones_per_direction": {
+    "left": 20,
+    "right": 20
+  },
+  "native_compilation_and_playback": "NOT RUN: requires Windows DayZDiag. Native axis/pivot/IK/camera semantics and crash-free startup remain pending.",
+  "pbo_sha256": {
+    "@MLADSLeanLogic/Addons/MLADSLeanLogic.pbo": "b0f5df4b3e146cd904ce39622e5d6f0e025acfcf9a683ee3537e4f3543ea7428",
+    "@MLADSLeanWorkspace/Addons/MLADSLeanWorkspace.pbo": "eda0e280c8e84d3d3fdb512ddb5c7dc48f0d7d5c114b6877b5603d32400eac7b"
+  },
+  "pbo_headers_prefix_offsets_source_and_sha1": "passed: independently parsed and compared to every input file",
+  "script_API_review": "Methods checked against official BohemiaInteractive/DayZ-Script-Diff; native Enforce compilation not available here",
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "changed_native_files": [
+    "locomotion.agf",
+    "player_main.agr"
+  ],
+  "source_directory": "F:\\DayZProjects",
+  "dependencies": "Vanilla Mosin only. No SNAFU, no prior MovementLab test required.",
+  "revision": "v2: multiline controls, private control template, distinct binding guard, offline debug dependencies, F9 status",
+  "v1_native_failure": "User logs confirm MLADSLeanGate undefined, graph invalid; inventory null PluginInventoryDebug; v2 native result pending.",
+  "offline_regression_tests": "6 passed: old inline-declaration rejection, v2 schema/template/expression symbols, unchanged pose graph, actual binding-guard cases including valid zero, offline DIAG plugin guards, project root and status logging",
+  "PowerShell_syntax": "passed for launcher and log collector; Windows runtime not available"
+}

@@ -7,8 +7,8 @@ from dayz_graph_formats import end,newnodes
 import argparse
 parser=argparse.ArgumentParser(description='Generate Mosin ADS lean graph patches from the supplied fresh workspace and approved pose snapshot.')
 parser.add_argument('--workspace',type=Path,required=True,help='Fresh player_main folder; read only')
-parser.add_argument('--snapshot',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v1/Pose-Snapshot.json')
-parser.add_argument('--output',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v1')
+parser.add_argument('--snapshot',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v2/Pose-Snapshot.json')
+parser.add_argument('--output',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v2')
 args=parser.parse_args()
 SOURCE=args.workspace;OUT=args.output;OUT.mkdir(parents=True,exist_ok=True)
 SNAP=json.loads(args.snapshot.read_text())
@@ -56,8 +56,10 @@ for side in ['left','right']:
 assert g.count('Child "LeanIdleErcRasRight"')==1
 g=g.replace('Child "LeanIdleErcRasRight"',f'Child "{child}"',1)
 anchor=newnodes(g)['LeanIdleErcRasRight'];g=g.replace(anchor,anchor+'\n'+'\n'.join(new),1)
-agr=(SOURCE/'player_main.agr').read_text();control='   AnimSrcGCTVarFloat MLADSLeanGate { DefaultValue 0 MinValue 0 MaxValue 1 }\n'
+agr=(SOURCE/'player_main.agr').read_text();control='   AnimSrcGCTVarFloat MLADSLeanGate {\n    DefaultValue 0\n    MinValue 0\n    MaxValue 1\n   }\n   AnimSrcGCTVarFloat MLADSLeanCanary {\n    DefaultValue 0.731\n    MinValue 0\n    MaxValue 1\n   }\n'
 assert agr.count('  Variables {')==1;agr=agr.replace('  Variables {','  Variables {\n'+control,1)
+# A private template identity prevents reuse of a native cached control template.
+agr=re.sub(r'(ControlTemplate AnimSrcGCT )\"\{[A-Fa-f0-9]+\}\"',lambda m:m[1]+'\"{'+guid('ControlTemplate-v2')+'}\"',agr,count=1)
 # Balance parser and child-graph cycle checks, including untouched native nodes.
 end(g,0);end(agr,0);N=newnodes(g);assert len(N)==len(newnodes(original))+sum(len(newnodes(block)) for block in new)
 def walk(n,active,seen):
