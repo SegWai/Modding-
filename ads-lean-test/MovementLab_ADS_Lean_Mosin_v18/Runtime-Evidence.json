@@ -1,0 +1,8 @@
+{
+  "source_upload": "Mosin-Lean-v17-Logs-20261025-195949.zip",
+  "error": "MLADSLeanLogic/Scripts/4_World/mladsleanplayer.c(138): Undefined function PlayerBase#2324#2.MLADSLeanRangeSampleMotion",
+  "phase": "World compile, before mission initialized",
+  "correction": "Merge the range PlayerBase methods/fields into the existing lean PlayerBase patch. Leave ammo helper as its own non-modded class.",
+  "preserved": "Graph, equipment, ammo refill, respawn and ragdoll logic byte-equivalent after version labels and class merge",
+  "native_status": "Requires v18 native compile/playback test"
+}
