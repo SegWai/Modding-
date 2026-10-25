@@ -1,0 +1,19 @@
+{
+  "baseline": "User confirmed v13 works",
+  "request": [
+    "Head upright with a small forward nod, especially on leftward movement",
+    "Apply head correction to player and NPC",
+    "Restore earlier stationary leg stance from third supplied image"
+  ],
+  "changes": [
+    "Post-weapon-IK shared head-only correction",
+    "V3 standing-idle leg and pelvis corrections restored"
+  ],
+  "preserved": [
+    "Working v13 NPC controller",
+    "Known-loaded control template",
+    "Movement leg cycles and crouched legs",
+    "Weapon cant and hands"
+  ],
+  "verification_limit": "New pose needs in-game screenshot comparison; only local math/graph/packaging checks available"
+}
