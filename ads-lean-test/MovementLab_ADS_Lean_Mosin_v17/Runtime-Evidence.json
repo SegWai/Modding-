@@ -1,0 +1,11 @@
+{
+  "baseline": "Working v16 lean controller; user requests additional right-lean head exposure and shooting-range fixtures",
+  "changes": [
+    "5-degree anatomical-left head adjustment on right lean",
+    "Infinite Mosin internal reserve; native bolt cycle retained",
+    "PU scope and improvised suppressor attached",
+    "NPC damage enabled; death-event respawn scheduled after1000ms",
+    "Earlier human-target ragdoll plus horizontal motion transfer; native fallback if physics fails"
+  ],
+  "native_status": "Requires new DayZ test; no user logs for v17 yet"
+}
