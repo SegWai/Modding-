@@ -1,0 +1,102 @@
+{
+  "StandIdle": {
+    "native_chain": "LeanIdleErcRas",
+    "output_node": "ML5_StandIdle_right_RightHand_Rotate_Z",
+    "mask": "full",
+    "bones": [
+      "Head",
+      "LeftArm",
+      "LeftFoot",
+      "LeftForeArm",
+      "LeftHand",
+      "LeftLeg",
+      "LeftShoulder",
+      "LeftUpLeg",
+      "Neck",
+      "Neck1",
+      "Pelvis",
+      "RightArm",
+      "RightFoot",
+      "RightForeArm",
+      "RightHand",
+      "RightLeg",
+      "RightShoulder",
+      "RightUpLeg",
+      "Spine",
+      "Spine1",
+      "Spine2"
+    ],
+    "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+    "weight": "same MLADSLeanAmount and gate as all other modes"
+  },
+  "StandWalk": {
+    "native_chain": "LeanMoveErcRas",
+    "output_node": "ML5_StandWalk_right_RightHand_Rotate_Z",
+    "mask": "gait",
+    "bones": [
+      "Head",
+      "LeftArm",
+      "LeftForeArm",
+      "LeftHand",
+      "LeftShoulder",
+      "Neck",
+      "Neck1",
+      "Pelvis",
+      "RightArm",
+      "RightForeArm",
+      "RightHand",
+      "RightShoulder",
+      "Spine",
+      "Spine1",
+      "Spine2"
+    ],
+    "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+    "weight": "same MLADSLeanAmount and gate as all other modes"
+  },
+  "CrouchIdle": {
+    "native_chain": "LeanIdleCroRas",
+    "output_node": "ML5_CrouchIdle_right_RightHand_Rotate_Z",
+    "mask": "upper",
+    "bones": [
+      "Head",
+      "LeftArm",
+      "LeftForeArm",
+      "LeftHand",
+      "LeftShoulder",
+      "Neck",
+      "Neck1",
+      "RightArm",
+      "RightForeArm",
+      "RightHand",
+      "RightShoulder",
+      "Spine",
+      "Spine1",
+      "Spine2"
+    ],
+    "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+    "weight": "same MLADSLeanAmount and gate as all other modes"
+  },
+  "CrouchWalk": {
+    "native_chain": "LeanMoveCroRas",
+    "output_node": "ML5_CrouchWalk_right_RightHand_Rotate_Z",
+    "mask": "upper",
+    "bones": [
+      "Head",
+      "LeftArm",
+      "LeftForeArm",
+      "LeftHand",
+      "LeftShoulder",
+      "Neck",
+      "Neck1",
+      "RightArm",
+      "RightForeArm",
+      "RightHand",
+      "RightShoulder",
+      "Spine",
+      "Spine1",
+      "Spine2"
+    ],
+    "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+    "weight": "same MLADSLeanAmount and gate as all other modes"
+  }
+}
