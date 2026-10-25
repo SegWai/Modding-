@@ -1,0 +1,7 @@
+{
+  "source": "User asks for approximately 3% higher head during rightward aimed leaning movement and less compressed legs on both player and NPC",
+  "source_finding": "Standing-walk custom pose had ~12cm pelvis drop on both sides",
+  "change": "Reduce standing-walk drop to6cm symmetrically; add6mm neck/head lift only while moving and right-leaning",
+  "shared_pose": "Same graph/weights for both actors; no NPC-only correction",
+  "native_status": "Needs in-game visual/foot-contact test"
+}
