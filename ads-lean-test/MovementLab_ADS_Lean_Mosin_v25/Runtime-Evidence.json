@@ -1,0 +1,7 @@
+{
+  "request": "Weapon hold farther toward anatomical right chest; retain body movement",
+  "evidence": "User video DayZ 2026-10-25 22-58-57.mp4: v24 still appears too central",
+  "change": "Increase same shared moving shoulder translation from0.08m to0.14m before native weapon IK; positive local lean as confirmed screen-left direction",
+  "preserved": "All other graph nodes, head/body/leg movement, weapon cant, range scripts, equipment, ammo, ragdoll and respawn",
+  "native_status": "New offset requires in-game visual and sight/grip verification; no native runtime available"
+}
