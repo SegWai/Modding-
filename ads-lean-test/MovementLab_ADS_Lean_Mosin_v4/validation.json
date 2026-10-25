@@ -1,0 +1,50 @@
+{
+  "pose_math_reconstruction_max_error": {
+    "left": 2.786795880709708e-06,
+    "right": 3.005379931475538e-06
+  },
+  "corrected_bones_per_direction": {
+    "left": 20,
+    "right": 20
+  },
+  "native_compilation_and_playback": "NOT RUN: requires Windows DayZDiag. Native axis/pivot/IK/camera semantics and crash-free startup remain pending.",
+  "pbo_sha256": {
+    "@MLADSLeanLogic/Addons/MLADSLeanLogic.pbo": "930cef31c7c59fd5220ebfb082e4f97c769a894f6743bcf011fca5f0806bc1b7",
+    "@MLADSLeanWorkspace/Addons/MLADSLeanWorkspace.pbo": "48d672e99ccb1b990a3beb725f1abbcc70351750a6ab725b0f03c932c1ba4a80"
+  },
+  "pbo_headers_prefix_offsets_source_and_sha1": "passed: independently parsed and compared to every input file",
+  "script_API_review": "Methods checked against official BohemiaInteractive/DayZ-Script-Diff; native Enforce compilation not available here",
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "changed_native_files": [
+    "locomotion.agf",
+    "player_main.agr"
+  ],
+  "source_directory": "F:\\DayZProjects",
+  "dependencies": "Vanilla Mosin only. No SNAFU, no prior MovementLab test required.",
+  "revision": "v4: left-lean right elbow lowered, right leg extended and foot turned outward; right lean unchanged; F9 joint measurements",
+  "v1_native_failure": "User logs confirm MLADSLeanGate undefined, graph invalid; inventory null PluginInventoryDebug.",
+  "v2_native_result": "User confirmed activation and provided in-game screenshot; leg pose still pinned by later foot IK.",
+  "v3_native_result": "User supplied both in-game lean photos; left-lean posture needs calibration.",
+  "v4_native_result": "Pending user test of left-lean elbow, right-leg extension and outward foot.",
+  "offline_regression_tests": "6 passed: other lean/reference unchanged, lower elbow with preserved hand transforms, farther and straighter planted right leg without scaling, outward foot yaw, unchanged controls/foot-IK branch/right graph nodes, unchanged activation logic with read-only F9 joint reporting",
+  "authoring_measurements": {
+    "scope": "left lean only; neutral and right-lean snapshot arrays retained exactly",
+    "right_elbow_height_relative_to_shoulder_before_cm": 6.5102996826171875,
+    "right_elbow_height_relative_to_shoulder_after_cm": 3.0517578125e-05,
+    "right_upper_arm_elevation_from_down_degrees": 90.00005714599153,
+    "right_foot_before_cm": [
+      -41.99999237060547,
+      2.9999940395355225,
+      10.473711967468262
+    ],
+    "right_foot_after_cm": [
+      -50.95075607299805,
+      1.7667099427853827e-06,
+      10.473711967468262
+    ],
+    "right_knee_interior_angle_degrees": 174.8741666029152,
+    "right_foot_outward_yaw_degrees": 55,
+    "hip_lowering_cm": 4,
+    "native_result": "pending game test; authoring measurements do not establish exact native joint angles"
+  }
+}

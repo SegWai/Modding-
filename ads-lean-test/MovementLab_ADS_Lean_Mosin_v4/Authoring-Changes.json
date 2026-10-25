@@ -1,0 +1,20 @@
+{
+  "scope": "left lean only; neutral and right-lean snapshot arrays retained exactly",
+  "right_elbow_height_relative_to_shoulder_before_cm": 6.5102996826171875,
+  "right_elbow_height_relative_to_shoulder_after_cm": 3.0517578125e-05,
+  "right_upper_arm_elevation_from_down_degrees": 90.00005714599153,
+  "right_foot_before_cm": [
+    -41.99999237060547,
+    2.9999940395355225,
+    10.473711967468262
+  ],
+  "right_foot_after_cm": [
+    -50.95075607299805,
+    1.7667099427853827e-06,
+    10.473711967468262
+  ],
+  "right_knee_interior_angle_degrees": 174.8741666029152,
+  "right_foot_outward_yaw_degrees": 55,
+  "hip_lowering_cm": 4,
+  "native_result": "pending game test; authoring measurements do not establish exact native joint angles"
+}

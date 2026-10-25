@@ -1,0 +1,19 @@
+{
+  "reported_game_build": "1.30.164200",
+  "v1_observed_errors": [
+    "Identifier MLADSLeanGate not found in procedural expressions",
+    "Animation graph player_main.agr is invalid",
+    "DayZPlayerInventory.HandleTakeToDst: NULL PluginInventoryDebug instance"
+  ],
+  "observed_script_binding": 0,
+  "binding_interpretation": "Zero can be valid per SDK; not evidence of a healthy graph. V2 requires distinct native and custom control bindings.",
+  "v2_changes": [
+    "native multiline control properties",
+    "private control template ID",
+    "canary and distinct-binding validation with no invalid writes",
+    "limited binding retries and periodic eligibility logs",
+    "F9 status",
+    "offline DIAG debug dependency registration"
+  ],
+  "native_validation": "Pending user playtest"
+}

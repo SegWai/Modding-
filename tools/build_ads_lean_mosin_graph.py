@@ -7,8 +7,8 @@ from dayz_graph_formats import end,newnodes
 import argparse
 parser=argparse.ArgumentParser(description='Generate Mosin ADS lean graph patches from the supplied fresh workspace and approved pose snapshot.')
 parser.add_argument('--workspace',type=Path,required=True,help='Fresh player_main folder; read only')
-parser.add_argument('--snapshot',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v3/Pose-Snapshot.json')
-parser.add_argument('--output',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v3')
+parser.add_argument('--snapshot',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v4/Pose-Snapshot.json')
+parser.add_argument('--output',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v4')
 parser.add_argument('--keep-native-foot-ik',action='store_true',help='Reproduce the v2 foot-pinning behavior for diagnosis')
 args=parser.parse_args()
 SOURCE=args.workspace;OUT=args.output;OUT.mkdir(parents=True,exist_ok=True)
@@ -97,5 +97,5 @@ patch=OUT/'WorkspaceSource';patch.mkdir(exist_ok=True)
 (patch/'config.cpp').write_text('class CfgPatches { class MLADSLeanWorkspace { units[] = {}; weapons[] = {}; requiredVersion = 0.1; requiredAddons[] = {"DZ_Anims_Cfg"}; }; };\n')
 manifest={p.relative_to(SOURCE).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in SOURCE.rglob('*') if p.is_file()}
 (OUT/'Workspace-Provenance.json').write_text(json.dumps({'source':'user player_main.rar','files':manifest,'note':'Current source files supplied by user; runtime build/branch not yet independently verified.'},indent=2)+'\n')
-(OUT/'Pose-Spec.json').write_text(json.dumps({'authoring':'approved Blender v6','coordinate_contract':SNAP['coordinate_contract'],'corrections':POSES,'math_reconstruction_error':ERRORS,'scope':'Additive pose study on native Mosin ADS, not a baked absolute pose. Native IK/finger poses retained. Native graph transform order/sign/pivots and first-person alignment need local validation.'},indent=2)+'\n')
+(OUT/'Pose-Spec.json').write_text(json.dumps({'authoring':SNAP.get('authoring','approved Blender v6'),'coordinate_contract':SNAP['coordinate_contract'],'corrections':POSES,'math_reconstruction_error':ERRORS,'scope':'Additive pose study on native Mosin ADS, not a baked absolute pose. Native hand/weapon IK and finger poses retained; native foot pinning is blended out only during the custom standing lean. Native graph transform order/sign/pivots and first-person alignment need local validation.'},indent=2)+'\n')
 print('Changed bones:',{k:len(v) for k,v in POSES.items()},'new graph nodes',len(new),'math',ERRORS)
