@@ -1,0 +1,27 @@
+{
+  "pose_math_reconstruction_max_error": {
+    "left": 2.786795880709708e-06,
+    "right": 3.005379931475538e-06
+  },
+  "corrected_bones_per_direction": {
+    "left": 20,
+    "right": 20
+  },
+  "native_compilation_and_playback": "NOT RUN: requires Windows DayZDiag. Native axis/pivot/IK/camera semantics and crash-free startup remain pending.",
+  "pbo_sha256": {
+    "@MLADSLeanLogic/Addons/MLADSLeanLogic.pbo": "7cf021c5b616c74188c01d94cc0be3261ffa08ded9ceab8112e9d89f7018296f",
+    "@MLADSLeanWorkspace/Addons/MLADSLeanWorkspace.pbo": "042f39a81521e5df912d5e597246d02df9670a54951e7d1c8b1e361bf482629c"
+  },
+  "pbo_headers_prefix_offsets_source_and_sha1": "passed: independently parsed and compared to every input file",
+  "script_API_review": "Methods checked against official BohemiaInteractive/DayZ-Script-Diff; native Enforce compilation not available here",
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "changed_native_files": [
+    "locomotion.agf",
+    "player_main.agr"
+  ],
+  "source_directory": "F:\\DayZProjects",
+  "dependencies": "Vanilla Mosin only. No SNAFU, no prior MovementLab test required.",
+  "PowerShell_syntax": "passed for launcher and log collector (tree-sitter parser; Windows runtime not available)",
+  "graph_structure": "balanced blocks, unique added nodes, no child cycles, only two native lean expressions and their one consumer changed",
+  "native_comparison": "gate 0 restores native procedural transforms; native collision transform weights preserved algebraically"
+}
