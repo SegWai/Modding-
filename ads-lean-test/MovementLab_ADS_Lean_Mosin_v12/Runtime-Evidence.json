@@ -1,0 +1,11 @@
+{
+  "source_upload": "Mosin-Lean-v6-Logs-20261025-181403.zip",
+  "actual_build": "v11",
+  "observed_in_both_runs": [
+    "demo_native_raise_complete patrol_start_allowed appears once",
+    "subsequent native_raise_input=false, native_raised=false, stance=0, raise_complete=false",
+    "raise_transitions remains 2; patrol_ready=false; graph bindings valid"
+  ],
+  "change": "Independent private demo graph control selects shared raised ADS branches; no native raise forcing, no readiness dependency on player camera/input. 0.4s graph blend warmup gates patrol.",
+  "verification_limit": "Requires DayZ native compilation and playback; this is not native raise completion."
+}

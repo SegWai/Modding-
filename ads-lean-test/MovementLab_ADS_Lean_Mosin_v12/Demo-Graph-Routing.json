@@ -1,0 +1,707 @@
+{
+  "default": 0,
+  "private_control": "MLADSLeanDemoActive",
+  "changed_expressions": [
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() > 0.35",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() > 0.35"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() <= 0.35",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() <= 0.35"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && False",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && False"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() > 0.9",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() > 0.9"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() <= 0.9",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() <= 0.9"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() > 0.35",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() > 0.35"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() <= 0.35",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() <= 0.35"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && False",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && False"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() > 0.8",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() > 0.8"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() <= 0.8",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() <= 0.8"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "WeightPrimaryChain",
+      "before": "isbitset(ArmIK, 1)",
+      "after": "(isbitset(ArmIK, 1) || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "WeightSecondaryChain",
+      "before": "isbitset(ArmIK, 2)",
+      "after": "(isbitset(ArmIK, 2) || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "WeaponDirLr",
+      "before": "AimIKX",
+      "after": "(AimIKX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "WeaponDirUd",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "InterruptExpr",
+      "before": "GetCommandI(CMD_InternalAction) == -2 || Raised",
+      "after": "GetCommandI(CMD_InternalAction) == -2 || (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "WeightAim",
+      "before": "isbitset(ArmIK, 0)",
+      "after": "(isbitset(ArmIK, 0) || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "WeightPrimaryChain",
+      "before": "isbitset(ArmIK, 1)",
+      "after": "(isbitset(ArmIK, 1) || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "WeightSecondaryChain",
+      "before": "isbitset(ArmIK, 2)",
+      "after": "(isbitset(ArmIK, 2) || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "WeaponDirLr",
+      "before": "AimIKX",
+      "after": "(AimIKX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "WeaponDirUd",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && False",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && False"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() > 0.5",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() > 0.5"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() <= 0.5",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() <= 0.5"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && GetLowerTime() > 0.5",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && GetLowerTime() > 0.5"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && False",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && False"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() >= 0.6",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() >= 0.6"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS && GetRemainingTime() < 0.6",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5) && GetRemainingTime() < 0.6"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "BlendWeight",
+      "before": "clamp(1+(-160-AimX)*0.02, 0, 1) + clamp(1-(160-AimX)*0.02, 0, 1)",
+      "after": "clamp(1+(-160-(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))))*0.02, 0, 1) + clamp(1-(160-(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))))*0.02, 0, 1)"
+    },
+    {
+      "property": "BlendWeight",
+      "before": "clamp(1+(-160-AimX)*0.02, 0, 1) + clamp(1-(160-AimX)*0.02, 0, 1)",
+      "after": "clamp(1+(-160-(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))))*0.02, 0, 1) + clamp(1-(160-(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))))*0.02, 0, 1)"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "StartCondition",
+      "before": "GetCommandI(CMD_Roll) == 0 && !Raised",
+      "after": "GetCommandI(CMD_Roll) == 0 && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "StartCondition",
+      "before": "GetCommandI(CMD_Roll) == 0 && Raised",
+      "after": "GetCommandI(CMD_Roll) == 0 && (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "StartCondition",
+      "before": "GetCommandI(CMD_Roll) == 1 && !Raised",
+      "after": "GetCommandI(CMD_Roll) == 1 && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "StartCondition",
+      "before": "GetCommandI(CMD_Roll) == 1 && Raised",
+      "after": "GetCommandI(CMD_Roll) == 1 && (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "HasVariableChanged(Raised, false)",
+      "after": "HasVariableChanged((Raised || MLADSLeanDemoActive > 0.5), false)"
+    },
+    {
+      "property": "Condition",
+      "before": "HasVariableChanged(Raised, true)",
+      "after": "HasVariableChanged((Raised || MLADSLeanDemoActive > 0.5), true)"
+    },
+    {
+      "property": "Condition",
+      "before": "HasVariableChanged(Raised, false)",
+      "after": "HasVariableChanged((Raised || MLADSLeanDemoActive > 0.5), false)"
+    },
+    {
+      "property": "Condition",
+      "before": "HasVariableChanged(Raised, true)",
+      "after": "HasVariableChanged((Raised || MLADSLeanDemoActive > 0.5), true)"
+    },
+    {
+      "property": "InterruptExpr",
+      "before": "Raised || GetCommandI(CMD_Modifier_Additive) == -1",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) || GetCommandI(CMD_Modifier_Additive) == -1"
+    },
+    {
+      "property": "InterruptExpr",
+      "before": "Raised || GetCommandI(CMD_Modifier_Additive) == -1",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) || GetCommandI(CMD_Modifier_Additive) == -1"
+    },
+    {
+      "property": "InterruptExpr",
+      "before": "Raised || GetCommandI(CMD_Modifier_Additive) == -1",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) || GetCommandI(CMD_Modifier_Additive) == -1"
+    },
+    {
+      "property": "InterruptExpr",
+      "before": "Raised || GetCommandI(CMD_Modifier_Additive) == -1",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) || GetCommandI(CMD_Modifier_Additive) == -1"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "!Raised",
+      "after": "!(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "MovementSpeed == 0 || Raised",
+      "after": "MovementSpeed == 0 || (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "MovementSpeed == 0 || Raised",
+      "after": "MovementSpeed == 0 || (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "MovementSpeed == 0 || Raised",
+      "after": "MovementSpeed == 0 || (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "MovementSpeed == 0 || Raised",
+      "after": "MovementSpeed == 0 || (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "StartCondition",
+      "before": "Raised && MovementSpeed == 0",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed == 0"
+    },
+    {
+      "property": "StartCondition",
+      "before": "Raised && MovementSpeed > 0",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0"
+    },
+    {
+      "property": "StartCondition",
+      "before": "!Raised && MovementSpeed == 0",
+      "after": "!(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed == 0"
+    },
+    {
+      "property": "StartCondition",
+      "before": "!Raised && MovementSpeed > 0",
+      "after": "!(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0"
+    },
+    {
+      "property": "StartCondition",
+      "before": "Stance == 2 && (AimX < -90 || AimX > 90)",
+      "after": "Stance == 2 && ((AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) < -90 || (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) > 90)"
+    },
+    {
+      "property": "StartCondition",
+      "before": "Stance == 2 && (AimX < -90 || AimX > 90) && MovementSpeed > 0 && False",
+      "after": "Stance == 2 && ((AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) < -90 || (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) > 90) && MovementSpeed > 0 && False"
+    },
+    {
+      "property": "Condition",
+      "before": "Stance == 2 && (AimX < -90 || AimX > 90) && !Raised",
+      "after": "Stance == 2 && ((AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) < -90 || (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) > 90) && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "!Raised && !(HasVariableChanged(Stance))",
+      "after": "!(Raised || MLADSLeanDemoActive > 0.5) && !(HasVariableChanged(Stance))"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && !(HasVariableChanged(Stance))",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && !(HasVariableChanged(Stance))"
+    },
+    {
+      "property": "Condition",
+      "before": "!Raised && !(HasVariableChanged(Stance))",
+      "after": "!(Raised || MLADSLeanDemoActive > 0.5) && !(HasVariableChanged(Stance))"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && !(HasVariableChanged(Stance))",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && !(HasVariableChanged(Stance))"
+    },
+    {
+      "property": "Condition",
+      "before": "(Stance == 0 || Stance == 1) && HasVariableChanged(Stance, 2) && (AimX < -90 || AimX > 90)",
+      "after": "(Stance == 0 || Stance == 1) && HasVariableChanged(Stance, 2) && ((AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) < -90 || (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) > 90)"
+    },
+    {
+      "property": "Condition",
+      "before": "MovementSpeed > 0 && !Raised && RemainingTimeLess(0.15)",
+      "after": "MovementSpeed > 0 && !(Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.15)"
+    },
+    {
+      "property": "Condition",
+      "before": "MovementSpeed == 0 && !Raised && RemainingTimeLess(0.01)",
+      "after": "MovementSpeed == 0 && !(Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.01)"
+    },
+    {
+      "property": "Condition",
+      "before": "(MovementSpeed == 0 || Stance == 2) && Raised && RemainingTimeLess(0.15)",
+      "after": "(MovementSpeed == 0 || Stance == 2) && (Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.15)"
+    },
+    {
+      "property": "Condition",
+      "before": "MovementSpeed > 0 && Raised && RemainingTimeLess(0.2) && Stance != 2",
+      "after": "MovementSpeed > 0 && (Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.2) && Stance != 2"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && !Raised && MovementSpeed == 0",
+      "after": "GetLowerTime() > 0.18 && !(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed == 0"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && Raised && MovementSpeed == 0",
+      "after": "GetLowerTime() > 0.18 && (Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed == 0"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "IsCommand(CMD_Roll) && (!Raised || (Raised && (AimX <= -145 || AimX >= 145)))",
+      "after": "IsCommand(CMD_Roll) && (!(Raised || MLADSLeanDemoActive > 0.5) || ((Raised || MLADSLeanDemoActive > 0.5) && ((AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) <= -145 || (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) >= 145)))"
+    },
+    {
+      "property": "Condition",
+      "before": "IsCommand(CMD_Roll) && (!Raised || (Raised && AimX >= -50 && AimX <= 50))",
+      "after": "IsCommand(CMD_Roll) && (!(Raised || MLADSLeanDemoActive > 0.5) || ((Raised || MLADSLeanDemoActive > 0.5) && (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) >= -50 && (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) <= 50))"
+    },
+    {
+      "property": "Condition",
+      "before": "RemainingTimeLess(0.1) && Raised",
+      "after": "RemainingTimeLess(0.1) && (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "RemainingTimeLess(0.3) && MovementSpeed > 0 && !Raised",
+      "after": "RemainingTimeLess(0.3) && MovementSpeed > 0 && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "RemainingTimeLess(0.1) && MovementSpeed ==  0 && !Raised",
+      "after": "RemainingTimeLess(0.1) && MovementSpeed ==  0 && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "!Raised && RemainingTimeLess(0.1) && MovementSpeed == 0",
+      "after": "!(Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.1) && MovementSpeed == 0"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && RemainingTimeLess(0.1) && MovementSpeed == 0",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.1) && MovementSpeed == 0"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && Raised && MovementSpeed > 0 && inRange(MovementDirection, -45.0, 45.0)",
+      "after": "GetLowerTime() > 0.18 && (Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, -45.0, 45.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && Raised && MovementSpeed > 0 && inRange(MovementDirection, -135.0, -45.0)",
+      "after": "GetLowerTime() > 0.18 && (Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, -135.0, -45.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && Raised && MovementSpeed > 0 && inRange(MovementDirection, 45.0, 135.0)",
+      "after": "GetLowerTime() > 0.18 && (Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, 45.0, 135.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && Raised && MovementSpeed > 0 && inRange(MovementDirection, 135.0, 180.0)",
+      "after": "GetLowerTime() > 0.18 && (Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, 135.0, 180.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && Raised && MovementSpeed > 0 && inRange(MovementDirection, -180.0, -135.0)",
+      "after": "GetLowerTime() > 0.18 && (Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, -180.0, -135.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && !Raised && MovementSpeed > 0 && inRange(MovementDirection, -25.0, 25.0)",
+      "after": "GetLowerTime() > 0.18 && !(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, -25.0, 25.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && !Raised && MovementSpeed > 0 && inRange(MovementDirection, -135.0, -25.0)",
+      "after": "GetLowerTime() > 0.18 && !(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, -135.0, -25.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && !Raised && MovementSpeed > 0 && inRange(MovementDirection, 25.0, 135.0)",
+      "after": "GetLowerTime() > 0.18 && !(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, 25.0, 135.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && !Raised && MovementSpeed > 0 && inRange(MovementDirection, -180.0, -135.0)",
+      "after": "GetLowerTime() > 0.18 && !(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, -180.0, -135.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "GetLowerTime() > 0.18 && !Raised && MovementSpeed > 0 && inRange(MovementDirection, 135.0, 180.0)",
+      "after": "GetLowerTime() > 0.18 && !(Raised || MLADSLeanDemoActive > 0.5) && MovementSpeed > 0 && inRange(MovementDirection, 135.0, 180.0)"
+    },
+    {
+      "property": "Condition",
+      "before": "!Raised && RemainingTimeLess(0.1) && MovementSpeed > 0",
+      "after": "!(Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.1) && MovementSpeed > 0"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && RemainingTimeLess(0.1) && MovementSpeed > 0",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && RemainingTimeLess(0.1) && MovementSpeed > 0"
+    },
+    {
+      "property": "Condition",
+      "before": "Raised && IsTag(\\",
+      "after": "(Raised || MLADSLeanDemoActive > 0.5) && IsTag(\\"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "Condition",
+      "before": "(AimX < -90 || AimX > 90)",
+      "after": "((AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) < -90 || (AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))) > 90)"
+    },
+    {
+      "property": "Condition",
+      "before": "Look && Raised",
+      "after": "Look && (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Look && !Raised",
+      "after": "Look && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Look && Raised",
+      "after": "Look && (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Look && !Raised",
+      "after": "Look && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Look && !Raised",
+      "after": "Look && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Look && Raised",
+      "after": "Look && (Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "ADS",
+      "after": "(ADS || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "Condition",
+      "before": "Look && !Raised",
+      "after": "Look && !(Raised || MLADSLeanDemoActive > 0.5)"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueX",
+      "before": "AimX",
+      "after": "(AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "ValueY",
+      "before": "AimY",
+      "after": "(AimY*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0)))"
+    },
+    {
+      "property": "BlendWeight",
+      "before": "abs(AimX)/180",
+      "after": "abs((AimX*(1.0-clamp(MLADSLeanDemoActive, 0.0, 1.0))))/180"
+    }
+  ],
+  "meaning": "0 retains player expressions; 1 selects the same raised ADS branches for the offline demo and enables aim/both hand IK. Pose transforms, walk foot solver, weapon roll unchanged."
+}
