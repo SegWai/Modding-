@@ -1,0 +1,14 @@
+{
+  "request": "More upright, comfortable walking while aimed/leaning left and right; torso bends too much toward travel direction",
+  "findings": [
+    "Authored standing-walk torso Z corrections sum to about26 degrees per side",
+    "Native LeanForwardMoveRotNode adds forward pitch on top of the custom chain"
+  ],
+  "changes": [
+    "Scale standing-walk torso bend to40% (~10.4degrees)",
+    "Cancel75% native extra forward-pitch rotation only during custom lean",
+    "Compensate cumulative head-roll change at Neck1"
+  ],
+  "shared": "Identical graph corrections on player/NPC",
+  "native_status": "Requires game visual check"
+}
