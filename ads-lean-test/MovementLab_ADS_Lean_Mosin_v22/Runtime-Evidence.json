@@ -1,0 +1,15 @@
+{
+  "requests": [
+    "Match marked head position during right movement",
+    "Provide fully automatic AK74 with attachments"
+  ],
+  "changes": [
+    "AK74 primary on player and NPC, same attachment helper",
+    "Detect/select actual automatic fire mode",
+    "Extend shared custom-lean eligibility and unlimited ammo to AK74",
+    "Right-head side shift+1cm and moving height+2cm toward reference",
+    "F9 head basis diagnostics"
+  ],
+  "preserved": "Legs, left lean, gun cant, range respawn/ragdoll behavior; scoped Mosin backup",
+  "native_status": "Not run here"
+}
