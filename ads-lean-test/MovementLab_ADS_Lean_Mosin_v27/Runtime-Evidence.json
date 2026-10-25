@@ -1,0 +1,11 @@
+{
+  "input": "Mosin-Lean-v26-Logs-20261025-232448.zip",
+  "confirmed": [
+    "F5 changes shoulder_offset; shoulder_control=true for both actors",
+    "RPT: ML24_MarkedShoulderOffset Expression failed to compile: Identifier MLADSLeanAmount not found",
+    "RPT: Animation graph dz/anims/workspaces/player/player_main/player_main.agr is invalid."
+  ],
+  "comparison_limit": "F9 OFF snapshot lean=-1; ON snapshot lean=+1. Different directions cannot establish ON/OFF displacement.",
+  "revision": "v27 private fragment resource and control-template identity, unchanged pose35cm; automatic matched-direction observation logging",
+  "native_status": "New build not run in native DayZ; confirm graph errors cleared before evaluating offset."
+}
