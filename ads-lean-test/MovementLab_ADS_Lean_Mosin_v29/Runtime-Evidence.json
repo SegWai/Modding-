@@ -1,0 +1,5 @@
+{
+  "evidence": "User reports v28 unchanged; v27 RPT had no graph expression errors; successful bindings alone do not establish visible placement.",
+  "change": "Use final solved arm-subtree translation, native baseline attachment output, correct anatomical-left gating and15cm rightward offset; remove old35cm shift",
+  "native_status": "Not executed in DayZ here. Do not represent static tests as native validation."
+}
