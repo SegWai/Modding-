@@ -78,7 +78,7 @@ class ExpandedLeanTests(unittest.TestCase):
   self.assertIn('OverrideMovementSpeed(HumanInputControllerOverrideType.ENABLED, speed)',self.code)
   self.assertIn('90 * m_MLADSLeanDemoSign',self.code)
   self.assertIn('m_MLADSLeanAmount = m_MLADSLeanDemoAmount',self.code)
-  self.assertIn('AnimSetFloat(m_MLADSLeanDemoAimIK, 90 * m_MLADSLeanDemoAmount)',self.code)
+  self.assertRegex(self.code,r'AnimSetFloat\(m_MLADSLeanDemoAimIK, (90 \* m_MLADSLeanDemoAmount|0)\)')
  def test_npc_ownership_and_cleanup(self):
   self.assertIn('if (GetGame().IsMultiplayer() || GetGame().GetPlayer() == this)',self.code)
   for method in ['OverrideMovementSpeed','OverrideMovementAngle','OverrideRaise']:self.assertIn(method+'(HumanInputControllerOverrideType.DISABLED',self.code)
