@@ -1,0 +1,30 @@
+{
+  "pose_math_reconstruction_max_error": {
+    "left": 2.786795880709708e-06,
+    "right": 3.005379931475538e-06
+  },
+  "corrected_bones_per_direction": {
+    "left": 20,
+    "right": 20
+  },
+  "native_compilation_and_playback": "NOT RUN: requires Windows DayZDiag. Native axis/pivot/IK/camera semantics and crash-free startup remain pending.",
+  "pbo_sha256": {
+    "@MLADSLeanLogic/Addons/MLADSLeanLogic.pbo": "cd065306124be03e07191d8cb493341156007a9070ff2df237abf062ce0bd560",
+    "@MLADSLeanWorkspace/Addons/MLADSLeanWorkspace.pbo": "f4da1521fc93a5c4ad4205ee9bd6dc23e95b85cb86250c233419cf98c197faf9"
+  },
+  "pbo_headers_prefix_offsets_source_and_sha1": "passed: independently parsed and compared to every input file",
+  "script_API_review": "Methods checked against official BohemiaInteractive/DayZ-Script-Diff; native Enforce compilation not available here",
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "changed_native_files": [
+    "locomotion.agf",
+    "player_main.agr"
+  ],
+  "source_directory": "F:\\DayZProjects",
+  "dependencies": "Vanilla Mosin only. No SNAFU, no prior MovementLab test required.",
+  "revision": "v3: release native foot-pinning solver only during custom standing lean; retain v2 controls and upper-body correction values",
+  "v1_native_failure": "User logs confirm MLADSLeanGate undefined, graph invalid; inventory null PluginInventoryDebug.",
+  "v2_native_result": "User confirmed activation and provided in-game screenshot; leg pose still pinned by later foot IK.",
+  "v3_native_result": "Pending user playtest, especially full leg extension and ground contact.",
+  "offline_regression_tests": "6 passed: unchanged v2 template, exact node-change scope, blend endpoints for both lean directions/center/F7/all stances, foot-only solver chains, unchanged pose corrections, unchanged activation logic except labels",
+  "PowerShell_syntax": "passed; Windows launcher runtime not available"
+}

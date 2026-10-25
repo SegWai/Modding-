@@ -7,8 +7,9 @@ from dayz_graph_formats import end,newnodes
 import argparse
 parser=argparse.ArgumentParser(description='Generate Mosin ADS lean graph patches from the supplied fresh workspace and approved pose snapshot.')
 parser.add_argument('--workspace',type=Path,required=True,help='Fresh player_main folder; read only')
-parser.add_argument('--snapshot',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v2/Pose-Snapshot.json')
-parser.add_argument('--output',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v2')
+parser.add_argument('--snapshot',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v3/Pose-Snapshot.json')
+parser.add_argument('--output',type=Path,default=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v3')
+parser.add_argument('--keep-native-foot-ik',action='store_true',help='Reproduce the v2 foot-pinning behavior for diagnosis')
 args=parser.parse_args()
 SOURCE=args.workspace;OUT=args.output;OUT.mkdir(parents=True,exist_ok=True)
 SNAP=json.loads(args.snapshot.read_text())
@@ -56,6 +57,22 @@ for side in ['left','right']:
 assert g.count('Child "LeanIdleErcRasRight"')==1
 g=g.replace('Child "LeanIdleErcRasRight"',f'Child "{child}"',1)
 anchor=newnodes(g)['LeanIdleErcRasRight'];g=g.replace(anchor,anchor+'\n'+'\n'.join(new),1)
+# The native IdleRasIK solver runs after the custom pose and would pin the
+# feet back to their pre-lean targets. Bypass only that foot solver at custom
+# standing lean, blending back to it at center/F7/other stances.
+if not args.keep_native_foot_ik:
+ footblend='''    AnimSrcNodeBlend MLADSLeanFootIKBlend {
+     BlendWeight "clamp(abs(Lean), 0.0, 1.0)*MLADSLeanGate*(1.0-clamp(Stance, 0.0, 1.0))"
+     Child0 "IdleRasIK"
+     Child1 "IdleRasSTM"
+     OptimizeMin 1
+     OptimizeMax 1
+    }'''
+ assert g.count('Child "IdleRasIK"')==1
+ g=g.replace('Child "IdleRasIK"','Child "MLADSLeanFootIKBlend"',1)
+ foot_anchor=newnodes(g)['IdleRasIK']
+ g=g.replace(foot_anchor,foot_anchor+'\n'+footblend,1)
+ new.append(footblend)
 agr=(SOURCE/'player_main.agr').read_text();control='   AnimSrcGCTVarFloat MLADSLeanGate {\n    DefaultValue 0\n    MinValue 0\n    MaxValue 1\n   }\n   AnimSrcGCTVarFloat MLADSLeanCanary {\n    DefaultValue 0.731\n    MinValue 0\n    MaxValue 1\n   }\n'
 assert agr.count('  Variables {')==1;agr=agr.replace('  Variables {','  Variables {\n'+control,1)
 # A private template identity prevents reuse of a native cached control template.
@@ -71,7 +88,7 @@ def walk(n,active,seen):
 seen=set()
 for n in N:walk(n,set(),seen)
 for n,b in newnodes(original).items():
- if n not in ['LeanIdleErcRasLeft','LeanIdleErcRasRight','LeanForwardRotNodeErc']:assert N[n]==b,n
+ if n not in ['LeanIdleErcRasLeft','LeanIdleErcRasRight','LeanForwardRotNodeErc']+([] if args.keep_native_foot_ik else ['StanceMaster','IdleRas']):assert N[n]==b,n
 # Baseline at gate 0: original expressions and all custom expressions = 0.
 for side in ['left','right']:
  for bone,d in POSES[side].items():assert all(math.isfinite(x) for v in d.values() for x in v)
