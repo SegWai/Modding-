@@ -1,0 +1,14 @@
+{
+  "source_upload": "Mosin-Lean-v12-Logs-20261025-184200.zip",
+  "observations": [
+    "V12 world scripts loaded, then graph load failed at player creation",
+    "Unknown MLADSLeanDemoActive, MLADSLeanAmount and MLADSLeanGate identifiers",
+    "HasVariableChanged argument must be a variable: four invalid wrapped Raised arguments"
+  ],
+  "correction": [
+    "Restore v11 player_main.agr byte-for-byte; do not extend or change the known-good control schema",
+    "Use registered MLADSLeanCanary default 0.731 vs demo-only 1; no new custom identifier",
+    "Restore literal Raised argument in all HasVariableChanged calls"
+  ],
+  "verification_limit": "Requires native DayZ compilation and playback test"
+}
