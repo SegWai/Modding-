@@ -1,0 +1,6 @@
+{
+  "request": "Increase right-chest weapon hold offset to35cm",
+  "change": "Existing shared moving shoulder translation0.14m ->0.35m before native weapon IK",
+  "preserved": "All other graph nodes, torso/head/leg motion, gait, gun cant, range behaviour and equipment",
+  "native_status": "Requires in-game visual, grip and sight verification"
+}
