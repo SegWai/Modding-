@@ -1,0 +1,8 @@
+{
+  "source_upload": "Mosin-Lean-v6-Logs-20261025-174829.zip",
+  "actual_build": "v9, per MLADSLEAN9 runtime markers",
+  "script_log": "script_2026-10-25_17-43-06.log",
+  "observed": "NPC alternates stance 0/3 at millisecond intervals, native_ADS=false and raise_complete=false. Custom gate never stabilizes. No F9 samples in this upload.",
+  "change": "Issue persistent ForceStance once per new move command; remove competing raise override; wait for actual IsWeaponRaiseCompleted before patrol and aim IK; throttle NPC logging",
+  "verification_limit": "Windows DayZ runtime not available here; stable native stance and appearance must be retested"
+}
