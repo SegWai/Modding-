@@ -1,0 +1,11 @@
+{
+  "input": "Mosin-Lean-v27-Logs-20261025-233211.zip",
+  "confirmed": [
+    "No animation-expression compilation failures or invalid-root-graph error in uploaded v27 RPT",
+    "F5 changes shoulder_offset, shoulder_control remains true",
+    "Stable full lean/moving records present with comparison on and off; no shoulder_observed records"
+  ],
+  "limitation": "The previous observer required chest AND both hand bone indices and silently returned on any missing bone. No measured ON/OFF result is available. Missing specific bone index is not proven by existing log.",
+  "revision": "Dedicated default-on offset control instead of TestFloat; observer no longer depends on both hands, uses native attachment bone names and logs indices",
+  "native_status": "V28 native compile/visual pending"
+}
