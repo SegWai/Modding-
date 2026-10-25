@@ -1,0 +1,6 @@
+{
+  "source": "User v15 visual feedback",
+  "observed": "Leftward lean head is strongly tilted toward anatomical right; user wants anatomical left.",
+  "change": "Reverse existing left Head Z correction in all four shared branches, not another final compensation pass.",
+  "native_visual_status": "Pending v16 game test"
+}
