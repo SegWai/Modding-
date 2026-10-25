@@ -1,0 +1,13 @@
+{
+  "baseline": "User reports v14 head unchanged",
+  "source_evidence": {
+    "sdk": "scripts/3_game/human.c",
+    "declaration": "proto native void SetADS(bool pState);",
+    "documentation": "sets head tilt to optics",
+    "v14_demo": "weapons.SetADS(m_MLADSLeanDemoReady) enabled head tilt whenever ready",
+    "player": "Native DayZPlayerImplement.HandleADS controls weapon SetADS"
+  },
+  "correction": "Shared post-native CommandHandler suppression of ADS head tilt during custom leaning; restore expected ADS head request outside correction. Remove empirical 12-degree roll, retain 5-degree forward nod.",
+  "comparison": "F6 toggles only native head tilt suppression for both player and NPC; F10 pauses NPC for comparison",
+  "verification_limit": "No native DayZ playback here; image and sight/camera behavior need test"
+}
