@@ -1,0 +1,8 @@
+{
+  "source_upload": "Mosin-Lean-v18-Logs-20261025-212154.zip",
+  "first_error": "MLADSLeanLogic/Scripts/4_World/mladsleanplayer.c(384): Incompatible parameter elapsed",
+  "rejected_expression": "(GetPosition() - m_MLADSLeanRangeLastPosition) / (elapsed * 0.001)",
+  "correction": "Separate float milliseconds-to-inverse-seconds conversion, then vector * scalar, as in previous infected momentum sampler",
+  "preserved": "All pose, equipment, ammo, death/respawn and sampling thresholds",
+  "native_status": "Requires v19 compile/playback test"
+}
