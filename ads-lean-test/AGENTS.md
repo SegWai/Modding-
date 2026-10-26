@@ -15,3 +15,5 @@
 - User rolled back v84: v83 is the baseline. Do not restore v84 selective smoothing. Current request targets the left raised-view dip while keeping the working right transition and final poses.
 
 - Latest first-person request: use raised crouch lean upper-body rotation chains for both directions while raised in first person, preserving actual stance/legs and third-person/NPC poses. This view-specific presentation is explicitly requested; do not force native crouch or add NPC-only posing.
+
+- User selected v89 as the stable baseline, discarding v90/v91. V92 starts from v89 and adds 7cm downward to both arms during anatomical right lean only, shared third-person player/NPC path, leaving first person unchanged.

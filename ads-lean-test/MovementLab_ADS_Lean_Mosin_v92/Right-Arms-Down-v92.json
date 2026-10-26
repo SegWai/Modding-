@@ -1,0 +1,11 @@
+{
+  "base": "v89",
+  "additional_full_right_drop_m": 0.07,
+  "native_right_sign": 1,
+  "base_configured_drop_m": 0.2,
+  "full_right_configured_drop_m": 0.27,
+  "left_and_neutral": "unchanged from v89",
+  "scope": "shared third-person player/NPC raised poses; first-person unchanged",
+  "v90_v91_changes_included": false,
+  "native_gameplay": "not run"
+}
