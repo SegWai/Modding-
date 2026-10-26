@@ -1,0 +1,5 @@
+{
+  "request": "Move hold another15cm in same direction as v31",
+  "change": "Authoring hand target27cm right/6cm up relative to original,15cm additional right relative to v31. Supporting clavicle rotates to keep both hand targets reachable without stretching.",
+  "native_status": "Not executed in DayZ here."
+}
