@@ -1,0 +1,11 @@
+{
+  "base": "v81",
+  "node": "ML50_StandingBalancedOnly",
+  "before": "abs(MLADSLeanAmount)*MLADSLeanGate*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed, 0.0, 1.0))",
+  "after": "MLADSLeanGate*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed, 0.0, 1.0))",
+  "reason": "inner ML50_left/right_BodyBlend already applies signed lean; outer abs(lean) adds second amplitude weight",
+  "partial_standing_trajectory": "changed intentionally",
+  "neutral_and_full_lean_transforms": "preserved at graph endpoints",
+  "camera_and_native_lean_timing": "unchanged",
+  "native_compilation_and_playback": "not run"
+}

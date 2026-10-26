@@ -1,0 +1,40 @@
+{
+  "request": "On anatomical left lean, angle head to anatomical left rather than right. Apply to player and NPC.",
+  "change": "Reverse the existing Head model-Z rotation in every left-lean pose branch. 13-degree roll is reversed, giving 26-degree difference from v15 at full left lean.",
+  "changed_nodes": [
+    {
+      "node": "ML5_StandIdle_left_Head_Rotate_Z",
+      "old_graph_amount": 0.2268932256,
+      "new_graph_amount": -0.2268932256,
+      "full_lean_rotation_change_degrees": -26.00004845397929
+    },
+    {
+      "node": "ML5_StandWalk_left_Head_Rotate_Z",
+      "old_graph_amount": 0.2268932256,
+      "new_graph_amount": -0.2268932256,
+      "full_lean_rotation_change_degrees": -26.00004845397929
+    },
+    {
+      "node": "ML5_CrouchIdle_left_Head_Rotate_Z",
+      "old_graph_amount": 0.2268932256,
+      "new_graph_amount": -0.2268932256,
+      "full_lean_rotation_change_degrees": -26.00004845397929
+    },
+    {
+      "node": "ML5_CrouchWalk_left_Head_Rotate_Z",
+      "old_graph_amount": 0.2268932256,
+      "new_graph_amount": -0.2268932256,
+      "full_lean_rotation_change_degrees": -26.00004845397929
+    }
+  ],
+  "preserved": [
+    "Right-lean head rotation",
+    "5-degree forward nod",
+    "Legs and pelvis",
+    "Walking and crouching motion",
+    "Hands and gun cant",
+    "NPC controller and registered GCT",
+    "F6 ADS tilt comparison"
+  ],
+  "native_visual_status": "Needs game verification of the anatomical direction"
+}

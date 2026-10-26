@@ -1,0 +1,36 @@
+{
+  "problem": "Native aim pitch evaluated before static/model-space custom arm corrections; independent wrist corrections failed.",
+  "native_pitch_mask": "(1.0-clamp(abs(MLADSLeanAmount)*MLADSLeanGate, 0.0, 1.0))",
+  "native_nodes_masked": [
+    "AnimNodePose2",
+    "AnimNodePose20",
+    "FallMasterIK",
+    "ML50_PublishBalancedWeapon",
+    "ML48_PublishStandingLeftWeapon",
+    "ML45_PublishStandingRightWeapon",
+    "NormalWeaponIK",
+    "ML33_FinalGripIK",
+    "PneRasPose",
+    "PoBAimP",
+    "PoBAimPFix",
+    "ThrowAimP",
+    "ThrowAimWalkP",
+    "AimInjPose",
+    "AimInjWalkPose",
+    "AimObstPose",
+    "AimPose",
+    "AimRunPose",
+    "AimRunPoseObst",
+    "AimWalkPose"
+  ],
+  "common_transform": "Spine3 Model X, native proc Amount+1 times AimY in radians, after ML51 final elbow pose; publisher has all aim/chain weights false",
+  "blend": "abs(custom lean)*custom gate; neutral/disabled uses original native vertical aim",
+  "preserved": [
+    "existing custom transforms and level silhouettes",
+    "first-person camera implementation",
+    "rifle attachment and roll parameters",
+    "feet and lower spine",
+    "native inputs and cameras"
+  ],
+  "native_validation": "not run locally; direction, extreme pose clearance, and attachment buffer need DayZ test"
+}
