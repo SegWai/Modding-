@@ -1,0 +1,10 @@
+{
+  "source_blender_frame": 15,
+  "source_native_index": 14,
+  "source_capture_id": "33626_true",
+  "captured_bones": 114,
+  "source_max_joint_error_m": 3.872152108009542e-07,
+  "reopened_frozen_target_max_joint_error_m": 4.887944301026084e-07,
+  "blender_version": "4.3.2",
+  "animation_curves_removed": true
+}

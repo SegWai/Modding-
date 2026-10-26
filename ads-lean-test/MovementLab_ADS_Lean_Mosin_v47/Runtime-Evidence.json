@@ -1,0 +1,33 @@
+{
+  "evidence": "User corrects v40: wants custom raised first-person pose preserved, snap removed. Video contains raised non-ADS movement transitions; no matching runtime log identifying snap trigger supplied.",
+  "change": "Restore raised custom pose in both views by default; shared lean and custom movement smoothing; final grip solver blend80ms ->220ms.",
+  "native_status": "Not run in DayZ here. Source/steady-state/rate checks do not establish native playback smoothness.",
+  "standing_right_pose_v45": {
+    "scope": "Standing still, weapon raised/aiming, anatomical right only. Shared player/NPC graph; no NPC patrol, walking, crouch or left-lean control changes.",
+    "source_log": "Mosin-Lean-v44-Logs-20261026-053626.zip",
+    "source_capture": "82178_false",
+    "target_capture": "67091_true",
+    "reference_observed": "lean=1 move_blend=0 gate=1 raised=true; 114 bones; static reference completion marker present",
+    "local_validation": "7/7 tests passed: native capture reconstruction, graph chain/sign/values, boolean attachment-only pass, steady endpoint activation, unchanged prior nodes/control-template/runtime, private resource and PBO integrity",
+    "native_compilation_and_playback": "V45 NOT RUN. Test in user Windows DayZ; exact visual match and attachment publication remain unverified."
+  },
+  "first_person_and_walk_v46": {
+    "camera_source_contract": "Official 1.30 DayZPlayerCamera1stPerson native direct-bone mode 1 follows position only. Ironsights/Optics use mode 4 aligned Y. Local camera-Z roll preserves native forward/position and adds evaluated head/weapon roll. Native sight transform and camera selection remain.",
+    "body_graph": "Byte-identical to approved v45 standing-right transfer workspace and PBO. No animation value changes.",
+    "camera_hooks": "Raised 1stPerson and Ironsights OnUpdate; optics inherits the latter once; super executes before additive roll; smoothing time constant .18s.",
+    "recording": "36 consecutive samples nominal24Hz, one native NPC anatomical-left walking-aiming pass; all114 bone matrices, weapon/actor transforms and game-time stamps; restarts on direction/state change or gap>250ms.",
+    "blender_import_validation": "Fixture-only 36-frame import/playback/reopen passed in Blender4.3.2. Fixture repeats two real isolated snapshots to exercise serialization; it is not a captured gait and is not distributed as an animation. Real continuous v46 data still required.",
+    "native_compilation_playback": "NOT RUN. First-person camera roll direction, amount, native sight registration and real recorder timing require user Windows DayZ validation."
+  },
+  "frame15_left_reference_v47": {
+    "source": "Captured_Left_Lean_Walk_20261026_061044.blend",
+    "approved_frame": 15,
+    "native_sample_index": 14,
+    "native_capture_id": "33626_true",
+    "session": "32901",
+    "current_change": "Read-only standing-left collector and preserved full native frame15 target; no pose application yet",
+    "needed_reference": "Player standing still, weapon raised/aiming, anatomical left, custom gate1, lean-1, movement0",
+    "body_graph_and_fp_camera": "Unchanged from v46",
+    "native_run": "Pending Windows user run"
+  }
+}
