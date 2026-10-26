@@ -1,0 +1,7 @@
+{
+  "evidence": "v70: rifle attachment remains sub-mm to ~1.3mm; moving support-to-primary drift reaches ~4.4cm in wide turns; user reports grip nearly consistent but lagging",
+  "change": "additional native secondary-chain-only weapon IK after pose authoring, before shared yaw/pitch; aim active at zero local angles, primary chain disabled; no outputweaponoffset buffer",
+  "comparison": "Ctrl+F9: added contact solve ON/OFF; OFF returns v70 graph path",
+  "camera": "same implementation as v69/v70, version labels only",
+  "native_validation": "pending; actual support target and unchanged primary/gun transform need engine confirmation"
+}
