@@ -1,0 +1,6 @@
+{
+  "input": "Mosin-Lean-v33-Logs-20261026-011816.zip",
+  "confirmed": "Three final-grip boolean-enable type errors and invalid animation graph.",
+  "change": "Fix boolean types only.",
+  "native_status": "V34 not run in DayZ here; final grip outcome still unverified."
+}

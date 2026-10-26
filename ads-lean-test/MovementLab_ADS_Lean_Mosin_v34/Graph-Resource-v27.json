@@ -1,0 +1,11 @@
+{
+  "reason": "Uploaded v26 RPT reports ML24_MarkedShoulderOffset Expression failed to compile: MLADSLeanAmount not found; root graph invalid. Script bindings and F5 still report success.",
+  "fix_under_test": "Pack modified locomotion fragment only at a private v27 resource path and GUID, reference it from custom root, and use a fresh control-template identity. Avoid exposing custom expressions through the shared vanilla locomotion fragment.",
+  "fragment_guid": "C4F6E9F9730BBE2F",
+  "control_guid": "0FABFD9FD53DA421",
+  "fragment_path": "DZ/anims/workspaces/player/player_main/MLADSLeanLocomotion_v34.agf",
+  "source_path": "WorkspaceSource/locomotion.agf",
+  "pose_change": "None: 35cm pre-IK shoulder offset and all pose/gait parameters byte-identical to v26",
+  "sampling": "Automatic read-only per-actor shoulder samples after350ms stable full lean, moving, at most once/second. Both directions tagged; compare same lean sign, gait and similar gait phase. Binding validity is not runtime graph validity.",
+  "limitations": "Native compilation and pose evaluation require Windows DayZDiag; resource isolation is a targeted repair to test, not a proven runtime fix."
+}
