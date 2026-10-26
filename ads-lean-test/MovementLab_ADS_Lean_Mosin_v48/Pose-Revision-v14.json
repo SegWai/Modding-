@@ -1,0 +1,241 @@
+{
+  "stationary_lower_source": "MovementLab_ADS_Lean_Mosin_v3",
+  "stationary_lower_bones": [
+    "Pelvis",
+    "LeftUpLeg",
+    "LeftLeg",
+    "LeftFoot",
+    "RightUpLeg",
+    "RightLeg",
+    "RightFoot"
+  ],
+  "stationary_lower_corrections": {
+    "left": {
+      "Pelvis": {
+        "rotation_xyz": [
+          -2.9522815840077265e-08,
+          3.01516202740736e-08,
+          -2.627824357458881e-08
+        ],
+        "translation_xyz": [
+          -0.07999999517379042,
+          -0.07999992370605469,
+          -2.682210009652408e-09
+        ]
+      },
+      "LeftUpLeg": {
+        "rotation_xyz": [
+          -0.208077792568255,
+          -0.014827569900507362,
+          -0.14937803855981227
+        ],
+        "translation_xyz": [
+          -3.494264300130112e-08,
+          -1.6077594811036988e-09,
+          -5.467437703370113e-09
+        ]
+      },
+      "LeftLeg": {
+        "rotation_xyz": [
+          0.4255852716092485,
+          -0.11597255956271328,
+          0.03386115025768255
+        ],
+        "translation_xyz": [
+          2.4530792008814473e-08,
+          -4.782464979591339e-09,
+          4.105157419553862e-08
+        ]
+      },
+      "LeftFoot": {
+        "rotation_xyz": [
+          -0.22172157413108634,
+          0.08943507197862706,
+          0.09092333993257853
+        ],
+        "translation_xyz": [
+          -9.949974566492159e-09,
+          -8.006858523423865e-09,
+          -1.3062395290419637e-08
+        ]
+      },
+      "RightUpLeg": {
+        "rotation_xyz": [
+          0.004388370665056395,
+          0.033386867208502424,
+          0.5068862642073503
+        ],
+        "translation_xyz": [
+          2.310237692121353e-09,
+          1.2301484908494587e-07,
+          -4.5845651129676407e-10
+        ]
+      },
+      "RightLeg": {
+        "rotation_xyz": [
+          -0.14679682312039816,
+          -0.07270527048854929,
+          -0.16856305163730276
+        ],
+        "translation_xyz": [
+          -1.4521856123161925e-07,
+          3.172916929194969e-08,
+          -1.6345450097599024e-08
+        ]
+      },
+      "RightFoot": {
+        "rotation_xyz": [
+          0.16370889646524106,
+          0.013306452781513222,
+          -0.32905807425862954
+        ],
+        "translation_xyz": [
+          -4.3236661639856067e-08,
+          4.67935168113609e-08,
+          8.881179524439231e-09
+        ]
+      }
+    },
+    "right": {
+      "Pelvis": {
+        "rotation_xyz": [
+          -2.9522815840077265e-08,
+          3.01516202740736e-08,
+          -2.627824357458881e-08
+        ],
+        "translation_xyz": [
+          0.0800000012499309,
+          -0.07999992370605469,
+          1.9967555164868145e-08
+        ]
+      },
+      "LeftUpLeg": {
+        "rotation_xyz": [
+          0.004388031150601504,
+          -0.03338665030209972,
+          -0.5068863656167826
+        ],
+        "translation_xyz": [
+          -1.8178836661691955e-08,
+          -1.2081704903188495e-07,
+          -4.658211683843183e-09
+        ]
+      },
+      "LeftLeg": {
+        "rotation_xyz": [
+          -0.14679628259297653,
+          0.07270410198398752,
+          0.16856286237562346
+        ],
+        "translation_xyz": [
+          4.0862811523378895e-08,
+          9.658801025658192e-08,
+          3.562444548382837e-08
+        ]
+      },
+      "LeftFoot": {
+        "rotation_xyz": [
+          0.16370844053533568,
+          -0.013305912669808281,
+          0.32905848811418487
+        ],
+        "translation_xyz": [
+          1.4516391200203316e-08,
+          -6.084301498732181e-08,
+          -5.543924667950062e-08
+        ]
+      },
+      "RightUpLeg": {
+        "rotation_xyz": [
+          -0.2080777164968324,
+          0.014827620598449243,
+          0.14937774822696634
+        ],
+        "translation_xyz": [
+          1.7211398889438456e-08,
+          -1.1540373001661663e-07,
+          3.1603478559812527e-09
+        ]
+      },
+      "RightLeg": {
+        "rotation_xyz": [
+          0.42558523748046057,
+          0.11597264539791205,
+          -0.03386133395345202
+        ],
+        "translation_xyz": [
+          -4.551125826202096e-08,
+          6.436584759628161e-08,
+          -2.7341315100848362e-08
+        ]
+      },
+      "RightFoot": {
+        "rotation_xyz": [
+          -0.22172171786201134,
+          -0.08943544148658585,
+          -0.09092364829160869
+        ],
+        "translation_xyz": [
+          -1.5751935866781253e-08,
+          -3.2661301052616665e-08,
+          5.174211378800031e-09
+        ]
+      }
+    }
+  },
+  "modified_static_nodes": [
+    "ML5_StandIdle_left_Pelvis_Translate_Y",
+    "ML5_StandIdle_left_LeftUpLeg_Rotate_X",
+    "ML5_StandIdle_left_LeftUpLeg_Rotate_Y",
+    "ML5_StandIdle_left_LeftUpLeg_Rotate_Z",
+    "ML5_StandIdle_left_LeftLeg_Rotate_X",
+    "ML5_StandIdle_left_LeftLeg_Rotate_Y",
+    "ML5_StandIdle_left_LeftLeg_Rotate_Z",
+    "ML5_StandIdle_left_LeftFoot_Rotate_X",
+    "ML5_StandIdle_left_LeftFoot_Rotate_Y",
+    "ML5_StandIdle_left_LeftFoot_Rotate_Z",
+    "ML5_StandIdle_left_RightUpLeg_Rotate_X",
+    "ML5_StandIdle_left_RightUpLeg_Rotate_Y",
+    "ML5_StandIdle_left_RightUpLeg_Rotate_Z",
+    "ML5_StandIdle_left_RightLeg_Rotate_X",
+    "ML5_StandIdle_left_RightLeg_Rotate_Y",
+    "ML5_StandIdle_left_RightLeg_Rotate_Z",
+    "ML5_StandIdle_left_RightFoot_Rotate_X",
+    "ML5_StandIdle_left_RightFoot_Rotate_Y",
+    "ML5_StandIdle_left_RightFoot_Rotate_Z",
+    "ML5_StandIdle_right_Pelvis_Translate_Y",
+    "ML5_StandIdle_right_LeftUpLeg_Rotate_X",
+    "ML5_StandIdle_right_LeftUpLeg_Rotate_Y",
+    "ML5_StandIdle_right_LeftUpLeg_Rotate_Z",
+    "ML5_StandIdle_right_LeftLeg_Rotate_X",
+    "ML5_StandIdle_right_LeftLeg_Rotate_Y",
+    "ML5_StandIdle_right_LeftLeg_Rotate_Z",
+    "ML5_StandIdle_right_LeftFoot_Rotate_X",
+    "ML5_StandIdle_right_LeftFoot_Rotate_Y",
+    "ML5_StandIdle_right_LeftFoot_Rotate_Z",
+    "ML5_StandIdle_right_RightUpLeg_Rotate_X",
+    "ML5_StandIdle_right_RightUpLeg_Rotate_Y",
+    "ML5_StandIdle_right_RightUpLeg_Rotate_Z",
+    "ML5_StandIdle_right_RightLeg_Rotate_X",
+    "ML5_StandIdle_right_RightLeg_Rotate_Y",
+    "ML5_StandIdle_right_RightLeg_Rotate_Z",
+    "ML5_StandIdle_right_RightFoot_Rotate_X",
+    "ML5_StandIdle_right_RightFoot_Rotate_Y",
+    "ML5_StandIdle_right_RightFoot_Rotate_Z"
+  ],
+  "head": {
+    "placement": "Forward nod after NormalWeaponIK; native ADS head tilt suppressed by shared CommandHandler override",
+    "bone": "Head",
+    "pitch_forward_degrees": 5,
+    "extra_counter_roll_degrees": 0,
+    "scope": "Shared for player and NPC in custom ADS lean: standing idle/walk and crouch idle/walk. Zero at neutral or native comparison.",
+    "interpretation": "Native head-tilt suppression plus retained 5-degree forward nod; final visual appearance and sight alignment require game test"
+  },
+  "preserved": [
+    "v13 NPC controller and GCT",
+    "walking leg motion and IK",
+    "crouched legs",
+    "central lateral exposure",
+    "weapon IK, hands and shared weapon roll"
+  ]
+}
