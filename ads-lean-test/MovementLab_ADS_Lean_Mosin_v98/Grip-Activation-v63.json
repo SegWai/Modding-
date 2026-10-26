@@ -1,0 +1,7 @@
+{
+  "evidence": "v62: 22 player samples, two weights >.01, none >.95; error .0669088m at weight0. Native crash follows ~DayZGame teardown.",
+  "change": "Remove all pitch gating; attachment weight = custom gate * abs visual lean when reference valid and raised supported rifle ready.",
+  "camera": "unchanged",
+  "graph": "unchanged",
+  "native_playback": "pending"
+}
