@@ -23,3 +23,7 @@
 - Latest user request restores the exact v95 matched left/right lowering and Ctrl+F8 comparison. Discard v96-v99 elbow-angle experiments for subsequent work; v95 is the current requested setup.
 
 - Current user returned to v95 matched lowering, then requested left stock contact to match approved right shoulder contact. V100 starts from v95; v96-v99 elbow experiments remain excluded. Preserve approved right hold and Ctrl+F8 comparison.
+
+- Current user returned to v95 matched lowering, then requested left stock contact to match approved right shoulder contact. V100 starts from v95; v96-v99 elbow experiments remain excluded. Preserve approved right hold and Ctrl+F8 comparison.
+
+- V100 produced a backward-folded right arm. V101 discards its lateral/depth correction, starts from v95 with a vertical-only left hold adjustment, keeps right hold/Ctrl+F8/native pose captures, and adds player MP5K/FNX45/SVD loadout (replaces Mosin; NPC remains AK74). New guns retain native handling; ammo refill includes them.
