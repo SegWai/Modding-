@@ -1,0 +1,14 @@
+{
+  "request": "Reverse prior hold correction:30cm toward character own left",
+  "translation_metres": -0.3,
+  "previous_translation_metres": 0.15,
+  "axis": "Model X; negative is character anatomical left",
+  "trigger": "Unchanged: negative local lean while moving with custom aimed lean active",
+  "bones": [
+    "RightArm",
+    "LeftArm"
+  ],
+  "ordering": "Unchanged final post-weapon-IK arm-subtree shift; same player/NPC graph",
+  "preserved": "All other graph nodes, torso/head/legs, gait, weapon cant, range behaviour and equipment",
+  "native_status": "Local source/pose math and PBO integrity checks only; native attachment/grip/camera validation pending"
+}

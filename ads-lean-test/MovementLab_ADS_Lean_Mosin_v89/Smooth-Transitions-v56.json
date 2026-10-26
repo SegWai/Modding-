@@ -1,0 +1,30 @@
+{
+  "gate_seconds": 0.36,
+  "gate_curve": "smoothstep",
+  "lean_filter_tau_seconds": 0.1,
+  "dt_cap": 0.05,
+  "graph_changed": [
+    "LeanIdleCroLowArm",
+    "LeanIdleCroLowLeft",
+    "LeanIdleCroLowRight",
+    "LeanIdleCroRasLeft",
+    "LeanIdleCroRasRight",
+    "LeanIdleErcLowArm",
+    "LeanIdleErcLowLeft",
+    "LeanIdleErcLowRight",
+    "LeanIdleErcRasLeft",
+    "LeanIdleErcRasRight",
+    "LeanMoveCroLowArm",
+    "LeanMoveCroLowLeft",
+    "LeanMoveCroLowRight",
+    "LeanMoveCroRasLeft",
+    "LeanMoveCroRasRight",
+    "LeanMoveErcLowArm",
+    "LeanMoveErcLowLeft",
+    "LeanMoveErcLowRight",
+    "LeanMoveErcRasLeft",
+    "LeanMoveErcRasRight"
+  ],
+  "pose_geometry": "unchanged from v55",
+  "native_playback": "not run"
+}
