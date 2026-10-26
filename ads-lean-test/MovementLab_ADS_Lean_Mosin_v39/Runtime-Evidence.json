@@ -1,0 +1,6 @@
+{
+  "evidence": "User rightward-moving screenshot: asks arms and weapon5cm lower to improve sight/head alignment.",
+  "change": "Right-only rotation-based arm/wrist target lowering before final native aim/grip pass; final pass enabled for both edited sides. Leftward evaluation of all existing expressions unchanged.",
+  "preserved": "Existing aim-direction/cant expressions, grip targets, elbow adjustments, head/torso/legs/gait and95% controller, range behaviour",
+  "native_status": "Not run in DayZ; exact visual lowering and sight alignment remain unverified."
+}
