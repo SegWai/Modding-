@@ -1,0 +1,22 @@
+{
+  "request": "remove added smooth animation",
+  "removed": [
+    ".36s smoothstep custom gate",
+    ".10s visual lean filter",
+    ".20s custom movement interpolation",
+    ".22s custom moving-grip IK blend",
+    ".18s support comparison fade"
+  ],
+  "restored": [
+    "native lowered lean",
+    "completed-raise handoff"
+  ],
+  "preserved": [
+    "fixed camera implementation",
+    "latest support contact solve and Ctrl+F9 comparison",
+    "authored pose transform amounts",
+    "native game animation interpolation",
+    "reach calibration/height stabilization"
+  ],
+  "native_validation": "pending"
+}
