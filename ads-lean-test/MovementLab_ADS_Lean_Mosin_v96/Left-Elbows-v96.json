@@ -1,0 +1,23 @@
+{
+  "base": "v95",
+  "scope": "own-left moving raised third-person player/NPC",
+  "right_elbow_y_change_m": 0.05,
+  "left_elbow_y_change_m": -0.07,
+  "upper_arm_delta_math_xyz": {
+    "RightArm": [
+      -0.21630080285391434,
+      -0.1381979584693431,
+      -0.13787426784405796
+    ],
+    "LeftArm": [
+      0.24600841153645184,
+      -0.09385879244481281,
+      -0.08789502270852534
+    ]
+  },
+  "native_graph_angle_sign": "negative of math angles",
+  "weight": "clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*MLADSLeanWeaponShift*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop",
+  "hands": "same-side capture and restore, reference transforms unchanged",
+  "toggle": "Ctrl+F8 retained",
+  "native_gameplay": "not run"
+}
