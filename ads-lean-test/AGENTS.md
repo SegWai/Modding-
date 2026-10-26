@@ -19,3 +19,5 @@
 - User selected v89 as the stable baseline, discarding v90/v91. V92 starts from v89 and adds 7cm downward to both arms during anatomical right lean only, shared third-person player/NPC path, leaving first person unchanged.
 
 - User rolled back left-side edits v95-v98 to v94. V99 starts from v94 and changes only the left elbow bend direction by 25 degrees, preserving the approved right lowering and Ctrl+F8 comparison. Do not restore v95-v98 gun shifts or elbow overlays.
+
+- Latest user request restores the exact v95 matched left/right lowering and Ctrl+F8 comparison. Discard v96-v99 elbow-angle experiments for subsequent work; v95 is the current requested setup.
