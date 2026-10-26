@@ -1,0 +1,5 @@
+{
+  "camera": "first-person raised eye follows neutral weapon-local eye offset; added raised roll removed; native direction unchanged",
+  "grip": "final secondary chain only, aim and primary disabled, vertical-only output blend",
+  "native_status": "not run"
+}

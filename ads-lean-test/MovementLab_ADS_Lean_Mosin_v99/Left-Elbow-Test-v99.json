@@ -1,0 +1,19 @@
+{
+  "base": "v94",
+  "change": "25deg left elbow bend-plane swivel toward downward side, fixed hand transforms",
+  "scope": "own-left moving raised third-person player/NPC",
+  "changed_nodes": [
+    "ML32_ReferenceHold_LeftArm_X",
+    "ML32_ReferenceHold_LeftArm_Y",
+    "ML32_ReferenceHold_LeftArm_Z",
+    "ML32_ReferenceHold_LeftForeArm_X",
+    "ML32_ReferenceHold_LeftForeArm_Y",
+    "ML32_ReferenceHold_LeftForeArm_Z",
+    "ML32_ReferenceHold_LeftHand_X",
+    "ML32_ReferenceHold_LeftHand_Y",
+    "ML32_ReferenceHold_LeftHand_Z"
+  ],
+  "right_moving_hold": "unchanged v94",
+  "comparison": "Ctrl+F8 retained",
+  "native_validation": "not run"
+}

@@ -17,3 +17,5 @@
 - Latest first-person request: use raised crouch lean upper-body rotation chains for both directions while raised in first person, preserving actual stance/legs and third-person/NPC poses. This view-specific presentation is explicitly requested; do not force native crouch or add NPC-only posing.
 
 - User selected v89 as the stable baseline, discarding v90/v91. V92 starts from v89 and adds 7cm downward to both arms during anatomical right lean only, shared third-person player/NPC path, leaving first person unchanged.
+
+- User rolled back left-side edits v95-v98 to v94. V99 starts from v94 and changes only the left elbow bend direction by 25 degrees, preserving the approved right lowering and Ctrl+F8 comparison. Do not restore v95-v98 gun shifts or elbow overlays.
