@@ -1,8 +1,8 @@
 """Clean vanilla/custom calibration isolation and neutral-relative distance math."""
 from pathlib import Path
-import unittest,json,hashlib,re,sys,zipfile
+import unittest,json,hashlib,re,sys,zipfile,tempfile
 sys.dont_write_bytecode=True
-from analyze_lean_distances_v49 import analyze
+from analyze_lean_distances_v49 import analyze,load
 from package_ads_lean_runtime import runtime_files
 R=Path(__file__).resolve().parents[1];A=R/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v48';B=R/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v49'
 class DistanceCalibration(unittest.TestCase):
@@ -58,6 +58,16 @@ class DistanceCalibration(unittest.TestCase):
  def test_missing_or_mismatched_or_incomplete_runs_rejected(self):
   for text in (self.fixture(include_custom=False),self.fixture(setup_custom='AK74_optics'),self.fixture().replace('samples=20','samples=1'),self.fixture().replace('duration_ms=950','duration_ms=100')):
    with self.assertRaises(ValueError):analyze([text])
+ def test_windows_zip_entry_separators_are_supported(self):
+  fixture=self.fixture();cut=fixture.index('[MLDIST49] SESSION id=CUSTOM')
+  with tempfile.TemporaryDirectory() as folder:
+   archive=Path(folder)/'windows-logs.zip'
+   with zipfile.ZipFile(archive,'w') as z:
+    z.writestr(r'VanillaLean\script_native.log',fixture[:cut])
+    z.writestr(r'LeanMosin\script_custom.log',fixture[cut:])
+   report=load(archive)
+   self.assertAlmostEqual(report['runs']['native']['head_extent_m']['right'],.12)
+   self.assertAlmostEqual(report['runs']['custom']['head_extent_m']['left'],.20)
  def test_archive_and_collectors_are_runtime_only(self):
   for p,h in json.loads((B/'validation.json').read_text())['pbo_sha256'].items():self.assertEqual(hashlib.sha256((B/p).read_bytes()).hexdigest(),h)
   with zipfile.ZipFile(R/'artifacts/MovementLab_ADS_Lean_Mosin_v49.zip') as z:

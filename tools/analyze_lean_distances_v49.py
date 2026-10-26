@@ -57,7 +57,7 @@ def analyze(texts):
 def load(path):
  path=Path(path)
  if zipfile.is_zipfile(path):
-  with zipfile.ZipFile(path) as z:return analyze([z.read(n).decode('utf8',errors='replace') for n in sorted(z.namelist()) if Path(n).name.startswith('script_') and n.endswith('.log')])
+  with zipfile.ZipFile(path) as z:return analyze([z.read(n).decode('utf8',errors='replace') for n in sorted(z.namelist()) if n.replace('\\','/').rsplit('/',1)[-1].startswith('script_') and n.endswith('.log')])
  if path.is_dir():return analyze([p.read_text(encoding='utf8',errors='replace') for p in sorted(path.rglob('script_*.log'))])
  return analyze([path.read_text(encoding='utf8',errors='replace')])
 if __name__=='__main__':
