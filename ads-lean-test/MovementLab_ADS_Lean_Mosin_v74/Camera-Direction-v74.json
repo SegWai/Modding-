@@ -1,0 +1,7 @@
+{
+  "base": "v71",
+  "change": "native raised camera orientation; no rifle-driven yaw/pitch/roll blend",
+  "graph_and_pose_controls_unchanged": true,
+  "wrist_binding_retained": true,
+  "native_gameplay": "not run"
+}
