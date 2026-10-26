@@ -1,0 +1,5 @@
+{
+  "evidence": "User v32 screenshots: visible grip separation, support palm open below weapon.",
+  "repair_under_test": "Second native weapon-IK node solves only hand chains after arm re-pose and publishes final weapon offset. Aim weight zero and no additional weapon roll.",
+  "native_status": "Not run in DayZ; no claimed measured5cm correction. Existing Blender images show v32 authoring pose only, not new native IK outcome."
+}
