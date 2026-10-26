@@ -1,0 +1,30 @@
+{
+  "base": "v95",
+  "scope": "own-left moving raised third-person player/NPC",
+  "upper_arm_delta_math_xyz": {
+    "RightArm": [
+      0.5557204005067876,
+      -0.2084720802865524,
+      1.965057647575762
+    ],
+    "LeftArm": [
+      1.1463670448009036,
+      0.5723171900228318,
+      -0.38038106371887126
+    ]
+  },
+  "native_graph_angle_sign": "negative of math angles",
+  "weight": "clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*MLADSLeanWeaponShift*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop",
+  "hands": "same-side capture and restore, reference transforms unchanged",
+  "toggle": "Ctrl+F8 retained",
+  "native_gameplay": "not run",
+  "right_upper_arm_degrees_from_down": 80,
+  "left_upper_arm_degrees_from_down": 45,
+  "common_hand_and_weapon_shift_from_v95_m": [
+    -0.07351202590422976,
+    -0.0977846744228581,
+    -0.085011171906134
+  ],
+  "reason_for_hold_shift": "45 degree left upper arm unreachable at old fixed foregrip without stretching",
+  "native_validation": "not run"
+}

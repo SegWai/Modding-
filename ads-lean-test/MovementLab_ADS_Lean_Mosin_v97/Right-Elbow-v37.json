@@ -1,0 +1,16 @@
+{
+  "request": "Right elbow closer to torso during anatomical-right aimed-lean travel; slightly away during anatomical-left travel. Same player/NPC pose.",
+  "direction": "Character own directions: positive MLADSLeanAmount=right, negative=left.",
+  "seed_rotations_degrees": {
+    "right_travel_native_ModelZ": 18,
+    "left_travel_native_ModelZ": -10
+  },
+  "angle_note": "Native model rotations have opposite sign to right-handed authoring matrices. Seed values are not claimed final elbow angles after IK.",
+  "ordering": "Final weapon aim/grip solve -> capture current native right-hand IK target -> directional RightArm rotation -> native right-arm IK2 restores captured hand target -> existing head corrections",
+  "capture_chain": "RHandIKTarget_998610499_358443388_2408857135_2669029224_2889608574",
+  "solve_chain": "RHandIKTarget_3_998610499_358443388_2408857135_2669029224_2889608574",
+  "target": "RHandIKTarget; both chain definitions already exist in the unchanged control template. Same capture/solve pairing used by original DayZ hand IK.",
+  "scope": "MLADSLeanGate*clamp(MovementSpeed, 0.0, 1.0)*(1.0-clamp(Stance, 0.0, 1.0))*MLADSLeanWeaponShift",
+  "preserved": "Native gun attachment/aim/grip node settings, left arm/hand, height95% controller, torso/head/legs/gait, loadout/ammo/ragdoll/respawn. No new GCT variables or script APIs.",
+  "native_status": "Native elbow pole response and wrist/contact preservation require game verification. Source/kinematic checks do not establish native playback."
+}
