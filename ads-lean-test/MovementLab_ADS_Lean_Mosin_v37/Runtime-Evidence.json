@@ -1,0 +1,5 @@
+{
+  "evidence": "User marks right elbow in screenshot; asks inward during own-right travel and slightly outward during own-left travel.",
+  "change": "Direction-specific upper-arm bend seed plus native captured-hand-target solve, after final grip/aim pass.",
+  "native_status": "Not executed in DayZ here; validate elbow motion and grip together."
+}
