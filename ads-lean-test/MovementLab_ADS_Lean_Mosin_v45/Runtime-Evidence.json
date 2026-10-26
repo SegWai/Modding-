@@ -1,0 +1,14 @@
+{
+  "evidence": "User corrects v40: wants custom raised first-person pose preserved, snap removed. Video contains raised non-ADS movement transitions; no matching runtime log identifying snap trigger supplied.",
+  "change": "Restore raised custom pose in both views by default; shared lean and custom movement smoothing; final grip solver blend80ms ->220ms.",
+  "native_status": "Not run in DayZ here. Source/steady-state/rate checks do not establish native playback smoothness.",
+  "standing_right_pose_v45": {
+    "scope": "Standing still, weapon raised/aiming, anatomical right only. Shared player/NPC graph; no NPC patrol, walking, crouch or left-lean control changes.",
+    "source_log": "Mosin-Lean-v44-Logs-20261026-053626.zip",
+    "source_capture": "82178_false",
+    "target_capture": "67091_true",
+    "reference_observed": "lean=1 move_blend=0 gate=1 raised=true; 114 bones; static reference completion marker present",
+    "local_validation": "7/7 tests passed: native capture reconstruction, graph chain/sign/values, boolean attachment-only pass, steady endpoint activation, unchanged prior nodes/control-template/runtime, private resource and PBO integrity",
+    "native_compilation_and_playback": "V45 NOT RUN. Test in user Windows DayZ; exact visual match and attachment publication remain unverified."
+  }
+}
