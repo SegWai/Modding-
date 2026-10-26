@@ -13,3 +13,5 @@
 - V79 camera fix was confirmed by the user. V80 bypasses stock raised-lean chains for Mosin/AK74; lowered lean and other weapon behavior stay native. Keep v79 ZIP unchanged as rollback.
 
 - User rolled back v84: v83 is the baseline. Do not restore v84 selective smoothing. Current request targets the left raised-view dip while keeping the working right transition and final poses.
+
+- Latest first-person request: use raised crouch lean upper-body rotation chains for both directions while raised in first person, preserving actual stance/legs and third-person/NPC poses. This view-specific presentation is explicitly requested; do not force native crouch or add NPC-only posing.

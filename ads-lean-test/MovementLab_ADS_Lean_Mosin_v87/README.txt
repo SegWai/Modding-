@@ -1,0 +1,6 @@
+MovementLab lean test v87 — crouch-style first-person leaning
+
+Raised first-person Q/E now selects upper-body rotation/translation chains copied from the existing custom raised crouch lean: idle uses crouch idle, walking uses crouch walk. Standing-specific snapshot/balance/elbow layers use crouch scope in this view instead. This replaces the first-person standing lean path rather than adding another transition-only aim correction.
+Actual native stance and leg/gait animation are unchanged. Crouching still uses its original branch. Third person and NPC select the original graph path. Scope: local AK74/Mosin raised-only, ironsights and optics. Camera code, native lean timing and 0.08s raise/gait blends unchanged; v84 smoothing is not restored.
+Extract into a fresh folder under F:\DayZProjects and run Launch-Mosin-Lean-Test.cmd. Test standing and walking first-person Q/E, then actual crouch, then switch to third person and confirm its approved pose remains. Also check grip while looking up/down. Collect-Logs.cmd collects diagnostics.
+Native compilation, view-switch blending and visuals require Windows DayZ testing. Local structure/rotation/scope checks only. V86 and v83 remain separate rollback packages.
