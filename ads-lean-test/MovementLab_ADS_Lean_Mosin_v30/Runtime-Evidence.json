@@ -1,0 +1,5 @@
+{
+  "request": "30cm left instead of15cm right",
+  "change": "Two final Model-X arm translations0.15 -> -0.30; same activation and body movement",
+  "native_status": "Not run in DayZ here; no claim of observed rendered displacement"
+}

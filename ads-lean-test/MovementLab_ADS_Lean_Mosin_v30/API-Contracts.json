@@ -1,0 +1,69 @@
+{
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "file": "scripts/3_game/human.c",
+  "weapon_command_declaration": "proto native \tHumanCommandWeapons\t\t\tGetCommandModifier_Weapons();",
+  "old_invalid_getter": "GetCommand_Weapons",
+  "correct_getter": "GetCommandModifier_Weapons",
+  "v5_observed_failure": "World module compile failure at both invalid getter calls.",
+  "native_v6_result": "Not compiled or run in this Linux environment.",
+  "npc_raised_stance": {
+    "declaration": "proto native void ForceStance(int pStanceIdx);",
+    "source": "scripts/3_game/human.c",
+    "sdk_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+    "documented_states": "Includes STANCEIDX_RAISEDERECT; -1 releases stance lock",
+    "runtime_status": "Superseded in v12: no native stance lock used."
+  },
+  "npc_aim_ik": {
+    "bind": "HumanAnimInterface.BindVariableInt(string pVariable)",
+    "write": "DayZPlayer.AnimSetInt(int pVar, int pInt), only in CommandHandler",
+    "variable": "ArmIK int 0..7, player_main.agr",
+    "mask": "7: aim bit0, primary arm bit1, secondary arm bit2; NormalWeaponIK in locomotion.agf",
+    "native_playback": "pending Windows test"
+  },
+  "npc_stance_lifecycle": {
+    "controller": "Registered MLADSLeanCanary float: default0.731, demo1, reset0.731 on cleanup",
+    "control_template": "Exact bytes from v11 that loaded successfully in native logs",
+    "native_raise": "No ForceStance or enabled OverrideRaise",
+    "readiness": "0.4s animation graph blend warmup; not native player weapon raise completion",
+    "runtime_verification": "pending v13 native test"
+  },
+  "native_head_tilt": {
+    "api": "HumanCommandWeapons.SetADS(bool pState)",
+    "sdk_comment": "sets head tilt to optics",
+    "revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+    "scope": "Set false only during eligible custom lean with F6 correction enabled; otherwise restore native player ADS or NPC ready request",
+    "camera": "No SetIronsights, camera setters or input reset added",
+    "native_visual_and_sight_alignment": "pending game test"
+  },
+  "range_v17": {
+    "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+    "ammo": "Weapon.GetInternalMagazineCartridgeCount/GetInternalMagazineMaxCartridgeCount/GetRandomChamberableAmmoTypeName/PushCartridgeToInternalMagazine; reserve only, no chamber/FSM reset",
+    "death": "PlayerBase.EEKilled(Object killer); Human.PhysicsSetRagdoll(bool)/PhysicsIsRagdoll(); HandleDeath(int)",
+    "momentum": "dBodyGetMass, dBodyActive, dBodyApplyImpulse; one horizontal correction only",
+    "equipment": "PUScopeOptic and ImprovisedSuppressor via CreateAttachment; acceptance must be checked in native log",
+    "respawn": "ScriptInvoker world-to-mission callback; CallLater(MLADSLeanSpawnTarget,1000,false)",
+    "human_ragdoll_source": "hud-icons-test/MovementLabLocomotion_v107/StartGateSource/Scripts/4_World/MovementLabRangeNPC.c",
+    "native_status": "Not run here"
+  },
+  "v18_layer_fix": {
+    "error": "V17 PlayerBase layer could not see MLADSLeanRangeSampleMotion from another patch",
+    "correction": "Lean and range hooks merged into one modded PlayerBase class; ammo helper remains separate",
+    "native_status": "pending v18 native compile/playback"
+  },
+  "ak74_v22": {
+    "sdk_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+    "fire_mode": "Weapon.GetMuzzleModeCount(int), SetCurrentMode(int,int), GetCurrentModeAutoFire(int), GetCurrentMode(int)",
+    "magazine": "Magazine.ServerSetAmmoMax()/LocalSetAmmoMax(), before weapon-manager IsRunning guard to sustain full-auto fire",
+    "pose": "Same custom lean eligibility for held Mosin9130 or AK74 on player and NPC",
+    "head_diagnostics": "Object.GetBoneTransformMS(int pivot,out vector transform[4]), in F9 measurement callback",
+    "native_status": "Requires game test of compile/loadout/fire/grip/head placement"
+  },
+  "v24_shoulder_offset": {
+    "control": "Existing TestFloat0..1 from unchanged player_main.agr; distinct nonnegative binding checked before any writes",
+    "animation_write_context": "CommandHandler only, after super, shared for player and designated NPC",
+    "comparison": "F5 static flag; no batch menu",
+    "diagnostics": "Object.WorldToModel(vector worldPos), scripts/3_game/entities/object.c; F9 read-only weapon position",
+    "direction": "User confirmed front-view screen-left, character anatomical right",
+    "native_status": "Pending game check of IK/grip/skin/sight alignment"
+  }
+}
