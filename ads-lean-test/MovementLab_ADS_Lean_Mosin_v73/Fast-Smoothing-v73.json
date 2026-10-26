@@ -1,0 +1,10 @@
+{
+  "raise_lower_seconds": 0.12,
+  "previous_raise_lower_seconds": 0.36,
+  "lean_filter_seconds": 0.035,
+  "previous_lean_filter_seconds": 0.1,
+  "gait_seconds": 0.07,
+  "custom_grip_blend_seconds": 0.07,
+  "camera_unchanged": true,
+  "native_playback": "not run"
+}
