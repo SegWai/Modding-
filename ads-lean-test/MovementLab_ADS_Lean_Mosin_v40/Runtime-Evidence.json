@@ -1,0 +1,6 @@
+{
+  "evidence": "User clarified gun raised only/not sure; no confirmed actual-ADS failure.",
+  "repair": "Restrict diagnostic third-person inspection pose to its intended camera; leave raised first-person pose and native ADS camera normal.",
+  "scope": "v39 animation workspace remains byte-identical; no camera matrices or ADS inputs changed.",
+  "native_status": "V40 first-person transition behaviour unverified; F9 identifies actual active camera."
+}
