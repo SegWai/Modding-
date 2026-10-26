@@ -1,0 +1,8 @@
+{
+  "base": "v83",
+  "entry_exit": "signed smoothstep of native lean magnitude, no extra duration",
+  "direct_reversal": "mapped opposite action bypasses easing through full native sign crossing",
+  "raise_lower_seconds": 0.08,
+  "camera_and_graph_unchanged": true,
+  "native_gameplay": "not run"
+}
