@@ -12,4 +12,4 @@
 
 - V79 camera fix was confirmed by the user. V80 bypasses stock raised-lean chains for Mosin/AK74; lowered lean and other weapon behavior stay native. Keep v79 ZIP unchanged as rollback.
 
-- V84 request: smooth standing/crouched lean entry/exit and raised/lowered transitions, but never add smoothing to direct Q/E reversals. Use mapped lean actions for early reversal detection; preserve native switch timing and short raise blend.
+- User rolled back v84: v83 is the baseline. Do not restore v84 selective smoothing. Current request targets the left raised-view dip while keeping the working right transition and final poses.

@@ -1,0 +1,6 @@
+MovementLab lean test v85 — left raised-view position interpolation
+
+Based directly on v83; v84 selective smoothing is not included. With a neutral raised camera reference, left-lean camera position follows the already-interpolated rifle without applying native lean amplitude a second time. It also holds the sight at the neutral raised screen height through Q (including the endpoint), leaving horizontal framing/depth and camera orientation unchanged. This targets the initial relative weapon dip/catch-up while keeping native look direction and head attachment.
+Right-lean framing, v83 pose graph and aim constraint, final lean distances, grip, custom-only raised leans and 0.08s timings are unchanged. The left camera height is intentionally adjusted; no animation bones or input are written by the camera.
+Extract into a fresh folder under F:\DayZProjects and launch Launch-Mosin-Lean-Test.cmd. Raise the weapon briefly while neutral to establish framing, then test Q entry/exit and compare with E. Also test Q/E reversal and look up/down. Collect-Logs.cmd collects diagnostics.
+Local math/source/package checks only; native compilation and visual outcome require Windows DayZ. Exact v83 remains the rollback.
