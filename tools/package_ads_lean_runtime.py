@@ -10,9 +10,17 @@ FILES=(
  'Collect-Logs.cmd','Collect-Logs.ps1',
  'validation.json','Workspace-Provenance.json','README.txt',
 )
+REFERENCE_FILES=('Launch-Vanilla-Lean-Reference.cmd','Missions/MLADSLeanNativeReference.ChernarusPlus/init.c')
+def runtime_files(kit):
+ kit=Path(kit)
+ if any((kit/name).exists() for name in REFERENCE_FILES):
+  if not all((kit/name).is_file() for name in REFERENCE_FILES):raise ValueError('Incomplete native reference launcher/mission')
+  return FILES+REFERENCE_FILES
+ return FILES
+
 def package(kit,out):
  kit=Path(kit);out=Path(out);expected={}
- for name in FILES:
+ for name in runtime_files(kit):
   data=(kit/name).read_bytes()
   if Path(name).suffix in ('.cmd','.ps1','.txt'):data=data.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
   expected[kit.name+'/'+name]=data
