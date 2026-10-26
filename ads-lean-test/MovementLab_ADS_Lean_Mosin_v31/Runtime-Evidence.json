@@ -1,0 +1,6 @@
+{
+  "request": "Match first reference photo visible gun hold, preserve body movement",
+  "change": "Rotation-only arm/forearm/wrist re-pose replaces ineffective translation-only node. Same shared graph for player/NPC, existing left-moving aimed-lean trigger.",
+  "authoring_validation": "Both hand targets shifted equally, hand orientations/relative grip unchanged; limb lengths and non-arm bones preserved. Reconstruction error recorded separately.",
+  "native_status": "Native DayZ evaluation and visible rifle placement are NOT verified here; Blender preview is authoring-only."
+}
