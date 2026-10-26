@@ -1,0 +1,24 @@
+{
+  "Left": {
+    "reopened_in_blender": "4.3.2",
+    "capture": "60375_true",
+    "all_114_joint_positions_match": true,
+    "max_joint_error_metres": 3.579490791961686e-07,
+    "native_axis_display_max_component_error": 2.4974346160888672e-05,
+    "raw_native_matrices_json_exact": true,
+    "weapon_transform_matches_capture": true,
+    "original_mesh_weights_rest_skeleton_unchanged": true,
+    "no_linked_libraries": true
+  },
+  "Right": {
+    "reopened_in_blender": "4.3.2",
+    "capture": "67091_true",
+    "all_114_joint_positions_match": true,
+    "max_joint_error_metres": 3.9016080590433065e-07,
+    "native_axis_display_max_component_error": 1.6897916793823242e-05,
+    "raw_native_matrices_json_exact": true,
+    "weapon_transform_matches_capture": true,
+    "original_mesh_weights_rest_skeleton_unchanged": true,
+    "no_linked_libraries": true
+  }
+}
