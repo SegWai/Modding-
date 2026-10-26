@@ -1,0 +1,20 @@
+{
+  "base": "v87 (before unsuccessful v88/v89 translations)",
+  "hand_target_shift_model_m": [
+    0,
+    -0.05,
+    0
+  ],
+  "method": "same-side hand target capture, undo temporary hand translations, native arm IK solve, publish attachment",
+  "target_capture_chains": [
+    "LHandIKTarget_1885426032_2060251945_4110665692_3747397525_2089750091",
+    "RHandIKTarget_998610499_358443388_2408857135_2669029224_2889608574"
+  ],
+  "solve_chains": [
+    "LHandIKTarget_0_1885426032_2060251945_4110665692_3747397525_2089750091",
+    "RHandIKTarget_3_998610499_358443388_2408857135_2669029224_2889608574"
+  ],
+  "no_cross_hand_capture": true,
+  "scope": "shared third-person raised poses; first-person disabled by existing view selector",
+  "native_validation": "not run"
+}

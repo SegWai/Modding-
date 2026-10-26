@@ -1,0 +1,10 @@
+{
+  "base": "v90",
+  "stationary_drop_m": 0.05,
+  "moving_drop_m": 0.1,
+  "additional_moving_drop_over_v90_m": 0.05,
+  "directions": "both",
+  "expression": "0.05*(1+clamp(MLADSLeanMoveBlend,0,1))",
+  "target_and_undo_offsets_matched": true,
+  "native_gameplay": "not run"
+}

@@ -1,0 +1,8 @@
+{
+  "base": "v76",
+  "change": "ignore rifle-driven target during incomplete raise/lower, hold and release last head-local eye correction",
+  "camera_only_envelope_seconds": 0.1,
+  "settled_eye_target_unchanged": true,
+  "graph_and_animations_unchanged": true,
+  "native_gameplay": "not run"
+}
