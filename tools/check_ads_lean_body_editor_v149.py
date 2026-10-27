@@ -1,8 +1,8 @@
 """Offline graph/UI/lean-rate checks. Native Enforce/UI/feet/grip not executed."""
 from pathlib import Path
-import re,json,math
+import re,json,math,sys
 from dayz_graph_formats import newnodes
-ROOT=Path(__file__).resolve().parents[1];KIT=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v149';BASE=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v148'
+ROOT=Path(__file__).resolve().parents[1];KIT=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v149';BASE=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v148'
 spec=json.loads((KIT/'Body-Editor-v149.json').read_text());assert len(spec['parts'])==24 and len(spec['controls'])==145
 agr=(KIT/'WorkspaceSource/player_main.agr').read_text();graph=(KIT/'WorkspaceSource/locomotion.agf').read_text();nodes=newnodes(graph);old=newnodes((BASE/'WorkspaceSource/locomotion.agf').read_text())
 for name,node in old.items():
