@@ -1,0 +1,20 @@
+{
+  "shared": "Identical graph corrections for selected player and NPC; no actor-specific pose conditions",
+  "walking_standing_pelvis": [
+    {
+      "node": "ML5_StandWalk_left_Pelvis_Translate_Y",
+      "old_pelvis_drop_metres": -0.1200000048,
+      "new_pelvis_drop_metres": -0.06
+    },
+    {
+      "node": "ML5_StandWalk_right_Pelvis_Translate_Y",
+      "old_pelvis_drop_metres": -0.1200000644,
+      "new_pelvis_drop_metres": -0.06
+    }
+  ],
+  "right_moving_head_lift_metres": 0.006,
+  "head_percent_interpretation": "Approximate small lift: 3% of a 20cm head is 6mm. Standing walking pelvis rises another 6cm naturally from reduced hip drop.",
+  "head_scope": "Right custom ADS lean while moving, including crouched moving. Zero during stationary or left lean.",
+  "legs_scope": "Standing aimed leaning locomotion only; left/right hip drops reduced equally. Native walking IK and gait retained. Crouched legs and stationary planted stance unchanged.",
+  "preserved": "Exposure X offsets, all rotations, hands, weapon cant, working NPC/range controller, ammo, equipment, ragdoll and respawn"
+}
