@@ -1,0 +1,9 @@
+V103 compile hotfix: replace unsupported vector/scalar division with reciprocal multiplication. V102 pose settings, Ctrl+F8 and loadout retained. Native compilation/playback pending.
+
+MovementLab lean test v103 — native elbow direction calibration and backpack
+
+Own-left moving raised pose: left elbow pole directed down/in toward torso, right elbow pole outward. Instead of historical pose angles, the test calibrates once from actual native shoulder/elbow/wrist positions on a stable level left-moving pass, with the new overlay disabled. It then holds fixed model-axis rotations, captures each current wrist to a separate private target and restores both wrists with native IK. No continuous pose feedback or bone writes.
+Let the NPC complete a left-moving pass so calibration can run; subsequent passes reuse it. An Elbow test ready notice confirms successful NPC calibration. Ctrl+F8 remains shared ON/OFF. Turning OFF resets calibration; after ON it recalibrates on the next stable left pass. Right-moving pose, first-person, camera and timings retain v101 behavior. The current v101 left hand/rifle height target is retained. Before/after full native poses are recorded under MELBOW103/MLPOSE103, capped at 16 automatic full captures per launch.
+Player backpack is now explicitly attached to Back slot (AliceBag_Green; MountainBag_Green fallback), checked/logged. The v101 AK74, fully attached MP5K, FNX45 and SVD quickbar loadout and ammo refill are retained. NPC stays AK74.
+Extract into a fresh folder under F:\DayZProjects and run Launch-Mosin-Lean-Test.cmd. Compare elbows/grip after calibration and Ctrl+F8 OFF/ON, then run Collect-Logs.cmd. Send that ZIP with the result so actual native target/solver output can be examined.
+Native compilation, private IK target behavior, render output and backpack/loadout placement require Windows DayZ testing. Local numeric/graph/API checks only.
