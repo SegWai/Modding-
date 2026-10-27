@@ -2,22 +2,22 @@
     "PresetVersion": 1,
     "LeftLean": {
         "WeaponSettings": {
-            "X": 0.0,
-            "Y": -5.0,
-            "Z": 0.0,
-            "Pitch": 0.0,
-            "Yaw": 0.0,
-            "Roll": 0.0,
+            "X": -17.899999618530275,
+            "Y": -15.0,
+            "Z": 25.0,
+            "Pitch": 10.0,
+            "Yaw": 20.0,
+            "Roll": -5.200000286102295,
             "LeftPitch": 0.0,
             "LeftYaw": 0.0,
-            "LeftRoll": 0.0,
-            "RightPitch": 0.0,
-            "RightYaw": 0.0,
-            "RightRoll": 0.0,
-            "HeadPitch": 0.0,
-            "HeadYaw": 0.0,
-            "HeadRoll": 0.0,
-            "MuzzleYaw": 0.0,
+            "LeftRoll": -31.899999618530275,
+            "RightPitch": 25.200000762939454,
+            "RightYaw": 24.700000762939454,
+            "RightRoll": -1.7000000476837159,
+            "HeadPitch": 5.5,
+            "HeadYaw": 6.5,
+            "HeadRoll": 28.700000762939454,
+            "MuzzleYaw": 7.400000095367432,
             "MuzzlePitch": 0.0
         },
         "BodySettings": {
@@ -90,9 +90,9 @@
                     "X": 0.0,
                     "Y": 0.0,
                     "Z": 0.0,
-                    "Pitch": 4.599999904632568,
-                    "Yaw": 3.299999952316284,
-                    "Roll": -20.0
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
                 },
                 {
                     "BoneName": "LeftShoulder",
@@ -108,9 +108,9 @@
                     "X": 0.0,
                     "Y": 0.0,
                     "Z": 0.0,
-                    "Pitch": 0.0,
-                    "Yaw": 0.0,
-                    "Roll": 0.0
+                    "Pitch": 4.300000190734863,
+                    "Yaw": 8.0,
+                    "Roll": -13.100000381469727
                 },
                 {
                     "BoneName": "LeftArm",
@@ -189,9 +189,9 @@
                     "X": 0.0,
                     "Y": 0.0,
                     "Z": 0.0,
-                    "Pitch": 1.100000023841858,
-                    "Yaw": 11.100000381469727,
-                    "Roll": -0.4000000059604645
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
                 },
                 {
                     "BoneName": "RightLeg",
@@ -207,18 +207,18 @@
                     "X": 0.0,
                     "Y": 0.0,
                     "Z": 0.0,
-                    "Pitch": -4.5,
-                    "Yaw": 45.0,
-                    "Roll": -5.300000190734863
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
                 },
                 {
                     "BoneName": "RightFoot",
                     "X": 0.0,
                     "Y": 0.0,
                     "Z": 0.0,
-                    "Pitch": 3.799999952316284,
-                    "Yaw": 26.5,
-                    "Roll": 7.900000095367432
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
                 },
                 {
                     "BoneName": "LeftToeBase",
@@ -244,16 +244,16 @@
     "RightLean": {
         "WeaponSettings": {
             "X": 5.0,
-            "Y": -10.0,
-            "Z": 0.0,
+            "Y": -16.100000381469728,
+            "Z": -9.100000381469727,
             "Pitch": 0.0,
             "Yaw": 0.0,
-            "Roll": 0.0,
+            "Roll": 17.100000381469728,
             "LeftPitch": 0.0,
             "LeftYaw": 0.0,
             "LeftRoll": 0.0,
-            "RightPitch": 0.0,
-            "RightYaw": 0.0,
+            "RightPitch": 15.40000057220459,
+            "RightYaw": -37.29999923706055,
             "RightRoll": 0.0,
             "HeadPitch": 0.0,
             "HeadYaw": 0.0,
@@ -279,7 +279,7 @@
                     "Z": 0.0,
                     "Pitch": 0.0,
                     "Yaw": 0.0,
-                    "Roll": 0.0
+                    "Roll": -2.299999952316284
                 },
                 {
                     "BoneName": "Spine1",
@@ -412,9 +412,9 @@
                     "X": 0.0,
                     "Y": 0.0,
                     "Z": 0.0,
-                    "Pitch": 0.0,
-                    "Yaw": 0.0,
-                    "Roll": 0.0
+                    "Pitch": 5.5,
+                    "Yaw": 7.5,
+                    "Roll": -3.5
                 },
                 {
                     "BoneName": "RightUpLeg",
@@ -429,10 +429,10 @@
                     "BoneName": "LeftLeg",
                     "X": 0.0,
                     "Y": 0.0,
-                    "Z": 0.0,
-                    "Pitch": 0.0,
-                    "Yaw": 0.0,
-                    "Roll": 0.0
+                    "Z": -9.40000057220459,
+                    "Pitch": -22.899999618530275,
+                    "Yaw": -5.0,
+                    "Roll": 0.6000000238418579
                 },
                 {
                     "BoneName": "RightLeg",
@@ -448,9 +448,9 @@
                     "X": 0.0,
                     "Y": 0.0,
                     "Z": 0.0,
-                    "Pitch": 3.799999952316284,
-                    "Yaw": -26.5,
-                    "Roll": -7.900000095367432
+                    "Pitch": 12.40000057220459,
+                    "Yaw": -28.30000114440918,
+                    "Roll": 1.100000023841858
                 },
                 {
                     "BoneName": "RightFoot",
@@ -458,7 +458,7 @@
                     "Y": 0.0,
                     "Z": 0.0,
                     "Pitch": -4.5,
-                    "Yaw": -45.0,
+                    "Yaw": -36.10000228881836,
                     "Roll": 5.300000190734863
                 },
                 {
