@@ -69,3 +69,5 @@
 - User rolled back v120 to v119, then requested 10cm MORE. V121 is based on v119, net Z=+0.25m relative v117, X=-0.034483846m and Y=+0.008140797m unchanged. Both reference wrists +0.10m Z vs v119; same scope. Native rendering pending.
 
 - Latest combined manual requests: X=0, Z BACK TO V119 (+0.15m), Y remains +0.008140797m, all relative v117. V122 incorporates both; the earlier pending +25cm version was not released. Compared with v119 only X changes. Native placement pending.
+
+- User asks RIGHT walking hold X=-5, then immediately corrects to X=+5cm. V123 adds +0.05m anatomical-right offset to the native v117 right pose using a separate positive-lean rotation layer. Right Y/Z unchanged; left v122 X0/Y+.008140797/Z+.15m retained. Both wrists follow, same third-person standing moving scope/Ctrl+F8; native visible result pending.
