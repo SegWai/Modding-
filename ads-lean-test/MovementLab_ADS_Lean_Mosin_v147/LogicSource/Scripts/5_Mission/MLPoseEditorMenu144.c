@@ -1,0 +1,239 @@
+class ML144Menu extends UIScriptedMenu
+{
+ protected ref array<SliderWidget> m_Sliders = new array<SliderWidget>;
+ protected ref array<TextWidget> m_Readouts = new array<TextWidget>;
+ protected TextWidget m_Status;
+ protected bool m_Refreshing;
+ protected bool m_Excluded;
+ protected bool m_ArmPage;
+ protected ref array<string> m_Excludes = {"movement", "aiming", "gestures", "stances", "optics", "actions", "hotkey", "UAGear"};
+ override Widget Init()
+ {
+  ML144State.Init();
+  layoutRoot = GetGame().GetWorkspace().CreateWidgets("MLADSLeanLogic/GUI/MLPoseEditor144.layout");
+  if (!layoutRoot)
+   return null;
+  for (int row = 0; row < 17; row++)
+  {
+   SliderWidget slider = SliderWidget.Cast(layoutRoot.FindAnyWidget("Value" + row));
+   TextWidget readout = TextWidget.Cast(layoutRoot.FindAnyWidget("Readout" + row));
+   if (!slider || !readout)
+    return layoutRoot;
+   if (row == 0)
+    slider.SetMinMax(-20, 20);
+   else if (row == 1)
+    slider.SetMinMax(-25, 15);
+   else if (row == 2)
+    slider.SetMinMax(-20, 25);
+   else if (row < 8)
+    slider.SetMinMax(-20, 20);
+   else if (row < 14)
+    slider.SetMinMax(-90, 90);
+   else
+    slider.SetMinMax(-45, 45);
+   slider.SetStep(0.1);
+   m_Sliders.Insert(slider);
+   m_Readouts.Insert(readout);
+  }
+  m_Status = TextWidget.Cast(layoutRoot.FindAnyWidget("Status"));
+  ShowPage(false);
+  RefreshValues();
+  return layoutRoot;
+ }
+ override int GetID()
+ {
+  return 86144;
+ }
+ override void OnShow()
+ {
+  super.OnShow();
+  ML144State.Open = true;
+  GetGame().GetMission().AddActiveInputExcludes(m_Excludes);
+  m_Excluded = true;
+ }
+ override void OnHide()
+ {
+  ML144State.Open = false;
+  if (m_Excluded)
+  {
+   GetGame().GetMission().RemoveActiveInputExcludes(m_Excludes);
+   m_Excluded = false;
+  }
+  super.OnHide();
+ }
+ protected void ShowPage(bool arms)
+ {
+  m_ArmPage = arms;
+  Widget weaponPage = layoutRoot.FindAnyWidget("WeaponPage");
+  Widget armPage = layoutRoot.FindAnyWidget("ArmPage");
+  if (weaponPage)
+   weaponPage.Show(!arms);
+  if (armPage)
+   armPage.Show(arms);
+ }
+ protected void RefreshValues()
+ {
+  if (!ML144State.Values || m_Sliders.Count() != 17)
+   return;
+  m_Refreshing = true;
+  ML144Values value = ML144State.Values;
+  array<float> numbers = {value.X, value.Y, value.Z, value.Pitch, value.Yaw, value.Roll, value.MuzzleYaw, value.MuzzlePitch, value.LeftPitch, value.LeftYaw, value.LeftRoll, value.RightPitch, value.RightYaw, value.RightRoll, value.HeadPitch, value.HeadYaw, value.HeadRoll};
+  for (int i = 0; i < 17; i++)
+  {
+   m_Sliders[i].SetCurrent(numbers[i]);
+   m_Readouts[i].SetText(numbers[i].ToString());
+  }
+  ButtonWidget hold = ButtonWidget.Cast(layoutRoot.FindAnyWidget("Hold"));
+  if (hold)
+  {
+   if (ML144State.HoldRight)
+    hold.SetText("Hold selected lean: ON");
+   else
+    hold.SetText("Hold selected lean: OFF");
+  }
+  TextWidget title = TextWidget.Cast(layoutRoot.FindAnyWidget("Title"));
+  if (title)
+  {
+   if (ML144State.EditLeft)
+    title.SetText("LIVE POSE - STANDING LEFT");
+   else
+    title.SetText("LIVE POSE - STANDING RIGHT");
+  }
+  m_Refreshing = false;
+ }
+ protected void ApplySliders()
+ {
+  if (m_Refreshing || m_Sliders.Count() != 17)
+   return;
+  ML144Values candidate = new ML144Values;
+  candidate.X = Math.Round(m_Sliders[0].GetCurrent()*10)*0.1;
+  candidate.Y = Math.Round(m_Sliders[1].GetCurrent()*10)*0.1;
+  candidate.Z = Math.Round(m_Sliders[2].GetCurrent()*10)*0.1;
+  candidate.Pitch = Math.Round(m_Sliders[3].GetCurrent()*10)*0.1;
+  candidate.Yaw = Math.Round(m_Sliders[4].GetCurrent()*10)*0.1;
+  candidate.Roll = Math.Round(m_Sliders[5].GetCurrent()*10)*0.1;
+  candidate.MuzzleYaw = Math.Round(m_Sliders[6].GetCurrent()*10)*0.1;
+  candidate.MuzzlePitch = Math.Round(m_Sliders[7].GetCurrent()*10)*0.1;
+  candidate.LeftPitch = Math.Round(m_Sliders[8].GetCurrent()*10)*0.1;
+  candidate.LeftYaw = Math.Round(m_Sliders[9].GetCurrent()*10)*0.1;
+  candidate.LeftRoll = Math.Round(m_Sliders[10].GetCurrent()*10)*0.1;
+  candidate.RightPitch = Math.Round(m_Sliders[11].GetCurrent()*10)*0.1;
+  candidate.RightYaw = Math.Round(m_Sliders[12].GetCurrent()*10)*0.1;
+  candidate.RightRoll = Math.Round(m_Sliders[13].GetCurrent()*10)*0.1;
+  candidate.HeadPitch = Math.Round(m_Sliders[14].GetCurrent()*10)*0.1;
+  candidate.HeadYaw = Math.Round(m_Sliders[15].GetCurrent()*10)*0.1;
+  candidate.HeadRoll = Math.Round(m_Sliders[16].GetCurrent()*10)*0.1;
+  ML144State.Apply(candidate);
+  RefreshValues();
+ }
+ override bool OnChange(Widget w, int x, int y, bool finished)
+ {
+  if (SliderWidget.Cast(w))
+  {
+   ApplySliders();
+   return true;
+  }
+  return super.OnChange(w, x, y, finished);
+ }
+ override bool OnClick(Widget w, int x, int y, int button)
+ {
+  string name = w.GetName();
+  if (name == "LeftSide" || name == "RightSide")
+  {
+   ML144State.SelectSide(name == "LeftSide");
+   RefreshValues();
+   return true;
+  }
+  if (name == "WeaponTab")
+  {
+   ShowPage(false);
+   return true;
+  }
+  if (name == "ArmTab")
+  {
+   ShowPage(true);
+   return true;
+  }
+  if (name == "Close")
+  {
+   Close();
+   return true;
+  }
+  if (name == "Reset")
+   ML144State.Reset();
+  else if (name == "Save")
+   ML144State.Save();
+  else if (name == "Load")
+   ML144State.Load();
+  else if (name == "Hold")
+  {
+   ML144State.HoldRight = !ML144State.HoldRight;
+   ButtonWidget holdButton = ButtonWidget.Cast(w);
+   if (ML144State.HoldRight)
+    holdButton.SetText("Hold selected lean: ON");
+   else
+    holdButton.SetText("Hold selected lean: OFF");
+  }
+  else
+  {
+   for (int i = 0; i < m_Sliders.Count(); i++)
+   {
+    float step = 0.5;
+    if (i >= 3)
+     step = 1;
+    if (name == "Minus" + i)
+    {
+     m_Sliders[i].SetCurrent(m_Sliders[i].GetCurrent()-step);
+     ApplySliders();
+     return true;
+    }
+    if (name == "Plus" + i)
+    {
+     m_Sliders[i].SetCurrent(m_Sliders[i].GetCurrent()+step);
+     ApplySliders();
+     return true;
+    }
+   }
+   return super.OnClick(w, x, y, button);
+  }
+  RefreshValues();
+  return true;
+ }
+ override bool OnKeyPress(Widget w, int x, int y, int key)
+ {
+  if (key == KeyCode.KC_ESCAPE)
+  {
+   Close();
+   return true;
+  }
+  if (key == KeyCode.KC_F6)
+  {
+   if (!ML144State.KeyDown)
+   {
+    ML144State.KeyDown = true;
+    Close();
+   }
+   return true;
+  }
+  return super.OnKeyPress(w, x, y, key);
+ }
+ override bool OnKeyUp(Widget w, int x, int y, int key)
+ {
+  if (key == KeyCode.KC_F6)
+   ML144State.KeyDown = false;
+  return super.OnKeyUp(w, x, y, key);
+ }
+ override void Update(float timeslice)
+ {
+  super.Update(timeslice);
+  if (m_Status)
+  {
+   if (!ML144State.Bound)
+    m_Status.SetText("Waiting for live graph binding; check logs if unchanged.");
+   else if (m_ArmPage && !ML144State.ArmsReady)
+    m_Status.SetText("Hold selected lean; arm reference settles briefly after weapon edits.");
+   else
+    m_Status.SetText(ML144State.Status);
+  }
+ }
+};

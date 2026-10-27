@@ -1,0 +1,31 @@
+{
+  "scope": "Player and NPC, right lean in all four stance/movement branches",
+  "change": "5-degree additional model-Z head rotation toward the same anatomical-left direction used by the v16 left-head correction",
+  "changed_nodes": [
+    {
+      "node": "ML5_StandIdle_right_Head_Rotate_Z",
+      "old_graph_amount": -0.2268918356,
+      "new_graph_amount": -0.3141582982,
+      "extra_toward_anatomical_left_degrees": 5
+    },
+    {
+      "node": "ML5_StandWalk_right_Head_Rotate_Z",
+      "old_graph_amount": -0.2268918356,
+      "new_graph_amount": -0.3141582982,
+      "extra_toward_anatomical_left_degrees": 5
+    },
+    {
+      "node": "ML5_CrouchIdle_right_Head_Rotate_Z",
+      "old_graph_amount": -0.2268918356,
+      "new_graph_amount": -0.3141582982,
+      "extra_toward_anatomical_left_degrees": 5
+    },
+    {
+      "node": "ML5_CrouchWalk_right_Head_Rotate_Z",
+      "old_graph_amount": -0.2268918356,
+      "new_graph_amount": -0.3141582982,
+      "extra_toward_anatomical_left_degrees": 5
+    }
+  ],
+  "left_lean": "Unchanged from v16"
+}
