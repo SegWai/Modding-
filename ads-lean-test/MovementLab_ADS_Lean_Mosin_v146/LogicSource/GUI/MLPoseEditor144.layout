@@ -1,0 +1,980 @@
+FrameWidgetClass ML144Root {
+ position 0 0
+ size 1 1
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+ PanelWidgetClass ML144Panel {
+ position .70 .04
+ size .29 .84
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Colorable
+ color .025 .03 .04 .96
+ {
+TextWidgetClass Title {
+ position 0.04 0.018
+ size 0.92 0.038
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "LIVE POSE - STANDING RIGHT"
+}
+ButtonWidgetClass WeaponTab {
+ position 0.04 0.065
+ size 0.44 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "Weapon"
+}
+ButtonWidgetClass ArmTab {
+ position 0.52 0.065
+ size 0.44 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "Arms & Head"
+}
+FrameWidgetClass WeaponPage {
+ position .04 .13
+ size .92 .59
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+TextWidgetClass Label0 {
+ position 0.0 0.0
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "X: right / left (cm)"
+}
+TextWidgetClass Readout0 {
+ position 0.81 0.0
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus0 {
+ position 0.0 0.046
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value0 {
+ position 0.14 0.046
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus0 {
+ position 0.9 0.046
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label1 {
+ position 0.0 0.103
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Y: up / down (cm)"
+}
+TextWidgetClass Readout1 {
+ position 0.81 0.103
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus1 {
+ position 0.0 0.149
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value1 {
+ position 0.14 0.149
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus1 {
+ position 0.9 0.149
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label2 {
+ position 0.0 0.206
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Z: forward / back (cm)"
+}
+TextWidgetClass Readout2 {
+ position 0.81 0.206
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus2 {
+ position 0.0 0.252
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value2 {
+ position 0.14 0.252
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus2 {
+ position 0.9 0.252
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label3 {
+ position 0.0 0.309
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Weapon pitch (degrees)"
+}
+TextWidgetClass Readout3 {
+ position 0.81 0.309
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus3 {
+ position 0.0 0.355
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value3 {
+ position 0.14 0.355
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus3 {
+ position 0.9 0.355
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label4 {
+ position 0.0 0.412
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Weapon yaw (degrees)"
+}
+TextWidgetClass Readout4 {
+ position 0.81 0.412
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus4 {
+ position 0.0 0.45799999999999996
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value4 {
+ position 0.14 0.45799999999999996
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus4 {
+ position 0.9 0.45799999999999996
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label5 {
+ position 0.0 0.515
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Weapon roll (degrees)"
+}
+TextWidgetClass Readout5 {
+ position 0.81 0.515
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus5 {
+ position 0.0 0.561
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value5 {
+ position 0.14 0.561
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus5 {
+ position 0.9 0.561
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+}
+}
+FrameWidgetClass ArmPage {
+ position .04 .13
+ size .92 .59
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+TextWidgetClass Label6 {
+ position 0.0 0.0
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Left elbow pitch (degrees)"
+}
+TextWidgetClass Readout6 {
+ position 0.81 0.0
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus6 {
+ position 0.0 0.046
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value6 {
+ position 0.14 0.046
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus6 {
+ position 0.9 0.046
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label7 {
+ position 0.0 0.103
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Left elbow yaw (degrees)"
+}
+TextWidgetClass Readout7 {
+ position 0.81 0.103
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus7 {
+ position 0.0 0.149
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value7 {
+ position 0.14 0.149
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus7 {
+ position 0.9 0.149
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label8 {
+ position 0.0 0.206
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Left elbow swivel (degrees)"
+}
+TextWidgetClass Readout8 {
+ position 0.81 0.206
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus8 {
+ position 0.0 0.252
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value8 {
+ position 0.14 0.252
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus8 {
+ position 0.9 0.252
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label9 {
+ position 0.0 0.309
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Right elbow pitch (degrees)"
+}
+TextWidgetClass Readout9 {
+ position 0.81 0.309
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus9 {
+ position 0.0 0.355
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value9 {
+ position 0.14 0.355
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus9 {
+ position 0.9 0.355
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label10 {
+ position 0.0 0.412
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Right elbow yaw (degrees)"
+}
+TextWidgetClass Readout10 {
+ position 0.81 0.412
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus10 {
+ position 0.0 0.45799999999999996
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value10 {
+ position 0.14 0.45799999999999996
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus10 {
+ position 0.9 0.45799999999999996
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label11 {
+ position 0.0 0.515
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Right elbow swivel (degrees)"
+}
+TextWidgetClass Readout11 {
+ position 0.81 0.515
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus11 {
+ position 0.0 0.561
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value11 {
+ position 0.14 0.561
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus11 {
+ position 0.9 0.561
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label12 {
+ position 0.0 0.618
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Head pitch (degrees)"
+}
+TextWidgetClass Readout12 {
+ position 0.81 0.618
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus12 {
+ position 0.0 0.664
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value12 {
+ position 0.14 0.664
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus12 {
+ position 0.9 0.664
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label13 {
+ position 0.0 0.721
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Head yaw (degrees)"
+}
+TextWidgetClass Readout13 {
+ position 0.81 0.721
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus13 {
+ position 0.0 0.767
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value13 {
+ position 0.14 0.767
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus13 {
+ position 0.9 0.767
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass Label14 {
+ position 0.0 0.824
+ size 0.8 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Head roll (degrees)"
+}
+TextWidgetClass Readout14 {
+ position 0.81 0.824
+ size 0.19 0.043
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "0"
+}
+ButtonWidgetClass Minus14 {
+ position 0.0 0.87
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "-"
+}
+SliderWidgetClass Value14 {
+ position 0.14 0.87
+ size 0.72 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+}
+ButtonWidgetClass Plus14 {
+ position 0.9 0.87
+ size 0.1 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "+"
+}
+TextWidgetClass ArmHint {
+ position 0 0.94
+ size 1 0.05
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Grip locked: bend angle follows weapon reach."
+}
+}
+}
+ButtonWidgetClass Hold {
+ position 0.04 0.735
+ size 0.92 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "Hold right lean: ON"
+}
+ButtonWidgetClass Reset {
+ position 0.04 0.8
+ size 0.28 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "Reset"
+}
+ButtonWidgetClass Save {
+ position 0.36 0.8
+ size 0.28 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "Save"
+}
+ButtonWidgetClass Load {
+ position 0.68 0.8
+ size 0.28 0.045
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "Load"
+}
+MultilineTextWidgetClass Status {
+ position 0.04 0.86
+ size 0.92 0.06
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ ignorepointer 1
+ font "gui/fonts/sdf_MetronBook24"
+ textexactsize 14
+ text "Waiting for graph..."
+}
+ButtonWidgetClass Close {
+ position 0.04 0.94
+ size 0.92 0.04
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style Default
+ font "gui/fonts/sdf_MetronBook24"
+ text "Close (F6 / Esc)"
+}
+}
+}
+}
+}
