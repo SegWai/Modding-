@@ -1,0 +1,6 @@
+{
+  "evidence": "Uploaded v33 RPT: Weight Aim, Weight Primary Chain, Weight Secondary Chain are float but bool expected; root graph invalid.",
+  "fix": "WeightAim=false. Both hand-chain enables compare the existing activation expression >0.001. Blend times unchanged. WeaponDirLr/Ud remain numeric as appropriate.",
+  "preserved": "All pose nodes, gun/hand targets, final solver configuration/order, body/legs/head, scripts and range behaviour",
+  "native_status": "Requires native compilation and visual grip test; local expression tests are not native execution."
+}
