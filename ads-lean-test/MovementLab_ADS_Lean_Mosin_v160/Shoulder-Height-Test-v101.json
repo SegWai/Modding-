@@ -1,0 +1,13 @@
+{
+  "base": "v95",
+  "v100_cross_body_shift": "removed",
+  "left_common_hand_shift_m": [
+    0,
+    -0.08173728,
+    0
+  ],
+  "right_hold": "unchanged",
+  "comparison": "Ctrl+F8 retained",
+  "native_captures": "automatic once per moving side/mode",
+  "native_validation": "not run"
+}
