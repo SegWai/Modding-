@@ -43,3 +43,5 @@
 - User confirmed v107 AJ weapons all work. Latest elbow target supersedes 25 degrees: left support elbow 45 degrees away from straight down toward torso during own-left walking raised lean. V108 changes only native left pole direction coefficients to (+/-0.70710678, -0.70710678, 0); right elbow, fixed-wrist math, AJ loadout, camera and workspace retained. Native elbow appearance pending; fixed wrist reach constrains actual angle.
 
 - User corrected direction: left elbow 45 degrees away from vertical down, AWAY from torso, not toward it. V109 reverses only left pole horizontal component (outward from left shoulder relative to torso); keeps downward component, right elbow, AJ loadout, camera and workspace. This supersedes the inward v108 target. Native appearance pending.
+
+- AJs_Weapons_Scripts explicitly requires JM_CF_Scripts. V110 is a launcher-only fix: detect Community Framework (CF), Workshop 1559212036 / @CF, require an installed Addons directory and load CF before AJ (3571685323), workspace and logic. Gameplay PBOs/mission/elbows byte-identical to v109. Do not omit CF in future AJ launchers. Native launch pending.
