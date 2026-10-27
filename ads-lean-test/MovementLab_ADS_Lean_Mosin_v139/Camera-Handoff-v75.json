@@ -1,0 +1,13 @@
+{
+  "base": "v71",
+  "change": "raised first-person wrist binding position-only (mode 1); native camera basis and heading retained",
+  "unchanged": [
+    "pose graph",
+    "v71 smoothing",
+    "grip controls",
+    "sight/optic camera code",
+    "wrist-relative eye position",
+    "render interpolation cadence"
+  ],
+  "native_compilation_and_playback": "not run"
+}
