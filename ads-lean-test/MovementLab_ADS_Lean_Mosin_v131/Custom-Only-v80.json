@@ -1,0 +1,43 @@
+{
+  "base": "v79",
+  "supported_weapons": [
+    "Mosin9130",
+    "AK74"
+  ],
+  "bypasses": [
+    {
+      "mode": "CrouchIdle",
+      "node": "ML80_CustomRaisedCrouchIdle",
+      "native_chain": "LeanIdleCroRasRight",
+      "unleaned_base": "CroIdleRasG"
+    },
+    {
+      "mode": "StandIdle",
+      "node": "ML80_CustomRaisedStandIdle",
+      "native_chain": "LeanIdleErcRasRight",
+      "unleaned_base": "ErcIdleRasG"
+    },
+    {
+      "mode": "CrouchWalk",
+      "node": "ML80_CustomRaisedCrouchWalk",
+      "native_chain": "LeanMoveCroRasRight",
+      "unleaned_base": "CroMoveLookHeadT"
+    },
+    {
+      "mode": "StandWalk",
+      "node": "ML80_CustomRaisedStandWalk",
+      "native_chain": "LeanMoveErcRasRight",
+      "unleaned_base": "ErcMoveLookHeadT"
+    }
+  ],
+  "selector": "MLADSLeanSmoothLow (1 for supported active custom system, 0 for other weapons)",
+  "endpoint_optimization": true,
+  "stock_raised_chain_evaluated_for_supported_rifles": false,
+  "lowered_lean_unchanged": true,
+  "backup": {
+    "file": "artifacts/MovementLab_ADS_Lean_Mosin_v79.zip",
+    "sha256": "cd7ea3cb47d8750c4e3be26801be0658da018c3032432ad2e290536a1b030854",
+    "commit": "bbe890c"
+  },
+  "native_compilation_and_playback": "not run"
+}
