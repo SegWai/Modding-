@@ -45,3 +45,5 @@
 - User corrected direction: left elbow 45 degrees away from vertical down, AWAY from torso, not toward it. V109 reverses only left pole horizontal component (outward from left shoulder relative to torso); keeps downward component, right elbow, AJ loadout, camera and workspace. This supersedes the inward v108 target. Native appearance pending.
 
 - AJs_Weapons_Scripts explicitly requires JM_CF_Scripts. V110 is a launcher-only fix: detect Community Framework (CF), Workshop 1559212036 / @CF, require an installed Addons directory and load CF before AJ (3571685323), workspace and logic. Gameplay PBOs/mission/elbows byte-identical to v109. Do not omit CF in future AJ launchers. Native launch pending.
+
+- Latest elbow targets for the same own-left raised walking lean: RIGHT 45 degrees from straight down, outward away from torso; LEFT 20 degrees from straight down, outward away from torso. V111 changes pole directions only and removes the right forward-pole fallback that would override the requested direction. Shared NPC/player scope; keep AJ loadout, CF dependency and Ctrl+F8. Native achieved angle is reach-constrained and unverified.

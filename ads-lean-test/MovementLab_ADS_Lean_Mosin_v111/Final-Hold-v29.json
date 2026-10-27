@@ -1,0 +1,14 @@
+{
+  "request": "When walking to his own left while aiming/leaning, move weapon15cm to his own right, opposite travel. Keep body movement.",
+  "direction": "Anatomical left is negative local MLADSLeanAmount. Model +X is anatomical right. Supersedes earlier screen-left interpretation.",
+  "translation_metres": 0.15,
+  "bones": [
+    "RightArm",
+    "LeftArm"
+  ],
+  "ordering": "AimObstructionT -> NormalWeaponIK -> ML29_FinalRightChestHold -> existing head passes -> SickHotColdQ. No weapon IK after final shift.",
+  "attachment": "Remove custom outputweaponoffsettobuffer=true from NormalWeaponIK config, restoring original uploaded native default configuration for attachment output instead of publishing a weapon offset before the final shift.",
+  "removed": "Old positive-lean35cm pre-IK shoulder translation",
+  "preserved": "All other graph nodes/body/head/leg/gait transforms, weapon rotation/cant expressions, range scripts, equipment, ammunition, death/respawn",
+  "native_limit": "Final transform hierarchy/math and source routing checked locally; native graph evaluation, attachment path, grips, camera and shooting alignment require DayZ. This is a changed implementation, not a verified runtime fix."
+}
