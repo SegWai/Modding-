@@ -1,0 +1,10 @@
+{
+  "evidence": "v58 launcher and script58 confirmed; no mod compile error; no camera-correction telemetry in v58",
+  "changes": [
+    "neutral full camera-to-rifle matrix, not just eye position",
+    "support chain enabled inside existing custom vertical branch independent of ArmIK flags",
+    "camera telemetry",
+    "negative bone-handle readback fix"
+  ],
+  "native_playback": "pending"
+}
