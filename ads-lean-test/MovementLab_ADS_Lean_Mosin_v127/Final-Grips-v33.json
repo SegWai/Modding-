@@ -1,0 +1,17 @@
+{
+  "evidence": "User front and side screenshots show support hand detached below fore-end and palm not wrapping the actual gun. No v32 runtime log was supplied with these images.",
+  "ordering": "NormalWeaponIK -> unchanged21 v32 reference-pose rotations -> ML33_FinalGripIK -> existing head corrections",
+  "native_grip_targets": [
+    "RightHandOrigin",
+    "RightHand_Dummy",
+    "LeftHandIKTarget"
+  ],
+  "aim_weight": 0,
+  "primary_chain_weight": "clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*clamp(MovementSpeed, 0.0, 1.0)*MLADSLeanWeaponShift",
+  "secondary_chain_weight": "clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*clamp(MovementSpeed, 0.0, 1.0)*MLADSLeanWeaponShift",
+  "weapon_roll": "empty: preserve existing cant instead of applying another roll",
+  "attachment_output": "outputweaponoffsettobuffer = true on the final grip solver",
+  "historical_correction": "Earlier README statements that the original uploaded NormalWeaponIK omitted outputweaponoffsettobuffer were incorrect. Original locomotion.agf line3891 explicitly enables it. This revision puts that publication after the final pose/hand solve.",
+  "preserved": "All v32 pose correction amounts, body/head/leg/gait nodes, original aim solver, script controller, range behaviour and equipment",
+  "native_status": "Native hand-chain and attachment solve not executable here. Source ordering/configuration checks cannot prove grip contact or preserved gun placement. Needs in-game visual verification."
+}

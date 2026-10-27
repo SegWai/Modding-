@@ -1,0 +1,19 @@
+{
+  "base": "v81",
+  "v82_balance_change": "reverted",
+  "new_solver": "ML83_LeftTransitionAimIK",
+  "weight": "clamp(-MLADSLeanAmount*8.0, 0.0, 1.0)*clamp((1.0+MLADSLeanAmount)*8.0, 0.0, 1.0)*MLADSLeanGate*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed, 0.0, 1.0))",
+  "native_config_source": "NormalWeaponIK",
+  "aim_primary_and_secondary": true,
+  "blend_seconds": 0,
+  "output_weapon_offset": true,
+  "scope": "partial standing-left lean only",
+  "unchanged": [
+    "camera source",
+    "script timing",
+    "authored transforms",
+    "neutral/full lean endpoints",
+    "right/walking/crouched paths"
+  ],
+  "native_compilation_and_playback": "not run"
+}
