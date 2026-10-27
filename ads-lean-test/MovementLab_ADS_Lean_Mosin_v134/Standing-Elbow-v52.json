@@ -1,0 +1,9 @@
+{
+  "scope": "Standing stationary anatomical LEFT lean, shared player/NPC. Other poses and head reach unchanged.",
+  "seed_radians": -1.047197551197,
+  "seed_degrees": 60,
+  "desired_visual": "Right upper arm raised toward shoulder level, approximately horizontal; almost 90 degrees from vertical. Seed value is not final joint angle.",
+  "v51_observed": "Native captured RightForeArm was 6.42cm outward and5.48cm up from pre-adjustment, but elbow still18.97cm below shoulder. Grip/wrist displacement from predicted v50 was about1.8mm.",
+  "method": "Increase existing outward upper-arm seed20->60 degrees; same native captured-hand IK2 restore; no hand/weapon/head reposition.",
+  "native_validation": "V52 NOT RUN. Native v51 evidence confirms elbow motion, but v52 height and visual clearance require in-game check."
+}
