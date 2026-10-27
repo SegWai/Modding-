@@ -1,0 +1,384 @@
+{
+  "setup": "AK74_raised",
+  "measurement_basis": "Head-bone model-X displacement from each run's neutral. Eyes/chest/root/feet retained for exposure and footprint review.",
+  "runs": {
+    "custom": {
+      "session": "35242",
+      "head_extent_m": {
+        "left": 0.320697,
+        "right": 0.034276000000000015
+      },
+      "details": {
+        "left": {
+          "head_signed_dx_m": -0.320697,
+          "chest_signed_dx_m": -0.18312599999999998,
+          "eye_centre_signed_dx_m": -0.345546,
+          "root_translation_m": 0.0,
+          "left_foot_ms": [
+            -0.376892,
+            0.100256,
+            -0.159341
+          ],
+          "right_foot_ms": [
+            0.132337,
+            0.099533,
+            0.025991
+          ]
+        },
+        "right": {
+          "head_signed_dx_m": 0.034276000000000015,
+          "chest_signed_dx_m": 0.007005,
+          "eye_centre_signed_dx_m": 0.037604,
+          "root_translation_m": 0.0,
+          "left_foot_ms": [
+            -0.35911,
+            0.112835,
+            0.000549
+          ],
+          "right_foot_ms": [
+            0.091055,
+            0.09909,
+            -0.126921
+          ]
+        }
+      },
+      "samples": {
+        "0": {
+          "samples": 20,
+          "duration_ms": 952,
+          "head_ms": [
+            0.118624,
+            1.549979,
+            0.081909
+          ],
+          "chest_ms": [
+            0.000655,
+            1.202538,
+            -0.015073
+          ],
+          "pelvis_ms": [
+            -0.002522,
+            0.965142,
+            -0.002477
+          ],
+          "left_foot_ms": [
+            -0.089119,
+            0.096502,
+            0.263142
+          ],
+          "right_foot_ms": [
+            0.126012,
+            0.103138,
+            -0.212851
+          ],
+          "eye_centre_ms": [
+            0.157165,
+            1.583586,
+            0.173503
+          ],
+          "root_ws": [
+            4440.0,
+            339.008148,
+            10240.0
+          ],
+          "actor_ypr": [
+            145.0,
+            0.0,
+            -0.0
+          ],
+          "head_x_min": 0.117359,
+          "head_x_max": 0.119556
+        },
+        "1": {
+          "samples": 20,
+          "duration_ms": 946,
+          "head_ms": [
+            0.1529,
+            1.542649,
+            0.000656
+          ],
+          "chest_ms": [
+            0.00766,
+            1.20022,
+            -0.080262
+          ],
+          "pelvis_ms": [
+            -0.015446,
+            0.964934,
+            -0.058332
+          ],
+          "left_foot_ms": [
+            -0.35911,
+            0.112835,
+            0.000549
+          ],
+          "right_foot_ms": [
+            0.091055,
+            0.09909,
+            -0.126921
+          ],
+          "eye_centre_ms": [
+            0.194769,
+            1.578745,
+            0.08981
+          ],
+          "root_ws": [
+            4440.0,
+            339.008148,
+            10240.0
+          ],
+          "actor_ypr": [
+            145.0,
+            0.0,
+            -0.0
+          ],
+          "head_x_min": 0.151854,
+          "head_x_max": 0.153752
+        },
+        "-1": {
+          "samples": 20,
+          "duration_ms": 953,
+          "head_ms": [
+            -0.202073,
+            1.53816,
+            0.005528
+          ],
+          "chest_ms": [
+            -0.182471,
+            1.170099,
+            -0.074112
+          ],
+          "pelvis_ms": [
+            -0.139719,
+            0.939499,
+            -0.045355
+          ],
+          "left_foot_ms": [
+            -0.376892,
+            0.100256,
+            -0.159341
+          ],
+          "right_foot_ms": [
+            0.132337,
+            0.099533,
+            0.025991
+          ],
+          "eye_centre_ms": [
+            -0.188381,
+            1.581671,
+            0.099992
+          ],
+          "root_ws": [
+            4440.0,
+            339.008148,
+            10240.0
+          ],
+          "actor_ypr": [
+            145.0,
+            0.0,
+            -0.0
+          ],
+          "head_x_min": -0.202481,
+          "head_x_max": -0.201834
+        }
+      }
+    },
+    "native": {
+      "session": "70520",
+      "head_extent_m": {
+        "left": 0.420016,
+        "right": 0.219233
+      },
+      "details": {
+        "left": {
+          "head_signed_dx_m": -0.420016,
+          "chest_signed_dx_m": -0.109014,
+          "eye_centre_signed_dx_m": -0.459966,
+          "root_translation_m": 0.0,
+          "left_foot_ms": [
+            -0.087175,
+            0.159491,
+            0.258571
+          ],
+          "right_foot_ms": [
+            0.127009,
+            0.148576,
+            -0.20099
+          ]
+        },
+        "right": {
+          "head_signed_dx_m": 0.219233,
+          "chest_signed_dx_m": 0.052197,
+          "eye_centre_signed_dx_m": 0.234576,
+          "root_translation_m": 0.0,
+          "left_foot_ms": [
+            -0.089095,
+            0.096453,
+            0.263251
+          ],
+          "right_foot_ms": [
+            0.126208,
+            0.103045,
+            -0.212635
+          ]
+        }
+      },
+      "samples": {
+        "1": {
+          "samples": 20,
+          "duration_ms": 944,
+          "head_ms": [
+            0.337227,
+            1.426134,
+            0.079145
+          ],
+          "chest_ms": [
+            0.052691,
+            1.19361,
+            -0.01675
+          ],
+          "pelvis_ms": [
+            -0.003272,
+            0.965165,
+            -0.00366
+          ],
+          "left_foot_ms": [
+            -0.089095,
+            0.096453,
+            0.263251
+          ],
+          "right_foot_ms": [
+            0.126208,
+            0.103045,
+            -0.212635
+          ],
+          "eye_centre_ms": [
+            0.388062,
+            1.436442,
+            0.170325
+          ],
+          "root_ws": [
+            4440.0,
+            339.008148,
+            10240.0
+          ],
+          "actor_ypr": [
+            145.0,
+            0.0,
+            -0.0
+          ],
+          "head_x_min": 0.336307,
+          "head_x_max": 0.338
+        },
+        "-1": {
+          "samples": 20,
+          "duration_ms": 951,
+          "head_ms": [
+            -0.302022,
+            1.565457,
+            0.054114
+          ],
+          "chest_ms": [
+            -0.10852,
+            1.253179,
+            -0.042384
+          ],
+          "pelvis_ms": [
+            -0.031929,
+            1.033402,
+            -0.028392
+          ],
+          "left_foot_ms": [
+            -0.087175,
+            0.159491,
+            0.258571
+          ],
+          "right_foot_ms": [
+            0.127009,
+            0.148576,
+            -0.20099
+          ],
+          "eye_centre_ms": [
+            -0.30648,
+            1.616428,
+            0.145691
+          ],
+          "root_ws": [
+            4440.0,
+            339.008148,
+            10240.0
+          ],
+          "actor_ypr": [
+            145.0,
+            0.0,
+            -0.0
+          ],
+          "head_x_min": -0.302612,
+          "head_x_max": -0.301363
+        },
+        "0": {
+          "samples": 20,
+          "duration_ms": 945,
+          "head_ms": [
+            0.117994,
+            1.549422,
+            0.081518
+          ],
+          "chest_ms": [
+            0.000494,
+            1.202529,
+            -0.016332
+          ],
+          "pelvis_ms": [
+            -0.003236,
+            0.965259,
+            -0.001803
+          ],
+          "left_foot_ms": [
+            -0.088901,
+            0.096574,
+            0.263168
+          ],
+          "right_foot_ms": [
+            0.125997,
+            0.10308,
+            -0.212494
+          ],
+          "eye_centre_ms": [
+            0.153486,
+            1.583504,
+            0.174163
+          ],
+          "root_ws": [
+            4440.0,
+            339.008148,
+            10240.0
+          ],
+          "actor_ypr": [
+            145.0,
+            0.0,
+            -0.0
+          ],
+          "head_x_min": 0.117133,
+          "head_x_max": 0.118772
+        }
+      }
+    }
+  },
+  "native_target_chosen": false,
+  "native_left_right_asymmetry_m": 0.200783,
+  "native_observed_head_x_range_max_m": 0.001693,
+  "meaningful_native_asymmetry": true,
+  "shared_vanilla_midpoint_candidate_m": 0.3196245,
+  "custom_minus_native_extent_m": {
+    "left": -0.09931899999999999,
+    "right": -0.18495699999999998
+  },
+  "next_step": "Report native side difference before selecting a symmetric target; no pose correction applied by this analyzer.",
+  "source_archive": "Mosin-Lean-v49-Logs-20261026-072134.zip",
+  "source_sha256": "52518a420da6e4285f987c9564eeb8aabbbd872e01a9605e6947468e0d349846",
+  "native_reference_verified": "Native mission marker confirms original game workspace, without custom workspace PBO. Same AK74_raised setup, actor yaw145, root4440/339.008148/10240 in both runs.",
+  "decision_pending": "Native movement is asymmetric by20.0783cm. Matching exact native distances conflicts with equal travel from neutral; no target selected and no animation changed.",
+  "conservative_equal_travel_candidate_m": 0.219233,
+  "neutral_head_x_native_m": 0.117994
+}
