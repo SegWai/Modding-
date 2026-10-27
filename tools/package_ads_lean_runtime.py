@@ -13,10 +13,13 @@ FILES=(
 REFERENCE_FILES=('Launch-Vanilla-Lean-Reference.cmd','Missions/MLADSLeanNativeReference.ChernarusPlus/init.c')
 def runtime_files(kit):
  kit=Path(kit)
+ files=FILES
+ if (kit/'MLLeanPreset.json').is_file():
+  files=files+('MLLeanPreset.json',)
  if any((kit/name).exists() for name in REFERENCE_FILES):
   if not all((kit/name).is_file() for name in REFERENCE_FILES):raise ValueError('Incomplete native reference launcher/mission')
-  return FILES+REFERENCE_FILES
- return FILES
+  return files+REFERENCE_FILES
+ return files
 
 def package(kit,out):
  kit=Path(kit);out=Path(out);expected={}
