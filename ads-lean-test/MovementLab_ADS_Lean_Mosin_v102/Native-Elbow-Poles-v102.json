@@ -1,0 +1,21 @@
+{
+  "base": "v101",
+  "goal": "left elbow down/in, right out during own-left moving raised lean",
+  "calibration": "one-shot from native pose with addon disabled, held until mode/weapon change",
+  "private_targets": [
+    "ML102_LeftWristHold",
+    "ML102_RightWristHold"
+  ],
+  "controls": [
+    "ML102ElbowEnabled",
+    "ML102LeftX",
+    "ML102LeftY",
+    "ML102LeftZ",
+    "ML102RightX",
+    "ML102RightY",
+    "ML102RightZ"
+  ],
+  "scope_weight": "clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML102ElbowEnabled",
+  "backpack": "explicit Back slot AliceBag_Green then MountainBag_Green fallback",
+  "native_validation": "not run"
+}
