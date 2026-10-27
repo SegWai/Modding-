@@ -1,10 +1,10 @@
 """Offline both-side target/persistence-routing and final native muzzle wiring checks."""
 from pathlib import Path
-import json,re,math
+import json,re,math,sys
 import numpy as np
 from scipy.spatial.transform import Rotation
 from dayz_graph_formats import newnodes
-ROOT=Path(__file__).resolve().parents[1];KIT=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v147';BASE=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v146'
+ROOT=Path(__file__).resolve().parents[1];KIT=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v147';BASE=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v146'
 spec=json.loads((KIT/'Both-Sides-Editor-v147.json').read_text());right=json.loads((KIT/'Live-Editor-v144.json').read_text());rng=np.random.default_rng(147)
 def coefficients(points,values):
  orientation=Rotation.from_euler('xyz',values[3:6],degrees=True).as_matrix();off=np.array([values[0],values[1]+5,values[2]])*.01;rt=points['RightHand']+off;targets={'Right':rt,'Left':rt+orientation@(points['LeftHand']-points['RightHand'])};out=[];error=0.
