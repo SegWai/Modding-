@@ -83,3 +83,5 @@
 - V128: user requests Z=-10cm on BOTH full stationary standing leans. Add separate sign-scoped late rotation solves from native-derived v55 standing references, both wrist targets [0,0,-.10]m, no added X/Y. Third-person standing shouldered-gun path, native lean interpolation, Ctrl+F8. Preserve walking layers, first-person/crouch, +1deg right idle roll, recorder/camera. Actual current native standing pose was not newly captured; visible depth/grip pending.
 
 - User restored standing Z=0 by returning to v127, then asked Y=-10cm BOTH full standing leans. V129 is based on v127 (not v128), both standing targets [0,-0.10,0]m relative each native-derived standing reference. Walking offsets and right stationary +1deg roll retained. No standing Z shift. Native height/grip check pending.
+
+- Latest standing target supersedes v129: BOTH full standing leans Y=-5cm (not -10), X=0/Z=0. V130 retains original v127 walking settings and +1deg standing-right roll; same recorder/control scope. Native placement pending.

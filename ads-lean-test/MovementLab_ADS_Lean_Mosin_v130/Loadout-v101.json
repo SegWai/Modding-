@@ -1,0 +1,37 @@
+{
+  "weapons": {
+    "AK74": "retained in hands",
+    "MP5K": [
+      "MP5k_StockBttstck",
+      "MP5_RailHndgrd",
+      "PistolSuppressor",
+      "ReflexOptic",
+      "UniversalLight",
+      "Battery9V",
+      "Mag_MP5_30Rnd"
+    ],
+    "FNX45": [
+      "PistolSuppressor",
+      "FNP45_MRDSOptic",
+      "TLRLight",
+      "Battery9V",
+      "Mag_FNX45_15Rnd"
+    ],
+    "SVD": [
+      "AK_Suppressor",
+      "PSO1Optic",
+      "Battery9V",
+      "Mag_SVD_10Rnd"
+    ]
+  },
+  "replaced": "player Mosin",
+  "quickbar": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "npc": "AK74 unchanged",
+  "source": "official SDK 1.30 OnDebugSpawn lists plus compatible suppressor choice",
+  "native_validation": "not run"
+}
