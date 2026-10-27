@@ -1,0 +1,50 @@
+{
+  "workshop_id": "2389010221",
+  "source": "user uploaded types.xml, 2026-10-27",
+  "types_sha256": "d586faf29e9eca22e1e76831437697a81da330e2da6abcc2388e11e9f145a1d7",
+  "weapon_magazine_pairs": [
+    [
+      "PNC_W_SCARH",
+      "PNC_SCARH_20Rnd"
+    ],
+    [
+      "PNC_W_HoneyBadger",
+      "PNC_HoneyBadger_30Rnd"
+    ],
+    [
+      "PNC_W_AWM",
+      "PNC_Mag_AWM_5Rnd"
+    ],
+    [
+      "PNC_W_Origin_12ga",
+      "PNC_Origin_Mag"
+    ]
+  ],
+  "attachment_candidates": [
+    "PNC_Suppressor_408Cheytac",
+    "PNC_Suppressor556mm",
+    "PNC_Suppressor556mm_2",
+    "PNC_Aurora_Suppressor",
+    "PNC_BarretM82A1_Suppressor",
+    "PNC_BarretM82A1_Suppressor_black",
+    "PNC_BarretM82A1_Suppressor_desert",
+    "PNC_Suppressor_338",
+    "PNC_Fal_Compensator_1",
+    "PNC_Fal_Compensator_2",
+    "PNC_Fal_RISHndgrd",
+    "PNC_Fal_PlasticHndgrd",
+    "PNC_Fal_WoodenHndgrd",
+    "PNC_Suppressor_762x39mm_Legion",
+    "PNC_Fal_OeBttstckWooden",
+    "PNC_Fal_OeBttstck",
+    "PNC_Suppressor_65_Creedmore",
+    "PNC_Suppressor_65_Creedmore_tan",
+    "PNC_Suppressor_65_Creedmore_Green",
+    "ACOGOptic",
+    "HuntingOptic",
+    "ReflexOptic",
+    "M4_T3NRDSOptic",
+    "UniversalLight"
+  ],
+  "native_validation": "pending"
+}
