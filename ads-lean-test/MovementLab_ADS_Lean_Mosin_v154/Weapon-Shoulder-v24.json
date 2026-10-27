@@ -1,0 +1,15 @@
+{
+  "reference": "Red mark on picture-left shoulder of NPC facing viewer",
+  "offset_metres": 0.08,
+  "bones": [
+    "RightShoulder",
+    "LeftShoulder"
+  ],
+  "placement": "Before NormalWeaponIK; both arm roots are shifted, then native weapon aim/right-hand/left-hand IK runs. No post-IK gun-only bone translation.",
+  "weight": "clamp(MLADSLeanAmount,0,1)*MLADSLeanGate*clamp(MovementSpeed,0,1)*TestFloat",
+  "comparison": "F5 toggles registered TestFloat0/1 on both actors; enabled by default",
+  "registration": "Unchanged GCT. TestFloat already exists with default0/min0/max1; validate distinct binding before writes.",
+  "native_status": "Needs game test of shoulder/rifle position, grip, sight alignment and movement-direction interpretation",
+  "confirmed_direction": "Screen-left travel/lean as viewed from in front corresponds to anatomical right, positive local movement/lean; offset is model +X (anatomical right).",
+  "user_confirmation": "Left on my screen, toward the red mark"
+}
