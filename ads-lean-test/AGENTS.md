@@ -67,3 +67,5 @@
 - V120 manual replacement: Z=-0.15m relative to same v117 reference, keep X=-0.034483846m and Y=+0.008140797m. This is 30cm backward vs v119 +15cm Z, not an incremental -15cm. Same native rotation-only layer, reference wrists orientations preserved; rendering unverified.
 
 - User rolled back v120 to v119, then requested 10cm MORE. V121 is based on v119, net Z=+0.25m relative v117, X=-0.034483846m and Y=+0.008140797m unchanged. Both reference wrists +0.10m Z vs v119; same scope. Native rendering pending.
+
+- Latest combined manual requests: X=0, Z BACK TO V119 (+0.15m), Y remains +0.008140797m, all relative v117. V122 incorporates both; the earlier pending +25cm version was not released. Compared with v119 only X changes. Native placement pending.

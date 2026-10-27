@@ -1,0 +1,10 @@
+{
+  "workshop_id": "3571685323",
+  "workspace_camera_pose_and_category_scripts": "byte-identical to v106",
+  "loadout": "runtime installed public AJ classes, non-DZ model paths; role preferences with fallback; no guessed class names",
+  "max_spawn_attempts": 12,
+  "max_player_guns": 4,
+  "attachments": "installed config slot compatibility, mod-first; cached parts scan",
+  "firearm_state_check": "native CanProcessWeaponEvents before ammo/quickbar; successful SpawnAmmo required",
+  "native_compile_and_gameplay": "not run"
+}
