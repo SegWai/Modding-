@@ -5,7 +5,7 @@ import numpy as np
 from scipy.spatial.transform import Rotation
 from dayz_graph_formats import newnodes
 ROOT=Path(__file__).resolve().parents[1]
-KIT=ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v144'
+KIT=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else ROOT/'ads-lean-test/MovementLab_ADS_Lean_Mosin_v144'
 spec=json.loads((KIT/'Live-Editor-v144.json').read_text())
 refs={n:np.array(v) for n,v in spec['reference'].items()}
 def turn(a,b):
