@@ -1,0 +1,9 @@
+{
+  "safe_leg_cases": 1412,
+  "unreachable_rejected": 588,
+  "max_endpoint_error_metres": 3.885780586188048e-16,
+  "approved_preset_sha256": "deeaeac1af612bfe4edaa542e6ebabf6da992b163bd7eac56579a0dd4f0bdb61",
+  "new_graph_scope": "late pelvis shift + 18 leg rotations + hand-pivot publication; all existing nodes retained except input to final head alignment",
+  "target_right_head_travel_metres": 0.219,
+  "native_runtime": "NOT RUN; actual calibration/footplant/target displacement need gameplay logs"
+}
