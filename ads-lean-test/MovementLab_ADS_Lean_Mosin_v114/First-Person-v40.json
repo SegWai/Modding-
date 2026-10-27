@@ -1,0 +1,14 @@
+{
+  "evidence": "User video DayZ 2026-10-26 02-02-55.mp4 shows offset raised gun; user clarification: Gun raised only / not sure. Actual ADS input and camera class were not established by that video.",
+  "corrected_diagnosis": "An off-centre optic is normal in raised-only first person; the earlier assertion of broken ADS alignment was not established. A separate source issue was confirmed: F8 inspection applied custom aimed pose regardless of current camera.",
+  "change": "Allow selected-player F8 inspection only when camera name is DayZPlayerCamera3rdPerson. Actual IsInIronsights/IsInOptics input remains authoritative in all views. No ADS camera overrides or input forcing.",
+  "diagnostics": [
+    "view=raised_only/ads_requested/ads_camera/lowered/npc_pose",
+    "camera",
+    "inspection_requested",
+    "inspection_applied",
+    "native_ADS"
+  ],
+  "preserved": "Workspace source and workspace PBO byte-identical to v39. Third-person inspection, actual ADS target eligibility, approved pose, native ADS camera, NPC/range behaviour unchanged.",
+  "native_status": "Needs native view-transition check. If true ADS still misaligns, collect logs with camera mode rather than assuming raised view is ADS."
+}
