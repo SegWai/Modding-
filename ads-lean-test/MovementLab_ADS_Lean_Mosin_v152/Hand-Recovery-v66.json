@@ -1,0 +1,8 @@
+{
+  "reason": "User reports v65 worsened grip: hand completely gone",
+  "restored_graph": "v57 complete graph, before v58-v65 support experiments",
+  "removed": "scripted grip bindings, feedback, dynamic target updates; experimental support/proxy graph nodes and GCT controls",
+  "camera": "v64 approved first-person camera preserved, with version log labels only",
+  "unresolved": "original vertical-aim support-hand separation",
+  "native_validation": "pending"
+}
