@@ -1,0 +1,23 @@
+{
+  "primary": "AK74",
+  "fire_mode": "First mode for which GetCurrentModeAutoFire returns true; not a guessed numeric index",
+  "attachments": [
+    "AK74_WoodBttstck",
+    "AK74_Hndgrd",
+    "AK_Suppressor",
+    "KobraOptic",
+    "Battery9V in optic",
+    "Mag_AK74_30Rnd"
+  ],
+  "backpack_spare_optic": "PSO1Optic",
+  "backup": "Scoped/suppressed Mosin9130 on player shoulder if accepted",
+  "player_and_npc": "Same AK loadout and custom lean graph; NPC remains non-firing patrol target",
+  "unlimited_ammo": "Attached magazine refill every100ms, including while firing; existing Mosin internal reserve logic retained",
+  "native_api_sources": [
+    "scripts/4_world/entities/firearms/automaticrifle/ak74.c",
+    "scripts/4_world/entities/firearms/automaticrifle/akm.c",
+    "scripts/4_world/entities/core/inherited/weapon.c",
+    "scripts/4_world/entities/itembase/magazine/magazine.c"
+  ],
+  "native_status": "Requires compile/equipment/fire/pose check in game"
+}
