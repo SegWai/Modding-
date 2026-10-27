@@ -1,0 +1,5 @@
+{
+  "helper_sha256": "721ef5c35c44ca50f7254bfc3cce16d1e157389d6db1e008b04950cf17533928",
+  "purpose": "Native Panacea weapon handling vs vanilla AK74, no custom workspace/camera/player/ammo scripts",
+  "native_test_status": "not run; requires Windows DayZDiag"
+}
