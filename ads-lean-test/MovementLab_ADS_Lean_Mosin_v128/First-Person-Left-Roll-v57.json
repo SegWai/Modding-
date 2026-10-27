@@ -1,0 +1,6 @@
+{
+  "change": "Camera roll readback uses held rifle up axis for negative character-left lean, including raised non-ADS",
+  "third_person": "No graph, weapon transform, hand IK or third-person camera change",
+  "workspace_sha256": "13ecddde9baadb566678c597c1a7edb84ff0001be2dab0eb880c349c681ea600",
+  "native_playback": "not run"
+}
