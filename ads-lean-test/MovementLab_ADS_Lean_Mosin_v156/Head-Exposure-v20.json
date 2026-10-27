@@ -1,0 +1,15 @@
+{
+  "request": "Expose more head beside the rifle during right lean, with a leftward head angle.",
+  "scope": "Right custom ADS lean only, shared by player and NPC in all stance/movement modes",
+  "bone": "Neck (head descendant, shoulders/arms are siblings outside this subtree)",
+  "neck_roll_toward_anatomical_left_degrees": 10,
+  "model_translation_metres": [
+    -0.025,
+    0.01,
+    0
+  ],
+  "placement": "After NormalWeaponIK and the existing forward head nod",
+  "controls": "Existing MLADSLeanAmount and MLADSLeanGate only; no new GCT variables",
+  "source_model_estimate": "Additional head movement includes the neck-pivot rotation, beyond the fixed 2.5cm sideways and 1cm upward shift. Native appearance requires a test.",
+  "preserved": "All v19 source controller/range behavior, existing head/leg corrections, hands and weapon roll"
+}
