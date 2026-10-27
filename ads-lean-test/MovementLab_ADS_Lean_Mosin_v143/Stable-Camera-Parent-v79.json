@@ -1,0 +1,9 @@
+{
+  "base": "v78",
+  "video_observation": "intermittent enlarged/high rifle while already raised, not just initial raise",
+  "hypothesis": "camera offset combined with IK wrist parenting can produce rendered camera discontinuities",
+  "change": "native head parent retained throughout; same script-computed model-space eye",
+  "pose_graph_and_transition_timings_unchanged": true,
+  "native_render_validation": "not run",
+  "remaining_risk": "weapon-driven eye target can still be a separate source of discontinuity; needs gameplay evidence"
+}
