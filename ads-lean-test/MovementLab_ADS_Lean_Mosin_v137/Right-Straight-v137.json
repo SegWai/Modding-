@@ -1,0 +1,61 @@
+{
+  "pelvis_shift_x_y_and_roll_radians": [
+    -0.021007940888784583,
+    -0.007792908156969206,
+    0.49999999999999994
+  ],
+  "knee_interior_degrees": {
+    "Right": 174.2184856290961,
+    "Left": 166.3134366592408
+  },
+  "left_foot_outward_m": 0.04,
+  "right_foot_fixed": true,
+  "reference": "native-derived v55 with v130 standing arm hold; not newly captured v136",
+  "corrections": {
+    "ML137_RightStraight_Pelvis_Translate_X": -0.021007940888784528,
+    "ML137_RightStraight_Pelvis_Translate_Y": -0.007792908156969092,
+    "ML137_RightStraight_Pelvis_Rotate_Z": -0.5000000000000003,
+    "ML137_RightStraight_LeftUpLeg_Rotate_X": 0.031465110062993226,
+    "ML137_RightStraight_LeftUpLeg_Rotate_Y": 0.038123376657314474,
+    "ML137_RightStraight_LeftUpLeg_Rotate_Z": 0.5579591277026378,
+    "ML137_RightStraight_RightUpLeg_Rotate_X": -0.19636371072031228,
+    "ML137_RightStraight_RightUpLeg_Rotate_Y": -0.05574947089330331,
+    "ML137_RightStraight_RightUpLeg_Rotate_Z": 0.688207919461156,
+    "ML137_RightStraight_Spine_Rotate_X": -0.03121310284434387,
+    "ML137_RightStraight_Spine_Rotate_Y": -0.0010571227797367335,
+    "ML137_RightStraight_Spine_Rotate_Z": 0.12330576513305208,
+    "ML137_RightStraight_Spine1_Rotate_X": -0.03967208978959901,
+    "ML137_RightStraight_Spine1_Rotate_Y": 0.0014110243796775182,
+    "ML137_RightStraight_Spine1_Rotate_Z": -0.01549378343571746,
+    "ML137_RightStraight_LeftLeg_Rotate_X": -0.06784110584265764,
+    "ML137_RightStraight_LeftLeg_Rotate_Y": 0.02978446038504191,
+    "ML137_RightStraight_LeftLeg_Rotate_Z": 0.0642583774484967,
+    "ML137_RightStraight_RightLeg_Rotate_X": 0.40351338757433125,
+    "ML137_RightStraight_RightLeg_Rotate_Y": -0.08211056984105376,
+    "ML137_RightStraight_RightLeg_Rotate_Z": -0.3555490134607387,
+    "ML137_RightStraight_Spine2_Rotate_X": -0.057008849498717734,
+    "ML137_RightStraight_Spine2_Rotate_Y": 0.0008397916074396433,
+    "ML137_RightStraight_Spine2_Rotate_Z": 0.026149607322599477,
+    "ML137_RightStraight_LeftFoot_Rotate_X": 0.018016185499241652,
+    "ML137_RightStraight_LeftFoot_Rotate_Y": -0.04669279437868774,
+    "ML137_RightStraight_LeftFoot_Rotate_Z": -0.12261585067255729,
+    "ML137_RightStraight_RightFoot_Rotate_X": -0.20200268730243384,
+    "ML137_RightStraight_RightFoot_Rotate_Y": -0.0760626124845271,
+    "ML137_RightStraight_RightFoot_Rotate_Z": 0.17960008509056186,
+    "ML137_RightStraight_Head_Rotate_X": 0.1276989851368904,
+    "ML137_RightStraight_Head_Rotate_Y": -0.007266344414407581,
+    "ML137_RightStraight_Head_Rotate_Z": 0.3664462107105424,
+    "ML137_RightStraight_LeftHand_Rotate_X": 0.1276989851368904,
+    "ML137_RightStraight_LeftHand_Rotate_Y": -0.007266344414409581,
+    "ML137_RightStraight_LeftHand_Rotate_Z": 0.36644621071054223,
+    "ML137_RightStraight_RightHand_Rotate_X": 0.12769898513689035,
+    "ML137_RightStraight_RightHand_Rotate_Y": -0.007266344414408596,
+    "ML137_RightStraight_RightHand_Rotate_Z": 0.36644621071054273
+  },
+  "native_validation": "unverified",
+  "head_shift_m": [
+    -0.2301990098546257,
+    0.05724350695177516,
+    0.06440787399720697
+  ]
+}
