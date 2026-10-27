@@ -65,3 +65,5 @@
 - V119 manual coordinate request: relative to native v117 reference retain X=-0.034483846m and Y=+0.008140797m, set Z=+0.15m (not another +15cm). This adds +0.055298662m Z from v118. Only 18 contact-layer rotation amounts re-solved; other logic/scope unchanged. Native target verification pending.
 
 - V120 manual replacement: Z=-0.15m relative to same v117 reference, keep X=-0.034483846m and Y=+0.008140797m. This is 30cm backward vs v119 +15cm Z, not an incremental -15cm. Same native rotation-only layer, reference wrists orientations preserved; rendering unverified.
+
+- User rolled back v120 to v119, then requested 10cm MORE. V121 is based on v119, net Z=+0.25m relative v117, X=-0.034483846m and Y=+0.008140797m unchanged. Both reference wrists +0.10m Z vs v119; same scope. Native rendering pending.
