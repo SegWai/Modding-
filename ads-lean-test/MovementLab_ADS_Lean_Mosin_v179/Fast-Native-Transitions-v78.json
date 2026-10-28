@@ -1,0 +1,12 @@
+{
+  "base": "v77",
+  "lean": "native interpolated state directly; no extra low-pass lag",
+  "custom_raise_lower_seconds": 0.08,
+  "previous_custom_raise_lower_seconds": 0.36,
+  "custom_gait_seconds": 0.08,
+  "previous_custom_gait_seconds": 0.2,
+  "camera_unchanged": true,
+  "graph_and_grip_timing_unchanged": true,
+  "native_fire_eligibility_unchanged": true,
+  "native_playback": "not run"
+}
