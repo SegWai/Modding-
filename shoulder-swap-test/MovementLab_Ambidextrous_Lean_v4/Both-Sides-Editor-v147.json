@@ -1,0 +1,61 @@
+{
+  "controls": [
+    "ML147LeftHoldLeftArmX",
+    "ML147LeftHoldLeftArmY",
+    "ML147LeftHoldLeftArmZ",
+    "ML147LeftHoldLeftForeArmX",
+    "ML147LeftHoldLeftForeArmY",
+    "ML147LeftHoldLeftForeArmZ",
+    "ML147LeftHoldLeftHandX",
+    "ML147LeftHoldLeftHandY",
+    "ML147LeftHoldLeftHandZ",
+    "ML147LeftHoldRightArmX",
+    "ML147LeftHoldRightArmY",
+    "ML147LeftHoldRightArmZ",
+    "ML147LeftHoldRightForeArmX",
+    "ML147LeftHoldRightForeArmY",
+    "ML147LeftHoldRightForeArmZ",
+    "ML147LeftHoldRightHandX",
+    "ML147LeftHoldRightHandY",
+    "ML147LeftHoldRightHandZ",
+    "ML147LeftMuzzleYaw",
+    "ML147LeftMuzzlePitch",
+    "ML147RightMuzzleYaw",
+    "ML147RightMuzzlePitch"
+  ],
+  "left_seed": {
+    "LeftArm": [
+      -0.361443383490941,
+      1.3640101066614732,
+      0.0997619999999999
+    ],
+    "LeftForeArm": [
+      -0.4723239898476885,
+      1.2406812133793124,
+      0.337650129053884
+    ],
+    "LeftHand": [
+      -0.2322699999999995,
+      1.3748086804096349,
+      0.3407990000000001
+    ],
+    "RightArm": [
+      -0.1891909879728767,
+      1.4266238311017925,
+      -0.12698700000000002
+    ],
+    "RightForeArm": [
+      -0.030167015573078174,
+      1.1857526389584252,
+      -0.15512564585620553
+    ],
+    "RightHand": [
+      -0.12773999999999985,
+      1.3400056804096352,
+      0.05326400000000009
+    ]
+  },
+  "scope": "both stationary standing third-person sides",
+  "muzzle": "native WeaponDirLr/Ud degrees in final publish and support IK",
+  "native_validation": "not run"
+}

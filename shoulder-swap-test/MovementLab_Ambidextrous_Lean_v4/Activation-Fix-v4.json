@@ -1,0 +1,17 @@
+{
+  "reported": "camera swaps left, gun stays right",
+  "confirmed_code_defect": "inactive/not-raised branch drove camera from request instead of applied pose",
+  "changes": [
+    "all live camera decisions use LeftActive",
+    "automatic neutral bone reference before loadout",
+    "bounded state diagnostics in logs"
+  ],
+  "unchanged": [
+    "graph",
+    "left weapon IK publisher",
+    "four approved preset banks",
+    "saved original186"
+  ],
+  "remaining_uncertainty": "if native left weapon publisher actually anchors/aims/fire correctly; new state logs distinguish readiness vs publication failure",
+  "native_v4": "NOT RUN"
+}

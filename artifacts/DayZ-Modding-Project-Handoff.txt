@@ -374,3 +374,16 @@ one BlendWeight field with equivalent clamp(active+oldGate,0,1). Scripts/input/
 2002binary gate-equivalence cases and no-newfunction/exactdiff/PBOchecks pass.
 This is a leading-suspect correction, NOT confirmed rootcause or native fix.
 Nativev3load/leftweaponIK/handedness/gameplay NOT RUN. Originallean186preserved.
+
+Ambidextrous v4 — camera-only activation bug, automatic neutral setup
+Userreportsv3gameplayshouldertoggleonlymovescamera. Confirmedsourcebug:
+inactiveweaponbranchusedLeftRequestedforcameraevenwhenposeoutputdisabled;
+waitingneutralbranchleftoldcamerasideunchanged. V4camerafollowsLeftActiveONLY,
+allinactive/pending/rejectedstatesstayright. No claimnativeleftIKitselfverified.
+Newmissioninitiallyemptyhands, captures50neutralboneaxesautomatically(.4s),
+thencreatesnormalloadout/equipsAK.100mspoll,5secmaxfallbacklogsfailedsetup,
+cleanupcancelscallback. Noforcednativeplayercontrols. Manualstowusuallyunneeded.
+Boundedstatelogsdistinguishwaiting/rejected/activeleftandmissingboneerrors.
+Graph/leftIK/input/4presetsunchangedv3.64readinesscases/setup/PBOcheckspass.
+Nativev4weaponleft/contact/fire/ADSremainUNTESTED. Ifleftcamera/rightgunpersists
+whilelogactiveleft, actualnativeleftweaponpublicationisnextisolationtarget.

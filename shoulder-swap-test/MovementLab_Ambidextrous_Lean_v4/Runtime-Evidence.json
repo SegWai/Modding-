@@ -1,0 +1,75 @@
+{
+  "evidence": "User corrects v40: wants custom raised first-person pose preserved, snap removed. Video contains raised non-ADS movement transitions; no matching runtime log identifying snap trigger supplied.",
+  "change": "Restore raised custom pose in both views by default; shared lean and custom movement smoothing; final grip solver blend80ms ->220ms.",
+  "native_status": "Not run in DayZ here. Source/steady-state/rate checks do not establish native playback smoothness.",
+  "standing_right_pose_v45": {
+    "scope": "Standing still, weapon raised/aiming, anatomical right only. Shared player/NPC graph; no NPC patrol, walking, crouch or left-lean control changes.",
+    "source_log": "Mosin-Lean-v44-Logs-20261026-053626.zip",
+    "source_capture": "82178_false",
+    "target_capture": "67091_true",
+    "reference_observed": "lean=1 move_blend=0 gate=1 raised=true; 114 bones; static reference completion marker present",
+    "local_validation": "7/7 tests passed: native capture reconstruction, graph chain/sign/values, boolean attachment-only pass, steady endpoint activation, unchanged prior nodes/control-template/runtime, private resource and PBO integrity",
+    "native_compilation_and_playback": "V45 NOT RUN. Test in user Windows DayZ; exact visual match and attachment publication remain unverified."
+  },
+  "first_person_and_walk_v46": {
+    "camera_source_contract": "Official 1.30 DayZPlayerCamera1stPerson native direct-bone mode 1 follows position only. Ironsights/Optics use mode 4 aligned Y. Local camera-Z roll preserves native forward/position and adds evaluated head/weapon roll. Native sight transform and camera selection remain.",
+    "body_graph": "Byte-identical to approved v45 standing-right transfer workspace and PBO. No animation value changes.",
+    "camera_hooks": "Raised 1stPerson and Ironsights OnUpdate; optics inherits the latter once; super executes before additive roll; smoothing time constant .18s.",
+    "recording": "36 consecutive samples nominal24Hz, one native NPC anatomical-left walking-aiming pass; all114 bone matrices, weapon/actor transforms and game-time stamps; restarts on direction/state change or gap>250ms.",
+    "blender_import_validation": "Fixture-only 36-frame import/playback/reopen passed in Blender4.3.2. Fixture repeats two real isolated snapshots to exercise serialization; it is not a captured gait and is not distributed as an animation. Real continuous v46 data still required.",
+    "native_compilation_playback": "NOT RUN. First-person camera roll direction, amount, native sight registration and real recorder timing require user Windows DayZ validation."
+  },
+  "frame15_left_reference_v47": {
+    "source": "Captured_Left_Lean_Walk_20261026_061044.blend",
+    "approved_frame": 15,
+    "native_sample_index": 14,
+    "native_capture_id": "33626_true",
+    "session": "32901",
+    "current_change": "Read-only standing-left collector and preserved full native frame15 target; no pose application yet",
+    "needed_reference": "Player standing still, weapon raised/aiming, anatomical left, custom gate1, lean-1, movement0",
+    "body_graph_and_fp_camera": "Unchanged from v46",
+    "native_run": "Pending Windows user run"
+  },
+  "standing_left_frame15_v48": {
+    "source_reference_archive": "Mosin-Lean-v47-Logs-20261026-063217.zip",
+    "source_capture_id": "37205_false",
+    "reference": "114 bones; stationary anatomical-left lean=-1, move_blend=0, custom gate=1, raised=true; completion marker present",
+    "approved_target": "Uploaded frame15, native sample index14, captured ID33626_true",
+    "implementation": "Shared post-IK left-only procedural branch after existing approved right branch; final attachment-only publication with aim/arm weights false; old graph nodes unchanged except single output edge.",
+    "regression": "7 tests passed: target reconstruction, signed transform chain, left-only gate/disjoint right, unchanged old nodes/runtime/camera, PBO resource integrity and 10-file essential-only ZIP",
+    "native_compilation_playback": "V48 NOT RUN: exact visual match, procedural node native semantics, idle sway and weapon publication need user Windows DayZ verification.",
+    "zip_policy": "Runtime essentials only; no authoring sources, Blender files/helpers/templates or previews. In-repository source/authoring records retained."
+  },
+  "original_distance_calibration_v49": {
+    "current_behavior": "Measurement only, no pose/foot/camera edits. Existing v48 workspace and camera script unchanged.",
+    "reference_launch": "Original game workspace with logic recorder only; no custom workspace PBO; separate native mission disables custom settings, does not spawn a demo NPC, private bindings must be absent.",
+    "measurement": "Local stationary raised player; neutral/Q/E; 20 samples after .5s stable state; same gun/raised-vs-sight mode locked; head/eyes/chest/pelvis/feet/root and full actor/bone/weapon transforms logged. No chosen centimetre target.",
+    "comparison": "Neutral-relative model-space head displacement on each side; report native asymmetry before deciding a shared balanced target. Keep footprints and visual similarity during subsequent correction.",
+    "native_compile_playback": "NOT RUN: requires Windows native/custom test runs."
+  },
+  "balanced_32cm_reach_v50": {
+    "user_selected_target": "Final Head-bone model X = -0.32m left and +0.32m right relative to actor/body root centre, NOT equal travel from off-centre neutral aiming head.",
+    "reference": "Actual v49 custom standing captures46472_false/41528_false, from verified AK74_raised measurements; actor root unchanged.",
+    "authored_changes": "Planted-foot hip shift4.13cm left/3.86cm right; distributed extra spine rotation9.17deg left/17.08deg right. Two-bone leg and arm solves; head/hand/gun orientations retained; hands/head common translation.",
+    "foot_preservation": "Both feet, ankle/toe transforms and segment lengths verified unchanged in model space. Actor position is never written by new code.",
+    "idle_trim": "Shared standing-only .25s feedback, +/-2cm cap, upper-Spine X only; .2s settling; fades out outside full custom stationary lean.",
+    "scope": "Existing graph nodes unchanged except final routing edge. New layer inactive for walking/crouch/neutral/lowered/native. First-person camera code unchanged.",
+    "validation": "8 local tests pass: exact final head points, planted feet and limb lengths, preserved grip/head/gun relationships, old-mode isolation, serialized native chain signs, bounded residual feedback, old player logic isolation, GCT bindings/PBO resources/runtime-only ZIP. Authoring recipe reproduces exactly. Internal landmark-rig previews inspected; no native game playback validation.",
+    "distribution": "10 runtime/diagnostic files only; no Blender files/templates/previews/helpers/sources."
+  },
+  "standing_left_elbow_v51": {
+    "request": "Right elbow clips torso in stationary character-left lean; reuse earlier NPC elbow adjustment.",
+    "change": "Same v38 RightArm model-Z outward -20degree seed, then captured RHandIKTarget native IK2 restore; placed after v50 balanced pose.",
+    "scope": "Shared player/NPC, stationary standing custom left lean only. Right, walk, crouch, head reach, feet and camera unchanged.",
+    "verification": "Source chain equivalence, scalar activation scope, unchanged prior graph/script nodes, packed resource/hash and runtime-only archive passed. Native elbow clearance/grip not run here."
+  },
+  "elbow_height_v52": {
+    "measured_v51_head_reach_cm": {
+      "left": 31.9639,
+      "right": 32.2791
+    },
+    "v51_native_pose": "No lean script compile/graph error found; both states recorded. Native elbow moved outward/up, confirming standing elbow chain executes.",
+    "change": "Only ML51_StandingRightElbowOut Amount -20deg -> -60deg. Capture/restore chain, activation and rest of graph unchanged.",
+    "native_validation": "V52 NOT RUN: inspect upper arm near shoulder level and trigger grip."
+  }
+}

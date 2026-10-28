@@ -1,0 +1,10 @@
+{
+  "latest_uploaded_preset_exact": true,
+  "uploaded_preset_sha256": "ff1ee16852d65b56ecc2bf7ceb8c93aac49ccad571817f8c54f9072a38c610ba",
+  "changed_graph_fields": 1,
+  "scope_cases": 2400,
+  "new_left_preview_contact_cases": 12,
+  "stationary_and_right_walk_behaviour_unchanged": true,
+  "no_new_smoothing_or_script_feedback": true,
+  "native_compile_grip_and_elbow_visuals": "NOT RUN"
+}

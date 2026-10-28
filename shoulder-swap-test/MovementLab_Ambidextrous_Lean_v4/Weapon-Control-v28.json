@@ -1,0 +1,11 @@
+{
+  "control": "MLADSLeanWeaponShift",
+  "default": 1,
+  "minimum": 0,
+  "maximum": 1,
+  "reason": "V27 native graph compile errors cleared but user still reports no visible shoulder displacement. Generic native TestFloat is an unverified control path; replace it with private default-on graph control. Native ownership/resetting of TestFloat has not been proven.",
+  "binding": "Same distinct ID validation, post-super CommandHandler write, F5 setting shared by player and NPC",
+  "pose": "Same positive-lean/moving gate, same35cm pre-IK shoulder translation, no other pose changes",
+  "observations": "Remove silent return when either hand bone is absent. Use SDK-confirmed RightHand_Dummy/LeftHand_Dummy attachment bones where available, log indices, always log chest and weapon when held.",
+  "native_status": "Needs native visual test; dedicated control is a repair under test, not proof native IK retains offset."
+}
