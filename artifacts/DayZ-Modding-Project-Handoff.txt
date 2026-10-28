@@ -1,0 +1,242 @@
+DAYZ CUSTOM LEAN MOD — PROJECT HISTORY AND LOCAL-DEVELOPMENT HANDOFF
+Prepared: 28 October 2026
+
+DOCUMENT STATUS
+This is a factual project handoff, not a verbatim conversation export. It summarizes the available conversation, repository records, implementation and current limitations. Original assistant replies from much of the early conversation are unavailable. Missing dialogue has not been reconstructed as fact.
+
+1. PURPOSE AND CURRENT GOAL
+The user is developing custom DayZ weapon-raised/aiming lean poses. They want natural torso, head, arms, elbows, hands, weapon and leg placement with stable support-hand contact, responsive native-style aiming, and smooth transitions without delaying weapon raising or shooting.
+
+A newer stationary lean looks better than the old walking lean. Moving between stationary lean and walking lean visibly changes the torso, arms, head and gun. In particular, stationary left lean places the weapon almost on the left shoulder, whereas walking left lean places it on the right shoulder. The immediate goal is to tune walking lean against the approved stationary pose using two simultaneous NPC references, then apply the approved walking settings to the player.
+
+The user wants local editing and builds instead of repeatedly waiting for remotely prepared ZIP tests. They also want eventual autonomous game testing, but desktop/game-control access has NOT been established.
+
+2. REPOSITORY AND CURRENT VERSION
+Repository: https://github.com/SegWai/Modding-
+Latest runtime/source test at this handoff: v173.
+Feature commit: a90dc6887769554a34ef420063a21bce7e6aa94d
+Commit title: Add isolated walking lean NPC and live F6 F7 editing
+Test directory: ads-lean-test/MovementLab_ADS_Lean_Mosin_v173
+Runtime ZIP: artifacts/MovementLab_ADS_Lean_Mosin_v173.zip
+Direct runtime download:
+https://raw.githubusercontent.com/SegWai/Modding-/a90dc68/artifacts/MovementLab_ADS_Lean_Mosin_v173.zip
+
+Full-project download:
+https://codeload.github.com/SegWai/Modding-/zip/refs/heads/main
+
+Repository engineering history: ads-lean-test/AGENTS.md
+That file contains extensive chronological version notes. Later entries supersede earlier behavior descriptions when scope changed. Several old experiments explicitly failed in native DayZ.
+
+The remote coding session used /workspace/Modding-, with its local work branch pushed to GitHub main. Those Linux paths are not the user's Windows paths.
+
+3. USER-APPROVED STATIONARY PRESET
+Authoritative latest uploaded stationary preset: MLLeanPreset.json.
+Exact bytes: 14,704.
+SHA256: aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d
+
+Canonical repository copies:
+- ads-lean-test/User-Presets/Current-MLLeanPreset.json
+- ads-lean-test/User-Presets/MLLeanPreset-Approved-v161-20261027.json
+- artifacts/MLLeanPreset.json
+
+Each test has the same approved bytes in:
+- MLLeanPreset.json
+- LogicSource/Presets/MLLeanPreset.json
+- Profiles/LeanMosin/MLLeanPreset.json
+
+The user explicitly approved this preset after tuning the v160-derived rightward body movement. It supersedes older saved presets. The historical filename mentioning v161 does not mean the preset should be regenerated from that version's defaults.
+
+The existing active profile save takes priority over bundled fallback. Fresh test folders prevent old active saves from masking shipped changes.
+
+4. CURRENT V173 TWO-NPC EDITING WORKFLOW
+Red hoodie NPC:
+- Original stationary reference, native AK74.
+- Approved stationary settings remain unchanged.
+- Outside editing, its established cycle is left lean, raised centre, right lean, raised centre; each reached pose lasts two seconds, plus transition time.
+
+Blue hoodie NPC:
+- Same Denis character rig for comparison.
+- Positioned 2.5 metres to the red NPC's own right.
+- Native AK74.
+- Alternates left walking lean and right walking lean, two seconds each; no centre phase.
+- Native movement input requests walk speed 1 and local movement angle -90/+90 degrees.
+- Its world origin is restored to a fixed anchor after native CommandHandler, so the walking animation continues in place rather than travelling across the ground.
+
+F6 and F7 in v173 edit BLUE WALKING NPC ONLY.
+- F6: weapon XYZ position, pitch/yaw/roll, muzzle pitch/yaw, arms/elbow bend directions, head rotation.
+- F7: 24 body parts, each with XYZ translation and XYZ rotation: pelvis, spine sections, neck, head, shoulders, upper arms, forearms, hands, thighs, shins, feet and toes.
+- Left/right values are independent.
+- When either editor is open, selecting left/right makes BOTH NPCs hold the chosen lean side. Red remains stationary; blue keeps walking in place on that side.
+- Closing the editor resumes automatic cycles.
+- The older Hold selected lean toggle is hidden because opening the editor now holds the selected side automatically.
+- Holding RMB while a panel is open allows native mouse look and WASD navigation; releasing RMB restores panel mouse focus.
+
+Walking Save All stores BOTH sides, weapon, arms, head and body together:
+Profiles/LeanMosin/MLWalkingLeanPreset.json
+Backup: MLWalkingLeanPreset.json.bak
+
+The walking save has the same data schema as the stationary combined preset, but is a separate file and independent data bank. Its initial values are a separately loaded copy of the approved stationary preset. Applying those values over a different walking base can still look different; v173 is a tuning tool, not a confirmed shoulder-placement fix.
+
+Walking edits currently affect ONLY blue, not the player or red NPC. The intended next artifact from user tuning is MLWalkingLeanPreset.json. Player integration follows approval of those walking values.
+
+5. COORDINATES, POSE AND CONTROL PREFERENCES
+Model position axes:
+X = character's own right; positive X moves right.
+Y = up; negative Y lowers the weapon/body part.
+Z = forward; positive Z moves forward.
+UI position values are centimetres. Rotation controls are degrees; actual native sign depends on the graph's Model ProcTransform convention.
+
+The user repeatedly corrected confusion between lateral X, vertical Y and depth Z. Prior forward requests meant along the weapon-facing direction, not arbitrary world axes.
+
+The user requires the same custom lean poses in first and third person, including raised/ADS views. Camera-specific custom lean poses are not desired unless explicitly requested.
+
+Useful retained controls:
+- F6: weapon/arms/head editor.
+- F7: body editor.
+- Ctrl+F1: native/custom lean comparator, starts custom; no save/reset.
+- Ctrl+F8: arm-drop comparison.
+- X: diagnostic freeze, replacing Alt-based freezing.
+- RMB held in editor: navigation.
+
+Older L/colon recording/replay and female NPC features were removed before the current preview system. They are not current controls.
+
+The current third-person inspection camera sits at least about 4 metres back in open space and has a lowered pivot for full-body inspection. Native collision can move it closer near walls. First-person/ADS camera was not changed by that inspection-camera addition.
+
+6. IMPORTANT IMPLEMENTATION FILES
+Within the latest test directory:
+- LogicSource/Scripts/4_World/MLADSLeanPlayer.c
+  Main actor control, graph binding, native aim/grip routing, editor application, demo input and v173 scoped walking update.
+- LogicSource/Scripts/4_World/MLPoseEditor144.c
+  Weapon values, rotation math, fixed-reference limb solver and stationary editor state.
+- LogicSource/Scripts/4_World/MLArmEditor146.c
+  Cached arm/elbow direction math.
+- LogicSource/Scripts/4_World/MLBodyEditor149.c
+  Body data schema and stationary body state.
+- LogicSource/Scripts/4_World/MLUnifiedPreset153.c
+  Validated combined stationary save/load with backup and readback checks.
+- LogicSource/Scripts/4_World/MLWalkingEditor173.c
+  Independent walking weapon/body state and combined walking save/load.
+- LogicSource/Scripts/4_World/MLWalkingEditorScope173.c
+  Synchronous state-bank exchange for the walking actor.
+- LogicSource/Scripts/4_World/MLWalkingUpper172.c
+  Previous player walking-upper-body retarget experiment; excluded for demo NPCs.
+- LogicSource/Scripts/4_World/MLInspectionCamera171.c
+  Wider third-person inspection view.
+- LogicSource/Scripts/5_Mission/MLPoseEditorMenu144.c
+- LogicSource/Scripts/5_Mission/MLBodyMenu149.c
+- LogicSource/Scripts/5_Mission/MLADSLeanKeys.c
+  Panels and controls; v173 panels reference walking state directly.
+- Missions/MLADSLeanMosin.ChernarusPlus/init.c
+  Player loadout, both NPC spawns, and cleanup.
+- WorkspaceSource/locomotion.agf
+  Native pose graph plus custom layers.
+- WorkspaceSource/player_main.agr
+  Root graph and control template.
+- build_pbos.py
+  Builds and verifies both PBOs.
+
+V173 reuses actor-local native graph variables while synchronously exchanging all 28 shared editor-state fields around only the blue actor's CommandHandler. Original state is restored after the inner update even when that inner update returns early. UI references walking state directly; graph variables are per actor. No yielding is intended inside that exchange.
+
+One new graph control, ML173WalkingPreview, extends existing F6/F7 stationary masks for only the walking preview. For all other actors it remains zero. The offline checker compared 4,200 scalar expression cases to verify original-actor equivalence. No new transform chain or different camera-dependent pose was added in v173.
+
+7. RELEVANT DEVELOPMENT HISTORY
+Early versions repeatedly addressed camera/arm speed mismatch, support-hand slipping during view movement, delayed raising/lean transitions, transient weapon/arm flashes in front of the camera, and unwanted native lean tilt mixing with custom poses. Several versions were rolled back after regressions; old version numbers alone are not evidence that an experiment worked.
+
+The user found v89 stable, then achieved effective lowering of weapon/arms on the right side around v95. Later experiments adjusted left-side elbows, shoulder alignment, gun offsets and support grip. Historical values were superseded by the latest approved preset.
+
+Panacea weapons appeared equipped but raised fists or failed switching/handling while the native NPC AK74 worked. Panacea was abandoned in favour of AJs Weapons. An AJs dependency error required JM_CF_Scripts. External weapon mods were later removed from the current test loadout. Current code should not be assumed to need AJs or Community Framework.
+
+Live editing evolved through v144-v153:
+- F6 weapon panel, then arm/head page, both-side values and muzzle aiming controls.
+- F7 full body editing.
+- RMB navigation with panels open.
+- Unified combined save so weapon/arms/head and body changes are preserved together rather than only body changes.
+
+V160 restored visible rightward body displacement after the new right pose appeared almost stationary despite camera motion. Its pelvis correction is approximately +32.3 cm relative to a displaced old baseline; it is not a request for 32.3 cm total lean travel. The latest user preset was tuned on this base. Left leg stance changed; the user explicitly prioritised actual rightward body movement and planned to retune the pose afterward.
+
+NPC/player apparent height and head differences were investigated. Initial head bone heights were both about 1.61069 m, with no demonstrated scale multiplier. The NPC's real native stance/raised state differed from the player's because the demo uses graph canary forcing. V162 attempted native raised stance forcing and failed: the NPC stayed in default lowered lean. V163 restored the working v161 demo approach. The apparent height difference was not conclusively resolved; blind NPC scaling was not supported by evidence.
+
+V164 compacted graph transforms to reduce graph depth but did not eliminate the native left-walk-stop crash.
+
+V165 addressed repeated base-pose evaluation in four fractional left-side correction layers. This is a crash mitigation, not a confirmed native fix.
+
+V166-v168 moved aim after custom body/arm/head edits, enabled native arm-chain solves off-centre, and added native aim pitch/yaw to the final weapon target. The user confirmed grip improved in v167 but reported delayed movement and missing weapon pitch. V168 corrected the omitted final native angle input. Comprehensive native confirmation was not subsequently established.
+
+V169 added Ctrl+F1 native/custom comparison.
+V170 removed the old separate first-person crouch-style presentation so both views share custom poses.
+V171 only widened the third-person camera; it did not change feet or animation.
+
+V172 attempted to keep the current stationary upper body while walking through one-shot, cached native pose retargeting. It requires standing and walking references per side/direction/gait/ADS mode, never per-frame corrected-output feedback. The user reported the walking-left weapon still sat on a different shoulder. V173 responds with isolated direct walking tuning rather than claiming v172 solved that discrepancy.
+
+8. CRASH AND PERFORMANCE RISKS
+A repeat native crash occurred while leaning left and walking left, then stopping. Earlier descriptions also called it an ADS-exit or freeze crash.
+
+The v164 minidump showed the same native fault as v163. Exception-context analysis found an internal signed-16-bit boundary at 32,769 entries and an out-of-bounds indexed write. Exact internal native function names were unavailable.
+
+Four old fractional LEFT layers could repeatedly evaluate the full underlying base pose, up to 16 times together during transitions:
+- ML104_LeftElbowDirections
+- ML118_ContactHoldOnly
+- ML130_StandingLeftOnly
+- ML133_StandingLeftElbow
+
+V165 changed their routing to binary optimised selection with weighted correction transforms. Full endpoints were retained, but fractional interpolation changed. V173 preserves those gates. A later normal session exit does not prove the exact old crash reproduction is fixed.
+
+A large FPS drop on every NPC left/right switch was previously reported. No current native performance benchmark proves that all transition costs are eliminated. Per-frame pose-feedback loops previously caused flipped/disappearing hands and are not the current reference strategy.
+
+The log collector includes the newest minidump up to 24 MiB. Larger dumps are left in place with their location reported. No dumps are sent automatically.
+
+9. CURRENT LOADOUT
+Native DayZ firearms only:
+- AK74 in hands/quickbar 1: compatible stock/handguard, suppressor, Kobra sight with battery, light with battery, 30-round magazine, automatic mode.
+- SKS quickbar 2: PU scope, bayonet, internal ammunition; improvised suppressor only if native attachment accepts it.
+- Glock19/Mlock91 quickbar 3: pistol suppressor, TLR light with battery, 15-round magazine.
+- Spare ammunition/magazines and backpack.
+- Both reference NPCs use AK74.
+
+No external weapon mod or Community Framework dependency is intended for this current test.
+
+10. BUILD AND VERIFICATION STATE
+Build script: ads-lean-test/MovementLab_ADS_Lean_Mosin_v173/build_pbos.py
+Runtime packager: tools/package_ads_lean_runtime.py
+V173 checker: tools/check_ads_lean_walking_preview_v173.py
+
+Recorded offline results:
+- 100 state-bank restoration/isolation cases passed.
+- 4,200 original-actor expression-equivalence cases passed.
+- 76 existing editor nodes changed only selected scalar fields; no children/bone-operation rewiring.
+- Previous crash-mitigation gates and unrelated helpers unchanged.
+- Approved stationary preset byte hash preserved.
+- PBO content/header/prefix/source verification passed.
+- Runtime ZIP verified, 14 files, approximately 219 KB.
+
+These checks do not run the Windows Enforce compiler or DayZ animation engine. Native v173 compilation, looping walking-in-place, visual axes, weapon grip, transitions, FPS and crash behaviour still need game testing.
+
+The runtime ZIP excludes source and authoring assets; it is not the complete source project. The repository contains the complete latest source directory and historical tests. The runtime package contains two PBOs, mission, launchers, collectors, metadata, README and stationary/walking presets.
+
+11. KNOWN ENFORCE/NATIVE API CONSTRAINTS FROM PAST FAILURES
+- Bone used as a field name collided with a native type; current schema uses BoneName.
+- local is reserved.
+- Large field-access array initialisers triggered Formula too complex; individual Insert statements solved those failures.
+- Nested arithmetic/getter expressions sometimes produced Broken expression; temporary variables were required.
+- Vector/scalar division was unsupported in the used context; reciprocal multiplication was used.
+- Graph float binding ID 0 is valid; missing bone ID is -1, while other negative bone IDs can be valid.
+- AnimSetFloat graph writes belong inside CommandHandler after native processing; UI changes cached settings.
+- GetCommandModifier_Weapons is the actual API used, not GetCommand_Weapons.
+- No verified public AnimGetFloat/GetVarFloat getter was available.
+- HumanInputController.GetMovement returns normalized local direction.
+- Model ProcTransform native rotation signs are negative right-handed XYZ in the implemented math.
+- Position/rotation values are not equivalent to safe IK targets: independent F7 limb changes can alter foot plant or grip.
+
+12. LOCAL SETUP PROGRESS AND LIMITS
+The user installed the official OpenAI Codex extension in Visual Studio Code on the Windows gaming PC. The Codex panel opened via the Command Palette's Open Codex sidebar command. The desired chat was not listed, so the full GitHub project ZIP was downloaded instead. The project was extracted and opened as a local VS Code folder. The user reported that local Codex could read it.
+
+The Git: Clone command was not visible; its absence did not conclusively establish whether Git was missing or disabled. ZIP download was the working fallback. A ZIP checkout may not contain Git metadata or have push capability configured.
+
+Local terminal execution, Python availability, build dependencies, DayZ installation path and DayZ Tools path had not yet been reported back. The next planned setup step was a read-only environment check.
+
+This voice/cloud chat remained connected to a Linux workspace, not the Windows desktop. Messages appearing on two computers show conversation access, not filesystem or desktop access. Installing the VS Code extension alone does not establish screen capture, mouse/keyboard control, or autonomous game testing. No such desktop-control capability was verified in this session.
+
+13. USER WORKFLOW PRIORITIES
+The user values fast visible iteration and is frustrated by long waits, repeated tests without visible change and regressions. Live editor adjustments avoid repacking every tweak. Actual native confirmation is distinct from offline mathematical checks. Backups and the approved stationary preset are important. Once the walking preset is approved, player integration is the intended next development step.
+
+END OF HANDOFF
