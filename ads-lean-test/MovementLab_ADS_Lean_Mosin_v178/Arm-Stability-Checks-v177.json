@@ -1,0 +1,8 @@
+{
+  "steady_hold_model_frames": 3600,
+  "old_recaptures_under_noop_body_events": 120,
+  "new_captures_until_actual_hold_change": 1,
+  "new_captures_after_real_hold_change": 2,
+  "graph_and_presets_unchanged": true,
+  "native_compilation_and_oscillation_resolution": "NOT RUN"
+}

@@ -1,0 +1,9 @@
+{
+  "changed_node": "ML166_PublishFinalAimedWeapon",
+  "changed_field": "WeightSecondaryChain",
+  "old_expression": "(abs(AimY) > 5.0 || abs(AimIKX) > 5.0) && ML106ShoulderedGrip > 0.5 && ML87FirstPersonCrouchLean < 0.5",
+  "new_expression": "((ML173WalkingPreview > 0.5 && MLADSLeanMoveBlend > 0.5) || abs(AimY) > 5.0 || abs(AimIKX) > 5.0) && ML106ShoulderedGrip > 0.5 && ML87FirstPersonCrouchLean < 0.5",
+  "presets_unchanged": true,
+  "evidence": "v177 first session capture_count1 revision5 body_revision1 fixed rotation across nine traces; elbowY1.282020..1.535480",
+  "native_runtime": "NOT RUN"
+}

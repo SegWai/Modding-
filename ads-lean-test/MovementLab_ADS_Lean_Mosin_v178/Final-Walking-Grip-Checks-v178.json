@@ -1,0 +1,9 @@
+{
+  "graph_changed_fields": 1,
+  "graph_condition_cases": 480,
+  "newly_enabled_centred_preview_cases": 6,
+  "constant_correction_trace_samples": 9,
+  "observed_elbow_vertical_span_m": 0.25346,
+  "all_presets_and_world_scripts_unchanged": true,
+  "native_compile_and_grip_resolution": "NOT RUN"
+}
