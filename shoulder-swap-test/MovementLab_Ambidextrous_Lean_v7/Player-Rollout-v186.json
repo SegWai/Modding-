@@ -1,0 +1,14 @@
+{
+  "approved_sha256": {
+    "MLLeanPreset.json": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+    "MLWalkingLeanPreset.json": "8828945ff4dc5eb7e0b2d8de7adddfff463ec5403db61de44b56b10a16ce42c2",
+    "MLCrouchLeanPreset.json": "2de68073870eb3b17bf24f9546ff90a41b737b516b0535351eae6d247f90eb20",
+    "MLUnarmedLeanPreset.json": "d47025fd4275847815d0fda2d34b629d057608355e7fb5d47e79f4b71d859a27"
+  },
+  "NPCs": 0,
+  "unarmed": "standing idle empty hands, native Q/E, no input overrides",
+  "raised": "existing shared standing/walking, new crouch saved scope",
+  "crouch_reference_bank": 2,
+  "camera": "third-person raised pivot +15cm above native; distance unchanged from185",
+  "native_compile_visual_and_transition": "NOT RUN"
+}

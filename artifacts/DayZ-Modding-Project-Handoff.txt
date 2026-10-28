@@ -413,3 +413,21 @@ supportcorrectionapplies; nooriginalposefeedback/invalidationorcontinuousloop.
 Logsrollerror/proberesponse/correction/supportreachandfinalsight+wristmeasurements.
 Offline44roll-response/300rigidtarget/4stagelifecycle/DAG/source/PBOchecks pass.
 Nativev6compile/actualrollresponse/contact/fire/ADS/FPS UNTESTED. Original186saved.
+
+Ambidextrous v7 — replace ineffective roll adjustment with native profile-frame bridge
+V6logs232815: auto/binding/mirror contexts work; rollprobe response-.000937deg to
+5deginput, correction0. Supporttargetoutofreach. Accessorforwarddot.686 (~47deg),
+updot.992. This points beyondroll toprofileoffset/frame/attachment mismatch.
+V7builtfromv5removesv6probeandsupportsolver. Visiblemirroredarmsunchanged.
+6newModelprocs position nativeanimationhelper Weapon at currentlefttriggerwrist
+and convert its orientation into originalRIGHTtrigger frame expectedbyIKprofile.
+K=inv(leftMirrorRef)*rightTriggerRef;desiredHelper=currentLeftHand*K. Native
+WeaponboneexistsinstandardSkeleton, parentPelvis; baselinefromunaffectedpelvis
+andcachednativehelperlocalframe, neverreadbackcorrectedhelperforposefeedback.
+Leftpublisherhand/rotator=Weapon; sameoriginalnativeprofile/modelaxis/armweightsoff.
+Rightpathunchanged. Fourpresets/input/mission/original186remainexact.
+1000gripbasis/5000parentanchorcases+DAG/PBOchecks pass. NATIVEnewvirtualanchor
+IK/load/render/contact/fire/ADS NOTRUN. Trackinglastcompletedposemayaddoneframe
+lag; assumesnativehelperlocalposeconstantinraisedlocomotion. Notfinishednative
+leftIKasset. Diag nowalsoincludesliteralitemtransformvsaccessorsight/helper/wrists,
+whichmaynotallrepresentrenderedpose. Neednativev7test,donotclaimprovedfix.

@@ -1,0 +1,15 @@
+{
+  "v6_native_evidence": {
+    "forward_dot": 0.686012,
+    "up_dot": 0.99213,
+    "roll_error_deg": -0.879286,
+    "probe_response_deg": -0.000937468,
+    "support_reachable": false
+  },
+  "basis_bridge": "current LeftHand rotation * inverse(mirrored LeftHand reference) * original RightHand trigger reference",
+  "position": "current LeftHand wrist",
+  "publisher_hand": "Weapon native animation helper bone, not anatomical LeftHand",
+  "unused_v6_probe_and_support": "removed by basing onv5",
+  "runtime_frame_tracking": "read unaffected pelvis/left hand only, do not read corrected helper for baseline",
+  "native_validation": "NOT RUN"
+}

@@ -1,0 +1,10 @@
+{
+  "approved_three_banks": "byte-identical",
+  "uploaded_right": "identical",
+  "left_base_and_editor": "anatomically mirrored",
+  "native_lean_expression_cases": 480,
+  "lower_target_nodes_removed": 42,
+  "upper_attachment_FK_cases": 200,
+  "max_FK_error": 1.5265566588595902e-13,
+  "native_compile_lean_rendering": "NOT RUN"
+}
