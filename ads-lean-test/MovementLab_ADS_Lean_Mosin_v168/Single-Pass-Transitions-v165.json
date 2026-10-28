@@ -1,0 +1,307 @@
+{
+  "gates": [
+    {
+      "gate": "ML104_LeftElbowDirections",
+      "original_scope": "(clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip",
+      "base": "ML88_LoweredRaisedOnly",
+      "branch_nodes": [
+        "ML104_PublishPoleHold",
+        "ML104_RestorePrivateHands",
+        "ML104_Pole_Right_Z",
+        "ML104_Pole_Right_Y",
+        "ML104_Pole_Right_X",
+        "ML104_LeftHandCounter_Z",
+        "ML104_LeftHandCounter_Y",
+        "ML104_LeftHandCounter_X",
+        "ML104_Pole_Left_Z",
+        "ML104_Pole_Left_Y",
+        "ML104_Pole_Left_X",
+        "ML104_CapturePrivateHands"
+      ],
+      "weighted_transforms": [
+        {
+          "node": "ML104_Pole_Right_Z",
+          "old_expression": "(ML104RightZ)*ML106ShoulderedGrip",
+          "new_expression": "((ML104RightZ)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_Pole_Right_Y",
+          "old_expression": "(ML104RightY)*ML106ShoulderedGrip",
+          "new_expression": "((ML104RightY)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_Pole_Right_X",
+          "old_expression": "(ML104RightX)*ML106ShoulderedGrip",
+          "new_expression": "((ML104RightX)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_LeftHandCounter_Z",
+          "old_expression": "(ML104LeftHandZ)*ML106ShoulderedGrip",
+          "new_expression": "((ML104LeftHandZ)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_LeftHandCounter_Y",
+          "old_expression": "(ML104LeftHandY)*ML106ShoulderedGrip",
+          "new_expression": "((ML104LeftHandY)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_LeftHandCounter_X",
+          "old_expression": "(ML104LeftHandX)*ML106ShoulderedGrip",
+          "new_expression": "((ML104LeftHandX)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_Pole_Left_Z",
+          "old_expression": "(ML104LeftZ)*ML106ShoulderedGrip",
+          "new_expression": "((ML104LeftZ)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_Pole_Left_Y",
+          "old_expression": "(ML104LeftY)*ML106ShoulderedGrip",
+          "new_expression": "((ML104LeftY)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        },
+        {
+          "node": "ML104_Pole_Left_X",
+          "old_expression": "(ML104LeftX)*ML106ShoulderedGrip",
+          "new_expression": "((ML104LeftX)*ML106ShoulderedGrip)*((clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*MLADSLeanMoveBlend*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-ML87FirstPersonCrouchLean)*ML93ArmDrop*ML104ElbowEnabled)*ML106ShoulderedGrip)"
+        }
+      ],
+      "unchanged_ik_nodes": [
+        "ML104_PublishPoleHold",
+        "ML104_RestorePrivateHands",
+        "ML104_CapturePrivateHands"
+      ]
+    },
+    {
+      "gate": "ML118_ContactHoldOnly",
+      "original_scope": "clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady",
+      "base": "ML104_LeftElbowDirections",
+      "branch_nodes": [
+        "ML125_FinalSupportGrip",
+        "ML118_PublishContactHold",
+        "ML164_Compact_4_8",
+        "ML164_Compact_4_7",
+        "ML164_Compact_4_6",
+        "ML164_Compact_4_5",
+        "ML164_Compact_4_4",
+        "ML164_Compact_4_3",
+        "ML164_Compact_4_2",
+        "ML164_Compact_4_1",
+        "ML164_Compact_4_0"
+      ],
+      "weighted_transforms": [
+        {
+          "node": "ML164_Compact_4_8",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_7",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_6",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_5",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_4",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_3",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_2",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_1",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        },
+        {
+          "node": "ML164_Compact_4_0",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*MLADSLeanMoveBlend*ML93ArmDrop*ML106ShoulderedGrip*(1.0-clamp(Stance,0.0,1.0))*(1.0-ML87FirstPersonCrouchLean)*ML118ContactReady)"
+        }
+      ],
+      "unchanged_ik_nodes": [
+        "ML125_FinalSupportGrip",
+        "ML118_PublishContactHold"
+      ]
+    },
+    {
+      "gate": "ML130_StandingLeftOnly",
+      "original_scope": "clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean)",
+      "base": "ML123_RightHoldOnly",
+      "branch_nodes": [
+        "ML130_PublishStandingLeft",
+        "ML164_Compact_2_8",
+        "ML164_Compact_2_7",
+        "ML164_Compact_2_6",
+        "ML164_Compact_2_5",
+        "ML164_Compact_2_4",
+        "ML164_Compact_2_3",
+        "ML164_Compact_2_2",
+        "ML164_Compact_2_1",
+        "ML164_Compact_2_0"
+      ],
+      "weighted_transforms": [
+        {
+          "node": "ML164_Compact_2_8",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_7",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_6",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_5",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_4",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_3",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_2",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_1",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML164_Compact_2_0",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        }
+      ],
+      "unchanged_ik_nodes": [
+        "ML130_PublishStandingLeft"
+      ]
+    },
+    {
+      "gate": "ML133_StandingLeftElbow",
+      "original_scope": "clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean)",
+      "base": "ML130_StandingRightOnly",
+      "branch_nodes": [
+        "ML133_DownIn_LeftHand_Z",
+        "ML133_DownIn_LeftHand_Y",
+        "ML133_DownIn_LeftHand_X",
+        "ML133_DownIn_LeftArm_Z",
+        "ML133_DownIn_LeftArm_Y",
+        "ML133_DownIn_LeftArm_X"
+      ],
+      "weighted_transforms": [
+        {
+          "node": "ML133_DownIn_LeftHand_Z",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML133_DownIn_LeftHand_Y",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML133_DownIn_LeftHand_X",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML133_DownIn_LeftArm_Z",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML133_DownIn_LeftArm_Y",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        },
+        {
+          "node": "ML133_DownIn_LeftArm_X",
+          "old_expression": "1.0",
+          "new_expression": "(1.0)*(clamp(-MLADSLeanAmount,0.0,1.0)*MLADSLeanGate*(1.0-clamp(Stance,0.0,1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed,0.0,1.0))*ML93ArmDrop*ML106ShoulderedGrip*(1.0-ML87FirstPersonCrouchLean))"
+        }
+      ],
+      "unchanged_ik_nodes": []
+    }
+  ],
+  "changed_nodes": [
+    "ML104_Pole_Right_Z",
+    "ML104_Pole_Right_Y",
+    "ML104_Pole_Right_X",
+    "ML104_LeftHandCounter_Z",
+    "ML104_LeftHandCounter_Y",
+    "ML104_LeftHandCounter_X",
+    "ML104_Pole_Left_Z",
+    "ML104_Pole_Left_Y",
+    "ML104_Pole_Left_X",
+    "ML104_LeftElbowDirections",
+    "ML164_Compact_4_8",
+    "ML164_Compact_4_7",
+    "ML164_Compact_4_6",
+    "ML164_Compact_4_5",
+    "ML164_Compact_4_4",
+    "ML164_Compact_4_3",
+    "ML164_Compact_4_2",
+    "ML164_Compact_4_1",
+    "ML164_Compact_4_0",
+    "ML118_ContactHoldOnly",
+    "ML164_Compact_2_8",
+    "ML164_Compact_2_7",
+    "ML164_Compact_2_6",
+    "ML164_Compact_2_5",
+    "ML164_Compact_2_4",
+    "ML164_Compact_2_3",
+    "ML164_Compact_2_2",
+    "ML164_Compact_2_1",
+    "ML164_Compact_2_0",
+    "ML130_StandingLeftOnly",
+    "ML133_DownIn_LeftHand_Z",
+    "ML133_DownIn_LeftHand_Y",
+    "ML133_DownIn_LeftHand_X",
+    "ML133_DownIn_LeftArm_Z",
+    "ML133_DownIn_LeftArm_Y",
+    "ML133_DownIn_LeftArm_X",
+    "ML133_StandingLeftElbow"
+  ],
+  "correction_transform_nodes_weighted": 33,
+  "left_stop_duplicated_layers": [
+    "ML104_LeftElbowDirections",
+    "ML118_ContactHoldOnly",
+    "ML130_StandingLeftOnly",
+    "ML133_StandingLeftElbow"
+  ],
+  "base_replays_through_these_layers_before": 16,
+  "base_replays_through_these_layers_after": 1,
+  "fractional_interpolation": "weighted correction transforms/IK, not full-pose blend; exact full endpoint operations preserved",
+  "native_validation": "NOT RUN"
+}
