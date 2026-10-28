@@ -1,0 +1,19 @@
+{
+  "math": {
+    "left": {
+      "accepted": 487,
+      "rejected": 13,
+      "FK_error": 7.771561172376096e-16,
+      "default_error": 0.0
+    },
+    "right": {
+      "accepted": 369,
+      "rejected": 131,
+      "FK_error": 7.771561172376096e-16,
+      "default_error": 1.1796119636642288e-14
+    }
+  },
+  "routing": "independent side values/coefficient buffers, selected-side JSON/save/reset, held NPC sign follows selection",
+  "muzzle": "yaw/pitch written to final hand-pivot native publication AND following support solve for both sides; no later zero-direction overwrite",
+  "native_compile_UI_muzzle_direction_grip": "NOT RUN"
+}

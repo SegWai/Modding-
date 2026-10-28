@@ -1,0 +1,170 @@
+// Synchronous scoped bank exchange; no yielding, callbacks or native writes here.
+class ML173EditorScope
+{
+ int WeaponRevision = -1;
+ int BodyRevision = -1;
+ ref ML144Values EffectiveLeftWeapon;
+ ref ML144Values EffectiveRightWeapon;
+ ref ML149Data EffectiveLeftBody;
+ ref ML149Data EffectiveRightBody;
+ void RefreshEffective()
+ {
+  if (WeaponRevision != ML173WeaponState.ValuesRevision)
+  {
+   WeaponRevision = ML173WeaponState.ValuesRevision;
+   EffectiveLeftWeapon = ML174ArmZero.BuildArmWeaponValues(ML173WeaponState.LeftValues, ML174ArmZero.LeftBase, 1);
+   EffectiveRightWeapon = ML174ArmZero.BuildArmWeaponValues(ML173WeaponState.RightValues, ML174ArmZero.RightBase, 1);
+  }
+  if (BodyRevision != ML173BodyState.GeometryRevision)
+  {
+   BodyRevision = ML173BodyState.GeometryRevision;
+   EffectiveLeftBody = ML174ArmZero.BuildArmBodyValues(ML173BodyState.Left, ML174ArmZero.LeftBase, 1);
+   EffectiveRightBody = ML174ArmZero.BuildArmBodyValues(ML173BodyState.Right, ML174ArmZero.RightBase, 1);
+  }
+ }
+
+ ref ML144Values SavedML144StateValues;
+ ref array<float> SavedML144StateCoefficients;
+ ref ML144Values SavedML144StateLeftValues;
+ ref ML144Values SavedML144StateRightValues;
+ ref array<float> SavedML144StateLeftCoefficients;
+ ref array<float> SavedML144StateRightCoefficients;
+ bool SavedML144StateEditLeft;
+ bool SavedML144StateInitialized;
+ bool SavedML144StateOpen;
+ bool SavedML144StateHoldRight;
+ bool SavedML144StateKeyDown;
+ bool SavedML144StateBound;
+ bool SavedML144StateArmsReady;
+ int SavedML144StateHoldRevision;
+ int SavedML144StateValuesRevision;
+ string SavedML144StateStatus;
+ string SavedML144StatePath;
+ ref ML149Data SavedML149StateLeft;
+ ref ML149Data SavedML149StateRight;
+ ref TStringArray SavedML149StateBones;
+ ref TStringArray SavedML149StateLabels;
+ int SavedML149StateGeometryRevision;
+ bool SavedML149StateInitialized;
+ bool SavedML149StateOpen;
+ bool SavedML149StateKeyDown;
+ bool SavedML149StateBound;
+ int SavedML149StateSelectedPart;
+ string SavedML149StateStatus;
+ void Enter()
+ {
+  RefreshEffective();
+  SavedML144StateValues = ML144State.Values;
+  ML144State.Values = EffectiveRightWeapon;
+  if (ML173WeaponState.EditLeft)
+   ML144State.Values = EffectiveLeftWeapon;
+  SavedML144StateCoefficients = ML144State.Coefficients;
+  ML144State.Coefficients = ML173WeaponState.Coefficients;
+  SavedML144StateLeftValues = ML144State.LeftValues;
+  ML144State.LeftValues = EffectiveLeftWeapon;
+  SavedML144StateRightValues = ML144State.RightValues;
+  ML144State.RightValues = EffectiveRightWeapon;
+  SavedML144StateLeftCoefficients = ML144State.LeftCoefficients;
+  ML144State.LeftCoefficients = ML173WeaponState.LeftCoefficients;
+  SavedML144StateRightCoefficients = ML144State.RightCoefficients;
+  ML144State.RightCoefficients = ML173WeaponState.RightCoefficients;
+  SavedML144StateEditLeft = ML144State.EditLeft;
+  ML144State.EditLeft = ML173WeaponState.EditLeft;
+  SavedML144StateInitialized = ML144State.Initialized;
+  ML144State.Initialized = ML173WeaponState.Initialized;
+  SavedML144StateOpen = ML144State.Open;
+  ML144State.Open = ML173WeaponState.Open;
+  SavedML144StateHoldRight = ML144State.HoldRight;
+  ML144State.HoldRight = ML173WeaponState.HoldRight;
+  SavedML144StateKeyDown = ML144State.KeyDown;
+  ML144State.KeyDown = ML173WeaponState.KeyDown;
+  SavedML144StateBound = ML144State.Bound;
+  ML144State.Bound = ML173WeaponState.Bound;
+  SavedML144StateArmsReady = ML144State.ArmsReady;
+  ML144State.ArmsReady = ML173WeaponState.ArmsReady;
+  SavedML144StateHoldRevision = ML144State.HoldRevision;
+  ML144State.HoldRevision = ML173WeaponState.HoldRevision;
+  SavedML144StateValuesRevision = ML144State.ValuesRevision;
+  ML144State.ValuesRevision = ML173WeaponState.ValuesRevision;
+  SavedML144StateStatus = ML144State.Status;
+  ML144State.Status = ML173WeaponState.Status;
+  SavedML144StatePath = ML144State.Path;
+  ML144State.Path = ML173WeaponState.Path;
+  SavedML149StateLeft = ML149State.Left;
+  ML149State.Left = EffectiveLeftBody;
+  SavedML149StateRight = ML149State.Right;
+  ML149State.Right = EffectiveRightBody;
+  SavedML149StateBones = ML149State.Bones;
+  ML149State.Bones = ML173BodyState.Bones;
+  SavedML149StateLabels = ML149State.Labels;
+  ML149State.Labels = ML173BodyState.Labels;
+  SavedML149StateGeometryRevision = ML149State.GeometryRevision;
+  ML149State.GeometryRevision = ML173BodyState.GeometryRevision;
+  SavedML149StateInitialized = ML149State.Initialized;
+  ML149State.Initialized = ML173BodyState.Initialized;
+  SavedML149StateOpen = ML149State.Open;
+  ML149State.Open = ML173BodyState.Open;
+  SavedML149StateKeyDown = ML149State.KeyDown;
+  ML149State.KeyDown = ML173BodyState.KeyDown;
+  SavedML149StateBound = ML149State.Bound;
+  ML149State.Bound = ML173BodyState.Bound;
+  SavedML149StateSelectedPart = ML149State.SelectedPart;
+  ML149State.SelectedPart = ML173BodyState.SelectedPart;
+  SavedML149StateStatus = ML149State.Status;
+  ML149State.Status = ML173BodyState.Status;
+ }
+ void Leave()
+ {
+  ML144State.Values = SavedML144StateValues;
+  ML173WeaponState.Coefficients = ML144State.Coefficients;
+  ML144State.Coefficients = SavedML144StateCoefficients;
+  ML144State.LeftValues = SavedML144StateLeftValues;
+  ML144State.RightValues = SavedML144StateRightValues;
+  ML173WeaponState.LeftCoefficients = ML144State.LeftCoefficients;
+  ML144State.LeftCoefficients = SavedML144StateLeftCoefficients;
+  ML173WeaponState.RightCoefficients = ML144State.RightCoefficients;
+  ML144State.RightCoefficients = SavedML144StateRightCoefficients;
+  ML173WeaponState.EditLeft = ML144State.EditLeft;
+  ML144State.EditLeft = SavedML144StateEditLeft;
+  ML173WeaponState.Initialized = ML144State.Initialized;
+  ML144State.Initialized = SavedML144StateInitialized;
+  ML173WeaponState.Open = ML144State.Open;
+  ML144State.Open = SavedML144StateOpen;
+  ML173WeaponState.HoldRight = ML144State.HoldRight;
+  ML144State.HoldRight = SavedML144StateHoldRight;
+  ML173WeaponState.KeyDown = ML144State.KeyDown;
+  ML144State.KeyDown = SavedML144StateKeyDown;
+  ML173WeaponState.Bound = ML144State.Bound;
+  ML144State.Bound = SavedML144StateBound;
+  ML173WeaponState.ArmsReady = ML144State.ArmsReady;
+  ML144State.ArmsReady = SavedML144StateArmsReady;
+  ML173WeaponState.HoldRevision = ML144State.HoldRevision;
+  ML144State.HoldRevision = SavedML144StateHoldRevision;
+  ML173WeaponState.ValuesRevision = ML144State.ValuesRevision;
+  ML144State.ValuesRevision = SavedML144StateValuesRevision;
+  ML173WeaponState.Status = ML144State.Status;
+  ML144State.Status = SavedML144StateStatus;
+  ML173WeaponState.Path = ML144State.Path;
+  ML144State.Path = SavedML144StatePath;
+  ML149State.Left = SavedML149StateLeft;
+  ML149State.Right = SavedML149StateRight;
+  ML173BodyState.Bones = ML149State.Bones;
+  ML149State.Bones = SavedML149StateBones;
+  ML173BodyState.Labels = ML149State.Labels;
+  ML149State.Labels = SavedML149StateLabels;
+  ML173BodyState.GeometryRevision = ML149State.GeometryRevision;
+  ML149State.GeometryRevision = SavedML149StateGeometryRevision;
+  ML173BodyState.Initialized = ML149State.Initialized;
+  ML149State.Initialized = SavedML149StateInitialized;
+  ML173BodyState.Open = ML149State.Open;
+  ML149State.Open = SavedML149StateOpen;
+  ML173BodyState.KeyDown = ML149State.KeyDown;
+  ML149State.KeyDown = SavedML149StateKeyDown;
+  ML173BodyState.Bound = ML149State.Bound;
+  ML149State.Bound = SavedML149StateBound;
+  ML173BodyState.SelectedPart = ML149State.SelectedPart;
+  ML149State.SelectedPart = SavedML149StateSelectedPart;
+  ML173BodyState.Status = ML149State.Status;
+  ML149State.Status = SavedML149StateStatus;
+ }
+};
