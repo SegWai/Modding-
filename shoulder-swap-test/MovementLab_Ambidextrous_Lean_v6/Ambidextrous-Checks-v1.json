@@ -1,0 +1,13 @@
+{
+  "saved_four_banks": "byte-identical186",
+  "third_person_framing": "native class override removed",
+  "input": "XML registered/rebindable, mouse4 default; native binding NOT RUN",
+  "new_nodes": 303,
+  "new_controls": 301,
+  "known_native_node_types_only": true,
+  "reflection_cases": 500,
+  "max_reflection_error": 2.7755575615628914e-15,
+  "50bone_FK_error": 8.43769498715119e-15,
+  "context_keys": 36,
+  "native_compile_left_weapon_IK_firing_ADS_reload_contact_FPS": "NOT RUN"
+}

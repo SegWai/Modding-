@@ -400,3 +400,16 @@ loggedafter.25sactive, nofeedbackintopose. NativeAPIalreadyusedbyFPcamera.
 Scene/inputs/automaticneutral/cameras/4JSONbanks/original186unchanged.
 Exact2field/axisinvariant/solveridentity/readonly/PBOcheckspass. Actualv5grip,
 roll/nativecompile/firing/ADS/FPS requireDayZtest; do notclaimvisualfixconfirmed.
+
+Ambidextrous v6 — bounded measured roll and weapon-local support-hand correction
+Userv5screenshot: almostthere, gunstillrolledandhandsmisfit; nov5logsavailable.
+Noarbitrary90degoffset. Newonce/context4stagecalibration: baselineleftsight;
+one5degnativeWeaponRollprobe establishesresponse/sign; computedclampedrolloffset;
+thenONEreach-checkedrightsupportarmsolve totheoriginalunderbarrelwristpoint
+storedrelativeoriginalgunframe. Lefttrigger/body/fingers/4JSONsunchanged.
+Holdlevelaimstill~2secondsfirstswap. Correctedarmneversampledagainafternew
+supportcorrectionapplies; nooriginalposefeedback/invalidationorcontinuousloop.
+9rightarm/forearm/handnodes+10GCTcontrols; zerooff/cacheon; knownnativeIKmath.
+Logsrollerror/proberesponse/correction/supportreachandfinalsight+wristmeasurements.
+Offline44roll-response/300rigidtarget/4stagelifecycle/DAG/source/PBOchecks pass.
+Nativev6compile/actualrollresponse/contact/fire/ADS/FPS UNTESTED. Original186saved.
