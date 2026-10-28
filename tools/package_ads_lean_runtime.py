@@ -18,7 +18,7 @@ def runtime_files(kit):
   files=files+('MLLeanPreset.json',)
  if (kit/'Profiles/LeanMosin/MLLeanPreset.json').is_file():
   files=files+('Profiles/LeanMosin/MLLeanPreset.json',)
- for walking in ('MLWalkingLeanPreset.json','Profiles/LeanMosin/MLWalkingLeanPreset.json'):
+ for walking in ('MLWalkingLeanPreset.json','Profiles/LeanMosin/MLWalkingLeanPreset.json','MLCrouchLeanPreset.json','Profiles/LeanMosin/MLCrouchLeanPreset.json'):
   if (kit/walking).is_file():
    files=files+(walking,)
  if any((kit/name).exists() for name in REFERENCE_FILES):

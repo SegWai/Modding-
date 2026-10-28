@@ -1,0 +1,10 @@
+{
+  "changed_node": "ML166_PublishFinalAimedWeapon",
+  "primary_and_secondary_condition": "(abs(AimY) > 5.0 || abs(AimIKX) > 5.0) && ML106ShoulderedGrip > 0.5 && ML87FirstPersonCrouchLean < 0.5",
+  "centred_pose": "both chain weights false inside +/-5 degrees, as v166",
+  "offcentre": "native weapon IK solves trigger and support arms from final weapon grip pose in same graph stage",
+  "scope": "existing final-aim path, third-person shouldered guns only",
+  "tradeoff": "off-centre elbow position may follow native grip targets rather than the exact centred elbow settings",
+  "camera_preset_crash_gate_scripts": "unchanged",
+  "native_validation": "NOT RUN"
+}
