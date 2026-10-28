@@ -1,0 +1,7 @@
+{
+  "base": "v161",
+  "removed": "v162 native stance lock, readiness dependency, normal-canary routing and ADS matching changes",
+  "preserved_preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "addition": "read-only bounded head/feet/pelvis/scale/ground audit",
+  "native_validation": "not run"
+}
