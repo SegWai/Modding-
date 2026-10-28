@@ -1,0 +1,487 @@
+{
+  "base": "v86",
+  "control": "ML87FirstPersonCrouchLean",
+  "copied_upper_body_nodes": [
+    {
+      "source": "ML5_CrouchIdle_left_Spine_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_Spine_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_Spine_Translate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_Spine_Translate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_Spine1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_Spine1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_Spine2_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_Spine2_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftShoulder_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftShoulder_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftShoulder_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftShoulder_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftShoulder_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftShoulder_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightShoulder_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightShoulder_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightShoulder_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightShoulder_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightShoulder_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightShoulder_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_Neck1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_Neck1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_Head_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_Head_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_LeftHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_LeftHand_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_left_RightHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_left_RightHand_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Spine_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Spine_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Spine_Translate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Spine_Translate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Spine1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Spine1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Spine2_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Spine2_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Neck_Translate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Neck_Translate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Neck_Translate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Neck_Translate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Neck1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Neck1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_Head_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_Head_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_LeftHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_LeftHand_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchIdle_right_RightHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchIdle_right_RightHand_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_Spine_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_Spine_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_Spine_Translate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_Spine_Translate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_Spine1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_Spine1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_Spine2_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_Spine2_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftShoulder_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftShoulder_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftShoulder_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftShoulder_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftShoulder_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftShoulder_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightShoulder_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightShoulder_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightShoulder_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightShoulder_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightShoulder_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightShoulder_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_Neck1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_Neck1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_Head_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_Head_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_LeftHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_LeftHand_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_left_RightHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_left_RightHand_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Spine_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Spine_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Spine_Translate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Spine_Translate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Spine1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Spine1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Spine2_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Spine2_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Neck_Translate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Neck_Translate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Neck_Translate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Neck_Translate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Neck1_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Neck1_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_Head_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_Head_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightForeArm_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightForeArm_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightForeArm_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightForeArm_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightForeArm_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightForeArm_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_LeftHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_LeftHand_Rotate_Z"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightHand_Rotate_X",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightHand_Rotate_X"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightHand_Rotate_Y",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightHand_Rotate_Y"
+    },
+    {
+      "source": "ML5_CrouchWalk_right_RightHand_Rotate_Z",
+      "clone": "ML87_FirstPersonCrouchWalk_right_RightHand_Rotate_Z"
+    }
+  ],
+  "effective_custom_stance_nodes": [
+    "MLADSLeanFootIKBlend",
+    "ML83_LeftTransitionAimOnly",
+    "ML51_StandingLeftElbowOnly",
+    "ML50_StandingBalancedOnly",
+    "ML48_StandingLeftOnly",
+    "ML45_StandingRightOnly",
+    "ML36_WalkingHeight95",
+    "ML39_RightMovingLower_LeftArm_X",
+    "ML39_RightMovingLower_LeftArm_Y",
+    "ML39_RightMovingLower_LeftArm_Z",
+    "ML39_RightMovingLower_RightArm_X",
+    "ML39_RightMovingLower_RightArm_Y",
+    "ML39_RightMovingLower_RightArm_Z",
+    "ML39_RightMovingLower_LeftForeArm_X",
+    "ML39_RightMovingLower_LeftForeArm_Y",
+    "ML39_RightMovingLower_LeftForeArm_Z",
+    "ML39_RightMovingLower_RightForeArm_X",
+    "ML39_RightMovingLower_RightForeArm_Y",
+    "ML39_RightMovingLower_RightForeArm_Z",
+    "ML39_RightMovingLower_LeftHand_X",
+    "ML39_RightMovingLower_LeftHand_Y",
+    "ML39_RightMovingLower_LeftHand_Z",
+    "ML39_RightMovingLower_RightHand_X",
+    "ML39_RightMovingLower_RightHand_Y",
+    "ML39_RightMovingLower_RightHand_Z",
+    "ML37_RightElbowBlend"
+  ],
+  "native_stance_variable": "unchanged",
+  "native_legs_and_gait": "unchanged",
+  "third_person_and_npc_control": 0,
+  "camera_source": "unchanged except diagnostic version tags",
+  "native_compilation_and_playback": "not run"
+}

@@ -357,3 +357,9 @@ reload/action clips. Not finishedARCstyletransition/actionset. NativeinputXML,
 leftWeaponIKprofile/actualweapon/muzzle/ADS/firing/contact/FPS UNTESTED.
 Offline500reflectioncases,50boneFK9e-15,303nodes/301vars/DAG/source/PBOchecks
 pass. NEED Windowsgameplay; do notclaim fullyfunctioningleft-handed weapons.
+
+Ambidextrous v2 — native compile blocker from v1logs215747
+FIRST error: MLAShoulderPose.c(22), Variable name Weapon already used as type name.
+V1neverenteredgameplay. Renamed3field tokens Weapon -> HeldWeapon only.
+Allothergameplay scripts/graph/inputs/fourpresets unchanged; originallean186saved.
+RebuiltPBOs/18fileZIP; exactsource-delta regressionpasses. V2nativecompile NOT RUN.

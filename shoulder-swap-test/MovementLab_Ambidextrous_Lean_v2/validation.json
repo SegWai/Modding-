@@ -1,0 +1,131 @@
+{
+  "pose_math_reconstruction_max_error": {
+    "left": 2.786795880709708e-06,
+    "right": 2.905009168108208e-06
+  },
+  "corrected_bones_per_direction": {
+    "left": 20,
+    "right": 19
+  },
+  "mode_coverage": {
+    "StandIdle": {
+      "native_chain": "LeanIdleErcRas",
+      "output_node": "ML5_StandIdle_right_RightHand_Rotate_Z",
+      "mask": "full",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftFoot",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLeg",
+        "LeftShoulder",
+        "LeftUpLeg",
+        "Neck",
+        "Neck1",
+        "Pelvis",
+        "RightArm",
+        "RightFoot",
+        "RightForeArm",
+        "RightHand",
+        "RightLeg",
+        "RightShoulder",
+        "RightUpLeg",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes"
+    },
+    "StandWalk": {
+      "native_chain": "LeanMoveErcRas",
+      "output_node": "ML5_StandWalk_right_RightHand_Rotate_Z",
+      "mask": "gait",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftShoulder",
+        "Neck",
+        "Neck1",
+        "Pelvis",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "RightShoulder",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes",
+      "upright_revision": "Walk-Upright-v23.json"
+    },
+    "CrouchIdle": {
+      "native_chain": "LeanIdleCroRas",
+      "output_node": "ML5_CrouchIdle_right_RightHand_Rotate_Z",
+      "mask": "upper",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftShoulder",
+        "Neck",
+        "Neck1",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "RightShoulder",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes"
+    },
+    "CrouchWalk": {
+      "native_chain": "LeanMoveCroRas",
+      "output_node": "ML5_CrouchWalk_right_RightHand_Rotate_Z",
+      "mask": "upper",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftShoulder",
+        "Neck",
+        "Neck1",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "RightShoulder",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes"
+    }
+  },
+  "authoring_symmetry_max_error_m": 6.705522537231445e-08,
+  "shared_weapon_roll_target": "right stationary standing +1-degree full-lean roll target; other +8/-8 targets retained; native visible alignment pending",
+  "npc": "one stationary NPC; alternating one-second lean sides after graph warmup; no patrol, mimic or respawn",
+  "native_compilation_and_playback": "SHOULDER-V2 NOT RUN: requires user Windows DayZDiag. Native exposure balance, weapon roll, gait, crouch and NPC behavior remain pending.",
+  "pbo_sha256": {
+    "@MLAmbidextrousLogic/Addons/MLAmbidextrousLogic.pbo": "89e0bf671a40436be4e187ca0ec38bd7bd1c2e15a72ace7197fd3bcb6aeedfd1",
+    "@MLAmbidextrousWorkspace/Addons/MLAmbidextrousWorkspace.pbo": "0ee6223feeb41ae6d1d1a18f949b833fa06b271ea31adcb2f0b74b292782f636"
+  },
+  "pbo_headers_prefix_offsets_source_and_sha1": "passed: independently parsed and compared to every input file",
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "script_API_review": "Native movement overrides, weapon SetADS, graph writes and lifecycle methods checked against official 1.30 scripts; native compilation pending",
+  "changed_native_files": [
+    "locomotion.agf",
+    "player_main.agr"
+  ],
+  "source_directory": "F:/DayZProjects",
+  "revision": "ambidextrous experiment v2: only World field Weapon renamed HeldWeapon to fix native type collision reported in v1 logs; behavior unchanged; native compilation pending",
+  "dependencies": "Native DayZ firearms only: AK74, SKS, Glock19; no external weapon mods or Community Framework required."
+}
