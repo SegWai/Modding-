@@ -1,0 +1,13 @@
+{
+  "user_feedback": "camera fixed; grip slips only during view movement, static hold acceptable",
+  "evidence": "v69 largest support-wrist drift around 2.7cm in sharp turns; rifle/trigger attachment mostly <=1.7mm",
+  "change": "native synchronous WeaponIK branch before authored poses: same config/inputs, BlendIn/Out0, all native aim/hand chains true, selected by existing smoothed lean gate; normal native path unchanged",
+  "preserved": [
+    "camera v69 implementation",
+    "authored procedural amounts and geometry",
+    "shared yaw/pitch order",
+    "weapon attachment buffers and roll",
+    "reach hold logic"
+  ],
+  "native_validation": "pending"
+}
