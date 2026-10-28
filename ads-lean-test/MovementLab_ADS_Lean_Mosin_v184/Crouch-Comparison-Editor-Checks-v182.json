@@ -1,0 +1,13 @@
+{
+  "standing_walking_presets_unchanged": true,
+  "native_output_reachable_nodes": 767,
+  "native_output_excludes_all_new_editor_nodes": true,
+  "role_toggle_cases": 8,
+  "crouch_walking_scope_restore_updates": 200,
+  "new_graph_nodes": 38,
+  "new_controls": 19,
+  "synthetic_crouched_hold_cases_accepted": 452,
+  "synthetic_crouched_hold_cases_rejected": 48,
+  "max_FK_endpoint_orientation_error": 7.771561172376096e-16,
+  "native_compile_ui_default_comparison_and_contact": "NOT RUN"
+}

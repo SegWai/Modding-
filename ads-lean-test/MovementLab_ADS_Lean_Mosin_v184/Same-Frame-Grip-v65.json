@@ -1,0 +1,7 @@
+{
+  "evidence": "v64 video and logs show detached support hand; target gaps up to .211453m",
+  "approach": "stable support-to-primary wrist transform; graph constructs and captures target from current RightHand, restores RightHand, native left arm IK2 solve",
+  "capture_chain": "existing native RHandIKTarget capture chain, evaluated while RightHand is temporarily the support target proxy",
+  "camera": "unchanged from user-approved v64 tilt code",
+  "native_validation": "pending: native cross-hand target capture/left-arm solve requires Windows DayZ"
+}

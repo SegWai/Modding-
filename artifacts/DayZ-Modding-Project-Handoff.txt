@@ -273,3 +273,19 @@ Body target frames come from stored standing audit + approved standing head/body
 settings, not an in-game measurement of this new version. Native compilation,
 visual fidelity, arm drop, cloth, FPS and crashes still require Windows DayZ test.
 Offline graph/preset/300-case FK/scene/menu checks and PBO packaging passed.
+
+V184 — mirror unarmed RIGHT to LEFT, native lower body, shared red/blue lean
+Uploaded unarmed save (14380 bytes) SHA256:
+e84eda1ed4f716c44c889d51e6b7e59b8f67d00f537c871f949608a52a3b96c5.
+Raw original archived. RIGHT section preserved exactly; LEFT mirrors BOTH body
+base and anatomical F6/F7 arm/shoulder/forearm/hand/head settings, not just legs.
+Removed all42 custom pelvis/leg/foot base transforms. Upper body is attached
+relative to the actual native pelvis. Native lower body now supplies the stance.
+Lower F7 offsets initially zero; remain available for deliberate manual editing.
+Added private shared lean controls read by native lean expressions for both NPCs,
+avoiding dependence on command-owned Lean. Default expression unchanged at
+preview flag0; ordinary actors/three approved aiming preset banks unchanged.
+Red lean visibility still requires native testing; no current logs proved cause.
+Same scene/clock/F6/F7/save/navigation. Fresh extract loads mirrored preset.
+Offline480input cases, mirror/isolation and200FKcases/PBO checks passed.
+Windows DayZ compilation and rendered result NOT RUN.

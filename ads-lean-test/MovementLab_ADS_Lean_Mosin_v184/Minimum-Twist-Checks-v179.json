@@ -1,0 +1,11 @@
+{
+  "random_elbow_targets": 1000,
+  "max_joint_and_palm_matrix_error": 1.2212453270876722e-15,
+  "mean_old_whole_arm_rotation_degrees": 79.2203540081849,
+  "mean_new_shoulder_swing_degrees": 45.68163081855948,
+  "added_upper_arm_axial_component": 0,
+  "new_forearm_nodes": 9,
+  "new_controls": 6,
+  "uploaded_absolute_walking_preset_unchanged": true,
+  "native_compile_mesh_and_gait": "NOT RUN"
+}

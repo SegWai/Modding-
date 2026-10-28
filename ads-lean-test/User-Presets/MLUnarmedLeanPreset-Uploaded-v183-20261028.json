@@ -1,0 +1,485 @@
+{
+    "PresetVersion": 1,
+    "LeftLean": {
+        "WeaponSettings": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0,
+            "LeftPitch": 0.0,
+            "LeftYaw": 0.0,
+            "LeftRoll": 0.0,
+            "RightPitch": 0.0,
+            "RightYaw": 0.0,
+            "RightRoll": 0.0,
+            "HeadPitch": 0.0,
+            "HeadYaw": 0.0,
+            "HeadRoll": 0.0,
+            "MuzzleYaw": 0.0,
+            "MuzzlePitch": 0.0
+        },
+        "BodySettings": {
+            "Parts": [
+                {
+                    "BoneName": "Pelvis",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine1",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine2",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine3",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Neck",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Neck1",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Head",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftShoulder",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightShoulder",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftForeArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightForeArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftHand",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightHand",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftUpLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightUpLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftFoot",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightFoot",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftToeBase",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightToeBase",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                }
+            ]
+        }
+    },
+    "RightLean": {
+        "WeaponSettings": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0,
+            "LeftPitch": 0.0,
+            "LeftYaw": 0.0,
+            "LeftRoll": -0.20000000298023225,
+            "RightPitch": 0.0,
+            "RightYaw": 20.30000114440918,
+            "RightRoll": -0.699999988079071,
+            "HeadPitch": 0.0,
+            "HeadYaw": -7.400000095367432,
+            "HeadRoll": -26.0,
+            "MuzzleYaw": 0.0,
+            "MuzzlePitch": 0.0
+        },
+        "BodySettings": {
+            "Parts": [
+                {
+                    "BoneName": "Pelvis",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine1",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine2",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Spine3",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Neck",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Neck1",
+                    "X": 4.700000286102295,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "Head",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftShoulder",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightShoulder",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": -18.700000762939454,
+                    "Yaw": 2.6000001430511476,
+                    "Roll": 10.699999809265137
+                },
+                {
+                    "BoneName": "LeftArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": -19.0,
+                    "Roll": -9.40000057220459
+                },
+                {
+                    "BoneName": "LeftForeArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightForeArm",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": -13.800000190734864,
+                    "Yaw": 4.800000190734863,
+                    "Roll": -18.200000762939454
+                },
+                {
+                    "BoneName": "LeftHand",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightHand",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": -26.80000114440918,
+                    "Yaw": -7.400000095367432,
+                    "Roll": 5.300000190734863
+                },
+                {
+                    "BoneName": "LeftUpLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightUpLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightLeg",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftFoot",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightFoot",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "LeftToeBase",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                },
+                {
+                    "BoneName": "RightToeBase",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0,
+                    "Pitch": 0.0,
+                    "Yaw": 0.0,
+                    "Roll": 0.0
+                }
+            ]
+        }
+    }
+}

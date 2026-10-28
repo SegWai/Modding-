@@ -1,0 +1,11 @@
+{
+  "retarget_cases": 100,
+  "max_matrix_error": 7.216449660063518e-15,
+  "upper_target": "standing model orientations/positions plus walking vertical bob",
+  "lower_target": "native walking pelvis rotation/Y and leg joint motion unchanged; pelvis X/Z anchor shared",
+  "cache_keys": 64,
+  "new_controls": 117,
+  "no_perframe_feedback": "reference capture only with output disabled; solved keys never resampled until invalidated",
+  "preserved": "fixed preset/camera/controls/late aim and crash mitigation",
+  "native_compile_pose_transition_grip": "NOT RUN"
+}
