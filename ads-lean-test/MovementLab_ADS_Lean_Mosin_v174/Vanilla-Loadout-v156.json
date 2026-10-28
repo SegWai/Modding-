@@ -1,0 +1,15 @@
+{
+  "weapons": [
+    "AK74",
+    "SKS",
+    "Glock19"
+  ],
+  "quickbar": [
+    1,
+    2,
+    3
+  ],
+  "external_dependencies": [],
+  "preset_sha256": "deeaeac1af612bfe4edaa542e6ebabf6da992b163bd7eac56579a0dd4f0bdb61",
+  "native_validation": "not run; native attachments logged if refused"
+}

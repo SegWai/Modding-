@@ -1,0 +1,81 @@
+{
+  "parts": 24,
+  "new_zero_default_controls": 145,
+  "graph": "144body transforms follow approved poses, weapon follow conditional; original pose nodes unchanged",
+  "ui": "F7 open/close+Esc,24part dropdown,6sliders,left/right save/load/reset,balanced input focus; F6 retained",
+  "lean_transitions": [
+    {
+      "fps": 30,
+      "from": -1,
+      "to": 1,
+      "seconds": 0.466667
+    },
+    {
+      "fps": 30,
+      "from": 1,
+      "to": -1,
+      "seconds": 0.466667
+    },
+    {
+      "fps": 30,
+      "from": 0,
+      "to": 1,
+      "seconds": 0.233333
+    },
+    {
+      "fps": 30,
+      "from": 0,
+      "to": -1,
+      "seconds": 0.233333
+    },
+    {
+      "fps": 60,
+      "from": -1,
+      "to": 1,
+      "seconds": 0.45
+    },
+    {
+      "fps": 60,
+      "from": 1,
+      "to": -1,
+      "seconds": 0.45
+    },
+    {
+      "fps": 60,
+      "from": 0,
+      "to": 1,
+      "seconds": 0.233333
+    },
+    {
+      "fps": 60,
+      "from": 0,
+      "to": -1,
+      "seconds": 0.233333
+    },
+    {
+      "fps": 144,
+      "from": -1,
+      "to": 1,
+      "seconds": 0.444444
+    },
+    {
+      "fps": 144,
+      "from": 1,
+      "to": -1,
+      "seconds": 0.444444
+    },
+    {
+      "fps": 144,
+      "from": 0,
+      "to": 1,
+      "seconds": 0.222222
+    },
+    {
+      "fps": 144,
+      "from": 0,
+      "to": -1,
+      "seconds": 0.222222
+    }
+  ],
+  "native_compile_playback_UI_foot_plant_grip": "NOT RUN; numeric4.5rate matches official1.30 source, not native visual verification"
+}
