@@ -1,0 +1,6 @@
+{
+  "head_roll_correction_degrees": 24.255718137027305,
+  "native_Z_radians": -0.42334214392683156,
+  "support_solver": "same hand-anchored config as ML125, after ML139 publication, primary off, secondary on, no republish",
+  "native_validation": "unverified"
+}

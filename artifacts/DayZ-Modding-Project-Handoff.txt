@@ -312,3 +312,23 @@ Canonical: ads-lean-test/User-Presets/Current-MLUnarmedLeanPreset.json
 Archive: MLUnarmedLeanPreset-Approved-20261028.json; artifact updated.
 Future unarmed test bundles/profiles must include these exact bytes. Existing
 185 ZIP unchanged; armed standing/walking/crouch approvals remain separate.
+
+V186 — player rollout, no NPCs, higher raised third-person camera
+User explicitly requests all approved poses on own character and removes NPCs.
+Mission creates only selected player, retains native loadout/backpack/ammo.
+Exact approved standing/walking/crouch/unarmed files bundled and active; unarmed
+is latest14495byte d47025fd approval, NOT185 old unarmed slider values.
+Routing: standing raised / upright walking raised / stationary rifle crouch
+raised / stationary empty-handed fists-lowered standing unarmed. Other contexts
+retain existing handling, no unapproved crouch-walk or handgun rifle-arm invention.
+Crouch saved182scope now applied to player; armreference caches expanded to three
+separate stance/gait banks (6sides/12arms). Clear crouch output uponstanceexit.
+Real-player unarmed path observes native Q/E, never forces Lean/Raised/ADS or
+NPC clock/movement/stance. Unarmed flags released and cached writes invalidated
+onexit so other contexts cannot inherit stale output; normal bank sameframe.
+Neutral/side references first-use still settle naturally, no new feedback loop.
+Camera: existingminimum4mdistance unchanged. Weapon-raised thirdpersonpivot15cm
+above native instead of oldinspectiondrop: +50cm standing /+25cm crouched vs185.
+Lowered/firstperson/ADSoptics camera unchanged. F6/F7 still unarmedbank editors.
+1536offline routing cases/preset hashes/cache handoff/camera/API/PBOchecks pass.
+NativeDayZ compile/visiblematch/grip/transitions/FPS/crashes NOT RUN.

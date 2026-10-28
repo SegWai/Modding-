@@ -1,0 +1,8 @@
+{
+  "approved_preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "both_sides_schema_bounds_and_weapon_reach": "PASS",
+  "head_handling_change": "NPC only, stationary abs(lean)<=.01; stop forcing native optics head tilt",
+  "pose_graph_byte_identical_to_v160": true,
+  "player_and_lean_head_behavior_unchanged": true,
+  "native_compilation_and_rendered_head_match": "NOT RUN"
+}
