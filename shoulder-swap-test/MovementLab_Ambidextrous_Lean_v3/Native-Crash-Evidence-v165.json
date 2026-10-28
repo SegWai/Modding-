@@ -1,0 +1,13 @@
+{
+  "source": "user v164 native minidump at2026-10-28 00:44:42",
+  "native_fault_offset_in_dayzdiag_hex": "0x4bba20",
+  "faulting_instruction": "mov qword ptr [r14 + rbx*8], rax",
+  "short_index_hex": "0x8000",
+  "sign_extended_index_u32_hex": "0xffff8000",
+  "scaled_index_hex": "0x1ffff0000",
+  "buffer_entry_count_at_fault": 32769,
+  "comparison": "same native fault address as v163, despite reduced graph nesting",
+  "interpretation": "internal 16bit index crosses signed range during native graph evaluation; exact native function has no symbols",
+  "targeted_fix": "remove compounded duplicate full-base pose evaluation from four left correction layers; direct fractional weighting instead",
+  "native_reproduction_after_fix": "NOT RUN"
+}

@@ -1,0 +1,6 @@
+{
+  "evidence": "v61 compiled and ran; 63 player grip samples, 2 positive >.01, none full >.95; crash later in native executable without attributed script error",
+  "fix": "Use HumanCommandWeapons.GetBaseAimingAngleUD degrees; stable level neutral calibration freezes until weapon change; inactive raised camera returns native binding",
+  "graph": "byte-identical to v61",
+  "native_playback": "not run"
+}

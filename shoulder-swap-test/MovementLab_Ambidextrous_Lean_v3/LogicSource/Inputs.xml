@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modded_inputs>
+ <inputs>
+  <actions><input name="UAMLAShoulderSwap" loc="Shoulder swap (ambidextrous test)" /></actions>
+  <sorting name="MLAmbidextrous" loc="MovementLab - Shoulder swap">
+   <input name="UAMLAShoulderSwap" />
+  </sorting>
+ </inputs>
+ <preset><input name="UAMLAShoulderSwap"><btn name="mB4" /></input></preset>
+</modded_inputs>

@@ -363,3 +363,14 @@ FIRST error: MLAShoulderPose.c(22), Variable name Weapon already used as type na
 V1neverenteredgameplay. Renamed3field tokens Weapon -> HeldWeapon only.
 Allothergameplay scripts/graph/inputs/fourpresets unchanged; originallean186saved.
 RebuiltPBOs/18fileZIP; exactsource-delta regressionpasses. V2nativecompile NOT RUN.
+
+Ambidextrous v3 — native graph-load crash candidate correction
+V2 logs220439 confirm World+Mission compilation. Crashes at CreatePlayer, final
+RPTentry AnimGraph load player_main.agr, BEFORE shoulder-script/gameplay logs.
+Minidump shows noncanonical pointer read; no symbols prove exact parserfunction.
+Only novel expression function was max(...), absent working186 graph. Replace
+one BlendWeight field with equivalent clamp(active+oldGate,0,1). Scripts/input/
+4presets/othergraphnodes unchanged. Privategraphresourceversionv3 refreshed.
+2002binary gate-equivalence cases and no-newfunction/exactdiff/PBOchecks pass.
+This is a leading-suspect correction, NOT confirmed rootcause or native fix.
+Nativev3load/leftweaponIK/handedness/gameplay NOT RUN. Originallean186preserved.
