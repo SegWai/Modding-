@@ -1,0 +1,10 @@
+{
+  "v2_native_world_and_mission": "compiled",
+  "v2_crash": "native AV while AnimGraph load during CreatePlayer; no shoulder input/calibration/gameplay logs",
+  "suspect": "one new max(...) expression absent from working186 graph",
+  "fix": "clamp(MLASwapActive+originalGate,0,1), equivalent for binary swap and gate in[0,1]",
+  "confirmed_root_cause": false,
+  "old_expression": "max(MLASwapActive,clamp((clamp(abs(MLADSLeanAmount)*MLADSLeanGate,0.0,1.0)*(1.0-ML87FirstPersonCrouchLean)*ML106ShoulderedGrip)*1000000.0,0.0,1.0))",
+  "new_expression": "clamp(MLASwapActive+(clamp((clamp(abs(MLADSLeanAmount)*MLADSLeanGate,0.0,1.0)*(1.0-ML87FirstPersonCrouchLean)*ML106ShoulderedGrip)*1000000.0,0.0,1.0)),0.0,1.0)",
+  "native_v3": "NOT RUN"
+}

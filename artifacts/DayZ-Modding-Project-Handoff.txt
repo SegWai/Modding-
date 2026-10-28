@@ -431,3 +431,15 @@ IK/load/render/contact/fire/ADS NOTRUN. Trackinglastcompletedposemayaddoneframe
 lag; assumesnativehelperlocalposeconstantinraisedlocomotion. Notfinishednative
 leftIKasset. Diag nowalsoincludesliteralitemtransformvsaccessorsight/helper/wrists,
 whichmaynotallrepresentrenderedpose. Neednativev7test,donotclaimprovedfix.
+
+SHOULDER EXPERIMENT V8 — latest update
+User still reports weapon misplacement after v7; prior video reviewed again.
+V8 corrects a concrete missing full-profile position/orientation calculation,
+while preserving the visible arm mirror and four approved preset files.
+Directory: shoulder-swap-test/MovementLab_Ambidextrous_Lean_v8
+Runtime: artifacts/MovementLab_Ambidextrous_Lean_v8.zip
+Log marker: MLASHOULDER8 full-profile build.
+Offline 6000 full rigid profile cases pass; native DayZ unavailable.
+The existing native Weapon-helper publisher remains experimental; the accessor
+sight transform may not represent rendered attachment. No claim of native fix.
+Original lean186 snapshot/tag remains untouched.
