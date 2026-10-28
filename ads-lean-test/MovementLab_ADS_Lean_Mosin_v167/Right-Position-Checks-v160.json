@@ -1,0 +1,13 @@
+{
+  "direct_graph_displacement_m": [
+    0.32296480186560195,
+    0.0,
+    0.0
+  ],
+  "head_target_from_historical_neutral_m": 0.219,
+  "left_foot_moves_with_body": true,
+  "right_foot_reference_preserved": true,
+  "upper_body_shape_and_height_preserved": true,
+  "serialized_graph_FK_error": 1.4099832412739488e-14,
+  "native_test": "NOT RUN; target/displacement/foot stance require native test"
+}

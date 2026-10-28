@@ -1,0 +1,8 @@
+{
+  "user_feedback": "v68 almost fixed; remaining issue camera and arms move at different speeds",
+  "log_evidence": "v68 slow run max grip drift .00351962m; fast run max .0420401m; world item vs native pose <.001m and trigger-hand attachment <.0013m",
+  "camera_change": "convert unchanged desired model camera to RightHand-relative offset; full bone-parent mode3, heading0, render interpolation shared",
+  "reach_change": "hold trim during off-centre look; freeze neutral reference there; calibrate and measure within 5deg native yaw/pitch",
+  "graph": "identical to v68",
+  "native_validation": "pending"
+}

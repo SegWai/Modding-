@@ -1,0 +1,9 @@
+{
+  "new_zero_default_controls": 15,
+  "grip_anchored_elbow_cases": 1000,
+  "max_wrist_orientation_segment_error": 8.881784197001252e-16,
+  "ui": "smaller panel,2exclusive tabs,15sliders/readouts/+/-pairs;9new fields save/load/reset with existing values class",
+  "graph": "approved body and weapon/support nodes unchanged; new arm/head controls after final support solve in standing-right branch",
+  "cache": "per-actor snapshot after0.2s settled unmodified arm pose; invalidated only for weapon/hold changes; recalc on values revision",
+  "native_compilation_and_rendering": "NOT RUN"
+}
