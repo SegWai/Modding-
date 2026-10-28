@@ -1,0 +1,19 @@
+{
+  "gates_converted": 4,
+  "weighted_transform_nodes": 33,
+  "trigger_case_fractional_weights": {
+    "ML104_LeftElbowDirections": 0.40833309999999995,
+    "ML118_ContactHoldOnly": 0.40833309999999995,
+    "ML130_StandingLeftOnly": 0.2916669,
+    "ML133_StandingLeftElbow": 0.2916669
+  },
+  "base_replays_through_selected_left_layers": [
+    16,
+    1
+  ],
+  "full_pose_endpoint_operations": "unchanged; original axes/amounts/IK settings retained",
+  "fractional_transition": "direct weighted correction, changed from blending full evaluated poses",
+  "presets_camera_player_npc_and_timing_scripts": "byte-identical v164",
+  "minidump_index_overflow_arithmetic": "verified signed16 boundary at32768",
+  "native_crash_retest": "NOT RUN"
+}

@@ -1,0 +1,33 @@
+{
+  "evidence": "v67: right-side grip varies >10cm during look changes, while settled left drift around .0015m; no compile error",
+  "changes": [
+    "move horizontal pose/weapon aim after custom pose alongside vertical aim",
+    "native pose camera matrix replaces world-item transform in raised camera",
+    "diagnose skeleton hand-to-hand drift separately from item attachment and pose/world discrepancy"
+  ],
+  "horizontal_nodes_masked": [
+    "AnimNodePose2",
+    "AnimNodePose20",
+    "FallMasterIK",
+    "ML67_PublishAimedWeapon",
+    "ML50_PublishBalancedWeapon",
+    "ML48_PublishStandingLeftWeapon",
+    "ML45_PublishStandingRightWeapon",
+    "NormalWeaponIK",
+    "ML33_FinalGripIK",
+    "PneRasPose",
+    "PoBAimP",
+    "PoBAimPFix",
+    "ThrowAimP",
+    "ThrowAimWalkP",
+    "AimInjPose",
+    "AimInjWalkPose",
+    "AimObstPose",
+    "AimPose",
+    "AimRunPose",
+    "AimRunPoseObst",
+    "AimWalkPose"
+  ],
+  "preserved": "same raised camera calibration/framing algebra, native ADS/optic code, authored pose geometry, no scripted wrist targets or feedback",
+  "native_validation": "pending"
+}
