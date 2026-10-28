@@ -1,0 +1,32 @@
+{
+  "base": "v93",
+  "changed_existing_nodes": [
+    "ML39_RightMovingLower_LeftArm_X",
+    "ML39_RightMovingLower_LeftArm_Y",
+    "ML39_RightMovingLower_LeftArm_Z",
+    "ML39_RightMovingLower_RightArm_X",
+    "ML39_RightMovingLower_RightArm_Y",
+    "ML39_RightMovingLower_RightArm_Z",
+    "ML39_RightMovingLower_LeftForeArm_X",
+    "ML39_RightMovingLower_LeftForeArm_Y",
+    "ML39_RightMovingLower_LeftForeArm_Z",
+    "ML39_RightMovingLower_RightForeArm_X",
+    "ML39_RightMovingLower_RightForeArm_Y",
+    "ML39_RightMovingLower_RightForeArm_Z",
+    "ML39_RightMovingLower_LeftHand_X",
+    "ML39_RightMovingLower_LeftHand_Y",
+    "ML39_RightMovingLower_LeftHand_Z",
+    "ML39_RightMovingLower_RightHand_X",
+    "ML39_RightMovingLower_RightHand_Y",
+    "ML39_RightMovingLower_RightHand_Z"
+  ],
+  "new_control": "ML93ArmDrop",
+  "default_on": true,
+  "toggle": "Ctrl+F8",
+  "off": "v89 original rotation values",
+  "scope": "own-right moving raised third-person player/NPC",
+  "telemetry": "MLDROP93 wrist/elbow relative positions after mode has been stable 0.4s",
+  "native_gameplay": "not run",
+  "additional_drop_from_v93_on_m": 0.05,
+  "on_extra_drop_from_v89_reference_m": 0.12
+}
