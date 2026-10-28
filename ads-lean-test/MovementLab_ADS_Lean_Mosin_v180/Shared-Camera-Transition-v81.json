@@ -1,0 +1,9 @@
+{
+  "base": "v80",
+  "source_mismatch": "custom pose gate 0.08s versus independent camera envelope 0.10s starting only after native raise completion",
+  "change": "remove separate camera envelope; apply eye correction with existing shared pose gate/lean weight",
+  "settled_eye_target_unchanged": true,
+  "native_head_parent_retained": true,
+  "custom_only_graph_unchanged": true,
+  "native_gameplay": "not run"
+}
