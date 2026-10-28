@@ -254,3 +254,22 @@ The old NPC pair is removed. The new pair is 0.5m centre-to-centre: red crouched
 UPDATE: V182 DEFAULT VS CUSTOM CROUCH WITH LIVE EDITING
 The user now wants both close NPCs crouched with weapons raised and no ADS: red uses the existing native/default comparison route and is read-only; blue keeps custom animations and is the only F6/F7 edit target. Opening a panel holds both on its selected side; closing resumes the one-second left/centre/right/centre cycle. Approved standing/walking presets are unchanged and still shared across other characters as in181.
 A new independent experimental MLCrouchLeanPreset.json stores both custom crouch sides, all weapon/arms/head/body offsets together. It starts with zero additive offsets from the existing custom crouch, not a reset of the earlier approved parameters. The weapon controller captures actual unedited crouched arm geometry once per side rather than using standing reference geometry. Native red structurally bypasses all new editor nodes; its custom gate and smoothing are zero and its native comparator selection stays locked. The comparison still runs inside the modded test workspace using NPC visual state forcing, not a clean no-mod executable process. F6/F7 edits are blue-only until explicit user approval of a crouch rollout; they do not replace the approved standing/walking JSON. New runtime has16files. Offline geometry/isolation/package checks pass; native v182 compilation, UI controls, pose/grip and comparison still need testing.
+
+V183 — standing unarmed comparison (2026-10-28)
+Approved new crouch upload: 14366 bytes, SHA256
+2de68073870eb3b17bf24f9546ff90a41b737b516b0535351eae6d247f90eb20.
+Preserved exactly as Current-MLCrouchLeanPreset.json, dated archive and runtime
+root/profile/bundle. Standing and walking approved saves remain untouched.
+New scene: same two Denis NPCs, same 0.5m spacing, now both standing UNARMED.
+Red native default lean is read-only. Blue carries approved custom aiming body
+posture without the aiming shoulder/arm pose; unarmed native arms hang naturally.
+User confirmed keep same model/scale and natural pose height, not head-height lock.
+F6 (Arms/Head) and F7 (24 body parts) now edit only blue unarmed. Save All writes
+MLUnarmedLeanPreset.json separately from all three approved aiming banks.
+Shared one-second left/centre/right/centre targets; menu holds both on chosen side.
+Blue samples each native unarmed side once, then uses cached body-only corrections.
+No temporary gun, weapon publisher, raised-arm phase or per-frame pose feedback.
+Body target frames come from stored standing audit + approved standing head/body
+settings, not an in-game measurement of this new version. Native compilation,
+visual fidelity, arm drop, cloth, FPS and crashes still require Windows DayZ test.
+Offline graph/preset/300-case FK/scene/menu checks and PBO packaging passed.

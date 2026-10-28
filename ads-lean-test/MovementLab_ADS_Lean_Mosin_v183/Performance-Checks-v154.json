@@ -1,0 +1,24 @@
+{
+  "partial_blend_structural_base_visits": {
+    "ML139_RightStraightOnly": {
+      "base_visits_before": 2,
+      "base_visits_after": 1
+    },
+    "ML147_LeftEditorOnly": {
+      "base_visits_before": 2,
+      "base_visits_after": 1
+    }
+  },
+  "body_transform_visits_before": 144,
+  "body_transform_visits_bundled_after": {
+    "LeftLean": 24,
+    "RightLean": 24
+  },
+  "body_transforms_when_unedited_after": 0,
+  "editor_constant_writes_120frames_before": 6600,
+  "editor_constant_writes_120frames_after": 55,
+  "arm_native_reads_40switches_with_nonzero_offsets_after": 12,
+  "arm_native_reads_with_zero_offsets_after": 0,
+  "preserved": "preset bytes, bone operation/axis/amounts,0/1side endpoints,camera,4.5leanrate; fractional transition math optimized",
+  "actual_FPS_native_compile_visuals": "NOT MEASURED; structural counts are not native profiling"
+}
