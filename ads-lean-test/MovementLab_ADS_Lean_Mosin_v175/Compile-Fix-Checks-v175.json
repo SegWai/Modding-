@@ -1,0 +1,10 @@
+{
+  "compile_failure_from_logs": "MLArmZero174.c102/103 Method Object is private",
+  "fix": "Distinct helper names, explicitly qualified migration calls",
+  "changed_gameplay_scripts": [
+    "MLArmZero174.c",
+    "MLWalkingEditorScope173.c"
+  ],
+  "pose_graph_and_preset_bytes_unchanged": true,
+  "native_recompilation": "NOT RUN"
+}
