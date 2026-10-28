@@ -1,0 +1,23 @@
+{
+  "preset_sha256": "deeaeac1af612bfe4edaa542e6ebabf6da992b163bd7eac56579a0dd4f0bdb61",
+  "exact_copies_verified": [
+    "approved source",
+    "ZIProot",
+    "ZIPactiveprofile",
+    "PBOpresetinput"
+  ],
+  "sides": {
+    "LeftLean": {
+      "weapon_fields": 17,
+      "body_parts": 24,
+      "weapon_target_reconstruction_error": 1.6653345369377348e-16
+    },
+    "RightLean": {
+      "weapon_fields": 17,
+      "body_parts": 24,
+      "weapon_target_reconstruction_error": 2.220446049250313e-16
+    }
+  },
+  "runtime": "samev154posegraph/UI/performance/smoothing, approved preset values applied without alteration",
+  "native_visual_confirmation": "NOT RUN"
+}
