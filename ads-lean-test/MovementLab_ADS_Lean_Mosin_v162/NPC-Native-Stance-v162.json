@@ -1,0 +1,7 @@
+{
+  "api_source": "https://github.com/BohemiaInteractive/DayZ-Script-Diff/blob/main/scripts/3_game/human.c",
+  "api": "HumanCommandMove.ForceStance(STANCEIDX_RAISEDERECT); release with -1",
+  "reason": "v159 logs show NPC native_raised=false stance0 while player raised stance3; equal initial head bone height 1.61069m",
+  "preserved_preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "native_validation": "not run"
+}

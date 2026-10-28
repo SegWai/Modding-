@@ -1,0 +1,9 @@
+{
+  "base": "v75",
+  "observation": "brief dark geometry at top-left immediately before rifle rises, approx 15.6s in uploaded clip",
+  "hypothesis": "rapid wrist render interpolation during raise with wrist-relative camera offset",
+  "change": "head position parent until native raise complete; same corrected model eye in either parent",
+  "pose_graph_unchanged": true,
+  "extra_camera_filter": false,
+  "native_playback": "not run"
+}

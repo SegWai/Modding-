@@ -1,0 +1,10 @@
+{
+  "native_api_signature": "verified against official script repository",
+  "native_stance_lock": "raised erect once; -1 release on stop",
+  "ready": "requires actual raised state and native weapon raise completion",
+  "routing": "normal canary; no forced ArmIK; NPC ADS/head follows selected player ADS mode",
+  "head_reference_cache": "four slots for left/right and raised/ADS",
+  "height_audit": "read-only native stance/raise/scale/head+pelvis above feet/origin above ground",
+  "preservation": "v161 raw fixed preset, v160 direct body shift graph, camera, input, loadout and NPC cycle unchanged",
+  "native_runtime": "NOT RUN: compilation/actual native stance transition/height equality/grip require in-game verification"
+}
