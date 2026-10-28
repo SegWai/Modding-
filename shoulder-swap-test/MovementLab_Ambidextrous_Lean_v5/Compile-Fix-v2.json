@@ -1,0 +1,7 @@
+{
+  "native_first_error": "MLAShoulderPose.c(22): Variable name Weapon already used as type name",
+  "fix": "rename exactly3 field declaration/references to HeldWeapon",
+  "cause": "native World compilation failure, not a gameplay shoulder/lean crash",
+  "v1_runtime_validation": "never reached gameplay",
+  "native_v2_compile": "NOT RUN"
+}

@@ -1,0 +1,20 @@
+{
+  "changed_node": "ML166_PublishFinalAimedWeapon",
+  "directions": {
+    "WeaponDirLr": {
+      "native_angle": "AimIKX",
+      "existing_offset": "ML147LeftMuzzleYaw*clamp(-MLADSLeanAmount,0.0,1.0)+ML147RightMuzzleYaw*clamp(MLADSLeanAmount,0.0,1.0)",
+      "new_expression": "(AimIKX*(1.0-clamp((MLADSLeanCanary-0.8)*5.0,0.0,1.0)))+(ML147LeftMuzzleYaw*clamp(-MLADSLeanAmount,0.0,1.0)+ML147RightMuzzleYaw*clamp(MLADSLeanAmount,0.0,1.0))"
+    },
+    "WeaponDirUd": {
+      "native_angle": "AimY",
+      "existing_offset": "ML147LeftMuzzlePitch*clamp(-MLADSLeanAmount,0.0,1.0)+ML147RightMuzzlePitch*clamp(MLADSLeanAmount,0.0,1.0)",
+      "new_expression": "(AimY*(1.0-clamp((MLADSLeanCanary-0.8)*5.0,0.0,1.0)))+(ML147LeftMuzzlePitch*clamp(-MLADSLeanAmount,0.0,1.0)+ML147RightMuzzlePitch*clamp(MLADSLeanAmount,0.0,1.0))"
+    }
+  },
+  "reason": "v167 final two-hand solve used muzzle offsets only, resetting weapon target pitch/yaw instead of following view aim",
+  "native_logic": "same AimIKX yaw and AimY pitch inputs as normal raised weapon IK, plus existing user muzzle adjustments",
+  "preservation": "all body/arm/head pose controls, two-hand solver condition, saved preset, camera and v165 crash gates unchanged",
+  "timing": "no new smoothing, caches or interpolation; graph reads native aim every evaluation",
+  "native_validation": "NOT RUN"
+}

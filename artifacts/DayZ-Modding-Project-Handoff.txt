@@ -387,3 +387,16 @@ Boundedstatelogsdistinguishwaiting/rejected/activeleftandmissingboneerrors.
 Graph/leftIK/input/4presetsunchangedv3.64readinesscases/setup/PBOcheckspass.
 Nativev4weaponleft/contact/fire/ADSremainUNTESTED. Ifleftcamera/rightgunpersists
 whilelogactiveleft, actualnativeleftweaponpublicationisnextisolationtarget.
+
+Ambidextrous v5 — left gun roll and support-arm mismatch
+User video225146(10.49sec) confirms actualweapon/hand/camera swap works, butgun
+appears sideways/rolled and support arm mismatches. Reviewedcontactsheet+6sframe.
+Changed2leftpublisherfieldsONLY: weaponaxis+x->native-x (modelaxisunchangedby
+handedness), WeightSecondaryChaintrue->false (oldLEFTsupporttargetwasforcing
+newRIGHTsupportarm out of mirrored pose). Primaryalreadyfalse. Keepbothmanual
+mirroredarms/fingersandLeftHandweaponanchor; no savedposevalueschanged.
+One-shotread-onlymodelspaceoriginal/leftsightframes+forward/updotandtwowrists
+loggedafter.25sactive, nofeedbackintopose. NativeAPIalreadyusedbyFPcamera.
+Scene/inputs/automaticneutral/cameras/4JSONbanks/original186unchanged.
+Exact2field/axisinvariant/solveridentity/readonly/PBOcheckspass. Actualv5grip,
+roll/nativecompile/firing/ADS/FPS requireDayZtest; do notclaimvisualfixconfirmed.
