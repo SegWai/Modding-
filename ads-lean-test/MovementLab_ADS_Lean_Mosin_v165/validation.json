@@ -1,0 +1,131 @@
+{
+  "pose_math_reconstruction_max_error": {
+    "left": 2.786795880709708e-06,
+    "right": 2.905009168108208e-06
+  },
+  "corrected_bones_per_direction": {
+    "left": 20,
+    "right": 19
+  },
+  "mode_coverage": {
+    "StandIdle": {
+      "native_chain": "LeanIdleErcRas",
+      "output_node": "ML5_StandIdle_right_RightHand_Rotate_Z",
+      "mask": "full",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftFoot",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLeg",
+        "LeftShoulder",
+        "LeftUpLeg",
+        "Neck",
+        "Neck1",
+        "Pelvis",
+        "RightArm",
+        "RightFoot",
+        "RightForeArm",
+        "RightHand",
+        "RightLeg",
+        "RightShoulder",
+        "RightUpLeg",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes"
+    },
+    "StandWalk": {
+      "native_chain": "LeanMoveErcRas",
+      "output_node": "ML5_StandWalk_right_RightHand_Rotate_Z",
+      "mask": "gait",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftShoulder",
+        "Neck",
+        "Neck1",
+        "Pelvis",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "RightShoulder",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes",
+      "upright_revision": "Walk-Upright-v23.json"
+    },
+    "CrouchIdle": {
+      "native_chain": "LeanIdleCroRas",
+      "output_node": "ML5_CrouchIdle_right_RightHand_Rotate_Z",
+      "mask": "upper",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftShoulder",
+        "Neck",
+        "Neck1",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "RightShoulder",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes"
+    },
+    "CrouchWalk": {
+      "native_chain": "LeanMoveCroRas",
+      "output_node": "ML5_CrouchWalk_right_RightHand_Rotate_Z",
+      "mask": "upper",
+      "bones": [
+        "Head",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftShoulder",
+        "Neck",
+        "Neck1",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "RightShoulder",
+        "Spine",
+        "Spine1",
+        "Spine2"
+      ],
+      "default_tilt": "both native expressions multiplied by (1-MLADSLeanGate)",
+      "weight": "same MLADSLeanAmount and gate as all other modes"
+    }
+  },
+  "authoring_symmetry_max_error_m": 6.705522537231445e-08,
+  "shared_weapon_roll_target": "right stationary standing +1-degree full-lean roll target; other +8/-8 targets retained; native visible alignment pending",
+  "npc": "one stationary NPC; alternating one-second lean sides after graph warmup; no patrol, mimic or respawn",
+  "native_compilation_and_playback": "V165 NOT RUN: requires user Windows DayZDiag. Native exposure balance, weapon roll, gait, crouch and NPC behavior remain pending.",
+  "pbo_sha256": {
+    "@MLADSLeanLogic/Addons/MLADSLeanLogic.pbo": "7622cd33d5ca29e5b07d36825ed9359bd7a655a80a3b319378933e4c664eab2b",
+    "@MLADSLeanWorkspace/Addons/MLADSLeanWorkspace.pbo": "1a726d37324fa632ade21458025f0ea6f7da8e7fc62d3102fb236dda1fc7d7dc"
+  },
+  "pbo_headers_prefix_offsets_source_and_sha1": "passed: independently parsed and compared to every input file",
+  "official_script_revision": "e8204c69fcfd056ea29a9728990fd9f7941ce8a6",
+  "script_API_review": "Native movement overrides, weapon SetADS, graph writes and lifecycle methods checked against official 1.30 scripts; native compilation pending",
+  "changed_native_files": [
+    "locomotion.agf",
+    "player_main.agr"
+  ],
+  "source_directory": "F:/DayZProjects",
+  "revision": "v165 exact approved MLLeanPreset sha256 aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d; v165 manual left hold target [0.02, 0.008140797276277256, 0.15]; v130 standing left/right hold Y=-5cm, Z=0, walking unchanged; v127 right stationary standing weapon roll +1degree, other states retained; v126 X=+2cm and trigger-hand-anchored final support-grip solve; v126 manual left hold target [0.02, 0.008140797276277256, 0.15]; v113 move left-walking weapon hold 3cm character-left from v112, net +2cm anatomical-right; v112 +5cm anatomical-right translation of left-walking weapon/hand hold; v111 left elbow pole 20 degrees and right 45 degrees from down/OUTWARD, otherwise working v107 AJ-only player loadout from loaded configuration with native FSM checks; v106 all firearm subclasses: shared custom body lean; shouldered-gun grip vs native handgun grip; v104 left elbow down/in via fixed-wrist swivel and wrist orientation counter-rotation; AJ-only player loadout from native installed definitions; native validation pending",
+  "dependencies": "Native DayZ firearms only: AK74, SKS, Glock19; no external weapon mods or Community Framework required."
+}
