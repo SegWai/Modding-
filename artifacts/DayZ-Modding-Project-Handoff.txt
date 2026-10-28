@@ -289,3 +289,17 @@ Red lean visibility still requires native testing; no current logs proved cause.
 Same scene/clock/F6/F7/save/navigation. Fresh extract loads mirrored preset.
 Offline480input cases, mirror/isolation and200FKcases/PBO checks passed.
 Windows DayZ compilation and rendered result NOT RUN.
+
+V185 — fix rejected upside-down left mirror
+User screenshot showed inverted torso/arms and stretched neck in184. The mirror
+incorrectly reflected each absolute bone orientation (S*R*S), including its own
+non-XYZ bone basis. Actual stored spine fixture reproduces155.75degrees error.
+Correct mirror is of the deformation relative to a native neutral bone basis B:
+leftR = S*(rightR*inverse(B))*S*B. Samples neutral ONCE after.35s truly centred,
+and left native reference ONCE before applying corrections. Left waits until
+neutral available, then uses cached references; no per-frame pose feedback.
+Let LEFT/CENTRE/RIGHT/CENTRE cycle once before opening editor to hold a side.
+Right pose/settings, native lower body, graph/privatelean and all4JSONbanks are
+unchanged.185changes left bone orientation solver and reference lifecycle only.
+1000random mirror/identity/reversibility checks + actualspinebasis regression
+pass. Native DayZ compilation and rendered cloth/neck/arm result NOT RUN.

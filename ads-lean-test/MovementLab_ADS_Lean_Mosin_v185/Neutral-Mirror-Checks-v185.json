@@ -1,0 +1,9 @@
+{
+  "identity_mirror_preserves_neutral_basis": true,
+  "reversible_orientation_cases": 1000,
+  "max_error": 8.881784197001252e-16,
+  "old_absolute_mirror_error_degrees": 155.75009535292614,
+  "preset_graph_identity": "passed",
+  "one_shot_reference_lifecycle": "passed",
+  "native_compile_visual_mesh": "NOT RUN"
+}
