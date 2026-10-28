@@ -303,3 +303,12 @@ Right pose/settings, native lower body, graph/privatelean and all4JSONbanks are
 unchanged.185changes left bone orientation solver and reference lifecycle only.
 1000random mirror/identity/reversibility checks + actualspinebasis regression
 pass. Native DayZ compilation and rendered cloth/neck/arm result NOT RUN.
+
+NEW APPROVED STANDING UNARMED BASE (after185, 2026-10-28)
+User uploaded latest MLUnarmedLeanPreset.json and explicitly selected it as
+the standing unarmed lean base. Preserve both sides exactly; no further mirror.
+14495 bytes; SHA256 d47025fd4275847815d0fda2d34b629d057608355e7fb5d47e79f4b71d859a27
+Canonical: ads-lean-test/User-Presets/Current-MLUnarmedLeanPreset.json
+Archive: MLUnarmedLeanPreset-Approved-20261028.json; artifact updated.
+Future unarmed test bundles/profiles must include these exact bytes. Existing
+185 ZIP unchanged; armed standing/walking/crouch approvals remain separate.
