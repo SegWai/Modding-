@@ -1,0 +1,7 @@
+{
+  "evidence": "User v34 screenshot shows gun barrel pitched upward after final grip pass.",
+  "cause_under_test": "V34 final solver had aim disabled while publishing weapon orientation after the arm rotations; it did not restore intended native aiming direction.",
+  "fix": "Enable final aim with same boolean condition as both final hand chains. Copy WeaponDirLr, WeaponDirUd and WeaponRoll from original NormalWeaponIK. Final pass solves aim and grips together.",
+  "preserved": "All v32 arm-hold rotations, body/head/legs/gait, initial solver, attachment publication and range behaviour",
+  "limitation": "Final aim may alter the final hand/weapon placement while solving; exact hold and level direction require native visual verification."
+}
