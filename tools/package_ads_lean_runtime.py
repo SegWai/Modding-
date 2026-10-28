@@ -18,6 +18,9 @@ def runtime_files(kit):
   files=files+('MLLeanPreset.json',)
  if (kit/'Profiles/LeanMosin/MLLeanPreset.json').is_file():
   files=files+('Profiles/LeanMosin/MLLeanPreset.json',)
+ for walking in ('MLWalkingLeanPreset.json','Profiles/LeanMosin/MLWalkingLeanPreset.json'):
+  if (kit/walking).is_file():
+   files=files+(walking,)
  if any((kit/name).exists() for name in REFERENCE_FILES):
   if not all((kit/name).is_file() for name in REFERENCE_FILES):raise ValueError('Incomplete native reference launcher/mission')
   return files+REFERENCE_FILES
