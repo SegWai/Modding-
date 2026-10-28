@@ -1,0 +1,2849 @@
+AnimSrcGraph {
+ AnimSetTemplate "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ AnimSyncTable "{8F89313B7FBB0B66}DZ/anims/workspaces/player/Player_SyncTable.asy"
+ ControlTemplate AnimSrcGCT "{BA2805858A7A467A}" {
+  Variables {
+   AnimSrcGCTVarFloat ML157HeadX {
+    DefaultValue 0
+    MinValue -3.141593
+    MaxValue 3.141593
+   }
+   AnimSrcGCTVarFloat ML157HeadY {
+    DefaultValue 0
+    MinValue -3.141593
+    MaxValue 3.141593
+   }
+   AnimSrcGCTVarFloat ML157HeadZ {
+    DefaultValue 0
+    MinValue -3.141593
+    MaxValue 3.141593
+   }
+
+   AnimSrcGCTVarFloat ML154PelvisActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154SpineActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154Spine1Active {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154Spine2Active {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154Spine3Active {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154NeckActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154Neck1Active {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154HeadActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftShoulderActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightShoulderActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftArmActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightArmActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftForeArmActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightForeArmActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftHandActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightHandActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftUpLegActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightUpLegActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftLegActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightLegActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftFootActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightFootActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154LeftToeBaseActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML154RightToeBaseActive {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+
+   AnimSrcGCTVarFloat ML149PelvisTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149PelvisTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149PelvisTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149PelvisRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149PelvisRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149PelvisRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149SpineTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149SpineTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149SpineTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149SpineRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149SpineRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149SpineRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine1TX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine1TY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine1TZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine1RX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine1RY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine1RZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine2TX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine2TY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine2TZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine2RX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine2RY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine2RZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine3TX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine3TY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine3TZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine3RX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine3RY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Spine3RZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149NeckTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149NeckTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149NeckTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149NeckRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149NeckRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149NeckRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Neck1TX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Neck1TY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Neck1TZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Neck1RX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Neck1RY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149Neck1RZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149HeadTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149HeadTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149HeadTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149HeadRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149HeadRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149HeadRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftShoulderTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftShoulderTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftShoulderTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftShoulderRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftShoulderRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftShoulderRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightShoulderTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightShoulderTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightShoulderTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightShoulderRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightShoulderRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightShoulderRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftArmTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftArmTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftArmTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftArmRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftArmRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftArmRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightArmTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightArmTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightArmTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightArmRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightArmRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightArmRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftForeArmTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftForeArmTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftForeArmTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftForeArmRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftForeArmRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftForeArmRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightForeArmTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightForeArmTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightForeArmTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightForeArmRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightForeArmRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightForeArmRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftHandTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftHandTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftHandTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftHandRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftHandRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftHandRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightHandTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightHandTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightHandTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightHandRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightHandRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightHandRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftUpLegTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftUpLegTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftUpLegTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftUpLegRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftUpLegRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftUpLegRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightUpLegTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightUpLegTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightUpLegTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightUpLegRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightUpLegRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightUpLegRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftLegTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftLegTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftLegTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftLegRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftLegRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftLegRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightLegTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightLegTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightLegTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightLegRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightLegRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightLegRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftFootTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftFootTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftFootTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftFootRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftFootRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftFootRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightFootTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightFootTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightFootTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightFootRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightFootRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightFootRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftToeBaseTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftToeBaseTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftToeBaseTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftToeBaseRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftToeBaseRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149LeftToeBaseRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightToeBaseTX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightToeBaseTY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightToeBaseTZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightToeBaseRX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightToeBaseRY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149RightToeBaseRZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML149WeaponFollow {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+
+   AnimSrcGCTVarFloat ML147LeftHoldLeftArmX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftArmY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftArmZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftForeArmX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftForeArmY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftForeArmZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftHandX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftHandY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldLeftHandZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightArmX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightArmY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightArmZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightForeArmX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightForeArmY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightForeArmZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightHandX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightHandY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftHoldRightHandZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML147LeftMuzzleYaw {
+    DefaultValue 0
+    MinValue -20
+    MaxValue 20
+   }
+   AnimSrcGCTVarFloat ML147LeftMuzzlePitch {
+    DefaultValue 0
+    MinValue -20
+    MaxValue 20
+   }
+   AnimSrcGCTVarFloat ML147RightMuzzleYaw {
+    DefaultValue 0
+    MinValue -20
+    MaxValue 20
+   }
+   AnimSrcGCTVarFloat ML147RightMuzzlePitch {
+    DefaultValue 0
+    MinValue -20
+    MaxValue 20
+   }
+
+   AnimSrcGCTVarFloat ML146LeftArmX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146LeftArmY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146LeftArmZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146LeftHandX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146LeftHandY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146LeftHandZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146RightArmX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146RightArmY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146RightArmZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146RightHandX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146RightHandY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146RightHandZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146HeadX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146HeadY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML146HeadZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+
+   AnimSrcGCTVarFloat ML144LeftArmX {
+    DefaultValue -0.027436849680624
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftArmY {
+    DefaultValue 0.018926352570727
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftArmZ {
+    DefaultValue 0.0090579415664446
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftForeArmX {
+    DefaultValue -0.056736649863426
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftForeArmY {
+    DefaultValue -0.1223214279998
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftForeArmZ {
+    DefaultValue 0.20888246628055
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftHandX {
+    DefaultValue 0.10387568201457
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftHandY {
+    DefaultValue 0.083011416081301
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144LeftHandZ {
+    DefaultValue -0.22768654007813
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightArmX {
+    DefaultValue -0.20566147903885
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightArmY {
+    DefaultValue -0.066466624265134
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightArmZ {
+    DefaultValue 0.048238178456747
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightForeArmX {
+    DefaultValue -0.016844733803982
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightForeArmY {
+    DefaultValue -0.087332679781682
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightForeArmZ {
+    DefaultValue 0.10391017652603
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightHandX {
+    DefaultValue 0.24075023294426
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightHandY {
+    DefaultValue 0.11608483932405
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML144RightHandZ {
+    DefaultValue -0.18250928898479
+    MinValue -6.3
+    MaxValue 6.3
+   }
+
+   AnimSrcGCTVarFloat ML118ContactReady {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML106ShoulderedGrip {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML104LeftHandZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104LeftHandY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104LeftHandX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104ElbowEnabled {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML104LeftX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104LeftY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104LeftZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104RightX {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104RightY {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+   AnimSrcGCTVarFloat ML104RightZ {
+    DefaultValue 0
+    MinValue -6.3
+    MaxValue 6.3
+   }
+
+   AnimSrcGCTVarFloat ML93ArmDrop {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ML87FirstPersonCrouchLean {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat MLADSLeanGate {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat MLADSLeanCanary {
+    DefaultValue 0.731
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat MLADSLeanAmount {
+    DefaultValue 0
+    MinValue -1
+    MaxValue 1
+   }
+
+   AnimSrcGCTVarFloat MovementSpeed {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 3
+   }
+   AnimSrcGCTVarFloat MovementDirection {
+    DefaultValue 0
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarInt Stance {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 2
+   }
+   AnimSrcGCTVarFloat TurnAmount {
+    DefaultValue 0
+    MinValue -2
+    MaxValue 2
+   }
+   AnimSrcGCTVarBool Look {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarFloat LookDirY {
+    DefaultValue 0
+    MinValue -85
+    MaxValue 85
+   }
+   AnimSrcGCTVarFloat LookDirX {
+    DefaultValue 0
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarFloat Injured {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat Exhaustion {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarBool Raised {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarBool ADS {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarBool MeleeBlock {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarFloat AimY {
+    DefaultValue 0
+    MinValue -85
+    MaxValue 85
+   }
+   AnimSrcGCTVarFloat AimX {
+    DefaultValue 0
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarFloat AimIKX {
+    DefaultValue 0
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarFloat RaiseTime {
+    DefaultValue 0.4
+    MinValue 0
+    MaxValue 2
+   }
+   AnimSrcGCTVarFloat LowerTime {
+    DefaultValue 0.4
+    MinValue 0
+    MaxValue 2
+   }
+   AnimSrcGCTVarFloat LeanForward {
+    DefaultValue 0
+    MinValue -90
+    MaxValue 90
+   }
+   AnimSrcGCTVarFloat Lean {
+    DefaultValue 0
+    MinValue -1
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat WaterLevel {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat DamageDirection {
+    DefaultValue 0
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarInt LadderMovement {
+    DefaultValue 0
+    MinValue -2
+    MaxValue 2
+   }
+   AnimSrcGCTVarInt VehicleType {
+    DefaultValue -1
+    MinValue -1
+    MaxValue 12
+   }
+   AnimSrcGCTVarFloat VehicleSteering {
+    DefaultValue 0
+    MinValue -1
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat VehicleThrottle {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat VehicleClutch {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarBool VehicleBrake {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarFloat VehicleAccelerationFB {
+    DefaultValue 0
+    MinValue -1
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat VehicleAccelerationLR {
+    DefaultValue 0
+    MinValue -1
+    MaxValue 1
+   }
+   AnimSrcGCTVarInt WeaponType {
+    DefaultValue 1
+    MinValue 0
+    MaxValue 10
+   }
+   AnimSrcGCTVarFloat MovementAngleX {
+    DefaultValue 0
+    MinValue -35
+    MaxValue 35
+   }
+   AnimSrcGCTVarInt WeaponChamberType {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 4
+   }
+   AnimSrcGCTVarInt ArmIK {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 7
+   }
+   AnimSrcGCTVarBool Talking {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarFloat TestFloat {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ActionProgress {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat ActionProgressEnd {
+    DefaultValue 1
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarInt ActionState {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 7
+   }
+   AnimSrcGCTVarBool ThrowingOnBack {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarFloat ObstructionFloat {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat VehicleSpeed {
+    DefaultValue 0
+    MinValue -1
+    MaxValue 10
+   }
+   AnimSrcGCTVarFloat VehicleLean {
+    DefaultValue 0
+    MinValue -180
+    MaxValue 180
+   }
+   AnimSrcGCTVarBool VehicleWalking {
+    DefaultValue 0
+   }
+   AnimSrcGCTVarFloat VehicleSuspension {
+    DefaultValue 0
+    MinValue -1
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat MLADSLeanWeaponShift {
+    DefaultValue 1
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat MLADSLeanHeightLift {
+    DefaultValue 0
+    MinValue -0.06
+    MaxValue 0.15
+   }
+   AnimSrcGCTVarFloat MLADSLeanMoveBlend {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+   AnimSrcGCTVarFloat MLADSLeanStandReachTrim {
+    DefaultValue 0
+    MinValue -0.02
+    MaxValue 0.02
+   }
+   AnimSrcGCTVarFloat MLADSLeanSmoothLow {
+    DefaultValue 0
+    MinValue 0
+    MaxValue 1
+   }
+     AnimSrcGCTVarFloat ML71SupportGrip {
+    DefaultValue 1
+    MinValue 0
+    MaxValue 1
+   }
+  }
+  Commands {
+   AnimSrcGCTCmd CMD_Weapon_Hide {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Weapon_Show {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Action {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_InternalAction {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_FullBodyAction {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_VehicleAction {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_GunShoulder {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_GunShoulderOut {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Expression {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Expression_Blink {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Roll {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Jump {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_JumpFall {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Climb {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_ClimbOver {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Fall {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_FallCancel {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Land {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_LandImmediate {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Reload_Magazine {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Reload_BoltAction {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Reload_Chambering {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Reload_ChamberingFast {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Reload_Exit {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Reload_Clip {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Death {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Death_To_Water {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Swim {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Surrender {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Restrain {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Restrain_Self {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Restrain_Instant {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Restrained_Struggle {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Restrained_Fall {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Ladder_Enter {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Ladder_Exit {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Ladder_Exit_Left {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Ladder_Exit_Right {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_InternalAttack {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_ItemDrop {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Throwing {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_ItemRoll {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Modifier_Additive {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Vehicle_GetIn {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Vehicle_SwitchSeat {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Vehicle_GetOut {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Vehicle_ClimbOut {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Vehicle_CrawlOut {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Vehicle_JumpOut {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Weapon_Jam {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Weapon_Interrupt {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_WeaponFire {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Weapon_Obstruction {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Melee_Attack {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Melee_Attack2 {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Melee_Stealth {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Melee_Combo {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Melee_Exit {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Melee_Weapon {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Melee_Evade {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Damage {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_DamageHeavy {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Turn {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_StopTurn {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_SlidingPose {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Unconscious {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_Unconscious_Exit {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_PulledOut {
+    Synchronized 1
+   }
+   AnimSrcGCTCmd CMD_TRAILER_WALK_AWAY {
+    Synchronized 1
+   }
+  }
+  IkChains {
+   AnimSrcGCTIkChain "{CFAED3D502D92DA5}LHandIKTarget_0_1885426032_2060251945_4110665692_3747397525_2089750091" {
+    Joints {
+     "LeftArm" "LeftArmRoll" "LeftForeArm" "LeftForeArmRoll" "LeftHand"
+    }
+    MiddleJoint "LeftForeArm"
+    ChainAxis "+x"
+   }
+   AnimSrcGCTIkChain "{127992800E814DDA}RHandIKTarget_3_998610499_358443388_2408857135_2669029224_2889608574" {
+    Joints {
+     "RightArm" "RightArmRoll" "RightForeArm" "RightForeArmRoll" "RightHand"
+    }
+    MiddleJoint "RightForeArm"
+    ChainAxis "-x"
+   }
+   AnimSrcGCTIkChain "{9E73213D33EE253C}LFootIKTarget_258230253_925949990_1885437576_2865622081_2089693512" {
+    Joints {
+     "LeftUpLeg" "LeftUpLegRoll" "LeftLeg" "LeftLegRoll" "LeftFoot"
+    }
+    MiddleJoint "LeftLeg"
+   }
+   AnimSrcGCTIkChain "{B2823F26EA84385A}RFootIKTarget_883756416_3082303289_998622043_1163813524_2889551995" {
+    Joints {
+     "RightUpLeg" "RightUpLegRoll" "RightLeg" "RightLegRoll" "RightFoot"
+    }
+    MiddleJoint "RightLeg"
+   }
+   AnimSrcGCTIkChain "{1B64AA86EA139A8B}LFootIKTarget_0_258230253_925949990_1885437576_2865622081_2089693512" {
+    Joints {
+     "LeftUpLeg" "LeftUpLegRoll" "LeftLeg" "LeftLegRoll" "LeftFoot"
+    }
+    MiddleJoint "LeftLeg"
+    ChainAxis "+x"
+   }
+   AnimSrcGCTIkChain "{713C7FE1437964C1}RFootIKTarget_3_883756416_3082303289_998622043_1163813524_2889551995" {
+    Joints {
+     "RightUpLeg" "RightUpLegRoll" "RightLeg" "RightLegRoll" "RightFoot"
+    }
+    MiddleJoint "RightLeg"
+    ChainAxis "-x"
+   }
+   AnimSrcGCTIkChain "{F44D8E78C33E4DC4}RHandIKTarget_998610499_358443388_2408857135_2669029224_2889608574" {
+    Joints {
+     "RightArm" "RightArmRoll" "RightForeArm" "RightForeArmRoll" "RightHand"
+    }
+    MiddleJoint "RightForeArm"
+   }
+   AnimSrcGCTIkChain "{2C9C0170B819F6DC}LHandIKTarget_1885426032_2060251945_4110665692_3747397525_2089750091" {
+    Joints {
+     "LeftArm" "LeftArmRoll" "LeftForeArm" "LeftForeArmRoll" "LeftHand"
+    }
+    MiddleJoint "LeftForeArm"
+   }
+  }
+ }
+ Debug AnimSrcGD "{6930A8DE269B0B95}" {
+  DebugControlGroups {
+   AnimSrcDebugCtlGroup Ladder {
+    DebugControls {
+     AnimSrcDebugCtlCmd EnterGround {
+      Binding "CMD_Ladder_Enter"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd EnterRoof {
+      Binding "CMD_Ladder_Enter"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd ExitGround {
+      Binding "CMD_Ladder_Exit"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd ExitRoof {
+      Binding "CMD_Ladder_Exit"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd LadderExitLeft {
+      Binding "CMD_Ladder_Exit_Left"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd LadderExitRight {
+      Binding "CMD_Ladder_Exit_Right"
+      FloatVal 0
+      IntVal 0
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Vehicles {
+    DebugControls {
+     AnimSrcDebugCtlCmd EnterDriver {
+      Binding "CMD_Vehicle_GetIn"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd EnterCodriver {
+      Binding "CMD_Vehicle_GetIn"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd EnterPassengerL {
+      Binding "CMD_Vehicle_GetIn"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd EnterPassengerR {
+      Binding "CMD_Vehicle_GetIn"
+      FloatVal 0
+      IntVal 3
+     }
+     AnimSrcDebugCtlCmd Exit {
+      Binding "CMD_Vehicle_GetOut"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd ExitJumpOut {
+      Binding "CMD_Vehicle_GetOut"
+      FloatVal 1
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd ExitClimbOutL {
+      Binding "CMD_Vehicle_GetOut"
+      FloatVal 0
+      IntVal 90
+     }
+     AnimSrcDebugCtlCmd ExitClimbOutR {
+      Binding "CMD_Vehicle_GetOut"
+      FloatVal 0
+      IntVal -90
+     }
+     AnimSrcDebugCtlCmd ExitCrawlOut {
+      Binding "CMD_Vehicle_GetOut"
+      FloatVal 0
+      IntVal 180
+     }
+     AnimSrcDebugCtlCmd SwitchSeat {
+      Binding "CMD_Vehicle_SwitchSeat"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd OpenDoor {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 301
+     }
+     AnimSrcDebugCtlCmd CloseDoor {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 300
+     }
+     AnimSrcDebugCtlCmd "Start Engine" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 402
+     }
+     AnimSrcDebugCtlCmd "Stop Engine" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 302
+     }
+     AnimSrcDebugCtlCmd "Stop Actions" {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 0
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Falling {
+    DebugControls {
+     AnimSrcDebugCtlCmd LandImmediate {
+      Binding "CMD_LandImmediate"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd FallForward {
+      Binding "CMD_Fall"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd FallBackwards {
+      Binding "CMD_Fall"
+      FloatVal 0
+      IntVal 3
+     }
+     AnimSrcDebugCtlCmd LandLight {
+      Binding "CMD_Land"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd LandMedium {
+      Binding "CMD_Land"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd LandHard {
+      Binding "CMD_Land"
+      FloatVal 0
+      IntVal 2
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup "Full Body Gestures" {
+    DebugControls {
+     AnimSrcDebugCtlCmd Dance {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1100
+     }
+     AnimSrcDebugCtlCmd MilitarySalute {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1000
+     }
+     AnimSrcDebugCtlCmd Campfire {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1001
+     }
+     AnimSrcDebugCtlCmd LyingDown {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1002
+     }
+     AnimSrcDebugCtlCmd SOS {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1003
+     }
+     AnimSrcDebugCtlCmd SitA {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1004
+     }
+     AnimSrcDebugCtlCmd SitB {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1005
+     }
+     AnimSrcDebugCtlCmd Dabbing {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1006
+     }
+     AnimSrcDebugCtlCmd EndGesture {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd HardEndGesture {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -2
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup "Gestures Once" {
+    DebugControls {
+     AnimSrcDebugCtlCmd CutThroat {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1100
+     }
+     AnimSrcDebugCtlCmd Clap {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1101
+     }
+     AnimSrcDebugCtlCmd Dabbing {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1102
+     }
+     AnimSrcDebugCtlCmd Move {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1103
+     }
+     AnimSrcDebugCtlCmd Down {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1104
+     }
+     AnimSrcDebugCtlCmd Come {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1105
+     }
+     AnimSrcDebugCtlCmd "Taunt Kiss" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1106
+     }
+     AnimSrcDebugCtlCmd "Taunt Elbow" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1107
+     }
+     AnimSrcDebugCtlCmd "Taunt Think" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1108
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Gestures {
+    DebugControls {
+     AnimSrcDebugCtlCmd Greetings {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1000
+     }
+     AnimSrcDebugCtlCmd Point {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1001
+     }
+     AnimSrcDebugCtlCmd ThumbUp {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1002
+     }
+     AnimSrcDebugCtlCmd ThumbDown {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1003
+     }
+     AnimSrcDebugCtlCmd Silence {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1004
+     }
+     AnimSrcDebugCtlCmd "Taunt Finger" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1005
+     }
+     AnimSrcDebugCtlCmd TimeOut {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1006
+     }
+     AnimSrcDebugCtlCmd Heart {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1007
+     }
+     AnimSrcDebugCtlCmd Facepalm {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1008
+     }
+     AnimSrcDebugCtlCmd Watching {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1009
+     }
+     AnimSrcDebugCtlCmd Hold {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1010
+     }
+     AnimSrcDebugCtlCmd Listening {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1011
+     }
+     AnimSrcDebugCtlCmd "Point to Self" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1012
+     }
+     AnimSrcDebugCtlCmd "Look At Me" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1013
+     }
+     AnimSrcDebugCtlCmd GunOnShoulder {
+      Binding "CMD_GunShoulder"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd GunOffShoulder {
+      Binding "CMD_GunShoulderOut"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd SwitchGesture {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd EndGesture {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd HardEndGesture {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -2
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup RockPaperScissors {
+    DebugControls {
+     AnimSrcDebugCtlCmd RPS_Start {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 10000
+     }
+     AnimSrcDebugCtlCmd RPS_Rock {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 10
+     }
+     AnimSrcDebugCtlCmd RPS_Paper {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 11
+     }
+     AnimSrcDebugCtlCmd RPS_Scissor {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 12
+     }
+     AnimSrcDebugCtlCmd RPS_Cancel {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 0
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup "Full Body Actions" {
+    DebugControls {
+     AnimSrcDebugCtlCmd DrinkPond {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd DrinkWell {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd FillBottleWell {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd FireExtinguisher {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 3
+     }
+     AnimSrcDebugCtlCmd WringCloth {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 4
+     }
+     AnimSrcDebugCtlCmd GatherBerries {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 5
+     }
+     AnimSrcDebugCtlCmd ChopTree {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 6
+     }
+     AnimSrcDebugCtlCmd DigShovel {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 7
+     }
+     AnimSrcDebugCtlCmd DigHoe {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 8
+     }
+     AnimSrcDebugCtlCmd Fishing {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 9
+     }
+     AnimSrcDebugCtlCmd CPR {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 10
+     }
+     AnimSrcDebugCtlCmd Bandage {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 11
+     }
+     AnimSrcDebugCtlCmd Crafting {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 12
+     }
+     AnimSrcDebugCtlCmd "Interact Player" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 13
+     }
+     AnimSrcDebugCtlCmd "Drink Cannister" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 14
+     }
+     AnimSrcDebugCtlCmd "Force Feed" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 15
+     }
+     AnimSrcDebugCtlCmd "Bandage Target" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 16
+     }
+     AnimSrcDebugCtlCmd "Disinfect Target" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 17
+     }
+     AnimSrcDebugCtlCmd Deploy {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 18
+     }
+     AnimSrcDebugCtlCmd "Start Fire Match" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 19
+     }
+     AnimSrcDebugCtlCmd "Animal Skinning" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 20
+     }
+     AnimSrcDebugCtlCmd "Wash Hands Well" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 21
+     }
+     AnimSrcDebugCtlCmd "Wash Hands Pond" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 22
+     }
+     AnimSrcDebugCtlCmd "Saline/Blood Bag Target" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 23
+     }
+     AnimSrcDebugCtlCmd "Saline/Blood Bag" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 24
+     }
+     AnimSrcDebugCtlCmd "Stitch Self Up" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 25
+     }
+     AnimSrcDebugCtlCmd Vomiting {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 26
+     }
+     AnimSrcDebugCtlCmd CutTies {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 27
+     }
+     AnimSrcDebugCtlCmd "Tie up target" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 28
+     }
+     AnimSrcDebugCtlCmd "Light Fire w Torch" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 29
+     }
+     AnimSrcDebugCtlCmd "Check Pulse" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 30
+     }
+     AnimSrcDebugCtlCmd "Empty Seeds Pack" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 31
+     }
+     AnimSrcDebugCtlCmd "Clean Wounds Target" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 32
+     }
+     AnimSrcDebugCtlCmd "Light Fire w Handdrill" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 33
+     }
+     AnimSrcDebugCtlCmd "Light Fire w Lighter" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 34
+     }
+     AnimSrcDebugCtlCmd "Collect Blood Self" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 35
+     }
+     AnimSrcDebugCtlCmd EndAction {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd AltEndAction {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -1
+     }
+     AnimSrcDebugCtlCmd HardEndAction {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -2
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup "Full Body Actions Once" {
+    DebugControls {
+     AnimSrcDebugCtlCmd "Handcuff Taget" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 100
+     }
+     AnimSrcDebugCtlCmd "Morphine Self" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 101
+     }
+     AnimSrcDebugCtlCmd "Inject Self" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 102
+     }
+     AnimSrcDebugCtlCmd "Inject Target" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 103
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Actions {
+    DebugControls {
+     AnimSrcDebugCtlCmd Drink {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Eat {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd "Empty Cannister" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd "Catch Rain" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 3
+     }
+     AnimSrcDebugCtlCmd "Eat Pills" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 4
+     }
+     AnimSrcDebugCtlCmd "Eat Tablets" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 5
+     }
+     AnimSrcDebugCtlCmd "Empty Bottle" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 6
+     }
+     AnimSrcDebugCtlCmd Compass {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 7
+     }
+     AnimSrcDebugCtlCmd "Drink Can" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 8
+     }
+     AnimSrcDebugCtlCmd "Walkie Talkie Tune Down" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 9
+     }
+     AnimSrcDebugCtlCmd "Give Left Item" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 10
+     }
+     AnimSrcDebugCtlCmd "Give Right Item" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 11
+     }
+     AnimSrcDebugCtlCmd Shave {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 12
+     }
+     AnimSrcDebugCtlCmd "Fill Magazine" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 13
+     }
+     AnimSrcDebugCtlCmd "Empty Magazine" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 14
+     }
+     AnimSrcDebugCtlCmd "Drink Pot" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 15
+     }
+     AnimSrcDebugCtlCmd "Empty Pot" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 16
+     }
+     AnimSrcDebugCtlCmd EndAction {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd AltEndAction {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -1
+     }
+     AnimSrcDebugCtlCmd HardEndAction {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -2
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup "Actions Once" {
+    DebugControls {
+     AnimSrcDebugCtlCmd LickBattery {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 100
+     }
+     AnimSrcDebugCtlCmd PickupItem {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 101
+     }
+     AnimSrcDebugCtlCmd Flare {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 102
+     }
+     AnimSrcDebugCtlCmd Chemlight {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 103
+     }
+     AnimSrcDebugCtlCmd UnpinGrenade {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 104
+     }
+     AnimSrcDebugCtlCmd OpenDoorForward {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 105
+     }
+     AnimSrcDebugCtlCmd OpenDoorBackward {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 106
+     }
+     AnimSrcDebugCtlCmd CloseSwipeLDoor {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 107
+     }
+     AnimSrcDebugCtlCmd CloseSwipeRDoor {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 108
+     }
+     AnimSrcDebugCtlCmd OpenLid {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 109
+     }
+     AnimSrcDebugCtlCmd CloseLid {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 110
+     }
+     AnimSrcDebugCtlCmd "Walkie Talkie On" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 111
+     }
+     AnimSrcDebugCtlCmd "Walkie Talkie Off" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 112
+     }
+     AnimSrcDebugCtlCmd "Baton Extend" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 113
+     }
+     AnimSrcDebugCtlCmd "Baton Retract" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 114
+     }
+     AnimSrcDebugCtlCmd "Unlock Handcuff Target" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 115
+     }
+     AnimSrcDebugCtlCmd "Fishing Rod Extend" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 116
+     }
+     AnimSrcDebugCtlCmd "Fishing Rod Retract" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 117
+     }
+     AnimSrcDebugCtlCmd "Take Item" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 115
+     }
+     AnimSrcDebugCtlCmd "Hide Item" {
+      Binding "CMD_Action"
+      FloatVal 0
+      IntVal 113
+     }
+     AnimSrcDebugCtlCmd HardEndAction {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -2
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Weapons {
+    DebugControls {
+     AnimSrcDebugCtlCmd Fire {
+      Binding "CMD_WeaponFire"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd "Fire Last" {
+      Binding "CMD_WeaponFire"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd "Fire Empty Cocked" {
+      Binding "CMD_WeaponFire"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd "Fire Empty Uncocked" {
+      Binding "CMD_WeaponFire"
+      FloatVal 0
+      IntVal 3
+     }
+     AnimSrcDebugCtlCmd "Fire Empty Automatic" {
+      Binding "CMD_WeaponFire"
+      FloatVal 0
+      IntVal 4
+     }
+     AnimSrcDebugCtlCmd "End Fire" {
+      Binding "CMD_WeaponFire"
+      FloatVal 0
+      IntVal -1
+     }
+     AnimSrcDebugCtlCmd Arm {
+      Binding "CMD_Arm"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Disarm {
+      Binding "CMD_Disarm"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Reload_BoltAction_OpenBolt {
+      Binding "CMD_Reload_BoltAction"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Reload_BoltAction_ClosedBolt {
+      Binding "CMD_Reload_BoltAction"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd Reload_BoltAction_Special {
+      Binding "CMD_Reload_BoltAction"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd Reload_Magazine_Bullet {
+      Binding "CMD_Reload_Magazine"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Reload_NoMagazine_Bullet {
+      Binding "CMD_Reload_Magazine"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd Reload_Magazine_NoBullet {
+      Binding "CMD_Reload_Magazine"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd Reload_NoMagazine_NoBullet {
+      Binding "Reload_NoMagazine_Bullet"
+      FloatVal 0
+      IntVal 3
+     }
+     AnimSrcDebugCtlCmd Reload_ChamberingFast {
+      Binding "CMD_Reload_ChamberingFast"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Reload_Chambering_OpenBolt {
+      Binding "CMD_Reload_Chambering"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Reload_Chambering_ClosedBolt {
+      Binding "CMD_Reload_Chambering"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd Reload_Chambering_Look {
+      Binding "CMD_Reload_Chambering"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd Reload_Chambering_End {
+      Binding "Reload_Chambering_ClosedBolt"
+      FloatVal 0
+      IntVal 3
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Suicide {
+    DebugControls {
+     AnimSrcDebugCtlCmd "1HD" {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2000
+     }
+     AnimSrcDebugCtlCmd FireAxe {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2001
+     }
+     AnimSrcDebugCtlCmd Pitchfork {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2002
+     }
+     AnimSrcDebugCtlCmd Pistol {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2003
+     }
+     AnimSrcDebugCtlCmd Rifle {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2004
+     }
+     AnimSrcDebugCtlCmd Sword {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2005
+     }
+     AnimSrcDebugCtlCmd Unarmed {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2006
+     }
+     AnimSrcDebugCtlCmd WoodAxe {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2007
+     }
+     AnimSrcDebugCtlCmd Spear {
+      Binding "CMD_FullBodyAction"
+      FloatVal 0
+      IntVal 2008
+     }
+     AnimSrcDebugCtlCmd Cancel {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Commit {
+      Binding "CMD_InternalAction"
+      FloatVal 0
+      IntVal -1
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup "Surrender Restrained" {
+    DebugControls {
+     AnimSrcDebugCtlCmd "Surrender In" {
+      Binding "CMD_Surrender"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd "Surrender Out" {
+      Binding "CMD_Surrender"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Restrain {
+      Binding "CMD_Restrain"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd "Restrain Out" {
+      Binding "CMD_Restrain"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd "Restrained Struggle" {
+      Binding "CMD_RestrainedStruggle"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd "Restrain Sneaky" {
+      Binding "CMD_RestrainSneaky"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd "Restrain Self Rope" {
+      Binding "CMD_RestrainSelf"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd "Restrain Self Rope Cancel" {
+      Binding "CMD_RestrainSelf"
+      FloatVal 0
+      IntVal -1
+     }
+     AnimSrcDebugCtlCmd "Restrain Self Handcuffs" {
+      Binding "CMD_RestrainSelf"
+      FloatVal 0
+      IntVal 1
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Movement {
+    DebugControls {
+     AnimSrcDebugCtlCmd EvadeRollR {
+      Binding "CMD_Roll"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd EvadeRollL {
+      Binding "CMD_Roll"
+      FloatVal 0
+      IntVal 0
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Combat {
+    DebugControls {
+     AnimSrcDebugCtlCmd ChargeAttack {
+      Binding "CMD_Attack"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Attack {
+      Binding "CMD_InternalAttack"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd Cancel {
+      Binding "CMD_InternalAttack"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Chamber {
+      Binding "CMD_Attack"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd Reload {
+      Binding "CMD_Attack"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd CancelReload {
+      Binding "CMD_InternalAttack"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd Bayonet {
+      Binding "CMD_Attack"
+      FloatVal 0
+      IntVal 1
+     }
+     AnimSrcDebugCtlCmd Buttstock {
+      Binding "CMD_Attack"
+      FloatVal 0
+      IntVal 2
+     }
+     AnimSrcDebugCtlCmd Shove {
+      Binding "CMD_Attack"
+      FloatVal 0
+      IntVal 3
+     }
+     AnimSrcDebugCtlCmd "Hit Light" {
+      Binding "CMD_Hit"
+      FloatVal 0
+      IntVal 0
+     }
+    }
+   }
+   AnimSrcDebugCtlGroup Unconscious {
+    DebugControls {
+     AnimSrcDebugCtlCmd Fast {
+      Binding "CMD_Unconscious"
+      FloatVal 0
+      IntVal 0
+     }
+     AnimSrcDebugCtlCmd Slow {
+      Binding "CMD_Unconscious"
+      FloatVal 0
+      IntVal 1
+     }
+    }
+   }
+  }
+ }
+ GraphFilesResourceNames {
+  "{EF3281FE244D4E62}DZ/anims/workspaces/player/player_main/MLADSLeanLocomotion_v163.agf" "{9C03FCB66E801A6C}DZ/anims/workspaces/player/player_main/Combat.agf" "{4DD0CCA87EF71102}DZ/anims/workspaces/player/player_main/Weapons.agf" "{F8705927E3100C08}DZ/anims/workspaces/player/player_main/Gestures.agf" "{1D19A50EFCDE75AD}DZ/anims/workspaces/player/player_main/Vehicles.agf" "{3B53F70888ED306A}DZ/anims/workspaces/player/player_main/Actions.agf" "{3F5D37C345D55BBA}DZ/anims/workspaces/player/player_main/Master.agf" "{95D4850091C31380}DZ/anims/workspaces/player/player_main/Tests.agf"
+ }
+ DefaultRunNode "MasterControl"
+}

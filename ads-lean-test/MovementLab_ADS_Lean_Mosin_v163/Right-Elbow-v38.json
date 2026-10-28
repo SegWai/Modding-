@@ -1,0 +1,21 @@
+{
+  "request": "Repeat the same added adjustment in both directions",
+  "changes": [
+    {
+      "node": "ML37_RightElbowIn",
+      "previous_radians": 0.314159265359,
+      "new_radians": 0.628318530718
+    },
+    {
+      "node": "ML37_RightElbowOut",
+      "previous_radians": -0.174532925199,
+      "new_radians": -0.349065850398
+    }
+  ],
+  "seed_degrees": {
+    "inward_right_travel": 36,
+    "outward_left_travel": -20
+  },
+  "preserved": "Every other graph node, grip restoration, gun aim/grip settings, height controller, torso/legs/gait and range scripts",
+  "native_status": "These are input rotation seed values; final elbow displacement depends on native IK and needs in-game verification."
+}
