@@ -1,0 +1,15 @@
+{
+  "approved_banks": "all four exact",
+  "spawned_NPCs": 0,
+  "routing_guard_cases": 1536,
+  "reference_slots": 6,
+  "arm_snapshots": 12,
+  "transition_cache_handoff": "passed",
+  "raised_camera_distance": "identical",
+  "camera_height_vs185_m": {
+    "standing": 0.5,
+    "crouch": 0.25
+  },
+  "graph_and_first_person_camera": "byte-identical",
+  "native_compile_rendering_crash": "NOT RUN"
+}

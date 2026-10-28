@@ -332,3 +332,28 @@ above native instead of oldinspectiondrop: +50cm standing /+25cm crouched vs185.
 Lowered/firstperson/ADSoptics camera unchanged. F6/F7 still unarmedbank editors.
 1536offline routing cases/preset hashes/cache handoff/camera/API/PBOchecks pass.
 NativeDayZ compile/visiblematch/grip/transitions/FPS/crashes NOT RUN.
+
+NEW SEPARATE PROJECT — Ambidextrous Lean experimental v1
+User asks preserve original leaning mod and make separate same-pose mod with
+ARC Raiders style opposite weapon/arm/hand and camera shoulder switch, plus
+DEFAULT third-person camera height/distance. Original saved v186 commit3aff8a4
+and tag lean-mod-saved-v186 are immutable. New project shoulder-swap-test/
+MovementLab_Ambidextrous_Lean_v1, unique MLAmbidextrousLogic/Workspace prefixes;
+run its standalone launcher, never both copies of pose workspace together.
+User chooses side mouse button, approves rebindable action. Controls action
+Shoulder swap (ambidextrous test), defaultmB4; choose actual side button inDayZ
+Controls and clear its old action manually. No local Windows profile access.
+All4approvedleanJSONfiles byte-identical186. ZeroNPCs/sameplayerloadout.
+Removed inspection thirdpersonheight/distance class fromforkonly (nativecamera).
+New experimental50bone mirrored arms/hands/fingers/head layer BEFORElateaim,
+leftprimary WeaponIK publication, rightsecondarysupportchain; nativeinventory,
+weaponFSM retained (no itemclone/delete/teleport). Neutral-basis safe mirror,
+chest anatomicaldeformation frame, approved torso/legs/lean stayunchanged.
+One-time emptyhandedcentred .4s neutral reference required. Each new weapon/
+stance/gait/lean/ADS context first samples nativeunswapped levelaim pose then
+caches; no continuousposefeedback. Newcontextbrieflynative-right whilesampling.
+V1only raisedpose: lower/reload/interact clips remainright-handed; no newleft
+reload/action clips. Not finishedARCstyletransition/actionset. NativeinputXML,
+leftWeaponIKprofile/actualweapon/muzzle/ADS/firing/contact/FPS UNTESTED.
+Offline500reflectioncases,50boneFK9e-15,303nodes/301vars/DAG/source/PBOchecks
+pass. NEED Windowsgameplay; do notclaim fullyfunctioningleft-handed weapons.

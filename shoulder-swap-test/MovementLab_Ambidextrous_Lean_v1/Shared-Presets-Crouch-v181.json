@@ -1,0 +1,30 @@
+{
+  "standing_preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "walking_preset_sha256": "8828945ff4dc5eb7e0b2d8de7adddfff463ec5403db61de44b56b10a16ce42c2",
+  "all_offline_characters": true,
+  "walking_bank_stances": [
+    "ERECT",
+    "RAISEDERECT"
+  ],
+  "walking_bank_movement": [
+    1,
+    2
+  ],
+  "two_new_npcs": true,
+  "separation_metres": 0.5,
+  "previous_separation_metres": 2.5,
+  "cycle": [
+    "left",
+    "centre",
+    "right",
+    "centre"
+  ],
+  "target_interval_seconds": 1,
+  "roles": [
+    "crouch_lowered",
+    "crouch_raised_no_ADS"
+  ],
+  "old_canary_ADS_clauses_removed": 18,
+  "crouch_uses_stance_appropriate_pose_not_standing_leg_offsets": true,
+  "native_runtime": "NOT RUN"
+}
