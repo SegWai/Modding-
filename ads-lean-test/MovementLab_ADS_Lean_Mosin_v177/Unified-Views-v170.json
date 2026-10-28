@@ -1,0 +1,9 @@
+{
+  "request": "same current custom Q/E poses in first and third person; no separate custom first-person lean unless user asks",
+  "legacy_first_person_crouch_branch": "disabled by constant0 in all camera modes",
+  "shared": "current pose graph, F6/F7 settings, head/arms, body shift, final aim/grip, standing/walking and crouch stance routing",
+  "camera": "existing presentation code unchanged; no separate pose compensation",
+  "native_comparison": "Ctrl+F1 retained in both views",
+  "preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "native_validation": "NOT RUN"
+}

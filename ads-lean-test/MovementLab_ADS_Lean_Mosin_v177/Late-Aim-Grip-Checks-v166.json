@@ -1,0 +1,10 @@
+{
+  "aim_rotation_order": "after custom arm/body/head edits, before final hand-pivot weapon publication",
+  "rigid_aim_cases": 1000,
+  "max_hand_to_weapon_matrix_error": 7.771561172376096e-16,
+  "first_person_and_handguns": "original early aim retained",
+  "user_muzzle_fields": "preserved in final publisher",
+  "v165_crash_gates_and_scripts": "unchanged",
+  "fixed_preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "native_grip_muzzle_pose_and_crash_verification": "NOT RUN"
+}
