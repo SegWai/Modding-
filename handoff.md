@@ -2,7 +2,23 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Read this first
+## Latest user direction: restore v185 (supersedes the v10 active goal)
+
+The user subsequently requested v185 again with the JSON sent after v185 as the
+default standing pose. Delivered source:
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v185_Restored/`.
+Runtime: `artifacts/MovementLab_ADS_Lean_Mosin_v185_Restored.zip`.
+
+The later JSON is approved `MLUnarmedLeanPreset.json`, SHA256 d47025fd... (full
+hash below). It is copied exactly to bundled, active-profile and root defaults.
+All four canonical presets are included. Original v185 scripts, graph, camera,
+controls and two-NPC comparison scene remain byte-identical. This intentionally
+does NOT include v186 player rollout or any left-hand/shoulder experiment.
+Original v185/v186 and v10 archives remain preserved. Source/data identity and
+packaging checks pass; native DayZ test not run. The rest of this document
+records the previous v10 work for continuity, not the current requested baseline.
+
+## Previous v10 goal and history
 
 The user wants real, visible left-handed weapon holding: **left hand on the
 AK74 pistol grip/trigger, right hand supporting under the fore-end**, with the

@@ -1,0 +1,37 @@
+{
+  "control_names": [
+    "ML146LeftArmX",
+    "ML146LeftArmY",
+    "ML146LeftArmZ",
+    "ML146LeftHandX",
+    "ML146LeftHandY",
+    "ML146LeftHandZ",
+    "ML146RightArmX",
+    "ML146RightArmY",
+    "ML146RightArmZ",
+    "ML146RightHandX",
+    "ML146RightHandY",
+    "ML146RightHandZ",
+    "ML146HeadX",
+    "ML146HeadY",
+    "ML146HeadZ"
+  ],
+  "fields": [
+    "LeftPitch",
+    "LeftYaw",
+    "LeftRoll",
+    "RightPitch",
+    "RightYaw",
+    "RightRoll",
+    "HeadPitch",
+    "HeadYaw",
+    "HeadRoll"
+  ],
+  "layout_size": [
+    0.29,
+    0.84
+  ],
+  "scope": "standing-right third-person",
+  "reference_strategy": "native per-actor zero-added-rotation snapshot after settled hold, cached until weapon/hold changes",
+  "native_validation": "not run"
+}
