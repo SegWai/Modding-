@@ -1,0 +1,17 @@
+{
+  "base": "v85",
+  "main_left_blends": [
+    "ML48_StandingLeftOnly",
+    "ML50_left_BodyBlend",
+    "ML50_StandingBalancedOnly",
+    "ML51_StandingLeftElbowOnly",
+    "ML71_PostPoseSupportBlend",
+    "ML67_CoherentLeanAim",
+    "ML83_LeftTransitionAimOnly"
+  ],
+  "count_explanation": "seven overlapping post-base blend stages, not sequential animation clips; earlier native aim/locomotion layers also exist",
+  "diagnostic_change": "bypass ML83_LeftTransitionAimOnly at MeleeBlockQ",
+  "weight_phases": "0..0.125 fade in, 0.125..0.875 active, 0.875..1 fade out",
+  "other_graph_nodes_and_script_behavior": "unchanged",
+  "native_validation": "not run"
+}

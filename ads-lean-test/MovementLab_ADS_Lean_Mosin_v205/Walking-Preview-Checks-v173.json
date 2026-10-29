@@ -1,0 +1,7 @@
+{
+  "scope_isolation_cases": 100,
+  "unmodified_actor_expression_cases": 4200,
+  "changed_editor_nodes": 76,
+  "stationary_preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "native_compile_and_playback": "NOT RUN"
+}

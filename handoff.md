@@ -2,7 +2,30 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v204: polearm editor + approved heavy default
+## Current test v205: polearms use exact approved bat preset
+
+User explicitly says pitchfork can use same bat/sledge animation JSON. Polearm
+root/bundle/active file and new Current/FromApprovedBat20261029/artifact copies
+are EXACT approved MLBatLeanPreset d55bf37... bytes (no zeroing/remirroring).
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v205/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v205.zip` (30files).
+Native POLEARMS holding now routes stationary lowered player to ML204 polearm
+bank, same default values as bat. Reference caches reset polearm bank changes.
+Pitchfork+blue scene/F6F7 unchanged. Polearm save stays MLPolearmLeanPreset.json,
+independent for future edits; older sledge editor archive preserved separately.
+Nine older approved banks unchanged; graph/native camera unchanged.
+Offline exact-data/category/cache/scene/menu/PBO30file checks pass; native compile,
+item grip/visible pose/performance NOT RUN. Package tools/package_polearm_default_v205.py.
+
+User asks remaining work: seven native holding categories are now MAPPED for
+normal stationary LOWERED standing: empty, onehand, twohand, pistols, firearms,
+heavy, polearms. This does NOT mean every object is tested or every grip identical.
+Next work is native category-by-category grip/lean/exit/item-switch/editor-save
+verification. Broader crouch/walking/raised object coverage remains separate;
+existing rifle raised/crouch/walk approved banks are not universal item poses.
+Do not claim all animations complete or native stable without test evidence.
+
+## Prior v204: polearm editor + approved heavy default
 
 User approved MLHeavyLeanPreset.json, 14202 bytes, SHA256
 `4c236a08839f3d8e03490e722a74619dce5cdba74587fb4aaba49bdd15cd1616`.
