@@ -1,0 +1,7 @@
+{
+  "all_existing_scripts_and_pose_graph": "byte-identical v170",
+  "new_source": "one camera framing override only",
+  "preset_sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "firstperson_and_native_custom_comparison": "retained",
+  "native_compilation_and_framing": "NOT RUN"
+}

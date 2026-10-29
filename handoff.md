@@ -2,7 +2,39 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v223: user expressly chooses DEFAULT DayZ FP crouch lean
+## Current test v224: local first-person presentation vs external custom poses
+
+User clarifies strict view split: their own FPdefaultcrouch EVERYstance; outside
+observers/ownTP see custom standing/walking/jogging/crouching. Keepcustomhead.
+Presets ALL15exactv222. Reuse223private nativecrouch branch as presentation-only
+source; graphbyteidentical223. It is selected ONLYcontrolledlocalactor FPlean.
+Otheractors/remoteclients alwayscustom branch, no camera/FPflagRPC/netvars.
+
+Fix real raised shouldered-firearm uprightjog player routing: explicit
+m_ML224PlayerJogBank set for movement2 liveMOVEraisedprofile1 notdemo/crouch;
+refreshcacheonchange; scope216 enter/leave and referencebank3/stablegait2 use
+previewJogEditor ORplayerJogBank. Standing0/walking1/crouch2/jog3 refsisolated.
+Previously ownplayerjog used walkingbank, not saved216jog pose. Existing
+stationarycrouch and nonraised category routes retained; no new movingcrouch,
+sprint/prone or pistolraised poses authored. This is a limitation, not allitem
+contexts guaranteed. Ownplayerheadinheritsv222walking/jogYaw-8.2Roll-14.3left,
+rightroll0. Nativeheadabsoluteoverride/allgunheadlockSTILLUNIMPLEMENTED.
+FPdefaultcrouch includesnativehead (customheadnotlockedontopFP).
+
+V222 had blanket multiplayer-return at CommandHandler post-super and inner
+ML173UpdateGraph. V224 replacesONLYthese2visual gates with IsDedicatedServer:
+visualposeupdatesmayrunonMPclients(local+remote),neverdedicatedserver.
+Preview input/stance/rootpin/inspection/calibration retain offlineguards.
+No serverdeployment/networkinput forcing/newRPC. Allclientsneedmod+samepresets.
+Nativecallback/remoteleanstatefreshness/visibility is UNVERIFIED; do not label
+as validatedmultiplayerrelease. NativeWindowscompiler/game absent.
+
+Tests check_local_view_v224.py (extends223nativeprovenance/DAG/view/gait/preset
+checks;client-onlyvisualguard/noremotefirstperson/noRPC/jogscope/refbanktests),
+PBO/41fileZIP PASS. Nativecompile/render/FP/TP/ADS/grip/camera/FPS/2clientvisibility
+NOTRUN. Artifact artifacts/MovementLab_ADS_Lean_Mosin_v224.zip.
+
+## Previous test v223: user expressly chooses DEFAULT DayZ FP crouch lean
 
 User reverses earlier unified FP/TP requirement: FIRST PERSON uses default DayZ
 crouch lean both Q/E while standing/walking/jogging; THIRD PERSON keeps custom.
