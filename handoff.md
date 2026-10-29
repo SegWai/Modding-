@@ -2,7 +2,18 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v207: reduced lineup, SMG walking editor first
+## Current test v208: ONLY the SMG walking editor NPC
+
+User corrected prior scope: wanted only SMG NPC now, no other previews.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v208/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v208.zip` (32files).
+Mission spawn list ONLY MP5K, centred slot0. All five other actors removed.
+F6/F7 editor, shared clock,12ssetup, walking-in-place behavior, save
+`Profiles/LeanMosin/MLSMGWalkingLeanPreset.json`, all scripts/presets and graph
+unchanged from207. Other category work deferred. Native runtime NOT tested;
+scene/source/data/PBO checks pass. Package tools/package_smg_walking_editor_v208.py.
+
+## Prior v207: reduced lineup, SMG walking editor first
 
 User says walking needs changes ONLY for SMG; sledge/axe/shovel/pitchfork group
 EXCLUDING BAT (bat looks good); and flashlight. Remove all unmentioned actors,
