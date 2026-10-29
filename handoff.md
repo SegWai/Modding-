@@ -2,7 +2,32 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v198: broaden bat pose + native/custom sledgehammer comparison
+## Current test v199: custom bat reference and independent sledge editor
+
+User replaces grey vanilla sledge NPC with approved custom-JSON bat reference;
+wants black sledge NPC editable to author a separate custom pose.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v199/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v199.zip` (26 files).
+Grey BaseballBat uses original ML193 approved bat bank unchanged. Black
+SledgeHammer uses new isolated ML199WeaponState/BodyState/Preset bank. Blue
+unarmed reference unchanged. Same positions/model/scale/shared1sclock/selected
+side hold. No vanilla NPC path remains in this scene.
+
+F6 arms/head and F7 body menus+keys target199 only; shared clock follows199 side.
+Native actual item grip/graph unchanged. Seed for new hammer bank EXACT byte-copy
+of approved bat JSON d55bf37...; editing does not mutate bat reference, blue,
+player global defaults or any of seven approved banks. Save both sides/F6/F7 to
+`Profiles/LeanMosin/MLSledgehammerLeanPreset.json`. Send this to approve it later;
+new bank is experimental until user approves. Player two-handed193 routing
+remains approved bat default, not new hammer editing bank.
+
+Added MLSledgePreset199.c and SledgeEditor helper/preview flags. No pose graph
+change or extra IK. Source/scene/bank/menu/clock/7approvedJSON/seed/PBO26file checks
+pass via tools/check_sledge_editor_v199.py. Native compile/render/grip/UI/perf
+NOT RUN. Package tools/package_sledge_editor_v199.py. Camera native. Fresh folder.
+F6 gun-offset rows remain unsupported; arms/head/body authoring available.
+
+## Prior v198: broaden bat pose + native/custom sledgehammer comparison
 
 User explicitly supersedes prior exact-bat restriction: apply bat JSON to
 sledgehammers, axes, shovels and similar two-handed holding; remove bat NPC,
