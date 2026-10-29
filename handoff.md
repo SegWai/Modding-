@@ -2,7 +2,50 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v214: ONLY soda can and bandage, isolated soda editor
+## Current test v216: raised-weapon walking reference and editable jogging NPC
+
+User approved MLSodaCanWalkingLeanPreset.json,14431bytes,SHA256
+`96135c85d6c493b050e15416ab38925a55205b05fc178df50d152a31e9260194`.
+Exact root/bundle/profile+Current/Approved20261029/artifact. Intermediate215
+source/runtime saved. Specific ONEHANDED soda/bandage ASI families via native
+DebugGetItemAnimInstance; fallback SodaCan_ColorBase/Lassi_ColorBase/BandageDressing.
+Lassi native registration reuses sodaASI; bandage distinct ASI explicitly approved.
+No generic1h/flashlight/rags override. Player WALKlowered uses new214 bank for
+these families; flashlight211 independent; reference cache reset for bank change.
+Native debug query reliability untested; standard family fallbacks retained.
+
+Then user requests ALLJSONs together, return to weapon-raised lean: one walking
+NPC and one jogging beside him, switch left/right EVERY1SECOND, edit jogger.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v216/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v216.zip`(40files).
+ALL14approved/default rawbanks installedexact (not merged into lossy singlefile).
+New MLJoggingLeanPreset seed EXACT approved original MLWalkingLeanPreset8828945,
+not lowered SMG walk. Clone ARMED ML173Weapon/Body/Preset toML216 and full
+synchronous ML173EditorScope toML216EditorScope. Native armed graph unchanged.
+
+ONLY2Denis NPCs1m apart, AK74raised(NOADS): grey WALKspeed1, blue JOGspeed2.
+Both rootpinned in place. Shared new ML216AimGaitCycle startup12sec:
+forward3s(still), moving-left3s, centre1s, moving-right3s, centre2s, then direct
+left/right target1s each. Longer initialmoving holds permit native grip/reference
+calibration; actual lean retains native4.5smooth transition. Editor selectedside
+holds both while maintaining distinct speeds.
+
+F6 armed weapon/arms/head and F7 body controls target ONLY blue Jog. Scope wraps
+legacy armed poseupdate and restores globals, walking173 reference unaffected.
+Separate fourth armed refbank3:4revisionentries/8side refs/16arm snapshots,
+weaponchangeclears8. Added explicit state.m_iMovement==2 calibration for jog,
+originalwalkingstablecheck==1 preserved. Without this jog arms would neverready.
+Save BOTHsides/F6/F7 `Profiles/LeanMosin/MLJoggingLeanPreset.json`. Newbank NOT
+approved or globallyapplied until userupload. All globalplayer routes retained
+apart from approved soda215change. Native camera/pose graph unchanged.
+
+Offline tools/check_aim_jog_editor_v216.py checks rawdata,armedscopedclone,
+array/indexbounds,2gaits2NPC,one-second clock, UIstate members, SDK soda scope;
+independent PBO40fileZIP passes. Native compile, actual jogging/raised grip,
+pose response/mesh/rootpin/FPS/crashstability NOT RUN. Package
+`tools/package_aim_jog_editor_v216.py`. Fresh folder, no oldprofiles copied.
+
+## Prior v214: ONLY soda can and bandage, isolated soda editor
 
 User says soda can alone looks off, asks exact holding profile; explained SDK
 SodaCan_ColorBase uses player_main_1h_sodacan.asi and soda_can.anm, broadONEHANDED
