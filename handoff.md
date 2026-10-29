@@ -2,7 +2,23 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v193: pistol, bat and sledgehammer custom lean previews
+## Current test v194: pistol-only pose editor
+
+User requested removing bat/sledge, keeping pistol and editing its pose.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v194/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v194.zip` (22 files).
+Only grey Glock19 and blue unarmed reference remain, unchanged positions/clock.
+F6 arms/head and F7 body continue targeting193 independent editor bank, now only
+pistol actor remains using it. Titles identify LOWERED PISTOL. Combined save
+renamed `Profiles/LeanMosin/MLPistolLeanPreset.json` (both sides/F6/F7), initial
+values byte-identical prior OtherHeld bank. No approval of pistol preset yet.
+Five approved banks, graph, player/helper scripts, clock/camera unchanged.
+Offline 2-actor scene/editor hookup/data identity/PBO/runtime checks pass;
+native compilation, grip, editor visuals/stability NOT RUN.
+Package tools/package_item_previews_v194.py. Fresh folder; send saved pistol JSON
+for later approval. F6 weapon-offset rows still unsupported; F7 body/arms works.
+
+## Prior v193: pistol, bat and sledgehammer custom lean previews
 
 User requests remove SVD/MP5 previews, add pistol/bat/sledge NPCs using custom
 normal lean appropriate to their items. Source

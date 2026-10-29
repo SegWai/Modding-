@@ -1,0 +1,8 @@
+{
+  "source_change": "exactly WeaponDirLr and WeaponDirUd expressions in existing final IK node",
+  "native_angle_expression_cases": 176,
+  "zero_aim_offset_retained": true,
+  "all_pose_nodes_scripts_and_fixed_preset_preserved": true,
+  "new_nodes_or_delays": false,
+  "native_grip_pitch_yaw_speed": "NOT RUN"
+}
