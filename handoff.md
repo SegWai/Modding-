@@ -2,7 +2,22 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v225: fix unwanted standing-to-crouch FP substitution
+## Blocking correction: simultaneous FP and external poses require separate viewmodel
+
+User confirms they need BOTH poses at once: actual character always custom,
+local first-person display native crouch-style upper lean. Freezing FP and
+inspecting externally currently shows FPpose because225 switches SAMEskeleton.
+Do not claim local-only camera selection solves this. See
+[separate-viewmodel investigation](docs/first-person-separate-viewmodel.md).
+No second skeletal pose API found in public SDK; insideLOD/ownerTM are not bone
+palette overrides. Need separate FP arms/weapon asset+animation/render path and
+Windows DayZ Tools/game validation. Those tools/assets are not available here.
+No new runtime version produced for this clarification. v225 remains the latest
+published test, with this known architectural mismatch. Absoluteheadlock also
+unfinished. Do not silently alter presets or issue another variant of the same
+skeleton switch as a fix.
+
+## Current published test v225: fix unwanted standing-to-crouch FP substitution
 
 User rejects223/224fullcrouchbody: wantsSTANDstanding, onlycrouchupperleaninFP;
 confirmedyes. V225 rebuildsprivateFPsubtree usingactualStance selector:0Erc,
