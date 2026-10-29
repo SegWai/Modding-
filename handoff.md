@@ -2,7 +2,50 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v211: approved tool walking + ONLY flashlight walking editor
+## Current test v213: all approved presets and full comparison scene
+
+User approved MLOneHandedWalkingLeanPreset.json,14425bytes,SHA256
+`7432beb2e73194416ca5570cb474cc876a86940fbd3620b81fbb56f5df26d1c4`.
+Exact raw root/bundle/active+Current/Approved20261029/artifact copies. Intermediate
+v212 source/runtime preserved. Global upright LOWERED WALKspeed1 ONEHANDED now
+uses approved211walking bank, standing remains200; bank/item changes reset native
+references. Reference-change test split into smaller boolean groups for native
+parser robustness. Raised/crouch/run/SMG/tool/bat routes retained.
+
+User then requested all JSONs combined and full diverse NPC comparison.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v213/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v213.zip`(36files). All13approved/default files
+bundled/root/active exactly; separate schema banks retained, no lossy singlefile
+merge. Includes polearm copy of approvedbat and all3approved loweredwalk banks.
+
+30NPCs,3rows, same Denis/scale, .95m slots and2.2m row gaps:
+-19GREY lower WALK: empty,AK74,SKS,SVD,MP5K,UMP45,Glock19,Magnum,BaseballBat,
+ SledgeHammer,WoodAxe,Shovel,Pitchfork,Flashlight,Compass,SodaCan_Cola,WoodenCrate,
+ PowerGenerator,Barrel_Blue.
+-8BLUE lower STATIC: empty,AK74,Glock19,BaseballBat,SledgeHammer,Flashlight,
+ WoodenCrate,Pitchfork.
+-3RED AK74 raised: standing,walking,crouching (no ADS).
+
+Shared12ssetupthen3sleft/rightallactors. Walking actors pinned to slot, static
+actors stay. Fixed per-actor walking flag selects LOWERED standing vs walking
+banks before capture; not switching modes every cycle. SMG detection now actual
+knownSMGfamilies for walking previews, no actor-specific editorflag dependency.
+Tools(noBat) andONEHANDED choosewalkingbanks onlyinwalkingrow. Other categories
+use standingbanks onnativegait because no separate walks authored/approved.
+Raised examples take original legacyarmed standing/walking/crouch scopes, not
+unarmedhelper, with appropriate stance/raise and centralized root pin. Global
+player routing unchanged from212. Scene cleanup array owns all actors.
+
+F6/F7 STILL211onehandwalking bank, affects greyFlashlight/Compass/Cola matching
+actors, not blue standing onehand or other categories. No newallbankmenu. Native
+camera/graph retained. Walkback/around to inspect rows. This is a comparison scene;
+no guarantee all grips/poses matchpixelwise across native itemIK.
+Offline tools/check_full_comparison_v213.py covers rawdata/hash/13banks/row counts/
+mode/stance/bankscope/cleanup/globalplayerroute/graph; PBO36fileZIPpasses. Native
+compile/30NPCperformance/visiblepose/grip/rootpin/gait/transitions NOT RUN. Package
+`tools/package_full_comparison_v213.py`. Fresh folder, no oldprofiles copied.
+
+## Prior v211: approved tool walking + ONLY flashlight walking editor
 
 User approved MLSledgehammerWalkingLeanPreset.json,14645bytes,SHA256
 `4276edbb8a47c6fad0567b732d480dff929129178f1df2ab2cebbfff1bf48521`.
