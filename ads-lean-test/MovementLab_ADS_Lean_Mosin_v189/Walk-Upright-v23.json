@@ -1,0 +1,61 @@
+{
+  "scope": "Standing aimed custom lean while moving, left and right, shared player/NPC",
+  "torso_roll_scale": 0.4,
+  "approximate_total_side_bend_degrees": 10.4,
+  "native_forward_pitch_rotation_remaining_fraction": 0.25,
+  "native_collision_transform": "Unchanged; inverse pass contains only original rotation bones, no Collision translation",
+  "neck_compensation": "Offset the removed torso-Z rotation at Neck1 for each side to preserve the cumulative authored head roll",
+  "changed_existing_nodes": [
+    {
+      "node": "ML5_StandWalk_left_Spine_Rotate_Z",
+      "before": -0.244345992,
+      "after": -0.0977383968
+    },
+    {
+      "node": "ML5_StandWalk_left_Spine1_Rotate_Z",
+      "before": -0.1396255831,
+      "after": -0.05585023324
+    },
+    {
+      "node": "ML5_StandWalk_left_Spine2_Rotate_Z",
+      "before": -0.06981239282,
+      "after": -0.02792495713
+    },
+    {
+      "node": "ML5_StandWalk_left_Neck1_Rotate_Z",
+      "before": 0.2268922613,
+      "after": -0.04537811945,
+      "purpose": "Compensate removed torso roll so head direction does not acquire the parent rotation delta"
+    },
+    {
+      "node": "ML5_StandWalk_right_Spine_Rotate_Z",
+      "before": 0.2443453851,
+      "after": 0.09773815404
+    },
+    {
+      "node": "ML5_StandWalk_right_Spine1_Rotate_Z",
+      "before": 0.1396274655,
+      "after": 0.0558509862
+    },
+    {
+      "node": "ML5_StandWalk_right_Spine2_Rotate_Z",
+      "before": 0.06981276585,
+      "after": 0.02792510634
+    },
+    {
+      "node": "ML5_StandWalk_right_Neck1_Rotate_Z",
+      "before": -0.2268919218,
+      "after": 0.04537944807,
+      "purpose": "Compensate removed torso roll so head direction does not acquire the parent rotation delta"
+    }
+  ],
+  "preserved": [
+    "Stationary poses",
+    "Crouched poses",
+    "Walking pelvis height, legs and native foot IK",
+    "Head exposure offsets and nod",
+    "Gun cant and weapon IK",
+    "All v22 controller/equipment/ammo/ragdoll/respawn logic"
+  ],
+  "native_status": "Needs in-game posture, head and sight-alignment check"
+}

@@ -2,7 +2,23 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v188: all four approved banks with automatic crouch routing
+## Current test v189: fix confirmed v188 native graph-load error
+
+Uploaded v188 logs (Mosin-Lean-v188-Logs-20261029-101012.zip) confirm World and
+Mission compiled. Player creation failed because ML187_PublishHeldLean used
+integer expression `0` for float WeaponDirLr, WeaponDirUd and WeaponRoll.
+Native error explicitly says int but float expected; graph invalid then AV.
+V189 changes ONLY these three expressions to `0.0`, preserving ALL gameplay
+scripts, mission, routing, controls and four approved JSON banks byte-for-byte.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v189/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v189.zip`.
+Regression `tools/check_graph_float_fix_v189.py` checks exact three-field delta
+and scans weapon float expressions for invalid bare integer literals. Independent
+PBO/18-file runtime checks pass. Native v189 graph reload/gameplay NOT RUN.
+Do not attribute the v188 startup failure to JSONs, crouch pose or runtime lean
+transitions: no pose calibration ran. Old offline checks missed this type error.
+
+## Prior v188: all four approved banks with automatic crouch routing
 
 User explicitly asked to include the approved crouch aiming JSON and ALL confirmed
 presets in the new shared-standing test. Source:
