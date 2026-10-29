@@ -1,0 +1,12 @@
+{
+  "video": "DayZ20261028-225146, 10.49sec",
+  "observed": "swap activates but gun appears sideways/rolled and support arm disagrees",
+  "graph_changes": {
+    "MLASwapLeftWeapon.weaponaxis": "+x -> -x",
+    "MLASwapLeftWeapon.WeightSecondaryChain": "true -> false"
+  },
+  "rationale": "model-axis must stay native; do not apply unmirrored left support target to mirrored right support arm",
+  "remaining_validation": "native rendered gun rotation/contact/firing/ADS required",
+  "diagnostics": "one-shot read-only sight frame + two wrists, never used as solver inputs",
+  "native_v5": "NOT RUN"
+}

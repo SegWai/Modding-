@@ -1,0 +1,7 @@
+{
+  "left_degrees_from_down_outward": 20,
+  "right_degrees_from_down_outward": 45,
+  "scope": "existing own-left raised walking lean; shared NPC/player shouldered-gun profile",
+  "hand_position": "preserved by existing solvers",
+  "native_validation": "pending; actual angle constrained by reach"
+}

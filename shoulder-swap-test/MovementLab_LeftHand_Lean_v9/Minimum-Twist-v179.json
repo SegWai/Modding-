@@ -1,0 +1,15 @@
+{
+  "base_version": 173,
+  "absolute_original_walking_preset": true,
+  "zero_rebase": false,
+  "chains": {
+    "ML104_LeftHandCounter_X": "ML179LegacyForeZ",
+    "ML147_LeftArmEditor_LeftHand_X": "ML179LeftEditForeZ",
+    "ML146_ArmEditor_LeftHand_X": "ML179RightEditForeZ"
+  },
+  "new_controls": 6,
+  "new_nodes": 9,
+  "affected_actor": "blue walking only",
+  "affected_arm": "anatomical left, both lean sides",
+  "native_runtime": "NOT RUN"
+}

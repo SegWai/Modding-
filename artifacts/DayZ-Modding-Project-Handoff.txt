@@ -443,3 +443,10 @@ Offline 6000 full rigid profile cases pass; native DayZ unavailable.
 The existing native Weapon-helper publisher remains experimental; the accessor
 sight transform may not represent rendered attachment. No claim of native fix.
 Original lean186 snapshot/tag remains untouched.
+
+FIXED LEFT-HAND V9
+User requested default left camera and left raised gun, no swapping.
+Runtime artifacts/MovementLab_LeftHand_Lean_v9.zip; source shoulder-swap-test/MovementLab_LeftHand_Lean_v9.
+Swap action/input removed; camera left throughout normal movement; raised poses automatic.
+V8 placement remains experimental. Native lowered/reload/actions still right-handed.
+Four approved presets and saved original186 untouched.
