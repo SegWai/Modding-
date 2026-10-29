@@ -2,7 +2,30 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v199: custom bat reference and independent sledge editor
+## Current test v200: one-handed flashlight pose editor
+
+User removes bat/sledge previews and requests editable one-handed NPC (flashlight).
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v200/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v200.zip` (26files).
+Grey Flashlight+Battery9V NPC and original blue empty custom reference only.
+Same model/scale/.5m gap/shared1sclock/editor-side hold. No bat/sledge actor.
+
+Private ML200WeaponState/BodyState/Preset replaces private sledge editor code;
+OneHandEditor flag/start method selects this bank on flashlight NPC only. New
+MLOneHandedLeanPreset seed = custom unarmed torso/head/legs, arm offsets zero for
+native flashlight grip, NOT previously edited bat/sledge arms. F6 arms/head, F7
+body target flashlight only. Save BOTH sides and F6/F7 combined to
+`Profiles/LeanMosin/MLOneHandedLeanPreset.json`. User must send it for approval;
+it is not yet the default for one-handed player items. Player routes unchanged.
+All seven approved raw JSONs, native camera, pose graph retained unchanged.
+Old bat/sledge test folders/archives preserved. Source class199 references removed
+from new runtime, scopes/binding/menu/clock200 checked. Offline 2-actor scene,
+7bank copies/data isolation/graph/API source/selector/PBO26file checks pass.
+Native compilation, flashlight grip/editor visuals/stability NOT RUN. Package
+`tools/package_onehand_editor_v200.py`; fresh folder required. F6 gun-offset rows
+still unsupported. One-handed per-item hand placement remains native.
+
+## Prior v199: custom bat reference and independent sledge editor
 
 User replaces grey vanilla sledge NPC with approved custom-JSON bat reference;
 wants black sledge NPC editable to author a separate custom pose.
