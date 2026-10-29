@@ -2,7 +2,36 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v213: all approved presets and full comparison scene
+## Current test v214: ONLY soda can and bandage, isolated soda editor
+
+User says soda can alone looks off, asks exact holding profile; explained SDK
+SodaCan_ColorBase uses player_main_1h_sodacan.asi and soda_can.anm, broadONEHANDED
+shared with flashlight but actual holding/IK differs. Grouping broad category can
+make flashlight-authored arm offsets unsuitable. User then asks test ONLYsodaNPC
+and adjacent bandage NPC. Source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v214/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v214.zip`(38files).
+
+Scene: GREY SodaCan_Cola, BLUE BandageDressing, same Denis/scale/.95m gap,
+12ssetup then3sleft/rightwalking-in-place, same selected side and shared clock.
+No static/raised rows or other NPCs spawn. F6arms/head,F7body edit ONLY grey soda
+via new independent ML214 bank/CanWalkingEditor explicit actor flag. Seed exact
+approved MLOneHandedWalkingLeanPreset (reproduce original pose for tuning).
+Bandage stays approved211onehandwalking reference, not changed by edits.
+Save BOTHsides/F6/F7 to `Profiles/LeanMosin/MLSodaCanWalkingLeanPreset.json`.
+This is a NEWexperimental NPC bank until user approves upload; global player
+soda route still broadONEHANDED, no unapproved rollout. Original13rawdefaultfiles,
+graph, nativecamera and playerroute retained byte-identical213.
+
+ConfigureLineup ensures can/ordinaryonehand/walkingonehandbank mutually exclusive;
+cache invalidates canflag changes only, no recurring recapture. Bank value reads
+inUpdate, notBind. F6 item-offset rows still unsupported; body/arms/head authoring.
+Offline tools/check_soda_bandage_v214.py checks2scene/seed/isolation/cache/menus/
+clock/save/data/playerroutegraph. PBO38file checks pass. Native compile/visible
+can or bandage grip/gait/UI/FPS NOT RUN. Package tools/package_soda_bandage_v214.py.
+Fresh folder; do not overwrite approved global files to tune soda exception.
+
+## Prior v213: all approved presets and full comparison scene
 
 User approved MLOneHandedWalkingLeanPreset.json,14425bytes,SHA256
 `7432beb2e73194416ca5570cb474cc876a86940fbd3620b81fbb56f5df26d1c4`.
