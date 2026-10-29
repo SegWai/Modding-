@@ -1,0 +1,6 @@
+{
+  "focus_lifecycle_cases": 8,
+  "both_menus": "mouse+keyboard/gamepad focus borrowed only while physical RMB held; polling restores after missed UI release; hide/visibility balanced",
+  "preserved": "World scripts, poses, graph, actual camera implementation, freeze, live controls and smoothing unchanged",
+  "native_compile_UI_navigation": "NOT RUN; test Windows first/third/free-camera RMB+WASD and release"
+}

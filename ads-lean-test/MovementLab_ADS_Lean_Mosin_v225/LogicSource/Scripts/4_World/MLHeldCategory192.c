@@ -1,0 +1,125 @@
+// Native item-in-hands behavior, not a gun classname/length allowlist.
+class MLHeldCategory192
+{
+ // User explicitly approves the bat pose for the whole native two-handed category.
+ static bool UsesTwoHandedHolding(PlayerBase actor)
+ {
+  if (!actor || !actor.GetHumanInventory().GetEntityInHands())
+   return false;
+  HumanItemAccessor accessor = actor.GetItemAccessor();
+  if (!accessor)
+   return false;
+  HumanItemBehaviorCfg behavior = accessor.GetItemInHandsBehaviourCfg();
+  if (!behavior)
+   return false;
+  return behavior.m_iType == ItemBehaviorType.TWOHANDED;
+ }
+ // Native SMGs do not share a unique ItemBehaviorType or script base class.
+ // Use verified native SMG families; inherited modded subclasses follow them.
+ // Walking-only tool group explicitly approved by the user. Never all TWOHANDED.
+ static bool IsWalkingTool(EntityAI item)
+ {
+  if (!item)
+   return false;
+  if (item.IsKindOf("SledgeHammer") || item.IsKindOf("Shovel"))
+   return true;
+  if (item.IsKindOf("WoodAxe") || item.IsKindOf("FirefighterAxe"))
+   return true;
+  return item.IsKindOf("Pitchfork");
+ }
+ static bool IsSMG(EntityAI item)
+ {
+  if (!item || !Weapon_Base.Cast(item))
+   return false;
+  if (item.IsKindOf("MP5K_Base") || item.IsKindOf("UMP45_Base"))
+   return true;
+  if (item.IsKindOf("CZ61_Base") || item.IsKindOf("PM73Rak_Base"))
+   return true;
+  return item.IsKindOf("PP19_Base") || item.IsKindOf("MP18_Base");
+ }
+ static bool UsesPolearmHolding(PlayerBase actor)
+ {
+  if (!actor || !actor.GetHumanInventory().GetEntityInHands())
+   return false;
+  HumanItemAccessor accessor = actor.GetItemAccessor();
+  if (!accessor)
+   return false;
+  HumanItemBehaviorCfg behavior = accessor.GetItemInHandsBehaviourCfg();
+  if (!behavior)
+   return false;
+  return behavior.m_iType == ItemBehaviorType.POLEARMS;
+ }
+ // Two explicitly approved item-animation families, not the whole ONEHANDED type.
+ static bool UsesCanBandageHolding(PlayerBase actor)
+ {
+  if (!actor)
+   return false;
+  EntityAI item = actor.GetHumanInventory().GetEntityInHands();
+  if (!item)
+   return false;
+  HumanItemAccessor accessor = actor.GetItemAccessor();
+  if (!accessor)
+   return false;
+  HumanItemBehaviorCfg behavior = accessor.GetItemInHandsBehaviourCfg();
+  if (!behavior || behavior.m_iType != ItemBehaviorType.ONEHANDED)
+   return false;
+  string animationInstance = actor.DebugGetItemAnimInstance();
+  animationInstance.ToLower();
+  if (animationInstance.Contains("player_main_1h_sodacan"))
+   return true;
+  if (animationInstance.Contains("player_main_1h_bandage"))
+   return true;
+  // Native class families/subclasses if the animation-instance query is empty.
+  if (item.IsKindOf("SodaCan_ColorBase") || item.IsKindOf("Lassi_ColorBase"))
+   return true;
+  return item.IsKindOf("BandageDressing");
+ }
+ static bool UsesOneHandedHolding(PlayerBase actor)
+ {
+  if (!actor || !actor.GetHumanInventory().GetEntityInHands())
+   return false;
+  HumanItemAccessor accessor = actor.GetItemAccessor();
+  if (!accessor)
+   return false;
+  HumanItemBehaviorCfg behavior = accessor.GetItemInHandsBehaviourCfg();
+  if (!behavior)
+   return false;
+  return behavior.m_iType == ItemBehaviorType.ONEHANDED;
+ }
+ static bool UsesHeavyHolding(PlayerBase actor)
+ {
+  if (!actor || !actor.GetHumanInventory().GetEntityInHands())
+   return false;
+  HumanItemAccessor accessor = actor.GetItemAccessor();
+  if (!accessor)
+   return false;
+  HumanItemBehaviorCfg behavior = accessor.GetItemInHandsBehaviourCfg();
+  if (!behavior)
+   return false;
+  return behavior.m_iType == ItemBehaviorType.HEAVY;
+ }
+ static bool UsesPistolHolding(PlayerBase actor)
+ {
+  if (!actor || !actor.GetHumanInventory().GetEntityInHands())
+   return false;
+  HumanItemAccessor accessor = actor.GetItemAccessor();
+  if (!accessor)
+   return false;
+  HumanItemBehaviorCfg behavior = accessor.GetItemInHandsBehaviourCfg();
+  if (!behavior)
+   return false;
+  return behavior.m_iType == ItemBehaviorType.PISTOLS;
+ }
+ static bool UsesRifleHolding(PlayerBase actor)
+ {
+  if (!actor || !actor.GetHumanInventory().GetEntityInHands())
+   return false;
+  HumanItemAccessor accessor = actor.GetItemAccessor();
+  if (!accessor)
+   return false;
+  HumanItemBehaviorCfg behavior = accessor.GetItemInHandsBehaviourCfg();
+  if (!behavior)
+   return false;
+  return behavior.m_iType == ItemBehaviorType.FIREARMS;
+ }
+};

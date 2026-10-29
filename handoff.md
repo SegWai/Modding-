@@ -2,7 +2,30 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v224: local first-person presentation vs external custom poses
+## Current test v225: fix unwanted standing-to-crouch FP substitution
+
+User rejects223/224fullcrouchbody: wantsSTANDstanding, onlycrouchupperleaninFP;
+confirmedyes. V225 rebuildsprivateFPsubtree usingactualStance selector:0Erc,
+1Cro. Four standingnative idle/move raised/lowered roots retainstandingchildren.
+ONLY8standingleanoperators replace theirboneitemswithnativecrouchSpine/Spine1/
+Spine2/Spine3items+nativecrouchexpression/scaling. NOcrouchPelvis/leg/foot/
+Collision operators copiedtostanding. Nativeactualstanceleglocomotion remains,
+not fullcrouchskeleton; actualcrouch still usesdefaultCrobase. NativeIK makes
+arms/weaponfollowupperbody. 152privateclones; unmodifiednativeclonesexactsource
+exceptnames/GUIDs,8modifiedleanoperatorspreciseupperfilter. Privateold223
+fullcrouch branch removed. SameML223FirstPersonOnlyouterbinaryselector/control,
+localonlysame224script(view/client/jogroute),TPoriginalcustomgraphunchanged.
+ALL15presets exact222/224 includingheadvalues. NativeFPlegs are nativeactual
+stance, NOT promisedsamecustomTPfootpose. No gameplaystance/root/input/camera
+forcing. Headabsoluteoverride/allgunsstillUNIMPLEMENTED;nativeFPheaddefault.
+
+Tests check_fp_upper_v225.py verifyactualstand/crochildren,standingbases,
+upperonlybonelist/expressionprovenance,allothernativeclonesexact,FPDAG/crossrefs,
+originalTPgraphpreserved,15presetsandallscriptsunchangedexceptlabel. PBO/41ZIP
+PASS. NativeWindowscompile/render/standingheight/grip/ADS/FP-TP/FPS/MP NOTRUN.
+Artifact artifacts/MovementLab_ADS_Lean_Mosin_v225.zip.
+
+## Previous test v224: local first-person presentation vs external custom poses
 
 User clarifies strict view split: their own FPdefaultcrouch EVERYstance; outside
 observers/ownTP see custom standing/walking/jogging/crouching. Keepcustomhead.
