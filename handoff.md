@@ -2,7 +2,23 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v187: shared normal standing lean with held items
+## Current test v188: all four approved banks with automatic crouch routing
+
+User explicitly asked to include the approved crouch aiming JSON and ALL confirmed
+presets in the new shared-standing test. Source:
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v188/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v188.zip`.
+All four canonical raw JSONs are exact at root/bundled/active-profile locations.
+V187 already bundled them, but did not automatically select the crouch bank.
+V188 backports v186 stationary rifle-crouch routing plus isolated crouch reference
+caches: three banks, six side references, twelve arm frames. Clears crouch hold
+and refreshes writes on exit. Shared lowered standing held-item behavior from
+v187 retained; standing raised/walking banks retained; no new crouch-walking or
+pistol rifle-pose override. Graph, other scripts, NPC scene/camera unchanged.
+12 preset hash checks, 64 scope cases, cache isolation and independent PBO/18-file
+ZIP checks pass. Native compile/render/contact/stability still NOT RUN.
+
+## Prior v187 implementation: shared normal standing lean with held items
 
 After restoring v185, user asked that the current unarmed normal lean also apply
 when holding an object or weapon. Implemented on restored-v185 base as
