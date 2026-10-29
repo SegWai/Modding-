@@ -2,7 +2,40 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v206: all holding types walking-in-place lineup
+## Current test v207: reduced lineup, SMG walking editor first
+
+User says walking needs changes ONLY for SMG; sledge/axe/shovel/pitchfork group
+EXCLUDING BAT (bat looks good); and flashlight. Remove all unmentioned actors,
+start authoring SMG first. Source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v207/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v207.zip` (32files).
+Six NPC lineup MP5K (blue), SledgeHammer, WoodAxe, Shovel, Pitchfork, Flashlight.
+.85m centred slots; same12sreferences then3sleft/3srightwalk-in-place. All other
+NPCs incl bat/empty/rifles/pistol/crate removed from scene. Their defaults retained.
+
+F6 arms/head + F7 body now target ONLY blue MP5K walking preview. NEW independent
+ML207WeaponState/BodyState/Preset, seed EXACT approved MLHeldLeanPreset. Save
+BOTH sides+F6/F7 to `Profiles/LeanMosin/MLSMGWalkingLeanPreset.json`. It is a
+new experimental walking bank, not approved or automatically applied to players.
+Actor explicit editor flag assigned only MP5K; ConfigureLineup selects it only
+with native FIREARMS, suppresses normal rifle bank for that preview, includes
+flag in cache invalidation. Global player routing byte-identical206.
+
+Other five remain current-pose references, NOT affected by SMG editor. Future
+sledge/axe/shovel/pitchfork walking work MUST be independent of bat and standing
+banks. Flashlight walking is later task. Do not mutate approved bat/two-handed
+bank to fix their walking. Native per-item animations/grips differ despite broad
+holding category. No changes to those five yet, user explicitly SMG first.
+
+Clock holds selected editor side only AFTER12swarmup so early menus cannot block
+neutral capture. Gait continues while editing. Existing graph and10default raw
+banks unchanged. Native camera retained. F6 gun-offset rows still unsupported.
+Offline tools/check_smg_walking_editor_v207.py passes6scene/isolation/seed/caches/
+10banks/globalplayerroute/graph/save/menu/clockwarmup; PBO32fileZIP passes.
+Native compile/gait/editor/grip/rootpin/FPS NOT RUN. Package via
+`tools/package_smg_walking_editor_v207.py`; fresh folder required.
+
+## Prior v206: all holding types walking-in-place lineup
 
 User requests NPCs for all recent guns/object types, close side by side, walking
 left/right in fixed positions to compare animation. Source

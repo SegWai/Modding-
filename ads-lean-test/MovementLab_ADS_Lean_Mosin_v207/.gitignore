@@ -1,0 +1,7 @@
+Profiles/*
+!Profiles/LeanMosin/
+Profiles/LeanMosin/*
+!Profiles/LeanMosin/MLLeanPreset.json
+*-Logs-*.zip
+launcher-run.txt
+__pycache__/
