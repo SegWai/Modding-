@@ -2,7 +2,35 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v189: fix confirmed v188 native graph-load error
+## Current test v190: synchronized lowered-AK74 editor NPC
+
+User requests replacing the red vanilla empty-handed NPC with a lowered AK74
+holder at the same location, synced to the existing custom blue unarmed NPC;
+F6/F7 target the armed NPC only; restore normal third-person camera.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v190/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v190.zip`.
+
+Red now uses ML190StartHeldComparison, no aiming/ADS, shared preview path.
+Blue retains approved MLUnarmedLeanPreset and original body pose. Same two
+actors/positions/.5m gap and shared 1s left/forward/right/forward clock.
+Menus select held-bank side and BOTH NPCs hold that same side while editing.
+Independent ML190WeaponState/BodyState/Preset cloned from183; seeded exact copy
+of approved unarmed JSON but saves to NEW `Profiles/LeanMosin/MLHeldLeanPreset.json`
+(both sides + F6/F7). Editors affect only red; original four approved presets and
+player bank routing untouched. Helper chooses190 values only for HeldEditor;
+held NPC publisher follows actual item; allows arms edits only on editor NPC.
+F6 supports inherited arms/head and F7 full body. Inherited unarmed F6 weapon
+XYZ/PYR rows are not a new gun-offset solver; see README limitation. Do not claim
+those rows reposition the gun. No new feedback/recalibration loops introduced.
+Removed MLInspectionCamera171.c; native third-person distance/height/collision,
+first-person/ADS code unchanged. No shoulder swap. Graph byte-identical189 with
+float0.0 startup fix retained. Native v190 compile/grip/UI/camera NOT tested.
+Offline tools/check_held_preview_v190.py passes isolation/scene/clock/presets/
+graph/floatfix/camera checks. Package via tools/package_held_preview_v190.py
+(20 files, includes held bank root+active copy). Build PBOs with kit build_pbos.py.
+Original189andearlierarchives preserved. Send user a fresh extracted runtime.
+
+## Prior v189: fix confirmed v188 native graph-load error
 
 Uploaded v188 logs (Mosin-Lean-v188-Logs-20261029-101012.zip) confirm World and
 Mission compiled. Player creation failed because ML187_PublishHeldLean used
