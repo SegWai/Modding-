@@ -2,7 +2,30 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v197: approved bat default for matching bat holding profiles
+## Current test v198: broaden bat pose + native/custom sledgehammer comparison
+
+User explicitly supersedes prior exact-bat restriction: apply bat JSON to
+sledgehammers, axes, shovels and similar two-handed holding; remove bat NPC,
+show native sledge lean against custom bat-JSON sledge lean.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v198/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v198.zip` (24files).
+Native TWOHANDED behavior now selects approved bat bank, no DebugGetItemAnimInstance
+or bat-name filter. Includes other native TWOHANDED items/containers; does not
+force HEAVY/POLEARMS/PISTOLS/FIREARMS. Still lowered stationary standing route.
+All seven approved JSONs exact; raised/crouch/walking banks unchanged.
+
+Preview scene: grey SledgeHammer VANILLA native lean, black SledgeHammer CUSTOM
+approved bat JSON, original blue empty-handed custom reference. No bat actor.
+Shared181clock, model/scale, .5m spacing, selected-editor-side hold. Native factory
+flag starts183nativeReference=true so helper disables custom stage and returns;
+custom starts193editor bank. F6/F7 target BLACK only (and shared player bat bank
+can reflect edits); native grey/blue unchanged. Save MLBatLeanPreset.json.
+Native camera retained. Helper/graph/clock unchanged; new factory native flag and
+native/custom actor cleanup. tests/check tool `tools/check_twohand_comparison_v198.py`
+passes category/bypass/scene/allrawdata/isolation/source/PBO24file checks.
+Package tools/package_twohand_preview_v198.py. Native compile/grip/visuals NOT RUN.
+
+## Prior v197: approved bat default for matching bat holding profiles
 
 User uploaded/approved MLBatLeanPreset.json, 14659 bytes, SHA256
 `d55bf37cbc5a93729c7474a633e6c40a1c184fb17cecd63b27b631cc90dda98e`.

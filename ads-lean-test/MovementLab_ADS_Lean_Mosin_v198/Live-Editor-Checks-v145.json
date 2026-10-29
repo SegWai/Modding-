@@ -1,0 +1,9 @@
+{
+  "baseline_v143_coefficients_max_error": 1.1796119636642288e-14,
+  "random_targets_accepted": 736,
+  "random_targets_rejected": 264,
+  "max_fk_wrist_orientation_length_error": 1.2212453270876722e-15,
+  "graph_changes": "18 fixed arm amounts replaced by dynamic inputs; previous body/head/support solver nodes unchanged",
+  "ui": "6 sliders, readouts and +/- pairs; save/load/reset/hold/close wired; F6 custom menu; paired input focus lifecycle",
+  "native_compilation_and_ui": "not run; requires Windows DayZDiag"
+}
