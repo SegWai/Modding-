@@ -2,7 +2,26 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v217: isolate native look tracking (absolute head lock still pending)
+## Current test v218: right-jog saved head roll isolation
+
+User supplied 6.60-second video DayZ20261029-212429 and updated jogging JSON;
+only dislikes RIGHT jogging raised lean head tilt. Inspected video contact sheet
+and JSON. All F6 Head fields zero; F7 right Head Pitch4.6,Yaw-3.3,Roll+20.
+Left Neck/Neck1/Head fields zero. This is a concrete saved extra roll, but not
+proof it explains all native tilt. V218 installs latest upload BOTHsides and
+changes ONLY RightLean.BodySettings.Parts[Head].Roll20->0. Original archived raw
+User-Presets/Uploaded-20261029-MLJoggingLeanPreset.json and included runtime
+MLJoggingLeanPreset-OriginalUpload.json. No new global jogging rollout or
+Current-approved promotion. All other uploaded values byte/semantically retained.
+14 other approved banks unchanged. V217 graph, look suppression and no automatic
+reference correction retained; same2NPC/F6F7blueeditor/camera. Native head-track
+absolute replacement remains unimplemented. Explain this is a roll adjustment
+TEST, not guaranteed head lock. Extract fresh folder to avoid stale active JSON.
+Offline check_jog_head_v218.py +PBO/41fileZIP PASS. Native DayZ NOT RUN.
+Source ads-lean-test/MovementLab_ADS_Lean_Mosin_v218;
+artifact artifacts/MovementLab_ADS_Lean_Mosin_v218.zip.
+
+## Previous test v217: isolate native look tracking (absolute head lock still pending)
 
 The user wants saved head/neck settings to be authoritative, with no automatic
 head tilt. v217 is a scoped isolation test, NOT a completed absolute head lock.
