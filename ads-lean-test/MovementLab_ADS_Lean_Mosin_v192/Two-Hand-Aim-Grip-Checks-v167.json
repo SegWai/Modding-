@@ -1,0 +1,7 @@
+{
+  "source_change": "exactly two arm-weight expressions in one existing graph node",
+  "centred_FP_handgun_mask": "verified",
+  "no_new_nodes_or_branches": true,
+  "all_scripts_and_preset_preserved": true,
+  "native_grip_verification": "NOT RUN"
+}

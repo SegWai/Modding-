@@ -1,0 +1,33 @@
+{
+  "base": "v95",
+  "changed_nodes": [
+    "ML32_ReferenceHold_LeftArm_X",
+    "ML32_ReferenceHold_LeftArm_Y",
+    "ML32_ReferenceHold_LeftArm_Z",
+    "ML32_ReferenceHold_RightArm_X",
+    "ML32_ReferenceHold_RightArm_Y",
+    "ML32_ReferenceHold_RightArm_Z",
+    "ML32_ReferenceHold_LeftForeArm_X",
+    "ML32_ReferenceHold_LeftForeArm_Y",
+    "ML32_ReferenceHold_LeftForeArm_Z",
+    "ML32_ReferenceHold_RightForeArm_X",
+    "ML32_ReferenceHold_RightForeArm_Y",
+    "ML32_ReferenceHold_RightForeArm_Z",
+    "ML32_ReferenceHold_LeftHand_X",
+    "ML32_ReferenceHold_LeftHand_Y",
+    "ML32_ReferenceHold_LeftHand_Z",
+    "ML32_ReferenceHold_RightHand_X",
+    "ML32_ReferenceHold_RightHand_Y",
+    "ML32_ReferenceHold_RightHand_Z"
+  ],
+  "contact_reference": "approved v94 right hold; stock proxy at RightShoulder joint",
+  "left_common_hand_shift_m": [
+    0.0,
+    -0.08173728217842702,
+    0.0
+  ],
+  "right_hold": "unchanged",
+  "comparison": "Ctrl+F8",
+  "runtime_evidence": "automatic full pose/weapon capture per stable side/mode",
+  "native_validation": "not run"
+}

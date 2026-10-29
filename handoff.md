@@ -2,7 +2,39 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v191: lowered-AK74 grip correction
+## Current test v192: approved held pose default + SVD/MP5K comparison
+
+User approved new uploaded MLHeldLeanPreset.json, 14411 bytes, SHA256
+`f4522bf7f9a4b153373f129c88d7353b7b316927ff409fde9a64e958cdd57ad4`.
+This is now a FIFTH approved bank, alongside the four preserved banks below.
+Raw bytes archived `ads-lean-test/User-Presets/MLHeldLeanPreset-Approved-20261029.json`,
+canonical `Current-MLHeldLeanPreset.json`, artifact `artifacts/MLHeldLeanPreset.json`.
+Kit root/bundled/active-profile copies EXACT. Do not zero its approved arm values.
+
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v192/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v192.zip` (20 files).
+Stationary lowered player held-bank selection now uses native holding behavior,
+NOT physical gun length/classname allowlist: HumanItemAccessor
+GetItemInHandsBehaviourCfg -> HumanItemBehaviorCfg.m_iType == FIREARMS.
+SDK confirms AK74, MP5K and SVD share that behavior. Also covers modded objects
+registered with the same FIREARMS holding category. Pistols, generic two-handed
+tools/heavy objects retain other routes. Raised/walk/crouch banks unchanged.
+New MLHeldCategory192.c; player sets helper HeldEditor from matching category.
+Reference caches reset on item OR bank change to avoid stale item/empty poses.
+
+Red NPC now SVD + PSO1/mag, lowered. New green MP5K + stock/handguard/mag at .5m
+on red's other side; original blue unarmed reference stays in place. All three
+same model/scale/181clock and selected-side editor hold; both armed NPCs same
+ML190 bank. F6/F7 updates BOTH armed NPCs and eligible player poses, blue bank
+independent. Native weapon IK may adapt hand contact per gun despite identical
+saved body stats. Added SMG cleanup. Camera native; graph same as191.
+
+Offline tools/check_approved_held_v192.py passes raw integrity (6copies), four old
+banks, API/category/SDK registration, cache isolation, scene/clock/cleanup.
+Independent PBO/20-file ZIP checks pass. Native compile/load/grip/perf NOT RUN.
+Repackage via tools/package_held_preview_v192.py; fresh folder required.
+
+## Prior v191: lowered-AK74 grip correction
 
 User screenshot from v190 showed rifle near vertical and support hand floating.
 V191 addresses two implementation mistakes: experimental held bank inherited
