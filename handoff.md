@@ -2,7 +2,32 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v190: synchronized lowered-AK74 editor NPC
+## Current test v191: lowered-AK74 grip correction
+
+User screenshot from v190 showed rifle near vertical and support hand floating.
+V191 addresses two implementation mistakes: experimental held bank inherited
+nonzero unarmed arm settings; final publisher used raised-grip configuration.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v191/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v191.zip`.
+
+ONLY the new MLHeldLeanPreset arm/shoulder/hand offsets are zeroed; torso/head/
+legs and all FOUR approved presets remain unchanged. Fresh folder required,
+never copy v190 MLHeldLeanPreset into v191. Red arm edits still available.
+Held branch is now native pre-IK pose -> custom body -> exact NormalWeaponIK
+clone, once, retaining native RightArm rotator, ArmIK masks, aim/roll and native
+output policy. Empty branch retains original pre-body NormalWeaponIK.
+No forced limb weights. Native grip can constrain edits; actual rendering still
+needs a test. Removed raised-profile/custom-output final publisher configuration.
+One new binary pre-body selector, one base-child rewire, replacement publisher.
+No gameplay scripts, NPC clock/scene, menus or camera changes. Native camera stays.
+
+Offline tools/check_lowered_grip_v191.py checks exact native template, one grip
+stage each path, experimental seed-only delta, four-bank/script/scene identity.
+Independent PBO/20-file ZIP checks pass. Native compiler/game/grip NOT RUN.
+Package via tools/package_held_preview_v191.py. Builder prefix Roll count now26,
+explicit outputbuffertrue count20, reflecting cloned native output policy.
+
+## Prior v190: synchronized lowered-AK74 editor NPC
 
 User requests replacing the red vanilla empty-handed NPC with a lowered AK74
 holder at the same location, synced to the existing custom blue unarmed NPC;
