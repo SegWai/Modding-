@@ -1,0 +1,11 @@
+{
+  "crouch_sha256": "2de68073870eb3b17bf24f9546ff90a41b737b516b0535351eae6d247f90eb20",
+  "raw_approved_files": "identical",
+  "new_graph_nodes": 238,
+  "new_controls": 94,
+  "single_native_base_path": true,
+  "fk_cases": 300,
+  "max_fk_error": 8.770761894538737e-15,
+  "menu_scene_routing": "passed",
+  "native_compile_rendering_FPS": "NOT RUN"
+}

@@ -2,7 +2,35 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v196: approved pistol default, bat editor preserved
+## Current test v197: approved bat default for matching bat holding profiles
+
+User uploaded/approved MLBatLeanPreset.json, 14659 bytes, SHA256
+`d55bf37cbc5a93729c7474a633e6c40a1c184fb17cecd63b27b631cc90dda98e`.
+SEVENTH approved bank. Raw file preserved at kit root/bundle/active profile,
+`Current-MLBatLeanPreset.json`, dated Approved archive, artifacts/MLBatLeanPreset.json.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v197/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v197.zip` (24files).
+
+UsesBatHolding: native TWOHANDED guard AND animation-instance name contains
+player_main_2h_bat; verified native Human.DebugGetItemAnimInstance declaration.
+Fallback known native BaseballBat/NailedBaseballBat/BarbedBaseballBat/XmasBaseballBat
+and subclasses if instance query isn't populated. Modded items sharing same ASI
+match dynamically. Not all TWOHANDED tools: sledge/axes/shovels have distinct ASIs.
+User informed exact bat family applies, unrelated two-hand tool poses not forced.
+Native runtime query availability/string format remains untested (cloud Linux);
+fallback covers native bat families. Do not claim arbitrary mod profile support
+verified by declaration alone.
+
+Player stationary lowered route sets helper OtherHeldEditor from matching bat
+category, selects now-approved ML193/bat bank incl arm edits, caches invalidate
+on bat-bank change. Six older approved banks untouched; pistol/rifle category,
+raised/walking/crouch, graph/native camera, bat+blue scene and F6/F7 unchanged.
+Offline tools/check_approved_bat_v197.py passes exact-data/native registrations/
+API/exclusions/cache/scene/menus/graph checks; independent PBO24fileZIP passes.
+Native compile, query behavior, actual hand fit/pose fidelity NOT RUN.
+Package tools/package_bat_default_v197.py; fresh folder required.
+
+## Prior v196: approved pistol default, bat editor preserved
 
 User approved uploaded MLPistolLeanPreset.json, 14349 bytes, SHA256
 `4ac93abf222dc4b51e23983a63e14820b9e81f59c42970e0adaae2cfd8a9bdcb`.

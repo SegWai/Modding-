@@ -1,0 +1,6 @@
+{
+  "firstperson_pose_fork": "selector always zero, no camera-dependent pose assignment remains",
+  "source_delta": "one pose-selection block only",
+  "graph_camera_input_and_fixed_preset": "byte-identical v169",
+  "native_firstperson_grip_and_framing": "NOT RUN"
+}
