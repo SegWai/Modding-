@@ -2,7 +2,27 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Latest user direction: restore v185 (supersedes the v10 active goal)
+## Current test v187: shared normal standing lean with held items
+
+After restoring v185, user asked that the current unarmed normal lean also apply
+when holding an object or weapon. Implemented on restored-v185 base as
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v187/`, runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v187.zip`.
+
+Scope stated to user: stationary upright LOWERED holding; raised/ADS/walk/crouch
+retain previous behavior. Real player and non-preview actors use the approved
+unarmed torso/head/body pose irrespective of held class. Native grip arms are
+retained: no unarmed arm offsets on held items. Two-node gated native RIGHT-hand
+publisher republishes held buffer after body changes, with aim/chain weights off.
+This generic item attachment integration remains UNTESTED in DayZ. Do not claim
+visible grip fixed. Empty/native NPC graph branch unchanged. Reference snapshots
+clear on held-item entity change. Release clears stages and invalidates caches.
+No player Lean/Raised/ADS forcing. 512 scope cases, exact graph delta/isolation,
+presets/mission identity and independent PBO/18-file runtime checks pass.
+See tools/check_shared_standing_v187.py and latest ads-lean-test/AGENTS.md entry.
+Four JSONs, old archives and the v185 NPC scene remain unchanged.
+
+## Previous restoration request: v185
 
 The user subsequently requested v185 again with the JSON sent after v185 as the
 default standing pose. Delivered source:
