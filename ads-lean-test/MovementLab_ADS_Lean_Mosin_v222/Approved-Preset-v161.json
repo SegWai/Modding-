@@ -1,0 +1,8 @@
+{
+  "sha256": "aefdc1486d065d12c743e30e3a9d40fbfc6b0b1139e4beaaea3464d49ddda53d",
+  "source": "user upload file_00000000f43081f4a488286b714a75ab",
+  "preserved_raw_bytes": true,
+  "supersedes": "approved v155 preset",
+  "head_change": "NPC native SetADS false only while stationary centred; graph ADS and player path unchanged",
+  "native_validation": "NOT RUN"
+}

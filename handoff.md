@@ -2,7 +2,24 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v221: undo translation; left head tilt3degrees
+## Current test v222: exact requested left head values; full override still pending
+
+User explicitly specifies F7 Head model Yaw-8.2degrees/Roll-14.3degrees for both
+left walking+jogging, matching screenshot (Pitch0/XYZ0). Set exact those two
+fields in root/bundle/active banks; all other fields/right sides unchanged.
+User ALSO now requires head animation to supersede ALL native DayZ head motion
+and be used with ALL gun types. THIS IS NOT IMPLEMENTED by v222. JSONs remain
+additive. Existing runtime profile restrictions remain. No silent claim that
+values-only makes an absolute head lock or adds pistol/all-weapon support.
+Need supported compiled head-only animation channel override; native Windows
+DayZ Tools/compiler/game absent here. Avoid sampled corrected-pose feedback
+loops (earlier rotation/crash regressions). Need native playtest of any such
+solution. V217 look suppression only removes some overlays; underlying gait,
+raise and inherited torso animation can still affect orientation.
+Offline exact2fields/13banks/graph/PBO/ZIP PASS; nativeNOTRUN.
+Artifact artifacts/MovementLab_ADS_Lean_Mosin_v222.zip. Same2NPC/F6F7jogeditor.
+
+## Previous test v221: undo translation; left head tilt3degrees
 
 User corrected cm wording: wanted head ROTATION left, not movement. Communicated
 interpretation3degrees. Restored v219 base (undo220leftHeadX-3cm), set ONLYleft

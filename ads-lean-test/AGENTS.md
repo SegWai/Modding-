@@ -289,3 +289,5 @@
 - V220 userlefthead3cmleftWALK+JOG: communicatedtranslationinterpretation. Both walking/jog LeftLean.BodySettings.Head.X0->-3cm (native-.03m). Allrotations/rightfields/otherposefields unchanged;13otherbanks/graph/scene/controls/camera unchanged. Rawcanonicaloriginals retained. Semanticdiff/bank/graph/PBO/ZIPchecksPASS; nativevisualNOTRUN.
 
 - V221 usercorrects220 wantedrotation nottranslation. Communicated3degreeinterpretation. Base219 restoresleftHeadX0;bothwalking+jogLeftHead.Roll0->+3degrees intendedcharacterleft. Allotherfields/rightside unchanged,13otherbanks/graph/camera/scene/controls unchanged. OfflinechecksPASS; nativevisualsign/resultNOTRUN.
+
+- V222 explicituserleftHeadYaw-8.2/Roll-14.3 WALK+JOG screenshot. SetONLYthose2fieldsbothbanks root/bundle/active;pitch0XYZ0/right/allotherfields unchanged.13otherbanks/graph/scene/controls unchanged. UserADDITIONALdemandtrueheadnativeoverrideALLguns remainsUNIMPLEMENTED;offsetsnotabsolute,existingprofileguardsremain,noallpistolcoverageadded. ClearlydiscloseinREADME/handoff/final. NeedcompiledheadonlychanneloverrideandnativeWindowsvalidation;avoidfeedbackloop. Offlineexactdiff/PBO/ZIPchecksPASS;nativeNOTRUN.
