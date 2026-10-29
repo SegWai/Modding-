@@ -1,0 +1,251 @@
+{
+  "parts": [
+    [
+      "Pelvis",
+      "Pelvis"
+    ],
+    [
+      "Spine",
+      "Lower back"
+    ],
+    [
+      "Spine1",
+      "Mid back"
+    ],
+    [
+      "Spine2",
+      "Upper back"
+    ],
+    [
+      "Spine3",
+      "Chest / torso"
+    ],
+    [
+      "Neck",
+      "Lower neck"
+    ],
+    [
+      "Neck1",
+      "Upper neck"
+    ],
+    [
+      "Head",
+      "Head"
+    ],
+    [
+      "LeftShoulder",
+      "Left shoulder"
+    ],
+    [
+      "RightShoulder",
+      "Right shoulder"
+    ],
+    [
+      "LeftArm",
+      "Left upper arm"
+    ],
+    [
+      "RightArm",
+      "Right upper arm"
+    ],
+    [
+      "LeftForeArm",
+      "Left forearm"
+    ],
+    [
+      "RightForeArm",
+      "Right forearm"
+    ],
+    [
+      "LeftHand",
+      "Left hand"
+    ],
+    [
+      "RightHand",
+      "Right hand"
+    ],
+    [
+      "LeftUpLeg",
+      "Left thigh"
+    ],
+    [
+      "RightUpLeg",
+      "Right thigh"
+    ],
+    [
+      "LeftLeg",
+      "Left shin / knee"
+    ],
+    [
+      "RightLeg",
+      "Right shin / knee"
+    ],
+    [
+      "LeftFoot",
+      "Left foot"
+    ],
+    [
+      "RightFoot",
+      "Right foot"
+    ],
+    [
+      "LeftToeBase",
+      "Left toes"
+    ],
+    [
+      "RightToeBase",
+      "Right toes"
+    ]
+  ],
+  "controls": [
+    "ML149PelvisTX",
+    "ML149PelvisTY",
+    "ML149PelvisTZ",
+    "ML149PelvisRX",
+    "ML149PelvisRY",
+    "ML149PelvisRZ",
+    "ML149SpineTX",
+    "ML149SpineTY",
+    "ML149SpineTZ",
+    "ML149SpineRX",
+    "ML149SpineRY",
+    "ML149SpineRZ",
+    "ML149Spine1TX",
+    "ML149Spine1TY",
+    "ML149Spine1TZ",
+    "ML149Spine1RX",
+    "ML149Spine1RY",
+    "ML149Spine1RZ",
+    "ML149Spine2TX",
+    "ML149Spine2TY",
+    "ML149Spine2TZ",
+    "ML149Spine2RX",
+    "ML149Spine2RY",
+    "ML149Spine2RZ",
+    "ML149Spine3TX",
+    "ML149Spine3TY",
+    "ML149Spine3TZ",
+    "ML149Spine3RX",
+    "ML149Spine3RY",
+    "ML149Spine3RZ",
+    "ML149NeckTX",
+    "ML149NeckTY",
+    "ML149NeckTZ",
+    "ML149NeckRX",
+    "ML149NeckRY",
+    "ML149NeckRZ",
+    "ML149Neck1TX",
+    "ML149Neck1TY",
+    "ML149Neck1TZ",
+    "ML149Neck1RX",
+    "ML149Neck1RY",
+    "ML149Neck1RZ",
+    "ML149HeadTX",
+    "ML149HeadTY",
+    "ML149HeadTZ",
+    "ML149HeadRX",
+    "ML149HeadRY",
+    "ML149HeadRZ",
+    "ML149LeftShoulderTX",
+    "ML149LeftShoulderTY",
+    "ML149LeftShoulderTZ",
+    "ML149LeftShoulderRX",
+    "ML149LeftShoulderRY",
+    "ML149LeftShoulderRZ",
+    "ML149RightShoulderTX",
+    "ML149RightShoulderTY",
+    "ML149RightShoulderTZ",
+    "ML149RightShoulderRX",
+    "ML149RightShoulderRY",
+    "ML149RightShoulderRZ",
+    "ML149LeftArmTX",
+    "ML149LeftArmTY",
+    "ML149LeftArmTZ",
+    "ML149LeftArmRX",
+    "ML149LeftArmRY",
+    "ML149LeftArmRZ",
+    "ML149RightArmTX",
+    "ML149RightArmTY",
+    "ML149RightArmTZ",
+    "ML149RightArmRX",
+    "ML149RightArmRY",
+    "ML149RightArmRZ",
+    "ML149LeftForeArmTX",
+    "ML149LeftForeArmTY",
+    "ML149LeftForeArmTZ",
+    "ML149LeftForeArmRX",
+    "ML149LeftForeArmRY",
+    "ML149LeftForeArmRZ",
+    "ML149RightForeArmTX",
+    "ML149RightForeArmTY",
+    "ML149RightForeArmTZ",
+    "ML149RightForeArmRX",
+    "ML149RightForeArmRY",
+    "ML149RightForeArmRZ",
+    "ML149LeftHandTX",
+    "ML149LeftHandTY",
+    "ML149LeftHandTZ",
+    "ML149LeftHandRX",
+    "ML149LeftHandRY",
+    "ML149LeftHandRZ",
+    "ML149RightHandTX",
+    "ML149RightHandTY",
+    "ML149RightHandTZ",
+    "ML149RightHandRX",
+    "ML149RightHandRY",
+    "ML149RightHandRZ",
+    "ML149LeftUpLegTX",
+    "ML149LeftUpLegTY",
+    "ML149LeftUpLegTZ",
+    "ML149LeftUpLegRX",
+    "ML149LeftUpLegRY",
+    "ML149LeftUpLegRZ",
+    "ML149RightUpLegTX",
+    "ML149RightUpLegTY",
+    "ML149RightUpLegTZ",
+    "ML149RightUpLegRX",
+    "ML149RightUpLegRY",
+    "ML149RightUpLegRZ",
+    "ML149LeftLegTX",
+    "ML149LeftLegTY",
+    "ML149LeftLegTZ",
+    "ML149LeftLegRX",
+    "ML149LeftLegRY",
+    "ML149LeftLegRZ",
+    "ML149RightLegTX",
+    "ML149RightLegTY",
+    "ML149RightLegTZ",
+    "ML149RightLegRX",
+    "ML149RightLegRY",
+    "ML149RightLegRZ",
+    "ML149LeftFootTX",
+    "ML149LeftFootTY",
+    "ML149LeftFootTZ",
+    "ML149LeftFootRX",
+    "ML149LeftFootRY",
+    "ML149LeftFootRZ",
+    "ML149RightFootTX",
+    "ML149RightFootTY",
+    "ML149RightFootTZ",
+    "ML149RightFootRX",
+    "ML149RightFootRY",
+    "ML149RightFootRZ",
+    "ML149LeftToeBaseTX",
+    "ML149LeftToeBaseTY",
+    "ML149LeftToeBaseTZ",
+    "ML149LeftToeBaseRX",
+    "ML149LeftToeBaseRY",
+    "ML149LeftToeBaseRZ",
+    "ML149RightToeBaseTX",
+    "ML149RightToeBaseTY",
+    "ML149RightToeBaseTZ",
+    "ML149RightToeBaseRX",
+    "ML149RightToeBaseRY",
+    "ML149RightToeBaseRZ",
+    "ML149WeaponFollow"
+  ],
+  "native_lean_speed": 4.5,
+  "native_source": "official1.30 scripts/4_world/entities/manbase/dayzplayer/dayzplayercfgbase.c",
+  "pose_scope": "both stationary standing third-person raised shouldered-gun leans",
+  "native_validation": "not run"
+}

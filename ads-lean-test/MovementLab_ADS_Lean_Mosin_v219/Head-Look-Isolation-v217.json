@@ -1,0 +1,17 @@
+{
+  "changed_native_look_nodes": [
+    "CroMoveLookHeadT",
+    "ErcMoveLookHeadT",
+    "CroTurnHeadLookT",
+    "CroTurnLookBlendT",
+    "ErcTurnHeadLookT",
+    "ErcTurnLookBlendT",
+    "IdleLookLowBlendT",
+    "IdleLookRasBlend"
+  ],
+  "scope_condition": "(abs(MLADSLeanAmount)*MLADSLeanGate < 0.001 || ML169UseNative > 0.5)",
+  "automatic_reference_head": "disabled",
+  "absolute_head_override": false,
+  "native_playtest": "NOT RUN",
+  "presets": "unchanged"
+}

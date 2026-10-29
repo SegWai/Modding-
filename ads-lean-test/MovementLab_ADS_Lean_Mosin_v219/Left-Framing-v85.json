@@ -1,0 +1,16 @@
+{
+  "base": "v83",
+  "issue": "rifle pose and camera follow were both multiplied by partial lean, allowing relative vertical dip",
+  "change": "with calibrated neutral reference, negative lean uses gate-only camera position weight rather than gate*abs(lean)",
+  "unchanged": [
+    "v83 full graph",
+    "camera rotation and head parent",
+    "right-lean weighting",
+    "fallback before calibration",
+    "native input/timing",
+    "finished poses"
+  ],
+  "native_compilation_and_playback": "not run",
+  "neutral_sight_height_constraint": "preserve projected vertical sight ratio using camera translation along native view up",
+  "left_camera_height": "intentionally adjusted through transition and endpoint"
+}

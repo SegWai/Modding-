@@ -2,7 +2,19 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v218: right-jog saved head roll isolation
+## Current test v219: walking right head roll matches jogging adjustment
+
+User explicitly requested same adjustment for raised WALKING right lean.
+MLWalkingLeanPreset RightLean BodySettings Head Roll20->0 in root/bundle/active
+profile. Pitch4.6/yaw-3.3 and every other field retained. Left unchanged.
+All other14banks byteexact218 (including uploaded jogging+right roll correction).
+Canonical approved original walking file remains preserved in User-Presets.
+No graph/aim/scene/control/camera changes. Same walking reference+editable jogger.
+Offline semantic single-field/preset/graph/PBO/ZIP checks PASS; native NOT RUN.
+Artifact artifacts/MovementLab_ADS_Lean_Mosin_v219.zip.
+This is an additive roll adjustment, not an absolute native head-track lock.
+
+## Previous test v218: right-jog saved head roll isolation
 
 User supplied 6.60-second video DayZ20261029-212429 and updated jogging JSON;
 only dislikes RIGHT jogging raised lean head tilt. Inspected video contact sheet
