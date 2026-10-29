@@ -2,7 +2,17 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v219: walking right head roll matches jogging adjustment
+## Current test v220: move left-lean head character-left by 3 cm
+
+User asked head "tilt3cmleft" in left walking+jogging; explicitly communicated
+cm interpretation as translation, not rotation. Both MLWalkingLeanPreset and
+MLJoggingLeanPreset LeftLean.BodySettings.Head.X0->-3 (editor cm; native-.03m).
+All rotations/rightside/remaining fields unchanged. Priorrightroll0 retained.
+13otherbanks/graph/scene/controls/camera unchanged. Semantic diff+bank/graph+PBO/
+ZIP checksPASS; nativevisualNOTRUN. Extractfreshfolder. Same2NPC/F6F7jogeditor.
+Artifact artifacts/MovementLab_ADS_Lean_Mosin_v220.zip.
+
+## Previous test v219: walking right head roll matches jogging adjustment
 
 User explicitly requested same adjustment for raised WALKING right lean.
 MLWalkingLeanPreset RightLean BodySettings Head Roll20->0 in root/bundle/active
