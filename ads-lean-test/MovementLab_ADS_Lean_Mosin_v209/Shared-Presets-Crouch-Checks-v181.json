@@ -1,0 +1,19 @@
+{
+  "exact_uploaded_presets": true,
+  "actor_view_stance_gait_cases": 288,
+  "interleaved_bank_restore_updates": 200,
+  "bank_swap_sequence_steps": 300,
+  "reference_keys": 4,
+  "arm_snapshot_indices": 8,
+  "new_npc_count": 2,
+  "centre_spacing_metres": 0.5,
+  "synchronized_targets": [
+    "left",
+    "centre",
+    "right",
+    "centre"
+  ],
+  "target_interval_seconds": 1,
+  "forced_ADS_clauses_removed": 18,
+  "native_crouch_raised_and_player_pose_matching": "NOT RUN"
+}

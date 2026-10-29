@@ -2,7 +2,38 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v208: ONLY the SMG walking editor NPC
+## Current test v209: approved SMG walking + ONLY sledge walking editor
+
+User approved uploaded MLSMGWalkingLeanPreset.json,14428bytes,SHA256
+`e4e9e47aac1e4a6f66770ec86f95afd881a9c8c8519427918c1c4ff92163b338`.
+Raw exact at kit root/bundle/active+Current/Approved20261029/artifact. No rebase.
+Global player lowered upright WALK(speed1) SMG route now selects this bank,
+reference resets on SMG-walk bank change. Native SMG families MP5K/UMP45/CZ61/
+PM73Rak/PP19/MP18 and subclasses identified explicitly (SDK has no unique SMG
+ItemBehaviorType/base). Arbitrary unrelated modded SMGs not inferred from generic
+FIREARMS. VSS/ASVAL not blindly included because their file directory says smg.
+Standing SMG/rifle, raised aim, running, crouch retain existing approved banks.
+Native player walking fidelity still needs test; no game available here.
+
+Latest requested scene ONLY SledgeHammer walking editor, no SMG or other NPC.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v209/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v209.zip`(34files).
+New ML209Weapon/Body/Preset bank + explicit SledgeWalkingEditor preview flag.
+Seed exact approved bat JSON (matches prior hammer preview), NOT new SMG JSON.
+ConfigureLineup selects209 only explicit hammer NPC+TWOHANDED, disables193 for
+that actor; static player twohanded/bat defaults remain untouched. F6 arms/head,
+F7 body, clocks/editorhold209; single centered blue hammer,12ssetupthenleft3/
+right3walkpinned. Save BOTH sides/F6/F7 to
+`Profiles/LeanMosin/MLSledgehammerWalkingLeanPreset.json`. User must approve it
+before default rollout. Native IK can constrain edits; F6 item-offset rows unsupported.
+
+Other walking tool group (axe/shovel/pitchfork, excluding BAT) and flashlight
+remain next tasks; no automatic changes to them. Ten old rawbanks+graph/camera
+unchanged. Offline check_sledge_walking_v209.py passes approveddata/smgscope/
+cache/onlyhammer/editorseed/isolation/PBO34file. Native compile/gait/grip/editor/
+playerpose/anchor/FPS NOT RUN. Package tools/package_sledge_walking_editor_v209.py.
+
+## Prior v208: ONLY the SMG walking editor NPC
 
 User corrected prior scope: wanted only SMG NPC now, no other previews.
 Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v208/`; ZIP

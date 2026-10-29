@@ -1,0 +1,8 @@
+{
+  "scope": "Stationary standing, character LEFT lean, raised/aiming custom pose. Shared player/NPC; right lean, walking, crouch and 32cm reach unchanged.",
+  "native_model_seed_radians": -0.349065850398,
+  "reference": "Same RightArm model-Z -20degree outward seed as v38/v37 walking elbow fix. Seed is not final elbow joint angle.",
+  "gate": "clamp(-MLADSLeanAmount, 0.0, 1.0)*MLADSLeanGate*(1.0-clamp(Stance, 0.0, 1.0))*(1.0-MLADSLeanMoveBlend)*(1.0-clamp(MovementSpeed, 0.0, 1.0))",
+  "ordering": "Capture existing final hand target AFTER v50 balance, rotate RightArm outward, native IK2 restores captured hand pose. No re-aim or weapon-position override.",
+  "native_validation": "NOT RUN: confirm elbow clears torso and grip remains in game."
+}
