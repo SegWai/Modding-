@@ -1,0 +1,46 @@
+{
+  "authoring_model_offsets": {
+    "Pelvis": {
+      "left_offset_m": -0.07999999517379042,
+      "right_offset_m": 0.0800000012499309,
+      "symmetry_error_m": 6.076140479649439e-09
+    },
+    "Spine": {
+      "left_offset_m": -0.07999999019447929,
+      "right_offset_m": 0.07999999132808083,
+      "symmetry_error_m": 1.1336015459662008e-09
+    },
+    "Spine1": {
+      "left_offset_m": -0.0872576031023442,
+      "right_offset_m": 0.08725759208856232,
+      "symmetry_error_m": 1.1013781886504148e-08
+    },
+    "Spine2": {
+      "left_offset_m": -0.11601800679406793,
+      "right_offset_m": 0.1160179802850756,
+      "symmetry_error_m": 2.6508992334584036e-08
+    },
+    "Spine3": {
+      "left_offset_m": -0.1591354918413117,
+      "right_offset_m": 0.15913550437164758,
+      "symmetry_error_m": 1.2530335880001076e-08
+    },
+    "Neck": {
+      "left_offset_m": -0.2723797746002674,
+      "right_offset_m": 0.2723797671496868,
+      "symmetry_error_m": 7.450580596923828e-09
+    },
+    "Neck1": {
+      "left_offset_m": -0.30525765754282475,
+      "right_offset_m": 0.30525766871869564,
+      "symmetry_error_m": 1.1175870895385742e-08
+    },
+    "Head": {
+      "left_offset_m": -0.3176300413906574,
+      "right_offset_m": 0.31762997433543205,
+      "symmetry_error_m": 6.705522537231445e-08
+    }
+  },
+  "weapon_cant_target_degrees": 8,
+  "runtime_note": "Exact source bone-center symmetry. Native collision, camera, gait, weapon IK and rendered silhouette require game comparison."
+}

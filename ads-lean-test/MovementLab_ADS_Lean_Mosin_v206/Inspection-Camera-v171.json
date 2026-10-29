@@ -1,0 +1,10 @@
+{
+  "scope": "offline third-person standing/crouching MOVE command, raised or lowered",
+  "minimum_requested_distance_m": 4.0,
+  "standing_pivot_drop_m": 0.35,
+  "crouching_pivot_drop_m": 0.1,
+  "native_camera_collision": "retained; engine may shorten distance near obstacles",
+  "native_and_custom_comparison": "same framing",
+  "pose_graph_preset_player_firstperson_camera": "unchanged",
+  "native_validation": "NOT RUN"
+}

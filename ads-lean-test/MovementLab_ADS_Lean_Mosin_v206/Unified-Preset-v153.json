@@ -1,0 +1,12 @@
+{
+  "canonical_file": "Profiles/LeanMosin/MLLeanPreset.json",
+  "sections": [
+    "LeftLean.WeaponSettings",
+    "LeftLean.BodySettings",
+    "RightLean.WeaponSettings",
+    "RightLean.BodySettings"
+  ],
+  "bundled_body_source": "user Right-Body-20261027; mirrored opposite anatomical side",
+  "legacy_import": "only if canonical file absent; valid legacy files override bundled section; originals untouched",
+  "native_validation": "not run"
+}

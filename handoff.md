@@ -2,7 +2,41 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v205: polearms use exact approved bat preset
+## Current test v206: all holding types walking-in-place lineup
+
+User requests NPCs for all recent guns/object types, close side by side, walking
+left/right in fixed positions to compare animation. Source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v206/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v206.zip` (30files).
+13-slot lineup: empty, AK74, SKS, SVD, MP5K, Glock19, BaseballBat, SledgeHammer,
+WoodAxe, Shovel, Flashlight, WoodenCrate, Pitchfork. Same Denis model/scale,
+.85m spacing, blue empty/rest grey. Generic item creation + native weapon parts/
+ammo. Mission actor array owns cleanup. All are LOWERED, not aimed/ADS.
+
+Shared ML206LineupClock: first12sec forward3/left3/right3/forward3 stationary
+reference warmup; then continuous left3/right3. Native movement speed1 and
+angle+-90. Post-super NPC-only root pin to own spawn slot prevents travel while
+gait animates (same diagnostic approach as old173). Player movement untouched.
+StopDemo clears lineup and input overrides. Heavy native gait can differ.
+
+Preview-specific body route bypasses normal player stationary gating, applies
+approved STANDING lowered item-bank corrections on native walking legs. It does
+NOT author new walking poses or alter player walking/crouch/raised behavior.
+Native per-item IK still handles grip. Never claim this is proof all-category
+walking animation finished. ConfigureLineup waits for actual native behavior
+cfg before capture, selects seven categories, caches reset ONLY category/item
+changes, not every frame. Avoid initial CreatePlayer item-instance readiness bug.
+Root pin/gait may need native verification; no native game/performance test here.
+
+Existing graph, ten preset files (polearm aliases bat), camera/menus unchanged.
+F6/F7 still targets polearm bank on Pitchfork; selected side sets lineup direction,
+not a newly invented all-category editor. Walk player back to view whole row;
+no native camera framing change. Offline tools/check_lineup_v206.py passes
+13-item scene/shared60sclock/warmup/anchor-NPC-scope/cache-readiness/10bank-data/
+scene cleanup checks; independent PBO30file runtime passes. Native compile/gait/
+root-pin/grip/FPS NOT RUN. Package tools/package_lineup_v206.py. Fresh folder.
+
+## Prior v205: polearms use exact approved bat preset
 
 User explicitly says pitchfork can use same bat/sledge animation JSON. Polearm
 root/bundle/active file and new Current/FromApprovedBat20261029/artifact copies
