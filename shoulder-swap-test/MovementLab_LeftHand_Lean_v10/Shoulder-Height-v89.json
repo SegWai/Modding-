@@ -1,0 +1,12 @@
+{
+  "base": "v88",
+  "previous_drop_m": 0.05,
+  "additional_drop_m": 0.15,
+  "total_drop_m": 0.2,
+  "changed_nodes": [
+    "ML88_LowerLeftArm",
+    "ML88_LowerRightArm"
+  ],
+  "scope": "same third-person raised branch as v88; first-person unchanged",
+  "native_gameplay": "not run"
+}

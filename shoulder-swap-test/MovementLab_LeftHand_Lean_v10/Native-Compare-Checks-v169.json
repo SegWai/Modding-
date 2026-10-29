@@ -1,0 +1,9 @@
+{
+  "default_mode": "CUSTOM",
+  "key": "either Ctrl + F1, repeat debounced",
+  "native_route": "NormalWeaponIK; custom graph output bypassed",
+  "native_camera": "custom first-person/ADS adjustments skipped",
+  "no_preset_writes_or_resets": true,
+  "existing_editors_freeze_and_CtrlF8": "retained",
+  "native_render_and_keyboard": "NOT RUN"
+}

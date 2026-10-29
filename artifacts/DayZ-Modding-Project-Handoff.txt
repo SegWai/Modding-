@@ -450,3 +450,11 @@ Runtime artifacts/MovementLab_LeftHand_Lean_v9.zip; source shoulder-swap-test/Mo
 Swap action/input removed; camera left throughout normal movement; raised poses automatic.
 V8 placement remains experimental. Native lowered/reload/actions still right-handed.
 Four approved presets and saved original186 untouched.
+
+FIXED LEFT-HAND V10 / CURRENT HANDOFF
+See repository-root handoff.md for detailed current state, controls and limits.
+Test: shoulder-swap-test/MovementLab_LeftHand_Lean_v10
+ZIP: artifacts/MovementLab_LeftHand_Lean_v10.zip
+Requested stationary foot/shoulder reversal, lowered and raised caches separated,
+right support target tied to full gun transform; left trigger pose retained.
+Offline geometry/packaging pass; native compile/render/grip not verified.
