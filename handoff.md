@@ -2,7 +2,36 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v200: one-handed flashlight pose editor
+## Current test v202: heavy carry editor + approved one-handed default
+
+User approved MLOneHandedLeanPreset.json, 14319 bytes, SHA256
+`ba30dc20673f58534bf9e801dbde48cdd948543035faf7872e6863b128f4a1ca`.
+EIGHTH approved bank. Raw root/bundle/profile copies and Current/Approved20261029/
+artifact copies exact. Intermediate v201 source/ZIP contains approved ONEHANDED
+rollout: player stationary lowered holding uses ML200 approved bank for native
+ONEHANDED category, per-item native grip retained; caches reset on bank/item change.
+Other seven approved banks unchanged. Do not rebase or zero uploaded arm fields.
+
+Then user asked heavy carried-item editor. Combined latest source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v202/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v202.zip` (28files).
+Grey WoodenCrate NPC replaces flashlight (SDK registered heavyItemBehaviour);
+blue unarmed custom reference remains. Same2actors/model/.5m/1sclock/sidehold.
+F6 arms/head and F7 body target only heavy NPC. New private ML202 bank+HeavyEditor
+flag, seed custom unarmed torso/head/legs with native arm offsets0, not flashlight
+or bat arm values. Save both sides/F6/F7 to
+`Profiles/LeanMosin/MLHeavyLeanPreset.json`. New heavy editor NOT yet approved or
+player global default. User must send saved heavy file to approve.
+
+Approved ONEHANDED default included and player pistol/rifle/bat/crouch/walk/aim
+routes unchanged; all8approved raw banks exact. Pose graph/native camera retained.
+Heavy scene/menu/clock202, helper binding/selection tested for correct scope.
+Offline tools/check_heavy_editor_v202.py covers raw hashes, native categories,
+crateHEAVY evidence, scene, bank/cache isolation; independent PBO28file checks
+pass. Native compile/pose/grip/UI/perf NOT RUN. Package
+`tools/package_heavy_editor_v202.py`. Fresh folder required.
+
+## Prior v200: one-handed flashlight pose editor
 
 User removes bat/sledge previews and requests editable one-handed NPC (flashlight).
 Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v200/`; ZIP

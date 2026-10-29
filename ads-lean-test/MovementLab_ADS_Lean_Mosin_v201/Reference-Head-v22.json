@@ -1,0 +1,14 @@
+{
+  "reference": "User red outline/cross over NPC head during rightward movement",
+  "adjustment_from_v21": {
+    "additional_anatomical_left_translation_metres": 0.01,
+    "additional_moving_head_lift_metres": 0.02
+  },
+  "graph_values": {
+    "neck_x_translation_metres": -0.035,
+    "neck_y_translation_metres": 0.01,
+    "right_moving_head_lift_metres": 0.026
+  },
+  "scope": "Shared player/NPC correction; left lean, legs, gun cant unchanged",
+  "verification": "Position is a visual test adjustment based on the drawing; exact native appearance needs screenshot comparison"
+}
