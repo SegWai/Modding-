@@ -2,7 +2,21 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v194: pistol-only pose editor
+## Current test v195: bat-only pose editor
+
+User asks same editor for bat and remove pistol. Source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v195/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v195.zip` (22files).
+BaseballBat NPC replaces Glock preview; blue unarmed reference stays unchanged.
+Same positions/clock/editor hold. F6 arms/head and F7 body edit bat NPC only.
+Combined save `Profiles/LeanMosin/MLBatLeanPreset.json`, both sides and F6/F7.
+Seed unchanged from previous editor; no new pistol JSON was supplied/approved.
+Five approved preset banks, graph, player/helper scripts, native camera and
+clock remain unchanged. Scene/data/paths/PBO/runtime checks pass; native
+compile/grip/editor/mesh/stability NOT RUN. Package tools/package_bat_preview_v195.py.
+Previous pistol test/save preserved. Fresh folder. F6 gun-offset rows unsupported.
+
+## Prior v194: pistol-only pose editor
 
 User requested removing bat/sledge, keeping pistol and editing its pose.
 Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v194/`; ZIP

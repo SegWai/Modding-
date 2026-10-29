@@ -1,0 +1,25 @@
+{
+  "request": "Less bent knees while walking aimed lean,95% original standing height",
+  "measurement": "Per-actor neutral standing Head bone model-Y reference. This is a practical height proxy, not a mesh-crown or collision-capsule measurement.",
+  "target_ratio": 0.95,
+  "graph_order": "MovementRasSTM -> ML36_WalkingHeight95 -> MovementRasIK native foot/leg solver. All weapon/hand/aim nodes unchanged.",
+  "scope": "Both anatomical lean directions, standing walking/jogging only, same calibrated controller for player/NPC. Stationary planted pose and crouched legs unchanged.",
+  "controller": {
+    "settling_seconds": 0.45,
+    "maximum_lift_rate_mps": 0.12,
+    "lift_limits_metres": [
+      -0.06,
+      0.15
+    ],
+    "fade_seconds": 0.18
+  },
+  "preserved": "Native gait/foot targets, gun hold/grip/aim/cant settings, head corrections, NPC patrol, loadout/ammo/ragdoll/respawn; no actor position or model scaling",
+  "runtime_diagnostics": [
+    "standing_head_y",
+    "current_head_y",
+    "height_lift_m",
+    "observed_head_height_ratio",
+    "height_bound"
+  ],
+  "native_status": "Native calibration,95% ratio, foot contact and straighter knees require DayZ validation; limb reach may limit actual height."
+}
