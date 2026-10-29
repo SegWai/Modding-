@@ -2,7 +2,40 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v195: bat-only pose editor
+## Current test v196: approved pistol default, bat editor preserved
+
+User approved uploaded MLPistolLeanPreset.json, 14349 bytes, SHA256
+`4ac93abf222dc4b51e23983a63e14820b9e81f59c42970e0adaae2cfd8a9bdcb`.
+SIXTH approved bank. Exact raw root/bundle/active defaults plus canonical
+`ads-lean-test/User-Presets/Current-MLPistolLeanPreset.json`, dated Approved copy,
+and `artifacts/MLPistolLeanPreset.json`. No numerical/arm rebasing.
+Source `ads-lean-test/MovementLab_ADS_Lean_Mosin_v196/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v196.zip` (24files).
+
+Stationary upright LOWERED player holding uses approved pistol bank only when
+native behavior ItemBehaviorType.PISTOLS, via verified accessor API. Independent
+ML196WeaponState/BodyState/Preset; helper PistolBank uses its approved arm/body
+settings, reference cache resets on item/rifle/pistol bank changes. This does not
+replace raised aiming/crouch/walking. Matching modded objects supported without
+classname lists. Handguns/revolvers/flare gun registered PISTOLS. Some SDK entries
+such as DartGun/Shockpistol exist but do not infer currently playable vanilla loot.
+
+User asked whether ordinary small items use item animation or empty-handed pose:
+answer given: own holding/animation+IK profiles (toolsOneHanded category), not
+empty handed. Examples Flashlight, Compass, SodaCan, Bandage all registered
+item-specific one-handed tool profiles. Our mod uses custom unarmed BODY lean
+with native item grip for those; never apply pistol pose based on object size.
+No ordinary listed small tools found using PISTOLS. Flare gun is confirmed
+special-purpose pistol-category item; modded registrations may add more.
+
+V195 bat editor and blue reference/F6/F7/bat save remain unchanged. Approved
+pistol bank independent of bat experimental bank. All5older approved JSONs,
+graph, native camera preserved. Native compile/pose/grip NOT RUN. Offline
+check_approved_pistol_v196.py passes exact data/category/SDK/source/scene/menu/
+graph/reset/isolation checks; PBO24fileZIP passes. Package via
+`tools/package_pistol_default_v196.py`. Fresh folder required.
+
+## Prior v195: bat-only pose editor
 
 User asks same editor for bat and remove pistol. Source
 `ads-lean-test/MovementLab_ADS_Lean_Mosin_v195/`; ZIP
