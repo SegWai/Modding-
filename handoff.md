@@ -2,7 +2,31 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v216: raised-weapon walking reference and editable jogging NPC
+## Current test v217: isolate native look tracking (absolute head lock still pending)
+
+The user wants saved head/neck settings to be authoritative, with no automatic
+head tilt. v217 is a scoped isolation test, NOT a completed absolute head lock.
+Eight native standing/crouched idle/movement/turn look-overlay Conditions now
+permit look only outside custom armed lean or while ML169UseNative comparison
+is active. Native BlendTime remains, so overlays can fade out on entry.
+Old ML157 automatic sampled NPC-to-player head correction now outputs zero.
+No new controls, feedback loop, bone setters or unsupported graph operations.
+Weapon aim/IK/procedural nodes, scene, F6/F7, and all 15 bundled JSON files
+(including experimental jogging seed) remain unchanged from v216.
+Native look overlays can also contain torso movement; inspect torso/grip too.
+JSONs remain additive: underlying gait/raise head tracks and inherited torso
+motion can still affect the head. Do not describe this as a final-pose override.
+An actual compiled head-only channel override remains required if native motion
+persists; native compiler/game unavailable in this Linux workspace.
+
+Source: ads-lean-test/MovementLab_ADS_Lean_Mosin_v217
+ZIP: artifacts/MovementLab_ADS_Lean_Mosin_v217.zip
+Checks: tools/check_head_look_v217.py; build_pbos.py; ZIP contents verification.
+Offline PASS. Native compile/render/transition/head-lock/grip/stability NOT RUN.
+Test both lean sides while walking/jogging, aim pitch/yaw, enter/leave lean,
+and Ctrl+F1 native comparison. F6/F7 still edit blue jogger only.
+
+## Previous test v216: raised-weapon walking reference and editable jogging NPC
 
 User approved MLSodaCanWalkingLeanPreset.json,14431bytes,SHA256
 `96135c85d6c493b050e15416ab38925a55205b05fc178df50d152a31e9260194`.

@@ -1,0 +1,14 @@
+{
+  "base_version": 179,
+  "uploaded_preset_sha256": "ff1ee16852d65b56ecc2bf7ceb8c93aac49ccad571817f8c54f9072a38c610ba",
+  "uploaded_preset_bytes": 14435,
+  "changed_graph_node": "ML166_PublishFinalAimedWeapon",
+  "changed_graph_field": "WeightSecondaryChain",
+  "old_expression": "(abs(AimY) > 5.0 || abs(AimIKX) > 5.0) && ML106ShoulderedGrip > 0.5 && ML87FirstPersonCrouchLean < 0.5",
+  "new_expression": "((ML173WalkingPreview > 0.5 && MLADSLeanMoveBlend > 0.5 && MLADSLeanAmount < 0.0) || abs(AimY) > 5.0 || abs(AimIKX) > 5.0) && ML106ShoulderedGrip > 0.5 && ML87FirstPersonCrouchLean < 0.5",
+  "newly_enabled_scope": "blue walking preview, left lean, centred rifle aim",
+  "primary_chain_unchanged": true,
+  "minimum_twist_v179_retained": true,
+  "pose_parameters_unchanged": true,
+  "native_compile_and_contact": "NOT RUN"
+}
