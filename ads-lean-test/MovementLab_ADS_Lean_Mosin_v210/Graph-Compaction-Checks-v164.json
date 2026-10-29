@@ -1,0 +1,10 @@
+{
+  "independent_forward_kinematics_cases": 336,
+  "max_matrix_difference": 0.0,
+  "original_operations_batched": 1280,
+  "root_depth_before": 1630,
+  "root_depth_after": 857,
+  "all_scripts_camera_editor_and_preset_unchanged": true,
+  "crash_dump_collection": "newest dump <=24MiB, retained on disk if larger",
+  "native_pose_and_crash_resolution": "NOT RUN; native multi-bone evaluation and exit-left-lean replay need gameplay test"
+}

@@ -2,7 +2,34 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v209: approved SMG walking + ONLY sledge walking editor
+## Current test v211: approved tool walking + ONLY flashlight walking editor
+
+User approved MLSledgehammerWalkingLeanPreset.json,14645bytes,SHA256
+`4276edbb8a47c6fad0567b732d480dff929129178f1df2ab2cebbfff1bf48521`.
+Raw exact root/bundle/profile +Current/Approved20261029/artifact. Intermediate
+v210 source/ZIP preserved. Default on lowered upright WALKspeed1 for explicit
+SledgeHammer,WoodAxe,FirefighterAxe,Shovel,Pitchfork families/subclasses. BAT
+variants explicitly outside allowlist; standing bat/twohanded poses unchanged.
+Not every TWOHANDED object. FieldShovel is one-handed and excluded. Pickaxe not
+silently added. Flashlight remains separate. Player tool-bank switch clears
+reference cache; standing/raised/run/crouch/SMG routes retained. User's phrase
+"others mentioned except bat" interpreted as the stated two-handed tool group,
+not applying hammer arm posture to flashlight; user informed flashlight separate.
+
+User next asks flashlight walking NPC. Latest source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v211/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v211.zip` (36files).
+ONLY blue Flashlight+Battery9V NPC;12sreferences then3sleft/rightwalk-in-place.
+New independent ML211 bank/OneHandWalkingEditor flag, seed exact approved standing
+MLOneHandedLeanPreset. F6arms/head,F7body target ONLY flashlight. Save BOTHsides/
+F6/F7 to `Profiles/LeanMosin/MLOneHandedWalkingLeanPreset.json`. Await userapproval;
+not a global onehand walking default yet. Native standing flashlight file stays.
+Other approved banks (including toolwalking+SMGwalking) retained exact. No graph
+or native-camera change. Scope/cache/scene/menu/editorseed/raw integrity/PBO36file
+checks pass via tools/check_flashlight_walking_v211.py; native compile/gait/grip/
+editor visuals/anchor/FPS NOT RUN. Package tools/package_flashlight_walking_editor_v211.py.
+
+## Prior v209: approved SMG walking + ONLY sledge walking editor
 
 User approved uploaded MLSMGWalkingLeanPreset.json,14428bytes,SHA256
 `e4e9e47aac1e4a6f66770ec86f95afd881a9c8c8519427918c1c4ff92163b338`.

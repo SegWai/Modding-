@@ -1,0 +1,35 @@
+{
+  "native_capture": "v131 1169976_false before standing correction",
+  "target": "20 degrees from down, inward toward body",
+  "root": [
+    -0.354353,
+    1.354115,
+    0.120507
+  ],
+  "elbow_before": [
+    -0.412718,
+    1.235603,
+    0.378606
+  ],
+  "elbow_goal": [
+    -0.19178265549165907,
+    1.1540946036140953,
+    0.2532826953891222
+  ],
+  "elbow_delta_m": [
+    0.2209353445083409,
+    -0.08150839638590468,
+    -0.12532330461087782
+  ],
+  "arm_native_xyz": [
+    -0.604967277584636,
+    0.17184018180654537,
+    -1.0073872418506917
+  ],
+  "hand_native_xyz": [
+    0.4807256952504655,
+    0.4177612429325308,
+    0.9573149055843844
+  ],
+  "native_validation": "not run; fixed reference wrist verified, other aim angles unverified"
+}
