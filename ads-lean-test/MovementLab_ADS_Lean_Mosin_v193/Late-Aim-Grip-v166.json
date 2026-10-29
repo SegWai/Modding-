@@ -1,0 +1,25 @@
+{
+  "scope": "clamp(abs(MLADSLeanAmount)*MLADSLeanGate,0.0,1.0)*(1.0-ML87FirstPersonCrouchLean)*ML106ShoulderedGrip",
+  "moved_rotations": [
+    {
+      "original_node": "ML67_SharedVerticalAim",
+      "early_expression": "(AimY*(1.0-clamp((MLADSLeanCanary-0.8)*5.0, 0.0, 1.0)))*0.0174532925199433",
+      "late_node": "ML166_FinalVerticalAim",
+      "axis": "X",
+      "amount": 1.0
+    },
+    {
+      "original_node": "ML68_SharedHorizontalAim",
+      "early_expression": "(AimIKX*(1.0-clamp((MLADSLeanCanary-0.8)*5.0, 0.0, 1.0)))*0.0174532925199433",
+      "late_node": "ML166_FinalHorizontalAim",
+      "axis": "Y",
+      "amount": -1.0
+    }
+  ],
+  "root_order": "all custom body/arm/head corrections -> shared vertical/horizontal aim on Spine3 -> publish weapon offset -> melee queue",
+  "first_person": "original early rotations retained, late path disabled",
+  "centred_forward_aim": "both added rotations zero; original bone pose retained",
+  "native_ik": "reuse final hand-pivot publisher with user muzzle yaw/pitch; primary/secondary arm solve false; no feedback",
+  "preserved": "v165 crash mitigation, v161 fixed raw preset, all World/Mission scripts and camera",
+  "native_validation": "NOT RUN; weapon attachment publication and grip at extreme view directions require native test"
+}

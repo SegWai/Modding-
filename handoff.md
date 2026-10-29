@@ -2,7 +2,36 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v192: approved held pose default + SVD/MP5K comparison
+## Current test v193: pistol, bat and sledgehammer custom lean previews
+
+User requests remove SVD/MP5 previews, add pistol/bat/sledge NPCs using custom
+normal lean appropriate to their items. Source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v193/`; ZIP
+`artifacts/MovementLab_ADS_Lean_Mosin_v193.zip` (22files).
+Lineup: original blue empty-handed reference; grey Glock19; brown BaseballBat;
+black SledgeHammer, same Denis model/scale, .5m gaps. All four same shared1s
+left/forward/right/forward clock, no raised/ADS. All removed actors gone from
+mission factory/spawn; all four new/current actors clean up on exit.
+
+New item previews use custom unarmed torso/head/leg pose with native item-grip
+arm seed (zero relaxed-unarmed arm offsets), NOT rifle bank's approved arm values.
+Separate experimental MLOtherHeldLeanPreset.json seeded from unarmed custom body,
+cloned ML193WeaponState/BodyState/Preset, independent legacy/save paths. F6/F7
+now edits ALL THREE item previews jointly; blue/player approved banks unchanged.
+Combined save includes both sides+F6/F7 in new MLOtherHeldLeanPreset.json. New
+bank not canonical/approved until user saves/approves. Rifle approved f4522bf7
+and four older approved banks untouched. Player FIREARMS category routing from
+192 unchanged. No authoring bank applied to nonrifle player by this scene change.
+
+Helper OtherHeldEditor flag selects bank at Update (NOT Bind; caught generation
+scope error before packaging), enables editor arm changes; native per-item grip
+IK remains one-pass191. Locomotion graph byte-identical192, native camera stays.
+Native compile/grip/visible poses/performance still NOT TESTED. Offline scene,
+clock, preset isolation, bank scope, native bat/sledge TWOHANDED registrations,
+PBO/22-file checks pass. tools/check_item_previews_v193.py;
+package tools/package_item_previews_v193.py. F6 gun-offset rows still unsupported.
+
+## Prior v192: approved held pose default + SVD/MP5K comparison
 
 User approved new uploaded MLHeldLeanPreset.json, 14411 bytes, SHA256
 `f4522bf7f9a4b153373f129c88d7353b7b316927ff409fde9a64e958cdd57ad4`.
