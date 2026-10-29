@@ -1,0 +1,14 @@
+{
+  "base": "v87",
+  "lowering_metres": 0.05,
+  "axis": "model Y (up)",
+  "bones": [
+    "LeftArm",
+    "RightArm"
+  ],
+  "scope": "shared raised poses, excluding first-person crouch-style view",
+  "first_person_unchanged": true,
+  "head_shoulders_pelvis_legs": "not directly transformed",
+  "weapon_rotation": "unchanged by translation",
+  "native_gameplay": "not run"
+}

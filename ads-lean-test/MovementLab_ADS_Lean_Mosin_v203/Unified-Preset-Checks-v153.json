@@ -1,0 +1,21 @@
+{
+  "complete_sections": 4,
+  "body_parts_per_side": 24,
+  "weapon_arm_head_muzzle_fields_per_side": 17,
+  "bundled_right_body": "exact uploaded floats",
+  "bundled_left_body": "anatomically mirrored, signs verified by matrix reflection",
+  "mirror_matrix_error": 0,
+  "roundtrip": "all sections retained regardless of active panel/side",
+  "invalid_payloads_rejected": [
+    "missing_side",
+    "bad_name",
+    "bad_range",
+    "bad_weapon",
+    "nan",
+    "version"
+  ],
+  "migration": "valid legacy files may override corresponding bundled sections only if no combined preset exists; originals untouched",
+  "save": "temporary serialize/read/validate, backup previous canonical, write canonical; both panel buttons route to same manager",
+  "preserved": "animation graph, camera, RMB navigation, smoothing/endpoints",
+  "native_compile_save_load_relaunch": "NOT RUN"
+}

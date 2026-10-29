@@ -1,0 +1,5 @@
+{
+  "camera": "explicit model-space unbound raised camera result; ADS/optics unchanged",
+  "grip": "weapon-relative actual LeftHand target, procedural target capture and native IK2 solve; binding identity checks; negative bone IDs supported",
+  "native_playback": "pending"
+}

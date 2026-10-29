@@ -2,7 +2,32 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v202: heavy carry editor + approved one-handed default
+## Current test v204: polearm editor + approved heavy default
+
+User approved MLHeavyLeanPreset.json, 14202 bytes, SHA256
+`4c236a08839f3d8e03490e722a74619dce5cdba74587fb4aaba49bdd15cd1616`.
+NINTH approved bank, raw root/bundle/profile and Current/Approved20261029/artifact
+copies exact. Intermediate v203 source/runtime preserved; native HEAVY category
+now selects approved ML202 bank on stationary lowered player, reference cache
+resets on heavy-bank/item changes. Eight older approved banks unchanged.
+
+User then requests same editor for polearms. Source
+`ads-lean-test/MovementLab_ADS_Lean_Mosin_v204/`; runtime
+`artifacts/MovementLab_ADS_Lean_Mosin_v204.zip` (30files).
+Grey Pitchfork NPC replaces crate; blue unarmed custom reference retained.
+SDK registers Pitchfork with poleArms/POLEARMS behavior. Same model/.5m gap/
+1sclock and selected-side hold. F6 arms/head and F7 body target pitchfork ONLY.
+New ML204 bank/PolearmEditor flag, independent save
+`Profiles/LeanMosin/MLPolearmLeanPreset.json` (BOTH sides/F6/F7). Seed custom
+unarmed torso/head/legs plus native grip arm offsets0, not heavy-edited arms.
+New polearm bank is experimental until user sends approved JSON. No automatic
+POLEARMS player rollout yet. Heavy approved default included; all9approved banks,
+graph/native camera preserved. SDK/source/category/cache/isolation/scene/9bank/
+PBO30file checks pass (tools/check_polearm_editor_v204.py). Native compile/grip/
+visible pose/UI/stability NOT RUN. Package tools/package_polearm_editor_v204.py.
+Fresh folder. F6 weapon-offset rows still unsupported, body/arms/head authoring.
+
+## Prior v202: heavy carry editor + approved one-handed default
 
 User approved MLOneHandedLeanPreset.json, 14319 bytes, SHA256
 `ba30dc20673f58534bf9e801dbde48cdd948543035faf7872e6863b128f4a1ca`.

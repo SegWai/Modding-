@@ -1,0 +1,6 @@
+{
+  "evidence": "v60 crash log: MLADSLeanPlayer.c line863 Incompatible parameter baseRotation",
+  "fix": "extract each vector to a local before indexing a component",
+  "graph_camera_changes": "none",
+  "native_compilation": "not available locally"
+}
