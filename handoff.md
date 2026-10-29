@@ -2,7 +2,16 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v220: move left-lean head character-left by 3 cm
+## Current test v221: undo translation; left head tilt3degrees
+
+User corrected cm wording: wanted head ROTATION left, not movement. Communicated
+interpretation3degrees. Restored v219 base (undo220leftHeadX-3cm), set ONLYleft
+Head.Roll+3degrees in walking+jogging, X0. Otherpositions/rotations/rightside
+unchanged.13otherbanks/graph/scene/controls/camera unchanged. Rightroll0 retained.
+Native roll sign visual verification pending. Semanticdiff+bank+graph+PBO+ZIP
+checksPASS; nativeDayZNOTRUN. Artifact artifacts/MovementLab_ADS_Lean_Mosin_v221.zip.
+
+## Previous test v220: move left-lean head character-left by 3 cm
 
 User asked head "tilt3cmleft" in left walking+jogging; explicitly communicated
 cm interpretation as translation, not rotation. Both MLWalkingLeanPreset and

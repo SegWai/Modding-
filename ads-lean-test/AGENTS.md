@@ -287,3 +287,5 @@
 - V219 explicituser sameadjustmentWALKright: MLWalkingLeanPreset RightLean.BodySettings.Head.Roll20->0 root/bundle/active. Allotherwalkingfields/left/headpitch4.6yaw-3.3 unchanged. All14otherbanks exact218incljogcorrection, canonicaloriginalwalkingpreserved. No graph/scene/control/camera/aim changes. Semanticdiff1/presets/graph/PBO/ZIP checksPASS; nativeNOTRUN. Noabsoluteheadlockclaim.
 
 - V220 userlefthead3cmleftWALK+JOG: communicatedtranslationinterpretation. Both walking/jog LeftLean.BodySettings.Head.X0->-3cm (native-.03m). Allrotations/rightfields/otherposefields unchanged;13otherbanks/graph/scene/controls/camera unchanged. Rawcanonicaloriginals retained. Semanticdiff/bank/graph/PBO/ZIPchecksPASS; nativevisualNOTRUN.
+
+- V221 usercorrects220 wantedrotation nottranslation. Communicated3degreeinterpretation. Base219 restoresleftHeadX0;bothwalking+jogLeftHead.Roll0->+3degrees intendedcharacterleft. Allotherfields/rightside unchanged,13otherbanks/graph/camera/scene/controls unchanged. OfflinechecksPASS; nativevisualsign/resultNOTRUN.
