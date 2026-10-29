@@ -1,0 +1,16 @@
+{
+  "evidence": "v63 grip control shifts reached 0.5m while reference gap was centimetres; user reports spinning wrist and view/arms tracking mismatch",
+  "changes": [
+    "remove orientation feedback; zero wrist rotation controls",
+    "translation cap .12m with bounded feedback",
+    "reset accumulated correction outside lean",
+    "remove independent .12s raised-camera position filter"
+  ],
+  "preserved": [
+    "camera rifle-relative tilt alignment",
+    "native ADS/optic camera",
+    "third-person rifle/trigger hand graph",
+    "smooth lean gate"
+  ],
+  "native_status": "pending"
+}

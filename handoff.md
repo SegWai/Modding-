@@ -2,7 +2,43 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current test v222: exact requested left head values; full override still pending
+## Current test v223: user expressly chooses DEFAULT DayZ FP crouch lean
+
+User reverses earlier unified FP/TP requirement: FIRST PERSON uses default DayZ
+crouch lean both Q/E while standing/walking/jogging; THIRD PERSON keeps custom.
+Async answer explicitly DEFAULT, not approved custom MLCrouchLeanPreset.
+V223 clones116 pristine native nodes from original source-workspace locomotion,
+renamed ML223Native_, GUIDs unique, native expressions/amounts unchanged.
+Replace StanceMaster in private subtree with raised/lowered crouch idle/movement
+selector (119nodes total). Native DamageMaster/WeaponStanceMaster remain native
+crossgraph refs from Combat.agf. Native NormalWeaponIK + fire/aim/obstruction
+pipeline retained. New optimized binary ML223FirstPersonOnly wraps old
+ML183_UnarmedOnly before MeleeBlockQ. No original custom nodes altered; ONLY
+MeleeBlockQ child rewired. No layered fractional duplicate full-graph blend.
+
+Local first/ironsights/optics camera, alive/conscious MOVEcommand, stanceerect/
+crouch, movement0/1/2, actualleanabs>.001, enabled => ML87FirstPersonCrouchLean1;
+else0. No NPC switch, no stance/world/root/input forcedcrouch. Default crotch
+skeleton shown while actual gameplay stance/collision unchanged; inspectcamera.
+Shared lowered helper bypassed in FP so it cannot hide selector update; TPentry
+explicitly clears stale FP flag before helper can earlyreturn. Crouch calibration
+skipped while FP to avoid learning first-person output. Native ADS/head suppression
+bypassed in FP because user explicitly chose default pose. Camera scripts unchanged.
+
+ALL15preset files exact222: own player's existing shouldered-firearm walk/jog
+bank has requested HeadYaw-8.2/Roll-14.3left, rightroll0. No new global jog pose
+rollout and no universal firearm head override. Absolute custom head lock remains
+UNIMPLEMENTED. Firstpersonnativecrouch includes nativeheadbychosenDEFAULTpose;
+customheadlockedontoFP is not implemented. Do not claim customheadalwaysauthoritative.
+
+check_fp_crouch_v223.py verifies116clones exact exceptnames/GUIDs,119node FP
+DAG/referenceisolation,nativecrossgraphallowlist,unchangedoriginalnodesexcept
+selector,15banksrawexact,view/gait/sidetruthmatrix. PBOoneadditionalnativeweapon
+publisher count21; same40+originalupload=41runtimefiles. OfflinePASS. Native
+Windows compile/render/ADS/grip/viewtransitions/camera/clipping/FPS/stability
+NOT RUN. Artifact artifacts/MovementLab_ADS_Lean_Mosin_v223.zip.
+
+## Previous test v222: exact requested left head values; full override still pending
 
 User explicitly specifies F7 Head model Yaw-8.2degrees/Roll-14.3degrees for both
 left walking+jogging, matching screenshot (Pitch0/XYZ0). Set exact those two
