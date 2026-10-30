@@ -2,6 +2,19 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
+## V80 StartupFix1 prebuilt PBO update
+
+UserasksPBOtotest. artifacts/MovementLab_v80_StartupFix1_PBOs.zip contains
+updatedscriptPBO+prebuiltworkspacePBO,INSTALL,andLaunch-Prebuilt-PBO-Test.cmd.
+CopycontentsintoEXISTINGv80testfolder(overwrite2PBOs);KEEPexistinggenerated
+MovementLabSlowCrouchClips.pbo (thirdrequiredPBOwithlocaloriginalclipassets).
+NEWCMDskipsPrepare-Crouch-Clips.ps1sooldsetupcannotoverwriteprebuiltworkspace.
+Retainsoriginalmission/SNAFU/MMGconfig+launchparams/gamepath. Theseupdatesare
+notstandalonewholemod;needexistingmission+clipsPBO. package_v80_startup_pbos.py
+buildsworkspacefromStartupFix1/WorkspacePatcheswithsameCfgPatchdependenciesand
+DZworkspaceprefix;independentPBOreader/checksum/sourcecomparison+ZIPexactPASS.
+NativeWindowsstartupNOTRUN;notclaimprovencrashfix.
+
 ## Current v80 startup diagnosis: uploaded HUD Icons logs 20261030-135402
 
 Useruploaded MovementLab-HUD-Icons-v2-Logs.zip. Pathsetupcompleted,Game/World/
