@@ -2,6 +2,37 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
+## Current locomotion restore task: Revision49 compatibility package
+
+User requested last locomotion BEFORElean: ctrl-mode-test/MovementLabAim_Linked_v2_Revision49
+(commit8d91741). HistoricalZIP/scriptPBO verified. Needs2resourcePBOsgeneratedon
+Windowsusingextractedgameclips1245Armed-Speed-Planvariants;clipsnotallincloud.
+UserfirsterrorD:\DayZProjectsmissing -> separate49_AutoPaths package (afeb97c),
+alllogic/PBOpreserved,projectrootautodetect+folderpicker;userthenfounddata.
+NexterrorMissinganimationmappingblockplayer_main_surrender.asi proves old
+$animations setup was given modern1.30AnimSetInstanceSource data.
+
+NEW ctrl-mode-test/MovementLabAim_Linked_v2_Revision49_Compatible130/
+artifact MovementLab_Aim_Linked_v2_Revision49_Compatible130.zip. Original49scripts
+andscriptPBO EXACT, controls/speeds/camera logicnoedits. Convert408legacynodes,
+20variables,5customgroupstomodernAGF/AGR/AST/ASIusingexisting130migrationtool.
+Originallegacylocomotionbaselinefromsource-workspace;oldbaseASImappingbaseline
+reconstructedfrommodernresources. Toavoidunrelatedlegacyactionrollbacks,
+finalbaseplayer_main.asi preservesALLmodernnativeLinesexactandaddsONLY397
+ZZMovementLabgroups. AllperweaponArmed-Speed-Planreplace/addpremergedmodern
+Lines/Resource. PrivateMovementLabRevision49.agfresourcepathpreventsgraphcache
+reuse;keepsnativeIK/state/higherlevelstructureofcurrent1.30. Setupcopiesnested
+WorkspacePatches recursively;NOoldASI$animationsruntimepatcher. AutoPaths
+selectionretained forallclips/armedfiles/workspace. BuildsresourcePBOslocally.
+Historical49/AutoPathsarchives unchanged.
+
+check_revision49_130.py checks2209graphnodes/childrefs/DAG,customvariables,
+ASTgroupkeys,ASIschema/keyuniqueness,allarmedplanmappings,modernnativebaseaction
+identity,script/PBOidentity,privategraph,legacyruntimepatcherabsence. ZIPall
+byteschecked. PASS. WindowsPowerShell/nativecompile/visualspeedparity NOTRUN.
+Native schema conversionchangesgraphrepresentation;doNOTclaimnativeplaytestor
+perfectvisualparity. UserextractfreshCompatible130andrunLaunch-Movement-Test.cmd.
+
 ## Blocking correction: simultaneous FP and external poses require separate viewmodel
 
 User confirms they need BOTH poses at once: actual character always custom,

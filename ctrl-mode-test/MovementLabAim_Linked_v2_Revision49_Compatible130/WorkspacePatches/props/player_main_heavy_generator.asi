@@ -1,0 +1,6 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{611F21F121CE6641}DZ/anims/workspaces/player/player_main/player_main_heavy.asi"
+ }
+}

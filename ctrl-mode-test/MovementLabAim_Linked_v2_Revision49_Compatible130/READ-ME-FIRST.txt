@@ -1,0 +1,23 @@
+REVISION49 - DAYZ1.30 FORMAT COMPATIBILITY
+
+Fixes "Missing animation mapping block: player_main_surrender.asi".
+The original49 setup expected old $animations data. This package uses modern
+AnimSetInstanceSource Lines/Resource entries and locomotion.agf. All1245armed
+clip mappings and custom groups are merged beforehand. No legacy instance
+patching is performed during setup. Older locomotion.agr does not shadow it.
+Private MovementLabRevision49.agf path avoids shared locomotion graph cache.
+
+Original49 movement/controller/camera script files and script PBO unchanged.
+Native modern action mappings retained (no old bandage/tire action overrides).
+Workspace schema conversion is necessarily different from the historical graph;
+visual/speed parity is not claimed until tested in the native game.
+No lean experiments, NPC pose editors, UI or later locomotion changes included.
+
+Extract fresh folder, close DayZ, keepSteamrunning, run Launch-Movement-Test.cmd.
+Setup discovers extracted data on drives or asks for DayZProjects/DZ folder.
+It creates the two required resourcePBOs from your original localclips.
+Do NOT copy WorkspacePatches from previousRevision49 packages into this one.
+DayZ game path remains D:\SteamLibrary\steamapps\common\DayZ.
+
+Offline graph/schema/mapping/script-PBO identity/ZIP checks passed.
+WindowsPowerShell/nativeDayZ compile/render/locomotion NOT RUN here.

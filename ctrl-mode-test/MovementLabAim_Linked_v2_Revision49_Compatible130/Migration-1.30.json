@@ -1,0 +1,10 @@
+{
+  "source": "User-supplied freshly extracted player_main.7z",
+  "custom_nodes_ported": 408,
+  "custom_variables": 20,
+  "custom_groups": 5,
+  "runtime_test": "NOT RUN",
+  "baseline": "Revision49 exact logic/scriptPBO, not HUDv66",
+  "base_mapping_policy": "preserve modern native base mappings, append ZZMovementLab groups only",
+  "private_locomotion": "MovementLabRevision49.agf"
+}
