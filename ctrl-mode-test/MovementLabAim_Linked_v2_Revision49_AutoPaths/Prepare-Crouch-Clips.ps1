@@ -7,10 +7,10 @@ $movementlabWorkspaceRelative = 'DZ\anims\workspaces\player\player_main'
 $movementlabSavedRoot = Join-Path $PSScriptRoot 'MovementLab-ProjectRoot.txt'
 function Find-MovementLabProjectRoot([string]$Candidate) {
     if ([string]::IsNullOrWhiteSpace($Candidate)) { return $null }
-    $Candidate = $Candidate.Trim().Trim('"')
+    $Candidate = $Candidate.Trim().Trim([char]34)
     if (-not (Test-Path -LiteralPath $Candidate -PathType Container)) { return $null }
     $Candidate = (Resolve-Path -LiteralPath $Candidate).Path
-    if ($Candidate -match '(?i)^(.*?)[\/]DZ[\/]anims[\/]anm[\/]player[\/]moves[\/]unarmed[\/]?$') {
+    if ($Candidate -match '(?i)^(.*?)[\\/]DZ[\\/]anims[\\/]anm[\\/]player[\\/]moves[\\/]unarmed[\\/]?$') {
         $Candidate = $Matches[1].TrimEnd('\') + '\'
     } elseif ((Split-Path -Leaf $Candidate.TrimEnd('\')) -ieq 'DZ') {
         $Candidate = Split-Path -Parent $Candidate.TrimEnd('\')
@@ -27,7 +27,7 @@ if (Test-Path -LiteralPath $movementlabSavedRoot -PathType Leaf) {
 }
 $movementlabCandidates += @('N:\DayZProjects', 'D:\DayZProjects', 'P:\', 'F:\DayZProjects', 'C:\DayZProjects')
 foreach ($movementlabDrive in Get-PSDrive -PSProvider FileSystem) {
-    if ($movementlabDrive.Root -match '^[A-Za-z]:\$') {
+    if ($movementlabDrive.Root -match '^[A-Za-z]:\\$') {
         $movementlabCandidates += $movementlabDrive.Root
         $movementlabCandidates += (Join-Path $movementlabDrive.Root 'DayZProjects')
     }
