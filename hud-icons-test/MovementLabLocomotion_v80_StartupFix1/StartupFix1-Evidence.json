@@ -1,0 +1,16 @@
+{
+  "reported_failure": "access violation during CreatePlayer,missionOnInitline767",
+  "last_graph_resource": "native shared Locomotion.agf",
+  "script_modules_compiled": true,
+  "other_error": "PluginConfigDebugProfile not registered",
+  "changes": [
+    "private locomotion resource+GUID",
+    "fresh extended control template GUID",
+    "offline DIAG required plugin dependencies"
+  ],
+  "graph_payload_sha256": "b540d53c0c90b267db32e3b6046df2471f14ba4715dc7263a521b1fa1c41357a",
+  "old_control_guid": "6930A8DE269B0B95",
+  "new_control_guid": "F410B8043EAE1FBB",
+  "native_launch": "NOT RUN",
+  "root_cause_confirmed": false
+}

@@ -1,0 +1,44 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.Aim" {
+   Resource "{8F5A622C0854F126}DZ/anims/anm/player/actions/items/optics/binocular/p_cro_optics_binoculars_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.In" {
+   Resource "{EEC19B83316DACDE}DZ/anims/anm/player/actions/items/optics/binocular/p_cro_optics_binoculars_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.Loop" {
+   Resource "{0C0C52D87E5AB070}DZ/anims/anm/player/actions/items/optics/binocular/p_cro_optics_binoculars_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsCro.Out" {
+   Resource "{FBFA9459E47BE7A5}DZ/anims/anm/player/actions/items/optics/binocular/p_cro_optics_binoculars_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.Aim" {
+   Resource "{2D702B52F622BF22}DZ/anims/anm/player/actions/items/optics/binocular/p_erc_optics_binoculars_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.In" {
+   Resource "{7C769794A72DDD0C}DZ/anims/anm/player/actions/items/optics/binocular/p_erc_optics_binoculars_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.Loop" {
+   Resource "{9924FBCE0731A645}DZ/anims/anm/player/actions/items/optics/binocular/p_erc_optics_binoculars_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsErc.Out" {
+   Resource "{59D0DD271A0DA9A1}DZ/anims/anm/player/actions/items/optics/binocular/p_erc_optics_binoculars_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.Aim" {
+   Resource "{916AFD77A86B674D}DZ/anims/anm/player/actions/items/optics/binocular/p_pne_optics_binoculars_aim.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.In" {
+   Resource "{CDD4C0CFA9166E18}DZ/anims/anm/player/actions/items/optics/binocular/p_pne_optics_binoculars_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.Loop" {
+   Resource "{041A189F903E06D8}DZ/anims/anm/player/actions/items/optics/binocular/p_pne_optics_binoculars_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.LookOpticsPne.Out" {
+   Resource "{E5CA0B02444471CE}DZ/anims/anm/player/actions/items/optics/binocular/p_pne_optics_binoculars_out.anm"
+  }
+ }
+}

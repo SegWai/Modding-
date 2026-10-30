@@ -1,0 +1,19 @@
+V80 STARTUP FIX1 - GRAPH RESOURCE ISOLATION TEST
+
+Uploaded logs show scriptmodulescompiled;nativecrashwhileCreatePlayer loads
+sharedLocomotion.agf at13:54:34.009. Folderdiscovery/setupcompleted.
+This test changes graphresource path+GUID and extendedcontroltemplateGUID so
+modifiedresources do not share nativecacheidentifiers. Actualgraphbytes and
+allmovement/head90/camera/HUD/loadout/weaponbehavior unchanged.
+Also registers offline DIAG PluginConfigDebugProfile/Fixed dependencies, which
+logs show missing during PluginItemDiagnostic initialization.
+
+Extractfreshfolder,closeDayZ,keepSteamrunning,runLaunch-Movement-Test.cmd.
+Autodetecteddatafolder/selection retained. Do notcopyoldPBOs/workspacefiles.
+First graphload should name MovementLabLocomotion_v80_StartupFix1.agf.
+If it still crashes, runCollect-Logs.cmd and send the newlogs.
+
+This is a targeted startup TEST, not a proven crash fix. Logs locate the graph
+load but do not prove the exact native failure. No movement parameters altered.
+Offline PBO/source/hash/resource/ZIP checksPASS;nativeWindows compile/launch
+NOTRUNhere. ExistingSNAFU/MMG/game-pathrequirements unchanged.

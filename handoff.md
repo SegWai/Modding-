@@ -2,7 +2,31 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current corrected locomotion baseline: v80, not Revision49
+## Current v80 startup diagnosis: uploaded HUD Icons logs 20261030-135402
+
+Useruploaded MovementLab-HUD-Icons-v2-Logs.zip. Pathsetupcompleted,Game/World/
+Missionmodulescompiled. Native AVduringmissionOnInitline767CreatePlayer;last
+resourceLocomotion.agfload13:54:34.009 sharedGUID6CA2ACDCAC1184DC. Earlier
+PluginConfigDebugProfile notRegistered fromPluginItemDiagnostic.OnInit;no
+scriptcompilationfailure. Logs doNOT prove exactnativegraphfailurecause.
+
+NEW MovementLabLocomotion_v80_StartupFix1 fromv80_AutoPaths. NOactualgraph
+payloadchanges: privateMovementLabLocomotion_v80_StartupFix1.agfpath+newresource
+GUID,replacesharedLocomotion.agfreference;freshAnimSrcGCTextendedcontrolGUID.
+This isolatesmodifiedresourcesfromstockcacheidentifiers (candidate fix,NOT
+confirmedcause). Oldmodifiedsharedlocomotion.agfremovedfromWorkspacePatches.
+PluginManager.RegisterPluginDebug existingofflineDIAGoverride nowalsoforces
+PluginConfigDebugProfile+Fixed registration alongsideInventoryDebug. Original
+movement/head90/camera/HUD/loadout/controls scriptsunchanged;rebuildscriptPBO
+fromexactassetsourceplusonepluginfile. AutoPathsretained.
+
+Offlineprivategraphpayloadhash/otherscriptidentity/PBOindependentreader+
+SHA1+exactsourcecontent/ZIPsourcebyteschecksPASS. Nativecompile/launchNOTRUN.
+Artifact MovementLab_BodyRelative_FreeLook90_v80_StartupFix1.zip. Userfreshfolder,
+launch,andcollectnewlogsiffails. Expectedgraphloadprivatefilenameabove.
+SNAFU/MMG/Gunter/NPCmissionunchanged;notclaimexternalmods/materialwarningscause.
+
+## Corrected locomotion baseline: v80, not Revision49
 
 Userclarifieslatestdesiredlocomotionincludeshead/body90degreeturnbehavior.
 Featureaddedv77native m_fTurnAngle90,refinedv80body-relativefreelookbounds.

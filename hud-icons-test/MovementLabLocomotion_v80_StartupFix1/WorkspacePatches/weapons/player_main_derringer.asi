@@ -1,0 +1,80 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2D145A4F7212F85E}DZ/anims/workspaces/player/player_main/player_main_pistol.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingBulletL" {
+   Resource "{0BDE979783A26414}DZ/anims/anm/player/reloads/Derringer/p_erc_chambering_in_BulletUp_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingBulletR" {
+   Resource "{6D230A91BC490DBB}DZ/anims/anm/player/reloads/Derringer/p_erc_chambering_in_BulletDown_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingCancel" {
+   Resource "{79E7854C95FD3198}DZ/anims/anm/player/reloads/Derringer/p_erc_chambering_cancel_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingIn" {
+   Resource "{8A099235D5D7FB0D}DZ/anims/anm/player/reloads/Derringer/p_erc_chambering_in_noBulletUp_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ChamberingOut" {
+   Resource "{4D7CD60B3AB05F59}DZ/anims/anm/player/reloads/Derringer/p_erc_chambering_out_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_NoBulletL" {
+   Resource "{26E03F7A9E26CF1A}DZ/anims/anm/player/reloads/Derringer/p_erc_chambering_in_Bullets_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_NoBulletR" {
+   Resource "{B3EBA6E6CA8322FF}DZ/anims/anm/player/reloads/Derringer/p_erc_chambering_in_noBulletDown_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{35174E82EDFF3210}DZ/anims/anm/player/reloads/Derringer/p_erc_fire_derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireEmptyAutomatic" {
+   Resource "{78A385F8ADF6E674}DZ/anims/anm/player/reloads/Derringer/p_erc_fire_empty_derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireLast" {
+   Resource "{53F6DFF40243B5EA}DZ/anims/anm/player/reloads/Derringer/p_erc_fire_last_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{A63C1D96495184B6}DZ/anims/anm/player/reloads/Derringer/p_erc_reload_action1_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{101EB478930FC901}DZ/anims/anm/player/reloads/Derringer/p_erc_reload_action_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingBulletL" {
+   Resource "{6F624327D07BFF75}DZ/anims/anm/player/reloads/Derringer/p_pne_chambering_in_BulletUp_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingBulletR" {
+   Resource "{D292C29B864D2632}DZ/anims/anm/player/reloads/Derringer/p_pne_chambering_in_BulletDown_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingCancel" {
+   Resource "{75586C32EABC2F36}DZ/anims/anm/player/reloads/Derringer/p_pne_chambering_cancel_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingIn" {
+   Resource "{35B85A3FEFD3D084}DZ/anims/anm/player/reloads/Derringer/p_pne_chambering_in_noBulletUp_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ChamberingOut" {
+   Resource "{25B0427C1771860C}DZ/anims/anm/player/reloads/Derringer/p_pne_chambering_out_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_NoBulletL" {
+   Resource "{2A5FD604E167D1B4}DZ/anims/anm/player/reloads/Derringer/p_pne_chambering_in_Bullets_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_NoBulletR" {
+   Resource "{464D20F88708E7BF}DZ/anims/anm/player/reloads/Derringer/p_pne_chambering_in_noBulletDown_Derringer.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{92FCFD0C0E152397}DZ/anims/anm/player/reloads/Derringer/p_pne_fire_derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireEmptyAutomatic" {
+   Resource "{DD41C4D8B6C70F2F}DZ/anims/anm/player/reloads/Derringer/p_pne_fire_empty_derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireLast" {
+   Resource "{647758785B1DDA3A}DZ/anims/anm/player/reloads/Derringer/p_pne_fire_last_derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{CEF089E164905DE3}DZ/anims/anm/player/reloads/Derringer/p_pne_reload_action1_Derringer_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{9A97050679106B18}DZ/anims/anm/player/reloads/Derringer/p_pne_reload_action_Derringer_ras.anm"
+  }
+ }
+}

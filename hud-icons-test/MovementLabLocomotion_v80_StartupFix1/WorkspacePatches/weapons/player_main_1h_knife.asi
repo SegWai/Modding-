@@ -1,0 +1,302 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/a9779c8c1d3bfcc89d90.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/24534dc1d96a76f823b2.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/089333fefcf0e2aeacaf.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/2481e7fe6e53b761e4ac.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/7526f25d93eb9cbe048d.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S100.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/aebb1851e0fdb755d34b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/930c7a9d0bfce19496f1.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/29d4e6e44f76d4523737.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/215fda133270bedad9c2.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/57b4126022b92d8c0e8c.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/63cf020c1aa92bc604f0.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/38674608c829e10b2684.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/b316ce75f673cf4c8402.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/fadee150b7b561efa1f7.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/bdc115730db483e39d1a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/a502d8b8ba3c798287c7.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S55.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/322c81eb0cab951bdae7.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S150.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/eb60a35183c51bb05fbd.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/9132846a69ea0d92a0dc.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/4f748f0e263d6ff08040.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/efe6ed454f43a386e3a5.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/90180fe2b48864c6bf31.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/58b3e21a3697c4658c40.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F140.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/7f4c8c449927303902e1.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/7231042a023857463fd7.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3531afbbbd6463edf9a8.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/2a402922d76f7e6c906a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/82d55697aa6d06eff68d.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/35372a4495f612df88d9.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/1ddaca9d1f8cfb434aaa.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/7252b95c556b745e2fc4.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/c4e0eeea67cf0f680b8b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/73effb90e2260588bf35.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/46b8d226f27904d6fd71.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S47.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/59fd46c28ba77285637f.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimWalk.S30.WalkB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/9fdfbbcf48710e0404c2.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/beff0e15019dc570214b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunFR" {
+   Resource "{34F84BE97DB618DF}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunFR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/3e5a41b0c6762b6e45e7.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/93e4779b6ee0a9081640.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunFL" {
+   Resource "{5836E138E9E079BB}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunFL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/fbf0a065b75d04d2de12.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/c89047fe17530cf405e6.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunF" {
+   Resource "{63196740175A93E9}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunF" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/c92e9aeecad3c6bf9d1f.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/2240941cdbb4b1de5b1b.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunBR" {
+   Resource "{0BE868C252C1F25A}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunBR" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/9dc152105f04cb9d08f9.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/08c9129e5d321ff68dff.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunBL" {
+   Resource "{6726C213C697933E}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunBL" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/01a7c9b247a63ed7c147.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F120.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/8159f8643cabe92ebf0a.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F100.RunB" {
+   Resource "{74CE685FBA117931}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "ZZMovementLabAimFast.F80.RunB" {
+   Resource "DZ/anims/anm/player/moves/unarmed/ArmedVariants/4410262e115637c1204b.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.In" {
+   Resource "{2533415CEB5F3A48}DZ/anims/anm/player/actions/environment/p_1hd_cro_knife_digging_worms_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Loop" {
+   Resource "{FD57E0ED9692AFB6}DZ/anims/anm/player/actions/environment/p_1hd_cro_knife_digging_worms_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.DigWormsErc_Cro.Out" {
+   Resource "{70A842E0A708A64C}DZ/anims/anm/player/actions/environment/p_1hd_cro_knife_digging_worms_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.In" {
+   Resource "{8F5D1F530F8C0A5C}DZ/anims/anm/player/actions/items/p_cro_1hd_sharpening_group1_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Loop" {
+   Resource "{B9574604161F5E2C}DZ/anims/anm/player/actions/items/p_cro_1hd_sharpening_group1_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.SharpenCro.Out" {
+   Resource "{33F15666679879C7}DZ/anims/anm/player/actions/items/p_cro_1hd_sharpening_group1_out.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeL" {
+   Resource "{5AF774A8F3A17C5C}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_evadeL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.EvadeR" {
+   Resource "{3639DE7967F71D38}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_evadeR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.Sprint_StrikeR01" {
+   Resource "{FDAABE0E31305EE6}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackR_charged.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StealthAttack_Liver" {
+   Resource "{A03D47AA31828A1F}DZ/anims/anm/player/attacks/1hd/p_erc_1hd_attack_stealth_liver_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL01" {
+   Resource "{5BF8F82BCFB9A8FC}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackL_03_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeL02" {
+   Resource "{5E0D3BEC24EB524A}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackL_02_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace01" {
+   Resource "{D903F5E3D2B8E2CD}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackL_inplace_03_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeLInplace02" {
+   Resource "{DCF6362439EA187B}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackL_inplace_02_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR01" {
+   Resource "{964C0DB494628BB9}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackR_03_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeR03" {
+   Resource "{8F8546E304DE6EBB}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackR_04_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace01" {
+   Resource "{B5A76FC4A24D9C2A}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackR_inplace_03_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Combat.Erc.StrikeRInplace03" {
+   Resource "{AC6E249332F17928}DZ/anims/anm/player/attacks/1hd/knife/p_erc_knife_attackR_inplace_04_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Aim" {
+   Resource "{46F8A2E474E9DFBC}DZ/anims/anm/player/layered/aim/1handed/p_1hd_knife_erc_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimRun" {
+   Resource "{5107F848BC2B6937}DZ/anims/anm/player/layered/aim/1handed/p_1hd_knife_erc_walk_ras_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.AimWalk" {
+   Resource "{5107F848BC2B6937}DZ/anims/anm/player/layered/aim/1handed/p_1hd_knife_erc_walk_ras_aimspace.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Idle" {
+   Resource "{99F09B7EC4DDE202}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_idle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunB" {
+   Resource "{74CE685FBA117931}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBL" {
+   Resource "{6726C213C697933E}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunBR" {
+   Resource "{0BE868C252C1F25A}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunF" {
+   Resource "{63196740175A93E9}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFL" {
+   Resource "{5836E138E9E079BB}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunFR" {
+   Resource "{34F84BE97DB618DF}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_runFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.RunSlidingPose" {
+   Resource "{2D72E03E2C0C3AD3}DZ/anims/anm/player/layered/stop/p_1hd_erc_run_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.Turn0" {
+   Resource "{1BC8FC4811880F88}DZ/anims/anm/player/moves/1handed/knife/turns/p_1hd_knife_erc_turn_0_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL180" {
+   Resource "{114F3F82F795E0F7}DZ/anims/anm/player/moves/1handed/knife/turns/p_1hd_knife_erc_turnL_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnL90" {
+   Resource "{A16F8D0D187EF339}DZ/anims/anm/player/moves/1handed/knife/turns/p_1hd_knife_erc_turnL_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnR180" {
+   Resource "{10E00C2800C5F3E7}DZ/anims/anm/player/moves/1handed/knife/turns/p_1hd_knife_erc_turnR_180_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.TurnR90" {
+   Resource "{6CDB789243A5D07C}DZ/anims/anm/player/moves/1handed/knife/turns/p_1hd_knife_erc_turnR_90_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkB" {
+   Resource "{AF96196DCBB47339}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_walkB_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBL" {
+   Resource "{20E281FE8299C938}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_walkBL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkBR" {
+   Resource "{4C2C2B2F16CFA85C}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_walkBR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkF" {
+   Resource "{B841167266FF99E1}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_walkF_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFL" {
+   Resource "{1FF2A2D5ADEE23BD}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_walkFL_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkFR" {
+   Resource "{733C080439B842D9}DZ/anims/anm/player/moves/1handed/knife/p_1hd_knife_erc_walkFR_ras.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.ErcRas.WalkSlidingPose" {
+   Resource "{3EF6628A42D94B40}DZ/anims/anm/player/layered/stop/p_1hd_erc_walk_ras_stop_poses.anm"
+  }
+  AnimSetInstanceSource_Line "Locomotion.PneBRas.GoErect" {
+   Resource "{9BE86E03EB37B1CD}DZ/anims/anm/player/moves/1handed/transitions/p_1hd_knife_pne_onBack_trans_erc_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.Pne.KnifeSlotHide" {
+   Resource "{6C5E2F07726B7F73}DZ/anims/anm/player/weaponswitch/p_1hd_pne_slot_knife_hide.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponChange.Pne.KnifeSlotShow" {
+   Resource "{E4242198F02BAD24}DZ/anims/anm/player/weaponswitch/p_1hd_pne_slot_knife_show.anm"
+  }
+ }
+}

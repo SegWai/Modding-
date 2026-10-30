@@ -1,0 +1,1 @@
+v13: pistols alone70% preview, other weapons restored88%, objects60%. Downward preview offset doubled20% to40% slot height. Pistol detection native config inheritance Pistol_Base. Other gameplay/HUD unchanged. Native visual check required.

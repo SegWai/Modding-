@@ -1,0 +1,10 @@
+{
+  "version": 80,
+  "checks": [
+    "315 heading/limit arithmetic scenarios checked including +/-85-degree entry and world-yaw wrap",
+    "Only camera limit helper changed versus v79 runtime sources and graphs",
+    "Native input heading sign convention checked against camera source",
+    "PBO headers/payload/SHA1 and ZIP integrity verified"
+  ],
+  "native_compile_and_playtest": "Pending local DayZ 1.30 gameplay test; runtime unavailable here"
+}

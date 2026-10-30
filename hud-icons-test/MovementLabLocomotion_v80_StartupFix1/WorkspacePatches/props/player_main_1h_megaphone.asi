@@ -1,0 +1,62 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{7324B2E80BB624A1}DZ/anims/workspaces/player/player_main/player_main_1h.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemCro.Aim" {
+   Resource "{CD9D77D2710D5109}DZ/anims/anm/player/actions/items/p_cro_megaphone_look.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemCro.In" {
+   Resource "{F719A15403A45BC3}DZ/anims/anm/player/actions/items/p_cro_megaphone_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemCro.Loop" {
+   Resource "{D54564C68D9100C6}DZ/anims/anm/player/actions/items/p_cro_megaphone_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemCro.Out" {
+   Resource "{956B16F508029067}DZ/anims/anm/player/actions/items/p_cro_megaphone_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemErc.Aim" {
+   Resource "{AE3E31D2D10028DC}DZ/anims/anm/player/actions/items/p_erc_megaphone_look.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemErc.In" {
+   Resource "{B3A16D9E0A09127B}DZ/anims/anm/player/actions/items/p_erc_megaphone_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemErc.Loop" {
+   Resource "{B6E622C62D9C7913}DZ/anims/anm/player/actions/items/p_erc_megaphone_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemErc.Out" {
+   Resource "{BE91B8AC4165E597}DZ/anims/anm/player/actions/items/p_erc_megaphone_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemPne.Aim" {
+   Resource "{8F3D8DAF805CEC4D}DZ/anims/anm/player/actions/items/p_pne_megaphone_look.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemPne.In" {
+   Resource "{530981E8525D2890}DZ/anims/anm/player/actions/items/p_pne_megaphone_in.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemPne.Loop" {
+   Resource "{97E59EBB7CC0BD82}DZ/anims/anm/player/actions/items/p_pne_megaphone_loop.anm"
+  }
+  AnimSetInstanceSource_Line "ActionContinuous.RaiseItemPne.Out" {
+   Resource "{F6F8D8DEA3C250AB}DZ/anims/anm/player/actions/items/p_pne_megaphone_out.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOffCro.Once" {
+   Resource "{87D3D322D5B76976}DZ/anims/anm/player/actions/items/p_cro_megaphone_off.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOffErc.Once" {
+   Resource "{AC297D7B9CD01C86}DZ/anims/anm/player/actions/items/p_erc_megaphone_off.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOffPne.Once" {
+   Resource "{E4401D097E77A9BA}DZ/anims/anm/player/actions/items/p_pne_megaphone_off.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOnCro.Once" {
+   Resource "{4AC9F3D37CBF47DD}DZ/anims/anm/player/actions/items/p_cro_megaphone_on.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOnErc.Once" {
+   Resource "{0E713F1975120E65}DZ/anims/anm/player/actions/items/p_erc_megaphone_on.anm"
+  }
+  AnimSetInstanceSource_Line "ActionOnce.ItemOnPne.Once" {
+   Resource "{EED9D36F2D46348E}DZ/anims/anm/player/actions/items/p_pne_megaphone_on.anm"
+  }
+ }
+}
