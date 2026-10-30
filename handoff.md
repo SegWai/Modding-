@@ -2,6 +2,26 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
+## User reports StartupFix1 boots; missing clips PBO
+
+Usermessage/screenshotstatescleanboot/nocrash,then1076missinganimations from
+custom walk/aim-walk/crouchspeedsets;MovementLabSlowCrouchClips.pbo absent.
+Treat asUSERREPORT,nottwoclient/nativeverificationbyagent. StartupFix1changed
+2thingsresourceIDs/pluginregistration;reportdoesnotisolatewhichresolvedcrash.
+Only18ANMfilesexistcloud;cannotreconstruct1245armedvariants+nativeunarmedassets.
+OldCrouchSlow_v3/v4/v5PBOscontainincompleteoldsets;doNOTsendasv80replacement.
+
+Artifact MovementLab_v80_MissingClips_Builder.zip is EXPLICITLYbuilder,notPBO.
+ExtractintoEXISTINGv80testfolderbesideLaunch-Prebuilt-PBO-Test.cmd;closegame;
+runBuild-Missing-Clips.cmd. ProducesONLYrequiredSlowCrouchClipsPBOusinglocal
+extracteddata. Exactv80payloadgenerationsection+Armed-Speed-Plan(1245variants)+
+RequiredOriginalClips(258entries);pathfinderrequiresunarmedrootonly(notworkspace).
+No workspace packing andnoScriptPBOwrite;protectworkingtwoStartupFix1PBOs.
+Thenuseprebuiltlauncheragain. Archiveincludes2builderscripts+plan+requiredlist+
+README. Originalclipssourcedreadonly;outputpathcache+clipsPBOonly. Offline
+code/planbyteidentity/singleoutput/nootherPBOpackaging/ZIPexactPASS;Windows
+PowerShellNOTRUN. package_v80_missing_clips_builder.py reproducible.
+
 ## V80 StartupFix1 prebuilt PBO update
 
 UserasksPBOtotest. artifacts/MovementLab_v80_StartupFix1_PBOs.zip contains
