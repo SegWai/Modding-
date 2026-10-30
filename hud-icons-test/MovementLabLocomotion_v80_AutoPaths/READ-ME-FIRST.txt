@@ -1,0 +1,16 @@
+V80 - EXTRACTED GAME DATA PATH FIX ONLY
+
+Preserves v80 locomotion,90degree native body-turn threshold,body-relativelook
+limits,HUD/loadout/controls/native workspace and original scriptPBO EXACTLY.
+Only setup filepaths changed: unarmedclips,armedclips andworkspace all use ONE
+resolved extracted-data projectroot rather than fixedD:\DayZProjects.
+
+CloseDayZ,extractfreshfolder,keepSteamrunning,runLaunch-Movement-Test.cmd.
+Finds N:/D:/F:/C:DayZProjects,P:workdrive,otherdrive roots,orasksfolderselection.
+Choose your extracted DayZProjects folder(containingDZ),orDZfolderitself.
+Choice saved inMovementLab-ProjectRoot.txt;deletefiletoresetselection.
+If noextracteddataexists,useDayZTools>ExtractGameDatafirst.
+OriginalDZfilesare readonly. Do notcopyoldWorkspacePatchesintothispackage.
+ExistingSNAFU/MMGrequirements unchanged. Gamepath remainsD:\SteamLibrary\steamapps\common\DayZ.
+Modern1.30workspace/ASIformat already presentinv80andpreserved;no49portneeded.
+Offlinefileidentity,pathregex,ZIPchecksPASS. WindowsPowerShell/gameNOTRUNhere.

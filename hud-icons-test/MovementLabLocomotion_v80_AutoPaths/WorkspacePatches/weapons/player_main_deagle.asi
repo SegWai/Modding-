@@ -1,0 +1,113 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2D145A4F7212F85E}DZ/anims/workspaces/player/player_main/player_main_pistol.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponChange.Pne.1HDRightBackSlotShow" {
+   Resource "{00CCE8D63F0FF464}DZ/anims/anm/player/reloads/Deagle/p_erc_jam_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{90278F1095E351D2}DZ/anims/anm/player/reloads/Deagle/p_erc_chambering_Closed_cocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed_Uncocked" {
+   Resource "{0E295B008CEC18AB}DZ/anims/anm/player/reloads/Deagle/p_erc_chambering_Closed_uncocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Open" {
+   Resource "{61B799AA0D310DFF}DZ/anims/anm/player/reloads/Deagle/p_erc_chambering_Open_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Fire" {
+   Resource "{44F338498C7619AE}DZ/anims/anm/player/reloads/Deagle/p_erc_fire_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireCocked" {
+   Resource "{90CD0613BFAD73EA}DZ/anims/anm/player/reloads/Deagle/p_erc_empty_cocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireJam" {
+   Resource "{E71CECF0F9CB74DD}DZ/anims/anm/player/reloads/Deagle/p_erc_fire_jam_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireLast" {
+   Resource "{C60E1E0709CDF932}DZ/anims/anm/player/reloads/Deagle/p_erc_fire_last_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.FireUncocked" {
+   Resource "{702868395718F20F}DZ/anims/anm/player/reloads/Deagle/p_erc_empty_uncocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{00CCE8D63F0FF464}DZ/anims/anm/player/reloads/Deagle/p_erc_jam_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Cancel" {
+   Resource "{7C64E06333500590}DZ/anims/anm/player/reloads/Deagle/p_erc_jam_cancel_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming Check" {
+   Resource "{4334E3660EE34725}DZ/anims/anm/player/reloads/Deagle/p_erc_check_jam_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{F41343DD087EE103}DZ/anims/anm/player/reloads/Deagle/p_erc_reloadAction_Closed_cocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed_Uncocked" {
+   Resource "{CD797404FCEF9E51}DZ/anims/anm/player/reloads/Deagle/p_erc_reloadAction_Closed_uncocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Open" {
+   Resource "{1CBCCF8164A926F0}DZ/anims/anm/player/reloads/Deagle/p_erc_reloadAction_Open_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagBullet" {
+   Resource "{7BBD437CFFBF5DFC}DZ/anims/anm/player/reloads/Deagle/p_erc_reload_mag_bullet_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagazineDetach" {
+   Resource "{3FE245D4AD171620}DZ/anims/anm/player/reloads/Deagle/p_erc_reload_mag_remove_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{A89A3FC0CCAE247C}DZ/anims/anm/player/reloads/Deagle/p_erc_reload_nomag_bullet_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{61166119B5214CFA}DZ/anims/anm/player/reloads/Deagle/p_pne_chambering_Closed_cocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed_Uncocked" {
+   Resource "{25D4AC3686FD5934}DZ/anims/anm/player/reloads/Deagle/p_pne_chambering_Closed_uncocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Open" {
+   Resource "{EED7AE76404ED947}DZ/anims/anm/player/reloads/Deagle/p_pne_chambering_Open_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Fire" {
+   Resource "{C9C5550C589BB5E3}DZ/anims/anm/player/reloads/Deagle/p_pne_fire_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireCocked" {
+   Resource "{A74C819FE6F31C3A}DZ/anims/anm/player/reloads/Deagle/p_pne_empty_cocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireJam" {
+   Resource "{B80D3255BB573BA4}DZ/anims/anm/player/reloads/Deagle/p_pne_fire_jam_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireLast" {
+   Resource "{77AC495C07F64A26}DZ/anims/anm/player/reloads/Deagle/p_pne_fire_last_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.FireUncocked" {
+   Resource "{A32ADBB39DA80C50}DZ/anims/anm/player/reloads/Deagle/p_pne_empty_uncocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{21CF54AB6E5330F5}DZ/anims/anm/player/reloads/Deagle/p_pne_jam_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Cancel" {
+   Resource "{C07E36466D19DDFF}DZ/anims/anm/player/reloads/Deagle/p_pne_jam_cancel_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming Check" {
+   Resource "{F296B43D00D8F431}DZ/anims/anm/player/reloads/Deagle/p_pne_check_jam_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{DFEEB4EB026FA09C}DZ/anims/anm/player/reloads/Deagle/p_pne_reloadAction_Closed_cocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed_Uncocked" {
+   Resource "{681CA27D00148D7F}DZ/anims/anm/player/reloads/Deagle/p_pne_reloadAction_Closed_uncocked_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Open" {
+   Resource "{74705BF64968FFA5}DZ/anims/anm/player/reloads/Deagle/p_pne_reloadAction_Open_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagBullet" {
+   Resource "{1371D70BD27E84A9}DZ/anims/anm/player/reloads/Deagle/p_pne_reload_mag_bullet_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagazineDetach" {
+   Resource "{572ED1A380D6CF75}DZ/anims/anm/player/reloads/Deagle/p_pne_reload_mag_remove_Deagle_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{6DB1BC49C9E193ED}DZ/anims/anm/player/reloads/Deagle/p_pne_reload_nomag_bullet_Deagle_ras.anm"
+  }
+ }
+}

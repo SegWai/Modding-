@@ -1,0 +1,38 @@
+AnimSetInstanceSource {
+ Template "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+ ParentTemplates {
+  "{2D145A4F7212F85E}DZ/anims/workspaces/player/player_main/player_main_pistol.asi"
+ }
+ Lines {
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Chambering_Closed" {
+   Resource "{EA78B9CCF0B740FD}DZ/anims/anm/player/reloads/OTS14/p_erc_chambering_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.Jamming" {
+   Resource "{1B4C7DFCFDCB4827}DZ/anims/anm/player/reloads/OTS14/p_erc_jam_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadAction_Closed" {
+   Resource "{8764FCC0C40FE5C7}DZ/anims/anm/player/reloads/OTS14/p_erc_reload_action_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadMagNoBullet" {
+   Resource "{445032CA9F225993}DZ/anims/anm/player/reloads/OTS14/p_erc_reload_mag_noBullet_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.ErcRas.ReloadNoMagBullet" {
+   Resource "{20D7FB7D32BC2197}DZ/anims/anm/player/reloads/OTS14/p_erc_reload_noMag_bullet_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Chambering_Closed" {
+   Resource "{5BDAEE97FE8CF3E9}DZ/anims/anm/player/reloads/OTS14/p_pne_chambering_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.Jamming" {
+   Resource "{53251D8E1F6CFD1B}DZ/anims/anm/player/reloads/OTS14/p_pne_jam_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadAction_Closed" {
+   Resource "{B0E57B4C9D518A17}DZ/anims/anm/player/reloads/OTS14/p_pne_reload_action_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadMagNoBullet" {
+   Resource "{0CDD7A8789D1FFDC}DZ/anims/anm/player/reloads/OTS14/p_pne_reload_mag_noBullet_OTS14_ras.anm"
+  }
+  AnimSetInstanceSource_Line "WeaponOperations.PneRas.ReloadNoMagBullet" {
+   Resource "{685AB330244F87D8}DZ/anims/anm/player/reloads/OTS14/p_pne_reload_noMag_bullet_OTS14_ras.anm"
+  }
+ }
+}

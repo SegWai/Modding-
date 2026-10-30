@@ -2,7 +2,28 @@
 
 Updated: 29 October 2026 (Europe/Lisbon).
 
-## Current locomotion restore task: Revision49 compatibility package
+## Current corrected locomotion baseline: v80, not Revision49
+
+Userclarifieslatestdesiredlocomotionincludeshead/body90degreeturnbehavior.
+Featureaddedv77native m_fTurnAngle90,refinedv80body-relativefreelookbounds.
+Usehud-icons-test/MovementLabLocomotion_v80 asF3customcomparisonbaseline.
+Originalartifact MovementLab_BodyRelative_FreeLook90_v80.zip commit80610a6.
+F1native/F2Inertia/F3customrequested;InertiaWorkshoplinkstillpending.
+No3waycomparisonimplementationpublished. CannotruntimeunloadPBOs;needreal
+Inertiamodcode/control+truenativegraph/clipbaseline,notfilteronlyF1label.
+
+Userasksfixsame"repository"problemv80,interpretedextracteddataDpatherror.
+NEWv80_AutoPaths copies585originalfilesbyteexact(exceptPrepare-Crouch-Clips.ps1),
+includingallPBOS/nativeworkspace/scripts/head90/HUD/loadout. Onlysetupuses
+resolvedProjectRootforunarmed/armed/workspace;reuseverified49pathresolver,
+savedchoice+N/D/F/Cprojects/Pworkdrive+otherroots+Windowsfolderpicker.
+v80already1.30modernLines/Resource,recursiveworkspacecopy:no49portapplied.
+ExistingDayZgameDSteamLibrarypathandSNAFU/MMGmodrequirementsunchanged.
+Offlinepathregex/allfileidentity/ZIPbytechecksPASS;WindowsPowerShell/native
+launchNOTRUN. Artifact MovementLab_BodyRelative_FreeLook90_v80_AutoPaths.zip.
+Historicalv80/49/leanarchivesunchanged.
+
+## Previous locomotion restore attempt: Revision49 compatibility package
 
 User requested last locomotion BEFORElean: ctrl-mode-test/MovementLabAim_Linked_v2_Revision49
 (commit8d91741). HistoricalZIP/scriptPBO verified. Needs2resourcePBOsgeneratedon
