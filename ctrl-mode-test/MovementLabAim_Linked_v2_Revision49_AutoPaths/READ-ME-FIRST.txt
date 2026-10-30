@@ -1,0 +1,14 @@
+REVISION49 PATH FIX ONLY
+
+Use Launch-Movement-Test.cmd as before. The extracted-data location is no longer
+fixed to D:\DayZProjects. Setup tries the saved folder, N:/D:/F:/C: DayZProjects,
+P: work drive, and other drive-root/DayZProjects locations. If needed a folder
+picker asks for your extracted DayZProjects folder or DZ folder. It remembers
+that choice in MovementLab-ProjectRoot.txt. Delete that text file to reset.
+
+If you have not extracted game data, use DayZ Tools > Extract Game Data first,
+then choose the folder it created. Merely selecting the Steam game installation
+will not supply the extracted animation files. All original DZ files are read
+only. Walking, aiming, camera, scripts and PBO are unchanged from Revision49.
+DayZDiag game path in the launcher remains D:\SteamLibrary\steamapps\common\DayZ.
+PowerShell folder selection/build must be tested on your Windows PC.
