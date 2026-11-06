@@ -1,0 +1,1333 @@
+--- v2/LogicSource/Scripts/4_World/MLADSLeanPlayer.c
++++ v3/LogicSource/Scripts/4_World/MLADSLeanPlayer.c
+@@ -23,6 +23,7 @@
+ {
+  protected ref MLMatchActor m_MLMatch;
+  protected float m_MLMatchIdleElapsed;
++ protected float m_MLMatchLeanPhase;
+ 
+  protected void MLMatchBeforeNative(float dt, int commandId)
+  {
+@@ -1171,9 +1172,15 @@
+   // Cap custom progression at the same native rate instead of instant sign jumps.
+   // If native leaning is already interpolated at this rate, follow it directly.
+   float nativeLeanStep = 4.5 * Math.Clamp(pDt, 0, 0.25);
+-  float leanDelta = m_MLADSLeanLeanRequested - m_MLADSLeanAmount;
++  float leanDelta = m_MLADSLeanLeanRequested - m_MLMatchLeanPhase;
+   leanDelta = Math.Clamp(leanDelta, -nativeLeanStep, nativeLeanStep);
+-  m_MLADSLeanAmount = m_MLADSLeanAmount + leanDelta;
++  m_MLMatchLeanPhase = m_MLMatchLeanPhase + leanDelta;
++  float leanPhaseMagnitude = Math.AbsFloat(m_MLMatchLeanPhase);
++  float easedLean = leanPhaseMagnitude * leanPhaseMagnitude;
++  easedLean = easedLean * (3.0 - 2.0 * leanPhaseMagnitude);
++  if (m_MLMatchLeanPhase < 0)
++   easedLean = -easedLean;
++  m_MLADSLeanAmount = easedLean;
+   if (m_MLADSLeanBound && m_ML56LowSmoothVar >= 0)
+   {
+    float smoothLow = 0;
+@@ -1200,7 +1207,7 @@
+   if (m_MLSScopeVar >= 0)
+   {
+    float standingScope = 0;
+-   if (target && Math.AbsFloat(m_MLADSLeanAmount) > 0.0001)
++   if (target)
+     standingScope = 1;
+    AnimSetFloat(m_MLSScopeVar, standingScope);
+   }
+@@ -1236,7 +1243,7 @@
+   {
+    AnimSetFloat(m_MLADSLeanGateVar, m_MLADSLeanGate);
+    AnimSetFloat(m_MLADSLeanAmountVar, m_MLADSLeanAmount);
+-   if (ownEditorHold && m_MLADSLeanNativeLeanVar >= 0)
++   if (target && !m_MLADSLeanDemo && m_MLADSLeanNativeLeanVar >= 0)
+     AnimSetFloat(m_MLADSLeanNativeLeanVar, m_MLADSLeanAmount);
+   }
+   if (m_MLADSLeanDemo && m_MLADSLeanDemoNativeBound)
+@@ -1253,7 +1260,7 @@
+    {
+     // Aim bit 0 and both hand chains; shared graph routing holds them active.
+     AnimSetInt(m_MLADSLeanDemoArmIK, 7);
+-    AnimSetFloat(m_MLADSLeanNativeLeanVar, m_MLADSLeanDemoAmount);
++    AnimSetFloat(m_MLADSLeanNativeLeanVar, m_MLADSLeanAmount);
+     AnimSetFloat(m_MLADSLeanDemoAim, 0);
+     AnimSetFloat(m_MLADSLeanDemoAimIK, 0);
+     AnimSetFloat(m_MLADSLeanDemoAimUD, 0);
+@@ -2026,7 +2033,14 @@
+   if (ordinaryWeight <= 0)
+    return 0;
+   if (m_MLADSLeanAmount < 0)
+-   return Math.Clamp(m_MLADSLeanGate, 0, 1);
++  {
++   // Keep full left sight following at the endpoint, with a soft edge
++   // around neutral so the camera offset cannot appear in one frame.
++   float onset = Math.Clamp(-m_MLADSLeanAmount / 0.25, 0, 1);
++   float onsetWeight = onset * onset;
++   onsetWeight = onsetWeight * (3.0 - 2.0 * onset);
++   return Math.Clamp(m_MLADSLeanGate, 0, 1) * onsetWeight;
++  }
+   return ordinaryWeight;
+  }
+ 
+--- v2/LogicSource/Scripts/4_World/MLMatchActor.c
++++ v3/LogicSource/Scripts/4_World/MLMatchActor.c
+@@ -51,6 +51,9 @@
+  bool Bound;
+  int ActiveVar = -1;
+  int LookVar = -1;
++ int WeightVar = -1;
++ float MatchBlend;
++ float LastMatchWeight;
+  int LastLook = -1;
+  int ActiveKey = -1;
+  int PreviousKey = -1;
+@@ -111,11 +114,13 @@
+   Tried = true;
+   ActiveVar = actor.GetAnimInterface().BindVariableFloat("MLMatchActive");
+   LookVar = actor.GetAnimInterface().BindVariableFloat("MLMatchLook");
++  WeightVar = actor.GetAnimInterface().BindVariableFloat("MLMatchWeight");
+   Bound = ActiveVar >= 0 && LookVar >= 0 && ActiveVar != LookVar;
++  Bound = Bound && WeightVar >= 0 && WeightVar != ActiveVar && WeightVar != LookVar;
+   for (int index = 0; index < 120; index++)
+   {
+    int control = actor.GetAnimInterface().BindVariableFloat("MLMatchC" + index);
+-   Bound = Bound && control >= 0 && control != ActiveVar && control != LookVar;
++   Bound = Bound && control >= 0 && control != ActiveVar && control != LookVar && control != WeightVar;
+    foreach (int prior : Variables)
+     Bound = Bound && control != prior;
+    Variables.Insert(control);
+@@ -210,7 +215,10 @@
+  {
+   if (ActiveKey < 0)
+    return;
++  actor.AnimSetFloat(WeightVar, 0);
+   actor.AnimSetFloat(ActiveVar, 0);
++  MatchBlend = 0;
++  LastMatchWeight = 0;
+   ActiveKey = -1;
+   ObserveTime = 0;
+  }
+@@ -232,9 +240,26 @@
+    return;
+   for (int index = 0; index < 120; index++)
+    actor.AnimSetFloat(Variables[index], solution.Values[index]);
+-  actor.AnimSetFloat(ActiveVar, 1);
+   ActiveKey = key;
+   ObserveTime = 0;
++ }
++
++ void SetBlend(PlayerBase actor, float wanted, float step)
++ {
++  float limit = step / 0.18;
++  float remaining = wanted - MatchBlend;
++  MatchBlend = MatchBlend + Math.Clamp(remaining, -limit, limit);
++  MatchBlend = Math.Clamp(MatchBlend, 0, 1);
++  float weight = MatchBlend * MatchBlend;
++  weight = weight * (3.0 - 2.0 * MatchBlend);
++  if (weight == LastMatchWeight)
++   return;
++  actor.AnimSetFloat(WeightVar, weight);
++  if (LastMatchWeight <= 0 && weight > 0)
++   actor.AnimSetFloat(ActiveVar, 1);
++  if (weight <= 0)
++   actor.AnimSetFloat(ActiveVar, 0);
++  LastMatchWeight = weight;
+  }
+ 
+  void Observe(PlayerBase actor, MLMatchSnapshot target, int key)
+@@ -291,8 +316,13 @@
+   }
+   if (key != PreviousKey)
+   {
++   if (PreviousKey >= 0)
++   {
++    int previousView = PreviousKey - PreviousKey % 2;
++    if (previousView != viewContext)
++     Disable(actor);
++   }
+    PreviousKey = key;
+-   Disable(actor);
+    m_MLMatchSettleElapsed = 0;
+   }
+   if (npc)
+@@ -317,25 +347,47 @@
+   if (!Bound)
+    return;
+   int look = 0;
+-  if (full)
++  if (eligible)
+    look = 1;
+   if (look != LastLook)
+   {
+    LastLook = look;
+    actor.AnimSetFloat(LookVar, look);
+   }
+-  MLMatchSnapshot target = MLMatchBank.Targets[side];
+-  if (!full || !target || Failed[key])
++  if (!eligible || !centred || ActionDelay > 0)
+   {
+    Disable(actor);
+    m_MLMatchSettleElapsed = 0;
+    return;
+   }
++  float wantedWeight = Math.AbsFloat(lean);
++  if (ActiveKey >= 0 && ActiveKey != key)
++  {
++   SetBlend(actor, 0, step);
++   if (MatchBlend <= 0)
++    Disable(actor);
++   return;
++  }
++  MLMatchSnapshot target = MLMatchBank.Targets[side];
++  if (!target || Failed[key])
++  {
++   Disable(actor);
++   m_MLMatchSettleElapsed = 0;
++   return;
++  }
+   if (Solutions[key])
+   {
+    MLMatchSolution cached = Solutions[key];
++   if (wantedWeight <= 0 && ActiveKey < 0)
++    return;
+    Enable(actor, key, cached);
+-   if (!cached.Reported)
++   SetBlend(actor, wantedWeight, step);
++   if (wantedWeight <= 0 && MatchBlend <= 0)
++   {
++    Disable(actor);
++    return;
++   }
++   if (full && MatchBlend >= 0.999 && !cached.Reported)
+    {
+     ObserveTime += step;
+     if (ObserveTime > 0.4)
+@@ -347,6 +399,12 @@
+    return;
+   }
+   Disable(actor);
++  if (!full)
++  {
++   m_MLMatchSettleElapsed = 0;
++   return;
++  }
++  Disable(actor);
+   m_MLMatchSettleElapsed = m_MLMatchSettleElapsed + step;
+   if (m_MLMatchSettleElapsed < 0.55)
+    return;
+@@ -360,6 +418,7 @@
+   }
+   Solutions[key] = solved;
+   Enable(actor, key, solved);
++  SetBlend(actor, wantedWeight, step);
+   Print("[MLMATCH] applied settled pose context=" + key);
+  }
+ };
+--- v2/WorkspaceSource/MLSharedStandingMatchMaster_v2.agf
++++ v3/WorkspaceSource/MLSharedStandingMatchMaster_v3.agf
+@@ -84,7 +84,7 @@
+     }
+ AnimSrcNodeProcTransform MLMatchJoint0 {
+  Child "MLMatchNativeMaster"
+- Expression "MLMatchC0"
++ Expression "MLMatchC0*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{C47535447E2A5A4E}" {
+    Bone "Pelvis"
+@@ -97,7 +97,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint1 {
+  Child "MLMatchJoint0"
+- Expression "MLMatchC1"
++ Expression "MLMatchC1*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{CF4CCA8BA7D45CD8}" {
+    Bone "Pelvis"
+@@ -110,7 +110,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint2 {
+  Child "MLMatchJoint1"
+- Expression "MLMatchC2"
++ Expression "MLMatchC2*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5CF745226CD95229}" {
+    Bone "Pelvis"
+@@ -123,7 +123,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint3 {
+  Child "MLMatchJoint2"
+- Expression "MLMatchC3"
++ Expression "MLMatchC3*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{48DE3FAC73D7520D}" {
+    Bone "Pelvis"
+@@ -136,7 +136,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint4 {
+  Child "MLMatchJoint3"
+- Expression "MLMatchC4"
++ Expression "MLMatchC4*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{2124B738D2D250C6}" {
+    Bone "Pelvis"
+@@ -149,7 +149,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint5 {
+  Child "MLMatchJoint4"
+- Expression "MLMatchC5"
++ Expression "MLMatchC5*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{73CA3BC8682C5211}" {
+    Bone "Pelvis"
+@@ -162,7 +162,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint6 {
+  Child "MLMatchJoint5"
+- Expression "MLMatchC6"
++ Expression "MLMatchC6*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{F58A25DAB8F5551C}" {
+    Bone "Spine"
+@@ -175,7 +175,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint7 {
+  Child "MLMatchJoint6"
+- Expression "MLMatchC7"
++ Expression "MLMatchC7*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{DD174A09E42F5C6A}" {
+    Bone "Spine"
+@@ -188,7 +188,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint8 {
+  Child "MLMatchJoint7"
+- Expression "MLMatchC8"
++ Expression "MLMatchC8*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5AB12FD96EE5568A}" {
+    Bone "Spine"
+@@ -201,7 +201,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint9 {
+  Child "MLMatchJoint8"
+- Expression "MLMatchC9"
++ Expression "MLMatchC9*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{D8C53DE9AD145CE6}" {
+    Bone "Spine"
+@@ -214,7 +214,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint10 {
+  Child "MLMatchJoint9"
+- Expression "MLMatchC10"
++ Expression "MLMatchC10*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B44FB3EF935D5A4A}" {
+    Bone "Spine"
+@@ -227,7 +227,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint11 {
+  Child "MLMatchJoint10"
+- Expression "MLMatchC11"
++ Expression "MLMatchC11*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{0A97495D33B25152}" {
+    Bone "Spine"
+@@ -240,7 +240,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint12 {
+  Child "MLMatchJoint11"
+- Expression "MLMatchC12"
++ Expression "MLMatchC12*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{3F71A28529DA5338}" {
+    Bone "Spine1"
+@@ -253,7 +253,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint13 {
+  Child "MLMatchJoint12"
+- Expression "MLMatchC13"
++ Expression "MLMatchC13*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{2296DF620C045618}" {
+    Bone "Spine1"
+@@ -266,7 +266,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint14 {
+  Child "MLMatchJoint13"
+- Expression "MLMatchC14"
++ Expression "MLMatchC14*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{0EA3B0337F395ACD}" {
+    Bone "Spine1"
+@@ -279,7 +279,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint15 {
+  Child "MLMatchJoint14"
+- Expression "MLMatchC15"
++ Expression "MLMatchC15*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{68C8005115C1528B}" {
+    Bone "Spine1"
+@@ -292,7 +292,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint16 {
+  Child "MLMatchJoint15"
+- Expression "MLMatchC16"
++ Expression "MLMatchC16*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{8A5C15DA27675ED9}" {
+    Bone "Spine1"
+@@ -305,7 +305,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint17 {
+  Child "MLMatchJoint16"
+- Expression "MLMatchC17"
++ Expression "MLMatchC17*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{C53F362349EB556E}" {
+    Bone "Spine1"
+@@ -318,7 +318,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint18 {
+  Child "MLMatchJoint17"
+- Expression "MLMatchC18"
++ Expression "MLMatchC18*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{F120FA4883E3545B}" {
+    Bone "Spine2"
+@@ -331,7 +331,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint19 {
+  Child "MLMatchJoint18"
+- Expression "MLMatchC19"
++ Expression "MLMatchC19*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{83D6986D4B46552F}" {
+    Bone "Spine2"
+@@ -344,7 +344,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint20 {
+  Child "MLMatchJoint19"
+- Expression "MLMatchC20"
++ Expression "MLMatchC20*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{E251D880345354D3}" {
+    Bone "Spine2"
+@@ -357,7 +357,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint21 {
+  Child "MLMatchJoint20"
+- Expression "MLMatchC21"
++ Expression "MLMatchC21*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{DD2C1A0C99A45E52}" {
+    Bone "Spine2"
+@@ -370,7 +370,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint22 {
+  Child "MLMatchJoint21"
+- Expression "MLMatchC22"
++ Expression "MLMatchC22*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{E1C0297550AC5D27}" {
+    Bone "Spine2"
+@@ -383,7 +383,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint23 {
+  Child "MLMatchJoint22"
+- Expression "MLMatchC23"
++ Expression "MLMatchC23*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{834C8052C41050F2}" {
+    Bone "Spine2"
+@@ -396,7 +396,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint24 {
+  Child "MLMatchJoint23"
+- Expression "MLMatchC24"
++ Expression "MLMatchC24*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{1A3B736FB51658BE}" {
+    Bone "Spine3"
+@@ -409,7 +409,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint25 {
+  Child "MLMatchJoint24"
+- Expression "MLMatchC25"
++ Expression "MLMatchC25*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{FD62273316585764}" {
+    Bone "Spine3"
+@@ -422,7 +422,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint26 {
+  Child "MLMatchJoint25"
+- Expression "MLMatchC26"
++ Expression "MLMatchC26*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{95FFF9E04FB45F92}" {
+    Bone "Spine3"
+@@ -435,7 +435,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint27 {
+  Child "MLMatchJoint26"
+- Expression "MLMatchC27"
++ Expression "MLMatchC27*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{4437E602057453F9}" {
+    Bone "Spine3"
+@@ -448,7 +448,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint28 {
+  Child "MLMatchJoint27"
+- Expression "MLMatchC28"
++ Expression "MLMatchC28*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{D4FCB1593900569E}" {
+    Bone "Spine3"
+@@ -461,7 +461,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint29 {
+  Child "MLMatchJoint28"
+- Expression "MLMatchC29"
++ Expression "MLMatchC29*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{FDC7B2E54F9856A4}" {
+    Bone "Spine3"
+@@ -474,7 +474,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint30 {
+  Child "MLMatchJoint29"
+- Expression "MLMatchC30"
++ Expression "MLMatchC30*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{DBFFC3CF3C095186}" {
+    Bone "Neck"
+@@ -487,7 +487,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint31 {
+  Child "MLMatchJoint30"
+- Expression "MLMatchC31"
++ Expression "MLMatchC31*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{990DB11D6A5F5DD9}" {
+    Bone "Neck"
+@@ -500,7 +500,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint32 {
+  Child "MLMatchJoint31"
+- Expression "MLMatchC32"
++ Expression "MLMatchC32*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{26F1124044365395}" {
+    Bone "Neck"
+@@ -513,7 +513,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint33 {
+  Child "MLMatchJoint32"
+- Expression "MLMatchC33"
++ Expression "MLMatchC33*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{94FE6A0063FD5B6A}" {
+    Bone "Neck"
+@@ -526,7 +526,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint34 {
+  Child "MLMatchJoint33"
+- Expression "MLMatchC34"
++ Expression "MLMatchC34*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{6C0DD4CF017359DD}" {
+    Bone "Neck"
+@@ -539,7 +539,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint35 {
+  Child "MLMatchJoint34"
+- Expression "MLMatchC35"
++ Expression "MLMatchC35*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{264FCF2F35B5582A}" {
+    Bone "Neck"
+@@ -552,7 +552,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint36 {
+  Child "MLMatchJoint35"
+- Expression "MLMatchC36"
++ Expression "MLMatchC36*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{9CB6CEAC719A5668}" {
+    Bone "LeftShoulder"
+@@ -565,7 +565,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint37 {
+  Child "MLMatchJoint36"
+- Expression "MLMatchC37"
++ Expression "MLMatchC37*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B3781CA1B0205D4F}" {
+    Bone "LeftShoulder"
+@@ -578,7 +578,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint38 {
+  Child "MLMatchJoint37"
+- Expression "MLMatchC38"
++ Expression "MLMatchC38*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B9A515295FE85235}" {
+    Bone "LeftShoulder"
+@@ -591,7 +591,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint39 {
+  Child "MLMatchJoint38"
+- Expression "MLMatchC39"
++ Expression "MLMatchC39*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{470AEFBDAC335D76}" {
+    Bone "LeftShoulder"
+@@ -604,7 +604,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint40 {
+  Child "MLMatchJoint39"
+- Expression "MLMatchC40"
++ Expression "MLMatchC40*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{FE78634C1D97553D}" {
+    Bone "LeftShoulder"
+@@ -617,7 +617,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint41 {
+  Child "MLMatchJoint40"
+- Expression "MLMatchC41"
++ Expression "MLMatchC41*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{59FD86059BCF59BD}" {
+    Bone "LeftShoulder"
+@@ -630,7 +630,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint42 {
+  Child "MLMatchJoint41"
+- Expression "MLMatchC42"
++ Expression "MLMatchC42*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{F41B76F3C7C255C6}" {
+    Bone "RightShoulder"
+@@ -643,7 +643,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint43 {
+  Child "MLMatchJoint42"
+- Expression "MLMatchC43"
++ Expression "MLMatchC43*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{4E20C3A4B33F5193}" {
+    Bone "RightShoulder"
+@@ -656,7 +656,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint44 {
+  Child "MLMatchJoint43"
+- Expression "MLMatchC44"
++ Expression "MLMatchC44*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{DEF6DCF5E9205B87}" {
+    Bone "RightShoulder"
+@@ -669,7 +669,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint45 {
+  Child "MLMatchJoint44"
+- Expression "MLMatchC45"
++ Expression "MLMatchC45*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{1B8AB28F7E2D5700}" {
+    Bone "RightShoulder"
+@@ -682,7 +682,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint46 {
+  Child "MLMatchJoint45"
+- Expression "MLMatchC46"
++ Expression "MLMatchC46*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{02F698289BA9549E}" {
+    Bone "RightShoulder"
+@@ -695,7 +695,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint47 {
+  Child "MLMatchJoint46"
+- Expression "MLMatchC47"
++ Expression "MLMatchC47*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{678F03FC8ECC5747}" {
+    Bone "RightShoulder"
+@@ -708,7 +708,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint48 {
+  Child "MLMatchJoint47"
+- Expression "MLMatchC48"
++ Expression "MLMatchC48*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B5A8AD51EB7E592C}" {
+    Bone "Neck1"
+@@ -721,7 +721,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint49 {
+  Child "MLMatchJoint48"
+- Expression "MLMatchC49"
++ Expression "MLMatchC49*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{68B8C034971A537C}" {
+    Bone "Neck1"
+@@ -734,7 +734,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint50 {
+  Child "MLMatchJoint49"
+- Expression "MLMatchC50"
++ Expression "MLMatchC50*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5E92D3CFC9D35C71}" {
+    Bone "Neck1"
+@@ -747,7 +747,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint51 {
+  Child "MLMatchJoint50"
+- Expression "MLMatchC51"
++ Expression "MLMatchC51*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{3EEA96BCC8F35F0A}" {
+    Bone "Neck1"
+@@ -760,7 +760,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint52 {
+  Child "MLMatchJoint51"
+- Expression "MLMatchC52"
++ Expression "MLMatchC52*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{3BBD02A14EFD5306}" {
+    Bone "Neck1"
+@@ -773,7 +773,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint53 {
+  Child "MLMatchJoint52"
+- Expression "MLMatchC53"
++ Expression "MLMatchC53*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{75DC0FF8675A5A2D}" {
+    Bone "Neck1"
+@@ -786,7 +786,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint54 {
+  Child "MLMatchJoint53"
+- Expression "MLMatchC54"
++ Expression "MLMatchC54*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{E1F1A321B7975238}" {
+    Bone "LeftArm"
+@@ -799,7 +799,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint55 {
+  Child "MLMatchJoint54"
+- Expression "MLMatchC55"
++ Expression "MLMatchC55*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B8DE292F6D885EBD}" {
+    Bone "LeftArm"
+@@ -812,7 +812,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint56 {
+  Child "MLMatchJoint55"
+- Expression "MLMatchC56"
++ Expression "MLMatchC56*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B399467E40EA53AF}" {
+    Bone "LeftArm"
+@@ -825,7 +825,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint57 {
+  Child "MLMatchJoint56"
+- Expression "MLMatchC57"
++ Expression "MLMatchC57*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{CCEF10D917985C34}" {
+    Bone "LeftArm"
+@@ -838,7 +838,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint58 {
+  Child "MLMatchJoint57"
+- Expression "MLMatchC58"
++ Expression "MLMatchC58*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B915C5D03CFD522B}" {
+    Bone "LeftArm"
+@@ -851,7 +851,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint59 {
+  Child "MLMatchJoint58"
+- Expression "MLMatchC59"
++ Expression "MLMatchC59*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{A585B9EB84B65EE4}" {
+    Bone "LeftArm"
+@@ -864,7 +864,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint60 {
+  Child "MLMatchJoint59"
+- Expression "MLMatchC60"
++ Expression "MLMatchC60*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{72A31547C1B85F72}" {
+    Bone "RightArm"
+@@ -877,7 +877,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint61 {
+  Child "MLMatchJoint60"
+- Expression "MLMatchC61"
++ Expression "MLMatchC61*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{BBCA6484302C5659}" {
+    Bone "RightArm"
+@@ -890,7 +890,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint62 {
+  Child "MLMatchJoint61"
+- Expression "MLMatchC62"
++ Expression "MLMatchC62*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{4F35AF8CB35A59D0}" {
+    Bone "RightArm"
+@@ -903,7 +903,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint63 {
+  Child "MLMatchJoint62"
+- Expression "MLMatchC63"
++ Expression "MLMatchC63*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5EE65E0254FD53BC}" {
+    Bone "RightArm"
+@@ -916,7 +916,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint64 {
+  Child "MLMatchJoint63"
+- Expression "MLMatchC64"
++ Expression "MLMatchC64*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{73083706F05E53B5}" {
+    Bone "RightArm"
+@@ -929,7 +929,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint65 {
+  Child "MLMatchJoint64"
+- Expression "MLMatchC65"
++ Expression "MLMatchC65*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{BFEE36EBE52F5E06}" {
+    Bone "RightArm"
+@@ -942,7 +942,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint66 {
+  Child "MLMatchJoint65"
+- Expression "MLMatchC66"
++ Expression "MLMatchC66*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{910FCEA005D055FF}" {
+    Bone "Head"
+@@ -955,7 +955,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint67 {
+  Child "MLMatchJoint66"
+- Expression "MLMatchC67"
++ Expression "MLMatchC67*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{E01F6C20E1A65AB4}" {
+    Bone "Head"
+@@ -968,7 +968,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint68 {
+  Child "MLMatchJoint67"
+- Expression "MLMatchC68"
++ Expression "MLMatchC68*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{F5E5E145229F5804}" {
+    Bone "Head"
+@@ -981,7 +981,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint69 {
+  Child "MLMatchJoint68"
+- Expression "MLMatchC69"
++ Expression "MLMatchC69*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{C025A54DC4935758}" {
+    Bone "Head"
+@@ -994,7 +994,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint70 {
+  Child "MLMatchJoint69"
+- Expression "MLMatchC70"
++ Expression "MLMatchC70*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{38E48B0DC3725A83}" {
+    Bone "Head"
+@@ -1007,7 +1007,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint71 {
+  Child "MLMatchJoint70"
+- Expression "MLMatchC71"
++ Expression "MLMatchC71*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{728600F941235C5C}" {
+    Bone "Head"
+@@ -1020,7 +1020,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint72 {
+  Child "MLMatchJoint71"
+- Expression "MLMatchC72"
++ Expression "MLMatchC72*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{2CB9B0951CD85372}" {
+    Bone "LeftArmRoll"
+@@ -1033,7 +1033,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint73 {
+  Child "MLMatchJoint72"
+- Expression "MLMatchC73"
++ Expression "MLMatchC73*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{213844AD7A4C5D16}" {
+    Bone "LeftArmRoll"
+@@ -1046,7 +1046,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint74 {
+  Child "MLMatchJoint73"
+- Expression "MLMatchC74"
++ Expression "MLMatchC74*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{809F3BE52EC051F9}" {
+    Bone "LeftArmRoll"
+@@ -1059,7 +1059,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint75 {
+  Child "MLMatchJoint74"
+- Expression "MLMatchC75"
++ Expression "MLMatchC75*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{76798A7AE49350E6}" {
+    Bone "LeftArmRoll"
+@@ -1072,7 +1072,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint76 {
+  Child "MLMatchJoint75"
+- Expression "MLMatchC76"
++ Expression "MLMatchC76*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{42C14B76226951DB}" {
+    Bone "LeftArmRoll"
+@@ -1085,7 +1085,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint77 {
+  Child "MLMatchJoint76"
+- Expression "MLMatchC77"
++ Expression "MLMatchC77*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5D5C2EE67379534F}" {
+    Bone "LeftArmRoll"
+@@ -1098,7 +1098,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint78 {
+  Child "MLMatchJoint77"
+- Expression "MLMatchC78"
++ Expression "MLMatchC78*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5D67E145D84D5408}" {
+    Bone "RightArmRoll"
+@@ -1111,7 +1111,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint79 {
+  Child "MLMatchJoint78"
+- Expression "MLMatchC79"
++ Expression "MLMatchC79*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{AE07DADA55CD5B55}" {
+    Bone "RightArmRoll"
+@@ -1124,7 +1124,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint80 {
+  Child "MLMatchJoint79"
+- Expression "MLMatchC80"
++ Expression "MLMatchC80*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{DA53A20EEC48519B}" {
+    Bone "RightArmRoll"
+@@ -1137,7 +1137,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint81 {
+  Child "MLMatchJoint80"
+- Expression "MLMatchC81"
++ Expression "MLMatchC81*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{EA5FEAB028375504}" {
+    Bone "RightArmRoll"
+@@ -1150,7 +1150,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint82 {
+  Child "MLMatchJoint81"
+- Expression "MLMatchC82"
++ Expression "MLMatchC82*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{DEF1D81819CA5E0F}" {
+    Bone "RightArmRoll"
+@@ -1163,7 +1163,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint83 {
+  Child "MLMatchJoint82"
+- Expression "MLMatchC83"
++ Expression "MLMatchC83*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{CD625AE8F60A550F}" {
+    Bone "RightArmRoll"
+@@ -1176,7 +1176,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint84 {
+  Child "MLMatchJoint83"
+- Expression "MLMatchC84"
++ Expression "MLMatchC84*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{03DF6123686B59AD}" {
+    Bone "LeftForeArm"
+@@ -1189,7 +1189,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint85 {
+  Child "MLMatchJoint84"
+- Expression "MLMatchC85"
++ Expression "MLMatchC85*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{4FEA09BB97305D63}" {
+    Bone "LeftForeArm"
+@@ -1202,7 +1202,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint86 {
+  Child "MLMatchJoint85"
+- Expression "MLMatchC86"
++ Expression "MLMatchC86*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{3038F27468D350ED}" {
+    Bone "LeftForeArm"
+@@ -1215,7 +1215,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint87 {
+  Child "MLMatchJoint86"
+- Expression "MLMatchC87"
++ Expression "MLMatchC87*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{2D7D96BC40915206}" {
+    Bone "LeftForeArm"
+@@ -1228,7 +1228,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint88 {
+  Child "MLMatchJoint87"
+- Expression "MLMatchC88"
++ Expression "MLMatchC88*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{699776CBC42650AE}" {
+    Bone "LeftForeArm"
+@@ -1241,7 +1241,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint89 {
+  Child "MLMatchJoint88"
+- Expression "MLMatchC89"
++ Expression "MLMatchC89*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5EF7808D4EF95438}" {
+    Bone "LeftForeArm"
+@@ -1254,7 +1254,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint90 {
+  Child "MLMatchJoint89"
+- Expression "MLMatchC90"
++ Expression "MLMatchC90*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B0B71B993A755BF1}" {
+    Bone "RightForeArm"
+@@ -1267,7 +1267,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint91 {
+  Child "MLMatchJoint90"
+- Expression "MLMatchC91"
++ Expression "MLMatchC91*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{76F91245A3C05F48}" {
+    Bone "RightForeArm"
+@@ -1280,7 +1280,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint92 {
+  Child "MLMatchJoint91"
+- Expression "MLMatchC92"
++ Expression "MLMatchC92*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{2FEB2C3A0A0B5D4E}" {
+    Bone "RightForeArm"
+@@ -1293,7 +1293,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint93 {
+  Child "MLMatchJoint92"
+- Expression "MLMatchC93"
++ Expression "MLMatchC93*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{2E177AD21AFD56B5}" {
+    Bone "RightForeArm"
+@@ -1306,7 +1306,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint94 {
+  Child "MLMatchJoint93"
+- Expression "MLMatchC94"
++ Expression "MLMatchC94*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{840A799626F75ECF}" {
+    Bone "RightForeArm"
+@@ -1319,7 +1319,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint95 {
+  Child "MLMatchJoint94"
+- Expression "MLMatchC95"
++ Expression "MLMatchC95*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{887597A06D005E75}" {
+    Bone "RightForeArm"
+@@ -1332,7 +1332,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint96 {
+  Child "MLMatchJoint95"
+- Expression "MLMatchC96"
++ Expression "MLMatchC96*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{1F07134F19475090}" {
+    Bone "LeftForeArmRoll"
+@@ -1345,7 +1345,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint97 {
+  Child "MLMatchJoint96"
+- Expression "MLMatchC97"
++ Expression "MLMatchC97*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{88D546A5FA4B521D}" {
+    Bone "LeftForeArmRoll"
+@@ -1358,7 +1358,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint98 {
+  Child "MLMatchJoint97"
+- Expression "MLMatchC98"
++ Expression "MLMatchC98*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{A4525C96B0245A26}" {
+    Bone "LeftForeArmRoll"
+@@ -1371,7 +1371,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint99 {
+  Child "MLMatchJoint98"
+- Expression "MLMatchC99"
++ Expression "MLMatchC99*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{25C39451B56E538F}" {
+    Bone "LeftForeArmRoll"
+@@ -1384,7 +1384,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint100 {
+  Child "MLMatchJoint99"
+- Expression "MLMatchC100"
++ Expression "MLMatchC100*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{C623A932B5B85DFC}" {
+    Bone "LeftForeArmRoll"
+@@ -1397,7 +1397,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint101 {
+  Child "MLMatchJoint100"
+- Expression "MLMatchC101"
++ Expression "MLMatchC101*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{329403B8DA5A5995}" {
+    Bone "LeftForeArmRoll"
+@@ -1410,7 +1410,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint102 {
+  Child "MLMatchJoint101"
+- Expression "MLMatchC102"
++ Expression "MLMatchC102*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{D243BA5DC65A5BC0}" {
+    Bone "RightForeArmRoll"
+@@ -1423,7 +1423,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint103 {
+  Child "MLMatchJoint102"
+- Expression "MLMatchC103"
++ Expression "MLMatchC103*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{9DE683D9ABF051FA}" {
+    Bone "RightForeArmRoll"
+@@ -1436,7 +1436,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint104 {
+  Child "MLMatchJoint103"
+- Expression "MLMatchC104"
++ Expression "MLMatchC104*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{63C1841EC1745FA4}" {
+    Bone "RightForeArmRoll"
+@@ -1449,7 +1449,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint105 {
+  Child "MLMatchJoint104"
+- Expression "MLMatchC105"
++ Expression "MLMatchC105*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{C55B1E6843EF5F7B}" {
+    Bone "RightForeArmRoll"
+@@ -1462,7 +1462,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint106 {
+  Child "MLMatchJoint105"
+- Expression "MLMatchC106"
++ Expression "MLMatchC106*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{4DE63F75F28C5851}" {
+    Bone "RightForeArmRoll"
+@@ -1475,7 +1475,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint107 {
+  Child "MLMatchJoint106"
+- Expression "MLMatchC107"
++ Expression "MLMatchC107*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{E3E21E44AB4B5C67}" {
+    Bone "RightForeArmRoll"
+@@ -1488,7 +1488,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint108 {
+  Child "MLMatchJoint107"
+- Expression "MLMatchC108"
++ Expression "MLMatchC108*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{CCCA3E479D6A5871}" {
+    Bone "LeftHand"
+@@ -1501,7 +1501,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint109 {
+  Child "MLMatchJoint108"
+- Expression "MLMatchC109"
++ Expression "MLMatchC109*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B2F948FB8E2F58E4}" {
+    Bone "LeftHand"
+@@ -1514,7 +1514,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint110 {
+  Child "MLMatchJoint109"
+- Expression "MLMatchC110"
++ Expression "MLMatchC110*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{5D9D7C95D06A5C7F}" {
+    Bone "LeftHand"
+@@ -1527,7 +1527,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint111 {
+  Child "MLMatchJoint110"
+- Expression "MLMatchC111"
++ Expression "MLMatchC111*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{2EE658EA96A950FD}" {
+    Bone "LeftHand"
+@@ -1540,7 +1540,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint112 {
+  Child "MLMatchJoint111"
+- Expression "MLMatchC112"
++ Expression "MLMatchC112*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{7447411147DF52E6}" {
+    Bone "LeftHand"
+@@ -1553,7 +1553,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint113 {
+  Child "MLMatchJoint112"
+- Expression "MLMatchC113"
++ Expression "MLMatchC113*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{FBF9FE8F7A635C17}" {
+    Bone "LeftHand"
+@@ -1566,7 +1566,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint114 {
+  Child "MLMatchJoint113"
+- Expression "MLMatchC114"
++ Expression "MLMatchC114*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B78EF9A3A1E85849}" {
+    Bone "RightHand"
+@@ -1579,7 +1579,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint115 {
+  Child "MLMatchJoint114"
+- Expression "MLMatchC115"
++ Expression "MLMatchC115*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{587F1587EA48541A}" {
+    Bone "RightHand"
+@@ -1592,7 +1592,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint116 {
+  Child "MLMatchJoint115"
+- Expression "MLMatchC116"
++ Expression "MLMatchC116*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{B0B476B4FEC9512D}" {
+    Bone "RightHand"
+@@ -1605,7 +1605,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint117 {
+  Child "MLMatchJoint116"
+- Expression "MLMatchC117"
++ Expression "MLMatchC117*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{17E8A0202E505501}" {
+    Bone "RightHand"
+@@ -1618,7 +1618,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint118 {
+  Child "MLMatchJoint117"
+- Expression "MLMatchC118"
++ Expression "MLMatchC118*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{FDED99896C5855C4}" {
+    Bone "RightHand"
+@@ -1631,7 +1631,7 @@
+ }
+ AnimSrcNodeProcTransform MLMatchJoint119 {
+  Child "MLMatchJoint118"
+- Expression "MLMatchC119"
++ Expression "MLMatchC119*MLMatchWeight"
+  Bones {
+   AnimSrcNodeProcTrBoneItem "{1415FF9164635653}" {
+    Bone "RightHand"
+--- v2/WorkspaceSource/player_main.agr
++++ v3/WorkspaceSource/player_main.agr
+@@ -1,8 +1,13 @@
+ AnimSrcGraph {
+  AnimSetTemplate "{F0C651DE8E24A5DE}DZ/anims/workspaces/player/player_main/player_main.ast"
+  AnimSyncTable "{8F89313B7FBB0B66}DZ/anims/workspaces/player/Player_SyncTable.asy"
+- ControlTemplate AnimSrcGCT "{D4183A9F8F2C58ED}" {
++ ControlTemplate AnimSrcGCT "{B1581C4E0CF355BF}" {
+   Variables {
++   AnimSrcGCTVarFloat MLMatchWeight {
++    DefaultValue 0
++    MinValue 0
++    MaxValue 1
++   }
+    AnimSrcGCTVarFloat MLMatchActive {
+     DefaultValue 0
+     MinValue 0
+@@ -4718,7 +4723,7 @@
+   }
+  }
+  GraphFilesResourceNames {
+-  "{F44D39A681D750DE}DZ/anims/workspaces/player/player_main/MLSharedStandingMatchLocomotion_v2.agf" "{9C03FCB66E801A6C}DZ/anims/workspaces/player/player_main/Combat.agf" "{4DD0CCA87EF71102}DZ/anims/workspaces/player/player_main/Weapons.agf" "{F8705927E3100C08}DZ/anims/workspaces/player/player_main/Gestures.agf" "{1D19A50EFCDE75AD}DZ/anims/workspaces/player/player_main/Vehicles.agf" "{3B53F70888ED306A}DZ/anims/workspaces/player/player_main/Actions.agf" "{89EF4C37831659ED}DZ/anims/workspaces/player/player_main/MLSharedStandingMatchMaster_v2.agf" "{95D4850091C31380}DZ/anims/workspaces/player/player_main/Tests.agf"
++  "{0968355533C35317}DZ/anims/workspaces/player/player_main/MLSharedStandingMatchLocomotion_v3.agf" "{9C03FCB66E801A6C}DZ/anims/workspaces/player/player_main/Combat.agf" "{4DD0CCA87EF71102}DZ/anims/workspaces/player/player_main/Weapons.agf" "{F8705927E3100C08}DZ/anims/workspaces/player/player_main/Gestures.agf" "{1D19A50EFCDE75AD}DZ/anims/workspaces/player/player_main/Vehicles.agf" "{3B53F70888ED306A}DZ/anims/workspaces/player/player_main/Actions.agf" "{69C01FC38AA95E3C}DZ/anims/workspaces/player/player_main/MLSharedStandingMatchMaster_v3.agf" "{95D4850091C31380}DZ/anims/workspaces/player/player_main/Tests.agf"
+  }
+  DefaultRunNode "MasterControl"
+ }
